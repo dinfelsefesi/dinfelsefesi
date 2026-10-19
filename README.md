@@ -1,16 +1,32 @@
-## Hi there 👋
+# dinfelsefesi.com.tr
 
-<!--
-**dinfelsefesi/dinfelsefesi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+İngilizce din felsefesi literatüründen yeni makalelerin Türkçe tanıtımı.
 
-Here are some ideas to get you started:
+## Nasıl çalışır
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- `content/makaleler.json` tek içerik kaynağıdır. Her kayıt bir makale tanıtımıdır.
+- `build.py` bu dosyadan `site/` klasörüne HTML sayfaları, `rss.xml` ve `api/makaleler.json` üretir.
+- `main` dalına her gönderimde GitHub Actions siteyi derler ve GitHub Pages'ta yayımlar.
+- `CNAME` dosyası eklenirse özel alan adı kullanılır.
+
+## Kayıt biçimi
+
+```json
+{
+  "date": "2026-10-15",
+  "title_tr": "Türkçe başlık",
+  "title_en": "Original English title",
+  "authors": "Ad Soyad",
+  "journal": "Religious Studies",
+  "year": "2026",
+  "doi": "10.1017/...",
+  "url": "",
+  "open_access": "evet | hayır | bilinmiyor",
+  "lead": "Tek cümlelik giriş (liste sayfasında görünür).",
+  "summary_tr": "Tanıtım metni. Boş satırla ayrılmış paragraflar.",
+  "why_tr": "Neden önemli, bir iki paragraf.",
+  "tags": ["kötülük problemi", "teizm"]
+}
+```
+
+Yerelde denemek için: `python3 build.py` ve ardından `site/index.html` dosyasını açın.
