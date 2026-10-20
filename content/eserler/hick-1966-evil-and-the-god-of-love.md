@@ -1,0 +1,20 @@
+---
+tur: eser
+kimlik: hick-1966-evil-and-the-god-of-love
+baslik: Evil and the God of Love
+yazar: [john-hick]
+eser_turu: kitap
+yil: 1966
+yayin: 'London: Macmillan, 1966'
+doi: ""
+acik_erisim: hayır
+duzey: ileri
+turkce_cevirisi: ""
+ilgili_terimler: [teodise, kotuluk-problemi]
+konu: kotuluk-problemi
+imza: dinfelsefesi.com.tr Editörlüğü
+durum: taslak
+guncelleme: 2026-10-20
+---
+
+Hick'in Hristiyan teodiselerini Augustinus ve Irenaeus geleneği olarak sınıflandırdığı ve ruh yapma teodisesini geliştirdiği eser. Teodise tartışmalarının tarihine dair kapsamlı bir inceleme de içerir.
