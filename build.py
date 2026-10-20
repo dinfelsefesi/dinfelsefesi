@@ -213,7 +213,7 @@ CSS = """
 }
 *{box-sizing:border-box}
 html{font-size:17px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.68;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
 a:hover{text-decoration-color:currentColor}
 a:hover{color:var(--accent)}
@@ -233,14 +233,14 @@ nav.ana a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
 .deneme .wrap{padding-block:.45rem}
 main{padding-block:2.2rem 3.5rem}
 h1{font-family:var(--display);font-weight:500;font-size:2.5rem;line-height:1.12;margin:0 0 .6rem;text-wrap:balance}
-h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25;margin:2.2rem 0 .7rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25;margin:1.7rem 0 .45rem;text-wrap:balance}
 .ust-etiket{font-style:italic;font-size:.95rem;color:var(--gold);margin:0 0 .35rem}
 .yol{font-style:italic;font-size:.92rem;color:var(--ink-soft);margin:0 0 .6rem}
 .yol a{color:var(--ink-soft)}
-.giris{font-size:1.14rem;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.8rem}
+.giris{font-size:1.12rem;line-height:1.5;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.5rem}
 .metin{max-width:var(--measure)}
-.metin p{margin:0 0 1rem}
-.metin h2{color:var(--ink);font-size:1.45rem;margin-top:2rem}
+.metin p{margin:0 0 .8rem}
+.metin h2{color:var(--ink);font-size:1.45rem;margin-top:1.6rem}
 .metin > h2:first-child + p::first-letter,.metin > p:first-child::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
 .say{font-style:italic;font-size:.9rem;color:var(--ink-soft);font-variant-numeric:oldstyle-nums}
 .say.ayri{display:block;margin-top:.4rem}
@@ -277,7 +277,7 @@ h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25
 
 /* Listeler */
 .liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-.liste li{padding:.95rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.2rem 1.5rem}
+.liste li{padding:.75rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.2rem 1.5rem}
 .liste .ad{font-weight:600}
 .liste .alt-ad{display:block;font-weight:400;font-style:italic;color:var(--ink-soft);font-size:.92rem}
 .liste .ad a{font-family:var(--display);font-size:1.2rem;font-weight:500}
@@ -415,7 +415,7 @@ table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
 .karsilama h1{font-size:3rem;margin-bottom:.8rem}
-.karsilama p{font-size:1.18rem;color:var(--ink-soft);margin:0 0 .9rem}
+.karsilama p{font-size:1.16rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
 .karsilama .durum-satiri{font-style:italic;font-size:.98rem}
 .susleme{display:flex;align-items:center;gap:1rem;color:var(--gold);margin:2.4rem 0 1.4rem}
 .susleme::before,.susleme::after{content:"";flex:1;height:1px;background:var(--rule)}
