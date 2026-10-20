@@ -1242,13 +1242,13 @@ def icindekiler_html() -> str:
         h = FIS[("baslik", k)]
         b = bagli_fisler(k)
         altlar = " · ".join(bag("baslik", a) for a in liste(h.get("alt_basliklar")))
-        satirlar.append(f"""<li><span class="no" aria-hidden="true">{e(h.get('sira', ''))}</span><div>
+        satirlar.append(f"""<li><span class="no">{e(h.get('sira', ''))}</span><div>
   <h3><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h3>
   <p>{satir_ici(h.get('ozet'))}</p>
   {f'<p class="altlar-metin">{altlar}</p>' if altlar else ''}
   {f'<span class="say">{sayim_metni(b)}</span>' if b else ''}
 </div></li>""")
-    return f'<ol class="icindekiler">{"".join(satirlar)}</ol>'
+    return f'<ul class="icindekiler">{"".join(satirlar)}</ul>'
 
 
 def paylas_dugmesi(m: dict) -> str:
