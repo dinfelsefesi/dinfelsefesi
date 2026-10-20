@@ -92,7 +92,59 @@ def paragraphs(text: str) -> str:
     return "".join(f"<p>{e(p)}</p>" for p in parts)
 
 
-def govde(text: str) -> str:
+HARF = "A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû"
+BAG_DIZINI = []   # (desen, tur, kimlik), iliskileri_kur sonrasında doldurulur
+
+
+def bag_dizini_kur():
+    adaylar = []
+    soyadlar = {}
+    for (t, k), h in FIS.items():
+        if t == "kisi":
+            soyadlar.setdefault(ad(t, h).split()[-1], []).append(k)
+    for (t, k), h in FIS.items():
+        adi = ad(t, h)
+        if t in ("terim", "baslik"):
+            adaylar.append((adi, t, k, True))
+        elif t == "kisi":
+            adaylar.append((adi, t, k, False))
+            soy_ = adi.split()[-1]
+            if len(soyadlar[soy_]) == 1:
+                adaylar.append((soy_, t, k, False))
+        elif t == "eser":
+            adaylar.append((adi, t, k, False))
+    adaylar.sort(key=lambda x: -len(x[0]))
+    BAG_DIZINI.clear()
+    for metin, t, k, kucuk_harf in adaylar:
+        govde_ = re.escape(e(metin)).replace("\\ ", "\\s+")
+        ek = f"[{HARF}]*" if t in ("terim", "baslik") else ""
+        desen = re.compile(f"(?<![{HARF}])({govde_}{ek})(?![{HARF}])", re.IGNORECASE if kucuk_harf else 0)
+        BAG_DIZINI.append((desen, t, k, tr_kucuk(metin) if t in ("terim", "baslik") else f"{t}/{k}"))
+
+
+def metne_bag(html_: str, kendi=None, kullanilan=None) -> str:
+    """Metinde geçen fiş adlarının sayfadaki ilk geçtiği yeri fişe bağlar. Etiketlerin içine dokunmaz."""
+    if kullanilan is None:
+        kullanilan = set()
+    parcalar = re.split(r"(<[^>]+>)", html_)
+    kendi_ad = tr_kucuk(ad(kendi[0], FIS[kendi])) if kendi in FIS else None
+    for desen, t, k, anahtar in BAG_DIZINI:
+        if (t, k) == kendi or (t, k) in kullanilan or anahtar in kullanilan or anahtar == kendi_ad:
+            continue
+        for i in range(0, len(parcalar), 2):
+            if i > 0 and parcalar[i - 1].startswith("<a"):
+                continue
+            m = desen.search(parcalar[i])
+            if m:
+                bas, son = parcalar[i][:m.start(1)], parcalar[i][m.end(1):]
+                parcalar[i:i + 1] = [bas, f'<a class="ic-bag" href="{fis_url(t, k)}">', m.group(1), "</a>", son]
+                kullanilan.update({(t, k), anahtar})
+                break
+    return "".join(parcalar)
+
+
+def govde(text: str, kendi=None) -> str:
+    kullanilan = set()
     out = []
     for blok in re.split(r"\n\s*\n", (text or "").strip()):
         blok = blok.strip()
@@ -101,7 +153,7 @@ def govde(text: str) -> str:
         if blok.startswith("## "):
             out.append(f"<h2>{satir_ici(blok[3:])}</h2>")
         else:
-            out.append(f"<p>{satir_ici(blok)}</p>")
+            out.append(f"<p>{metne_bag(satir_ici(blok), kendi, kullanilan) if kendi else satir_ici(blok)}</p>")
     return "".join(out)
 
 
@@ -359,6 +411,8 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 .eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
 .eser-ad:hover{color:var(--accent)}
 .eser-bilgi a.dis{font-weight:600}
+.rozet{display:inline-block;font-family:var(--sans);font-style:normal;font-size:.68rem;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);border:1px solid var(--rule);background:var(--card);padding:.02rem .42rem;border-radius:6px;vertical-align:.12em;margin-left:.35rem}
+.rozet.ae-rozet{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent;letter-spacing:0}
 .ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
 .eser-bilgi{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
 footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.82rem}
@@ -378,6 +432,14 @@ footer.site a:hover{color:var(--accent-ink)}
 .altlar li{border-radius:999px}
 table.kisiler tbody tr:hover td:first-child{border-radius:8px 0 0 8px}
 table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
+/* Önizleme kartı */
+.onizleme{position:absolute;z-index:50;width:min(22rem,calc(100vw - 16px));background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem .85rem;box-shadow:0 18px 40px -24px rgba(60,40,10,.5);pointer-events:none;font-size:.92rem;line-height:1.45}
+.onizleme p{margin:0}
+.onizleme-tur{font-style:italic;color:var(--gold);font-size:.85rem}
+.onizleme-ad{font-family:var(--display);font-size:1.25rem;color:var(--ink);line-height:1.2;margin-top:.1rem!important}
+.onizleme-alt{font-style:italic;color:var(--ink-soft);font-size:.86rem;margin-top:.1rem!important}
+.onizleme-metin{color:var(--ink);margin-top:.45rem!important}
+a.ic-bag{text-decoration-style:dotted}
 /* İlişki ağı */
 .ag-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin:0 0 .8rem}
 .ag-arac .tur-secici,.ag-arac .k-ara{margin:0}
@@ -489,6 +551,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
+<script src="{SITE_URL}/static/js/onizleme.js" data-veri="{SITE_URL}/api/onizleme.json" defer></script>
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -519,12 +582,24 @@ def entry_url(m: dict) -> str:
     return f"{SITE_URL}/makale/{m['slug']}/"
 
 
+def makale_dili(m: dict) -> str:
+    return (m.get("lang") or ("en" if m.get("title_en") else "tr")).lower()
+
+
+def rozetler(m: dict) -> str:
+    dil = makale_dili(m)
+    r = f' <span class="rozet" title="Makalenin dili: {"Türkçe" if dil == "tr" else "İngilizce" if dil == "en" else dil.upper()}">{e(dil.upper())}</span>'
+    if m.get("open_access") == "evet":
+        r += ' <span class="rozet ae-rozet">Açık erişim</span>'
+    return r
+
+
 def makale_satiri(m: dict) -> str:
     return f"""<article class="makale">
   <time datetime="{e(m['date'])}">{tr_date(m['date'])}</time>
   <div>
     <h3><a href="{entry_url(m)}">{e(m['title_tr'])}</a></h3>
-    <p class="orij">{e(m['title_en'])}</p>
+    <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
     <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
     <p class="ozet">{e(m['lead'])}</p>
   </div>
@@ -617,7 +692,7 @@ def render_baslik(k) -> str:
         (f"<h2>İlgili başlıklar</h2><ul>{''.join(f'<li>{bag("baslik", x)}</li>' for x in liste(h.get('ilgili_basliklar')))}</ul>" if liste(h.get("ilgili_basliklar")) else ""),
     ])
     sorular = "".join(f"<li>{satir_ici(s)}</li>" for s in liste(h.get("tartisma_sorulari")))
-    metin = govde(h["_govde"])
+    metin = govde(h["_govde"], ("baslik", k))
     if not metin:
         metin = ('<p class="giris">Başlığın tanıtım metni henüz yazılmadı. '
                  'Başlığa bağlı fişler yandaki listede yer almaktadır.</p>' if b else
@@ -714,7 +789,7 @@ def render_fis(tur, k) -> str:
             satir("İlgili kişiler", bag_listesi("ilgili_kisiler", h)),
             satir("İlgili eserler", bag_listesi("ilgili_eserler", h)),
             satir("Kaynaklar", bag_listesi("kaynaklar", h)), basliklar])
-        ic = f"<p class='kisa'>{satir_ici(h['kisa_tanim'])}</p><div class='metin'>{govde(h['_govde'])}</div>{kg_html}"
+        ic = f"<p class='kisa'>{satir_ici(h['kisa_tanim'])}</p><div class='metin'>{govde(h['_govde'], (tur, k))}</div>{kg_html}"
         desc = h["kisa_tanim"]
     elif tur == "kisi":
         kurum = f" · {e(h['kurum'])}" if h.get("kurum") else ""
@@ -725,7 +800,7 @@ def render_fis(tur, k) -> str:
             satir("Eserleri", bag_listesi("eserleri", h)),
             satir("Türkçe çevirileri", "<br>".join(satir_ici(x) for x in liste(h.get("turkce_cevirileri")))),
             basliklar])
-        ic = f"<p class='kisa'>{satir_ici(h['kisa_tanitim'])}</p><div class='metin'>{govde(h['_govde'])}</div>"
+        ic = f"<p class='kisa'>{satir_ici(h['kisa_tanitim'])}</p><div class='metin'>{govde(h['_govde'], (tur, k))}</div>"
         desc = h["kisa_tanitim"]
     else:
         duzey = {"giris": "giriş düzeyi", "ileri": "ileri düzey"}.get(h.get("duzey"), "")
@@ -740,7 +815,7 @@ def render_fis(tur, k) -> str:
         dl = "".join([satir("Künye", kunye_html(h)), satir("Erişim", erisim),
                       satir("Türkçe çevirisi", satir_ici(h.get("turkce_cevirisi"))),
                       satir("İlgili terimler", bag_listesi("ilgili_terimler", h)), basliklar])
-        ic = f"<div class='metin'>{govde(h['_govde'])}</div>"
+        ic = f"<div class='metin'>{govde(h['_govde'], (tur, k))}</div>"
         desc = re.sub(r"\s+", " ", h["_govde"])[:200]
     yan = geri_yan(tur, k) + ag_baglantisi(tur, k)
     body = f"""
@@ -1014,6 +1089,30 @@ def ag_verisi(items) -> dict:
             "dugumler": dugumler, "baglar": sorted(baglar)}
 
 
+def kisalt_metin(t: str, n: int = 230) -> str:
+    t = re.sub(r"[*_`#]", "", re.sub(r"\s+", " ", t or "")).strip()
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0] + "…"
+
+
+def onizleme_verisi(items) -> dict:
+    from urllib.parse import urlparse
+    v = {}
+    for (t, k), h in FIS.items():
+        if t == "eser":
+            alt, metin = kisa_aciklama(t, h), ilk_paragraf(h.get("_govde"))
+        elif t == "terim":
+            alt, metin = h.get("ingilizce", ""), h.get("kisa_tanim", "")
+        elif t == "kisi":
+            alt, metin = str(h.get("donem") or ""), h.get("kisa_tanitim", "")
+        else:
+            alt, metin = "", h.get("ozet", "")
+        v[urlparse(fis_url(t, k)).path] = {"t": TUR_AD[t], "ad": ad(t, h), "alt": str(alt), "a": kisalt_metin(metin)}
+    for m in items:
+        v[urlparse(entry_url(m)).path] = {"t": "Makale tanıtımı", "ad": m["title_tr"],
+                                          "alt": f'{m.get("authors", "")} · {m.get("journal", "")}', "a": kisalt_metin(m.get("lead", ""))}
+    return v
+
+
 def render_ag(items) -> str:
     v = ag_verisi(items)
     say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _ in AG_TURLER}
@@ -1132,6 +1231,7 @@ def main() -> None:
 
     FIS = fisleri_oku()
     iliskileri_kur()
+    bag_dizini_kur()
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -1156,6 +1256,7 @@ def main() -> None:
     (OUT / "api").mkdir()
     (OUT / "api" / "makaleler.json").write_text(
         json.dumps([{**m, "url": entry_url(m)} for m in items], ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / "api" / "onizleme.json").write_text(json.dumps(onizleme_verisi(items), ensure_ascii=False), encoding="utf-8")
     (OUT / "api" / "fisler.json").write_text(json.dumps(
         [{k: v for k, v in h.items() if not k.startswith("_")} | {"tur": t, "url": fis_url(t, kk), "metin": h["_govde"]}
          for (t, kk), h in FIS.items()], ensure_ascii=False, indent=1, default=str), encoding="utf-8")

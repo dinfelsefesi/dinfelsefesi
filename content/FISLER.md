@@ -2,6 +2,8 @@
 
 Sitenin başvuru bölümleri dört fiş türünden oluşur. Ana başlıklar, din felsefesi literatüründeki en genel problem alanlarıdır. Terim, kişi ve eser fişleri `basliklar` alanıyla bir ya da daha fazla başlığa bağlanır. Alt başlıklar ihtiyaç doğdukça eklenir. Bir alt başlığa bağlı fişler, üst başlığın sayımına da katılır. Her fiş bir Markdown dosyasıdır. Dosyanın başında `---` çizgileri arasında üst bilgi alanları, altında ise metin yer alır. Fişler birbirine `kimlik` değeriyle bağlanır. Bir listede kimlik yerine düz metin yazılırsa (ör. henüz fişi olmayan bir yazar adı) site onu bağlantısız gösterir.
 
+Metin içi bağlantılar kendiliğinden kurulur. Bir fişin metninde başka bir fişin adı geçiyorsa (terim ve başlıklarda ekleriyle birlikte, kişilerde tam ad ya da soyadı, eserlerde başlık) ilk geçtiği yer o fişe bağlanır. Bağlantının üzerine gelindiğinde kısa bir önizleme kartı açılır.
+
 Ortak alanlar: `tur`, `kimlik` (dosya adıyla aynı), `imza`, `durum` (`taslak` | `yayinda`), `guncelleme` (YYYY-AA-GG). Taslak fişler yayımlanmaz.
 
 ## Terim (`content/terimler/`)
