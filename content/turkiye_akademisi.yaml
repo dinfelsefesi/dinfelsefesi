@@ -1,7 +1,7 @@
 # Türkiye akademisi listesi
 # Kaynak: YÖK Akademik Arama (20.10.2026). İki yoldan gelen kişiler:
 #   yok_alan: Din Felsefesi             -> bilim alanı "İlahiyat Temel Alanı / Din Felsefesi"
-#   yok_alan: Felsefe ve Din Bilimleri  -> "İlahiyat Temel Alanı / Felsefe ve Din Bilimleri", anahtar kelimelerde Din Felsefesi
+#   yok_alan: Felsefe ve Din Bilimleri  -> "İlahiyat Temel Alanı / Felsefe ve Din Bilimleri", ilk anahtar kelime Din Felsefesi
 # Alanlar: ad, unvan, universite, fakulte, durum (emekli | boş), yok (YÖK authorId), yok_alan,
 # kimlik (isteğe bağlı: kişinin fişi yazıldığında content/kisiler/ içindeki kimliği).
 # Yalnızca kamuya açık bilgiler. E-posta ve fotoğraf konmaz.
@@ -80,13 +80,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 3A6ECA392A214025
   yok_alan: Din Felsefesi
-- ad: Hasan Arslan
-  unvan: Doç. Dr.
-  universite: İnönü Üniversitesi
-  fakulte: ''
-  durum: emekli
-  yok: 528E1C277A363478
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Serdar Atalay
   unvan: Arş. Gör.
   universite: Çukurova Üniversitesi
@@ -117,12 +110,6 @@ kisiler:
   fakulte: Edebiyat Fakültesi
   yok: DFFD212555606B49
   yok_alan: Din Felsefesi
-- ad: İbrahim Hakkı Aydın
-  unvan: Prof. Dr.
-  universite: İstanbul Aydın Üniversitesi
-  fakulte: Fen-Edebiyat Fakültesi
-  yok: 80B109C0BF4E6192
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Nurullah Aydın
   unvan: Arş. Gör.
   universite: Ordu Üniversitesi
@@ -261,18 +248,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 639EBE334FB13BE4
   yok_alan: Din Felsefesi
-- ad: Esra Nur Çiftçi
-  unvan: Arş. Gör.
-  universite: Atatürk Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: 266D582A0B4997F7
-  yok_alan: Felsefe ve Din Bilimleri
-- ad: Hakan Çoşar
-  unvan: Dr. Öğr. Üyesi
-  universite: Kastamonu Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: 63CFBC53FBCED3D9
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Muhammed Enes Dağ
   unvan: Öğr. Gör.
   universite: Atatürk Üniversitesi
@@ -327,12 +302,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: F1126BD838E88C21
   yok_alan: Din Felsefesi
-- ad: Ali Durusoy
-  unvan: Prof. Dr.
-  universite: Marmara Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: B42B2F0A94CAE6FE
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Şahin Efil
   unvan: Prof. Dr.
   universite: İnönü Üniversitesi
@@ -345,13 +314,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: B5C8BB486983E7BD
   yok_alan: Din Felsefesi
-- ad: İbrahim Emiroğlu
-  unvan: Prof. Dr.
-  universite: Dokuz Eylül Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  durum: emekli
-  yok: E4B95C63E160453E
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Engin Erdem
   unvan: Prof. Dr.
   universite: Ankara Üniversitesi
@@ -400,12 +362,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: CD36178C37C11CA6
   yok_alan: Din Felsefesi
-- ad: Hatice Göktaş
-  unvan: Dr. Öğr. Üyesi
-  universite: Yozgat Bozok Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: 1D7CBB8DB3A1FCF1
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Fatımanur Güçlüer
   unvan: Dr. Öğr. Üyesi
   universite: Gümüşhane Üniversitesi
@@ -442,20 +398,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 02F1FEC62B8F5586
   yok_alan: Din Felsefesi
-- ad: Halim Işık
-  unvan: Doç. Dr.
-  universite: Trakya Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  durum: emekli
-  yok: 04B43FDB6F9E1306
-  yok_alan: Felsefe ve Din Bilimleri
-- ad: Hidayet Işık
-  unvan: Prof. Dr.
-  universite: Yükseköğretim Kurulu Başkanlığı
-  fakulte: ''
-  durum: emekli
-  yok: C63CA0C274802BB1
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Tuncay İmamoğlu
   unvan: Prof. Dr.
   universite: Atatürk Üniversitesi
@@ -511,12 +453,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 21037188EFA4AE4E
   yok_alan: Din Felsefesi
-- ad: İbrahim Hakkı Kaynak
-  unvan: Dr. Öğr. Üyesi
-  universite: Necmettin Erbakan Üniversitesi
-  fakulte: Turizm Fakültesi
-  yok: C464A59AA1DC6E4B
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Huzeyfe Kılıç
   unvan: Arş. Gör.
   universite: Pamukkale Üniversitesi
@@ -536,12 +472,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 3D0A2C811B647B09
   yok_alan: Din Felsefesi
-- ad: Fatma Tosun Köse
-  unvan: Dr. Öğr. Üyesi
-  universite: Bayburt Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: 6243D2CE3A98D98A
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Halil İbrahim Köse
   unvan: Dr. Öğr. Üyesi
   universite: Recep Tayyip Erdoğan Üniversitesi
@@ -566,12 +496,6 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: A3F87339CA703D77
   yok_alan: Din Felsefesi
-- ad: İbrahim Maraş
-  unvan: Prof. Dr.
-  universite: Ankara Üniversitesi
-  fakulte: İlahiyat Fakültesi
-  yok: 578615ADF84E4D56
-  yok_alan: Felsefe ve Din Bilimleri
 - ad: Hasan Ocak
   unvan: Prof. Dr.
   universite: Iğdır Üniversitesi
