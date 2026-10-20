@@ -24,7 +24,7 @@ Yaşayan Türk akademisyenler için yalnızca kamuya açık bilgiler kullanılı
 
 Zorunlu: `baslik`, `yazar`, `eser_turu` (`kitap` | `kitap-bolumu` | `makale` | `bildiri` | `tez`), `yil`, `yayin`.
 
-İsteğe bağlı: `doi`, `acik_erisim`, `duzey` (`giris` | `ileri`), `turkce_cevirisi`, `ilgili_terimler`, `basliklar`, metin (tanıtım).
+İsteğe bağlı: `doi`, `baglanti` (DOI yoksa eserin çevrim içi adresi), `acik_erisim` (`evet` | `hayır` | `bilinmiyor`), `duzey` (`giris` | `ileri`), `turkce_cevirisi`, `ilgili_terimler`, `basliklar`, metin (tanıtım).
 
 ## Başlık (`content/basliklar/`)
 

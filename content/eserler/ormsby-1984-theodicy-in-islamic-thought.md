@@ -6,7 +6,7 @@ yazar: [Eric L. Ormsby]
 eser_turu: kitap
 yil: 1984
 yayin: 'Princeton: Princeton University Press, 1984'
-doi: ""
+doi: "10.1515/9781400856336"
 acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""

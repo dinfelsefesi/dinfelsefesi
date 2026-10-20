@@ -5,8 +5,9 @@ baslik: Evil and the God of Love
 yazar: [john-hick]
 eser_turu: kitap
 yil: 1966
-yayin: 'London: Macmillan, 1966'
+yayin: 'London: Macmillan, 1966 (yeni baskı: Basingstoke: Palgrave Macmillan, 2010)'
 doi: ""
+baglanti: https://doi.org/10.1057/9780230283961
 acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""

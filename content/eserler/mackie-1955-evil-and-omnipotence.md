@@ -6,7 +6,7 @@ yazar: [john-l-mackie]
 eser_turu: makale
 yil: 1955
 yayin: 'Mind 64, sy. 254 (1955): 200-212'
-doi: ""
+doi: "10.1093/mind/lxiv.254.200"
 acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""

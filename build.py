@@ -329,6 +329,8 @@ ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
 .eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
 .eser-ad:hover{color:var(--accent)}
+.eser-bilgi a.dis{font-weight:600}
+.ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
 .eser-bilgi{display:block;font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);margin-top:.15rem}
 footer.site{border-top:1px solid var(--rule);background:var(--card);color:var(--ink-soft);font-family:var(--sans);font-size:.88rem}
 footer.site .wrap{padding-block:1.4rem 2.2rem;display:grid;gap:.3rem}
@@ -530,10 +532,16 @@ def geri_yan(tur, k) -> str:
     return f"<h2>Bu fişe bağlananlar</h2><ul>{oge}</ul>"
 
 
+def eser_baglantisi(h) -> str:
+    if h.get("doi"):
+        return f"https://doi.org/{h['doi']}"
+    return h.get("baglanti") or ""
+
+
 def kunye_html(h) -> str:
     yazarlar = ", ".join(bag("kisi", y) for y in liste(h.get("yazar")))
     doi = h.get("doi")
-    d = f' <a href="https://doi.org/{e(doi)}">doi:{e(doi)}</a>' if doi else ""
+    d = f" doi:{e(doi)}" if doi else ""
     return f"{yazarlar}, <em>{e(h['baslik'])}</em>. {e(h['yayin'])}.{d}"
 
 
@@ -570,7 +578,14 @@ def render_fis(tur, k) -> str:
         duzey = {"giris": "giriş düzeyi", "ileri": "ileri düzey"}.get(h.get("duzey"), "")
         bas = (f"<h1>{e(h['baslik'])}{taslak_etiketi(h)}</h1>"
                f"<p class='alt-ad'>{e(h['eser_turu']).capitalize()} · {e(h['yil'])}{' · ' + duzey if duzey else ''}</p>")
-        dl = "".join([satir("Künye", kunye_html(h)), satir("Türkçe çevirisi", satir_ici(h.get("turkce_cevirisi"))),
+        hedef = eser_baglantisi(h)
+        erisim = ""
+        if hedef:
+            erisim = f'<a href="{e(hedef)}" rel="noopener">{e(hedef)}</a>'
+            if h.get("acik_erisim") == "evet":
+                erisim += ' <span class="ae">Açık erişim</span>'
+        dl = "".join([satir("Künye", kunye_html(h)), satir("Erişim", erisim),
+                      satir("Türkçe çevirisi", satir_ici(h.get("turkce_cevirisi"))),
                       satir("İlgili terimler", bag_listesi("ilgili_terimler", h)), basliklar])
         ic = f"<div class='metin'>{govde(h['_govde'])}</div>"
         desc = re.sub(r"\s+", " ", h["_govde"])[:200]
@@ -654,6 +669,12 @@ def eser_satiri(k) -> str:
         bilgi.append(duzey)
     if h.get("turkce_cevirisi"):
         bilgi.append("Türkçesi var")
+    hedef = eser_baglantisi(h)
+    if hedef:
+        etiket = "DOI" if h.get("doi") else "Bağlantı"
+        bilgi.append(f'<a class="dis" href="{e(hedef)}" rel="noopener">{etiket}</a>')
+    if h.get("acik_erisim") == "evet":
+        bilgi.append('<span class="ae">Açık erişim</span>')
     return (f'<li data-tur="{e(h.get("eser_turu", ""))}"><a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
             f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span></li>')
 
