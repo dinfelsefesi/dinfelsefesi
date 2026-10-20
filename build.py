@@ -198,52 +198,51 @@ def yol(k) -> str:
 # ---------------------------------------------------------------- sayfa iskeleti
 
 CSS = """
-/* Yerleşim: üstte site adı ve menü, altında tek okuma sütunu; harita ve dizinlerde
-   kart ızgarası. Fişler kütüphane kataloğu kartı gibi: üst sekmede türü, altında künye. */
+/* Yerleşim: bir kitap sayfası. Fildişi kâğıt, mürekkep rengi yazı; vurgu rengi lâcivert,
+   ikinci renk tezhip altını. Başlıklar içindekiler gibi, yan sütunlar hâşiye gibi. Tek tema (açık). */
 :root{
-  --ink:#1b2230;--ink-soft:#505a6e;--rule:#dde1e8;--paper:#fbfcfd;--panel:#f1f4f7;--card:#ffffff;
-  --accent:#0f6b5f;--accent-ink:#0b5048;--accent-soft:#e3f0ed;--gold:#9c7a24;--gold-soft:#f6f0de;
+  --ink:#2b2621;--ink-soft:#6a5f53;--rule:#e2d9c8;--paper:#f8f4ec;--panel:#f1eadc;--card:#fcfaf5;
+  --accent:#2a4f7f;--accent-ink:#22426b;--accent-soft:#e7ecf2;--gold:#9a7428;--gold-soft:#f2e8d0;
+  --display:"EB Garamond","Garamond","Georgia",serif;
   --serif:"Literata",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3","Segoe UI",system-ui,sans-serif;
-  --measure:68ch;
+  --measure:66ch;
+  color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ink:#e6e9ef;--ink-soft:#a9b1c1;--rule:#2c3343;--paper:#11151d;--panel:#1a2030;--card:#161b26;
-  --accent:#5fc3b2;--accent-ink:#8fd9cc;--accent-soft:#16302c;--gold:#d2b15c;--gold-soft:#2a2618;color-scheme:dark}}
-:root[data-theme="dark"]{
-  --ink:#e6e9ef;--ink-soft:#a9b1c1;--rule:#2c3343;--paper:#11151d;--panel:#1a2030;--card:#161b26;
-  --accent:#5fc3b2;--accent-ink:#8fd9cc;--accent-soft:#16302c;--gold:#d2b15c;--gold-soft:#2a2618;color-scheme:dark}
 *{box-sizing:border-box}
 html{font-size:17px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased}
-a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.68;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
 a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
-header.site{border-bottom:1px solid var(--rule);background:var(--card)}
+header.site{background:var(--paper);border-bottom:3px double var(--rule)}
 header.site .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
 .marka{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.1rem}
-.marka b{font-weight:500;font-size:1.6rem;letter-spacing:-.01em;line-height:1.1}
-.marka small{font-family:var(--sans);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);font-weight:600}
-nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.3rem;font-family:var(--sans);font-size:.98rem}
+.marka b{font-family:var(--display);font-weight:500;font-size:2rem;line-height:1.05}
+.marka small{order:2;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
+nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.12rem}
 nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
 nav.ana a:hover{color:var(--ink)}
-nav.ana a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
-.deneme{background:var(--gold-soft);font-family:var(--sans);font-size:.85rem;color:var(--ink)}
+nav.ana a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
+.deneme{background:var(--gold-soft);font-style:italic;font-size:.88rem;color:var(--ink-soft)}
 .deneme .wrap{padding-block:.45rem}
 main{padding-block:2.2rem 3.5rem}
-h1{font-weight:500;font-size:2.1rem;line-height:1.18;margin:0 0 .5rem;text-wrap:balance;letter-spacing:-.01em}
-h2{font-weight:600;font-size:1.25rem;line-height:1.3;margin:2rem 0 .7rem;text-wrap:balance}
-.ust-etiket{font-family:var(--sans);font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 .45rem;font-weight:600}
-.yol{font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);margin:0 0 .6rem}
+h1{font-family:var(--display);font-weight:500;font-size:2.5rem;line-height:1.12;margin:0 0 .6rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25;margin:2.2rem 0 .7rem;text-wrap:balance}
+.ust-etiket{font-style:italic;font-size:.95rem;color:var(--gold);margin:0 0 .35rem}
+.yol{font-style:italic;font-size:.92rem;color:var(--ink-soft);margin:0 0 .6rem}
 .yol a{color:var(--ink-soft)}
-.giris{font-size:1.1rem;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.6rem}
+.giris{font-size:1.14rem;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.8rem}
 .metin{max-width:var(--measure)}
 .metin p{margin:0 0 1rem}
-.metin h2{color:var(--accent-ink);font-size:1.18rem;margin-top:1.8rem}
-.say{font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
-.taslak{display:inline-block;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);border:1px solid currentColor;padding:.02rem .45rem;border-radius:2px;margin-left:.5rem;vertical-align:.2em}
+.metin h2{color:var(--ink);font-size:1.45rem;margin-top:2rem}
+.metin > h2:first-child + p::first-letter,.metin > p:first-child::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
+.say{font-style:italic;font-size:.9rem;color:var(--ink-soft);font-variant-numeric:oldstyle-nums}
+.say.ayri{display:block;margin-top:.4rem}
+.taslak{display:inline-block;font-family:var(--serif);font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:.02rem .45rem;border-radius:2px;margin-left:.5rem;vertical-align:.2em}
 .duz{color:var(--ink)}
 
 /* Ana sayfa */
@@ -279,20 +278,21 @@ h2{font-weight:600;font-size:1.25rem;line-height:1.3;margin:2rem 0 .7rem;text-wr
 .liste li{padding:.95rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.2rem 1.5rem}
 .liste .ad{font-weight:600}
 .liste .alt-ad{display:block;font-weight:400;font-style:italic;color:var(--ink-soft);font-size:.92rem}
+.liste .ad a{font-family:var(--display);font-size:1.2rem;font-weight:500}
 .liste .aciklama{color:var(--ink-soft);font-size:.96rem}
-.harf{font-family:var(--sans);font-weight:600;color:var(--gold);font-size:.95rem;margin:1.6rem 0 .3rem}
+.harf{font-family:var(--display);color:var(--gold);font-size:1.6rem;margin:1.8rem 0 .2rem}
 .makale{padding:1.3rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:0 1.5rem}
-.makale time{color:var(--ink-soft);font-family:var(--sans);font-size:.88rem;padding-top:.3rem;font-variant-numeric:tabular-nums}
-.makale h3{margin:0;font-size:1.2rem;font-weight:500;line-height:1.35}
+.makale time{color:var(--gold);font-style:italic;font-size:.92rem;padding-top:.35rem}
+.makale h3{margin:0;font-family:var(--display);font-size:1.4rem;font-weight:500;line-height:1.3}
 .makale h3 a{color:var(--ink);text-decoration:none}
 .makale h3 a:hover{color:var(--accent)}
 .makale .orij{margin:.25rem 0 0;color:var(--ink-soft);font-style:italic;font-size:.94rem}
-.makale .kunye{margin:.3rem 0 0;font-family:var(--sans);color:var(--ink-soft);font-size:.88rem}
+.makale .kunye{margin:.3rem 0 0;color:var(--ink-soft);font-size:.92rem}
 .makale .ozet{margin:.6rem 0 0;max-width:var(--measure)}
 
 /* Fiş sayfası */
 .fis-duzen{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:2.6rem;align-items:start}
-.kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);padding:1.4rem 1.6rem 1.2rem;min-width:0}
+.kart{background:var(--card);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 12px 30px -24px rgba(60,40,10,.35);padding:1.6rem 1.8rem 1.3rem;min-width:0}
 .kart .alt-ad{margin:-.2rem 0 1rem;color:var(--ink-soft);font-style:italic;font-size:1.05rem}
 .kart .kisa{font-weight:500;font-size:1.05rem;max-width:var(--measure)}
 .klasik{background:var(--gold-soft);padding:.85rem 1.05rem;margin:1.2rem 0;max-width:var(--measure);font-size:.96rem}
@@ -301,40 +301,40 @@ h2{font-weight:600;font-size:1.25rem;line-height:1.3;margin:2rem 0 .7rem;text-wr
 .klasik.bos{background:transparent;border:1px dashed var(--rule);min-height:3.6rem}
 dl.kunye{margin:1.3rem 0 0;display:grid;gap:.45rem;font-size:.95rem;padding-top:1rem;border-top:1px solid var(--rule)}
 dl.kunye div{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:1rem}
-dl.kunye dt{color:var(--ink-soft);font-family:var(--sans);font-size:.86rem;padding-top:.1rem}
+dl.kunye dt{color:var(--ink-soft);font-style:italic;font-size:.92rem;padding-top:.05rem}
 dl.kunye dd{margin:0;min-width:0}
-.imza{font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);margin:1.2rem 0 0}
-aside.yan{background:var(--panel);padding:1.1rem 1.2rem;font-size:.94rem;border-top:3px solid var(--gold);position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem)}
-aside.yan h2{font-family:var(--sans);font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 .45rem;font-weight:600}
+.imza{font-style:italic;font-size:.88rem;color:var(--ink-soft);margin:1.3rem 0 0;text-align:right}
+aside.yan{background:transparent;padding:.2rem 0 .2rem 1.3rem;font-size:.95rem;border-left:1px solid var(--gold);position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem)}
+aside.yan h2{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:0 0 .35rem;font-weight:500}
 aside.yan ul{list-style:none;margin:0 0 1.1rem;padding:0;display:grid;gap:.3rem}
 aside.yan ul:last-child{margin-bottom:0}
-aside.yan .tur-k{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;margin-right:.35rem}
+aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin-right:.35rem}
 .sorular{padding-left:1.3rem;max-width:var(--measure)}.sorular li{margin-bottom:.5rem}
-.kutu{background:var(--panel);border-left:3px solid var(--gold);padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.95rem;max-width:var(--measure)}
+.kutu{background:var(--card);border:1px solid var(--rule);padding:.9rem 1.1rem;margin:1.2rem 0;font-size:.95rem;max-width:var(--measure)}
 .kutu dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem}
 .kutu dt{color:var(--ink-soft)}.kutu dd{margin:0}
 .etiketler{margin-top:1.4rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
 /* Eserler sayfası */
 .tur-secici{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
-.tur-secici button{font-family:var(--sans);font-size:.9rem;padding:.3rem .8rem;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer;border-radius:999px}
-.tur-secici button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tur-secici button{font-family:var(--serif);font-size:.95rem;padding:.3rem .9rem;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer;border-radius:999px}
+.tur-secici button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .tur-secici button[aria-pressed="true"] .say{color:inherit;opacity:.75}
 .baslik-gezinti ul{list-style:none;margin:0 0 1.6rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
-.baslik-gezinti li{font-family:var(--sans);font-size:.86rem;padding:.15rem .6rem;border:1px solid var(--rule);background:var(--card)}
+.baslik-gezinti li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
 .baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
 .baslik-gezinti li.plan{color:var(--ink-soft)}
 .baslik-gezinti a{text-decoration:none;color:var(--ink)}
-.eser-bolum{border-top:2px solid var(--ink);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
-.eser-bolum h2{margin:.2rem 0 .6rem;font-size:1.3rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
+.eser-bolum{border-top:1px solid var(--gold);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
+.eser-bolum h2{margin:.3rem 0 .6rem;font-size:1.6rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
-.eser-bolum h3{font-family:var(--sans);font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-ink);margin:1.1rem 0 .3rem;font-weight:600}
+.eser-bolum h3{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:1.2rem 0 .3rem;font-weight:500}
 .eser-bolum h3 a{color:var(--accent-ink)}
-.aciklama-kisa{font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);margin:0 0 .6rem;max-width:62ch}
+.aciklama-kisa{font-size:1rem;color:var(--ink-soft);margin:0 0 .7rem;max-width:62ch}
 .sekmeler{margin-top:.4rem}
 .sekmeler button{font-size:1rem;padding:.45rem 1.1rem}
 .sekme-bolum{margin-top:1rem}
-.k-ara{display:flex;align-items:center;gap:.6rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);margin:.8rem 0 .9rem}
-.k-ara input{font:inherit;font-size:.95rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:.4rem .7rem;width:min(100%,22rem)}
+.k-ara{display:flex;align-items:center;gap:.6rem;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin:.8rem 0 .9rem}
+.k-ara input{font:inherit;font-style:normal;font-size:.98rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.4rem .9rem;width:min(100%,22rem)}
 .k-ara input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .tablo-kap{overflow-x:auto}
 table.kisiler{width:100%;border-collapse:collapse;font-size:.95rem}
@@ -345,12 +345,12 @@ th[aria-sort="ascending"] button.sirala,th[aria-sort="descending"] button.sirala
 .ok::after{content:"↕";opacity:.35;font-size:.9em}
 th[aria-sort="ascending"] .ok::after{content:"▲";opacity:1;font-size:.7em}
 th[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-size:.7em}
-table.kisiler th{text-align:left;font-family:var(--sans);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:.4rem .7rem .4rem 0;border-bottom:2px solid var(--ink)}
+table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
-table.kisiler td.k-yok{font-family:var(--sans);font-size:.85rem;white-space:nowrap}
+table.kisiler td.k-yok{font-style:italic;font-size:.9rem;white-space:nowrap}
 table.kisiler tbody tr:hover{background:var(--panel)}
-.emekli{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
+.emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
@@ -358,19 +358,49 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 .eser-ad:hover{color:var(--accent)}
 .eser-bilgi a.dis{font-weight:600}
 .ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
-.eser-bilgi{display:block;font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);margin-top:.15rem}
-footer.site{border-top:1px solid var(--rule);background:var(--card);color:var(--ink-soft);font-family:var(--sans);font-size:.88rem}
+.eser-bilgi{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
+footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.92rem}
 footer.site .wrap{padding-block:1.4rem 2.2rem;display:grid;gap:.3rem}
 footer.site p{margin:0;max-width:var(--measure)}
+/* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
+.karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
+.karsilama h1{font-size:3rem;margin-bottom:.8rem}
+.karsilama p{font-size:1.18rem;color:var(--ink-soft);margin:0 0 .9rem}
+.karsilama .durum-satiri{font-style:italic;font-size:.98rem}
+.susleme{display:flex;align-items:center;gap:1rem;color:var(--gold);margin:2.4rem 0 1.4rem}
+.susleme::before,.susleme::after{content:"";flex:1;height:1px;background:var(--rule)}
+.susleme span{font-family:var(--display);font-size:1.3rem;line-height:1}
+.okuma{background:var(--card);border:1px solid var(--rule);padding:1.7rem 1.9rem 1.5rem;box-shadow:0 14px 34px -28px rgba(60,40,10,.4)}
+.okuma .ust-etiket{margin-bottom:.4rem}
+.okuma h2{margin:0 0 .7rem;font-size:1.9rem}
+.okuma h2 a{color:var(--ink);text-decoration:none}
+.okuma .ozet{font-style:italic;color:var(--ink-soft);margin:0}
+.okuma .alinti{margin:0;font-size:1.02rem;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.okuma .alinti::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
+.okuma .devam{display:inline-block;margin-top:.8rem;font-style:italic}
+.icindekiler{list-style:none;margin:0;padding:0;columns:2 24rem;column-gap:3.5rem;counter-reset:bas}
+.icindekiler li{break-inside:avoid;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:0 .4rem;padding:.9rem 0 1rem;border-bottom:1px solid var(--rule)}
+.icindekiler .no{font-family:var(--display);font-size:1.5rem;color:var(--gold);line-height:1.25;font-variant-numeric:oldstyle-nums}
+.icindekiler h3{margin:0;font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25}
+.icindekiler h3 a{color:var(--ink);text-decoration:none}
+.icindekiler h3 a:hover{color:var(--accent)}
+.icindekiler p{margin:.2rem 0 0;color:var(--ink-soft);font-size:.98rem}
+.icindekiler .altlar-metin{margin-top:.35rem;font-size:.95rem;font-style:italic;color:var(--ink-soft)}
+.icindekiler .altlar-metin a{font-style:normal}
+.icindekiler .say{display:block;margin-top:.25rem}
 @media (max-width:760px){
   html{font-size:16px}
-  .acilis,.fis-duzen{grid-template-columns:1fr;gap:1.5rem}
+  .acilis,.fis-duzen,.karsilama{grid-template-columns:1fr;gap:1.5rem}
+  .okuma{padding:1.4rem 1.2rem}
+  .karsilama h1{font-size:2.3rem}
+  h1{font-size:2.1rem}
+  aside.yan{border-left:0;border-top:1px solid var(--gold);padding:1rem 0 0}
   .acilis h1{font-size:2rem}
   aside.yan{position:static}
   .liste li,.makale,dl.kunye div{grid-template-columns:1fr;gap:.15rem}
   .kart{padding:1.1rem 1.1rem 1rem}
   table.kisiler thead{display:block}
-  table.kisiler thead tr{display:flex;flex-wrap:wrap;gap:.2rem 1rem;padding:0 0 .4rem;border-bottom:2px solid var(--ink)}
+  table.kisiler thead tr{display:flex;flex-wrap:wrap;gap:.2rem 1rem;padding:0 0 .4rem;border-bottom:1px solid var(--gold)}
   table.kisiler thead th{display:block;border:0;padding:0}
   table.kisiler thead th:last-child{display:none}
   table.kisiler,table.kisiler tbody,table.kisiler tr,table.kisiler td{display:block;width:100%}
@@ -404,12 +434,12 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="marka" href="{SITE_URL}/"><small>dinfelsefesi.com.tr</small><b>{e(SITE_NAME)}</b></a>
+  <a class="marka" href="{SITE_URL}/"><b>{e(SITE_NAME)}</b><small>Türkçe başvuru kaynağı</small></a>
   <nav class="ana" aria-label="Ana menü">{menu}</nav>
 </div></header>
 {deneme}
@@ -541,7 +571,7 @@ def render_baslik(k) -> str:
     body = f"""
 <p class="yol">{yol(k)}</p>
 <h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
-<p class="giris">{satir_ici(h.get('ozet'))} <span class="say">{sayim_metni(b)}</span></p>
+<p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}</div>
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}</aside>
@@ -862,21 +892,64 @@ def render_eserler() -> str:
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
 
+def ilk_paragraf(md: str) -> str:
+    for parca in re.split(r"\n\s*\n", md or ""):
+        parca = parca.strip()
+        if parca and not parca.startswith(("#", "-", "*", ">", "|")):
+            return re.sub(r"\s+", " ", parca)
+    return ""
+
+
+def okuma_baslangici() -> str:
+    adaylar = [k for (t, k), h in FIS.items() if t == "baslik" and ilk_paragraf(h.get("_govde"))]
+    if not adaylar:
+        return ""
+    k = max(adaylar, key=lambda x: len(FIS[("baslik", x)]["_govde"]))
+    h = FIS[("baslik", k)]
+    return f"""<aside class="okuma" aria-label="Okumaya başlangıç">
+  <p class="ust-etiket">Okumaya buradan başlayabilirsiniz</p>
+  <h2><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h2>
+  <p class="alinti">{satir_ici(ilk_paragraf(h['_govde']))}</p>
+  <a class="devam" href="{fis_url('baslik', k)}">Metnin devamını okuyun →</a>
+</aside>"""
+
+
+def icindekiler_html() -> str:
+    satirlar = []
+    for k in ana_basliklar():
+        h = FIS[("baslik", k)]
+        b = bagli_fisler(k)
+        altlar = " · ".join(bag("baslik", a) for a in liste(h.get("alt_basliklar")))
+        satirlar.append(f"""<li><span class="no">{e(h.get('sira', ''))}</span><div>
+  <h3><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h3>
+  <p>{satir_ici(h.get('ozet'))}</p>
+  {f'<p class="altlar-metin">{altlar}</p>' if altlar else ''}
+  {f'<span class="say">{sayim_metni(b)}</span>' if b else ''}
+</div></li>""")
+    return f'<ol class="icindekiler">{"".join(satirlar)}</ol>'
+
+
 def render_ana(items) -> str:
     say = {t: sum(1 for (x, _) in FIS if x == t) for t in KLASOR}
-    rakam = "".join(f'<a href="{SITE_URL}/{yol_}/"><b>{n}</b><span>{a}</span></a>' for yol_, n, a in [
-        ("basliklar", len(ana_basliklar()), "ana başlık"), ("terimler", say["terim"], "terim"),
-        ("kisiler", say["kisi"], "kişi"), ("eserler", say["eser"], "eser")])
+    tr_dosya = CONTENT / "turkiye_akademisi.yaml"
+    tr_say = len((yaml.safe_load(tr_dosya.read_text(encoding="utf-8")) or {}).get("kisiler") or []) if tr_dosya.exists() else 0
+    durum = (f'Şimdilik {len(ana_basliklar())} ana başlık, {say["terim"]} terim, {say["kisi"]} düşünür ve {say["eser"]} eser fişi yer almaktadır'
+             + (f'. Türkiye akademisi listesinde {tr_say} akademisyen bulunmaktadır.' if tr_say else '.'))
     body = f"""
-<section class="acilis">
-  <div><h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
-  <p>Din felsefesinin temel problemleri, terimleri, düşünürleri ve eserleri birbirine bağlı fişlerle sunulmaktadır. Uluslararası ve Türkçe literatürdeki yeni çalışmalar düzenli olarak taranmakta ve tanıtılmaktadır.</p></div>
-  <div class="rakamlar">{rakam}</div>
+<section class="karsilama">
+  <div class="karsilama-metin">
+  <h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
+  <p>Din felsefesinin temel problemleri, terimleri, düşünürleri ve eserleri birbirine bağlı fişlerle sunulmaktadır. Her ana başlık bir okuma metniyle açılır. Terimler, kişiler ve eserler bu metinlere bağlanır, yeni çalışmalar da düzenli olarak tanıtılır.</p>
+  <p class="durum-satiri">{durum}</p>
+  </div>
+  {okuma_baslangici()}
 </section>
-<div class="bolum-baslik"><h2>Başlık haritası</h2><a href="{SITE_URL}/basliklar/">Bütün başlıklar</a></div>
-{harita_html()}
+<div class="susleme" aria-hidden="true"><span>❦</span></div>
+<div class="bolum-baslik"><h2>Başlıklar</h2><a href="{SITE_URL}/basliklar/">Başlık haritası</a></div>
+{icindekiler_html()}
+<div class="susleme" aria-hidden="true"><span>❦</span></div>
 <div class="bolum-baslik"><h2>Güncel</h2><a href="{SITE_URL}/guncel/">Bütün tanıtımlar</a></div>
-{''.join(makale_satiri(m) for m in items[:5])}
+{''.join(makale_satiri(m) for m in items[:4])}
 """
     return page(SITE_NAME, body, "", canonical=SITE_URL + "/")
 
