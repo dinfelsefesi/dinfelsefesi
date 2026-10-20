@@ -1,0 +1,31 @@
+name: Dergileri tara
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"   # her pazartesi 05:17 UTC (08:17 İstanbul)
+  workflow_dispatch:
+    inputs:
+      gun:
+        description: "Kaç gün geriye bakılsın"
+        default: "14"
+
+permissions:
+  contents: write
+
+jobs:
+  tara:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Yeni makaleleri çek
+        run: python3 scripts/tara.py --gun "${{ github.event.inputs.gun || '14' }}"
+      - name: Aday listesini kaydet
+        run: |
+          git config user.name "dergi-tarayici"
+          git config user.email "dinfelsefesi@gmail.com"
+          git add content/adaylar.json
+          git diff --cached --quiet || git commit -m "Aday listesi güncellendi ($(date -u +%Y-%m-%d))"
+          git push
