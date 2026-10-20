@@ -69,4 +69,13 @@ jobs:
             echo "FTP bilgileri tanımlı değil, hosting yüklemesi atlandı."; exit 0
           fi
           sudo apt-get install -y -qq lftp >/dev/null
-          lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "set ftp:ssl-allow true; set net:max-retries 3; mirror --reverse --delete --only-newer --verbose=1 site/ ./; bye"
+          AYAR="set ftp:ssl-allow true; set net:max-retries 3"
+          # Hesap bütün alan adı klasörünü görüyorsa (public_html varsa) site public_html/yeni içine,
+          # yalnızca "yeni" klasörünü görüyorsa doğrudan hesabın köküne yüklenir.
+          if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye"; then
+            HEDEF="public_html/yeni"
+          else
+            HEDEF="."
+          fi
+          echo "Yükleme klasörü: $HEDEF"
+          lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 site/ $HEDEF; bye"
