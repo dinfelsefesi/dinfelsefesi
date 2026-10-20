@@ -69,6 +69,12 @@ jobs:
             echo "FTP bilgileri tanımlı değil, hosting yüklemesi atlandı."; exit 0
           fi
           sudo apt-get install -y -qq lftp >/dev/null
+          # Tanı: sunucu adı çözülüyor mu, 21. kapı açık mı, giriş başarılı mı
+          IP=$(getent hosts "$FTP_SUNUCU" | awk '{print $1}' | head -1)
+          echo "::warning::Sunucu adı çözümü: ${IP:-ÇÖZÜLEMEDİ}"
+          if timeout 10 bash -c "</dev/tcp/$FTP_SUNUCU/21" 2>/dev/null; then echo "::warning::21. kapı açık"; else echo "::warning::21. kapıya bağlanılamadı"; fi
+          TANI=$(lftp -d -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "set ftp:ssl-allow true; set net:max-retries 1; set net:timeout 20; cls -1; bye" 2>&1 | grep -v -i "pass" | grep -E "^<---|^\*\*\*|error|Fatal|certificate|Login|ls:|cls:" | tail -12 | tr '\n' ' ' | cut -c1-900)
+          echo "::warning::FTP tanı: $TANI"
           AYAR="set ftp:ssl-allow true; set net:max-retries 3"
           # Hesap bütün alan adı klasörünü görüyorsa (public_html varsa) site public_html/yeni içine,
           # yalnızca "yeni" klasörünü görüyorsa doğrudan hesabın köküne yüklenir.
