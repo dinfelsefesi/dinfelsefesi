@@ -1,11 +1,12 @@
 {
- "hatalar": {
-  "2026-03": {
-   "hata": "2026-03: RuntimeError: istek başarısız (ParseError: not well-formed (invalid token): line 2428, column 564): https://dergipark.org.tr/api/public/oai/?verb=ListRecords&resumptionToken=eyJwYXJhbXMiOnsidmVyYiI6Ikxpc3RSZWNvcmRzIiwibWV0YWRhdGFQcmVmaXgiOiJvYWlfZGMiLCJmcm9tIjoiMjAyNi0wMy0wMSIsInVudGlsIjoiMjAyNi0wMy0zMSIsInNldCI6bnVsbCwiaWRlbnRpZmllciI6bnVsbH0sImxhc3RTb3J0IjpbODAyLCIxNzYyNDQwIl0sInRpbWVzdGFtcCI6MTc5MjUwOTc0MX0%3D",
-   "tarih": "2026-10-20"
-  }
- },
+ "hatalar": {},
  "pencereler": {
+  "2026-03": {
+   "eslesen": 0,
+   "kayit": 5621,
+   "sure_sn": 200,
+   "tarandi": "2026-10-20"
+  },
   "2026-04": {
    "eslesen": 3,
    "kayit": 3092,
