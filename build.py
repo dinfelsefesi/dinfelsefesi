@@ -325,6 +325,7 @@ aside.yan .tur-k{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);t
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
 .eser-bolum h3{font-family:var(--sans);font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-ink);margin:1.1rem 0 .3rem;font-weight:600}
 .eser-bolum h3 a{color:var(--accent-ink)}
+.aciklama-kisa{font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);margin:0 0 .6rem;max-width:62ch}
 ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
 .eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
@@ -622,17 +623,40 @@ def render_dizin(tur) -> str:
             satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{e(h["ingilizce"])}</span></span>'
                             f'<span class="aciklama">{satir_ici(h["kisa_tanim"])}</span></li>')
         elif tur == "kisi":
-            satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{e(h["donem"])}</span></span>'
-                            f'<span class="aciklama">{satir_ici(h["kisa_tanitim"])}</span></li>')
+            continue
         else:
             yazar = ", ".join(bag("kisi", y) for y in liste(h.get("yazar")))
             satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{yazar} · {e(h["yil"])}</span></span>'
                             f'<span class="aciklama">{e(h["yayin"])}{" · Türkçesi: " + satir_ici(h["turkce_cevirisi"]) if h.get("turkce_cevirisi") else ""}</span></li>')
     icerik = f'<ul class="liste">{"".join(satirlar)}</ul>'.replace('<ul class="liste"></ul>', "")
-    if not kimlikler:
+    if tur == "kisi":
+        icerik = kisi_bolumleri(kimlikler)
+    elif not kimlikler:
         icerik = '<p class="giris">Henüz fiş eklenmedi.</p>'
     body = f'<p class="ust-etiket">{basliklar[0]}</p><h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]} <span class="say">{len(kimlikler)} fiş</span></p>{icerik}'
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
+
+KAPSAM = [("turkiye", "Türkiye akademisi",
+           "Türkiye'deki üniversitelerde din felsefesi alanında çalışan akademisyenler. Bilgiler kamuya açık kaynaklardan alınır."),
+          ("uluslararasi", "Uluslararası literatür",
+           "Din felsefesi literatüründe etkili olmuş düşünürler ve araştırmacılar.")]
+
+
+def kisi_bolumleri(kimlikler) -> str:
+    bolumler = []
+    for kod, baslik_, aciklama in KAPSAM:
+        uyan = [k for k in kimlikler if FIS[("kisi", k)].get("kapsam", "uluslararasi") == kod]
+        satirlar = []
+        for k in uyan:
+            h = FIS[("kisi", k)]
+            alt = h.get("kurum") if kod == "turkiye" and h.get("kurum") else h.get("donem")
+            satirlar.append(f'<li><span class="ad">{bag("kisi", k)}<span class="alt-ad">{e(alt)}</span></span>'
+                            f'<span class="aciklama">{satir_ici(h["kisa_tanitim"])}</span></li>')
+        liste_ = f'<ul class="liste">{"".join(satirlar)}</ul>' if satirlar else '<p class="giris">Fişler hazırlanıyor.</p>'
+        bolumler.append(f'<section class="eser-bolum" id="{kod}"><h2>{e(baslik_)} <span class="say">{len(uyan)} kişi</span></h2>'
+                        f'<p class="aciklama-kisa">{e(aciklama)}</p>{liste_}</section>')
+    return "".join(bolumler)
+
 
 TUR_SIRA = {"kitap": 0, "kitap-bolumu": 1, "makale": 2, "bildiri": 3, "tez": 4}
 TUR_COGUL = [("kitap", "Kitaplar"), ("kitap-bolumu", "Kitap bölümleri"), ("makale", "Makaleler"),
