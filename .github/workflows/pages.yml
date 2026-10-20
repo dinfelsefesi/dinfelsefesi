@@ -44,3 +44,29 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Hostinge FTP ile yükleme. FTP_SUNUCU, FTP_KULLANICI ve FTP_SIFRE gizli
+  # bilgileri tanımlanmadıysa bu adım hiçbir şey yapmadan geçer.
+  hosting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Siteyi hosting adresi için derle
+        run: python build.py
+        env:
+          SITE_URL: ${{ vars.HOSTING_URL || 'https://dinfelsefesi.com.tr/yeni' }}
+          NOINDEX: ${{ vars.HOSTING_NOINDEX || '1' }}
+      - name: FTP ile yükle
+        env:
+          FTP_SUNUCU: ${{ secrets.FTP_SUNUCU }}
+          FTP_KULLANICI: ${{ secrets.FTP_KULLANICI }}
+          FTP_SIFRE: ${{ secrets.FTP_SIFRE }}
+        run: |
+          if [ -z "$FTP_SUNUCU" ] || [ -z "$FTP_KULLANICI" ] || [ -z "$FTP_SIFRE" ]; then
+            echo "FTP bilgileri tanımlı değil, hosting yüklemesi atlandı."; exit 0
+          fi
+          sudo apt-get install -y -qq lftp >/dev/null
+          lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "set ftp:ssl-allow true; set net:max-retries 3; mirror --reverse --delete --only-newer --verbose=1 site/ ./; bye"

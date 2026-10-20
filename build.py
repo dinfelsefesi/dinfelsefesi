@@ -18,6 +18,8 @@ ROOT = Path(__file__).parent
 CONTENT = ROOT / "content" / "makaleler.json"
 OUT = ROOT / "site"
 SITE_URL = os.environ.get("SITE_URL", "https://dinfelsefesi.com.tr").rstrip("/")
+# Deneme yayınlarında arama motorlarının sayfaları listelememesi için
+NOINDEX = os.environ.get("NOINDEX") == "1"
 SITE_NAME = "Din Felsefesi"
 SITE_TAGLINE = "İngilizce din felsefesi literatüründen yeni makalelerin Türkçe tanıtımı"
 EDITOR = "Abdullah Akgül"
@@ -116,6 +118,7 @@ def page(title: str, body: str, desc: str = SITE_TAGLINE, canonical: str = "") -
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+{'<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""}
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 {canon}
