@@ -425,6 +425,7 @@ footer.site a:hover{color:var(--accent-ink)}
 .atif .ust-etiket{display:inline;font-family:inherit;font-size:inherit;font-style:italic;color:var(--ink-soft);margin:0 .3rem 0 0}
 .atif p{display:inline;margin:0}
 .atif .atif-metin{color:var(--ink);word-break:break-word}
+.kunye-kopyala{font:inherit;font-style:italic;font-size:.82rem;background:none;border:0;padding:0;margin-left:.3rem;color:var(--accent-ink);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .atif button{font:inherit;font-style:italic;margin-left:.4rem;background:none;border:0;padding:0;color:var(--accent-ink);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 /* Yumuşak köşeler: büyük kutular 14px, küçük etiketler 6px */
 .okuma,.kart,.anakart,.kutu,.klasik,.klasik.bos{border-radius:14px}
@@ -704,7 +705,6 @@ def render_makale(m: dict) -> str:
   </div>
   <div class="etiketler">{''.join(f'<span>#{e(t)}</span>' for t in m.get('tags', []))}</div>
   <p class="paylas">{paylas_dugmesi(m)}</p>
-  {atif_kutusu(m['title_tr'] + " [tanıtım]", entry_url(m), m.get('date'))}
 </article>{ATIF_JS}"""
     gorsel = paylasim_gorseli(f"makale-{m['slug']}", f"Günün makalesi · {tr_date(m['gun'])}", m["title_tr"],
                               f"{m.get('authors', '')} · {m.get('journal', '')}{', ' + str(m['year']) if m.get('year') else ''}")
@@ -812,7 +812,7 @@ ATIF_JS = """<script>
   document.querySelectorAll('.atif-erisim').forEach(function(s){s.textContent=d.getDate()+' '+A[d.getMonth()]+' '+d.getFullYear();});
   document.querySelectorAll('.atif-kopyala').forEach(function(b){
     b.addEventListener('click',function(){
-      var t=b.parentNode.querySelector('.atif-metin').innerText, eski=b.textContent;
+      var t=b.parentNode.querySelector('.atif-metin').innerText.trim(), eski=b.textContent;
       var tamam=function(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent=eski;},1800);};
       if(navigator.clipboard){navigator.clipboard.writeText(t).then(tamam,function(){sec(b);});}else{sec(b);}
     });
@@ -887,7 +887,9 @@ def render_fis(tur, k) -> str:
             erisim = f'<a href="{e(hedef)}" rel="noopener">{e(hedef)}</a>'
             if h.get("acik_erisim") == "evet":
                 erisim += ' <span class="ae">Açık erişim</span>'
-        dl = "".join([satir("Künye", kunye_html(h)), satir("Erişim", erisim),
+        kunye_ = (f'<span class="atif-metin kunye-metin">{kunye_html(h)}</span> '
+                  f'<button type="button" class="atif-kopyala kunye-kopyala">kopyala</button>')
+        dl = "".join([satir("Künye", kunye_), satir("Erişim", erisim),
                       satir("Türkçe çevirisi", satir_ici(h.get("turkce_cevirisi"))),
                       satir("İlgili terimler", bag_listesi("ilgili_terimler", h)), basliklar])
         ic = f"<div class='metin'>{govde(h['_govde'], (tur, k))}</div>"
@@ -897,7 +899,7 @@ def render_fis(tur, k) -> str:
 <p class="yol"><a href="{SITE_URL}/{KLASOR[tur]}/">{ {'terim': 'Terimler', 'kisi': 'Kişiler', 'eser': 'Eserler'}[tur] }</a></p>
 <div class="fis-duzen">
   <article class="kart"><p class="ust-etiket">{TUR_AD[tur]}</p>{bas}{ic}<dl class="kunye">{dl}</dl>
-    <p class="imza">{e(h.get('imza'))} · son güncelleme {tr_date(str(h['guncelleme']))}</p>{atif_kutusu(ad(tur, h), fis_url(tur, k), h.get("guncelleme"))}</article>
+    <p class="imza">{e(h.get('imza'))} · son güncelleme {tr_date(str(h['guncelleme']))}</p>{atif_kutusu(ad(tur, h), fis_url(tur, k), h.get("guncelleme")) if tur != "eser" else ""}</article>
   {f'<aside class="yan">{yan}</aside>' if yan else ''}
 </div>{ATIF_JS}"""
     gorsel = paylasim_gorseli(f"{tur}-{k}", TUR_AD[tur], ad(tur, h), str(h.get("ingilizce") or h.get("donem") or ""))
@@ -1307,7 +1309,7 @@ ABOUT = f"""
   <p class="hk-giris">{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
   <div class="hk-izgara">
     <section><h2>Editörlük</h2><p>{EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
-    <section><h2>Atıf</h2><p>Her fişin ve tanıtımın sonunda o sayfaya özel bir atıf satırı yer almaktadır: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
+    <section><h2>Atıf</h2><p>Başlık, terim ve kişi fişlerinin sonunda o sayfaya özel bir atıf satırı yer almaktadır. Eser fişlerinde ve makale tanıtımlarında eserin kendi künyesine atıf yapılması önerilir. Sitenin atıf biçimi: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
     <section><h2>Düzeltme ve öneriler</h2><p>Fişlerdeki bir yanlış ya da eksik, Türkiye akademisi listesine dair bir düzeltme veya yeni bir öneri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></section>
     <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p></section>
   </div>
