@@ -39,10 +39,13 @@ DERGILER = {
 
 # Geniş kapsamlı dergiler için felsefi içerik süzgeci
 ANAHTAR = re.compile(
-    r"philosoph|theis|atheis|\bgod\b|divine|problem of evil|theodic|epistem|"
-    r"argument|ontolog|metaphys|kal[aā]m|mu[ʿ']tazil|ash[ʿ']ar|avicenna|ghaz[aā]l|"
-    r"worship|prayer|liturg|religious experience|mystic|miracle|omnipot|omniscien|"
-    r"free will|providence|afterlife|resurrection|faith and reason|rational",
+    r"philosoph|theis\b|theism|atheis|\bgod\b|\bgod's\b|divine (?:attribute|simplicity|"
+    r"command|hiddenness|action|foreknowledge|will|power|goodness|love)|problem of evil|"
+    r"theodic|religious epistemolog|ontological|cosmological|teleological|fine[- ]tuning|"
+    r"kal[aā]m|mu[ʿ']tazil|ash[ʿ']ar|m[aā]tur[iī]d|avicenna|ibn s[iī]n[aā]|ghaz[aā]l|"
+    r"worship|petitionary|prayer|liturg|religious experience|miracle|omnipoten|omniscien|"
+    r"free will|providence|afterlife|faith and reason|reformed epistemolog|"
+    r"religious belief|religious language|perfect being",
     re.I,
 )
 
@@ -104,7 +107,7 @@ def main() -> None:
                 ozet = temizle(it.get("abstract", ""))
                 if not baslik or baslik.lower().startswith(("correction", "erratum", "book review", "editorial")):
                     continue
-                if suzgec and not ANAHTAR.search(baslik + " " + ozet):
+                if suzgec and not ANAHTAR.search(baslik):
                     continue
                 yazarlar = ", ".join(
                     " ".join(x for x in (a.get("given"), a.get("family")) if x)
