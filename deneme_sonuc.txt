@@ -1,32 +1,7 @@
-hick-1966-evil-and-the-god-of-love | 10.1057/9780230283961_13 | Moral Evil | 2010 | book-chapter | Hick | skor 56
-hick-1966-evil-and-the-god-of-love | 10.1057/9780230283961 | Evil and the God of Love | 2010 | book | Hick | skor 54
-hick-1966-evil-and-the-god-of-love | 10.1057/9780230283961_16 | The Kingdom of God and the Will of God | 2010 | book-chapter | Hick | skor 54
-
-mackie-1955-evil-and-omnipotence | 10.1093/mind/lxiv.254.200 | IV.—EVIL AND OMNIPOTENCE | 1955 | journal-article | MACKIE | skor 49
-mackie-1955-evil-and-omnipotence | 10.2307/j.ctvpj7gm2.11 | Evil and Omnipotence | 2016 | book-chapter | MACKIE | skor 43
-mackie-1955-evil-and-omnipotence | 10.1007/bf02783458 | Omnipotence | 1962 | journal-article | Mackie | skor 29
-
-ormsby-1984-theodicy-in-islamic-thought | 10.1515/9781400856336 | Theodicy in Islamic Thought | 1984 | edited-book | Ormsby | skor 116
-ormsby-1984-theodicy-in-islamic-thought | 10.1163/9789004290952_007 | 6 The Comedy of Reason | 2015 | book-chapter | Ormsby | skor 48
-ormsby-1984-theodicy-in-islamic-thought | 10.1163/9789004661523_014 | The Taste of Truth: The Structure of Experience in al-Ghazālī’s Al-Munqidh Min Al-ḍalāl | 1991 | book-chapter | Ormsby | skor 37
-
-peterson-1991-reason-and-religious-belief | 10.1023/a:1003839821372 | Religious diversity: Where exclusivists often go wrong | 2000 | journal-article | Basinger | skor 47
-peterson-1991-reason-and-religious-belief | 10.5840/faithphil19918112 | Plantinga, Pluralism and Justified Religious Belief | 1991 | journal-article | Basinger,  | skor 47
-peterson-1991-reason-and-religious-belief | 10.1093/0195138090.003.0018 | Analytic Philosophy of Religion | 2005 | book-chapter | Hasker | skor 45
-
-plantinga-1974-god-freedom-and-evil | 10.1093/0198244142.003.0009 | God, Evil, and the Metaphysics of Freedom | 1978 | book-chapter | Plantinga | skor 58
-plantinga-1974-god-freedom-and-evil | 10.1007/978-94-011-2576-5_3 | Epistemic Probability and Evil | 1992 | book-chapter | Plantinga | skor 51
-plantinga-1974-god-freedom-and-evil | 10.1515/9781503621602-011 | CHAPTER TEN. On Ockham's Way Out | 1989 | book-chapter | Plantinga | skor 48
-
-rowe-1979-problem-of-evil | 10.1515/9781474465908-027 | 4.1 'THE PROBLEM OF EVIL AND SOME VARIETIES OF ATHEISM' | 2001 | book-chapter | Rowe | skor 61
-rowe-1979-problem-of-evil | 10.1007/s11153-005-6178-6 | Friendly Atheism, Skeptical Theism, and the Problem of Evil | 2006 | journal-article | Rowe | skor 44
-rowe-1979-problem-of-evil | 10.7591/9781501744839-005 | 3. William Alston on the Problem of Evil | 2019 | book-chapter | Rowe | skor 36
-
-wykstra-1984-humean-obstacle | 10.1007/bf00136567 | The humean obstacle to evidential arguments from suffering: On avoiding the evils of ?appe | 1984 | journal-article | Wykstra | skor 111
-wykstra-1984-humean-obstacle | 10.4324/9781003052883-7 | The Dualism of Humean Virtues | 2021 | book-chapter | Hudson | skor 25
-wykstra-1984-humean-obstacle | 10.4324/9781351139601-5 | Horrendous evils and Christ | 2018 | book-chapter | Davis | skor 23
-
-yaran-1997-kotuluk-ve-teodise | 10.17120/omuifd.866414 | Resim ve Etik: Batı Resim Sanatında Ahlaki Temalar ve Örnekler | 2021 | journal-article | Yaran | skor 55
-yaran-1997-kotuluk-ve-teodise | 10.29228/turkishstudies.22694 | JACQUES AUDİBERTİ’NİN KÖTÜLÜK KOL GEZİYOR ADLI YAPITINDA KÖTÜLÜK, ŞİDDET VE RENK | 2019 | journal-article | TÜRKOĞLU | skor 40
-yaran-1997-kotuluk-ve-teodise | 10.17120/omuifd.1886033 | “İstanbul (Bey)Efendisi”: Kayboluşuna Üzülünen İstanbul Beyefendileri ve Hanımefendilerini | 2026 | journal-article | Yaran | skor 38
-
+[HATA] https://akademik.yok.gov.tr/AkademikArama/: <urlopen error timed out>
+formlar: []
+input adları: []
+captcha ipucu: False
+[HATA] https://akademik.yok.gov.tr/AkademikArama/AkademisyenArama?islem=direct&aramaTerim=din+felsefesi: <urlopen error timed out>
+[HATA] https://akademik.yok.gov.tr/AkademikArama/view/searchResultviewListAuthor.jsp?islem=direct&aramaTerim=din+felsefesi: <urlopen error timed out>
+[HATA] https://akademik.yok.gov.tr/AkademikArama/AkademikArama?islem=direct&aramaTerim=din%20felsefesi: <urlopen error timed out>
