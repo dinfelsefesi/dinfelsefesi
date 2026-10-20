@@ -51,17 +51,39 @@ def kucult(s: str) -> str:
     return (s or "").replace("İ", "i").replace("I", "ı").lower()
 
 
+GECERSIZ_BAYT = re.compile(rb"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+KARAKTER_REF = re.compile(rb"&#(x[0-9a-fA-F]+|[0-9]+);")
+
+
+def _ref_temizle(m):
+    kod = m.group(1)
+    n = int(kod[1:], 16) if kod[:1] in (b"x", b"X") else int(kod)
+    gecerli = n in (9, 10, 13) or 0x20 <= n <= 0xD7FF or 0xE000 <= n <= 0xFFFD or 0x10000 <= n <= 0x10FFFF
+    return m.group(0) if gecerli else b" "
+
+
+def xml_coz(veri: bytes) -> ET.Element:
+    """Bazı kayıtlarda XML'de yasak denetim karakterleri bulunuyor; bunları boşlukla değiştirerek çözer."""
+    try:
+        return ET.fromstring(veri)
+    except ET.ParseError:
+        return ET.fromstring(KARAKTER_REF.sub(_ref_temizle, GECERSIZ_BAYT.sub(b" ", veri)))
+
+
 def istek(params: dict) -> ET.Element:
     url = OAI + "?" + urllib.parse.urlencode(params)
+    son_hata = None
     for deneme in range(5):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
-                return ET.fromstring(r.read())
+                veri = r.read()
+            return xml_coz(veri)
         except Exception as hata:  # noqa: BLE001
+            son_hata = hata
             bekle = 10 * (deneme + 1)
-            print(f"  hata: {hata}; {bekle} sn sonra yeniden", file=sys.stderr)
+            print(f"  hata: {type(hata).__name__}: {hata}; {bekle} sn sonra yeniden", file=sys.stderr)
             time.sleep(bekle)
-    raise RuntimeError(f"istek başarısız: {url}")
+    raise RuntimeError(f"istek başarısız ({type(son_hata).__name__}: {son_hata}): {url}")
 
 
 def metin(el) -> str:
@@ -176,8 +198,17 @@ def main() -> None:
                 print("süre doldu, sonraki çalışmada devam edilecek")
                 break
             t0 = time.time()
-            sonuc = pencereyi_tara(ay, bilinen, cikti)
+            try:
+                sonuc = pencereyi_tara(ay, bilinen, cikti)
+            except Exception as hata:  # noqa: BLE001
+                cikti.flush()
+                mesaj = f"{ay}: {type(hata).__name__}: {hata}"[:500]
+                print(f"::warning::{mesaj}")
+                ilerleme.setdefault("hatalar", {})[ay] = {"hata": mesaj, "tarih": date.today().isoformat()}
+                ILERLEME.write_text(json.dumps(ilerleme, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+                continue
             cikti.flush()
+            ilerleme.get("hatalar", {}).pop(ay, None)
             sonuc["sure_sn"] = round(time.time() - t0)
             sonuc["tarandi"] = date.today().isoformat()
             ilerleme["pencereler"][ay] = sonuc
