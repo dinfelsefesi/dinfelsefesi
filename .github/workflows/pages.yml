@@ -25,10 +25,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install -q pyyaml
       - name: Siteyi derle
         run: python build.py
         env:
           SITE_URL: ${{ vars.SITE_URL || 'https://dinfelsefesi.github.io/dinfelsefesi' }}
+          NOINDEX: ${{ vars.PAGES_NOINDEX || '1' }}
+          TASLAK_GOSTER: ${{ vars.PAGES_TASLAK_GOSTER || '1' }}
       - uses: actions/configure-pages@v5
         with:
           enablement: true
@@ -54,11 +57,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install -q pyyaml
       - name: Siteyi hosting adresi için derle
         run: python build.py
         env:
           SITE_URL: ${{ vars.HOSTING_URL || 'https://dinfelsefesi.com.tr/yeni' }}
           NOINDEX: ${{ vars.HOSTING_NOINDEX || '1' }}
+          TASLAK_GOSTER: ${{ vars.HOSTING_TASLAK_GOSTER || '1' }}
       - name: FTP ile yükle
         env:
           FTP_SUNUCU: ${{ secrets.FTP_SUNUCU }}

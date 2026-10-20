@@ -1,11 +1,15 @@
 # dinfelsefesi.com.tr
 
-İngilizce din felsefesi literatüründen yeni makalelerin Türkçe tanıtımı.
+Din felsefesi için Türkçe başvuru sitesi: başlık haritası, terim, kişi ve eser fişleri, makale tanıtımları.
+
+Fiş biçimleri için `content/FISLER.md` dosyasına bakın.
 
 ## Nasıl çalışır
 
-- `content/makaleler.json` tek içerik kaynağıdır. Her kayıt bir makale tanıtımıdır.
-- `build.py` bu dosyadan `site/` klasörüne HTML sayfaları, `rss.xml` ve `api/makaleler.json` üretir.
+- `content/makaleler.json` makale tanıtımlarını, `content/basliklar`, `terimler`, `kisiler`, `eserler` klasörleri fişleri tutar.
+- `build.py` bunlardan `site/` klasörüne HTML sayfaları, `rss.xml`, `api/makaleler.json` ve `api/fisler.json` üretir. `TASLAK_GOSTER=1` taslak fişleri de gösterir, `NOINDEX=1` arama motorlarını kapatır.
+- Site hem GitHub Pages'ta hem FTP ile hostingde (`dinfelsefesi.com.tr/yeni`) yayımlanır.
+- `scripts/dergipark_hasat.py` DergiPark'tan din felsefesi makalelerini toplar (`data/dergipark`).
 - `main` dalına her gönderimde GitHub Actions siteyi derler ve GitHub Pages'ta yayımlar.
 - `CNAME` dosyası eklenirse özel alan adı kullanılır.
 
@@ -29,4 +33,4 @@
 }
 ```
 
-Yerelde denemek için: `python3 build.py` ve ardından `site/index.html` dosyasını açın.
+Yerelde denemek için: `pip install pyyaml`, sonra `TASLAK_GOSTER=1 python3 build.py` ve ardından `site/index.html` dosyasını açın.
