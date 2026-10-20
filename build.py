@@ -432,6 +432,14 @@ footer.site a:hover{color:var(--accent-ink)}
 .altlar li{border-radius:999px}
 table.kisiler tbody tr:hover td:first-child{border-radius:8px 0 0 8px}
 table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
+/* Hakkında */
+.hakkinda h1{margin-bottom:.5rem}
+.hk-giris{margin:0 0 1.4rem;font-size:.95rem;line-height:1.5;max-width:none;color:var(--ink)}
+.hk-izgara{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem 1.8rem;border-top:1px solid var(--rule);padding-top:.9rem}
+.hk-izgara h2{font-size:1.08rem;margin:0 0 .2rem}
+.hk-izgara p{margin:0;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
+@media (max-width:980px){.hk-izgara{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.hk-izgara{grid-template-columns:1fr}}
 /* Önizleme kartı */
 .onizleme{position:absolute;z-index:50;width:min(22rem,calc(100vw - 16px));background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem .85rem;box-shadow:0 18px 40px -24px rgba(60,40,10,.5);pointer-events:none;font-size:.92rem;line-height:1.45}
 .onizleme p{margin:0}
@@ -1258,20 +1266,14 @@ def render_ana(items) -> str:
 
 
 ABOUT = f"""
-<article class="dar">
-  <p class="ust-etiket">Hakkında</p>
+<article class="hakkinda">
   <h1>Hakkında</h1>
-  <div class="metin">
-    <p>{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır.</p>
-    <p>Sitede ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
-    <h2>Editörlük</h2>
-    <p>Editör: {EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p>
-    <h2>Atıf</h2>
-    <p>Her fişin ve tanıtımın sonunda o sayfaya özel bir atıf satırı yer almaktadır. Genel biçim şöyledir: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme tarihi. Erişim tarihi. Sayfanın adresi.</p>
-    <h2>Düzeltme ve öneriler</h2>
-    <p>Fişlerdeki bir yanlışı ya da eksiği, Türkiye akademisi listesine dair bir düzeltmeyi veya yeni bir öneriyi <a href="mailto:{ILETISIM}">{ILETISIM}</a> adresine iletebilirsiniz.</p>
-    <h2>Veriler</h2>
-    <p>Sitedeki kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p>
+  <p class="hk-giris">{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
+  <div class="hk-izgara">
+    <section><h2>Editörlük</h2><p>{EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
+    <section><h2>Atıf</h2><p>Her fişin ve tanıtımın sonunda o sayfaya özel bir atıf satırı yer almaktadır: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
+    <section><h2>Düzeltme ve öneriler</h2><p>Fişlerdeki bir yanlış ya da eksik, Türkiye akademisi listesine dair bir düzeltme veya yeni bir öneri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></section>
+    <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p></section>
   </div>
 </article>"""
 
