@@ -686,7 +686,8 @@ def turkiye_listesi() -> tuple[str, int]:
                         f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td><td class="k-yok">{yok}</td></tr>')
     tarih = tr_date(str(veri.get("tarih"))) if veri.get("tarih") else ""
     ust = (f'<p class="aciklama-kisa">Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
-           f'Liste, YÖK Akademik\'te bilim alanı olarak Din Felsefesi\'ni işaretlemiş akademisyenlerden oluşmaktadır'
+           f'Liste, YÖK Akademik\'te bilim alanı olarak Din Felsefesi\'ni işaretlemiş ya da Felsefe ve Din Bilimleri alanında '
+           f'Din Felsefesi\'ni anahtar kelime olarak belirtmiş akademisyenlerden oluşmaktadır'
            f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.</p>'
            '<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
     tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr><th>Ad Soyad</th><th>Unvan</th><th>Üniversite</th>'
