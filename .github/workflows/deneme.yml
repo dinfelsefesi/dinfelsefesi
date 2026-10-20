@@ -2,9 +2,15 @@ name: Deneme DergiPark
 on:
   push:
     branches: [deneme-dergipark]
+    paths: [scripts/deneme_dergipark.py, .github/workflows/deneme.yml]
+permissions:
+  contents: write
 jobs:
   deneme:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/deneme_dergipark.py
+      - run: python3 scripts/deneme_dergipark.py > deneme_sonuc.txt 2>&1 || true
+      - run: |
+          git config user.name "deneme"; git config user.email "dinfelsefesi@gmail.com"
+          git add deneme_sonuc.txt; git commit -m "deneme sonucu"; git push
