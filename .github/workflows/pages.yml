@@ -45,7 +45,7 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-  # Hostinge FTP ile yükleme. FTP_SUNUCU, FTP_KULLANICI ve FTP_SIFRE gizli
+  # Hostinge FTP ile yükleme (dinfelsefesi.com.tr/yeni). FTP_SUNUCU, FTP_KULLANICI ve FTP_SIFRE gizli
   # bilgileri tanımlanmadıysa bu adım hiçbir şey yapmadan geçer.
   hosting:
     runs-on: ubuntu-latest
@@ -69,19 +69,24 @@ jobs:
             echo "FTP bilgileri tanımlı değil, hosting yüklemesi atlandı."; exit 0
           fi
           sudo apt-get install -y -qq lftp >/dev/null
-          # Tanı: sunucu adı çözülüyor mu, 21. kapı açık mı, giriş başarılı mı
+          # Sertifika sunucunun kendi adına düzenlenmiş olabilir. O adı sertifikadan okuyup,
+          # aynı sunucuyu gösteriyorsa bağlantıyı o adla kurarız. Böylece güvenlik kontrolü açık kalır.
           IP=$(getent hosts "$FTP_SUNUCU" | awk '{print $1}' | head -1)
-          echo "::warning::Sunucu adı çözümü: ${IP:-ÇÖZÜLEMEDİ}"
-          if timeout 10 bash -c "</dev/tcp/$FTP_SUNUCU/21" 2>/dev/null; then echo "::warning::21. kapı açık"; else echo "::warning::21. kapıya bağlanılamadı"; fi
-          TANI=$(lftp -d -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "set ftp:ssl-allow true; set net:max-retries 1; set net:timeout 20; cls -1; bye" 2>&1 | grep -v -i "pass" | grep -E "^<---|^\*\*\*|error|Fatal|certificate|Login|ls:|cls:" | tail -12 | tr '\n' ' ' | cut -c1-900)
-          echo "::warning::FTP tanı: $TANI"
+          CN=$(openssl s_client -connect "$FTP_SUNUCU:21" -starttls ftp -servername "$FTP_SUNUCU" </dev/null 2>/dev/null \
+               | openssl x509 -noout -subject 2>/dev/null | sed -n 's/.*CN *= *\([^,/]*\).*/\1/p' | tr -d ' ')
+          CN_IP=$(getent hosts "$CN" | awk '{print $1}' | head -1)
+          echo "::warning::Sertifika adı: ${CN:-okunamadı}; aynı sunucu: $([ -n "$CN" ] && [ "$CN_IP" = "$IP" ] && echo evet || echo hayır)"
+          if [ -n "$CN" ] && [ "$CN_IP" = "$IP" ]; then FTP_SUNUCU="$CN"; fi
           AYAR="set ftp:ssl-allow true; set net:max-retries 3"
-          # Hesap bütün alan adı klasörünü görüyorsa (public_html varsa) site public_html/yeni içine,
-          # yalnızca "yeni" klasörünü görüyorsa doğrudan hesabın köküne yüklenir.
-          if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye"; then
-            HEDEF="public_html/yeni"
-          else
-            HEDEF="."
+          # Hesap alan adının klasörünü görüyor (/domains/dinfelsefesi.com.tr). Site yalnızca public_html/yeni
+          # içine yüklenir. Silme işlemi de yalnızca bu klasörün içinde yapılır. public_html bulunamazsa
+          # hiçbir şey yüklenmez, böylece başka bir klasöre yanlışlıkla dokunulmaz.
+          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye" > kontrol.log 2>&1; then
+            echo "::error::public_html klasörü bulunamadı ya da bağlanılamadı: $(grep -v -i pass kontrol.log | tail -3 | tr '\n' ' ' | cut -c1-400)"; exit 1
           fi
-          echo "Yükleme klasörü: $HEDEF"
-          lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 site/ $HEDEF; bye"
+          HEDEF="public_html/yeni"
+          echo "::warning::Yükleme klasörü: $HEDEF"
+          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 site/ $HEDEF; bye" > ftp.log 2>&1; then
+            echo "::error::FTP hatası: $(grep -v -i pass ftp.log | tail -5 | tr '\n' ' ' | cut -c1-600)"; exit 1
+          fi
+          echo "::notice::Yüklenen dosya sayısı: $(grep -c -i 'transferring\|Yeni dosya\|file' ftp.log || true)"
