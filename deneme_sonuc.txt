@@ -1,7 +1,79 @@
-=== Biçimler
-['oai_dc', 'oai_etdms', 'oai_marc', 'oai_mods']
-Traceback (most recent call last):
-  File "/home/runner/work/dinfelsefesi/dinfelsefesi/scripts/deneme_dergipark.py", line 10, in <module>
-    rec = r.split("<record>")[1].split("</record>")[0]
-          ~~~~~~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
+=== oai_dc: 100 kayıt; sayfalama: ['<resumptionToken expirationDate="2026-10-21T15:17:08Z"\n                             >']
+
+                <header>
+    <identifier>oai:dergipark.org.tr:article/1963826</identifier>
+    <datestamp>2026-10-02</datestamp>
+                        <setSpec>54</setSpec>
+            </header>
+                <metadata>
+                    <oai_dc:dc
+        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <dc:title xml:lang="tr-TR">
+                <![CDATA[Kriptografik S-Boxların Analizi, Görselleştirilmesi ve Karşılaştırılması için Web Tabanlı Bir Platform]]>
+            </dc:title>
+                                <dc:title xml:lang="en-US">
+                <![CDATA[A Web-Based Platform for the Analysis, Visualization, and Comparison of Cryptographic S-Boxes]]>
+            </dc:title>
+                            <dc:creator>
+            <![CDATA[Kaner, Seyfullah]]>
+        </dc:creator>
+            <dc:creator>
+            <![CDATA[Garıpcan, Ali Murat]]>
+        </dc:creator>
+            <dc:creator>
+            <![CDATA[Erdem, Ebubekir]]>
+        </dc:creator>
+                                                                    <dc:subject><![CDATA[Computer Software]]></dc:subject>
+                                                                <dc:subject><![CDATA[Bilgisayar Yazılımı]]></dc:subject>
+                                                                                            <dc:subject><![CDATA[BIC,Kriptografi,S-Box,SAC,Web Tabanlı Yazılım]]></dc:subject>
+                                                                        <dc:subject><![CDATA[BIC,Cryptography,SAC,S-Box,Web-Based Software]]></dc:subject>
+                                                                    <dc:description
+                        xml:lang="tr-TR">
+                    <![CDATA[Kriptografik S-Boxlar, birçok şifreleme algoritmasının güvenlik düzeyini belirleyen temel bileşenler arasındadır. Bu nedenle S-Box analizinin yalnızca birkaç sayısal değerin hesaplanmasıyla sınırlı kalmaması gereki
+subject: ['Computer Software', 'Bilgisayar Yazılımı', 'BIC,Kriptografi,S-Box,SAC,Web Tabanlı Yazılım', 'BIC,Cryptography,SAC,S-Box,Web-Based Software', 'Statistical Analysis Methods', 'İstatistiksel Analiz Teknikleri', 'Testing, Assessment and Psychometrics (Other)', 'Test, Ölçme ve Psikometri (Diğer)', 'Mathematics education,Perceived self-efficacy in mathematics,Meta-analysis,Reliability generalization.', 'Statistical Analysis Methods', 'İstatistiksel Analiz Teknikleri', 'Measurement Equivalence', 'Ölçme Eşdeğerliliği', 'test equating,covariate-based equating,kernel equating', 'test eşitleme,ortak değişken temelli test eşitleme,kernel eşitleme']
+=== oai_mods: 100 kayıt; sayfalama: ['<resumptionToken expirationDate="2026-10-21T15:17:10Z"\n                             >']
+
+                <header>
+    <identifier>oai:dergipark.org.tr:article/1963826</identifier>
+    <datestamp>2026-10-02</datestamp>
+                        <setSpec>54</setSpec>
+            </header>
+                <metadata>
+                    <mods xmlns="http://www.loc.gov/mods/v3"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+      xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd"
+      version="3.0">
+
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">article</genre>
+
+                            <titleInfo xml:lang="tr-TR">
+                <title><![CDATA[Kriptografik S-Boxların Analizi, Görselleştirilmesi ve Karşılaştırılması için Web Tabanlı Bir Platform]]></title>
+            </titleInfo>
+                                <titleInfo xml:lang="en-US">
+                <title><![CDATA[A Web-Based Platform for the Analysis, Visualization, and Comparison of Cryptographic S-Boxes]]></title>
+            </titleInfo>
+            
+                            <name type="personal">
+                                    <namePart type="given">Seyfullah</namePart>
+                                                    <namePart type="family">Kaner</namePart>
+                                                            </name>
+                                <name type="personal">
+                                    <namePart type="given">Ali Murat</namePart>
+                                                    <namePart type="family">Garıpcan</namePart>
+                                                            </name>
+                                <name type="personal">
+                                    <namePart type="given">Ebubekir</namePart>
+                                                    <namePart type="family">Erdem</namePart>
+                                                            </name>
+            
+        
+    <originInfo>
+                            <dateIssued encoding="w3cdtf" keyDate="yes">2026-06-04</dateIssued>
+                            <publisher><![CDATA[Adıyaman Üniversitesi]]></publisher>
+            </
+subject: ['Computer Software', 'Bilgisayar Yazılımı', 'BIC,Kriptografi,S-Box,SAC,Web Tabanlı Yazılım', 'BIC,Cryptography,SAC,S-Box,Web-Based Software', 'Statistical Analysis Methods', 'İstatistiksel Analiz Teknikleri', 'Testing, Assessment and Psychometrics (Other)', 'Test, Ölçme ve Psikometri (Diğer)', 'Mathematics education,Perceived self-efficacy in mathematics,Meta-analysis,Reliability generalization.', 'Statistical Analysis Methods', 'İstatistiksel Analiz Teknikleri', 'Measurement Equivalence', 'Ölçme Eşdeğerliliği', 'test equating,covariate-based equating,kernel equating', 'test eşitleme,ortak değişken temelli test eşitleme,kernel eşitleme']
