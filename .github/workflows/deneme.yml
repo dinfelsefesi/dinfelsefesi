@@ -1,0 +1,10 @@
+name: Deneme DergiPark
+on:
+  push:
+    branches: [deneme-dergipark]
+jobs:
+  deneme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/deneme_dergipark.py
