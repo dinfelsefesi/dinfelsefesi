@@ -420,11 +420,11 @@ footer.site .wrap{padding-block:1rem 1.3rem;display:flex;flex-wrap:wrap;justify-
 footer.site p{margin:0}
 footer.site a{color:var(--ink-soft)}
 footer.site a:hover{color:var(--accent-ink)}
-.atif{margin:1.6rem 0 0;padding:.9rem 1.1rem;border:1px dashed var(--rule);border-radius:12px;font-size:.92rem;max-width:var(--measure);background:var(--paper)}
-.atif .ust-etiket{margin:0 0 .25rem}
-.atif p{margin:0;color:var(--ink-soft)}
+.atif{margin:1.2rem 0 0;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;font-family:"Times New Roman",Times,serif;font-size:.8rem;line-height:1.35;max-width:var(--measure);background:transparent;color:var(--ink-soft)}
+.atif .ust-etiket{display:inline;font-family:inherit;font-size:inherit;font-style:italic;color:var(--ink-soft);margin:0 .3rem 0 0}
+.atif p{display:inline;margin:0}
 .atif .atif-metin{color:var(--ink);word-break:break-word}
-.atif button{font:inherit;font-style:italic;font-size:.9rem;margin-top:.45rem;background:none;border:0;padding:0;color:var(--accent-ink);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.atif button{font:inherit;font-style:italic;margin-left:.4rem;background:none;border:0;padding:0;color:var(--accent-ink);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 /* Yumuşak köşeler: büyük kutular 14px, küçük etiketler 6px */
 .okuma,.kart,.anakart,.kutu,.klasik,.klasik.bos{border-radius:14px}
 .okuma,.kart{overflow:hidden}
@@ -774,10 +774,10 @@ def satir(etiket, icerik) -> str:
 
 def atif_kutusu(baslik_, url, guncelleme=None) -> str:
     gun = f" Son güncelleme {tr_date(str(guncelleme))}." if guncelleme else ""
-    return (f'<div class="atif"><p class="ust-etiket">Atıf için</p>'
+    return (f'<div class="atif"><p class="ust-etiket">Atıf:</p>'
             f'<p class="atif-metin">"{e(baslik_)}". <i>dinfelsefesi.com.tr</i>, ed. {e(EDITOR)}.{gun} '
             f'Erişim <span class="atif-erisim">[tarih]</span>. {e(url)}</p>'
-            f'<button type="button" class="atif-kopyala">Atıf satırını kopyala</button></div>')
+            f'<button type="button" class="atif-kopyala">kopyala</button></div>')
 
 
 ATIF_JS = """<script>
