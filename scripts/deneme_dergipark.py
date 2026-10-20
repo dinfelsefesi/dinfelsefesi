@@ -1,17 +1,23 @@
-"""Geçici: eser fişleri için Crossref'te DOI ara."""
-import glob, json, urllib.parse, urllib.request, yaml
-UA = {"User-Agent": "dinfelsefesi/1.0 (mailto:dinfelsefesi@gmail.com)"}
-for f in sorted(glob.glob("content/eserler/*.md")):
-    h = yaml.safe_load(open(f, encoding="utf-8").read()[4:].split("\n---\n")[0])
-    yazar = " ".join(h["yazar"]) if isinstance(h["yazar"], list) else h["yazar"]
-    q = urllib.parse.urlencode({"query.bibliographic": f'{h["baslik"]} {h["yil"]}', "query.author": yazar.replace("-", " "),
-                                "rows": 3, "mailto": "dinfelsefesi@gmail.com"})
+"""Geçici: YÖK Akademik'te 'din felsefesi' araması yapılabiliyor mu?"""
+import re, urllib.parse, urllib.request, http.cookiejar
+cj = http.cookiejar.CookieJar()
+op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+op.addheaders = [("User-Agent", "Mozilla/5.0 (dinfelsefesi.com.tr; mailto:dinfelsefesi@gmail.com)")]
+def al(url):
     try:
-        r = json.load(urllib.request.urlopen(urllib.request.Request("https://api.crossref.org/works?" + q, headers=UA), timeout=60))
-        for it in r["message"]["items"]:
-            yil = (it.get("issued", {}).get("date-parts", [[None]])[0] or [None])[0]
-            print(h["kimlik"], "|", it.get("DOI"), "|", (it.get("title") or [""])[0][:90], "|", yil, "|", it.get("type"), "|",
-                  ", ".join(a.get("family", "") for a in it.get("author", [])[:3]), "| skor", round(it.get("score", 0)))
+        with op.open(url, timeout=60) as r:
+            b = r.read().decode("utf-8", "replace"); print(f"[{r.status}] {r.geturl()[:160]} ({len(b)} bayt)"); return b
     except Exception as e:
-        print(h["kimlik"], "HATA", e)
-    print()
+        print(f"[HATA] {url[:160]}: {e}"); return ""
+kok = al("https://akademik.yok.gov.tr/AkademikArama/")
+print("formlar:", re.findall(r'<form[^>]*action="([^"]*)"', kok)[:5])
+print("input adları:", sorted(set(re.findall(r'<input[^>]*name="([^"]+)"', kok)))[:20])
+print("captcha ipucu:", bool(re.search(r"captcha|recaptcha|doğrulama", kok, re.I)))
+for u in ["https://akademik.yok.gov.tr/AkademikArama/AkademisyenArama?islem=direct&aramaTerim=din+felsefesi",
+          "https://akademik.yok.gov.tr/AkademikArama/view/searchResultviewListAuthor.jsp?islem=direct&aramaTerim=din+felsefesi",
+          "https://akademik.yok.gov.tr/AkademikArama/AkademikArama?islem=direct&aramaTerim=din%20felsefesi"]:
+    h = al(u)
+    if h:
+        print("  sonuç ipucu:", re.findall(r"(\d+)\s*(?:sonuç|kayıt|Akademisyen)", h)[:5])
+        print("  profil bağlantıları:", len(set(re.findall(r'AkademisyenGorevOgrenimBilgileri[^"\']*', h))), re.findall(r'href="([^"]*AkademisyenGorev[^"]*)"', h)[:2])
+        print("  metin:", re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h))[:700])
