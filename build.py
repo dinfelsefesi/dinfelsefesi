@@ -449,6 +449,11 @@ def ana_basliklar():
                   key=lambda k: FIS[("baslik", k)].get("sira", 99))
 
 
+def alt_dolu(a) -> bool:
+    """Alt başlığın fişi var ve ona bağlı içerik ya da metin bulunuyorsa dolu sayılır."""
+    return ("baslik", a) in FIS and bool(bagli_fisler(a) or FIS[("baslik", a)].get("_govde"))
+
+
 def harita_html() -> str:
     anas = ana_basliklar()
     en_cok = max([len(bagli_fisler(k)) for k in anas] + [1])
@@ -457,7 +462,7 @@ def harita_html() -> str:
         h = FIS[("baslik", k)]
         b = bagli_fisler(k)
         altlar = "".join(
-            f"<li class='{'dolu' if ('baslik', a) in FIS else 'plan'}'>{bag('baslik', a)}</li>"
+            f"<li class='{'dolu' if alt_dolu(a) else 'plan'}'>{bag('baslik', a)}</li>"
             for a in liste(h.get("alt_basliklar")))
         ilg = bag_listesi("ilgili_basliklar", h)
         kartlar.append(f"""<article class="anakart{' bos' if not b else ''}">

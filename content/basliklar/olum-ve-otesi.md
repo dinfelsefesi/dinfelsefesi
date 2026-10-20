@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: olum-ve-otesi
 ad: Ölüm ve Ötesi
-sira: 10
+sira: 9
 ust_baslik: ''
 ozet: Ölümden sonra hayatın imkânı ile ruh ve kişisel kimlik üzerine tartışmalar.
 alt_basliklar:

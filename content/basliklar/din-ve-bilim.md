@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: din-ve-bilim
 ad: Din ve Bilim
-sira: 7
+sira: 6
 ust_baslik: ''
 ozet: Dinî inançlar ile bilimsel bilgi arasındaki ilişki.
 alt_basliklar: []

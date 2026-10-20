@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: din-ve-ahlak
 ad: Din ve Ahlak
-sira: 9
+sira: 8
 ust_baslik: ''
 ozet: Ahlaki değerlerin Tanrı ile ilişkisi ve dinî inancın ahlaki hayattaki yeri.
 alt_basliklar:

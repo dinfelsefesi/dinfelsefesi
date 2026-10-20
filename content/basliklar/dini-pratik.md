@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: dini-pratik
 ad: Dinî Pratik
-sira: 11
+sira: 10
 ust_baslik: ''
 ozet: İbadet, dua ve ritüel gibi dinî eylemlerin felsefi açıdan incelenmesi.
 alt_basliklar:
