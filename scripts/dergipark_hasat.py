@@ -15,6 +15,7 @@ Kullanım:
   python3 scripts/dergipark_hasat.py --ay 2026-09             # tek bir ayı tara
 """
 import argparse
+import html
 import json
 import re
 import sys
@@ -64,7 +65,7 @@ def istek(params: dict) -> ET.Element:
 
 
 def metin(el) -> str:
-    return re.sub(r"\s+", " ", (el.text or "")).strip()
+    return re.sub(r"\s+", " ", html.unescape(el.text or "")).strip()
 
 
 def kaydi_coz(rec: ET.Element) -> dict | None:
