@@ -72,6 +72,7 @@ jobs:
           FTP_SUNUCU: ${{ secrets.FTP_SUNUCU }}
           FTP_KULLANICI: ${{ secrets.FTP_KULLANICI }}
           FTP_SIFRE: ${{ secrets.FTP_SIFRE }}
+          HOSTING_HEDEF: ${{ vars.HOSTING_HEDEF }}
         run: |
           if [ -z "$FTP_SUNUCU" ] || [ -z "$FTP_KULLANICI" ] || [ -z "$FTP_SIFRE" ]; then
             echo "FTP bilgileri tanımlı değil, hosting yüklemesi atlandı."; exit 0
@@ -92,9 +93,18 @@ jobs:
           if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye" > kontrol.log 2>&1; then
             echo "::error::public_html klasörü bulunamadı ya da bağlanılamadı: $(grep -v -i pass kontrol.log | tail -3 | tr '\n' ' ' | cut -c1-400)"; exit 1
           fi
-          HEDEF="public_html/yeni"
+          HEDEF="${HOSTING_HEDEF:-public_html/yeni}"
+          HARIC=""
+          if [ "$HEDEF" = "public_html" ]; then
+            # Ana klasöre yükleme: WordPress hâlâ duruyorsa (wp-config.php) hiçbir şey yapılmaz.
+            # Önce yedek alınıp WordPress dosyaları elle silinmelidir.
+            if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/wp-config.php; bye" 2>/dev/null | grep -q wp-config; then
+              echo "::error::public_html içinde WordPress (wp-config.php) duruyor. Yedek alıp WordPress dosyalarını sildikten sonra tekrar çalıştırın."; exit 1
+            fi
+            HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/ --exclude-glob .htaccess"
+          fi
           echo "::warning::Yükleme klasörü: $HEDEF"
-          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 site/ $HEDEF; bye" > ftp.log 2>&1; then
+          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 $HARIC site/ $HEDEF; bye" > ftp.log 2>&1; then
             echo "::error::FTP hatası: $(grep -v -i pass ftp.log | tail -5 | tr '\n' ' ' | cut -c1-600)"; exit 1
           fi
           echo "::notice::Yüklenen dosya sayısı: $(grep -c -i 'transferring\|Yeni dosya\|file' ftp.log || true)"

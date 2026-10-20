@@ -1334,6 +1334,11 @@ def main() -> None:
     yaz("", render_ana(items))
     yaz("gunun-makalesi", render_makaleler(items))
     yaz("guncel", yonlendirme(f"{SITE_URL}/gunun-makalesi/"))
+    # Eski WordPress adresleri yeni sayfalara yönlendirilir
+    for eski, yeni in {"kotuluk-problemi": "basliklar/kotuluk-problemi", "dini-tecrube": "basliklar/din-epistemolojisi",
+                       "tanrinin-varligi-problemi": "basliklar/tanrinin-varliginin-delilleri",
+                       "category/din-felsefe-iliskisi": "basliklar"}.items():
+        yaz(eski, yonlendirme(f"{SITE_URL}/{yeni}/"))
     for m in items:
         yaz(f"makale/{m['slug']}", render_makale(m))
     yaz("basliklar", render_basliklar())
