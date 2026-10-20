@@ -362,6 +362,13 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.92rem}
 footer.site .wrap{padding-block:1.4rem 2.2rem;display:grid;gap:.3rem}
 footer.site p{margin:0;max-width:var(--measure)}
+/* Yumuşak köşeler: büyük kutular 14px, küçük etiketler 6px */
+.okuma,.kart,.anakart,.kutu,.klasik,.klasik.bos{border-radius:14px}
+.okuma,.kart{overflow:hidden}
+.taslak,.emekli,.ae{border-radius:6px;padding-inline:.45rem}
+.altlar li{border-radius:999px}
+table.kisiler tbody tr:hover td:first-child{border-radius:8px 0 0 8px}
+table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
 .karsilama h1{font-size:3rem;margin-bottom:.8rem}
