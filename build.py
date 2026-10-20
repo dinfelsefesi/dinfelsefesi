@@ -38,6 +38,7 @@ SITE_NAME = "Din Felsefesi"
 SITE_TAGLINE = "Din felsefesinin başlıkları, terimleri, kişileri ve eserleri; Türkçe ve uluslararası literatürden seçilmiş tanıtımlar"
 EDITOR = "Abdullah Akgül"
 ILETISIM = "dinfelsefesi@gmail.com"
+YIL = datetime.now().year
 
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
          "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
@@ -360,10 +361,11 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 .eser-bilgi a.dis{font-weight:600}
 .ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
 .eser-bilgi{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
-footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.92rem}
-footer.site .wrap{padding-block:1.4rem 2.2rem;display:grid;gap:.3rem}
-footer.site p{margin:0;max-width:var(--measure)}
-footer.site .alt-marka{font-family:var(--display);font-style:normal;font-size:1.08rem;color:var(--ink)}
+footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.82rem}
+footer.site .wrap{padding-block:1rem 1.3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.3rem 2rem}
+footer.site p{margin:0}
+footer.site a{color:var(--ink-soft)}
+footer.site a:hover{color:var(--accent-ink)}
 .atif{margin:1.6rem 0 0;padding:.9rem 1.1rem;border:1px dashed var(--rule);border-radius:12px;font-size:.92rem;max-width:var(--measure);background:var(--paper)}
 .atif .ust-etiket{margin:0 0 .25rem}
 .atif p{margin:0;color:var(--ink-soft)}
@@ -498,8 +500,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 {body}
 </div></main>
 <footer class="site"><div class="wrap">
-  <p class="alt-marka">dinfelsefesi.com.tr · Din felsefesi için Türkçe başvuru kaynağı</p>
-  <p>Editör: <a href="{SITE_URL}/hakkinda/">{e(EDITOR)}</a>. Tanıtımlar özgün eserlerin yerini tutmaz, her kayıt kaynağına bağlantı verir.</p>
+  <p>© {YIL} <a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · Din felsefesi için Türkçe başvuru kaynağı</p>
   <p>Düzeltme ve öneriler için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
 </div></footer>
 </body>
