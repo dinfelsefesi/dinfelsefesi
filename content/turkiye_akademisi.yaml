@@ -1,0 +1,615 @@
+# Türkiye akademisi listesi
+# Kaynak: YÖK Akademik Arama, bilim alanı "İlahiyat Temel Alanı / Din Felsefesi" (20.10.2026).
+# Alanlar: ad, unvan, universite, fakulte, durum (emekli | boş), yok (YÖK authorId),
+# kimlik (isteğe bağlı: kişinin fişi yazıldığında content/kisiler/ içindeki kimliği).
+# Yalnızca kamuya açık bilgiler. E-posta ve fotoğraf konmaz.
+kaynak: YÖK Akademik Arama, bilim alanı Din Felsefesi
+tarih: '2026-10-20'
+kisiler:
+- ad: Rahim Acar
+  unvan: Prof. Dr.
+  universite: Marmara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1AD7C3794E50FEA9
+- ad: Abdullah Arif Adalar
+  unvan: Arş. Gör.
+  universite: Sakarya Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B58E53A3A86AB7DA
+- ad: Fatma Nur Ağca
+  unvan: Dr. Öğr. Üyesi
+  universite: Trabzon Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 442FF10B25AA7EB8
+- ad: Hüseyin Ağgündüz
+  unvan: Arş. Gör.
+  universite: Kütahya Dumlupınar Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 59C962918B10AE41
+- ad: Muhsin Akbaş
+  unvan: Prof. Dr.
+  universite: İzmir Katip Çelebi Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 50FEE4410AE0D2DD
+- ad: Abdullah Akgül
+  unvan: Dr. Öğr. Üyesi
+  universite: Erciyes Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B2F2C5EEBBD3C901
+- ad: Tuncay Akgün
+  unvan: Prof. Dr.
+  universite: Ankara Hacı Bayram Veli Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1A3460C964E93556
+- ad: Eyüp Aktürk
+  unvan: Prof. Dr.
+  universite: Van Yüzüncü Yıl Üniversitesi
+  fakulte: Eğitim Fakültesi
+  yok: D63E58171055FCC9
+- ad: Recep Alpyağıl
+  unvan: Prof. Dr.
+  universite: İstanbul Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E62AFD831CCBAE2C
+- ad: Süleyman Altın
+  unvan: Dr. Öğr. Üyesi
+  universite: Gaziantep Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 8BAB9A467CA8F51B
+- ad: Mehmet Akif Altunışık
+  unvan: Doç. Dr.
+  universite: Amasya Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 3A6ECA392A214025
+- ad: Serdar Atalay
+  unvan: Arş. Gör.
+  universite: Çukurova Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A4CD4B0EFE67AB43
+- ad: Rıfat Atay
+  unvan: Prof. Dr.
+  universite: Akdeniz Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 68DA8209569BA08E
+- ad: Hasan Atsız
+  unvan: Dr. Öğr. Üyesi
+  universite: Ondokuz Mayıs Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: F4400BCEA7ED9658
+- ad: Hüsnü Aydeniz
+  unvan: Prof. Dr.
+  universite: Atatürk Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: DFFD212555606B49
+- ad: Nurullah Aydın
+  unvan: Arş. Gör.
+  universite: Ordu Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 42BBCE805120EBB5
+- ad: Muzaffer Ayvaz
+  unvan: Dr. Öğr. Üyesi
+  universite: Trabzon Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: C8C88F3DBC88576C
+- ad: Mehmet Ata Az
+  unvan: Prof. Dr.
+  universite: Ankara Yıldırım Beyazıt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: DC6ED8592D3D35FB
+- ad: Okan Bağcı
+  unvan: Doç. Dr.
+  universite: Atatürk Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 79FF2EC084E5F6DD
+- ad: Kemal Batak
+  unvan: Prof. Dr.
+  universite: Sakarya Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 375B889C98AA0FE9
+- ad: Emine Gören Bayam
+  unvan: Doç. Dr.
+  universite: Dicle Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1EDDCB3A6C519242
+- ad: Ahmet Bayındır
+  unvan: Doç. Dr.
+  universite: Tekirdağ Namık Kemal Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: DC4877584D375E5D
+- ad: Bilal Bekalp
+  unvan: Dr. Öğr. Üyesi
+  universite: İnönü Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 9730741C00CBE940
+- ad: Münteha Beki
+  unvan: Dr. Öğr. Üyesi
+  universite: Yozgat Bozok Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CCEEBE855C33D2C3
+- ad: İbrahim Bor
+  unvan: Prof. Dr.
+  universite: Hakkari Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 6FF67325AF0A3FDB
+- ad: Hande Nur Bozbuğa
+  unvan: Dr. Öğr. Üyesi
+  universite: Bandırma Onyedi Eylül Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A0B5E800F43ECFBB
+- ad: Mahmut Buyankara
+  unvan: Dr. Öğr. Üyesi
+  universite: Bingöl Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: FDC82D6366FCA680
+- ad: Celal Büyük
+  unvan: Prof. Dr.
+  universite: Yalova Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 6A3A8405835CB4BC
+- ad: Mustafa Çakmak
+  unvan: Prof. Dr.
+  universite: Giresun Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 887994BF9F1ED684
+- ad: Hikmet Çamcı
+  unvan: Dr. Öğr. Üyesi
+  universite: Kilis 7 Aralık Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E0B8BEBECAD62C61
+- ad: Halis Çavuşoğlu
+  unvan: Arş. Gör.
+  universite: Dicle Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1ACA6134DCC065DA
+- ad: Zafer Çaylı
+  unvan: Dr. Öğr. Üyesi
+  universite: Hatay Mustafa Kemal Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E119D7F3FD7C89B3
+- ad: İsmail Çetin
+  unvan: Prof. Dr.
+  universite: Bursa Uludağ Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 8C35A40063E4A350
+- ad: Osman Zahid Çifçi
+  unvan: Prof. Dr.
+  universite: Selçuk Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 639EBE334FB13BE4
+- ad: Muhammed Enes Dağ
+  unvan: Öğr. Gör.
+  universite: Atatürk Üniversitesi
+  fakulte: Rektörlük
+  yok: D59E31EEC318EC72
+- ad: Bayram Dalkılıç
+  unvan: Prof. Dr.
+  universite: Necmettin Erbakan Üniversitesi
+  fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
+  yok: 0D69331FBE3D2870
+- ad: Mehmet Demirtaş
+  unvan: Prof. Dr.
+  universite: Tokat Gaziosmanpaşa Üniversitesi
+  fakulte: İslami İlimler Fakültesi
+  yok: 801A4BF14524FB8A
+- ad: Şeyma Demirtaş
+  unvan: Dr. Öğr. Üyesi
+  universite: Kırıkkale Üniversitesi
+  fakulte: İslami İlimler Fakültesi
+  yok: E154349DB17CBA7B
+- ad: Osman Murat Deniz
+  unvan: Dr. Öğr. Üyesi
+  universite: Çanakkale Onsekiz Mart Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A65A36C79E08BBA3
+- ad: Ali Osman Dilek
+  unvan: Arş. Gör.
+  universite: Siirt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: C52F44475107666C
+- ad: Haydar Dölek
+  unvan: Dr. Öğr. Üyesi
+  universite: Fırat Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: AFAC9618B2834304
+- ad: Mustafa Dönmez
+  unvan: Dr. Öğr. Üyesi
+  universite: Muş Alparslan Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: F1126BD838E88C21
+- ad: Şahin Efil
+  unvan: Prof. Dr.
+  universite: İnönü Üniversitesi
+  fakulte: Fen-Edebiyat Fakültesi
+  yok: 92988E97EF2BB673
+- ad: Şeyma Yazıcı Elsebahy
+  unvan: Dr. Öğr. Üyesi
+  universite: Ankara Yıldırım Beyazıt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B5C8BB486983E7BD
+- ad: Engin Erdem
+  unvan: Prof. Dr.
+  universite: Ankara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1E298F03E716D7DC
+- ad: Ömer Faruk Erdem
+  unvan: Doç. Dr.
+  universite: Necmettin Erbakan Üniversitesi
+  fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
+  yok: 6FB4A8F51B756380
+- ad: Ahmet Erkan
+  unvan: Arş. Gör.
+  universite: Ankara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 869D0FDF67CA9E91
+- ad: Zeynep Gemuhluoğlu
+  unvan: Prof. Dr.
+  universite: Marmara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A15F1B9A43B638DD
+- ad: Emine Göçer
+  unvan: Dr. Öğr. Üyesi
+  universite: Çukurova Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 0BE33885B230379E
+- ad: Yasin Gökhan
+  unvan: Dr. Öğr. Üyesi
+  universite: Yozgat Bozok Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CD36178C37C11CA6
+- ad: Fatımanur Güçlüer
+  unvan: Dr. Öğr. Üyesi
+  universite: Gümüşhane Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D1EB1FB57178F3F3
+- ad: Fatma Güler
+  unvan: Arş. Gör.
+  universite: Karamanoğlu Mehmetbey Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 59CA9E280E661C09
+- ad: Saim Gündoğan
+  unvan: Doç. Dr.
+  universite: Hakkari Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 08A7B29FA9DF2D8A
+- ad: Kibar Gürbüz
+  unvan: Dr. Öğr. Üyesi
+  universite: Şırnak Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CA97A3B9E38417BB
+- ad: Muhammed İkbal Hardal
+  unvan: Arş. Gör.
+  universite: Dokuz Eylül Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: BB3552B135EE54AC
+- ad: Hakan Hemşinli
+  unvan: Doç. Dr.
+  universite: Van Yüzüncü Yıl Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 02F1FEC62B8F5586
+- ad: Tuncay İmamoğlu
+  unvan: Prof. Dr.
+  universite: Atatürk Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 48AA8F39846A397C
+- ad: Adem İrmak
+  unvan: Dr. Öğr. Üyesi
+  universite: İstanbul Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CEB5B82A252FE1D7
+- ad: Muammer İskenderoğlu
+  unvan: Prof. Dr.
+  universite: Bolu Abant İzzet Baysal Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  durum: emekli
+  yok: 85492A12A5F2034C
+- ad: Mehmet Fatih Kalın
+  unvan: Prof. Dr.
+  universite: Kastamonu Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 0B080ABAA3ACA452
+- ad: Sait Kar
+  unvan: Doç. Dr.
+  universite: Ordu Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 4B9EDC72001B80FA
+- ad: Osman Karaağaç
+  unvan: Doç. Dr.
+  universite: Erzincan Binali Yıldırım Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 712AA0323C104AFB
+- ad: Abdullah Kartal
+  unvan: Dr. Öğr. Üyesi
+  universite: Harran Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E5B679BE3CD1972D
+- ad: Zeynep Baktemur Kayaduman
+  unvan: Dr. Öğr. Üyesi
+  universite: Marmara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 21037188EFA4AE4E
+- ad: Huzeyfe Kılıç
+  unvan: Arş. Gör.
+  universite: Pamukkale Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 8DB87FEDF83431FD
+- ad: Recep Kılıç
+  unvan: Prof. Dr.
+  universite: Ankara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  durum: emekli
+  yok: 6EF023ABF217EC46
+- ad: Afra Konyalı
+  unvan: Arş. Gör.
+  universite: Kocaeli Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 3D0A2C811B647B09
+- ad: Halil İbrahim Köse
+  unvan: Dr. Öğr. Üyesi
+  universite: Recep Tayyip Erdoğan Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A33831C2A6060DC5
+- ad: Aliye Çınar Köysüren
+  unvan: Prof. Dr.
+  universite: Karamanoğlu Mehmetbey Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: 0E7F15711319C3F4
+- ad: Rafız Manafov
+  unvan: Prof. Dr.
+  universite: Muş Alparslan Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A3F87339CA703D77
+- ad: Hasan Ocak
+  unvan: Prof. Dr.
+  universite: Iğdır Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 56D26EB751CA0732
+- ad: Ayşe Sıdıka Oktay
+  unvan: Prof. Dr.
+  universite: Süleyman Demirel Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 2FEF88BDB989EDD7
+- ad: Selin Olur
+  unvan: Arş. Gör.
+  universite: Kahramanmaraş Sütçü İmam Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D471D70D48AC39C2
+- ad: Ergin Ögcem
+  unvan: Prof. Dr.
+  universite: Kütahya Dumlupınar Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D2BF1C6BE832EF57
+- ad: Hatice Kübra Ömeroğlu
+  unvan: Arş. Gör.
+  universite: Kilis 7 Aralık Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E97A9A2A54C4ACE5
+- ad: Kayhan Özaykal
+  unvan: Dr. Öğr. Üyesi
+  universite: İstanbul Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 7CC169645EE6F5DD
+- ad: Emine Arslan Özkan
+  unvan: Dr. Öğr. Üyesi
+  universite: Bayburt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 5E65BDCD796F4851
+- ad: Mehmet Şükrü Özkan
+  unvan: Prof. Dr.
+  universite: Şırnak Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 697424A7A1CDAE91
+- ad: Yunus Emre Özşimşek
+  unvan: Arş. Gör.
+  universite: Gaziantep Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A8071E2FC9071B59
+- ad: Sevcan Öztürk
+  unvan: Doç. Dr.
+  universite: Ankara Sosyal Bilimler Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1E0EA71B74A58393
+- ad: Abdullah Pakoğlu
+  unvan: Dr. Öğr. Üyesi
+  universite: Sivas Cumhuriyet Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 1838593DA1127404
+- ad: Metin Pay
+  unvan: Dr. Öğr. Üyesi
+  universite: Kocaeli Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 79B60FAFF8240FCF
+- ad: Sait Polat
+  unvan: Dr. Öğr. Üyesi
+  universite: Adıyaman Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A44FE2F7CD502A00
+- ad: Mehmet Sait Reçber
+  unvan: Prof. Dr.
+  universite: Ankara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 88856229BD5A7697
+- ad: Mehmet Alperen Saz
+  unvan: Arş. Gör.
+  universite: Ankara Hacı Bayram Veli Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B7B4B3BD1562BB62
+- ad: Bülent Sönmez
+  unvan: Prof. Dr.
+  universite: İzmir Katip Çelebi Üniversitesi
+  fakulte: Sosyal ve Beşeri Bilimler Fakültesi
+  yok: F6EA5DED89DD1706
+- ad: Mehmet Sulhan
+  unvan: Dr. Öğr. Üyesi
+  universite: Siirt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B379F181C80FF45D
+- ad: Betül Akdemir Süleyman
+  unvan: Doç. Dr.
+  universite: Marmara Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CB674EF9BC5C1FDC
+- ad: Naim Şahin
+  unvan: Prof. Dr.
+  universite: Necmettin Erbakan Üniversitesi
+  fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
+  yok: 41EEEBC090BC398B
+- ad: Muharrem Şahiner
+  unvan: Doç. Dr.
+  universite: Kilis 7 Aralık Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 65706DF3A3354291
+- ad: Habib Şener
+  unvan: Prof. Dr.
+  universite: Kafkas Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D6A621B5EEBE057A
+- ad: İsmail Şimşek
+  unvan: Prof. Dr.
+  universite: Pamukkale Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: FC75AA3C340CDD59
+- ad: Necmettin Tan
+  unvan: Dr. Öğr. Üyesi
+  universite: Fırat Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 3F28EB75E044E66F
+- ad: Hasan Tanrıverdi
+  unvan: Prof. Dr.
+  universite: Ordu Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: F9EE5083CE24F54D
+- ad: Nusret Taş
+  unvan: Doç. Dr.
+  universite: Ardahan Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D3DDD3E161D36962
+- ad: Zeyneb Betül Taşkın
+  unvan: Dr. Öğr. Üyesi
+  universite: Ankara Sosyal Bilimler Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: EBE7BB0DF6929C6F
+- ad: Vedat Tezcan
+  unvan: Doç. Dr.
+  universite: Süleyman Demirel Üniversitesi
+  fakulte: İletişim Fakültesi
+  yok: 4F7EB487707B4847
+- ad: Latif Tokat
+  unvan: Prof. Dr.
+  universite: Ankara Sosyal Bilimler Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 5A1D547ABB29BFAD
+- ad: Aydın Topaloğlu
+  unvan: Prof. Dr.
+  universite: İstanbul Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B4E3175E31FC9062
+- ad: Fatih Topaloğlu
+  unvan: Prof. Dr.
+  universite: Atatürk Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 739672430B9B4790
+- ad: Hüseyin Taha Topaloğlu
+  unvan: Arş. Gör.
+  universite: Hitit Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: FFC93542284BAD11
+- ad: Sümeyra Turan
+  unvan: Arş. Gör.
+  universite: Tekirdağ Namık Kemal Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D97E51A292B95AE5
+- ad: Gülsüm Turhan
+  unvan: Doç. Dr.
+  universite: Amasya Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: B4A459BA1DDB8678
+- ad: Büşra Nur Tutuk
+  unvan: Arş. Gör.
+  universite: Sivas Cumhuriyet Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 7C058A4254D84DD6
+- ad: Semra Tüfenkci
+  unvan: Doç. Dr.
+  universite: Balıkesir Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CE55AE11018E3B7A
+- ad: Yaşar Türkben
+  unvan: Prof. Dr.
+  universite: Hitit Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 4AA568EFAE94BE31
+- ad: Mehmet Türkeri
+  unvan: Prof. Dr.
+  universite: Dokuz Eylül Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A7620560D92DEF30
+- ad: Nilüfer Nur Uslu
+  unvan: Arş. Gör.
+  universite: Zonguldak Bülent Ecevit Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: AA2B6BA317005D76
+- ad: Mustafa Usta
+  unvan: Prof. Dr.
+  universite: Yalova Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: EFF8C939BCC4613C
+- ad: Abdulhan Ünlüsoy
+  unvan: Doç. Dr.
+  universite: Eskişehir Osmangazi Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 3900E70280CB80E8
+- ad: Esma Aygün Yakın
+  unvan: Arş. Gör.
+  universite: Yozgat Bozok Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 3FBB959AF48A28E3
+- ad: İsmail Yalçıntaş
+  unvan: Dr. Öğr. Üyesi
+  universite: Aydın Adnan Menderes Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: CF3092B0F6730872
+- ad: Cafer Sadık Yaran
+  unvan: Prof. Dr.
+  universite: Ondokuz Mayıs Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 96E2165B32A9A1C5
+- ad: Merve Yavuz
+  unvan: Arş. Gör.
+  universite: Bursa Uludağ Üniversitesi
+  fakulte: Sosyal Bilimler Enstitüsü
+  yok: DF23761C5B8E9D10
+- ad: Gülşen Yaylı
+  unvan: Öğr. Gör.
+  universite: Kırıkkale Üniversitesi
+  fakulte: Yabancı Diller Yüksekokulu
+  yok: 47E5BC94ACBD3696
+- ad: Ruhattin Yazoğlu
+  unvan: Prof. Dr.
+  universite: Atatürk Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: FB1F26F6304CCBB2
+- ad: Ali Yıldırım
+  unvan: Doç. Dr.
+  universite: Tokat Gaziosmanpaşa Üniversitesi
+  fakulte: İslami İlimler Fakültesi
+  yok: BB18278BFB45AE1A
+- ad: Hüsamettin Yıldırım
+  unvan: Dr. Öğr. Üyesi
+  universite: Fırat Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 216AB54D8D53876F
+- ad: İbrahim Yıldız
+  unvan: Doç. Dr.
+  universite: Muş Alparslan Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 61DD478C935F5BDC
+- ad: Aykut Alper Yılmaz
+  unvan: Doç. Dr.
+  universite: Ankara Sosyal Bilimler Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 66D382D28FB0ACFE
+- ad: Fatma Yüce
+  unvan: Prof. Dr.
+  universite: Samsun Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 9AB7428926CCDB3E

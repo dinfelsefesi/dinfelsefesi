@@ -20,6 +20,8 @@ Zorunlu: `ad`, `donem`, `kapsam` (`turkiye` | `uluslararasi`), `kisa_tanitim`.
 
 Yaşayan Türk akademisyenler için yalnızca kamuya açık bilgiler kullanılır, fotoğraf konmaz.
 
+Kişiler sayfasının "Türkiye akademisi" sekmesi `content/turkiye_akademisi.yaml` dosyasından üretilir (ad, unvan, üniversite, fakülte, `durum: emekli`, YÖK profil kimliği). Bir kişinin fişi yazıldığında listedeki adı fişe bağlanır. Ad fişteki `ad` ile aynı değilse listeye `kimlik` alanı eklenir.
+
 ## Eser (`content/eserler/`)
 
 Zorunlu: `baslik`, `yazar`, `eser_turu` (`kitap` | `kitap-bolumu` | `makale` | `bildiri` | `tez`), `yil`, `yayin`.
