@@ -39,6 +39,7 @@ SITE_TAGLINE = "Din felsefesinin başlıkları, terimleri, kişileri ve eserleri
 EDITOR = "Abdullah Akgül"
 ILETISIM = "dinfelsefesi@gmail.com"
 YIL = datetime.now().year
+X_HESABI = "dinfelsefesi_tr"
 
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
          "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
@@ -565,7 +566,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
           + (f'<meta property="og:url" content="{e(canonical)}">' if canonical else "")
           + f'<meta property="og:image" content="{e(gorsel or SITE_URL + "/paylas/site.png")}">'
           f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
-          f'<meta name="twitter:card" content="summary_large_image">'
+          f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@{X_HESABI}">'
           f'<meta name="google-site-verification" content="google08c007317a4ad095">')
     robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
     menu = "".join(
@@ -600,7 +601,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 </div></main>
 <footer class="site"><div class="wrap">
   <p>© {YIL} <a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · Din felsefesi için Türkçe başvuru kaynağı</p>
-  <p>Düzeltme ve öneriler için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+  <p>Düzeltme ve öneriler için: <a href="mailto:{ILETISIM}">{ILETISIM}</a> · X: <a href="https://x.com/{X_HESABI}" rel="noopener">@{X_HESABI}</a></p>
 </div></footer>
 </body>
 </html>"""
@@ -1254,7 +1255,7 @@ def icindekiler_html() -> str:
 def paylas_dugmesi(m: dict) -> str:
     from urllib.parse import quote
     metin = f"Günün makalesi: {m['title_tr']} ({m.get('authors', '')}, {m.get('journal', '')}) #dinfelsefesi"
-    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m))}"
+    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m))}&via={X_HESABI}"
     return f'<a class="x-paylas" href="{e(adres)}" target="_blank" rel="noopener">X\'te paylaş</a>'
 
 
