@@ -62,12 +62,29 @@ def _ref_temizle(m):
     return m.group(0) if gecerli else b" "
 
 
+CIPLAK_AMP = re.compile(rb"&(?!(?:[A-Za-z][A-Za-z0-9]*|#[0-9]+|#x[0-9A-Fa-f]+);)")
+
+
 def xml_coz(veri: bytes) -> ET.Element:
-    """Bazı kayıtlarda XML'de yasak denetim karakterleri bulunuyor; bunları boşlukla değiştirerek çözer."""
+    """Bazı kayıtlarda bozuk XML var (denetim karakteri, geçersiz UTF-8, kaçışsız &).
+    Önce olduğu gibi, sonra temizleyerek, en son lxml'in kurtarma kipiyle çözer."""
     try:
         return ET.fromstring(veri)
     except ET.ParseError:
-        return ET.fromstring(KARAKTER_REF.sub(_ref_temizle, GECERSIZ_BAYT.sub(b" ", veri)))
+        pass
+    temiz = veri.decode("utf-8", errors="replace").encode("utf-8")
+    temiz = KARAKTER_REF.sub(_ref_temizle, GECERSIZ_BAYT.sub(b" ", temiz))
+    temiz = CIPLAK_AMP.sub(b"&amp;", temiz)
+    try:
+        return ET.fromstring(temiz)
+    except ET.ParseError as hata:
+        try:
+            from lxml import etree as LET
+        except ImportError:
+            raise hata
+        kok = LET.fromstring(temiz, LET.XMLParser(recover=True, huge_tree=True))
+        print(f"  uyarı: XML kurtarma kipiyle okundu ({hata})", file=sys.stderr)
+        return ET.fromstring(LET.tostring(kok))
 
 
 def istek(params: dict) -> ET.Element:
