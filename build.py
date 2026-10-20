@@ -369,6 +369,40 @@ footer.site p{margin:0;max-width:var(--measure)}
 .altlar li{border-radius:999px}
 table.kisiler tbody tr:hover td:first-child{border-radius:8px 0 0 8px}
 table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
+/* İlişki ağı */
+.ag-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin:0 0 .8rem}
+.ag-arac .tur-secici,.ag-arac .k-ara{margin:0}
+.ag-tur button[aria-pressed="false"]{opacity:.45;background:var(--card);color:var(--ink);border-color:var(--rule)}
+.ag-tur button[aria-pressed="true"]{background:var(--card);color:var(--ink);border-color:var(--ink-soft)}
+.nokta{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.45em;vertical-align:.02em}
+.ag-sifirla{font:inherit;font-style:italic;font-size:.95rem;color:var(--accent-ink);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
+.ag-kap{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--card);overflow:hidden}
+.ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
+.ag-tuval:active{cursor:grabbing}
+.ag-tuval svg{display:block;width:100%;height:100%}
+.ag-baglar line{stroke:#cdbfa6;stroke-width:1.1px;transition:opacity .2s}
+.ag-baglar line.vurgu{stroke:#8a6a2c;stroke-width:1.8px}
+.ag-baglar line.soluk{opacity:.18}
+.ag-dugum{cursor:pointer;transition:opacity .2s}
+.ag-dugum circle{stroke:var(--card);stroke-width:2px}
+.ag-dugum.secili circle{stroke:var(--ink);stroke-width:2.5px}
+.ag-dugum:focus-visible{outline:none}
+.ag-dugum:focus-visible circle{stroke:var(--accent);stroke-width:3px}
+.ag-dugum text{font-family:var(--serif);fill:var(--ink);text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:4px;stroke-linejoin:round;pointer-events:none;opacity:0;transition:opacity .2s}
+.ag-dugum text.goster{opacity:1}
+.ag-dugum.soluk{opacity:.18}
+.ag-dugum.gizli,.ag-baglar line.gizli{display:none}
+.ag-panel{position:absolute;top:1rem;right:1rem;width:min(22rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.2rem 1rem;box-shadow:0 14px 34px -22px rgba(60,40,10,.45)}
+.ag-panel h2{margin:0 2rem .4rem 0;font-size:1.45rem}
+.ag-panel .ag-aciklama{margin:0 0 .6rem;font-size:.95rem;color:var(--ink-soft)}
+.ag-panel .ag-ac{font-style:italic}
+.ag-panel h3{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.05rem;color:var(--gold);margin:1rem 0 .3rem}
+.ag-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.ag-panel li button{font:inherit;font-size:.93rem;text-align:left;background:none;border:0;padding:.15rem 0;color:var(--accent-ink);cursor:pointer}
+.ag-panel li button:hover{text-decoration:underline}
+.ag-kapat{position:absolute;top:.5rem;right:.6rem;font:inherit;font-size:1.5rem;line-height:1;background:none;border:0;color:var(--ink-soft);cursor:pointer;padding:.2rem .4rem}
+.ag-ipucu{position:absolute;left:1rem;bottom:.6rem;margin:0;font-style:italic;font-size:.85rem;color:var(--ink-soft);pointer-events:none}
+.ag-git{display:inline-block;margin-top:1rem;font-style:italic}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
 .karsilama h1{font-size:3rem;margin-bottom:.8rem}
@@ -406,6 +440,9 @@ table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
   aside.yan{position:static}
   .liste li,.makale,dl.kunye div{grid-template-columns:1fr;gap:.15rem}
   .kart{padding:1.1rem 1.1rem 1rem}
+  .ag-panel{position:static;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;box-shadow:none}
+  .ag-tuval{height:62vh;min-height:360px}
+  .ag-ipucu{display:none}
   table.kisiler thead{display:block}
   table.kisiler thead tr{display:flex;flex-wrap:wrap;gap:.2rem 1rem;padding:0 0 .4rem;border-bottom:1px solid var(--gold)}
   table.kisiler thead th{display:block;border:0;padding:0}
@@ -419,7 +456,7 @@ table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
 """
 
 MENU = [("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
-        ("eserler", "Eserler"), ("guncel", "Güncel"), ("hakkinda", "Hakkında")]
+        ("eserler", "Eserler"), ("ag", "Ağ"), ("guncel", "Güncel"), ("hakkinda", "Hakkında")]
 
 
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "") -> str:
@@ -581,7 +618,7 @@ def render_baslik(k) -> str:
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}</div>
-  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}</aside>
+  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
 </div>"""
     return page(f"{h['ad']} · {SITE_NAME}", body, "basliklar", desc=h.get("ozet") or SITE_TAGLINE,
                 canonical=fis_url("baslik", k))
@@ -599,6 +636,10 @@ def render_basliklar() -> str:
 
 def satir(etiket, icerik) -> str:
     return f"<div><dt>{etiket}</dt><dd>{icerik}</dd></div>" if icerik else ""
+
+
+def ag_baglantisi(tur, k) -> str:
+    return f'<a class="ag-git" href="{SITE_URL}/ag/?odak={tur}/{k}">İlişki ağında göster →</a>'
 
 
 def geri_yan(tur, k) -> str:
@@ -667,7 +708,7 @@ def render_fis(tur, k) -> str:
                       satir("İlgili terimler", bag_listesi("ilgili_terimler", h)), basliklar])
         ic = f"<div class='metin'>{govde(h['_govde'])}</div>"
         desc = re.sub(r"\s+", " ", h["_govde"])[:200]
-    yan = geri_yan(tur, k)
+    yan = geri_yan(tur, k) + ag_baglantisi(tur, k)
     body = f"""
 <p class="yol"><a href="{SITE_URL}/{KLASOR[tur]}/">{ {'terim': 'Terimler', 'kisi': 'Kişiler', 'eser': 'Eserler'}[tur] }</a></p>
 <div class="fis-duzen">
@@ -897,6 +938,72 @@ def render_eserler() -> str:
     return page(f"Eserler · {SITE_NAME}", body + TUR_SECICI_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
 
+# ---------------------------------------------------------------- ilişki ağı
+
+AG_TURLER = [("baslik", "Başlık", "#2a4f7f"), ("terim", "Terim", "#a5802f"), ("kisi", "Kişi", "#3f6b4f"),
+             ("eser", "Eser", "#7a4a6b"), ("makale", "Güncel makale", "#7b8794")]
+
+
+def kisa_aciklama(t, h) -> str:
+    metin = h.get("kisa_tanim") or h.get("ozet") or h.get("kisa_tanitim") or ""
+    if t == "eser":
+        yazar = ", ".join(ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar")))
+        metin = " · ".join(x for x in [yazar, str(h.get("yil") or ""), str(h.get("yayin") or "")] if x)
+    return re.sub(r"[*_`]", "", re.sub(r"\s+", " ", str(metin))).strip()
+
+
+def ag_verisi(items) -> dict:
+    dugumler, baglar = [], set()
+    tur_ad = {k: a for k, a, _ in AG_TURLER}
+    for (t, k), h in FIS.items():
+        dugumler.append({"id": f"{t}/{k}", "ad": ad(t, h), "tur": t, "turAd": tur_ad[t],
+                         "url": fis_url(t, k), "aciklama": kisa_aciklama(t, h)})
+        for alan, hedef in ALAN_TUR.items():
+            for d in liste(h.get(alan)):
+                if (hedef, d) in FIS and (hedef, d) != (t, k):
+                    baglar.add(tuple(sorted([f"{t}/{k}", f"{hedef}/{d}"])))
+    # Güncel makaleler: etiketi bir fişin adıyla (kişilerde soyadıyla) aynı olanlara bağlanır
+    adlar = {}
+    for (t, k), h in FIS.items():
+        adlar.setdefault(tr_kucuk(ad(t, h)), set()).add(f"{t}/{k}")
+        if t == "kisi":
+            adlar.setdefault(tr_kucuk(ad(t, h).split()[-1]), set()).add(f"{t}/{k}")
+    for m in items:
+        hedefler = {x for etk in m.get("tags", []) for x in adlar.get(tr_kucuk(etk), set())}
+        if not hedefler:
+            continue
+        mid = f"makale/{m['slug']}"
+        dugumler.append({"id": mid, "ad": m["title_tr"], "tur": "makale", "turAd": tur_ad["makale"],
+                         "url": entry_url(m), "aciklama": m.get("lead", "")})
+        baglar |= {(mid, x) for x in hedefler}
+    return {"turler": [{"kod": k, "ad": a, "renk": r} for k, a, r in AG_TURLER],
+            "dugumler": dugumler, "baglar": sorted(baglar)}
+
+
+def render_ag(items) -> str:
+    v = ag_verisi(items)
+    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _ in AG_TURLER}
+    dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta" style="background:{r}"></span>{e(a)} <span class="say">{say[k]}</span></button>'
+                       for k, a, r in AG_TURLER if say[k])
+    veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır.</p>
+<div class="ag-arac">
+  <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
+  <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>
+  <button type="button" class="ag-sifirla" id="ag-sifirla">Görünümü sıfırla</button>
+</div>
+<div class="ag-kap">
+  <div id="ag" class="ag-tuval"></div>
+  <aside id="ag-panel" class="ag-panel" hidden></aside>
+  <p class="ag-ipucu">Yakınlaştırmak için fare tekerleğini, kaydırmak için sürüklemeyi kullanabilirsiniz.</p>
+</div>
+<script id="ag-veri" type="application/json">{veri}</script>
+<script src="{SITE_URL}/static/js/d3-7.9.0.min.js"></script>
+<script src="{SITE_URL}/static/js/ag.js"></script>"""
+    return page(f"İlişki ağı · {SITE_NAME}", body, "ag", canonical=f"{SITE_URL}/ag/")
+
+
 # ---------------------------------------------------------------- ana sayfa ve hakkında
 
 def ilk_paragraf(md: str) -> str:
@@ -1003,6 +1110,7 @@ def main() -> None:
     for t in ("terim", "kisi"):
         yaz(KLASOR[t], render_dizin(t))
     yaz("eserler", render_eserler())
+    yaz("ag", render_ag(items))
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
@@ -1030,6 +1138,8 @@ def main() -> None:
 <lastBuildDate>{now}</lastBuildDate>{rss_items}
 </channel></rss>
 """, encoding="utf-8")
+    if (ROOT / "static").exists():
+        shutil.copytree(ROOT / "static", OUT / "static")
     (OUT / ".nojekyll").write_text("")
     cname = ROOT / "CNAME"
     if cname.exists():
