@@ -13,7 +13,7 @@ klasik_gelenekte:
 ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi, delilci-kotuluk-problemi]
 ilgili_kisiler: [john-l-mackie, alvin-plantinga]
 ilgili_eserler: [mackie-1955-evil-and-omnipotence, plantinga-1974-god-freedom-and-evil]
-ana_baslik: kotuluk-problemi
+basliklar: [kotuluk-problemi]
 kaynaklar: [mackie-1955-evil-and-omnipotence, plantinga-1974-god-freedom-and-evil]
 imza: dinfelsefesi.com.tr
 durum: taslak

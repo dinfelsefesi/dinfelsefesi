@@ -2,7 +2,8 @@
 tur: baslik
 kimlik: kotuluk-problemi
 ad: Kötülük Problemi
-ust_baslik: ""
+sira: 1
+ust_baslik: teizme-yonelik-itirazlar
 ozet: >-
   Her şeye gücü yeten, her şeyi bilen ve tamamen iyi bir Tanrı tasavvuru ile
   dünyadaki kötülük arasındaki ilişkiye dair tartışma. Başlık, problemin mantıksal

@@ -11,7 +11,7 @@ acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""
 ilgili_terimler: [delilci-kotuluk-problemi]
-ana_baslik: kotuluk-problemi
+basliklar: [kotuluk-problemi]
 imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20

@@ -14,7 +14,7 @@ klasik_gelenekte:
 ilgili_terimler: [mantiksal-kotuluk-problemi, teodise, kotuluk-problemi]
 ilgili_kisiler: [alvin-plantinga, john-l-mackie]
 ilgili_eserler: [plantinga-1974-god-freedom-and-evil]
-ana_baslik: kotuluk-problemi
+basliklar: [kotuluk-problemi]
 kaynaklar: [plantinga-1974-god-freedom-and-evil]
 imza: dinfelsefesi.com.tr
 durum: taslak

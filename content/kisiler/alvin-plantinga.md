@@ -10,7 +10,7 @@ kisa_tanitim: >-
   isimlerinden biri olarak değerlendirilmektedir.
 kurum: University of Notre Dame (emeritus)
 alanlar: [Din felsefesi, Epistemoloji, Metafizik]
-ana_basliklar: [kotuluk-problemi]
+basliklar: [kotuluk-problemi]
 temel_gorusleri: [ozgur-irade-savunmasi]
 eserleri: [plantinga-1974-god-freedom-and-evil, "The Nature of Necessity (1974)", "Warranted Christian Belief (2000)"]
 turkce_cevirileri:

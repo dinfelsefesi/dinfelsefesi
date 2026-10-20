@@ -9,7 +9,7 @@ kisa_tanitim: >-
   ve dinî çoğulculuk üzerine çalışmalarıyla tanınır.
 kurum: ""
 alanlar: [Din felsefesi, Teoloji]
-ana_basliklar: [kotuluk-problemi]
+basliklar: [kotuluk-problemi]
 temel_gorusleri: [teodise]
 eserleri: [hick-1966-evil-and-the-god-of-love, "An Interpretation of Religion (1989)"]
 turkce_cevirileri: []

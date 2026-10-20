@@ -13,7 +13,7 @@ klasik_gelenekte:
 ilgili_terimler: [kotuluk-problemi, mantiksal-kotuluk-problemi, teodise]
 ilgili_kisiler: [william-l-rowe]
 ilgili_eserler: [rowe-1979-problem-of-evil, wykstra-1984-humean-obstacle]
-ana_baslik: kotuluk-problemi
+basliklar: [kotuluk-problemi]
 kaynaklar: [rowe-1979-problem-of-evil, wykstra-1984-humean-obstacle]
 imza: dinfelsefesi.com.tr
 durum: taslak

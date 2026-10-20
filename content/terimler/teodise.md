@@ -18,7 +18,7 @@ klasik_gelenekte:
 ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi]
 ilgili_kisiler: [john-hick]
 ilgili_eserler: [hick-1966-evil-and-the-god-of-love, ormsby-1984-theodicy-in-islamic-thought, yaran-1997-kotuluk-ve-teodise]
-ana_baslik: kotuluk-problemi
+basliklar: [kotuluk-problemi]
 kaynaklar: [hick-1966-evil-and-the-god-of-love, ormsby-1984-theodicy-in-islamic-thought]
 imza: dinfelsefesi.com.tr
 durum: taslak
