@@ -3,6 +3,9 @@ name: Siteyi derle ve yayımla
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "data/**"
+      - "content/adaylar.json"
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,190 @@
+#!/usr/bin/env python3
+"""DergiPark hasadı.
+
+DergiPark'ın OAI-PMH veri kapısından bütün dergilerin kayıtlarını tarih
+aralıklarıyla (aylık pencereler) çeker. Konu alanında ya da anahtar
+kelimelerinde "din felsefesi" / "philosophy of religion" geçen makaleleri
+data/dergipark/din_felsefesi.jsonl dosyasına yazar.
+
+Tarama en yeni aydan geriye doğru ilerler ve kaldığı yeri
+data/dergipark/ilerleme.json dosyasında tutar. Böylece her çalışma bir
+önceki çalışmanın bıraktığı yerden devam eder.
+
+Kullanım:
+  python3 scripts/dergipark_hasat.py --dakika 300            # geçmiş tarama
+  python3 scripts/dergipark_hasat.py --ay 2026-09             # tek bir ayı tara
+"""
+import argparse
+import json
+import re
+import sys
+import time
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+VERI = ROOT / "data" / "dergipark"
+ESLESEN = VERI / "din_felsefesi.jsonl"
+ILERLEME = VERI / "ilerleme.json"
+
+OAI = "https://dergipark.org.tr/api/public/oai/"
+UA = {"User-Agent": "dinfelsefesi-hasat/1.0 (+https://dinfelsefesi.com.tr; mailto:dinfelsefesi@gmail.com)"}
+BEKLEME = 1.5          # istekler arası saniye
+EN_ESKI = "2005-01"    # geriye doğru taramanın son ayı
+
+NS = {
+    "oai": "http://www.openarchives.org/OAI/2.0/",
+    "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+}
+XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
+
+ARANAN = ("din felsefesi", "philosophy of religion")
+
+
+def kucult(s: str) -> str:
+    """Türkçe harflere duyarlı küçültme."""
+    return (s or "").replace("İ", "i").replace("I", "ı").lower()
+
+
+def istek(params: dict) -> ET.Element:
+    url = OAI + "?" + urllib.parse.urlencode(params)
+    for deneme in range(5):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
+                return ET.fromstring(r.read())
+        except Exception as hata:  # noqa: BLE001
+            bekle = 10 * (deneme + 1)
+            print(f"  hata: {hata}; {bekle} sn sonra yeniden", file=sys.stderr)
+            time.sleep(bekle)
+    raise RuntimeError(f"istek başarısız: {url}")
+
+
+def metin(el) -> str:
+    return re.sub(r"\s+", " ", (el.text or "")).strip()
+
+
+def kaydi_coz(rec: ET.Element) -> dict | None:
+    bas = rec.find("oai:header", NS)
+    if bas is None or bas.get("status") == "deleted":
+        return None
+    md = rec.find("oai:metadata/oai_dc:dc", NS)
+    if md is None:
+        return None
+    alanlar = {}
+    for el in md:
+        ad = el.tag.split("}")[1]
+        alanlar.setdefault(ad, []).append((el.get(XML_LANG, ""), metin(el)))
+    konular = [t for _, t in alanlar.get("subject", []) if t]
+    return {
+        "id": metin(bas.find("oai:identifier", NS)).rsplit("/", 1)[-1],
+        "dergi_kume": metin(bas.find("oai:setSpec", NS)) if bas.find("oai:setSpec", NS) is not None else "",
+        "kayit_tarihi": metin(bas.find("oai:datestamp", NS)),
+        "baslik": {d or "?": t for d, t in alanlar.get("title", [])},
+        "yazarlar": [t for _, t in alanlar.get("creator", [])],
+        "konular": konular,
+        "ozet": {d or "?": t for d, t in alanlar.get("description", [])},
+        "tarih": [t for _, t in alanlar.get("date", [])],
+        "yayinci": [t for _, t in alanlar.get("publisher", [])],
+        "kaynak": [t for _, t in alanlar.get("source", [])],
+        "baglanti": [t for _, t in alanlar.get("identifier", [])],
+        "dil": [t for _, t in alanlar.get("language", [])],
+    }
+
+
+def eslesir_mi(k: dict) -> list[str]:
+    """Eşleşmenin nereden geldiğini döndürür: 'alan', 'anahtar' ya da ikisi."""
+    nedenler = set()
+    for s in k["konular"]:
+        ks = kucult(s)
+        for aranan in ARANAN:
+            if aranan in ks:
+                # Virgül içeren satırlar anahtar kelime listesidir, virgülsüz olanlar konu alanı
+                nedenler.add("anahtar" if "," in s else "alan")
+    return sorted(nedenler)
+
+
+def pencereyi_tara(ay: str, bilinen: set, cikti) -> dict:
+    y, m = map(int, ay.split("-"))
+    son = date(y + (m == 12), m % 12 + 1, 1)
+    params = {"verb": "ListRecords", "metadataPrefix": "oai_dc",
+              "from": f"{ay}-01", "until": (date.fromordinal(son.toordinal() - 1)).isoformat()}
+    toplam = eslesen = 0
+    while True:
+        kok = istek(params)
+        hata = kok.find("oai:error", NS)
+        if hata is not None:
+            if hata.get("code") == "noRecordsMatch":
+                break
+            raise RuntimeError(f"OAI hatası: {hata.get('code')} {metin(hata)}")
+        for rec in kok.iterfind("oai:ListRecords/oai:record", NS):
+            k = kaydi_coz(rec)
+            if not k:
+                continue
+            toplam += 1
+            neden = eslesir_mi(k)
+            if neden and k["id"] not in bilinen:
+                k["eslesme"] = neden
+                k["pencere"] = ay
+                cikti.write(json.dumps(k, ensure_ascii=False) + "\n")
+                bilinen.add(k["id"])
+                eslesen += 1
+        tok = kok.find("oai:ListRecords/oai:resumptionToken", NS)
+        if tok is None or not metin(tok):
+            break
+        params = {"verb": "ListRecords", "resumptionToken": metin(tok)}
+        time.sleep(BEKLEME)
+    return {"kayit": toplam, "eslesen": eslesen}
+
+
+def onceki_ay(ay: str) -> str:
+    y, m = map(int, ay.split("-"))
+    return f"{y - (m == 1)}-{(m - 2) % 12 + 1:02d}"
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dakika", type=float, default=300, help="en fazla çalışma süresi")
+    ap.add_argument("--ay", help="yalnızca bu ayı tara (YYYY-AA)")
+    args = ap.parse_args()
+
+    VERI.mkdir(parents=True, exist_ok=True)
+    ilerleme = json.loads(ILERLEME.read_text(encoding="utf-8")) if ILERLEME.exists() else {"pencereler": {}}
+    bilinen = set()
+    if ESLESEN.exists():
+        for satir in ESLESEN.read_text(encoding="utf-8").splitlines():
+            if satir.strip():
+                bilinen.add(json.loads(satir)["id"])
+
+    bitis = time.time() + args.dakika * 60
+    with ESLESEN.open("a", encoding="utf-8") as cikti:
+        if args.ay:
+            sirada = [args.ay]
+        else:
+            bu_ay = date.today().strftime("%Y-%m")
+            sirada, ay = [], bu_ay
+            while ay >= EN_ESKI:
+                if ay not in ilerleme["pencereler"] or ay == bu_ay:
+                    sirada.append(ay)
+                ay = onceki_ay(ay)
+        for ay in sirada:
+            if time.time() > bitis:
+                print("süre doldu, sonraki çalışmada devam edilecek")
+                break
+            t0 = time.time()
+            sonuc = pencereyi_tara(ay, bilinen, cikti)
+            cikti.flush()
+            sonuc["sure_sn"] = round(time.time() - t0)
+            sonuc["tarandi"] = date.today().isoformat()
+            ilerleme["pencereler"][ay] = sonuc
+            ILERLEME.write_text(json.dumps(ilerleme, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+            print(f"{ay}: {sonuc['kayit']} kayıt, {sonuc['eslesen']} yeni eşleşme, {sonuc['sure_sn']} sn")
+    kalan = [a for a in sirada if a not in ilerleme["pencereler"]]
+    print(f"toplam eşleşme: {len(bilinen)}; taranmamış pencere: {len(kalan)}")
+
+
+if __name__ == "__main__":
+    main()
