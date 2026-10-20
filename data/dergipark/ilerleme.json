@@ -1,9 +1,45 @@
 {
  "pencereler": {
+  "2026-04": {
+   "eslesen": 3,
+   "kayit": 3092,
+   "sure_sn": 113,
+   "tarandi": "2026-10-20"
+  },
+  "2026-05": {
+   "eslesen": 4,
+   "kayit": 2317,
+   "sure_sn": 86,
+   "tarandi": "2026-10-20"
+  },
+  "2026-06": {
+   "eslesen": 10,
+   "kayit": 6709,
+   "sure_sn": 250,
+   "tarandi": "2026-10-20"
+  },
+  "2026-07": {
+   "eslesen": 0,
+   "kayit": 3696,
+   "sure_sn": 148,
+   "tarandi": "2026-10-20"
+  },
+  "2026-08": {
+   "eslesen": 0,
+   "kayit": 2921,
+   "sure_sn": 107,
+   "tarandi": "2026-10-20"
+  },
   "2026-09": {
    "eslesen": 1,
    "kayit": 3983,
    "sure_sn": 145,
+   "tarandi": "2026-10-20"
+  },
+  "2026-10": {
+   "eslesen": 1,
+   "kayit": 2155,
+   "sure_sn": 80,
    "tarandi": "2026-10-20"
   }
  }
