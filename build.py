@@ -310,6 +310,22 @@ aside.yan .tur-k{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);t
 .kutu dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem}
 .kutu dt{color:var(--ink-soft)}.kutu dd{margin:0}
 .etiketler{margin-top:1.4rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
+/* Eserler sayfası */
+.baslik-gezinti ul{list-style:none;margin:0 0 1.6rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.baslik-gezinti li{font-family:var(--sans);font-size:.86rem;padding:.15rem .6rem;border:1px solid var(--rule);background:var(--card)}
+.baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
+.baslik-gezinti li.plan{color:var(--ink-soft)}
+.baslik-gezinti a{text-decoration:none;color:var(--ink)}
+.eser-bolum{border-top:2px solid var(--ink);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
+.eser-bolum h2{margin:.2rem 0 .6rem;font-size:1.3rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
+.eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
+.eser-bolum h3{font-family:var(--sans);font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-ink);margin:1.1rem 0 .3rem;font-weight:600}
+.eser-bolum h3 a{color:var(--accent-ink)}
+ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
+ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
+.eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
+.eser-ad:hover{color:var(--accent)}
+.eser-bilgi{display:block;font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);margin-top:.15rem}
 footer.site{border-top:1px solid var(--rule);background:var(--card);color:var(--ink-soft);font-family:var(--sans);font-size:.88rem}
 footer.site .wrap{padding-block:1.4rem 2.2rem;display:grid;gap:.3rem}
 footer.site p{margin:0;max-width:var(--measure)}
@@ -324,7 +340,7 @@ footer.site p{margin:0;max-width:var(--measure)}
 """
 
 MENU = [("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
-        ("eserler", "Eserler"), ("makaleler", "Makaleler"), ("hakkinda", "Hakkında")]
+        ("eserler", "Eserler"), ("guncel", "Güncel"), ("hakkinda", "Hakkında")]
 
 
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "") -> str:
@@ -359,7 +375,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 {body}
 </div></main>
 <footer class="site"><div class="wrap">
-  <p>Baş editör: {e(EDITOR)}. Tanıtımlar özgün eserlerin yerini tutmaz, her kayıt kaynağına bağlantı verir.</p>
+  <p>Editör: {e(EDITOR)}. Tanıtımlar özgün eserlerin yerini tutmaz, her kayıt kaynağına bağlantı verir.</p>
   <p>Kayıtlar makine okunabilir biçimde de sunulmaktadır: <a href="{SITE_URL}/api/makaleler.json">makaleler</a>, <a href="{SITE_URL}/api/fisler.json">fişler</a>.</p>
 </div></footer>
 </body>
@@ -391,10 +407,10 @@ def makale_satiri(m: dict) -> str:
 
 
 def render_makaleler(items) -> str:
-    body = ('<p class="ust-etiket">Makaleler</p><h1>Makale tanıtımları</h1>'
-            '<p class="giris">Uluslararası din felsefesi dergilerinde yayımlanan yeni makalelerin Türkçe tanıtımları.</p>'
+    body = ('<p class="ust-etiket">Güncel</p><h1>Yeni makaleler</h1>'
+            '<p class="giris">Din felsefesi dergilerinde yayımlanan yeni makalelerin Türkçe tanıtımları.</p>'
             + "".join(makale_satiri(m) for m in items))
-    return page(f"Makaleler · {SITE_NAME}", body, "makaleler", canonical=f"{SITE_URL}/makaleler/")
+    return page(f"Güncel · {SITE_NAME}", body, "guncel", canonical=f"{SITE_URL}/guncel/")
 
 
 def render_makale(m: dict) -> str:
@@ -402,7 +418,7 @@ def render_makale(m: dict) -> str:
     link = m.get("doi") and f"https://doi.org/{m['doi']}" or m.get("url", "")
     body = f"""
 <article class="dar">
-  <p class="yol"><a href="{SITE_URL}/makaleler/">Makaleler</a> <span aria-hidden="true">›</span> <time datetime="{e(m['date'])}">{tr_date(m['date'])}</time></p>
+  <p class="yol"><a href="{SITE_URL}/guncel/">Güncel</a> <span aria-hidden="true">›</span> <time datetime="{e(m['date'])}">{tr_date(m['date'])}</time></p>
   <h1>{e(m['title_tr'])}</h1>
   <p class="giris"><em>{e(m['title_en'])}</em></p>
   <div class="kutu"><dl>
@@ -417,7 +433,7 @@ def render_makale(m: dict) -> str:
   </div>
   <div class="etiketler">{''.join(f'<span>#{e(t)}</span>' for t in m.get('tags', []))}</div>
 </article>"""
-    return page(f"{m['title_tr']} · {SITE_NAME}", body, "makaleler", desc=m["lead"], canonical=entry_url(m))
+    return page(f"{m['title_tr']} · {SITE_NAME}", body, "guncel", desc=m["lead"], canonical=entry_url(m))
 
 
 # ---------------------------------------------------------------- başlıklar
@@ -579,20 +595,72 @@ def render_dizin(tur) -> str:
             if harf != son_harf:
                 satirlar.append(f'</ul><p class="harf">{e(harf)}</p><ul class="liste">')
                 son_harf = harf
-            satirlar.append(f'<li><span class="ad">{bag(tur, k)}{taslak_etiketi(h)}<span class="alt-ad">{e(h["ingilizce"])}</span></span>'
+            satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{e(h["ingilizce"])}</span></span>'
                             f'<span class="aciklama">{satir_ici(h["kisa_tanim"])}</span></li>')
         elif tur == "kisi":
-            satirlar.append(f'<li><span class="ad">{bag(tur, k)}{taslak_etiketi(h)}<span class="alt-ad">{e(h["donem"])}</span></span>'
+            satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{e(h["donem"])}</span></span>'
                             f'<span class="aciklama">{satir_ici(h["kisa_tanitim"])}</span></li>')
         else:
             yazar = ", ".join(bag("kisi", y) for y in liste(h.get("yazar")))
-            satirlar.append(f'<li><span class="ad">{bag(tur, k)}{taslak_etiketi(h)}<span class="alt-ad">{yazar} · {e(h["yil"])}</span></span>'
+            satirlar.append(f'<li><span class="ad">{bag(tur, k)}<span class="alt-ad">{yazar} · {e(h["yil"])}</span></span>'
                             f'<span class="aciklama">{e(h["yayin"])}{" · Türkçesi: " + satir_ici(h["turkce_cevirisi"]) if h.get("turkce_cevirisi") else ""}</span></li>')
     icerik = f'<ul class="liste">{"".join(satirlar)}</ul>'.replace('<ul class="liste"></ul>', "")
     if not kimlikler:
         icerik = '<p class="giris">Henüz fiş eklenmedi.</p>'
     body = f'<p class="ust-etiket">{basliklar[0]}</p><h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]} <span class="say">{len(kimlikler)} fiş</span></p>{icerik}'
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
+
+
+def eser_satiri(k) -> str:
+    h = FIS[("eser", k)]
+    yazar = ", ".join(bag("kisi", y) for y in liste(h.get("yazar")))
+    bilgi = [yazar, e(h.get("yil")), e(str(h.get("eser_turu", "")).capitalize())]
+    duzey = {"giris": "giriş düzeyi", "ileri": "ileri düzey"}.get(h.get("duzey"))
+    if duzey:
+        bilgi.append(duzey)
+    if h.get("turkce_cevirisi"):
+        bilgi.append("Türkçesi var")
+    return (f'<li><a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
+            f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span></li>')
+
+
+def render_eserler() -> str:
+    eserler = [k for (t, k) in FIS if t == "eser"]
+    def sirala(ks):
+        return sorted(ks, key=lambda k: (str(FIS[("eser", k)].get("yil", "")), tr_anahtar(FIS[("eser", k)]["baslik"])))
+    anas = ana_basliklar()
+    gezinti, bolumler, yerlesen = [], [], set()
+    for a in anas:
+        hedef = soy(a)
+        ilgili = [k for k in eserler if set(liste(FIS[("eser", k)].get("basliklar"))) & hedef]
+        n = len(ilgili)
+        gezinti.append(f'<li class="{"dolu" if n else "plan"}">'
+                       + (f'<a href="#{a}">{e(FIS[("baslik", a)]["ad"])}</a> <span class="say">{n}</span>' if n
+                          else f'<span>{e(FIS[("baslik", a)]["ad"])}</span>') + '</li>')
+        if not n:
+            continue
+        ic = []
+        dogrudan = [k for k in ilgili if a in liste(FIS[("eser", k)].get("basliklar"))]
+        if dogrudan:
+            ic.append(f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(dogrudan))}</ul>')
+        for alt in sorted(COCUK.get(a, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
+            altdaki = [k for k in ilgili if set(liste(FIS[("eser", k)].get("basliklar"))) & soy(alt)]
+            if altdaki:
+                ic.append(f'<h3><a href="{fis_url("baslik", alt)}">{e(FIS[("baslik", alt)]["ad"])}</a></h3>'
+                          f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(altdaki))}</ul>')
+        yerlesen |= set(ilgili)
+        bolumler.append(f'<section class="eser-bolum" id="{a}"><h2><a href="{fis_url("baslik", a)}">{e(FIS[("baslik", a)]["ad"])}</a> '
+                        f'<span class="say">{n} eser</span></h2>{"".join(ic)}</section>')
+    kalan = [k for k in eserler if k not in yerlesen]
+    if kalan:
+        bolumler.append(f'<section class="eser-bolum"><h2>Başlığı belirlenmemiş eserler</h2>'
+                        f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(kalan))}</ul></section>')
+    body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
+            f'<p class="giris">Din felsefesinin temel kitap ve makaleleri, ait oldukları başlıklara göre. '
+            f'Her başlığın altında eserler yayın yılına göre sıralanır. <span class="say">{len(eserler)} eser</span></p>'
+            f'<nav class="baslik-gezinti" aria-label="Başlıklar"><ul>{"".join(gezinti)}</ul></nav>'
+            + ("".join(bolumler) or '<p class="giris">Henüz eser fişi eklenmedi.</p>'))
+    return page(f"Eserler · {SITE_NAME}", body, "eserler", canonical=f"{SITE_URL}/eserler/")
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
@@ -610,7 +678,7 @@ def render_ana(items) -> str:
 </section>
 <div class="bolum-baslik"><h2>Başlık haritası</h2><a href="{SITE_URL}/basliklar/">Bütün başlıklar</a></div>
 {harita_html()}
-<div class="bolum-baslik"><h2>Son makale tanıtımları</h2><a href="{SITE_URL}/makaleler/">Bütün tanıtımlar</a></div>
+<div class="bolum-baslik"><h2>Güncel</h2><a href="{SITE_URL}/guncel/">Bütün tanıtımlar</a></div>
 {''.join(makale_satiri(m) for m in items[:5])}
 """
     return page(SITE_NAME, body, "", canonical=SITE_URL + "/")
@@ -624,7 +692,7 @@ ABOUT = f"""
     <p>{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır.</p>
     <p>Sitede ayrıca uluslararası din felsefesi dergilerinde yayımlanan yeni makalelerin Türkçe tanıtımları sunulmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
     <h2>Editörlük</h2>
-    <p>Baş editör: {EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p>
+    <p>Editör: {EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p>
   </div>
 </article>"""
 
@@ -646,7 +714,7 @@ def main() -> None:
     OUT.mkdir(parents=True)
 
     yaz("", render_ana(items))
-    yaz("makaleler", render_makaleler(items))
+    yaz("guncel", render_makaleler(items))
     for m in items:
         yaz(f"makale/{m['slug']}", render_makale(m))
     yaz("basliklar", render_basliklar())
@@ -655,8 +723,9 @@ def main() -> None:
             yaz(f"basliklar/{k}", render_baslik(k))
         else:
             yaz(f"{KLASOR[t]}/{k}", render_fis(t, k))
-    for t in ("terim", "kisi", "eser"):
+    for t in ("terim", "kisi"):
         yaz(KLASOR[t], render_dizin(t))
+    yaz("eserler", render_eserler())
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
