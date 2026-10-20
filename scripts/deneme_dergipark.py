@@ -1,34 +1,36 @@
-"""Geçici deneme: DergiPark'tan anahtar kelime bilgisi alınabiliyor mu?"""
-import json, re, urllib.parse, urllib.request
+"""Geçici deneme 2: DergiPark'ta anahtar kelimeyle arama ve veri kapısının ölçeği."""
+import re, urllib.parse, urllib.request, time
 UA = {"User-Agent": "dinfelsefesi-deneme/1.0 (mailto:dinfelsefesi@gmail.com)"}
-def al(url, n=600):
+def al(url):
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
-            b = r.read().decode("utf-8", "replace")
-            print(f"[{r.status}] {r.geturl()}"); return b
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+            b = r.read().decode("utf-8", "replace"); print(f"[{r.status}] {r.geturl()[:150]} ({len(b)} bayt)"); return b
     except Exception as e:
-        print(f"[HATA] {url}: {e}"); return ""
+        print(f"[HATA] {url[:150]}: {e}"); return ""
+OAI = "https://dergipark.org.tr/api/public/oai/"
 
-print("=== 1. OAI uç noktası adayları")
-for u in ["https://dergipark.org.tr/api/public/oai/?verb=Identify",
-          "https://dergipark.org.tr/oai/?verb=Identify",
-          "https://dergipark.org.tr/tr/oai?verb=Identify"]:
-    print(al(u)[:300].replace("\n", " "))
+print("=== A. Site araması")
+for q in ['"din felsefesi"', 'din felsefesi']:
+    for u in [f"https://dergipark.org.tr/tr/search?q={urllib.parse.quote(q)}&section=articles",
+              f"https://dergipark.org.tr/tr/search?q={urllib.parse.quote(q)}&section=article&filter%5Bkeywords%5D={urllib.parse.quote('din felsefesi')}"]:
+        h = al(u)
+        if not h: continue
+        toplam = re.findall(r"([\d\.]+)\s*(?:sonuç|result|kayıt)", h, re.I)[:3]
+        links = sorted(set(re.findall(r'href="(https://dergipark\.org\.tr/tr/pub/[^/"]+/article/\d+)"', h)))
+        print("  toplam ipucu:", toplam, "| makale bağlantısı:", len(links), links[:3])
+        print("  sayfa parçası:", re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h))[2000:2600])
+        time.sleep(2)
 
-print("=== 2. Crossref: 'din felsefesi' sorgusu")
-q = urllib.parse.urlencode({"query.bibliographic": "din felsefesi", "filter": "from-pub-date:2025-01-01,type:journal-article",
-                            "rows": 40, "mailto": "dinfelsefesi@gmail.com"})
-b = al("https://api.crossref.org/works?" + q)
-items = json.loads(b)["message"]["items"] if b else []
-print(len(items), "kayıt;", sum(1 for i in items if i.get("subject")), "subject alanlı;",
-      sum(1 for i in items if "dergipark" in json.dumps(i.get("link", [])) or "dergipark" in i.get("resource", {}).get("primary", {}).get("URL", "")), "DergiPark bağlantılı")
-for i in items[:8]:
-    print(" ", i.get("DOI"), "|", (i.get("title") or [""])[0][:70], "|", i.get("resource", {}).get("primary", {}).get("URL", ""))
+print("=== B. Veri kapısı: dergi kümeleri (sets) sayısı")
+h = al(OAI + "?verb=ListSets"); n = h.count("<setSpec>"); tok = re.findall(r"completeListSize=\"(\d+)\"", h)
+print("  ilk sayfadaki küme:", n, "| toplam:", tok, "| örnek:", re.findall(r"<setSpec>([^<]+)</setSpec>\s*<setName>([^<]+)", h)[:5])
 
-print("=== 3. Makale sayfasında anahtar kelime etiketi")
-for i in items[:5]:
-    url = i.get("resource", {}).get("primary", {}).get("URL", "")
-    if not url: continue
-    h = al(url)
-    kw = re.findall(r'<meta[^>]+name="(?:citation_keywords|keywords|DC\.Subject)"[^>]*content="([^"]*)"', h)
-    print("  anahtar kelimeler:", kw[:3])
+print("=== C. Tek dergide kayıtlar ve anahtar kelime alanı")
+sets = re.findall(r"<setSpec>([^<]+)</setSpec>", h)
+for s in sets[:2]:
+    r = al(OAI + f"?verb=ListRecords&metadataPrefix=oai_dc&set={s}")
+    print("  küme", s, "| kayıt:", r.count("<record>"), "| toplam:", re.findall(r"completeListSize=\"(\d+)\"", r),
+          "| subject örnek:", re.findall(r"<dc:subject[^>]*>([^<]+)</dc:subject>", r)[:6])
+print("=== D. Tarihe göre toplu çekim (bütün dergiler, bir gün)")
+r = al(OAI + "?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-01&until=2026-10-02")
+print("  kayıt:", r.count("<record>"), "| toplam:", re.findall(r"completeListSize=\"(\d+)\"", r), "| hata:", re.findall(r"<error[^>]*>([^<]*)", r)[:1])
