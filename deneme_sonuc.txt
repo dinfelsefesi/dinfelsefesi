@@ -1,24 +1,7 @@
-=== A. Site araması
-[200] https://dergipark.org.tr/tr/search/verification?q=%22din%20felsefesi%22&section=articles (75158 bayt)
-  toplam ipucu: [] | makale bağlantısı: 0 []
-  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
-[200] https://dergipark.org.tr/tr/search/verification?q=%22din%20felsefesi%22&section=article&filter%5Bkeywords%5D=din%20felsefesi (75160 bayt)
-  toplam ipucu: [] | makale bağlantısı: 0 []
-  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
-[200] https://dergipark.org.tr/tr/search/verification?q=din%20felsefesi&section=articles (75146 bayt)
-  toplam ipucu: [] | makale bağlantısı: 0 []
-  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
-[200] https://dergipark.org.tr/tr/search/verification?q=din%20felsefesi&section=article&filter%5Bkeywords%5D=din%20felsefesi (75159 bayt)
-  toplam ipucu: [] | makale bağlantısı: 0 []
-  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
-=== B. Veri kapısı: dergi kümeleri (sets) sayısı
-[200] https://dergipark.org.tr/api/public/oai/?verb=ListSets (83156 bayt)
-  ilk sayfadaki küme: 100 | toplam: [] | örnek: [('mulkiye', 'Mülkiye Dergisi'), ('marubsed', 'Para ve Sermaye Piyasaları Dergisi'), ('marusbd', 'Marmara Üniversitesi Siyasal Bilimler Dergisi'), ('marustd', 'Sanat - Tasarım Dergisi'), ('maruhad', 'Marmara Üniversitesi Hukuk Fakültesi Hukuk Araştırmaları Dergisi')]
-=== C. Tek dergide kayıtlar ve anahtar kelime alanı
-[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=mulkiye (274495 bayt)
-  küme mulkiye | kayıt: 100 | toplam: [] | subject örnek: []
-[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=marubsed (29604 bayt)
-  küme marubsed | kayıt: 9 | toplam: [] | subject örnek: []
-=== D. Tarihe göre toplu çekim (bütün dergiler, bir gün)
-[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-01&until=2026-10-02 (675769 bayt)
-  kayıt: 100 | toplam: [] | hata: []
+=== Biçimler
+['oai_dc', 'oai_etdms', 'oai_marc', 'oai_mods']
+Traceback (most recent call last):
+  File "/home/runner/work/dinfelsefesi/dinfelsefesi/scripts/deneme_dergipark.py", line 10, in <module>
+    rec = r.split("<record>")[1].split("</record>")[0]
+          ~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
