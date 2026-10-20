@@ -1,29 +1,24 @@
-=== 1. OAI uç noktası adayları
-[200] https://dergipark.org.tr/api/public/oai/?verb=Identify
-<?xml version="1.0" encoding="UTF-8"?> <?xml-stylesheet type="text/xsl" href="/zollu/bundles/ojsoai/oai2.xsl" ?> <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/     
-[HATA] https://dergipark.org.tr/oai/?verb=Identify: HTTP Error 404: Not Found
-
-[HATA] https://dergipark.org.tr/tr/oai?verb=Identify: HTTP Error 404: Not Found
-
-=== 2. Crossref: 'din felsefesi' sorgusu
-[200] https://api.crossref.org/works?query.bibliographic=din+felsefesi&filter=from-pub-date%3A2025-01-01%2Ctype%3Ajournal-article&rows=40&mailto=dinfelsefesi%40gmail.com
-40 kayıt; 0 subject alanlı; 30 DergiPark bağlantılı
-  10.34082/islamiilimler.1617010 | Pragmatik Gerçekçi Bir Din Felsefesi | http://dergipark.org.tr/tr/doi/10.34082/islamiilimler.1617010
-  10.26650/di.2025.36.1.1576374 | Dârülfünun İlahiyat Fakültesi’nde Din Felsefesi:   Mustafa Şekip Tunç’ | https://iupress.istanbul.edu.tr/tr/journal/ilahiyatjournal/article/darulfunun-ilahiyat-fakultesinde-din-felsefesi-mustafa-sekip-tuncun-yontemi-ve-katkilari
-  10.30783/nevsosbilen.1827130 | Aldo Leopold’un Toprak Etiği’nin din felsefesi bağlamında değerlendiri | https://dergipark.org.tr/tr/doi/10.30783/nevsosbilen.1827130
-  10.7827/turkishstudies.94571 | The Relationship Between the Philosophy of Religion and Religious Educ | https://turkishstudies.net/religion?mod=makale_tr_ozet&makale_id=94571
-  10.32955/neujsml2025141107 | Edebiyat Felsefesi Açısından Edebi Estetik, Din İlişkisi ve İletişim | https://dergi.neu.edu.tr/index.php/neujsml/article/view/1107/571
-  10.51404/metazihin.1767253 | Heidegger’in Felsefesi Bağlamında Yapay Zekâ | https://dergipark.org.tr/tr/doi/10.51404/metazihin.1767253
-  10.65643/bitad.3.m.0003 | Bilim Tarihi ve Bilim Felsefesinin Epistemik Mirası Üzerine Yükselen Ç | https://dergipark.org.tr/tr/pub/bitad/article/1812402
-  10.51404/metazihin.1674795 | Alberto Romele’nin "Dijital Habitus" Kavramı ve Val Dusek’in Yapay Zek | http://dergipark.org.tr/tr/doi/10.51404/metazihin.1674795
-=== 3. Makale sayfasında anahtar kelime etiketi
-[200] https://dergipark.org.tr/tr/pub/islamiilimler/article/1617010
-  anahtar kelimeler: ['din felsefesi;faydacılık;gerçekçilik;ontolojik bağlılık;Tanrı']
-[200] https://iupress.istanbul.edu.tr/tr/journal/ilahiyatjournal/article/darulfunun-ilahiyat-fakultesinde-din-felsefesi-mustafa-sekip-tuncun-yontemi-ve-katkilari
-  anahtar kelimeler: []
-[200] https://dergipark.org.tr/tr/pub/nevsosbilen/article/1827130
-  anahtar kelimeler: ['Toprak Etiği;Din Felsefesi;İnsan Doğa İlişkisi']
-[200] https://turkishstudies.net/religion?mod=makale_tr_ozet&makale_id=94571
-  anahtar kelimeler: []
-[HATA] https://dergi.neu.edu.tr/index.php/neujsml/article/view/1107/571: HTTP Error 403: Forbidden
-  anahtar kelimeler: []
+=== A. Site araması
+[200] https://dergipark.org.tr/tr/search/verification?q=%22din%20felsefesi%22&section=articles (75158 bayt)
+  toplam ipucu: [] | makale bağlantısı: 0 []
+  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
+[200] https://dergipark.org.tr/tr/search/verification?q=%22din%20felsefesi%22&section=article&filter%5Bkeywords%5D=din%20felsefesi (75160 bayt)
+  toplam ipucu: [] | makale bağlantısı: 0 []
+  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
+[200] https://dergipark.org.tr/tr/search/verification?q=din%20felsefesi&section=articles (75146 bayt)
+  toplam ipucu: [] | makale bağlantısı: 0 []
+  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
+[200] https://dergipark.org.tr/tr/search/verification?q=din%20felsefesi&section=article&filter%5Bkeywords%5D=din%20felsefesi (75159 bayt)
+  toplam ipucu: [] | makale bağlantısı: 0 []
+  sayfa parçası: st.remove("d-none"); document.getElementById('header-user-project-item').classList.remove("d-none"); } if (userInfo.is_admin == 1) { document.getElementById('header-dashboard-item').classList.remove("d-none"); } } else { // User is not logged in, display guest block right away! showUserBoxBlock('header-user-box-guest-menu'); } var userDropDownElement = document.getElementById("userDropDown"); var userNavbar = document.getElementById("navbarToggler"); userDropDownElement.addEventListener('click', function () { if (!document.getElementById('header-user-box-user-menu').classList.contains('show'))
+=== B. Veri kapısı: dergi kümeleri (sets) sayısı
+[200] https://dergipark.org.tr/api/public/oai/?verb=ListSets (83156 bayt)
+  ilk sayfadaki küme: 100 | toplam: [] | örnek: [('mulkiye', 'Mülkiye Dergisi'), ('marubsed', 'Para ve Sermaye Piyasaları Dergisi'), ('marusbd', 'Marmara Üniversitesi Siyasal Bilimler Dergisi'), ('marustd', 'Sanat - Tasarım Dergisi'), ('maruhad', 'Marmara Üniversitesi Hukuk Fakültesi Hukuk Araştırmaları Dergisi')]
+=== C. Tek dergide kayıtlar ve anahtar kelime alanı
+[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=mulkiye (274495 bayt)
+  küme mulkiye | kayıt: 100 | toplam: [] | subject örnek: []
+[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&set=marubsed (29604 bayt)
+  küme marubsed | kayıt: 9 | toplam: [] | subject örnek: []
+=== D. Tarihe göre toplu çekim (bütün dergiler, bir gün)
+[200] https://dergipark.org.tr/api/public/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-01&until=2026-10-02 (675769 bayt)
+  kayıt: 100 | toplam: [] | hata: []
