@@ -338,6 +338,13 @@ aside.yan .tur-k{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);t
 .k-ara input:focus{outline:2px solid var(--accent);outline-offset:1px}
 .tablo-kap{overflow-x:auto}
 table.kisiler{width:100%;border-collapse:collapse;font-size:.95rem}
+button.sirala{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
+button.sirala:hover{color:var(--ink)}
+button.sirala:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+th[aria-sort="ascending"] button.sirala,th[aria-sort="descending"] button.sirala{color:var(--ink)}
+.ok::after{content:"↕";opacity:.35;font-size:.9em}
+th[aria-sort="ascending"] .ok::after{content:"▲";opacity:1;font-size:.7em}
+th[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-size:.7em}
 table.kisiler th{text-align:left;font-family:var(--sans);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:.4rem .7rem .4rem 0;border-bottom:2px solid var(--ink)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
@@ -362,7 +369,10 @@ footer.site p{margin:0;max-width:var(--measure)}
   aside.yan{position:static}
   .liste li,.makale,dl.kunye div{grid-template-columns:1fr;gap:.15rem}
   .kart{padding:1.1rem 1.1rem 1rem}
-  table.kisiler thead{display:none}
+  table.kisiler thead{display:block}
+  table.kisiler thead tr{display:flex;flex-wrap:wrap;gap:.2rem 1rem;padding:0 0 .4rem;border-bottom:2px solid var(--ink)}
+  table.kisiler thead th{display:block;border:0;padding:0}
+  table.kisiler thead th:last-child{display:none}
   table.kisiler,table.kisiler tbody,table.kisiler tr,table.kisiler td{display:block;width:100%}
   table.kisiler tr{padding:.6rem 0;border-bottom:1px solid var(--rule)}
   table.kisiler td{border:0;padding:.05rem 0}
@@ -666,6 +676,9 @@ KAPSAM = [("turkiye", "Türkiye akademisi"), ("uluslararasi", "Uluslararası aka
 YOK_PROFIL = "https://akademik.yok.gov.tr/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId="
 
 
+UNVAN_SIRA = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "Öğr. Gör.": 3, "Arş. Gör.": 4}
+
+
 def turkiye_listesi() -> tuple[str, int]:
     dosya = CONTENT / "turkiye_akademisi.yaml"
     if not dosya.exists():
@@ -674,13 +687,14 @@ def turkiye_listesi() -> tuple[str, int]:
     kisiler = veri.get("kisiler") or []
     fis_ad = {FIS[(t, k)]["ad"]: k for (t, k) in FIS if t == "kisi"}
     satirlar = []
+    kisiler = sorted(kisiler, key=lambda p: tr_anahtar(p['ad']))
     for p in kisiler:
         kim = p.get("kimlik") or fis_ad.get(p["ad"])
         ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else e(p["ad"])
         durum = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
         yok = f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK</a>' if p.get("yok") else ""
         ara = tr_kucuk(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
-        satirlar.append(f'<tr data-ara="{e(ara)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
+        satirlar.append(f'<tr data-ara="{e(ara)}" data-unvan="{UNVAN_SIRA.get(p.get("unvan"), 9)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
                         f'<td data-etiket="Unvan">{e(p.get("unvan"))}{durum}</td>'
                         f'<td data-etiket="Üniversite">{e(p.get("universite"))}</td>'
                         f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td><td class="k-yok">{yok}</td></tr>')
@@ -690,8 +704,10 @@ def turkiye_listesi() -> tuple[str, int]:
            f'ilk anahtar kelimesi Din Felsefesi olan akademisyenlerden oluşmaktadır'
            f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.</p>'
            '<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
-    tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr><th>Ad Soyad</th><th>Unvan</th><th>Üniversite</th>'
-             f'<th>Fakülte</th><th><span class="gizli">YÖK profili</span></th></tr></thead><tbody>{"".join(satirlar)}</tbody></table></div>'
+    tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr>'
+             + "".join(f'<th aria-sort="{"ascending" if i == 0 else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}<span class="ok" aria-hidden="true"></span></button></th>'
+                       for i, b in enumerate(["Ad Soyad", "Unvan", "Üniversite", "Fakülte"])) +
+             f'<th><span class="gizli">YÖK profili</span></th></tr></thead><tbody>{"".join(satirlar)}</tbody></table></div>'
              '<p class="giris k-bos" hidden>Aramaya uyan kişi bulunamadı.</p>')
     return ust + tablo, len(kisiler)
 
@@ -721,6 +737,25 @@ KISI_JS = """<script>
   }
   d.forEach(function(x){x.addEventListener('click',function(){ac(x.dataset.sekme); try{history.replaceState(null,'','#'+x.dataset.sekme);}catch(_){}});});
   ac(location.hash==='#uluslararasi'?'uluslararasi':'turkiye');
+  var tb=document.querySelector('table.kisiler tbody');
+  if(tb){
+    var ths=document.querySelectorAll('table.kisiler thead th[aria-sort]');
+    var metin=function(r,i){return (r.cells[i].innerText||'').replace(/Emekli/,'').trim();};
+    var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
+    document.querySelectorAll('button.sirala').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var i=+btn.dataset.sutun, th=btn.parentNode, yon=th.getAttribute('aria-sort')==='ascending'?-1:1;
+        ths.forEach(function(t){t.setAttribute('aria-sort','none');});
+        th.setAttribute('aria-sort',yon===1?'ascending':'descending');
+        var r=[].slice.call(tb.rows);
+        r.sort(function(a,b){
+          var f = i===1 ? (+a.dataset.unvan)-(+b.dataset.unvan) : kar(metin(a,i),metin(b,i));
+          return f*yon || kar(metin(a,0),metin(b,0));
+        });
+        r.forEach(function(x){tb.appendChild(x);});
+      });
+    });
+  }
   var g=document.getElementById('kisi-ara');
   if(g){
     var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
