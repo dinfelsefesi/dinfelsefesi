@@ -479,6 +479,7 @@ a.ic-bag{text-decoration-style:dotted}
 .karsilama h1{font-size:3rem;margin-bottom:.8rem}
 .karsilama p{font-size:1.16rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
 .karsilama .durum-satiri{font-style:italic;font-size:.98rem}
+.karsilama .karsilama-git{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-family:var(--display);font-size:1.2rem;margin-top:1.1rem}
 .susleme{display:flex;align-items:center;gap:1rem;color:var(--gold);margin:2.4rem 0 1.4rem}
 .susleme::before,.susleme::after{content:"";flex:1;height:1px;background:var(--rule)}
 .susleme span{font-family:var(--display);font-size:1.3rem;line-height:1}
@@ -1167,7 +1168,7 @@ def icindekiler_html() -> str:
         h = FIS[("baslik", k)]
         b = bagli_fisler(k)
         altlar = " · ".join(bag("baslik", a) for a in liste(h.get("alt_basliklar")))
-        satirlar.append(f"""<li><span class="no">{e(h.get('sira', ''))}</span><div>
+        satirlar.append(f"""<li><span class="no" aria-hidden="true">{e(h.get('sira', ''))}</span><div>
   <h3><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h3>
   <p>{satir_ici(h.get('ozet'))}</p>
   {f'<p class="altlar-metin">{altlar}</p>' if altlar else ''}
@@ -1188,6 +1189,7 @@ def render_ana(items) -> str:
   <h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
   <p>Din felsefesinin temel problemleri, terimleri, düşünürleri ve eserleri birbirine bağlı fişlerle sunulmaktadır. Her ana başlık bir okuma metniyle açılır. Terimler, kişiler ve eserler bu metinlere bağlanır, yeni çalışmalar da düzenli olarak tanıtılır.</p>
   <p class="durum-satiri">{durum}</p>
+  <p class="karsilama-git"><a href="{SITE_URL}/basliklar/">Başlıklara göz atın →</a> <a href="{SITE_URL}/ag/">İlişki ağını açın →</a></p>
   </div>
   {okuma_baslangici()}
 </section>
