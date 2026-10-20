@@ -369,11 +369,11 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .kutu dt{color:var(--ink-soft)}.kutu dd{margin:0}
 .etiketler{margin-top:1.4rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
 /* Eserler sayfası */
-.tur-secici{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
+.tur-secici{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1.6rem}
 .tur-secici button{font-family:var(--serif);font-size:.95rem;padding:.3rem .9rem;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer;border-radius:999px}
 .tur-secici button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .tur-secici button[aria-pressed="true"] .say{color:inherit;opacity:.75}
-.baslik-gezinti ul{list-style:none;margin:0 0 1.6rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.baslik-gezinti ul{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
 .baslik-gezinti li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
 .baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
 .baslik-gezinti li.plan{color:var(--ink-soft)}
@@ -1042,8 +1042,8 @@ def render_eserler() -> str:
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
             f'<p class="giris">Din felsefesinin temel kitap ve makaleleri, ait oldukları başlıklara göre. '
             f'Her başlığın altında eserler türe ve yayın yılına göre sıralanır. <span class="say">{len(eserler)} eser</span></p>'
-            f'{tur_secici(eserler)}'
             f'<nav class="baslik-gezinti" aria-label="Başlıklar"><ul>{"".join(gezinti)}</ul></nav>'
+            f'{tur_secici(eserler)}'
             + ("".join(bolumler) or '<p class="giris">Henüz eser fişi eklenmedi.</p>'))
     return page(f"Eserler · {SITE_NAME}", body + TUR_SECICI_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
