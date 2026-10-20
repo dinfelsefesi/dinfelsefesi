@@ -264,7 +264,7 @@ CSS = """
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{font-size:17px}
+html{font-size:16px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
 a:hover{text-decoration-color:currentColor}
@@ -275,24 +275,24 @@ a:hover{color:var(--accent)}
 header.site{background:var(--paper);border-bottom:3px double var(--rule)}
 header.site .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
 .marka{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.1rem}
-.marka b{font-family:var(--display);font-weight:500;font-size:2rem;line-height:1.05}
-.marka small{order:2;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
-nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.12rem}
+.marka b{font-family:var(--display);font-weight:500;font-size:1.75rem;line-height:1.05}
+.marka small{order:2;font-style:italic;font-size:.86rem;color:var(--ink-soft)}
+nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.04rem}
 nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
 nav.ana a:hover{color:var(--ink)}
 nav.ana a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
 .deneme{background:var(--gold-soft);font-style:italic;font-size:.88rem;color:var(--ink-soft)}
 .deneme .wrap{padding-block:.45rem}
 main{padding-block:2.2rem 3.5rem}
-h1{font-family:var(--display);font-weight:500;font-size:2.5rem;line-height:1.12;margin:0 0 .6rem;text-wrap:balance}
-h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25;margin:1.7rem 0 .45rem;text-wrap:balance}
+h1{font-family:var(--display);font-weight:500;font-size:2.15rem;line-height:1.12;margin:0 0 .6rem;text-wrap:balance}
+h2{font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25;margin:1.7rem 0 .45rem;text-wrap:balance}
 .ust-etiket{font-style:italic;font-size:.95rem;color:var(--gold);margin:0 0 .35rem}
 .yol{font-style:italic;font-size:.92rem;color:var(--ink-soft);margin:0 0 .6rem}
 .yol a{color:var(--ink-soft)}
-.giris{font-size:1.12rem;line-height:1.5;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.5rem}
+.giris{font-size:1.02rem;line-height:1.5;color:var(--ink-soft);max-width:var(--measure);margin:0 0 1.5rem}
 .metin{max-width:var(--measure)}
 .metin p{margin:0 0 .8rem}
-.metin h2{color:var(--ink);font-size:1.45rem;margin-top:1.6rem}
+.metin h2{color:var(--ink);font-size:1.3rem;margin-top:1.6rem}
 .metin > h2:first-child + p::first-letter,.metin > p:first-child::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
 .say{font-style:italic;font-size:.9rem;color:var(--ink-soft);font-variant-numeric:oldstyle-nums}
 .say.ayri{display:block;margin-top:.4rem}
@@ -314,7 +314,7 @@ h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25
 /* Başlık haritası */
 .harita{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1rem}
 .anakart{min-width:0;background:var(--card);border:1px solid var(--rule);padding:1rem 1.1rem 1.05rem;display:flex;flex-direction:column;gap:.45rem}
-.anakart h3{margin:0;font-size:1.1rem;font-weight:600;line-height:1.3}
+.anakart h3{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;line-height:1.25}
 .anakart h3 a{color:var(--ink);text-decoration:none}
 .anakart h3 a:hover{color:var(--accent)}
 .anakart.bos h3{font-weight:500}
@@ -322,22 +322,22 @@ h2{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1.25
 .olcu{height:4px;background:var(--panel)}
 .olcu span{display:block;height:100%;background:var(--accent)}
 .altlar{list-style:none;padding:0;margin:.15rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem}
-.altlar li{font-family:var(--sans);font-size:.82rem;padding:.08rem .55rem;border:1px solid var(--rule);background:var(--paper)}
+.altlar li{font-family:var(--serif);font-size:.82rem;padding:.08rem .55rem;border:1px solid var(--rule);background:var(--paper)}
 .altlar li.dolu{border-color:var(--accent);background:var(--accent-soft)}
 .altlar li.plan .duz{color:var(--ink-soft)}
-.ilgili{font-family:var(--sans);font-size:.85rem;color:var(--ink-soft)}
+.ilgili{font-style:italic;font-size:.88rem;color:var(--ink-soft)}
 
 /* Listeler */
 .liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .liste li{padding:.75rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.2rem 1.5rem}
 .liste .ad{font-weight:600}
 .liste .alt-ad{display:block;font-weight:400;font-style:italic;color:var(--ink-soft);font-size:.92rem}
-.liste .ad a{font-family:var(--display);font-size:1.2rem;font-weight:500}
+.liste .ad a{font-family:var(--display);font-size:1.1rem;font-weight:500}
 .liste .aciklama{color:var(--ink-soft);font-size:.96rem}
-.harf{font-family:var(--display);color:var(--gold);font-size:1.6rem;margin:1.8rem 0 .2rem}
+.harf{font-family:var(--display);color:var(--gold);font-size:1.4rem;margin:1.8rem 0 .2rem}
 .makale{padding:1.3rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:0 1.5rem}
 .makale time{color:var(--gold);font-style:italic;font-size:.92rem;padding-top:.35rem}
-.makale h3{margin:0;font-family:var(--display);font-size:1.4rem;font-weight:500;line-height:1.3}
+.makale h3{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;line-height:1.3}
 .makale h3 a{color:var(--ink);text-decoration:none}
 .makale h3 a:hover{color:var(--accent)}
 .makale .orij{margin:.25rem 0 0;color:var(--ink-soft);font-style:italic;font-size:.94rem}
@@ -379,7 +379,7 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .baslik-gezinti li.plan{color:var(--ink-soft)}
 .baslik-gezinti a{text-decoration:none;color:var(--ink)}
 .eser-bolum{border-top:1px solid var(--gold);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
-.eser-bolum h2{margin:.3rem 0 .6rem;font-size:1.6rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
+.eser-bolum h2{margin:.3rem 0 .6rem;font-size:1.4rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
 .eser-bolum h3{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:1.2rem 0 .3rem;font-weight:500}
 .eser-bolum h3 a{color:var(--accent-ink)}
@@ -476,8 +476,8 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-git{display:inline-block;margin-top:1rem;font-style:italic}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
-.karsilama h1{font-size:3rem;margin-bottom:.8rem}
-.karsilama p{font-size:1.16rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
+.karsilama h1{font-size:2.55rem;margin-bottom:.8rem}
+.karsilama p{font-size:1.04rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
 .karsilama .durum-satiri{font-style:italic;font-size:.98rem}
 .karsilama .karsilama-git{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-family:var(--display);font-size:1.2rem;margin-top:1.1rem}
 .susleme{display:flex;align-items:center;gap:1rem;color:var(--gold);margin:2.4rem 0 1.4rem}
@@ -485,19 +485,19 @@ a.ic-bag{text-decoration-style:dotted}
 .susleme span{font-family:var(--display);font-size:1.3rem;line-height:1}
 .okuma{background:var(--card);border:1px solid var(--rule);padding:1.7rem 1.9rem 1.5rem;box-shadow:0 14px 34px -28px rgba(60,40,10,.4)}
 .okuma .ust-etiket{margin-bottom:.4rem}
-.okuma h2{margin:0 0 .7rem;font-size:1.9rem}
+.okuma h2{margin:0 0 .6rem;font-size:1.6rem}
 .okuma h2 a{color:var(--ink);text-decoration:none}
 .okuma .ozet{font-style:italic;color:var(--ink-soft);margin:0}
-.okuma .alinti{margin:0;font-size:1.02rem;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.okuma .alinti{margin:0;font-size:.97rem;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
 .okuma .alinti::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
 .okuma .devam{display:inline-block;margin-top:.8rem;font-style:italic}
 .icindekiler{list-style:none;margin:0;padding:0;columns:2 24rem;column-gap:3.5rem;counter-reset:bas}
 .icindekiler li{break-inside:avoid;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:0 .4rem;padding:.9rem 0 1rem;border-bottom:1px solid var(--rule)}
-.icindekiler .no{font-family:var(--display);font-size:1.5rem;color:var(--gold);line-height:1.25;font-variant-numeric:oldstyle-nums}
-.icindekiler h3{margin:0;font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25}
+.icindekiler .no{font-family:var(--display);font-size:1.3rem;color:var(--gold);line-height:1.25;font-variant-numeric:oldstyle-nums}
+.icindekiler h3{margin:0;font-family:var(--display);font-weight:500;font-size:1.25rem;line-height:1.25}
 .icindekiler h3 a{color:var(--ink);text-decoration:none}
 .icindekiler h3 a:hover{color:var(--accent)}
-.icindekiler p{margin:.2rem 0 0;color:var(--ink-soft);font-size:.98rem}
+.icindekiler p{margin:.2rem 0 0;color:var(--ink-soft);font-size:.93rem}
 .icindekiler .altlar-metin{margin-top:.35rem;font-size:.95rem;font-style:italic;color:var(--ink-soft)}
 .icindekiler .altlar-metin a{font-style:normal}
 .icindekiler .say{display:block;margin-top:.25rem}
@@ -505,8 +505,8 @@ a.ic-bag{text-decoration-style:dotted}
   html{font-size:16px}
   .acilis,.fis-duzen,.karsilama{grid-template-columns:1fr;gap:1.5rem}
   .okuma{padding:1.4rem 1.2rem}
-  .karsilama h1{font-size:2.3rem}
-  h1{font-size:2.1rem}
+  .karsilama h1{font-size:2.05rem}
+  h1{font-size:1.85rem}
   aside.yan{border-left:0;border-top:1px solid var(--gold);padding:1rem 0 0}
   .acilis h1{font-size:2rem}
   aside.yan{position:static}
