@@ -503,6 +503,8 @@ a.ic-bag{text-decoration-style:dotted}
 .okuma .kunye{margin:0 0 .7rem;color:var(--ink-soft);font-size:.88rem}
 .okuma.gunun .alinti::first-letter{float:none;font-size:inherit;padding:0;color:inherit;font-family:inherit}
 .okuma .gunun-git{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;margin:.9rem 0 0;font-style:italic;font-size:.95rem}
+.x-paylas{font-style:italic}
+.paylas{margin:1.2rem 0 0}
 .gun-adi{display:block;font-size:.85em;color:var(--ink-soft)}
 .okuma .devam{display:inline-block;margin-top:.8rem;font-style:italic}
 .icindekiler{list-style:none;margin:0;padding:0;columns:2 24rem;column-gap:3.5rem;counter-reset:bas}
@@ -545,8 +547,26 @@ MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"
         ("eserler", "Eserler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
 
 
-def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "") -> str:
+GORSELLER = []   # (dosya yolu, üst yazı, başlık, alt yazı): derleme sonunda üretilir
+
+
+def paylasim_gorseli(ad_: str, ust: str, baslik_: str, alt: str = "") -> str:
+    GORSELLER.append((f"paylas/{ad_}.png", ust, baslik_, alt))
+    return f"{SITE_URL}/paylas/{ad_}.png"
+
+
+def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "",
+         gorsel: str = "", og_tur: str = "website") -> str:
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
+    og_baslik = title.removesuffix(f" · {SITE_NAME}")
+    og = (f'<meta property="og:site_name" content="{e(SITE_NAME)}"><meta property="og:locale" content="tr_TR">'
+          f'<meta property="og:type" content="{og_tur}"><meta property="og:title" content="{e(og_baslik)}">'
+          f'<meta property="og:description" content="{e(desc)}">'
+          + (f'<meta property="og:url" content="{e(canonical)}">' if canonical else "")
+          + f'<meta property="og:image" content="{e(gorsel or SITE_URL + "/paylas/site.png")}">'
+          f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+          f'<meta name="twitter:card" content="summary_large_image">'
+          f'<meta name="google-site-verification" content="google08c007317a4ad095">')
     robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
     menu = "".join(
         f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
@@ -561,6 +581,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 {canon}
+{og}
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -681,9 +702,12 @@ def render_makale(m: dict) -> str:
     {paragraphs(m.get('why_tr', ''))}
   </div>
   <div class="etiketler">{''.join(f'<span>#{e(t)}</span>' for t in m.get('tags', []))}</div>
+  <p class="paylas">{paylas_dugmesi(m)}</p>
   {atif_kutusu(m['title_tr'] + " [tanıtım]", entry_url(m), m.get('date'))}
 </article>{ATIF_JS}"""
-    return page(f"{m['title_tr']} · {SITE_NAME}", body, "", desc=m["lead"], canonical=entry_url(m))
+    gorsel = paylasim_gorseli(f"makale-{m['slug']}", f"Günün makalesi · {tr_date(m['gun'])}", m["title_tr"],
+                              f"{m.get('authors', '')} · {m.get('journal', '')}{', ' + str(m['year']) if m.get('year') else ''}")
+    return page(f"{m['title_tr']} · {SITE_NAME}", body, "", desc=m["lead"], canonical=entry_url(m), gorsel=gorsel, og_tur="article")
 
 
 # ---------------------------------------------------------------- başlıklar
@@ -754,8 +778,9 @@ def render_baslik(k) -> str:
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{atif_kutusu(h['ad'], fis_url("baslik", k), h.get("guncelleme"))}</div>
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
 </div>{ATIF_JS}"""
+    gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
     return page(f"{h['ad']} · {SITE_NAME}", body, "basliklar", desc=h.get("ozet") or SITE_TAGLINE,
-                canonical=fis_url("baslik", k))
+                canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article")
 
 
 def render_basliklar() -> str:
@@ -874,7 +899,8 @@ def render_fis(tur, k) -> str:
     <p class="imza">{e(h.get('imza'))} · son güncelleme {tr_date(str(h['guncelleme']))}</p>{atif_kutusu(ad(tur, h), fis_url(tur, k), h.get("guncelleme"))}</article>
   {f'<aside class="yan">{yan}</aside>' if yan else ''}
 </div>{ATIF_JS}"""
-    return page(f"{ad(tur, h)} · {SITE_NAME}", body, KLASOR[tur], desc=desc, canonical=fis_url(tur, k))
+    gorsel = paylasim_gorseli(f"{tur}-{k}", TUR_AD[tur], ad(tur, h), str(h.get("ingilizce") or h.get("donem") or ""))
+    return page(f"{ad(tur, h)} · {SITE_NAME}", body, KLASOR[tur], desc=desc, canonical=fis_url(tur, k), gorsel=gorsel, og_tur="article")
 
 
 def render_dizin(tur) -> str:
@@ -1225,6 +1251,13 @@ def icindekiler_html() -> str:
     return f'<ol class="icindekiler">{"".join(satirlar)}</ol>'
 
 
+def paylas_dugmesi(m: dict) -> str:
+    from urllib.parse import quote
+    metin = f"Günün makalesi: {m['title_tr']} ({m.get('authors', '')}, {m.get('journal', '')}) #dinfelsefesi"
+    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m))}"
+    return f'<a class="x-paylas" href="{e(adres)}" target="_blank" rel="noopener">X\'te paylaş</a>'
+
+
 def gunun_makalesi_html(items) -> str:
     if not items:
         return okuma_baslangici()
@@ -1235,7 +1268,7 @@ def gunun_makalesi_html(items) -> str:
   <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
   <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
   <p class="alinti">{e(m['lead'])}</p>
-  <p class="gunun-git"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a></p>
+  <p class="gunun-git"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a> {paylas_dugmesi(m)}</p>
 </aside>"""
 
 
@@ -1262,7 +1295,9 @@ def render_ana(items) -> str:
 {f'''<div class="bolum-baslik"><h2>Önceki günlerin makaleleri</h2><a href="{SITE_URL}/gunun-makalesi/">Bütün günler</a></div>
 {"".join(makale_satiri(m) for m in items[1:5])}''' if len(items) > 1 else ""}
 """
-    return page(SITE_NAME, body, "", canonical=SITE_URL + "/")
+    gorsel = (paylasim_gorseli(f"makale-{items[0]['slug']}", f"Günün makalesi · {tr_date(items[0]['gun'])}", items[0]["title_tr"],
+                               f"{items[0].get('authors', '')} · {items[0].get('journal', '')}") if items else "")
+    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel)
 
 
 ABOUT = f"""
@@ -1339,6 +1374,16 @@ def main() -> None:
 <lastBuildDate>{now}</lastBuildDate>{rss_items}
 </channel></rss>
 """, encoding="utf-8")
+    try:
+        from paylasim_gorseli import kart
+        kart(OUT / "paylas" / "site.png", "dinfelsefesi.com.tr", "Din felsefesi için Türkçe başvuru kaynağı",
+             "Başlıklar, terimler, düşünürler, eserler ve günün makalesi")
+        for yol_, ust, bas, alt in dict.fromkeys(GORSELLER):
+            if not (OUT / yol_).exists():
+                kart(OUT / yol_, ust, bas, alt)
+    except ImportError:
+        print("uyarı: Pillow yok, paylaşım görselleri üretilmedi")
+    (OUT / "google08c007317a4ad095.html").write_text("google-site-verification: google08c007317a4ad095.html", encoding="utf-8")
     if (ROOT / "static").exists():
         shutil.copytree(ROOT / "static", OUT / "static")
     (OUT / ".nojekyll").write_text("")
