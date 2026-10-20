@@ -1,44 +1,25 @@
 [
  {
-  "date": "2026-10-02",
-  "title_tr": "Tanrı'nın ibadete layıklığı belirsiz bir kavram mı?",
-  "title_en": "Is God's worship-worthiness vague?",
-  "authors": "Austin McCoy",
-  "journal": "Religious Studies",
+  "date": "2026-10-10",
+  "title_tr": "Sonsuz bir Tanrı'ya karşı çıkılabilir mi? Mu'tezile kelamında temânu delilinin inşası",
+  "title_en": "Can an Infinite God Be Opposed? Constructing the Argument from Mutual Hindrance (Tamānuʿ) in Muʿtazilī Theology",
+  "authors": "Serkan Çetin, Ulvi Murat Kılavuz",
+  "journal": "Religions",
   "year": "2026",
-  "doi": "10.1017/S0034412526101899",
+  "doi": "10.3390/rel17101196",
   "url": "",
   "open_access": "evet",
-  "lead": "McCoy, Nagasawa'nın ibadete layıklık için öne sürdüğü belirsizlik problemine iki eşikli bir cevap geliştiriyor ve bu cevabın Nagasawa'nın kendi 'azami Tanrı' yaklaşımı için güçlük doğurduğunu savunuyor.",
-  "summary_tr": "Yujin Nagasawa'nın bir süredir işlediği bir itiraz var. Mutlak kemal ibadete layıklığın zorunlu şartı sayılırsa, Tanrı'nın tek bir önermeyi bilip bilmemesi gibi önemsiz bir fark, ibadete layık olmakla olmamak arasındaki değer farkını taşımak zorunda kalır. Böyle küçük bir farkın bu kadar büyük bir normatif sonucu belirlemesi makul görünmez. McCoy makalesinde bu problemin yalnızca tek bir varsayım altında ortaya çıktığını savunmaktadır. Varsayım, mutlak kemalin ibadete layıklık için tek ve asgari yeterli eşik olduğudur.\n\nMakalenin önerisi dereceli ve iki eşikli bir modeldir. Alt eşikte, âbid ile mâbud arasındaki yeterli büyüklükteki değer farkı ibadete layıklığı kurar. Üst uçta ise mutlak kemal, ibadete layıklığın içkin azamisini belirler. Böylece sıradan ibadete layıklık ile en üstün ya da azami ibadete layıklık birbirinden ayrılır ve alt eşikteki belirsizlik, Tanrı'nın en üstün mâbud olma statüsüne sirayet etmez. McCoy bu ayrımı, ibadete layıklığın ilişkisel karakterine ve kapsamına dair itirazlara karşı da savunmaktadır.\n\nSon bölümde tartışma Nagasawa'nın kendi konumuna dönmektedir. En üstün ibadete layıklık normatif olarak anlaşılırsa, mutlak kemale ulaşmayan bir varlık da ibadete layık olabilir, yalnızca en üstün biçimde layık olamaz. Nagasawa'nın azami Tanrı yaklaşımı bu durumda iki sonuçtan birine açık kalmaktadır. Ya Tanrı en üstün biçimde ibadete layık değildir ya da mümkün modal uzayda en büyük olan hangi varlıksa o, en üstün ibadete layık sayılacaktır.",
-  "why_tr": "Mükemmel varlık teolojisi ile ibadet kavramını birbirine bağlayan tartışma, analitik din felsefesinde son yıllarda canlanan ibadet felsefesi literatürünün merkezinde yer almaktadır. Makale, ibadete layıklığın tek bir eşikle mi yoksa dereceli bir yapıyla mı anlaşılması gerektiği sorusunu doğrudan ele aldığı için, hem Nagasawa'nın azami Tanrı projesini izleyenler hem de ulûhiyet ve ubûdiyet ilişkisini kelam geleneğiyle birlikte düşünmek isteyenler için başvuru değeri taşımaktadır.",
+  "lead": "Çetin ve Kılavuz, Mu'tezile'nin tevhid ve adalet ilkeleriyle temânu delilini tutarlı biçimde kurup kuramayacağı sorusunu, Sünni eleştirileri ve Mu'tezilî cevapları karşılaştırmalı metin analiziyle ele alıyor.",
+  "summary_tr": "Temânu delili, iki mutlak ve sonsuz iradeye sahip tanrının bir arada bulunmasının imkânsızlığına dayanarak Tanrı'nın birliğini temellendiren klasik kelam delilidir. Mu'tezile tevhidi sisteminin kurucu ilkelerinden saymakla birlikte, geliştirdiği bazı doktrinler nedeniyle eleştirilmiştir. Aslah doktrini ile insanın fiilleri üzerinde ilahi iradeyi ve kudreti sınırlayan bağımsız bir irade ve güce sahip olduğu görüşünün, mutlak ve sınırsız ulûhiyet tasavvuruyla, dolayısıyla temânu delilinin dayandığı mutlak hâkimiyet anlayışıyla bağdaşmadığı ileri sürülmüştür. Buna göre Mu'tezile kendi sistemi içinde bu delili tutarlı biçimde kuramamaktadır.\n\nMakale bu problemi dört doktrin üzerinden incelemektedir. Mahalsiz hâdis irade, dâî teorisi, Tanrı'nın zatı gereği kâdir olması ilkesi ve Mu'tezile'nin imkânın delil değerine ilişkin anlayışı. Karşılaştırmalı metin analiziyle önce Sünni kelamcıların Mu'tezile'ye yönelttiği eleştiriler ve bunların gerekçeleri belirlenmekte, ardından Mu'tezilî kelamcıların her bir probleme geliştirdiği çözümler çözümlenmektedir.\n\nYazarlar bu sorunların yalnızca Sünni kelamcıların dışarıdan yönelttiği eleştiriler olmadığını, Mu'tezilî kelamcıların da bunları fark edip kendi ilkeleri çerçevesinde farklı çözümler geliştirdiğini ortaya koymaktadır. Özellikle Behşemiyye geleneğinin temânu delilini Mu'tezile kelamının temel ilkeleriyle tutarlı biçimde kurmaya çalıştığı gösterilmektedir.",
+  "why_tr": "Kelam delillerinin uluslararası literatürde felsefi bir dille sunulması, İslam düşüncesinin çağdaş din felsefesine katılımı açısından önemlidir. Makale, tevhid delillerinin iç tutarlılığını mezhep içi tartışmalar üzerinden sınadığı için, hem kelam tarihi hem de Tanrı'nın birliğine dair çağdaş felsefi tartışmalar bakımından başvuru değeri taşımaktadır. İki Türk araştırmacının kaleminden çıkmış olması ayrıca dikkat çekicidir.",
   "tags": [
-   "ibadet felsefesi",
-   "mükemmel varlık teolojisi",
-   "Nagasawa",
-   "ulûhiyet"
+   "kelam",
+   "Mu'tezile",
+   "tevhid",
+   "temânu delili",
+   "İslam din felsefesi"
   ],
-  "gun": "2026-10-23"
- },
- {
-  "date": "2026-09-28",
-  "title_tr": "Metafizik simetri ve modal ontolojik delil",
-  "title_en": "Metaphysical symmetry and the modal ontological argument",
-  "authors": "Kenneth L. Pearce, Ted Poston",
-  "journal": "Religious Studies",
-  "year": "2026",
-  "doi": "10.1017/S0034412526101905",
-  "url": "",
-  "open_access": "evet",
-  "lead": "Pearce ve Poston, modal ontolojik delildeki simetri probleminin zayıf modal mantıklarda çözüldüğü iddiasına karşı çıkıyor ve problemin ortadan kalkmayıp zorunluluk öncüllerine taşındığını gösteriyor.",
-  "summary_tr": "Modal ontolojik delile yöneltilen klasik itiraz, delilin ayna görüntüsünün de aynı derecede geçerli olmasıdır. Tanrı'nın mümkün olduğu öncülünden zorunlu varlığı çıkarılabiliyorsa, Tanrı'nın yokluğunun mümkün olduğu öncülünden de zorunlu yokluğu çıkarılabilir. Fritz, Lo ve Schmid yakın tarihli bir çalışmada bu simetri probleminin S5'ten zayıf modal mantıklarda dağıldığını ileri sürmüştü. S4 gibi sistemlerde Tanrı varsa zorunlu olarak vardır öncülü, Tanrı'nın mümkün olması ve Tanrı'nın yokluğunun mümkün olması öncülleriyle birlikte tutarlı kalmaktadır.\n\nPearce ve Poston bu formel sonuçları kabul etmekle birlikte varılan diyalektik sonuca itiraz etmektedir. Onlara göre problem çözülmemiş, yer değiştirmiştir. S4'te ateistin elde ettiği avantaj, Tanrı varsa zorunlu olarak vardır öncülünü, Tanrı yoksa zorunlu olarak yoktur biçimindeki aynasına tercih etmeye dayanmaktadır. Makale bu tercihin metafizik gerekçelerini tek tek sınamaktadır. Dispozisyonel modalite, aktüalist kısıtlarla birlikte ilahi basitlik, Tanrı'nın olumsal varlığının açıklanamazlığı ve teistik temellendirme gibi çerçevelerin hiçbiri, ayrıntılarına bağlı olarak, bir öncülü diğerine karşı istikrarlı biçimde desteklememektedir. Kimi çerçeveler her iki öncülü de desteklemekte, kimi hiçbirini desteklememekte, kimi de asimetri üretmekte ama bu asimetri beklenen yönde çıkmamaktadır.\n\nSonuç olarak simetri, mümkünlük öncülleri düzeyinden zorunluluk öncülleri düzeyine kaymakta ve ters delil orijinal delil karşısında belirleyici bir üstünlük kazanamamaktadır.",
-  "why_tr": "Ontolojik delilin modal versiyonları Türkçe literatürde genellikle Plantinga üzerinden tanıtılmakta, S5 dışındaki modal mantıklarda delilin kaderi ise nadiren tartışılmaktadır. Makale bu teknik tartışmayı metafizik gerekçelendirme düzeyine taşıdığı için, delilin lehinde ya da aleyhinde konum alanların hangi metafizik taahhütlere ihtiyaç duyduğunu görmek bakımından öğreticidir.",
-  "tags": [
-   "ontolojik delil",
-   "modal mantık",
-   "Tanrı'nın varlığı"
-  ],
-  "gun": "2026-10-25"
+  "gun": "2026-10-21"
  },
  {
   "date": "2026-10-05",
@@ -60,6 +41,27 @@
    "psikoloji"
   ],
   "gun": "2026-10-22"
+ },
+ {
+  "date": "2026-10-02",
+  "title_tr": "Tanrı'nın ibadete layıklığı belirsiz bir kavram mı?",
+  "title_en": "Is God's worship-worthiness vague?",
+  "authors": "Austin McCoy",
+  "journal": "Religious Studies",
+  "year": "2026",
+  "doi": "10.1017/S0034412526101899",
+  "url": "",
+  "open_access": "evet",
+  "lead": "McCoy, Nagasawa'nın ibadete layıklık için öne sürdüğü belirsizlik problemine iki eşikli bir cevap geliştiriyor ve bu cevabın Nagasawa'nın kendi 'azami Tanrı' yaklaşımı için güçlük doğurduğunu savunuyor.",
+  "summary_tr": "Yujin Nagasawa'nın bir süredir işlediği bir itiraz var. Mutlak kemal ibadete layıklığın zorunlu şartı sayılırsa, Tanrı'nın tek bir önermeyi bilip bilmemesi gibi önemsiz bir fark, ibadete layık olmakla olmamak arasındaki değer farkını taşımak zorunda kalır. Böyle küçük bir farkın bu kadar büyük bir normatif sonucu belirlemesi makul görünmez. McCoy makalesinde bu problemin yalnızca tek bir varsayım altında ortaya çıktığını savunmaktadır. Varsayım, mutlak kemalin ibadete layıklık için tek ve asgari yeterli eşik olduğudur.\n\nMakalenin önerisi dereceli ve iki eşikli bir modeldir. Alt eşikte, âbid ile mâbud arasındaki yeterli büyüklükteki değer farkı ibadete layıklığı kurar. Üst uçta ise mutlak kemal, ibadete layıklığın içkin azamisini belirler. Böylece sıradan ibadete layıklık ile en üstün ya da azami ibadete layıklık birbirinden ayrılır ve alt eşikteki belirsizlik, Tanrı'nın en üstün mâbud olma statüsüne sirayet etmez. McCoy bu ayrımı, ibadete layıklığın ilişkisel karakterine ve kapsamına dair itirazlara karşı da savunmaktadır.\n\nSon bölümde tartışma Nagasawa'nın kendi konumuna dönmektedir. En üstün ibadete layıklık normatif olarak anlaşılırsa, mutlak kemale ulaşmayan bir varlık da ibadete layık olabilir, yalnızca en üstün biçimde layık olamaz. Nagasawa'nın azami Tanrı yaklaşımı bu durumda iki sonuçtan birine açık kalmaktadır. Ya Tanrı en üstün biçimde ibadete layık değildir ya da mümkün modal uzayda en büyük olan hangi varlıksa o, en üstün ibadete layık sayılacaktır.",
+  "why_tr": "Mükemmel varlık teolojisi ile ibadet kavramını birbirine bağlayan tartışma, analitik din felsefesinde son yıllarda canlanan ibadet felsefesi literatürünün merkezinde yer almaktadır. Makale, ibadete layıklığın tek bir eşikle mi yoksa dereceli bir yapıyla mı anlaşılması gerektiği sorusunu doğrudan ele aldığı için, hem Nagasawa'nın azami Tanrı projesini izleyenler hem de ulûhiyet ve ubûdiyet ilişkisini kelam geleneğiyle birlikte düşünmek isteyenler için başvuru değeri taşımaktadır.",
+  "tags": [
+   "ibadet felsefesi",
+   "mükemmel varlık teolojisi",
+   "Nagasawa",
+   "ulûhiyet"
+  ],
+  "gun": "2026-10-23"
  },
  {
   "date": "2026-09-28",
@@ -84,88 +86,24 @@
   "gun": "2026-10-24"
  },
  {
-  "date": "2026-08-28",
-  "title_tr": "Açık teizm ve geriye dönük dualar",
-  "title_en": "Open theism and retroactive prayers",
-  "authors": "Ferhat Yöney",
-  "journal": "International Journal for Philosophy of Religion",
-  "year": "2026",
-  "doi": "10.1007/s11153-026-10032-6",
-  "url": "",
-  "open_access": "hayır",
-  "lead": "Yöney, geriye dönük duanın açık teizm aleyhine bir delil oluşturduğu iddiasına karşı açık teizmi iki ayrı yoldan savunuyor.",
-  "summary_tr": "Geriye dönük dua, bir kimsenin duadan önce gerçekleşmiş bir şey için dua etmesidir. Kevin Timpe 2005 tarihli çalışmasında Tanrı'nın böyle dualara karşılık vermesinin açık teizm doğruysa imkânsız, libertaryan özgür iradeyi kabul eden diğer üç inayet görüşünde ise mümkün olduğunu ileri sürmüştü. James Anderson ise belirli türden etkili geriye dönük duaların varlığı kabul edildiğinde bu kavramın açık teizme karşı ilk bakışta geçerli bir delil sağladığını savunmuştu.\n\nYöney makalesinde açık teizmi iki yoldan savunmaktadır. İlk olarak Timpe'nin geriye dönük duanın etkili olabilmesi için öne sürdüğü bilgi şartını eleştirmekte, bunun yerine iki alternatif şart belirleyip savunmaktadır. Yazara göre bu alternatif şartlar, geriye dönük dua probleminin açık teizm açısından taşıdığı ağırlığı ortadan kaldırmaktadır. İkinci olarak ise geriye dönük duaların etkili olduğu iddiasının kendisine karşı çıkmaktadır.\n\nMakale böylece açık teizmin savunulabilirliğini, duanın mahiyetine ve Tanrı'nın zamanla ilişkisine dair daha genel soruları da açarak ele almaktadır.",
-  "why_tr": "Dua felsefesi, ibadet felsefesinin en gelişmiş alt başlıklarından biridir ve ilahi bilgi, zaman ve inayet tartışmalarıyla doğrudan kesişmektedir. Makalenin bir Türk din felsefecisi tarafından uluslararası bir dergide yayımlanmış olması ayrıca kayda değerdir. Açık teizm tartışması Türkçe literatürde henüz sınırlı yer bulduğu için metin bu alana giriş için de uygun bir başlangıçtır.",
-  "tags": [
-   "dua",
-   "açık teizm",
-   "inayet",
-   "ilahi bilgi"
-  ],
-  "gun": "2026-10-29"
- },
- {
-  "date": "2026-09-12",
-  "title_tr": "Dinî hayatta şüphe ile kesinliği uzlaştırmak",
-  "title_en": "Reconciling doubt with certainty in religious life",
-  "authors": "David Ellis",
-  "journal": "International Journal for Philosophy of Religion",
-  "year": "2026",
-  "doi": "10.1007/s11153-026-10034-4",
-  "url": "",
-  "open_access": "hayır",
-  "lead": "Ellis, dinî inancın şüphe götürmez bir kesinlik mi yoksa şüphe edilebilir bir bilgi mi ifade ettiği tartışmasında, aynı inanç cümlesinin farklı bağlamlarda her ikisini de ifade edebileceğini savunan uzlaştırıcı bir çözüm öneriyor.",
-  "summary_tr": "Bazı Wittgensteincı din felsefecilerine göre dinî inanç, şüphe edilebilir bir bilgiyi değil, Wittgenstein'ın Kesinlik Üzerine'de tarif ettiği türden menteşe kesinliklerini ifade etmektedir. Duncan Pritchard'ın önerisi, Tanrı beni seviyor cümlesinin dinî hayatta böyle bir kesinliği dile getirdiği yönündedir. Zoheir Bagheri Noaparast ise kötülük ve acı tecrübelerinin dindar insanları bu cümleden şüpheye düşürdüğünü, dolayısıyla cümlenin kesinlik değil bilgi ifade ettiğini ileri sürerek itiraz etmiştir.\n\nEllis bu gerilimi uzlaştırmayı denemektedir. Önerisi, aynı inanç cümlesinin bir dinî bağlamda bilgi, bir başka bağlamda kesinlik ifade edebileceğidir. Buna göre kötülük ve acı, kişinin Tanrı'nın sevgisine dair bilgisinden şüphe etmesine yol açabilir, ancak bu şüphe Tanrı'nın sevgisine dair kesinliğini tehlikeye atmak zorunda değildir.\n\nYazar bununla birlikte bu tür tecrübelerin varoluşsal gerilim adını verdiği bir durum doğurabileceğini kabul etmektedir. Kişi, dünyayı anlayışına dair akli olmayan bir şüphenin belirdiği, kafa karıştırıcı ve huzursuz edici bir hale girebilmektedir.",
-  "why_tr": "Wittgensteincı din felsefesi ve menteşe epistemolojisi, Türkçe literatürde analitik din felsefesinin diğer kollarına göre daha az işlenmiştir. Makale bu yaklaşımın kötülük problemi karşısındaki durumunu somut bir tartışma üzerinden gösterdiği için, iman ile şüphenin birlikte nasıl var olabileceği sorusunu kelam ve tasavvuf geleneğindeki yakîn tartışmalarıyla karşılaştırmak isteyen okur için verimli bir metindir.",
-  "tags": [
-   "dinî epistemoloji",
-   "Wittgenstein",
-   "şüphe",
-   "kötülük problemi"
-  ],
-  "gun": "2026-10-28"
- },
- {
-  "date": "2026-10-05",
-  "title_tr": "İktisadi teslisin aşılamazlığından içkin teslisin zorunluluğuna",
-  "title_en": "From the unsurpassability of the economic trinity to the necessity of the immanent trinity",
-  "authors": "T. J. Mawson",
-  "journal": "International Journal for Philosophy of Religion",
-  "year": "2026",
-  "doi": "10.1007/s11153-026-10037-1",
-  "url": "",
-  "open_access": "evet",
-  "lead": "Mawson, insan türü için mümkün en iyi kurtuluşun üç ayrı ilahi şahsın iş birliğini gerektirdiği öncülünden teslis doktrinine ulaşan bir delilin makul olup olmadığını inceliyor.",
-  "summary_tr": "Hristiyan teolojisinde iktisadi teslis Tanrı'nın kurtuluş tarihindeki faaliyetinde göründüğü haliyle üçlü yapısını, içkin teslis ise Tanrı'nın kendi içindeki ezeli üçlü yapısını ifade etmektedir. Mawson makalesinde birincisinden ikincisine giden bir delilin imkânını ele almaktadır. Delilin öncülü, bizim gibi yaratıklar için mümkün en iyi kurtuluş türünün üç ayrı ilahi şahsın iş birliğini gerektirdiğidir.\n\nYazarın akıl yürütmesi modal bir yapıya sahiptir. Tanrı hem bizimki gibi bir dünya yaratabilmek hem de bir düşüş gerçekleştiğinde kusursuz iyi kalabilmek için iktisadi bakımdan teslisçi olmaya bütün modal uzay boyunca ontolojik olarak hazır durmak zorundadır. Mümkün dünyaların herhangi birinde iktisadi teslis ihtiyacı doğuyorsa, Tanrı'nın buna hazır olması gerekir. Bundan ise Tanrı'nın özü itibarıyla, yani içkin olarak teslisçi olması gerektiği sonucu çıkmaktadır.\n\nMakale bu delilin ne ölçüde ikna edici olduğunu, öncüllerinin hangi teolojik ve metafizik taahhütlere dayandığını değerlendirmektedir.",
-  "why_tr": "Analitik teolojinin teslis gibi doğrudan Hristiyan doktrinlerini felsefi delillerle temellendirme çabası, İslam din felsefesi açısından bir karşılaştırma zemini sunmaktadır. Delilin yapısı, kelamdaki ilahi sıfatların zorunluluğuna dair akıl yürütmelerle ve mükemmel varlık teolojisinin modal araçlarıyla birlikte okunabilir. Aynı zamanda tevhid açısından bu tür delillerin hangi noktada reddedileceğini belirlemek için somut bir örnek sunmaktadır.",
-  "tags": [
-   "analitik teoloji",
-   "teslis",
-   "mükemmel varlık teolojisi",
-   "kurtuluş"
-  ],
-  "gun": "2026-10-21"
- },
- {
-  "date": "2026-09-22",
-  "title_tr": "Dinî gerçekçilik karşıtlığı: Bir fikri genişletmek",
-  "title_en": "Religious non-realism: expanding an idea",
-  "authors": "J. L. Schellenberg",
+  "date": "2026-09-28",
+  "title_tr": "Metafizik simetri ve modal ontolojik delil",
+  "title_en": "Metaphysical symmetry and the modal ontological argument",
+  "authors": "Kenneth L. Pearce, Ted Poston",
   "journal": "Religious Studies",
   "year": "2026",
-  "doi": "10.1017/S0034412526101851",
+  "doi": "10.1017/S0034412526101905",
   "url": "",
   "open_access": "evet",
-  "lead": "Schellenberg, din felsefesinde yanlış anlaşıldığını ve yeterince geliştirilmediğini düşündüğü dinî gerçekçilik karşıtlığı kavramını önermesel olmayan pratikleri de kapsayacak biçimde genişletiyor.",
-  "summary_tr": "Dinî gerçekçilik karşıtlığı, dinî söylemin bir gerçekliğe göndermede bulunmadığını kabul ederek sürdürülen dindarlık biçimlerini adlandırmaktadır. Schellenberg bu kavramın din felsefesinde yanlış anlaşıldığını ve hayli az geliştirildiğini düşünmektedir. Makale kavramın kapsamını önce hem önermesel hem de önermesel olmayan olguları içerecek biçimde genişletmekte, ardından gerçekçi olmayan dinî pratiğe odaklanmaktadır.\n\nYazar söylem merkezli pratikler ile söylemden bağımsız pratikleri birbirinden ayırmaktadır. İlk gruptakiler dinî söylemin gerçekçi yorumlarının yerine ikameler koymakla ilgilenmektedir; dışavurumculuk ve kurgusalcılık bunun örnekleridir. İkinci grup ise gerçekçilik karşıtlığı söyleme bağlı olmayan pratiklerdir. Söylemden bağımsız pratikler kabul edildiğinde bir ayrım daha belirmektedir. Gerçekçi olmayan dinî pratik tek bir fikirle yönetilebilir, buna yazar monist gerçekçilik karşıtlığı demektedir, ya da birden fazla fikri bütünleştirebilir, buna da karma gerçekçilik karşıtlığı adını vermektedir.\n\nBu ayrımlar bir arada, inanmayan dindarlığın yapısal olarak farklı bir dizi biçimini, özellikle de literatürde hiç ele alınmamış karma imkânları ortaya koymaktadır. Schellenberg bunları ağırlıklı olarak Hristiyanlıktan alınan somut örneklerle göstermekte ve gerçekçi olmayan dinî pratiğe dair tartışmanın din felsefesinin şimdiye kadar sunduğundan daha zengin ve hayata daha yakın bir tasvire açık olduğunu savunmaktadır.",
-  "why_tr": "Schellenberg, ilahi gizlilik delili ve evrimci dinî yaklaşımıyla çağdaş din felsefesinin en çok tartışılan isimlerinden biridir. Makale, dinî pratiğin inançtan bağımsız olarak nasıl anlamlandırılabileceği sorusunu açtığı için, ibadet ve ritüelin önermesel inanca indirgenemeyen yönlerini düşünenler açısından doğrudan ilgilidir. Din felsefesinde pratiğe dönüş olarak adlandırılan eğilimin bir uzantısı olarak da okunabilir.",
+  "lead": "Pearce ve Poston, modal ontolojik delildeki simetri probleminin zayıf modal mantıklarda çözüldüğü iddiasına karşı çıkıyor ve problemin ortadan kalkmayıp zorunluluk öncüllerine taşındığını gösteriyor.",
+  "summary_tr": "Modal ontolojik delile yöneltilen klasik itiraz, delilin ayna görüntüsünün de aynı derecede geçerli olmasıdır. Tanrı'nın mümkün olduğu öncülünden zorunlu varlığı çıkarılabiliyorsa, Tanrı'nın yokluğunun mümkün olduğu öncülünden de zorunlu yokluğu çıkarılabilir. Fritz, Lo ve Schmid yakın tarihli bir çalışmada bu simetri probleminin S5'ten zayıf modal mantıklarda dağıldığını ileri sürmüştü. S4 gibi sistemlerde Tanrı varsa zorunlu olarak vardır öncülü, Tanrı'nın mümkün olması ve Tanrı'nın yokluğunun mümkün olması öncülleriyle birlikte tutarlı kalmaktadır.\n\nPearce ve Poston bu formel sonuçları kabul etmekle birlikte varılan diyalektik sonuca itiraz etmektedir. Onlara göre problem çözülmemiş, yer değiştirmiştir. S4'te ateistin elde ettiği avantaj, Tanrı varsa zorunlu olarak vardır öncülünü, Tanrı yoksa zorunlu olarak yoktur biçimindeki aynasına tercih etmeye dayanmaktadır. Makale bu tercihin metafizik gerekçelerini tek tek sınamaktadır. Dispozisyonel modalite, aktüalist kısıtlarla birlikte ilahi basitlik, Tanrı'nın olumsal varlığının açıklanamazlığı ve teistik temellendirme gibi çerçevelerin hiçbiri, ayrıntılarına bağlı olarak, bir öncülü diğerine karşı istikrarlı biçimde desteklememektedir. Kimi çerçeveler her iki öncülü de desteklemekte, kimi hiçbirini desteklememekte, kimi de asimetri üretmekte ama bu asimetri beklenen yönde çıkmamaktadır.\n\nSonuç olarak simetri, mümkünlük öncülleri düzeyinden zorunluluk öncülleri düzeyine kaymakta ve ters delil orijinal delil karşısında belirleyici bir üstünlük kazanamamaktadır.",
+  "why_tr": "Ontolojik delilin modal versiyonları Türkçe literatürde genellikle Plantinga üzerinden tanıtılmakta, S5 dışındaki modal mantıklarda delilin kaderi ise nadiren tartışılmaktadır. Makale bu teknik tartışmayı metafizik gerekçelendirme düzeyine taşıdığı için, delilin lehinde ya da aleyhinde konum alanların hangi metafizik taahhütlere ihtiyaç duyduğunu görmek bakımından öğreticidir.",
   "tags": [
-   "dinî gerçekçilik karşıtlığı",
-   "Schellenberg",
-   "dinî pratik",
-   "kurgusalcılık"
+   "ontolojik delil",
+   "modal mantık",
+   "Tanrı'nın varlığı"
   ],
-  "gun": "2026-10-27"
+  "gun": "2026-10-25"
  },
  {
   "date": "2026-09-23",
@@ -189,25 +127,66 @@
   "gun": "2026-10-26"
  },
  {
-  "date": "2026-10-10",
-  "title_tr": "Sonsuz bir Tanrı'ya karşı çıkılabilir mi? Mu'tezile kelamında temânu delilinin inşası",
-  "title_en": "Can an Infinite God Be Opposed? Constructing the Argument from Mutual Hindrance (Tamānuʿ) in Muʿtazilī Theology",
-  "authors": "Serkan Çetin, Ulvi Murat Kılavuz",
-  "journal": "Religions",
+  "date": "2026-09-22",
+  "title_tr": "Dinî gerçekçilik karşıtlığı: Bir fikri genişletmek",
+  "title_en": "Religious non-realism: expanding an idea",
+  "authors": "J. L. Schellenberg",
+  "journal": "Religious Studies",
   "year": "2026",
-  "doi": "10.3390/rel17101196",
+  "doi": "10.1017/S0034412526101851",
   "url": "",
   "open_access": "evet",
-  "lead": "Çetin ve Kılavuz, Mu'tezile'nin tevhid ve adalet ilkeleriyle temânu delilini tutarlı biçimde kurup kuramayacağı sorusunu, Sünni eleştirileri ve Mu'tezilî cevapları karşılaştırmalı metin analiziyle ele alıyor.",
-  "summary_tr": "Temânu delili, iki mutlak ve sonsuz iradeye sahip tanrının bir arada bulunmasının imkânsızlığına dayanarak Tanrı'nın birliğini temellendiren klasik kelam delilidir. Mu'tezile tevhidi sisteminin kurucu ilkelerinden saymakla birlikte, geliştirdiği bazı doktrinler nedeniyle eleştirilmiştir. Aslah doktrini ile insanın fiilleri üzerinde ilahi iradeyi ve kudreti sınırlayan bağımsız bir irade ve güce sahip olduğu görüşünün, mutlak ve sınırsız ulûhiyet tasavvuruyla, dolayısıyla temânu delilinin dayandığı mutlak hâkimiyet anlayışıyla bağdaşmadığı ileri sürülmüştür. Buna göre Mu'tezile kendi sistemi içinde bu delili tutarlı biçimde kuramamaktadır.\n\nMakale bu problemi dört doktrin üzerinden incelemektedir. Mahalsiz hâdis irade, dâî teorisi, Tanrı'nın zatı gereği kâdir olması ilkesi ve Mu'tezile'nin imkânın delil değerine ilişkin anlayışı. Karşılaştırmalı metin analiziyle önce Sünni kelamcıların Mu'tezile'ye yönelttiği eleştiriler ve bunların gerekçeleri belirlenmekte, ardından Mu'tezilî kelamcıların her bir probleme geliştirdiği çözümler çözümlenmektedir.\n\nYazarlar bu sorunların yalnızca Sünni kelamcıların dışarıdan yönelttiği eleştiriler olmadığını, Mu'tezilî kelamcıların da bunları fark edip kendi ilkeleri çerçevesinde farklı çözümler geliştirdiğini ortaya koymaktadır. Özellikle Behşemiyye geleneğinin temânu delilini Mu'tezile kelamının temel ilkeleriyle tutarlı biçimde kurmaya çalıştığı gösterilmektedir.",
-  "why_tr": "Kelam delillerinin uluslararası literatürde felsefi bir dille sunulması, İslam düşüncesinin çağdaş din felsefesine katılımı açısından önemlidir. Makale, tevhid delillerinin iç tutarlılığını mezhep içi tartışmalar üzerinden sınadığı için, hem kelam tarihi hem de Tanrı'nın birliğine dair çağdaş felsefi tartışmalar bakımından başvuru değeri taşımaktadır. İki Türk araştırmacının kaleminden çıkmış olması ayrıca dikkat çekicidir.",
+  "lead": "Schellenberg, din felsefesinde yanlış anlaşıldığını ve yeterince geliştirilmediğini düşündüğü dinî gerçekçilik karşıtlığı kavramını önermesel olmayan pratikleri de kapsayacak biçimde genişletiyor.",
+  "summary_tr": "Dinî gerçekçilik karşıtlığı, dinî söylemin bir gerçekliğe göndermede bulunmadığını kabul ederek sürdürülen dindarlık biçimlerini adlandırmaktadır. Schellenberg bu kavramın din felsefesinde yanlış anlaşıldığını ve hayli az geliştirildiğini düşünmektedir. Makale kavramın kapsamını önce hem önermesel hem de önermesel olmayan olguları içerecek biçimde genişletmekte, ardından gerçekçi olmayan dinî pratiğe odaklanmaktadır.\n\nYazar söylem merkezli pratikler ile söylemden bağımsız pratikleri birbirinden ayırmaktadır. İlk gruptakiler dinî söylemin gerçekçi yorumlarının yerine ikameler koymakla ilgilenmektedir; dışavurumculuk ve kurgusalcılık bunun örnekleridir. İkinci grup ise gerçekçilik karşıtlığı söyleme bağlı olmayan pratiklerdir. Söylemden bağımsız pratikler kabul edildiğinde bir ayrım daha belirmektedir. Gerçekçi olmayan dinî pratik tek bir fikirle yönetilebilir, buna yazar monist gerçekçilik karşıtlığı demektedir, ya da birden fazla fikri bütünleştirebilir, buna da karma gerçekçilik karşıtlığı adını vermektedir.\n\nBu ayrımlar bir arada, inanmayan dindarlığın yapısal olarak farklı bir dizi biçimini, özellikle de literatürde hiç ele alınmamış karma imkânları ortaya koymaktadır. Schellenberg bunları ağırlıklı olarak Hristiyanlıktan alınan somut örneklerle göstermekte ve gerçekçi olmayan dinî pratiğe dair tartışmanın din felsefesinin şimdiye kadar sunduğundan daha zengin ve hayata daha yakın bir tasvire açık olduğunu savunmaktadır.",
+  "why_tr": "Schellenberg, ilahi gizlilik delili ve evrimci dinî yaklaşımıyla çağdaş din felsefesinin en çok tartışılan isimlerinden biridir. Makale, dinî pratiğin inançtan bağımsız olarak nasıl anlamlandırılabileceği sorusunu açtığı için, ibadet ve ritüelin önermesel inanca indirgenemeyen yönlerini düşünenler açısından doğrudan ilgilidir. Din felsefesinde pratiğe dönüş olarak adlandırılan eğilimin bir uzantısı olarak da okunabilir.",
   "tags": [
-   "kelam",
-   "Mu'tezile",
-   "tevhid",
-   "temânu delili",
-   "İslam din felsefesi"
+   "dinî gerçekçilik karşıtlığı",
+   "Schellenberg",
+   "dinî pratik",
+   "kurgusalcılık"
   ],
-  "gun": "2026-10-20"
+  "gun": "2026-10-27"
+ },
+ {
+  "date": "2026-09-12",
+  "title_tr": "Dinî hayatta şüphe ile kesinliği uzlaştırmak",
+  "title_en": "Reconciling doubt with certainty in religious life",
+  "authors": "David Ellis",
+  "journal": "International Journal for Philosophy of Religion",
+  "year": "2026",
+  "doi": "10.1007/s11153-026-10034-4",
+  "url": "",
+  "open_access": "hayır",
+  "lead": "Ellis, dinî inancın şüphe götürmez bir kesinlik mi yoksa şüphe edilebilir bir bilgi mi ifade ettiği tartışmasında, aynı inanç cümlesinin farklı bağlamlarda her ikisini de ifade edebileceğini savunan uzlaştırıcı bir çözüm öneriyor.",
+  "summary_tr": "Bazı Wittgensteincı din felsefecilerine göre dinî inanç, şüphe edilebilir bir bilgiyi değil, Wittgenstein'ın Kesinlik Üzerine'de tarif ettiği türden menteşe kesinliklerini ifade etmektedir. Duncan Pritchard'ın önerisi, Tanrı beni seviyor cümlesinin dinî hayatta böyle bir kesinliği dile getirdiği yönündedir. Zoheir Bagheri Noaparast ise kötülük ve acı tecrübelerinin dindar insanları bu cümleden şüpheye düşürdüğünü, dolayısıyla cümlenin kesinlik değil bilgi ifade ettiğini ileri sürerek itiraz etmiştir.\n\nEllis bu gerilimi uzlaştırmayı denemektedir. Önerisi, aynı inanç cümlesinin bir dinî bağlamda bilgi, bir başka bağlamda kesinlik ifade edebileceğidir. Buna göre kötülük ve acı, kişinin Tanrı'nın sevgisine dair bilgisinden şüphe etmesine yol açabilir, ancak bu şüphe Tanrı'nın sevgisine dair kesinliğini tehlikeye atmak zorunda değildir.\n\nYazar bununla birlikte bu tür tecrübelerin varoluşsal gerilim adını verdiği bir durum doğurabileceğini kabul etmektedir. Kişi, dünyayı anlayışına dair akli olmayan bir şüphenin belirdiği, kafa karıştırıcı ve huzursuz edici bir hale girebilmektedir.",
+  "why_tr": "Wittgensteincı din felsefesi ve menteşe epistemolojisi, Türkçe literatürde analitik din felsefesinin diğer kollarına göre daha az işlenmiştir. Makale bu yaklaşımın kötülük problemi karşısındaki durumunu somut bir tartışma üzerinden gösterdiği için, iman ile şüphenin birlikte nasıl var olabileceği sorusunu kelam ve tasavvuf geleneğindeki yakîn tartışmalarıyla karşılaştırmak isteyen okur için verimli bir metindir.",
+  "tags": [
+   "dinî epistemoloji",
+   "Wittgenstein",
+   "şüphe",
+   "kötülük problemi"
+  ],
+  "gun": "2026-10-28"
+ },
+ {
+  "date": "2026-08-28",
+  "title_tr": "Açık teizm ve geriye dönük dualar",
+  "title_en": "Open theism and retroactive prayers",
+  "authors": "Ferhat Yöney",
+  "journal": "International Journal for Philosophy of Religion",
+  "year": "2026",
+  "doi": "10.1007/s11153-026-10032-6",
+  "url": "",
+  "open_access": "hayır",
+  "lead": "Yöney, geriye dönük duanın açık teizm aleyhine bir delil oluşturduğu iddiasına karşı açık teizmi iki ayrı yoldan savunuyor.",
+  "summary_tr": "Geriye dönük dua, bir kimsenin duadan önce gerçekleşmiş bir şey için dua etmesidir. Kevin Timpe 2005 tarihli çalışmasında Tanrı'nın böyle dualara karşılık vermesinin açık teizm doğruysa imkânsız, libertaryan özgür iradeyi kabul eden diğer üç inayet görüşünde ise mümkün olduğunu ileri sürmüştü. James Anderson ise belirli türden etkili geriye dönük duaların varlığı kabul edildiğinde bu kavramın açık teizme karşı ilk bakışta geçerli bir delil sağladığını savunmuştu.\n\nYöney makalesinde açık teizmi iki yoldan savunmaktadır. İlk olarak Timpe'nin geriye dönük duanın etkili olabilmesi için öne sürdüğü bilgi şartını eleştirmekte, bunun yerine iki alternatif şart belirleyip savunmaktadır. Yazara göre bu alternatif şartlar, geriye dönük dua probleminin açık teizm açısından taşıdığı ağırlığı ortadan kaldırmaktadır. İkinci olarak ise geriye dönük duaların etkili olduğu iddiasının kendisine karşı çıkmaktadır.\n\nMakale böylece açık teizmin savunulabilirliğini, duanın mahiyetine ve Tanrı'nın zamanla ilişkisine dair daha genel soruları da açarak ele almaktadır.",
+  "why_tr": "Dua felsefesi, ibadet felsefesinin en gelişmiş alt başlıklarından biridir ve ilahi bilgi, zaman ve inayet tartışmalarıyla doğrudan kesişmektedir. Makalenin bir Türk din felsefecisi tarafından uluslararası bir dergide yayımlanmış olması ayrıca kayda değerdir. Açık teizm tartışması Türkçe literatürde henüz sınırlı yer bulduğu için metin bu alana giriş için de uygun bir başlangıçtır.",
+  "tags": [
+   "dua",
+   "açık teizm",
+   "inayet",
+   "ilahi bilgi"
+  ],
+  "gun": "2026-10-29"
  }
 ]
