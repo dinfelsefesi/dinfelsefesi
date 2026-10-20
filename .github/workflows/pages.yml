@@ -64,7 +64,7 @@ jobs:
       - name: Siteyi hosting adresi için derle
         run: python build.py
         env:
-          SITE_URL: ${{ vars.HOSTING_URL || 'https://dinfelsefesi.com.tr/yeni' }}
+          SITE_URL: ${{ vars.HOSTING_URL || 'https://dinfelsefesi.com.tr' }}
           NOINDEX: ${{ vars.HOSTING_NOINDEX || '1' }}
           TASLAK_GOSTER: ${{ vars.HOSTING_TASLAK_GOSTER || '1' }}
       - name: FTP ile yükle
@@ -93,7 +93,7 @@ jobs:
           if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye" > kontrol.log 2>&1; then
             echo "::error::public_html klasörü bulunamadı ya da bağlanılamadı: $(grep -v -i pass kontrol.log | tail -3 | tr '\n' ' ' | cut -c1-400)"; exit 1
           fi
-          HEDEF="${HOSTING_HEDEF:-public_html/yeni}"
+          HEDEF="${HOSTING_HEDEF:-public_html}"
           HARIC=""
           if [ "$HEDEF" = "public_html" ]; then
             # Ana klasöre yükleme: WordPress hâlâ duruyorsa (wp-config.php) hiçbir şey yapılmaz.
@@ -101,7 +101,7 @@ jobs:
             if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/wp-config.php; bye" 2>/dev/null | grep -q wp-config; then
               echo "::error::public_html içinde WordPress (wp-config.php) duruyor. Yedek alıp WordPress dosyalarını sildikten sonra tekrar çalıştırın."; exit 1
             fi
-            HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/ --exclude-glob .htaccess"
+            HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/"
           fi
           echo "::warning::Yükleme klasörü: $HEDEF"
           if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 $HARIC site/ $HEDEF; bye" > ftp.log 2>&1; then

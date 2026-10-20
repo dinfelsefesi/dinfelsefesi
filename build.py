@@ -1388,6 +1388,25 @@ def main() -> None:
                 kart(OUT / yol_, ust, bas, alt)
     except ImportError:
         print("uyarı: Pillow yok, paylaşım görselleri üretilmedi")
+    (OUT / ".htaccess").write_text("""# dinfelsefesi.com.tr (durağan site)
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\\. [NC]
+RewriteRule ^ https://dinfelsefesi.com.tr%{REQUEST_URI} [L,R=301]
+# Eski deneme adresi /yeni/... yeni yerine yönlendirilir
+RewriteRule ^yeni/?(.*)$ /$1 [L,R=301]
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+""", encoding="utf-8")
+    (OUT / "404.html").write_text(page(f"Sayfa bulunamadı · {SITE_NAME}",
+        f'<h1>Sayfa bulunamadı</h1><p class="giris">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir. '
+        f'<a href="{SITE_URL}/">Ana sayfaya</a> dönebilir ya da <a href="{SITE_URL}/basliklar/">başlıklara</a> göz atabilirsiniz.</p>'),
+        encoding="utf-8")
     (OUT / "google08c007317a4ad095.html").write_text("google-site-verification: google08c007317a4ad095.html", encoding="utf-8")
     if (ROOT / "static").exists():
         shutil.copytree(ROOT / "static", OUT / "static")
