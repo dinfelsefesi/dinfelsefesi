@@ -22,7 +22,7 @@ Yaşayan Türk akademisyenler için yalnızca kamuya açık bilgiler kullanılı
 
 ## Eser (`content/eserler/`)
 
-Zorunlu: `baslik`, `yazar`, `eser_turu` (`kitap` | `makale` | `kitap-bolumu` | `tez`), `yil`, `yayin`.
+Zorunlu: `baslik`, `yazar`, `eser_turu` (`kitap` | `kitap-bolumu` | `makale` | `bildiri` | `tez`), `yil`, `yayin`.
 
 İsteğe bağlı: `doi`, `acik_erisim`, `duzey` (`giris` | `ileri`), `turkce_cevirisi`, `ilgili_terimler`, `basliklar`, metin (tanıtım).
 

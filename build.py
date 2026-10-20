@@ -311,6 +311,10 @@ aside.yan .tur-k{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);t
 .kutu dt{color:var(--ink-soft)}.kutu dd{margin:0}
 .etiketler{margin-top:1.4rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
 /* Eserler sayfası */
+.tur-secici{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
+.tur-secici button{font-family:var(--sans);font-size:.9rem;padding:.3rem .8rem;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer;border-radius:999px}
+.tur-secici button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tur-secici button[aria-pressed="true"] .say{color:inherit;opacity:.75}
 .baslik-gezinti ul{list-style:none;margin:0 0 1.6rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
 .baslik-gezinti li{font-family:var(--sans);font-size:.86rem;padding:.15rem .6rem;border:1px solid var(--rule);background:var(--card)}
 .baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
@@ -610,6 +614,36 @@ def render_dizin(tur) -> str:
     body = f'<p class="ust-etiket">{basliklar[0]}</p><h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]} <span class="say">{len(kimlikler)} fiş</span></p>{icerik}'
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
 
+TUR_SIRA = {"kitap": 0, "kitap-bolumu": 1, "makale": 2, "bildiri": 3, "tez": 4}
+TUR_COGUL = [("kitap", "Kitaplar"), ("kitap-bolumu", "Kitap bölümleri"), ("makale", "Makaleler"),
+             ("bildiri", "Bildiriler"), ("tez", "Tezler")]
+
+
+def tur_secici(eserler) -> str:
+    sayi = {t: sum(1 for k in eserler if FIS[("eser", k)].get("eser_turu") == t) for t, _ in TUR_COGUL}
+    dugmeler = [f'<button type="button" data-secim="" aria-pressed="true">Tümü <span class="say">{len(eserler)}</span></button>']
+    for t, a in TUR_COGUL:
+        if sayi[t]:
+            dugmeler.append(f'<button type="button" data-secim="{t}" aria-pressed="false">{a} <span class="say">{sayi[t]}</span></button>')
+    return f'<div class="tur-secici" role="group" aria-label="Eser türü">{"".join(dugmeler)}</div>'
+
+
+TUR_SECICI_JS = """<script>
+(function(){
+  var d=document.querySelectorAll('.tur-secici button');
+  function uygula(t){
+    d.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.secim===t?'true':'false');});
+    document.querySelectorAll('ul.eserler li').forEach(function(li){li.hidden = !!t && li.dataset.tur!==t;});
+    document.querySelectorAll('ul.eserler').forEach(function(ul){
+      var bos=!ul.querySelector('li:not([hidden])'); ul.hidden=bos;
+      var h=ul.previousElementSibling; if(h && h.tagName==='H3'){h.hidden=bos;}
+    });
+    document.querySelectorAll('.eser-bolum').forEach(function(s){s.hidden=!s.querySelector('ul.eserler:not([hidden])');});
+  }
+  d.forEach(function(b){b.addEventListener('click',function(){uygula(b.dataset.secim);});});
+})();
+</script>"""
+
 
 def eser_satiri(k) -> str:
     h = FIS[("eser", k)]
@@ -620,14 +654,15 @@ def eser_satiri(k) -> str:
         bilgi.append(duzey)
     if h.get("turkce_cevirisi"):
         bilgi.append("Türkçesi var")
-    return (f'<li><a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
+    return (f'<li data-tur="{e(h.get("eser_turu", ""))}"><a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
             f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span></li>')
 
 
 def render_eserler() -> str:
     eserler = [k for (t, k) in FIS if t == "eser"]
     def sirala(ks):
-        return sorted(ks, key=lambda k: (str(FIS[("eser", k)].get("yil", "")), tr_anahtar(FIS[("eser", k)]["baslik"])))
+        return sorted(ks, key=lambda k: (TUR_SIRA.get(FIS[("eser", k)].get("eser_turu"), 9),
+                                         str(FIS[("eser", k)].get("yil", "")), tr_anahtar(FIS[("eser", k)]["baslik"])))
     anas = ana_basliklar()
     gezinti, bolumler, yerlesen = [], [], set()
     for a in anas:
@@ -657,10 +692,11 @@ def render_eserler() -> str:
                         f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(kalan))}</ul></section>')
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
             f'<p class="giris">Din felsefesinin temel kitap ve makaleleri, ait oldukları başlıklara göre. '
-            f'Her başlığın altında eserler yayın yılına göre sıralanır. <span class="say">{len(eserler)} eser</span></p>'
+            f'Her başlığın altında eserler türe ve yayın yılına göre sıralanır. <span class="say">{len(eserler)} eser</span></p>'
+            f'{tur_secici(eserler)}'
             f'<nav class="baslik-gezinti" aria-label="Başlıklar"><ul>{"".join(gezinti)}</ul></nav>'
             + ("".join(bolumler) or '<p class="giris">Henüz eser fişi eklenmedi.</p>'))
-    return page(f"Eserler · {SITE_NAME}", body, "eserler", canonical=f"{SITE_URL}/eserler/")
+    return page(f"Eserler · {SITE_NAME}", body + TUR_SECICI_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
