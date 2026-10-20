@@ -490,6 +490,12 @@ a.ic-bag{text-decoration-style:dotted}
 .okuma .ozet{font-style:italic;color:var(--ink-soft);margin:0}
 .okuma .alinti{margin:0;font-size:.97rem;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
 .okuma .alinti::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
+.okuma.gunun h2{font-size:1.45rem;line-height:1.25}
+.okuma .orij{margin:0 0 .25rem;font-style:italic;color:var(--ink-soft);font-size:.9rem}
+.okuma .kunye{margin:0 0 .7rem;color:var(--ink-soft);font-size:.88rem}
+.okuma.gunun .alinti::first-letter{float:none;font-size:inherit;padding:0;color:inherit;font-family:inherit}
+.okuma .gunun-git{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;margin:.9rem 0 0;font-style:italic;font-size:.95rem}
+.gun-adi{display:block;font-size:.85em;color:var(--ink-soft)}
 .okuma .devam{display:inline-block;margin-top:.8rem;font-style:italic}
 .icindekiler{list-style:none;margin:0;padding:0;columns:2 24rem;column-gap:3.5rem;counter-reset:bas}
 .icindekiler li{break-inside:avoid;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:0 .4rem;padding:.9rem 0 1rem;border-bottom:1px solid var(--rule)}
@@ -527,15 +533,15 @@ a.ic-bag{text-decoration-style:dotted}
 }
 """
 
-MENU = [("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
-        ("eserler", "Eserler"), ("ag", "Ağ"), ("guncel", "Güncel"), ("hakkinda", "Hakkında")]
+MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
+        ("eserler", "Eserler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
 
 
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "") -> str:
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
     robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
     menu = "".join(
-        f'<a href="{SITE_URL}/{k}/"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
+        f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
     deneme = ('<div class="deneme"><div class="wrap">Deneme sürümü. İçerikler taslak hâlindedir ve '
               'henüz yayımlanmamıştır.</div></div>') if (NOINDEX or TASLAK_GOSTER) else ""
     return f"""<!doctype html>
@@ -583,6 +589,33 @@ def entry_url(m: dict) -> str:
     return f"{SITE_URL}/makale/{m['slug']}/"
 
 
+GUN_ADLARI = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
+
+
+def bugun() -> str:
+    from zoneinfo import ZoneInfo
+    return os.environ.get("BUGUN") or datetime.now(ZoneInfo("Europe/Istanbul")).date().isoformat()
+
+
+def gunleri_ata(items) -> list:
+    """Her tanıtımın bir 'gun'ü vardır; olmayanlara son atanmış günden sonraki günler sırayla verilir.
+    Bugüne kadar gelmiş olanlar yeniden eskiye doğru döndürülür."""
+    from datetime import date, timedelta
+    atanmis = [m["gun"] for m in items if m.get("gun")]
+    son = date.fromisoformat(max(atanmis)) if atanmis else date.fromisoformat(bugun()) - timedelta(days=1)
+    for m in items:
+        if not m.get("gun"):
+            son += timedelta(days=1)
+            m["gun"] = son.isoformat()
+    b = bugun()
+    return sorted([m for m in items if m["gun"] <= b], key=lambda m: m["gun"], reverse=True)
+
+
+def gun_metni(iso: str) -> str:
+    d = datetime.strptime(iso, "%Y-%m-%d")
+    return f"{tr_date(iso)}, {GUN_ADLARI[d.weekday()]}"
+
+
 def makale_dili(m: dict) -> str:
     return (m.get("lang") or ("en" if m.get("title_en") else "tr")).lower()
 
@@ -597,7 +630,7 @@ def rozetler(m: dict) -> str:
 
 def makale_satiri(m: dict) -> str:
     return f"""<article class="makale">
-  <time datetime="{e(m['date'])}">{tr_date(m['date'])}</time>
+  <time datetime="{e(m['gun'])}">{tr_date(m['gun'])}<span class="gun-adi">{GUN_ADLARI[datetime.strptime(m['gun'], "%Y-%m-%d").weekday()]}</span></time>
   <div>
     <h3><a href="{entry_url(m)}">{e(m['title_tr'])}</a></h3>
     <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
@@ -608,10 +641,17 @@ def makale_satiri(m: dict) -> str:
 
 
 def render_makaleler(items) -> str:
-    body = ('<p class="ust-etiket">Güncel</p><h1>Yeni makaleler</h1>'
-            '<p class="giris">Din felsefesi dergilerinde yayımlanan yeni makalelerin Türkçe tanıtımları.</p>'
+    body = ('<p class="ust-etiket">Günün makalesi</p><h1>Günün makaleleri</h1>'
+            '<p class="giris">Her gün din felsefesi dergilerinde yayımlanmış bir makale, Türkçe tanıtımıyla öne çıkarılır. '
+            'Önceki günlerin makaleleri aşağıda, öne çıkarıldıkları günle birlikte yer almaktadır.</p>'
             + "".join(makale_satiri(m) for m in items))
-    return page(f"Güncel · {SITE_NAME}", body, "guncel", canonical=f"{SITE_URL}/guncel/")
+    return page(f"Günün makaleleri · {SITE_NAME}", body, "", canonical=f"{SITE_URL}/gunun-makalesi/")
+
+
+def yonlendirme(hedef: str) -> str:
+    return (f'<!doctype html><meta charset="utf-8"><title>Taşındı</title>'
+            f'<meta http-equiv="refresh" content="0; url={hedef}"><link rel="canonical" href="{hedef}">'
+            f'<p><a href="{hedef}">{hedef}</a></p>')
 
 
 def render_makale(m: dict) -> str:
@@ -619,7 +659,7 @@ def render_makale(m: dict) -> str:
     link = m.get("doi") and f"https://doi.org/{m['doi']}" or m.get("url", "")
     body = f"""
 <article class="dar">
-  <p class="yol"><a href="{SITE_URL}/guncel/">Güncel</a> <span aria-hidden="true">›</span> <time datetime="{e(m['date'])}">{tr_date(m['date'])}</time></p>
+  <p class="yol"><a href="{SITE_URL}/gunun-makalesi/">Günün makaleleri</a> <span aria-hidden="true">›</span> <time datetime="{e(m['gun'])}">{gun_metni(m['gun'])}</time></p>
   <h1>{e(m['title_tr'])}</h1>
   <p class="giris"><em>{e(m['title_en'])}</em></p>
   <div class="kutu"><dl>
@@ -635,7 +675,7 @@ def render_makale(m: dict) -> str:
   <div class="etiketler">{''.join(f'<span>#{e(t)}</span>' for t in m.get('tags', []))}</div>
   {atif_kutusu(m['title_tr'] + " [tanıtım]", entry_url(m), m.get('date'))}
 </article>{ATIF_JS}"""
-    return page(f"{m['title_tr']} · {SITE_NAME}", body, "guncel", desc=m["lead"], canonical=entry_url(m))
+    return page(f"{m['title_tr']} · {SITE_NAME}", body, "", desc=m["lead"], canonical=entry_url(m))
 
 
 # ---------------------------------------------------------------- başlıklar
@@ -1051,7 +1091,7 @@ def render_eserler() -> str:
 # ---------------------------------------------------------------- ilişki ağı
 
 AG_TURLER = [("baslik", "Başlık", "#2a4f7f"), ("terim", "Terim", "#a5802f"), ("kisi", "Kişi", "#3f6b4f"),
-             ("eser", "Eser", "#7a4a6b"), ("makale", "Güncel makale", "#7b8794")]
+             ("eser", "Eser", "#7a4a6b"), ("makale", "Makale tanıtımı", "#7b8794")]
 
 
 def kisa_aciklama(t, h) -> str:
@@ -1072,7 +1112,7 @@ def ag_verisi(items) -> dict:
             for d in liste(h.get(alan)):
                 if (hedef, d) in FIS and (hedef, d) != (t, k):
                     baglar.add(tuple(sorted([f"{t}/{k}", f"{hedef}/{d}"])))
-    # Güncel makaleler: etiketi bir fişin adıyla (kişilerde soyadıyla) aynı olanlara bağlanır
+    # Makale tanıtımları: etiketi bir fişin adıyla (kişilerde soyadıyla) aynı olanlara bağlanır
     adlar = {}
     for (t, k), h in FIS.items():
         adlar.setdefault(tr_kucuk(ad(t, h)), set()).add(f"{t}/{k}")
@@ -1177,6 +1217,20 @@ def icindekiler_html() -> str:
     return f'<ol class="icindekiler">{"".join(satirlar)}</ol>'
 
 
+def gunun_makalesi_html(items) -> str:
+    if not items:
+        return okuma_baslangici()
+    m = items[0]
+    return f"""<aside class="okuma gunun" aria-label="Günün makalesi">
+  <p class="ust-etiket">Günün makalesi · {e(gun_metni(m['gun']))}</p>
+  <h2><a href="{entry_url(m)}">{e(m['title_tr'])}</a></h2>
+  <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
+  <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
+  <p class="alinti">{e(m['lead'])}</p>
+  <p class="gunun-git"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a></p>
+</aside>"""
+
+
 def render_ana(items) -> str:
     say = {t: sum(1 for (x, _) in FIS if x == t) for t in KLASOR}
     tr_dosya = CONTENT / "turkiye_akademisi.yaml"
@@ -1191,14 +1245,14 @@ def render_ana(items) -> str:
   <p class="durum-satiri">{durum}</p>
   <p class="karsilama-git"><a href="{SITE_URL}/basliklar/">Başlıklara göz atın →</a> <a href="{SITE_URL}/ag/">İlişki ağını açın →</a></p>
   </div>
-  {okuma_baslangici()}
+  {gunun_makalesi_html(items)}
 </section>
 <div class="susleme" aria-hidden="true"><span>❦</span></div>
 <div class="bolum-baslik"><h2>Başlıklar</h2><a href="{SITE_URL}/basliklar/">Başlık haritası</a></div>
 {icindekiler_html()}
 <div class="susleme" aria-hidden="true"><span>❦</span></div>
-<div class="bolum-baslik"><h2>Güncel</h2><a href="{SITE_URL}/guncel/">Bütün tanıtımlar</a></div>
-{''.join(makale_satiri(m) for m in items[:4])}
+{f'''<div class="bolum-baslik"><h2>Önceki günlerin makaleleri</h2><a href="{SITE_URL}/gunun-makalesi/">Bütün günler</a></div>
+{"".join(makale_satiri(m) for m in items[1:5])}''' if len(items) > 1 else ""}
 """
     return page(SITE_NAME, body, "", canonical=SITE_URL + "/")
 
@@ -1209,7 +1263,7 @@ ABOUT = f"""
   <h1>Hakkında</h1>
   <div class="metin">
     <p>{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır.</p>
-    <p>Sitede ayrıca uluslararası din felsefesi dergilerinde yayımlanan yeni makalelerin Türkçe tanıtımları sunulmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
+    <p>Sitede ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
     <h2>Editörlük</h2>
     <p>Editör: {EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p>
     <h2>Atıf</h2>
@@ -1239,8 +1293,10 @@ def main() -> None:
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
 
+    items = gunleri_ata(items)
     yaz("", render_ana(items))
-    yaz("guncel", render_makaleler(items))
+    yaz("gunun-makalesi", render_makaleler(items))
+    yaz("guncel", yonlendirme(f"{SITE_URL}/gunun-makalesi/"))
     for m in items:
         yaz(f"makale/{m['slug']}", render_makale(m))
     yaz("basliklar", render_basliklar())
@@ -1269,7 +1325,7 @@ def main() -> None:
 <title>{e(m['title_tr'])}</title>
 <link>{entry_url(m)}</link>
 <guid>{entry_url(m)}</guid>
-<pubDate>{format_datetime(datetime.strptime(m['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc))}</pubDate>
+<pubDate>{format_datetime(datetime.strptime(m['gun'], '%Y-%m-%d').replace(tzinfo=timezone.utc))}</pubDate>
 <description>{e(m['lead'])}</description>
 </item>""" for m in items)
     (OUT / "rss.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
