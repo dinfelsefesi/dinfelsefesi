@@ -119,6 +119,8 @@ def kaydi_coz(rec: ET.Element) -> dict | None:
         ad = el.tag.split("}")[1]
         alanlar.setdefault(ad, []).append((el.get(XML_LANG, ""), metin(el)))
     konular = [t for _, t in alanlar.get("subject", []) if t]
+    baglantilar = [t for _, t in alanlar.get("identifier", [])]
+    doi = next((m.group(1) for t in baglantilar for m in [re.search(r"doi\.org/(10\.\S+)", t)] if m), "")
     return {
         "id": metin(bas.find("oai:identifier", NS)).rsplit("/", 1)[-1],
         "dergi_kume": metin(bas.find("oai:setSpec", NS)) if bas.find("oai:setSpec", NS) is not None else "",
@@ -130,7 +132,8 @@ def kaydi_coz(rec: ET.Element) -> dict | None:
         "tarih": [t for _, t in alanlar.get("date", [])],
         "yayinci": [t for _, t in alanlar.get("publisher", [])],
         "kaynak": [t for _, t in alanlar.get("source", [])],
-        "baglanti": [t for _, t in alanlar.get("identifier", [])],
+        "baglanti": baglantilar,
+        "doi": doi,
         "dil": [t for _, t in alanlar.get("language", [])],
     }
 
