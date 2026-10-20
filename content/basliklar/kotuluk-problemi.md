@@ -1,12 +1,11 @@
 ---
-tur: konu
+tur: baslik
 kimlik: kotuluk-problemi
-baslik: Kötülük Problemi
-duzey: lisans
-sira: 6
+ad: Kötülük Problemi
+ust_baslik: ""
 ozet: >-
   Her şeye gücü yeten, her şeyi bilen ve tamamen iyi bir Tanrı tasavvuru ile
-  dünyadaki kötülük arasındaki ilişkiye dair tartışma. Dosya problemin mantıksal
+  dünyadaki kötülük arasındaki ilişkiye dair tartışma. Başlık, problemin mantıksal
   ve delilci versiyonlarını, bunlara verilen başlıca cevapları ve klasik İslam
   düşüncesindeki şer tartışmalarıyla ilişkisini ele almaktadır.
 temel_terimler: [kotuluk-problemi, mantiksal-kotuluk-problemi, delilci-kotuluk-problemi, teodise, ozgur-irade-savunmasi]
@@ -19,8 +18,9 @@ tartisma_sorulari:
   - Bir savunmanın başarılı sayılması için neyi göstermesi yeterlidir? Bir teodiseden bunun ötesinde ne beklenmektedir?
   - Rowe'un argümanındaki anlamsız kötülük öncülüne şüpheci teizmin yönelttiği itiraz ne ölçüde ikna edicidir?
   - Klasik kelamdaki aslah tartışması çağdaş kötülük problemine hangi bakımdan katkı sağlayabilir, hangi bakımdan bu problemin dışında kalmaktadır?
-ilgili_konular: []
-imza: dinfelsefesi.com.tr Editörlüğü
+alt_basliklar: []
+ilgili_basliklar: []
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

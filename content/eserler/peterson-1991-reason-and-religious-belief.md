@@ -11,8 +11,8 @@ acik_erisim: hayır
 duzey: giris
 turkce_cevirisi: "Akıl ve İnanç: Din Felsefesine Giriş, çev. Rahim Acar, İstanbul: Küre, 2006"
 ilgili_terimler: [kotuluk-problemi, teodise]
-konu: kotuluk-problemi
-imza: dinfelsefesi.com.tr Editörlüğü
+ana_baslik: kotuluk-problemi
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

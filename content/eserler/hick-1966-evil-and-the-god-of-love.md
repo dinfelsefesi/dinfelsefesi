@@ -11,8 +11,8 @@ acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""
 ilgili_terimler: [teodise, kotuluk-problemi]
-konu: kotuluk-problemi
-imza: dinfelsefesi.com.tr Editörlüğü
+ana_baslik: kotuluk-problemi
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

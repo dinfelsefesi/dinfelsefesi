@@ -8,7 +8,6 @@ kisa_tanim: >-
   Her şeye gücü yeten, her şeyi bilen ve tamamen iyi bir Tanrı'nın varlığı ile
   dünyadaki kötülüğün bir arada nasıl düşünülebileceği sorusu.
 klasik_gelenekte:
-  iliski: ilgili-tartisma
   basliklar: [şer, adl, aslah, hikmet]
   not: >-
     Klasik tartışmalar Allah'ın varlığını öncül kabul eder ve şerri ilahi hikmet
@@ -18,9 +17,9 @@ klasik_gelenekte:
 ilgili_terimler: [mantiksal-kotuluk-problemi, delilci-kotuluk-problemi, teodise, ozgur-irade-savunmasi]
 ilgili_kisiler: [john-l-mackie, alvin-plantinga, william-l-rowe, john-hick]
 ilgili_eserler: [mackie-1955-evil-and-omnipotence, rowe-1979-problem-of-evil, yaran-1997-kotuluk-ve-teodise]
-konu: kotuluk-problemi
+ana_baslik: kotuluk-problemi
 kaynaklar: [peterson-1991-reason-and-religious-belief, yaran-1997-kotuluk-ve-teodise]
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

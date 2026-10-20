@@ -8,21 +8,19 @@ kisa_tanim: >-
   Tanrı'nın kötülüğe izin vermesinin gerçek gerekçelerini açıklama ve böylece
   ilahi iyilik ve adaleti savunma girişimi.
 klasik_gelenekte:
-  iliski: ilgili-tartisma
   basliklar: [adl, aslah, hikmet, şer]
   not: >-
-    Terim Leibniz'e ait olmakla birlikte, Eric Ormsby gibi araştırmacılar
-    Gazâlî'nin mümkün âlemlerin en iyisi görüşü etrafındaki tartışmayı teodise
-    başlığı altında incelemiştir. Mu'tezile'nin aslah görüşü ve İbn Sînâ'nın
-    şerri ademî ve bilaraz kabul eden açıklaması da bu başlıkla
-    karşılaştırılabilir. Klasik tartışmaların hareket noktası ise ilahi
-    hikmet ve adalettir, bir ateolojik itiraza cevap verme amacı taşımazlar.
+    Terim Leibniz'e ait olmakla birlikte, Eric Ormsby Gazâlî'nin mevcut âlemden
+    daha mükemmelinin mümkün olmadığı yönündeki sözü etrafında gelişen
+    tartışmayı teodise başlığı altında incelemiştir. Mu'tezile'nin aslah görüşü
+    de bu başlıkla karşılaştırılabilir. Klasik tartışmaların hareket noktası
+    ilahi hikmet ve adalettir.
 ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi]
 ilgili_kisiler: [john-hick]
 ilgili_eserler: [hick-1966-evil-and-the-god-of-love, ormsby-1984-theodicy-in-islamic-thought, yaran-1997-kotuluk-ve-teodise]
-konu: kotuluk-problemi
+ana_baslik: kotuluk-problemi
 kaynaklar: [hick-1966-evil-and-the-god-of-love, ormsby-1984-theodicy-in-islamic-thought]
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

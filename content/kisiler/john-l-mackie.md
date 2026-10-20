@@ -9,12 +9,13 @@ kisa_tanitim: >-
   probleminin çağdaş formülasyonuyla ve ateist din felsefesiyle tanınır.
 kurum: ""
 alanlar: [Din felsefesi, Ahlak felsefesi, Metafizik]
+ana_basliklar: [kotuluk-problemi]
 temel_gorusleri: [mantiksal-kotuluk-problemi]
 eserleri: [mackie-1955-evil-and-omnipotence, "The Miracle of Theism (1982)", "Ethics: Inventing Right and Wrong (1977)"]
 turkce_cevirileri: []
 hakkinda_turkce: []
 baglantilar: []
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

@@ -9,21 +9,14 @@ kisa_tanim: >-
   var etmesinin mümkün olmayabileceğini göstererek mantıksal kötülük problemine
   verilen cevap.
 klasik_gelenekte:
-  iliski: ilgili-tartisma
-  basliklar: [ef'âl-i ibâd, adl, kesb]
-  not: >-
-    Mu'tezile'nin kulların fiillerini kendilerine nispet etmesi, kötü fiillerin
-    sorumluluğunu insana yükleyerek ilahi adaleti koruma amacı taşır ve bu
-    yönüyle özgür irade savunmasıyla karşılaştırılabilir. Eş'arî kesb
-    nazariyesi ise farklı bir çerçeve sunar. Her iki tartışma da adalet ve
-    sorumluluk meselesi bağlamında yürütülmüştür, sıfatlar arasındaki bir
-    tutarsızlık iddiasına cevap vermezler.
+  basliklar: []
+  not: ""
 ilgili_terimler: [mantiksal-kotuluk-problemi, teodise, kotuluk-problemi]
 ilgili_kisiler: [alvin-plantinga, john-l-mackie]
 ilgili_eserler: [plantinga-1974-god-freedom-and-evil]
-konu: kotuluk-problemi
+ana_baslik: kotuluk-problemi
 kaynaklar: [plantinga-1974-god-freedom-and-evil]
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

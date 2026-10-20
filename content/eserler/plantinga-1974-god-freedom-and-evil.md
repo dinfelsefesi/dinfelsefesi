@@ -11,8 +11,8 @@ acik_erisim: hayır
 duzey: giris
 turkce_cevirisi: "Tanrı, Özgürlük ve Kötülük, çev. Musa Yanık, Ankara: Fol, 2022"
 ilgili_terimler: [ozgur-irade-savunmasi, mantiksal-kotuluk-problemi]
-konu: kotuluk-problemi
-imza: dinfelsefesi.com.tr Editörlüğü
+ana_baslik: kotuluk-problemi
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

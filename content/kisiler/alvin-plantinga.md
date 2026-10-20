@@ -10,6 +10,7 @@ kisa_tanitim: >-
   isimlerinden biri olarak değerlendirilmektedir.
 kurum: University of Notre Dame (emeritus)
 alanlar: [Din felsefesi, Epistemoloji, Metafizik]
+ana_basliklar: [kotuluk-problemi]
 temel_gorusleri: [ozgur-irade-savunmasi]
 eserleri: [plantinga-1974-god-freedom-and-evil, "The Nature of Necessity (1974)", "Warranted Christian Belief (2000)"]
 turkce_cevirileri:
@@ -17,7 +18,7 @@ turkce_cevirileri:
   - "Tanrı ve Diğer Zihinler, çev. Musa Yanık, Ankara: Fol, 2024"
 hakkinda_turkce: []
 baglantilar: []
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

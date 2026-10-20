@@ -8,21 +8,14 @@ kisa_tanim: >-
   Tanrı'nın her şeye gücü yeten ve tamamen iyi oluşu ile kötülüğün varlığının
   mantıksal olarak birlikte doğru olamayacağı iddiası.
 klasik_gelenekte:
-  iliski: karsiligi-yok
   basliklar: []
-  not: >-
-    Tespit edilebildiği kadarıyla klasik kelam ve felsefede, sıfatlar ile şerrin
-    varlığı arasında bir tutarsızlık bulunduğu ve bunun Tanrı'nın yokluğunu
-    gerektirdiği yönünde bağımsız bir argüman tartışılmamaktadır. Kelamcıların
-    iyilik ve kötülükten iki ayrı ilke çıkaran Seneviyye'ye verdiği cevaplar
-    konu bakımından en yakın tartışmadır, ancak orada sorgulanan Tanrı'nın
-    varlığı değil birliğidir.
+  not: ""
 ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi, delilci-kotuluk-problemi]
 ilgili_kisiler: [john-l-mackie, alvin-plantinga]
 ilgili_eserler: [mackie-1955-evil-and-omnipotence, plantinga-1974-god-freedom-and-evil]
-konu: kotuluk-problemi
+ana_baslik: kotuluk-problemi
 kaynaklar: [mackie-1955-evil-and-omnipotence, plantinga-1974-god-freedom-and-evil]
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

@@ -8,21 +8,14 @@ kisa_tanim: >-
   Dünyadaki kötülüğün, özellikle anlamsız görünen yoğun acıların, Tanrı'nın
   yokluğuna inanmak için makul bir gerekçe oluşturduğu iddiası.
 klasik_gelenekte:
-  iliski: karsiligi-yok
   basliklar: []
-  not: >-
-    Kötülüğü Tanrı'nın yokluğu lehine bir delil olarak değerlendiren yaklaşım
-    çağdaş epistemoloji tartışmaları içinde doğmuştur. Klasik literatürde
-    musibetlerin hikmetinin insan tarafından her zaman bilinemeyeceği fikri
-    işlenmektedir ve bu fikir şüpheci teizmle karşılaştırılabilir. Ancak söz
-    konusu fikir bir ateolojik argümana cevap olarak değil, ilahi fiillerin
-    hikmeti bağlamında ileri sürülmüştür.
+  not: ""
 ilgili_terimler: [kotuluk-problemi, mantiksal-kotuluk-problemi, teodise]
 ilgili_kisiler: [william-l-rowe]
 ilgili_eserler: [rowe-1979-problem-of-evil, wykstra-1984-humean-obstacle]
-konu: kotuluk-problemi
+ana_baslik: kotuluk-problemi
 kaynaklar: [rowe-1979-problem-of-evil, wykstra-1984-humean-obstacle]
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---

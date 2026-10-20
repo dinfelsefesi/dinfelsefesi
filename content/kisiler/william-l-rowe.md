@@ -9,12 +9,13 @@ kisa_tanitim: >-
   kozmolojik delil üzerine çalışmalarıyla tanınır.
 kurum: ""
 alanlar: [Din felsefesi]
+ana_basliklar: [kotuluk-problemi]
 temel_gorusleri: [delilci-kotuluk-problemi]
 eserleri: [rowe-1979-problem-of-evil, "The Cosmological Argument (1975)"]
 turkce_cevirileri: []
 hakkinda_turkce: []
 baglantilar: []
-imza: dinfelsefesi.com.tr Editörlüğü
+imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20
 ---
