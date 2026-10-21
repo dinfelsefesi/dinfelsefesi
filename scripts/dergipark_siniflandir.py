@@ -85,6 +85,9 @@ def siniflandir():
                         kalip_say[(b, kal)] += 1
                         break
         kaynak = "anahtar"
+        if (ELLE.get(r["id"]) or {}).get("karar") == "kapsam-disi":  # kapsam dışı kararı her şeyden önce gelir
+            sonuc.append({"id": r["id"], "yil": yil(r), "basliklar": [], "durum": "kapsam-disi", "kaynak": "elle"})
+            continue
         if r["id"] in YAYIN_TURU:  # kitap tanıtımı, çeviri vb.: başlık sayımına girmez
             karar = (ELLE.get(r["id"]) or {}).get("karar", "")
             if isinstance(karar, list):

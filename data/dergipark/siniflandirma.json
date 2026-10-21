@@ -2,13 +2,12 @@
  "makale": 401,
  "siniflandirilamayan": 0,
  "durumlar": {
-  "kapsam-disi": 29,
-  "tanitim-ceviri": 28
+  "kapsam-disi": 35,
+  "tanitim-ceviri": 22
  },
  "yayin_turleri": {
-  "kitap-tanitimi": 23,
-  "soylesi": 1,
-  "ceviri": 3,
+  "kitap-tanitimi": 20,
+  "ceviri": 1,
   "ceviri-degerlendirmesi": 1
  },
  "baslik_sayilari": {
@@ -1101,9 +1100,8 @@
    "id": "1576957",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "soylesi",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1585645",
@@ -1117,9 +1115,8 @@
    "id": "1608437",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1534063",
@@ -1191,9 +1188,8 @@
    "id": "1549432",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1589698",
@@ -1739,9 +1735,8 @@
    "id": "1447930",
    "yil": "2023",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1448097",
@@ -2210,9 +2205,8 @@
    "id": "1084695",
    "yil": "2022",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "ceviri",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1082298",
@@ -2263,9 +2257,8 @@
    "id": "1084102",
    "yil": "2022",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "ceviri",
-   "ilgili_basliklar": []
+   "durum": "kapsam-disi",
+   "kaynak": "elle"
   },
   {
    "id": "1104469",
@@ -3213,7 +3206,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "ceviri-degerlendirmesi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "tanrinin-varliginin-delilleri"
+   ]
   },
   {
    "id": "363797",

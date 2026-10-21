@@ -107,6 +107,8 @@
   var panel = document.getElementById("ag-panel");
   function sec(d, ortala) {
     secili = d; boya();
+    // Seçili düğüm adrese yazılır; bir fişe gidip geri dönüldüğünde aynı düğüm yeniden seçili gelir.
+    try { history.replaceState(null, "", location.pathname + (d ? "?odak=" + encodeURIComponent(d.id) : "")); } catch (_) {}
     if (!d) { panel.hidden = true; return; }
     var komsular = Array.from(d.komsu).map(function (id) { return byId[id]; })
       .sort(function (a, b) { return a.ad.localeCompare(b.ad, "tr"); });
