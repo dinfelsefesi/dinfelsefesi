@@ -429,6 +429,8 @@ th[aria-sort="ascending"] button.sirala,th[aria-sort="descending"] button.sirala
 .ok::after{content:"↕";opacity:.35;font-size:.9em}
 th[aria-sort="ascending"] .ok::after{content:"▲";opacity:1;font-size:.7em}
 th[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-size:.7em}
+button.sirala[aria-sort="ascending"] .ok::after{content:"▲";opacity:1;font-size:.7em}
+button.sirala[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-size:.7em}
 table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold-logo)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
@@ -444,7 +446,12 @@ ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
 .eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
 .eser-tur-sec button{font-size:.9rem;padding:.22rem .75rem}
-.eser-sayi{font-style:italic;font-size:.9rem;color:var(--ink-soft);margin:.6rem 0 .2rem}
+.eser-ust{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem 1.5rem;max-width:52rem;margin:.7rem 0 .2rem;border-bottom:1px solid var(--gold-logo);padding-bottom:.3rem}
+.eser-sayi{font-style:italic;font-size:.9rem;color:var(--ink-soft);margin:0}
+.eser-sirala{display:flex;gap:1rem;align-items:baseline;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
+.eser-sirala button.sirala{color:var(--ink-soft)}
+.eser-sirala button[aria-sort="ascending"],.eser-sirala button[aria-sort="descending"]{color:var(--ink)}
+.eser-tur-sec button[hidden]{display:none}
 ul.eser-liste{list-style:none;margin:0;padding:0;max-width:52rem}
 ul.eser-liste li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
 ul.eser-liste li[hidden]{display:none}
@@ -1157,6 +1164,7 @@ def eser_ogeleri() -> list:
             konu |= atalar(b)
         yazar_ad = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
         ogeler.append({"html": eser_satiri(k), "tur": h.get("eser_turu", ""), "konu": konu,
+                       "yil": str(h.get("yil") or ""), "yazar": yazar_ad[0] if yazar_ad else "", "ad": h["baslik"],
                        "ara": tr_kucuk(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
     for m in dp_veri():
         yazar, dergi = dp_kunye(m)
@@ -1166,9 +1174,10 @@ def eser_ogeleri() -> list:
         konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
         html_ = (f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{etiket}'
-                 f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
+                 f'<span class="eser-bilgi">{yazar + " · " if yazar else ""}{dergi}, {e(m["yil"])}'
                  + (f'<span class="eser-konu"> · {e(konu_ad)}</span>' if konu_ad else "") + '</span>')
         ogeler.append({"html": html_, "tur": tur, "konu": konu,
+                       "yil": m["yil"], "yazar": m["yazarlar"][0] if m["yazarlar"] else "", "ad": m["baslik"],
                        "ara": tr_kucuk(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
     return ogeler
 
@@ -1194,19 +1203,20 @@ def eser_satiri(k) -> str:
 
 def render_eserler() -> str:
     ogeler = eser_ogeleri()
-    satirlar = "".join(f'<li data-tur="{e(o["tur"])}" data-konu=" {e(" ".join(sorted(o["konu"])))} " data-ara="{e(o["ara"])}">{o["html"]}</li>'
-                       for o in ogeler)
-    konular = [f'<button type="button" data-konu="" aria-pressed="true">Bütün konular <span class="say">{len(ogeler)}</span></button>']
+    satirlar = "".join(f'<li data-tur="{e(o["tur"])}" data-konu=" {e(" ".join(sorted(o["konu"])))} " data-ara="{e(o["ara"])}" '
+                       f'data-sira="{i}" data-yil="{e(o["yil"])}" data-yazar="{e(o["yazar"])}" data-ad="{e(o["ad"])}">{o["html"]}</li>'
+                       for i, o in enumerate(ogeler))
+    konular = ['<button type="button" data-konu="" aria-pressed="true">Bütün konular</button>']
     for k in ana_basliklar():
-        konular.append(f'<button type="button" data-konu="{k}" aria-pressed="false">{e(FIS[("baslik", k)]["ad"])} <span class="say"></span></button>')
+        konular.append(f'<button type="button" data-konu="{k}" aria-pressed="false">{e(FIS[("baslik", k)]["ad"])}</button>')
         for c in sorted(COCUK.get(k, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
-            konular.append(f'<button type="button" class="alt" data-konu="{c}" aria-pressed="false">{e(FIS[("baslik", c)]["ad"])} <span class="say"></span></button>')
-    say = {}
-    for o in ogeler:
-        say[o["tur"]] = say.get(o["tur"], 0) + 1
-    turler = [f'<button type="button" data-tur="" aria-pressed="true">Tümü <span class="say">{len(ogeler)}</span></button>']
-    turler += [f'<button type="button" data-tur="{t}" aria-pressed="false">{a} <span class="say">{say[t]}</span></button>'
-               for t, a in ESER_TURLERI if say.get(t)]
+            konular.append(f'<button type="button" class="alt" data-konu="{c}" aria-pressed="false">{e(FIS[("baslik", c)]["ad"])}</button>')
+    turler = ['<button type="button" data-tur="" aria-pressed="true">Tümü <span class="say"></span></button>']
+    turler += [f'<button type="button" data-tur="{t}" aria-pressed="false">{a} <span class="say"></span></button>'
+               for t, a in ESER_TURLERI]
+    siralama = ('<div class="eser-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
+                + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="none">{a}<span class="ok" aria-hidden="true"></span></button>'
+                          for k, a in [("yil", "Yıl"), ("yazar", "Yazar"), ("ad", "Eser adı")]) + '</div>')
     tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
             f'<p class="aciklama-kisa">Din felsefesinin temel eserleri ve DergiPark\'ta yayımlanan, anahtar kelimelerinde din felsefesi geçen makaleler. '
@@ -1217,43 +1227,65 @@ def render_eserler() -> str:
             f'<div class="tur-secici eser-konu-sec" role="group" aria-label="Konu">{"".join(konular)}</div>'
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div>'
             '<label class="k-ara"><span>Ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label></div>'
-            f'<p class="eser-sayi"><span id="eser-say"></span></p>'
+            f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
             f'<ul class="eser-liste">{satirlar}</ul><p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
     return page(f"Eserler · {SITE_NAME}", body + ESER_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
 
 ESER_JS = """<script>
 (function(){
-  var lis=[].slice.call(document.querySelectorAll('ul.eser-liste li'));
+  var ul=document.querySelector('ul.eser-liste'), lis=[].slice.call(ul.children);
   var kb=document.querySelectorAll('.eser-konu-sec button'), tb=document.querySelectorAll('.eser-tur-sec button');
+  var sb=document.querySelectorAll('.eser-sirala button');
   var g=document.getElementById('eser-ara');
-  var konu='', tur='';
+  var konu='', tur='', alan='', yon=1;
   var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
-    var q=kucuk(g.value.trim()), n=0, ks={};
+    var q=kucuk(g.value.trim()), n=0, ts={'':0};
     lis.forEach(function(li){
-      var uy=(!q||li.dataset.ara.indexOf(q)>-1)&&(!tur||li.dataset.tur===tur);
-      if(uy){ li.dataset.konu.trim().split(' ').forEach(function(k){ if(k) ks[k]=(ks[k]||0)+1; }); ks['']=(ks['']||0)+1; }
-      var v=uy&&(!konu||li.dataset.konu.indexOf(' '+konu+' ')>-1);
+      var uy=(!q||li.dataset.ara.indexOf(q)>-1)&&(!konu||li.dataset.konu.indexOf(' '+konu+' ')>-1);
+      if(uy){ ts['']++; ts[li.dataset.tur]=(ts[li.dataset.tur]||0)+1; }
+      var v=uy&&(!tur||li.dataset.tur===tur);
       li.hidden=!v; if(v)n++;
     });
-    kb.forEach(function(b){
-      var c=ks[b.dataset.konu]||0; b.querySelector('.say').textContent=c;
-      b.setAttribute('aria-pressed', b.dataset.konu===konu?'true':'false'); b.classList.toggle('plan', !c);
+    kb.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.konu===konu?'true':'false');});
+    tb.forEach(function(b){
+      var c=ts[b.dataset.tur]||0; b.querySelector('.say').textContent=c;
+      b.hidden = !c && b.dataset.tur!=='' && b.dataset.tur!==tur;
+      b.setAttribute('aria-pressed', b.dataset.tur===tur?'true':'false');
     });
-    tb.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.tur===tur?'true':'false');});
     document.getElementById('eser-say').textContent=n+' eser';
     document.querySelector('.eser-bos').hidden=n>0;
     if(yaz){
       var p=new URLSearchParams(); if(konu)p.set('konu',konu); if(tur)p.set('tur',tur); if(g.value.trim())p.set('ara',g.value.trim());
+      if(alan){p.set('sirala',alan); if(yon<0)p.set('yon','azalan');}
       try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}
     }
   }
-  kb.forEach(function(b){b.addEventListener('click',function(){konu=b.dataset.konu; uygula(true);});});
+  function sirala(){
+    var r=lis.slice();
+    r.sort(function(a,b){
+      if(!alan) return (+a.dataset.sira)-(+b.dataset.sira);
+      var ab=!a.dataset[alan], bb=!b.dataset[alan];
+      if(ab!==bb) return ab?1:-1;  // bilgisi olmayanlar her iki yönde de sona
+      var f = alan==='yil' ? (+a.dataset.yil||0)-(+b.dataset.yil||0) : kar(a.dataset[alan],b.dataset[alan]);
+      return f*yon || kar(a.dataset.ad,b.dataset.ad);
+    });
+    r.forEach(function(x){ul.appendChild(x);});
+    sb.forEach(function(b){b.setAttribute('aria-sort', b.dataset.alan===alan ? (yon>0?'ascending':'descending') : 'none');});
+  }
+  kb.forEach(function(b){b.addEventListener('click',function(){konu=b.dataset.konu; tur=''; uygula(true);});});
   tb.forEach(function(b){b.addEventListener('click',function(){tur=b.dataset.tur; uygula(true);});});
+  sb.forEach(function(b){b.addEventListener('click',function(){
+    if(alan===b.dataset.alan){yon=-yon;} else {alan=b.dataset.alan; yon = alan==='yil' ? -1 : 1;}
+    sirala(); uygula(true);
+  });});
   g.addEventListener('input',function(){uygula(true);});
   var p=new URLSearchParams(location.search);
   konu=p.get('konu')||''; tur=p.get('tur')||''; g.value=p.get('ara')||'';
+  alan=p.get('sirala')||''; yon = p.get('yon')==='azalan' ? -1 : 1;
+  if(alan) sirala();
   uygula(false);
 })();
 </script>"""
@@ -1337,7 +1369,7 @@ def dp_veri() -> list:
         mc = re.search(r"Vol\.\s*(\S+)", cs)
         ms_ = re.search(r"No\.\s*(.+)", cs)
         cilt_sayi = ", ".join(x for x in [f"C. {mc.group(1)}" if mc and mc.group(1) not in ("0", "00") else "",
-                                           f"S. {ms_.group(1).strip()}" if ms_ else ""] if x)
+                                           f"S. {ms_.group(1).strip()}" if ms_ and ms_.group(1).strip()[:1].isdigit() else ""] if x)
         baglanti = r.get("baglanti") or []
         doi = next((b for b in baglanti if "doi.org" in b), "")
         yazarlar = []
