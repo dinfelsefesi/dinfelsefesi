@@ -60,6 +60,8 @@ def yil(r: dict) -> str:
 
 ELLE_DOSYA = VERI / "elle_tasnif.yaml"
 ELLE = yaml.safe_load(ELLE_DOSYA.read_text(encoding="utf-8")) if ELLE_DOSYA.exists() else {}
+TUR_DOSYA = VERI / "yayin_turu.yaml"
+YAYIN_TURU = (yaml.safe_load(TUR_DOSYA.read_text(encoding="utf-8")) or {}) if TUR_DOSYA.exists() else {}
 
 
 def siniflandir():
@@ -84,6 +86,16 @@ def siniflandir():
                         kalip_say[(b, kal)] += 1
                         break
         kaynak = "anahtar"
+        if r["id"] in YAYIN_TURU:  # kitap tanıtımı, çeviri vb.: başlık sayımına girmez
+            karar = (ELLE.get(r["id"]) or {}).get("karar", "")
+            if karar and karar != "kapsam-disi" and not karar.startswith("oneri:"):
+                basliklar.add(karar)
+            for b in list(basliklar):
+                if b in UST:
+                    basliklar.add(UST[b])
+            sonuc.append({"id": r["id"], "yil": yil(r), "basliklar": [], "durum": "tanitim-ceviri",
+                          "yayin_turu": YAYIN_TURU[r["id"]], "ilgili_basliklar": sorted(basliklar)})
+            continue
         if r["id"] in ELLE:  # özeti okunarak verilen karar, anahtar kelime sonucundan önce gelir
             karar = ELLE[r["id"]]["karar"]
             kaynak = "elle"
@@ -103,10 +115,11 @@ def main():
     baslik_say = Counter(b for s in sonuc for b in s["basliklar"])
     bos = sum(1 for s in sonuc if not s["basliklar"] and not s.get("durum"))
     durumlar = Counter(s["durum"] for s in sonuc if s.get("durum"))
+    turler = Counter(s["yayin_turu"] for s in sonuc if s.get("yayin_turu"))
     (VERI / "siniflandirma.json").write_text(json.dumps(
-        {"makale": len(sonuc), "siniflandirilamayan": bos, "durumlar": dict(durumlar), "baslik_sayilari": dict(baslik_say.most_common()),
+        {"makale": len(sonuc), "siniflandirilamayan": bos, "durumlar": dict(durumlar), "yayin_turleri": dict(turler), "baslik_sayilari": dict(baslik_say.most_common()),
          "makaleler": sonuc}, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(sonuc)} makale, {bos} sınıflandırılamadı, {dict(durumlar)}")
+    print(f"{len(sonuc)} makale, {bos} sınıflandırılamadı, {dict(durumlar)}, {dict(turler)}")
     for b, n in baslik_say.most_common():
         print(f"  {n:4d}  {b}")
 

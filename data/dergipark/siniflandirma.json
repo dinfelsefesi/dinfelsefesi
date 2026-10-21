@@ -2,24 +2,31 @@
  "makale": 401,
  "siniflandirilamayan": 0,
  "durumlar": {
-  "kapsam-disi": 36,
-  "oneri:insan-tasavvurlari": 8,
-  "oneri:din-felsefesi-yontem-tarih": 27,
+  "kapsam-disi": 29,
+  "tanitim-ceviri": 28,
+  "oneri:insan-tasavvurlari": 6,
+  "oneri:din-felsefesi-yontem-tarih": 19,
   "oneri:ozgurluk": 2
  },
+ "yayin_turleri": {
+  "kitap-tanitimi": 23,
+  "soylesi": 1,
+  "ceviri": 3,
+  "ceviri-degerlendirmesi": 1
+ },
  "baslik_sayilari": {
-  "tanri-tasavvurlari": 93,
-  "din-epistemolojisi": 76,
-  "din-ve-ahlak": 55,
-  "teizme-yonelik-itirazlar": 53,
-  "din-ve-bilim": 47,
-  "tanri-alem-iliskisi": 38,
+  "tanri-tasavvurlari": 89,
+  "din-epistemolojisi": 73,
+  "din-ve-ahlak": 53,
+  "teizme-yonelik-itirazlar": 51,
+  "din-ve-bilim": 44,
+  "tanri-alem-iliskisi": 37,
   "din-dili": 36,
-  "tanrinin-varliginin-delilleri": 33,
   "kotuluk-problemi": 32,
+  "tanrinin-varliginin-delilleri": 31,
   "olum-ve-otesi": 29,
-  "tanrinin-sifatlari": 28,
-  "dini-tecrube": 20,
+  "tanrinin-sifatlari": 26,
+  "dini-tecrube": 18,
   "dini-cesitlilik": 17,
   "dini-pratik": 11
  },
@@ -181,10 +188,12 @@
   {
    "id": "1718300",
    "yil": "2025",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-epistemolojisi"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1836682",
@@ -349,19 +358,22 @@
    "id": "1813913",
    "yil": "2025",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1850930",
    "yil": "2025",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-ve-bilim",
     "tanri-alem-iliskisi",
     "tanri-tasavvurlari",
     "tanrinin-varliginin-delilleri"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1823253",
@@ -555,8 +567,9 @@
    "id": "1706979",
    "yil": "2025",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1711177",
@@ -1095,8 +1108,9 @@
    "id": "1576957",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "soylesi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1585645",
@@ -1110,8 +1124,9 @@
    "id": "1608437",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1534063",
@@ -1143,10 +1158,12 @@
   {
    "id": "1585276",
    "yil": "2024",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1554592",
@@ -1184,8 +1201,9 @@
    "id": "1549432",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1589698",
@@ -1215,11 +1233,13 @@
   {
    "id": "1578199",
    "yil": "2024",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "tanri-tasavvurlari",
     "tanrinin-sifatlari"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1557913",
@@ -1396,10 +1416,12 @@
   {
    "id": "1486705",
    "yil": "2024",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1475234",
@@ -1422,8 +1444,9 @@
    "id": "1479899",
    "yil": "2024",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1447133",
@@ -1436,11 +1459,13 @@
   {
    "id": "1440195",
    "yil": "2024",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "ceviri",
+   "ilgili_basliklar": [
     "din-ve-bilim",
     "tanri-tasavvurlari"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1415686",
@@ -1723,15 +1748,17 @@
    "id": "1447930",
    "yil": "2023",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1448097",
    "yil": "2023",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1448109",
@@ -1890,8 +1917,9 @@
    "id": "1234937",
    "yil": "2023",
    "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1215166",
@@ -1904,11 +1932,13 @@
   {
    "id": "1312372",
    "yil": "2023",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-ve-bilim",
     "teizme-yonelik-itirazlar"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "1285235",
@@ -1950,8 +1980,9 @@
    "id": "1219628",
    "yil": "2022",
    "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1077353",
@@ -2188,8 +2219,9 @@
    "id": "1084695",
    "yil": "2022",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "ceviri",
+   "ilgili_basliklar": []
   },
   {
    "id": "1082298",
@@ -2204,8 +2236,9 @@
    "id": "1080153",
    "yil": "2022",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "1128640",
@@ -2238,8 +2271,9 @@
    "id": "1084102",
    "yil": "2022",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "ceviri",
+   "ilgili_basliklar": []
   },
   {
    "id": "1104469",
@@ -2751,8 +2785,9 @@
    "id": "682613",
    "yil": "2020",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "685216",
@@ -2869,10 +2904,12 @@
   {
    "id": "636847",
    "yil": "2019",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "teizme-yonelik-itirazlar"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "462020",
@@ -2894,12 +2931,14 @@
   {
    "id": "539947",
    "yil": "2019",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-epistemolojisi",
     "dini-tecrube",
     "tanrinin-varliginin-delilleri"
-   ],
-   "kaynak": "anahtar"
+   ]
   },
   {
    "id": "509772",
@@ -2931,17 +2970,20 @@
    "id": "546603",
    "yil": "2019",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "595319",
    "yil": "2019",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "din-epistemolojisi",
     "dini-tecrube"
-   ],
-   "kaynak": "elle"
+   ]
   },
   {
    "id": "529367",
@@ -3106,11 +3148,13 @@
   {
    "id": "506426",
    "yil": "2018",
-   "basliklar": [
+   "basliklar": [],
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": [
     "tanri-tasavvurlari",
     "tanrinin-sifatlari"
-   ],
-   "kaynak": "elle"
+   ]
   },
   {
    "id": "439624",
@@ -3185,8 +3229,9 @@
    "id": "356998",
    "yil": "2017",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "ceviri-degerlendirmesi",
+   "ilgili_basliklar": []
   },
   {
    "id": "363797",
@@ -3219,8 +3264,9 @@
    "id": "290950",
    "yil": "2017",
    "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
-   "kaynak": "elle"
+   "durum": "tanitim-ceviri",
+   "yayin_turu": "kitap-tanitimi",
+   "ilgili_basliklar": []
   },
   {
    "id": "852440",

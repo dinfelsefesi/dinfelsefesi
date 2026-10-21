@@ -1,0 +1,32 @@
+# Konu başlıklarına doğrudan alınmayan yayınlar: kitap tanıtımı, çeviri, çeviri değerlendirmesi, söyleşi.
+# Bu yayınlar başlık sayımlarına girmez. Anahtar kelimelerinin işaret ettiği başlıklar
+# "ilgili_basliklar" alanında ayrıca tutulur; sitede ilgili başlığın altında ayrı bir listede gösterilebilir.
+# Türler: kitap-tanitimi | ceviri | ceviri-degerlendirmesi | soylesi
+'1718300': kitap-tanitimi   # Rahim Acar vd. (ed.), Din Felsefesinin Ana Konuları
+'1813913': kitap-tanitimi   # Özcan Akdağ, Din Felsefesi
+'1850930': kitap-tanitimi   # Erasmus, Kelâm Kozmolojik Argümanı (çev. M. Bulgen)
+'1706979': kitap-tanitimi   # İshak Arslan, Din Düşüncesi
+'1585276': kitap-tanitimi   # Mehdiyev ve Yaralı, Çocuklarla Felsefe Çalışmaları
+'1578199': kitap-tanitimi   # Abdulkadir Tanış, Tanrı Değişir mi?
+'1486705': kitap-tanitimi   # Ömer Türker, Ahlak: Yeni Bir Yaklaşım
+'1479899': kitap-tanitimi   # Frazer, The Golden Bough
+'1447930': kitap-tanitimi   # Starr, The Genius of Their Age
+'1234937': kitap-tanitimi   # Latif Tokat, Anlam Sorunu
+'1312372': kitap-tanitimi   # Mehmet Şükrü Özkan, Yeni Ateizmin Dini: Bilimcilik
+'1080153': kitap-tanitimi   # Taliaferro, What is Philosophy of Religion?
+'682613': kitap-tanitimi    # Alpyağıl, Türkiye'de Otantik Felsefe Yapabilmenin İmkanı
+'636847': kitap-tanitimi    # Armstrong, The Case for God
+'539947': kitap-tanitimi    # Alpyağıl, Kıta Avrupası Din Felsefesi ve Mistik Gelenekler
+'546603': kitap-tanitimi    # Latif Tokat (ed.), Din Felsefesi
+'595319': kitap-tanitimi    # Meister Eckhart, The Essential Sermons
+'1448097': kitap-tanitimi   # Charlesworth, Platon'dan Derrida'ya Felsefe ve Din
+'1549432': kitap-tanitimi   # Byung-Chul Han, The Philosophy of Zen Buddhism
+'1608437': kitap-tanitimi   # İslam Düşüncesinde Psikoloji ve Psikoterapi
+'290950': kitap-tanitimi    # Hegel, Din Felsefesi Dersleri
+'1219628': kitap-tanitimi   # Modern Batı Düşüncesinin Felsefî Temelleri
+'506426': kitap-tanitimi    # Meşşâî felsefede Tanrı'nın bilgisi meselesi
+'1084102': ceviri           # Maurer, Latin Averroism bölümü
+'1084695': ceviri           # Boethius
+'1440195': ceviri           # Tennant, The Being of God in the Light of Physical Science
+'356998': ceviri-degerlendirmesi  # Shihadeh, The Existence of God çevirisi üzerine
+'1576957': soylesi          # Mun'im Sirry ile söyleşi
