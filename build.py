@@ -256,12 +256,12 @@ def yol(k) -> str:
 # ---------------------------------------------------------------- sayfa iskeleti
 
 CSS = """
-/* Yerleşim: bir kitap sayfası. Fildişi kâğıt, mürekkep rengi yazı. Renkler logodan gelir: lâcivert (#23446e)
+/* Yerleşim: bir kitap sayfası. Açık gri zemin, koyu gri yazı. Renkler logodan gelir: lâcivert (#23446e)
    ve tezhip altını (#c9a14a). Logo altını yalnızca süs çizgilerinde kullanılır; yazıda okunurluk için
    daha koyu bir altın tonu (--gold) kullanılır. Tek tema (açık). */
 :root{
-  --ink:#2b2621;--ink-soft:#6a5f53;--rule:#e2d9c8;--paper:#f8f4ec;--panel:#f1eadc;--card:#fcfaf5;
-  --accent:#23446e;--accent-ink:#1d3a5f;--accent-soft:#e6ebf2;--gold:#86641e;--gold-logo:#c9a14a;--gold-soft:#f4ead3;
+  --ink:#22262c;--ink-soft:#5c6370;--rule:#dcdfe5;--paper:#f3f4f6;--panel:#e9ecf0;--card:#fbfbfc;
+  --accent:#23446e;--accent-ink:#1d3a5f;--accent-soft:#e6ebf2;--gold:#86641e;--gold-logo:#c9a14a;--gold-soft:#efe9dc;
   --display:"EB Garamond","Garamond","Georgia",serif;
   --serif:"Literata",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3","Segoe UI",system-ui,sans-serif;
@@ -354,7 +354,7 @@ h2{font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25;
 
 /* Fiş sayfası */
 .fis-duzen{display:grid;grid-template-columns:minmax(0,1fr) 18rem;gap:2.6rem;align-items:start}
-.kart{background:var(--card);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 12px 30px -24px rgba(60,40,10,.35);padding:1.6rem 1.8rem 1.3rem;min-width:0}
+.kart{background:var(--card);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 12px 30px -24px rgba(20,30,50,.35);padding:1.6rem 1.8rem 1.3rem;min-width:0}
 .kart .alt-ad{margin:-.2rem 0 1rem;color:var(--ink-soft);font-style:italic;font-size:1.05rem}
 .kart .kisa{font-weight:500;font-size:1.05rem;max-width:var(--measure)}
 .klasik{background:var(--gold-soft);padding:.85rem 1.05rem;margin:1.2rem 0;max-width:var(--measure);font-size:.96rem}
@@ -484,7 +484,7 @@ table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
 @media (max-width:980px){.hk-izgara{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.hk-izgara{grid-template-columns:1fr}}
 /* Önizleme kartı */
-.onizleme{position:absolute;z-index:50;width:min(22rem,calc(100vw - 16px));background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem .85rem;box-shadow:0 18px 40px -24px rgba(60,40,10,.5);pointer-events:none;font-size:.92rem;line-height:1.45}
+.onizleme{position:absolute;z-index:50;width:min(22rem,calc(100vw - 16px));background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem .85rem;box-shadow:0 18px 40px -24px rgba(20,30,50,.5);pointer-events:none;font-size:.92rem;line-height:1.45}
 .onizleme p{margin:0}
 .onizleme-tur{font-style:italic;color:var(--gold);font-size:.85rem}
 .onizleme-ad{font-family:var(--display);font-size:1.25rem;color:var(--ink);line-height:1.2;margin-top:.1rem!important}
@@ -508,7 +508,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
 .ag-tuval:active{cursor:grabbing}
 .ag-tuval svg{display:block;width:100%;height:100%}
-.ag-baglar line{stroke:#cdbfa6;stroke-width:1.1px;transition:opacity .2s}
+.ag-baglar line{stroke:#c3c9d2;stroke-width:1.1px;transition:opacity .2s}
 .ag-baglar line.vurgu{stroke:#8a6a2c;stroke-width:1.8px}
 .ag-baglar line.soluk{opacity:.18}
 .ag-dugum{cursor:pointer;transition:opacity .2s}
@@ -520,7 +520,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-dugum text.goster{opacity:1}
 .ag-dugum.soluk{opacity:.18}
 .ag-dugum.gizli,.ag-baglar line.gizli{display:none}
-.ag-panel{position:absolute;top:1rem;right:1rem;width:min(22rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.2rem 1rem;box-shadow:0 14px 34px -22px rgba(60,40,10,.45)}
+.ag-panel{position:absolute;top:1rem;right:1rem;width:min(22rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.2rem 1rem;box-shadow:0 14px 34px -22px rgba(20,30,50,.45)}
 .ag-panel h2{margin:0 2rem .4rem 0;font-size:1.45rem}
 .ag-panel .ag-aciklama{margin:0 0 .6rem;font-size:.95rem;color:var(--ink-soft)}
 .ag-panel .ag-ac{font-style:italic}
@@ -541,7 +541,7 @@ a.ic-bag{text-decoration-style:dotted}
 .susleme::before,.susleme::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-logo))}
 .susleme::after{background:linear-gradient(90deg,var(--gold-logo),transparent)}
 .susleme span{font-family:var(--display);font-size:1.3rem;line-height:1}
-.okuma{background:var(--card);border:1px solid var(--rule);padding:1.7rem 1.9rem 1.5rem;box-shadow:0 14px 34px -28px rgba(60,40,10,.4)}
+.okuma{background:var(--card);border:1px solid var(--rule);padding:1.7rem 1.9rem 1.5rem;box-shadow:0 14px 34px -28px rgba(20,30,50,.4)}
 .okuma .ust-etiket{margin-bottom:.4rem}
 .okuma h2{margin:0 0 .6rem;font-size:1.6rem}
 .okuma h2 a{color:var(--ink);text-decoration:none}
@@ -644,7 +644,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <link rel="icon" href="{SITE_URL}/static/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{SITE_URL}/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="{SITE_URL}/static/img/apple-touch-icon.png">
-<meta name="theme-color" content="#f8f4ec">
+<meta name="theme-color" content="#f3f4f6">
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1666,7 +1666,7 @@ ABOUT = f"""
   <h1>Hakkında</h1>
   <p class="hk-giris">{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
   <div class="hk-izgara">
-    <section><h2>Editörlük</h2><p>{EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
+    <section><h2>Editörlük</h2><p><a href="https://abdullahakgul.com" rel="noopener">{EDITOR}</a>, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
     <section><h2>Atıf</h2><p>Eser fişlerinde ve makale tanıtımlarında eserin kendi künyesine atıf yapılması önerilir. Sitedeki bir fişe atıf için önerilen biçim: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
     <section><h2>Düzeltme ve öneriler</h2><p>Fişlerdeki bir yanlış ya da eksik, Türkiye akademisi listesine dair bir düzeltme veya yeni bir öneri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></section>
     <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p></section>
