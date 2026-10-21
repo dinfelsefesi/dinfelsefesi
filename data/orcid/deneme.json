@@ -1,0 +1,181 @@
+{
+ "orcid_arama": [
+  {
+   "kisi": "Rahim Acar",
+   "universite": "Marmara Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0000-0002-0913-0608",
+     "ad": "Rahim",
+     "soyad": "Acar",
+     "kurum": [
+      "Harvard University",
+      "Marmara University, Faculty of Theology"
+     ]
+    }
+   ],
+   "hata": null
+  },
+  {
+   "kisi": "Abdullah Akgül",
+   "universite": "Erciyes Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0000-0003-4944-9995",
+     "ad": "Abdullah",
+     "soyad": "Akgül",
+     "kurum": []
+    },
+    {
+     "orcid": "0000-0001-8333-7001",
+     "ad": "ABDULLAH",
+     "soyad": "AKGÜL",
+     "kurum": []
+    },
+    {
+     "orcid": "0000-0002-0489-9493",
+     "ad": "Abdullah",
+     "soyad": "Akgül",
+     "kurum": [
+      "SDU"
+     ]
+    },
+    {
+     "orcid": "0000-0001-9660-9424",
+     "ad": "Abdullah",
+     "soyad": "Akgül",
+     "kurum": [
+      "Ankara University",
+      "Erciyes University",
+      "Istanbul University"
+     ]
+    },
+    {
+     "orcid": "0009-0006-2328-364X",
+     "ad": "Abdullah Yağız",
+     "soyad": "Akgül",
+     "kurum": [
+      "Eskişehir Osmangazi University"
+     ]
+    }
+   ],
+   "hata": null
+  },
+  {
+   "kisi": "Sait Kar",
+   "universite": "Ordu Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0000-0002-0001-4184",
+     "ad": "SAIT",
+     "soyad": "KAR",
+     "kurum": [
+      "Ordu Üniversitesi"
+     ]
+    },
+    {
+     "orcid": "0000-0002-4200-6588",
+     "ad": "Yusuf sait",
+     "soyad": "Kar",
+     "kurum": []
+    }
+   ],
+   "hata": null
+  },
+  {
+   "kisi": "Hasan Tanrıverdi",
+   "universite": "Ordu Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0009-0005-1835-6093",
+     "ad": "Hasan",
+     "soyad": "Tanrıverdi",
+     "kurum": [
+      "Ondokuz Mayıs Üniversitesi"
+     ]
+    }
+   ],
+   "hata": null
+  },
+  {
+   "kisi": "Kevser Çelik",
+   "universite": "Süleyman Demirel Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0000-0002-9131-0498",
+     "ad": "KEVSER",
+     "soyad": "ÇELİK",
+     "kurum": []
+    },
+    {
+     "orcid": "0000-0003-0283-2188",
+     "ad": "KEVSER",
+     "soyad": "ÇELİK",
+     "kurum": []
+    },
+    {
+     "orcid": "0000-0003-0853-8422",
+     "ad": "KEVSER",
+     "soyad": "ÇELİK",
+     "kurum": [
+      "Bahçeşehir University"
+     ]
+    },
+    {
+     "orcid": "0009-0003-8732-2538",
+     "ad": "KEVSER",
+     "soyad": "ÇELİK",
+     "kurum": []
+    },
+    {
+     "orcid": "0009-0001-4065-8363",
+     "ad": "KEVSER",
+     "soyad": "Çelik",
+     "kurum": []
+    }
+   ],
+   "hata": null
+  },
+  {
+   "kisi": "Enis Doko",
+   "universite": "İbn Haldun Üniversitesi",
+   "durum": 200,
+   "sonuc": [
+    {
+     "orcid": "0000-0001-9021-6021",
+     "ad": "Enis",
+     "soyad": "Doko",
+     "kurum": [
+      "Koç University",
+      "İbn Haldun Üniversitesi"
+     ]
+    }
+   ],
+   "hata": null
+  }
+ ],
+ "dergipark": {
+  "durum": 200,
+  "orcid": [
+   "0009-0004-4107-8346"
+  ],
+  "uzunluk": 98187,
+  "bas": ""
+ },
+ "yok": {
+  "durum": 0,
+  "orcid": [],
+  "uzunluk": 25,
+  "bas": "<urlopen error timed out>"
+ },
+ "eserler_ornek": {
+  "orcid": "0000-0002-0913-0608",
+  "durum": 200,
+  "sayi": 4
+ }
+}
