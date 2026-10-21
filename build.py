@@ -847,9 +847,9 @@ def render_baslik(k) -> str:
 <h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
-  <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{atif_kutusu(h['ad'], fis_url("baslik", k), h.get("guncelleme"))}</div>
+  <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}</div>
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
-</div>{ATIF_JS}"""
+</div>"""
     gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
     return page(f"{h['ad']} · {SITE_NAME}", body, "basliklar", desc=h.get("ozet") or SITE_TAGLINE,
                 canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article")
@@ -867,14 +867,6 @@ def render_basliklar() -> str:
 
 def satir(etiket, icerik) -> str:
     return f"<div><dt>{etiket}</dt><dd>{icerik}</dd></div>" if icerik else ""
-
-
-def atif_kutusu(baslik_, url, guncelleme=None) -> str:
-    gun = f" Son güncelleme {tr_date(str(guncelleme))}." if guncelleme else ""
-    return (f'<div class="atif"><p class="ust-etiket">Atıf:</p>'
-            f'<p class="atif-metin">"{e(baslik_)}". <i>dinfelsefesi.com.tr</i>, ed. {e(EDITOR)}.{gun} '
-            f'Erişim <span class="atif-erisim">[tarih]</span>. {e(url)}</p>'
-            f'<button type="button" class="atif-kopyala">kopyala</button></div>')
 
 
 ATIF_JS = """<script>
@@ -970,7 +962,7 @@ def render_fis(tur, k) -> str:
 <p class="yol"><a href="{SITE_URL}/{KLASOR[tur]}/">{ {'terim': 'Terimler', 'kisi': 'Kişiler', 'eser': 'Eserler'}[tur] }</a></p>
 <div class="fis-duzen">
   <article class="kart"><p class="ust-etiket">{TUR_AD[tur]}</p>{bas}{ic}<dl class="kunye">{dl}</dl>
-    <p class="imza">{e(h.get('imza'))} · son güncelleme {tr_date(str(h['guncelleme']))}</p>{atif_kutusu(ad(tur, h), fis_url(tur, k), h.get("guncelleme")) if tur != "eser" else ""}</article>
+    <p class="imza">{e(h.get('imza'))} · son güncelleme {tr_date(str(h['guncelleme']))}</p></article>
   {f'<aside class="yan">{yan}</aside>' if yan else ''}
 </div>{ATIF_JS}"""
     gorsel = paylasim_gorseli(f"{tur}-{k}", TUR_AD[tur], ad(tur, h), str(h.get("ingilizce") or h.get("donem") or ""))
@@ -1714,7 +1706,7 @@ ABOUT = f"""
   <p class="hk-giris">{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
   <div class="hk-izgara">
     <section><h2>Editörlük</h2><p>{EDITOR}, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
-    <section><h2>Atıf</h2><p>Başlık, terim ve kişi fişlerinin sonunda o sayfaya özel bir atıf satırı yer almaktadır. Eser fişlerinde ve makale tanıtımlarında eserin kendi künyesine atıf yapılması önerilir. Sitenin atıf biçimi: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
+    <section><h2>Atıf</h2><p>Eser fişlerinde ve makale tanıtımlarında eserin kendi künyesine atıf yapılması önerilir. Sitedeki bir fişe atıf için önerilen biçim: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
     <section><h2>Düzeltme ve öneriler</h2><p>Fişlerdeki bir yanlış ya da eksik, Türkiye akademisi listesine dair bir düzeltme veya yeni bir öneri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></section>
     <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p></section>
   </div>
