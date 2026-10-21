@@ -645,9 +645,22 @@ def paylasim_gorseli(ad_: str, ust: str, baslik_: str, alt: str = "") -> str:
     return f"{SITE_URL}/paylas/{ad_}.png"
 
 
+def ld(veri: dict) -> str:
+    """schema.org yapılandırılmış verisi (JSON-LD). Arama motorları sayfanın ne olduğunu buradan okur."""
+    veri = {"@context": "https://schema.org", **veri}
+    return ('<script type="application/ld+json">' + json.dumps(veri, ensure_ascii=False).replace("</", "<\\/") + '</script>')
+
+
+def ld_yayinci() -> dict:
+    return {"@type": "Organization", "name": "dinfelsefesi.com.tr", "url": SITE_URL + "/",
+            "logo": SITE_URL + "/static/img/logo-512.png"}
+
+
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "",
-         gorsel: str = "", og_tur: str = "website") -> str:
+         gorsel: str = "", og_tur: str = "website", jsonld: dict | None = None) -> str:
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
+    if jsonld:
+        canon += ld(jsonld)
     og_baslik = title.removesuffix(f" · {SITE_NAME}")
     og = (f'<meta property="og:site_name" content="{e(SITE_NAME)}"><meta property="og:locale" content="tr_TR">'
           f'<meta property="og:type" content="{og_tur}"><meta property="og:title" content="{e(og_baslik)}">'
@@ -811,7 +824,20 @@ def render_makale(m: dict) -> str:
 </article>{ATIF_JS}"""
     gorsel = paylasim_gorseli(f"makale-{m['slug']}", f"Günün makalesi · {tr_date(m['gun'])}", m["title_tr"],
                               f"{m.get('authors', '')} · {m.get('journal', '')}{', ' + str(m['year']) if m.get('year') else ''}")
-    return page(f"{m['title_tr']} · {SITE_NAME}", body, "", desc=m["lead"], canonical=entry_url(m), gorsel=gorsel, og_tur="article")
+    kaynak = {"@type": "ScholarlyArticle", "name": m.get("title_en") or m["title_tr"],
+              "author": [{"@type": "Person", "name": a.strip()} for a in re.split(r",| ve | and ", m.get("authors", "")) if a.strip()]}
+    if m.get("journal"):
+        kaynak["isPartOf"] = {"@type": "Periodical", "name": m["journal"]}
+    if m.get("year"):
+        kaynak["datePublished"] = str(m["year"])
+    if m.get("doi"):
+        kaynak["sameAs"] = f"https://doi.org/{m['doi']}"
+    elif m.get("url"):
+        kaynak["sameAs"] = m["url"]
+    jl = {"@type": "Article", "headline": m["title_tr"], "description": m["lead"], "url": entry_url(m), "inLanguage": "tr",
+          "datePublished": m.get("gun") or m.get("date"), "publisher": ld_yayinci(), "image": gorsel, "about": kaynak}
+    return page(f"{m['title_tr']} · {SITE_NAME}", body, "", desc=m["lead"], canonical=entry_url(m), gorsel=gorsel,
+                og_tur="article", jsonld=jl)
 
 
 # ---------------------------------------------------------------- başlıklar
@@ -909,8 +935,14 @@ def render_baslik(k) -> str:
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
 </div>"""
     gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
+    jl = {"@type": "Article" if h.get("_govde") else "WebPage", "headline": h["ad"], "name": h["ad"],
+          "description": h.get("ozet") or "", "url": fis_url("baslik", k), "inLanguage": "tr",
+          "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/"}, "publisher": ld_yayinci(),
+          "image": gorsel}
+    if h.get("guncelleme"):
+        jl["dateModified"] = str(h["guncelleme"])
     return page(f"{h['ad']} · {SITE_NAME}", body, "basliklar", desc=h.get("ozet") or SITE_TAGLINE,
-                canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article")
+                canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article", jsonld=jl)
 
 
 def render_basliklar() -> str:
@@ -954,6 +986,39 @@ def geri_yan(tur, k) -> str:
         return ""
     oge = "".join(f'<li><span class="tur-k">{TUR_AD[t]}</span>{bag(t, kk)}</li>' for t, kk in g)
     return f"<h2>Bu fişe bağlananlar</h2><ul>{oge}</ul>"
+
+
+def fis_ld(tur, k, h, desc) -> dict:
+    url = fis_url(tur, k)
+    if tur == "terim":
+        jl = {"@type": "DefinedTerm", "name": h["terim"], "description": h.get("kisa_tanim") or desc, "url": url,
+              "inLanguage": "tr", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Din felsefesi terimleri",
+                                                        "url": f"{SITE_URL}/terimler/"}}
+        if h.get("ingilizce"):
+            jl["alternateName"] = h["ingilizce"]
+        return jl
+    if tur == "kisi":
+        jl = {"@type": "Person", "name": h["ad"], "description": h.get("kisa_tanitim") or desc, "url": url}
+        bag_ = [b.get("url") if isinstance(b, dict) else b for b in liste(h.get("baglantilar"))]
+        bag_ = [b for b in bag_ if isinstance(b, str) and b.startswith("http")]
+        if bag_:
+            jl["sameAs"] = bag_
+        return {"@type": "ProfilePage", "url": url, "mainEntity": jl}
+    # eser
+    tip = {"kitap": "Book", "kitap-bolumu": "Chapter", "makale": "ScholarlyArticle", "bildiri": "ScholarlyArticle",
+           "tez": "Thesis"}.get(h.get("eser_turu"), "CreativeWork")
+    jl = {"@type": tip, "name": h["baslik"], "url": url,
+          "author": [{"@type": "Person", "name": ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y)}
+                     for y in liste(h.get("yazar"))]}
+    if h.get("yil"):
+        jl["datePublished"] = str(h["yil"])
+    if h.get("yayin"):
+        jl["publisher" if tip == "Book" else "isPartOf"] = {"@type": "Organization" if tip == "Book" else "CreativeWork",
+                                                           "name": str(h["yayin"])}
+    hedef = eser_baglantisi(h)
+    if hedef:
+        jl["sameAs"] = hedef
+    return jl
 
 
 def eser_baglantisi(h) -> str:
@@ -1024,7 +1089,8 @@ def render_fis(tur, k) -> str:
   {f'<aside class="yan">{yan}</aside>' if yan else ''}
 </div>{ATIF_JS}"""
     gorsel = paylasim_gorseli(f"{tur}-{k}", TUR_AD[tur], ad(tur, h), str(h.get("ingilizce") or h.get("donem") or ""))
-    return page(f"{ad(tur, h)} · {SITE_NAME}", body, KLASOR[tur], desc=desc, canonical=fis_url(tur, k), gorsel=gorsel, og_tur="article")
+    return page(f"{ad(tur, h)} · {SITE_NAME}", body, KLASOR[tur], desc=desc, canonical=fis_url(tur, k), gorsel=gorsel,
+                og_tur="article", jsonld=fis_ld(tur, k, h, desc))
 
 
 def render_dizin(tur) -> str:
@@ -1642,7 +1708,19 @@ def render_akademisyen(s: str) -> str:
   <aside class="yan">{"".join(yan)}</aside>
 </div>"""
     desc = f'{p["ad"]}, {p.get("unvan", "")}, {p.get("universite", "")}. Din felsefesi alanındaki makaleleri ve çalıştığı konular.'
-    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s))
+    kisi = {"@type": "Person", "name": p["ad"], "url": akademi_url(s)}
+    if p.get("unvan"):
+        kisi["honorificPrefix"] = p["unvan"]
+    if p.get("universite"):
+        kisi["affiliation"] = {"@type": "CollegeOrUniversity", "name": p["universite"]}
+    ayni = ([f"{YOK_PROFIL}{p['yok']}"] if p.get("yok") else []) + ([f"https://orcid.org/{v['orcid']}"] if v["orcid"] else [])
+    if ayni:
+        kisi["sameAs"] = ayni
+    konular = [FIS[("baslik", b)]["ad"] for b in v["baslik"] if not FIS[("baslik", b)].get("ust_baslik")]
+    if konular:
+        kisi["knowsAbout"] = konular
+    jl = {"@type": "ProfilePage", "url": akademi_url(s), "inLanguage": "tr", "mainEntity": kisi}
+    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s), jsonld=jl)
 
 
 # ---------------------------------------------------------------- ilişki ağı
@@ -1895,7 +1973,11 @@ def render_ana(items) -> str:
 """
     # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
     gorsel = f"{SITE_URL}/paylas/site.png"
-    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel,
+    jl = {"@type": "WebSite", "name": SITE_NAME, "alternateName": "dinfelsefesi.com.tr", "url": SITE_URL + "/",
+          "inLanguage": "tr", "description": "Din felsefesi için Türkçe başvuru kaynağı", "publisher": ld_yayinci(),
+          "editor": {"@type": "Person", "name": EDITOR, "url": "https://abdullahakgul.com",
+                     "sameAs": ["https://orcid.org/0000-0001-9660-9424"]}}
+    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel, jsonld=jl,
                 desc="Din felsefesinin başlıkları, terimleri, kişileri ve eserleri. Türkiye'deki din felsefesi akademisyenleri, "
                      "DergiPark'taki din felsefesi makaleleri ve her gün bir makale tanıtımı.")
 
@@ -2033,6 +2115,8 @@ AddDefaultCharset utf-8
         encoding="utf-8")
     if (ROOT / "static" / "img" / "favicon.ico").exists():
         shutil.copy(ROOT / "static" / "img" / "favicon.ico", OUT / "favicon.ico")
+    # IndexNow anahtarı: Bing ve Yandex'e değişen sayfaları bildirmek için (yükleme adımı kullanır)
+    (OUT / "0b0b3770c369e042989bc277c26645c1.txt").write_text("0b0b3770c369e042989bc277c26645c1", encoding="utf-8")
     (OUT / "google08c007317a4ad095.html").write_text("google-site-verification: google08c007317a4ad095.html", encoding="utf-8")
     if (ROOT / "static").exists():
         shutil.copytree(ROOT / "static", OUT / "static")

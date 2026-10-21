@@ -117,7 +117,7 @@ jobs:
               for l in Path("eski_ozet.txt").read_text(encoding="utf-8").splitlines():
                   h, _, f = l.partition(" ")
                   eski[f] = h
-          yeni, ayni = [], 0
+          yeni, ayni, degisen = [], 0, []
           for f in sorted(Path("site").rglob("*")):
               if f.is_file():
                   r = str(f.relative_to("site"))
@@ -126,10 +126,29 @@ jobs:
                   if eski.get(r) == h:
                       os.utime(f, (946684800, 946684800))
                       ayni += 1
+                  elif r.endswith("index.html") and eski:
+                      degisen.append(r[:-len("index.html")])
           Path("site/.yayin-ozeti").write_text("\n".join(yeni), encoding="utf-8")
-          print(f"::notice::Toplam {len(yeni)} dosya, değişmeyen {ayni}")
+          Path("degisen.txt").write_text("\n".join(degisen), encoding="utf-8")
+          print(f"::notice::Toplam {len(yeni)} dosya, değişmeyen {ayni}, değişen sayfa {len(degisen)}")
           PY
           if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --parallel=4 --verbose=1 $HARIC site/ $HEDEF; bye" > ftp.log 2>&1; then
             echo "::error::FTP hatası: $(grep -v -i pass ftp.log | tail -5 | tr '\n' ' ' | cut -c1-600)"; exit 1
           fi
           echo "::notice::Yüklenen dosya sayısı: $(grep -c -i 'transferring\|Yeni dosya\|file' ftp.log || true)"
+          # IndexNow: değişen sayfalar Bing ve Yandex'e bildirilir (Google bu yolu kullanmaz, site haritasını okur)
+          if [ "$HEDEF" = "public_html" ] && [ -s degisen.txt ]; then
+            python3 - <<'PY'
+          import json, urllib.request
+          from pathlib import Path
+          kok = "https://dinfelsefesi.com.tr/"
+          urls = [kok + y for y in Path("degisen.txt").read_text(encoding="utf-8").splitlines() if y is not None][:10000]
+          govde = json.dumps({"host": "dinfelsefesi.com.tr", "key": "0b0b3770c369e042989bc277c26645c1", "keyLocation": kok + "0b0b3770c369e042989bc277c26645c1.txt", "urlList": urls}).encode()
+          try:
+              r = urllib.request.urlopen(urllib.request.Request("https://api.indexnow.org/indexnow", data=govde,
+                                         headers={"Content-Type": "application/json; charset=utf-8"}), timeout=30)
+              print(f"::notice::IndexNow: {len(urls)} adres bildirildi (HTTP {r.status})")
+          except Exception as ex:
+              print(f"::warning::IndexNow bildirimi başarısız: {ex}")
+          PY
+          fi
