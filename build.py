@@ -27,6 +27,7 @@ from email.utils import format_datetime
 from pathlib import Path
 
 import yaml
+from urllib.parse import quote
 
 ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
@@ -481,7 +482,13 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-arac .tur-secici,.ag-arac .k-ara{margin:0}
 .ag-tur button[aria-pressed="false"]{opacity:.45;background:var(--card);color:var(--ink);border-color:var(--rule)}
 .ag-tur button[aria-pressed="true"]{background:var(--card);color:var(--ink);border-color:var(--ink-soft)}
-.nokta{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.45em;vertical-align:.02em}
+.nokta{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.45em;vertical-align:.02em;background:var(--renk)}
+.nokta.halka{background:transparent;box-shadow:inset 0 0 0 2px var(--renk)}
+.ag-dugum.halka circle{fill:var(--card);stroke-width:2.6px}
+.ag-panel ol.ag-makaleler{list-style:none;padding:0;margin:0;display:grid;gap:.35rem;font-size:.9rem}
+.ag-panel ol.ag-makaleler a{color:var(--ink);text-decoration:none}
+.ag-panel ol.ag-makaleler a:hover{color:var(--accent);text-decoration:underline}
+.ag-panel ol.ag-makaleler span{color:var(--ink-soft);font-style:italic}
 .ag-sifirla{font:inherit;font-style:italic;font-size:.95rem;color:var(--accent-ink);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
 .ag-kap{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--card);overflow:hidden}
 .ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
@@ -1497,8 +1504,64 @@ def ag_verisi(items) -> dict:
         dugumler.append({"id": mid, "ad": m["title_tr"], "tur": "makale", "turAd": tur_ad["makale"],
                          "url": entry_url(m), "aciklama": m.get("lead", "")})
         baglar |= {(mid, x) for x in hedefler}
+    for d in dugumler:
+        if d["tur"] == "kisi":
+            d["suz"] = "kisi"
+    tr_dugum, tr_bag = ag_turkiye_akademisi()
+    dugumler += tr_dugum
     return {"turler": [{"kod": k, "ad": a, "renk": r} for k, a, r in AG_TURLER],
-            "dugumler": dugumler, "baglar": sorted(baglar)}
+            "dugumler": dugumler, "baglar": [list(b) for b in sorted(baglar)] + tr_bag}
+
+
+def ag_turkiye_akademisi() -> tuple[list, list]:
+    """Türkiye akademisi listesinden DergiPark'ta makalesi olanlar: başlıklara (makale sayısıyla),
+    makale başlığında adı geçen düşünür fişlerine ve ortak yazarlarına bağlanır."""
+    dosya = CONTENT / "turkiye_akademisi.yaml"
+    if not dosya.exists() or not dp_veri():
+        return [], []
+    kisiler = (yaml.safe_load(dosya.read_text(encoding="utf-8")) or {}).get("kisiler") or []
+    liste_ = {ad_anahtari(p["ad"]): p for p in kisiler}
+    # makale başlığında aranacak düşünür adları (tam ad ya da başka fişte bulunmayan soyadı)
+    soyad_say = {}
+    for (t, k), h in FIS.items():
+        if t == "kisi":
+            soyad_say[ad(t, h).split()[-1]] = soyad_say.get(ad(t, h).split()[-1], 0) + 1
+    dusunur = []
+    for (t, k), h in FIS.items():
+        if t == "kisi" and h.get("kapsam", "uluslararasi") == "uluslararasi":
+            adlar = [ad(t, h)] + ([ad(t, h).split()[-1]] if soyad_say[ad(t, h).split()[-1]] == 1 else [])
+            desen = re.compile("|".join(f"(?<![{HARF}]){re.escape(a)}(?![{HARF}])" for a in adlar))
+            dusunur.append((f"kisi/{k}", desen))
+    makaleler, baslik_say, kisi_bag, ortak = {}, {}, {}, {}
+    for m in dp_veri():
+        uyeler = [ad_anahtari(y) for y in m["yazarlar"] if ad_anahtari(y) in liste_]
+        for a in uyeler:
+            makaleler.setdefault(a, []).append(m)
+            for b in m["konular"]:
+                if ("baslik", b) in FIS:
+                    baslik_say[(a, b)] = baslik_say.get((a, b), 0) + 1
+            for did, desen in dusunur:
+                if desen.search(m["baslik"]):
+                    kisi_bag[(a, did)] = kisi_bag.get((a, did), 0) + 1
+        for i, a in enumerate(uyeler):
+            for b in uyeler[i + 1:]:
+                if a != b:
+                    ortak[tuple(sorted((a, b)))] = ortak.get(tuple(sorted((a, b))), 0) + 1
+    dugumler = []
+    for a, ms in makaleler.items():
+        p = liste_[a]
+        aciklama = " · ".join(x for x in [p.get("unvan", ""), p.get("universite", "")] if x)
+        dugumler.append({
+            "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi · Türkiye akademisi",
+            "suz": "kisi-tr", "url": f"{SITE_URL}/kisiler/#k-{slugify(p['ad'])}", "aciklama": aciklama,
+            "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}#makaleler",
+            "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
+    kimlik = lambda a: f"kisi-tr/{slugify(liste_[a]['ad'])}"
+    baglar = ([[kimlik(a), f"baslik/{b}", n] for (a, b), n in baslik_say.items()]
+              + [[kimlik(a), d, n] for (a, d), n in kisi_bag.items()]
+              + [[kimlik(a), kimlik(b), n] for (a, b), n in ortak.items()])
+    bagli = {x for b in baglar for x in b[:2]}  # hiçbir bağlantısı olmayan akademisyen ağa alınmaz
+    return [d for d in dugumler if d["id"] in bagli], baglar
 
 
 def kisalt_metin(t: str, n: int = 230) -> str:
@@ -1527,12 +1590,18 @@ def onizleme_verisi(items) -> dict:
 
 def render_ag(items) -> str:
     v = ag_verisi(items)
-    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _ in AG_TURLER}
-    dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta" style="background:{r}"></span>{e(a)} <span class="say">{say[k]}</span></button>'
-                       for k, a, r in AG_TURLER if say[k])
+    suzgec = []
+    for k, a, r in AG_TURLER:
+        if k == "kisi":
+            suzgec += [("kisi", "Kişi · uluslararası", r, ""), ("kisi-tr", "Kişi · Türkiye akademisi", r, " halka")]
+        else:
+            suzgec.append((k, a, r, ""))
+    say = {k: sum(1 for d in v["dugumler"] if d.get("suz", d["tur"]) == k) for k, _, _, _ in suzgec}
+    dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta{sinif}" style="--renk:{r}"></span>{e(a)} <span class="say">{say[k]}</span></button>'
+                       for k, a, r, sinif in suzgec if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır.</p>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. Türkiye akademisinden akademisyenler (içi boş halkalar) DergiPark'taki makalelerine göre başlıklara, makale başlığında adı geçen düşünürlere ve ortak yazarlarına bağlanır. Çizginin kalınlığı makale sayısını gösterir.</p>
 <div class="ag-arac">
   <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
   <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>

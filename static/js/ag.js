@@ -12,7 +12,8 @@
   var azHareket = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var dugumler = V.dugumler.map(function (d) { return Object.assign({}, d); });
-  var baglar = V.baglar.map(function (b) { return { source: b[0], target: b[1] }; });
+  var baglar = V.baglar.map(function (b) { return { source: b[0], target: b[1], w: b[2] || 1 }; });
+  var suz = function (d) { return d.suz || d.tur; };
   var byId = {};
   dugumler.forEach(function (d) { byId[d.id] = d; d.komsu = new Set(); });
   baglar.forEach(function (b) { byId[b.source].komsu.add(b.target); byId[b.target].komsu.add(b.source); });
@@ -24,12 +25,15 @@
   var svg = d3.select(kap).append("svg").attr("role", "img")
     .attr("aria-label", "Fişler ve makaleler arasındaki bağlantıları gösteren ağ");
   var g = svg.append("g");
-  var cizgi = g.append("g").attr("class", "ag-baglar").selectAll("line").data(baglar).join("line");
+  var cizgi = g.append("g").attr("class", "ag-baglar").selectAll("line").data(baglar).join("line")
+    .style("stroke-width", function (b) { return b.w > 1 ? (1.1 + 0.9 * Math.log2(b.w)) + "px" : null; });
   var dugum = g.append("g").attr("class", "ag-dugumler").selectAll("g").data(dugumler).join("g")
-    .attr("class", function (d) { return "ag-dugum tur-" + d.tur; })
+    .attr("class", function (d) { return "ag-dugum tur-" + d.tur + (d.suz === "kisi-tr" ? " halka" : ""); })
     .attr("tabindex", 0).attr("role", "button")
     .attr("aria-label", function (d) { return d.ad + " (" + d.turAd + ")"; });
-  dugum.append("circle").attr("r", function (d) { return d.r; }).attr("fill", function (d) { return RENK[d.tur]; });
+  dugum.append("circle").attr("r", function (d) { return d.r; })
+    .attr("fill", function (d) { return d.suz === "kisi-tr" ? null : RENK[d.tur]; })
+    .style("stroke", function (d) { return d.suz === "kisi-tr" ? RENK[d.tur] : null; });
   var kisalt = function (t, n) { return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : t; };
   var etiket = dugum.append("text").text(function (d) { return kisalt(d.ad, 34); })
     .attr("dy", function (d) { return d.r + 13; })
@@ -78,10 +82,10 @@
     var k = odakKumesi();
     dugum.classed("soluk", function (d) { return (k && !k.has(d.id)) || (aramaEslesen && !aramaEslesen.has(d.id)); })
       .classed("secili", function (d) { return secili && d.id === secili.id; })
-      .classed("gizli", function (d) { return gizliTurler.has(d.tur); });
+      .classed("gizli", function (d) { return gizliTurler.has(suz(d)); });
     cizgi.classed("vurgu", function (b) { var d = uzerinde || secili; return d && (b.source.id === d.id || b.target.id === d.id); })
       .classed("soluk", function (b) { var d = uzerinde || secili; return (d && b.source.id !== d.id && b.target.id !== d.id) || !!aramaEslesen; })
-      .classed("gizli", function (b) { return gizliTurler.has(b.source.tur) || gizliTurler.has(b.target.tur); });
+      .classed("gizli", function (b) { return gizliTurler.has(suz(b.source)) || gizliTurler.has(suz(b.target)); });
     etiketleriAyarla();
   }
   function etiketleriAyarla() {
@@ -89,7 +93,7 @@
     etiket.classed("goster", function (d) {
       if (k) return k.has(d.id);
       if (aramaEslesen) return aramaEslesen.has(d.id);
-      if (d.tur === "eser" || d.tur === "makale") return olcek > 1.8;
+      if (d.tur === "eser" || d.tur === "makale" || d.suz === "kisi-tr") return olcek > 1.8;
       return d.derece >= 3 || d.tur === "baslik" || olcek > 1.3;
     });
   }
@@ -110,14 +114,28 @@
     var ust = document.createElement("p"); ust.className = "ust-etiket"; ust.textContent = d.turAd; panel.appendChild(ust);
     var h = document.createElement("h2"); h.textContent = d.ad; panel.appendChild(h);
     if (d.aciklama) { var p = document.createElement("p"); p.className = "ag-aciklama"; p.textContent = d.aciklama; panel.appendChild(p); }
-    var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac"; a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : "Fişi açın →"; panel.appendChild(a);
+    var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac";
+    a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen listesinde gösterin →" : "Fişi açın →";
+    panel.appendChild(a);
+    if (d.makaleler && d.makaleler.length) {
+      var mh = document.createElement("h3"); mh.textContent = "DergiPark'taki makaleleri (" + d.makaleler.length + ")"; panel.appendChild(mh);
+      var ol = document.createElement("ol"); ol.className = "ag-makaleler";
+      d.makaleler.slice(0, 8).forEach(function (m) {
+        var li = document.createElement("li"), ma = document.createElement("a");
+        ma.href = m.u; ma.target = "_blank"; ma.rel = "noopener"; ma.textContent = m.b;
+        var y = document.createElement("span"); y.textContent = " · " + m.y;
+        li.appendChild(ma); li.appendChild(y); ol.appendChild(li);
+      });
+      panel.appendChild(ol);
+      if (d.tumu) { var ta = document.createElement("a"); ta.href = d.tumu; ta.className = "ag-ac"; ta.textContent = "Bütün makaleleri listede →"; panel.appendChild(ta); }
+    }
     if (komsular.length) {
       var kh = document.createElement("h3"); kh.textContent = komsular.length + " bağlantı"; panel.appendChild(kh);
       var ul = document.createElement("ul");
       komsular.forEach(function (n) {
         var li = document.createElement("li");
         var b = document.createElement("button"); b.type = "button";
-        b.innerHTML = '<span class="nokta" style="background:' + RENK[n.tur] + '"></span>';
+        b.innerHTML = '<span class="nokta' + (n.suz === "kisi-tr" ? " halka" : "") + '" style="--renk:' + RENK[n.tur] + '"></span>';
         b.appendChild(document.createTextNode(n.ad));
         b.addEventListener("click", function () { sec(n, true); });
         li.appendChild(b); ul.appendChild(li);
@@ -144,7 +162,7 @@
       var kod = b.dataset.tur, acik = b.getAttribute("aria-pressed") === "true";
       b.setAttribute("aria-pressed", acik ? "false" : "true");
       if (acik) gizliTurler.add(kod); else gizliTurler.delete(kod);
-      if (secili && gizliTurler.has(secili.tur)) sec(null); else boya();
+      if (secili && gizliTurler.has(suz(secili))) sec(null); else boya();
     });
   });
 
