@@ -2,8 +2,9 @@
 tur: baslik
 kimlik: din-ve-ahlak
 ad: Din ve Ahlak
-sira: 8
+sira: 11
 ust_baslik: ''
+kume: insan-deger
 ozet: Ahlaki değerlerin Tanrı ile ilişkisi ve dinî inancın ahlaki hayattaki yeri.
 alt_basliklar:
 - İlahi emir teorisi

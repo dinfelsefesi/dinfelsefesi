@@ -2,8 +2,9 @@
 tur: baslik
 kimlik: kotuluk-problemi
 ad: Kötülük Problemi
-sira: 1
-ust_baslik: teizme-yonelik-itirazlar
+sira: 6
+ust_baslik: ''
+kume: tanri
 ozet: >-
   Her şeye gücü yeten, her şeyi bilen ve tamamen iyi bir Tanrı tasavvuru ile
   dünyadaki kötülük arasındaki ilişkiye dair tartışma. Başlık, problemin mantıksal
@@ -20,7 +21,7 @@ tartisma_sorulari:
   - Rowe'un argümanındaki anlamsız kötülük öncülüne şüpheci teizmin yönelttiği itiraz ne ölçüde ikna edicidir?
   - Klasik kelamdaki aslah tartışması çağdaş kötülük problemine hangi bakımdan katkı sağlayabilir, hangi bakımdan bu problemin dışında kalmaktadır?
 alt_basliklar: []
-ilgili_basliklar: []
+ilgili_basliklar: ["teizme-yonelik-itirazlar", "ozgurluk"]
 imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-20

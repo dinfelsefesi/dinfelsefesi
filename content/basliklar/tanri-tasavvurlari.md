@@ -2,14 +2,12 @@
 tur: baslik
 kimlik: tanri-tasavvurlari
 ad: Tanrı Tasavvurları
-sira: 4
+sira: 1
 ust_baslik: ''
-ozet: Tanrı'ya nispet edilen sıfatlar ve Tanrı ile âlem arasındaki ilişki bakımından farklı Tanrı tasavvurları
-  ve bunların tutarlılığı.
-alt_basliklar:
-- tanrinin-sifatlari
-- tanri-alem-iliskisi
-ilgili_basliklar: []
+kume: tanri
+ozet: Klasik teizm, açık teizm ve süreç teizmi gibi farklı Tanrı tasavvurları ve bunların tutarlılığı.
+alt_basliklar: ["Klasik teizm", "Açık teizm", "Süreç teizmi"]
+ilgili_basliklar: ["tanrinin-sifatlari", "tanri-alem-iliskisi"]
 imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: '2026-10-20'

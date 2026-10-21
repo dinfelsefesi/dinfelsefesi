@@ -105,6 +105,8 @@ def bag_dizini_kur():
             soyadlar.setdefault(ad(t, h).split()[-1], []).append(k)
     for (t, k), h in FIS.items():
         adi = ad(t, h)
+        if h.get("otomatik_bag") is False:  # genel bir kelime olan adlar (ör. Özgürlük) metinde kendiliğinden bağlanmaz
+            continue
         if t in ("terim", "baslik"):
             adaylar.append((adi, t, k, True))
         elif t == "kisi":
@@ -521,6 +523,10 @@ a.ic-bag{text-decoration-style:dotted}
 .icindekiler .altlar-metin{margin-top:.35rem;font-size:.95rem;font-style:italic;color:var(--ink-soft)}
 .icindekiler .altlar-metin a{font-style:normal}
 .icindekiler .say{display:block;margin-top:.25rem}
+.icindekiler li.kume-ad{display:block;padding:1.2rem 0 .2rem;border-bottom:1px solid var(--gold);break-after:avoid;font-style:italic;color:var(--gold);font-size:.95rem}
+.icindekiler li.kume-ad:first-child{padding-top:0}
+h2.kume-ad{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.15rem;color:var(--gold);margin:2rem 0 .7rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+h2.kume-ad:first-of-type{margin-top:1.2rem}
 @media (max-width:760px){
   html{font-size:16px}
   .acilis,.fis-duzen,.karsilama{grid-template-columns:1fr;gap:1.5rem}
@@ -719,6 +725,25 @@ def render_makale(m: dict) -> str:
 
 # ---------------------------------------------------------------- başlıklar
 
+# Ana başlıklar bu tematik kümelerde gösterilir. Kümeler yalnızca görsel ayraçtır, kendi sayfaları yoktur.
+KUMELER = [("tanri", "Tanrı"), ("bilgi-dil", "Bilgi ve dil"), ("insan-deger", "İnsan ve değer"),
+           ("din-bilim-kultur", "Din, bilim ve kültür"), ("disiplin", "Disiplin")]
+
+
+def kumeli_basliklar():
+    """[(küme adı, [ana başlık kimlikleri])]; kümesi belirtilmemiş başlıklar sona eklenir."""
+    anas = ana_basliklar()
+    out = []
+    for kk, kad in KUMELER:
+        ks = [k for k in anas if FIS[("baslik", k)].get("kume") == kk]
+        if ks:
+            out.append((kad, ks))
+    kalan = [k for k in anas if FIS[("baslik", k)].get("kume") not in dict(KUMELER)]
+    if kalan:
+        out.append(("Diğer", kalan))
+    return out
+
+
 def ana_basliklar():
     return sorted([k for (t, k), h in FIS.items() if t == "baslik" and not h.get("ust_baslik")],
                   key=lambda k: FIS[("baslik", k)].get("sira", 99))
@@ -732,6 +757,13 @@ def alt_dolu(a) -> bool:
 def harita_html() -> str:
     anas = ana_basliklar()
     en_cok = max([len(bagli_fisler(k)) for k in anas] + [1])
+    bolumler = []
+    for kad, ks in kumeli_basliklar():
+        bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2>' + harita_kartlari(ks, en_cok))
+    return "".join(bolumler)
+
+
+def harita_kartlari(anas, en_cok) -> str:
     kartlar = []
     for k in anas:
         h = FIS[("baslik", k)]
@@ -792,7 +824,7 @@ def render_baslik(k) -> str:
 
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
-            '<p class="giris">Ana başlıklar din felsefesi literatürünün en genel problem alanlarını gösterir. '
+            '<p class="giris">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir.</p>'
             + harita_html())
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
@@ -1247,11 +1279,13 @@ def okuma_baslangici() -> str:
 
 def icindekiler_html() -> str:
     satirlar = []
-    for k in ana_basliklar():
-        h = FIS[("baslik", k)]
-        b = bagli_fisler(k)
-        altlar = " · ".join(bag("baslik", a) for a in liste(h.get("alt_basliklar")))
-        satirlar.append(f"""<li><span class="no">{e(h.get('sira', ''))}</span><div>
+    for kad, ks in kumeli_basliklar():
+        satirlar.append(f'<li class="kume-ad">{e(kad)}</li>')
+        for k in ks:
+            h = FIS[("baslik", k)]
+            b = bagli_fisler(k)
+            altlar = " · ".join(bag("baslik", a) for a in liste(h.get("alt_basliklar")))
+            satirlar.append(f"""<li><span class="no">{e(h.get('sira', ''))}</span><div>
   <h3><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h3>
   <p>{satir_ici(h.get('ozet'))}</p>
   {f'<p class="altlar-metin">{altlar}</p>' if altlar else ''}
@@ -1344,7 +1378,7 @@ def main() -> None:
     yaz("gunun-makalesi", render_makaleler(items))
     yaz("guncel", yonlendirme(f"{SITE_URL}/gunun-makalesi/"))
     # Eski WordPress adresleri yeni sayfalara yönlendirilir
-    for eski, yeni in {"kotuluk-problemi": "basliklar/kotuluk-problemi", "dini-tecrube": "basliklar/din-epistemolojisi",
+    for eski, yeni in {"kotuluk-problemi": "basliklar/kotuluk-problemi", "dini-tecrube": "basliklar/dini-tecrube",
                        "tanrinin-varligi-problemi": "basliklar/tanrinin-varliginin-delilleri",
                        "category/din-felsefe-iliskisi": "basliklar"}.items():
         yaz(eski, yonlendirme(f"{SITE_URL}/{yeni}/"))

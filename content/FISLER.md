@@ -1,8 +1,8 @@
 # Fiş şablonları
 
-Sitenin başvuru bölümleri dört fiş türünden oluşur. Ana başlıklar, din felsefesi literatüründeki en genel problem alanlarıdır. Terim, kişi ve eser fişleri `basliklar` alanıyla bir ya da daha fazla başlığa bağlanır. Alt başlıklar ihtiyaç doğdukça eklenir. Bir alt başlığa bağlı fişler, üst başlığın sayımına da katılır. Her fiş bir Markdown dosyasıdır. Dosyanın başında `---` çizgileri arasında üst bilgi alanları, altında ise metin yer alır. Fişler birbirine `kimlik` değeriyle bağlanır. Bir listede kimlik yerine düz metin yazılırsa (ör. henüz fişi olmayan bir yazar adı) site onu bağlantısız gösterir.
+Sitenin başvuru bölümleri dört fiş türünden oluşur. Ana başlıklar, din felsefesi literatüründeki problem alanlarıdır ve beş tematik küme altında gösterilir (Tanrı; Bilgi ve dil; İnsan ve değer; Din, bilim ve kültür; Disiplin). Yapı en fazla iki katlıdır, alt başlık yalnızca bir ana başlığın türü olan dar konular için açılır. Terim, kişi ve eser fişleri `basliklar` alanıyla bir ya da daha fazla başlığa bağlanır. Alt başlıklar ihtiyaç doğdukça eklenir. Bir alt başlığa bağlı fişler, üst başlığın sayımına da katılır. Her fiş bir Markdown dosyasıdır. Dosyanın başında `---` çizgileri arasında üst bilgi alanları, altında ise metin yer alır. Fişler birbirine `kimlik` değeriyle bağlanır. Bir listede kimlik yerine düz metin yazılırsa (ör. henüz fişi olmayan bir yazar adı) site onu bağlantısız gösterir.
 
-Metin içi bağlantılar kendiliğinden kurulur. Bir fişin metninde başka bir fişin adı geçiyorsa (terim ve başlıklarda ekleriyle birlikte, kişilerde tam ad ya da soyadı, eserlerde başlık) ilk geçtiği yer o fişe bağlanır. Bağlantının üzerine gelindiğinde kısa bir önizleme kartı açılır.
+Metin içi bağlantılar kendiliğinden kurulur (adı genel bir kelime olan fişlerde `otomatik_bag: false` yazılarak kapatılabilir). Bir fişin metninde başka bir fişin adı geçiyorsa (terim ve başlıklarda ekleriyle birlikte, kişilerde tam ad ya da soyadı, eserlerde başlık) ilk geçtiği yer o fişe bağlanır. Bağlantının üzerine gelindiğinde kısa bir önizleme kartı açılır.
 
 Ortak alanlar: `tur`, `kimlik` (dosya adıyla aynı), `imza`, `durum` (`taslak` | `yayinda`), `guncelleme` (YYYY-AA-GG). Taslak fişler yayımlanmaz.
 
@@ -35,5 +35,7 @@ Zorunlu: `baslik`, `yazar`, `eser_turu` (`kitap` | `kitap-bolumu` | `makale` | `
 ## Başlık (`content/basliklar/`)
 
 Zorunlu: `ad`, `sira` (aynı düzeydeki başlıklar arasında gösterim sırası), `ust_baslik` (ana başlıkta boş, alt başlıkta bağlı olduğu başlığın kimliği), `ozet`.
+
+Ana başlıkta ayrıca `kume` (`tanri` | `bilgi-dil` | `insan-deger` | `din-bilim-kultur` | `disiplin`). Kümeler yalnızca görsel ayraçtır, kendi sayfaları yoktur.
 
 İsteğe bağlı: metin (en az iki `##` bölümü), `alt_basliklar` (fişi henüz olmayan alt başlıklar düz metin olarak yazılabilir), `temel_terimler`, `temel_kisiler`, `okuma_listesi` (`giris` ve `ileri`), `tartisma_sorulari`, `ilgili_basliklar`.

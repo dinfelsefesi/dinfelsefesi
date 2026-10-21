@@ -2,8 +2,9 @@
 tur: baslik
 kimlik: din-dili
 ad: Din Dili
-sira: 5
+sira: 9
 ust_baslik: ''
+kume: bilgi-dil
 ozet: Tanrı ve dinî konular hakkında kullanılan dilin anlamı ve imkânı.
 alt_basliklar: []
 ilgili_basliklar: []

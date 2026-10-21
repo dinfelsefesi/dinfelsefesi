@@ -3,10 +3,7 @@
  "siniflandirilamayan": 0,
  "durumlar": {
   "kapsam-disi": 29,
-  "tanitim-ceviri": 28,
-  "oneri:insan-tasavvurlari": 6,
-  "oneri:din-felsefesi-yontem-tarih": 19,
-  "oneri:ozgurluk": 2
+  "tanitim-ceviri": 28
  },
  "yayin_turleri": {
   "kitap-tanitimi": 23,
@@ -15,17 +12,20 @@
   "ceviri-degerlendirmesi": 1
  },
  "baslik_sayilari": {
-  "tanri-tasavvurlari": 89,
-  "din-epistemolojisi": 73,
+  "din-epistemolojisi": 60,
   "din-ve-ahlak": 53,
-  "teizme-yonelik-itirazlar": 51,
   "din-ve-bilim": 44,
+  "tanri-tasavvurlari": 38,
   "tanri-alem-iliskisi": 37,
   "din-dili": 36,
   "kotuluk-problemi": 32,
   "tanrinin-varliginin-delilleri": 31,
   "olum-ve-otesi": 29,
   "tanrinin-sifatlari": 26,
+  "insan-tasavvurlari": 25,
+  "teizme-yonelik-itirazlar": 21,
+  "din-felsefesi-tanim-yontem-tarih": 20,
+  "ozgurluk": 19,
   "dini-tecrube": 18,
   "dini-cesitlilik": 17,
   "dini-pratik": 11
@@ -44,7 +44,8 @@
    "yil": "2026",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-tasavvurlari",
+    "insan-tasavvurlari",
+    "ozgurluk",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -87,8 +88,7 @@
    "basliklar": [
     "din-epistemolojisi",
     "din-ve-ahlak",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -164,8 +164,7 @@
    "yil": "2025",
    "basliklar": [
     "din-epistemolojisi",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -249,8 +248,7 @@
    "yil": "2025",
    "basliklar": [
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
@@ -258,7 +256,9 @@
    "id": "1749626",
    "yil": "2025",
    "basliklar": [
-    "din-ve-ahlak"
+    "din-ve-ahlak",
+    "insan-tasavvurlari",
+    "ozgurluk"
    ],
    "kaynak": "anahtar"
   },
@@ -291,7 +291,6 @@
    "id": "1743330",
    "yil": "2025",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -299,8 +298,9 @@
   {
    "id": "1743211",
    "yil": "2025",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari"
+   ],
    "kaynak": "elle"
   },
   {
@@ -309,8 +309,7 @@
    "basliklar": [
     "din-ve-ahlak",
     "olum-ve-otesi",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -360,7 +359,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "1850930",
@@ -371,7 +372,6 @@
    "ilgili_basliklar": [
     "din-ve-bilim",
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-varliginin-delilleri"
    ]
   },
@@ -397,8 +397,7 @@
    "yil": "2025",
    "basliklar": [
     "kotuluk-problemi",
-    "olum-ve-otesi",
-    "teizme-yonelik-itirazlar"
+    "olum-ve-otesi"
    ],
    "kaynak": "anahtar"
   },
@@ -413,7 +412,6 @@
    "id": "1821231",
    "yil": "2025",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -431,8 +429,7 @@
    "id": "1755648",
    "yil": "2025",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -449,8 +446,7 @@
    "yil": "2025",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -481,8 +477,9 @@
   {
    "id": "1785611",
    "yil": "2025",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -514,8 +511,7 @@
    "id": "1721984",
    "yil": "2025",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -541,8 +537,7 @@
    "basliklar": [
     "kotuluk-problemi",
     "tanri-tasavvurlari",
-    "tanrinin-varliginin-delilleri",
-    "teizme-yonelik-itirazlar"
+    "tanrinin-varliginin-delilleri"
    ],
    "kaynak": "anahtar"
   },
@@ -550,7 +545,6 @@
    "id": "1726257",
    "yil": "2025",
    "basliklar": [
-    "din-epistemolojisi",
     "din-ve-bilim",
     "dini-tecrube"
    ],
@@ -569,13 +563,14 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "1711177",
    "yil": "2025",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -592,8 +587,7 @@
    "id": "1770087",
    "yil": "2025",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -626,8 +620,7 @@
    "id": "1539594",
    "yil": "2024",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -635,8 +628,7 @@
    "id": "1562807",
    "yil": "2024",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -644,8 +636,7 @@
    "id": "1646766",
    "yil": "2025",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -678,7 +669,9 @@
    "id": "1633072",
    "yil": "2025",
    "basliklar": [
-    "din-ve-ahlak"
+    "din-ve-ahlak",
+    "insan-tasavvurlari",
+    "ozgurluk"
    ],
    "kaynak": "anahtar"
   },
@@ -705,8 +698,7 @@
    "yil": "2024",
    "basliklar": [
     "din-epistemolojisi",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -739,10 +731,11 @@
    "id": "1474434",
    "yil": "2024",
    "basliklar": [
+    "insan-tasavvurlari",
     "kotuluk-problemi",
+    "ozgurluk",
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
@@ -751,7 +744,6 @@
    "yil": "2025",
    "basliklar": [
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -796,8 +788,9 @@
   {
    "id": "1576374",
    "yil": "2024",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -821,8 +814,9 @@
   {
    "id": "1602239",
    "yil": "2024",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari"
+   ],
    "kaynak": "elle"
   },
   {
@@ -839,8 +833,7 @@
    "id": "1601799",
    "yil": "2024",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -891,8 +884,7 @@
    "id": "1578346",
    "yil": "2024",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -917,15 +909,19 @@
    "id": "1334728",
    "yil": "2023",
    "basliklar": [
-    "din-ve-bilim"
+    "din-ve-bilim",
+    "insan-tasavvurlari",
+    "ozgurluk"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "1534811",
    "yil": "2024",
-   "basliklar": [],
-   "durum": "oneri:ozgurluk",
+   "basliklar": [
+    "insan-tasavvurlari",
+    "ozgurluk"
+   ],
    "kaynak": "elle"
   },
   {
@@ -943,8 +939,7 @@
    "yil": "2024",
    "basliklar": [
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
@@ -952,8 +947,9 @@
    "id": "1539324",
    "yil": "2024",
    "basliklar": [
+    "insan-tasavvurlari",
     "olum-ve-otesi",
-    "tanri-tasavvurlari",
+    "ozgurluk",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -972,8 +968,7 @@
    "yil": "2024",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -1012,7 +1007,6 @@
    "id": "1584249",
    "yil": "2024",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -1023,8 +1017,7 @@
    "basliklar": [
     "din-ve-ahlak",
     "dini-cesitlilik",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -1048,8 +1041,7 @@
    "yil": "2024",
    "basliklar": [
     "din-dili",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -1065,6 +1057,8 @@
    "id": "1576315",
    "yil": "2024",
    "basliklar": [
+    "insan-tasavvurlari",
+    "ozgurluk",
     "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
@@ -1075,8 +1069,7 @@
    "basliklar": [
     "kotuluk-problemi",
     "tanri-tasavvurlari",
-    "tanrinin-sifatlari",
-    "teizme-yonelik-itirazlar"
+    "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
   },
@@ -1141,7 +1134,6 @@
    "id": "1540451",
    "yil": "2024",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -1150,7 +1142,6 @@
    "id": "1541601",
    "yil": "2024",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -1169,7 +1160,6 @@
    "id": "1554592",
    "yil": "2024",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -1237,7 +1227,6 @@
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
    "ilgili_basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ]
   },
@@ -1269,15 +1258,18 @@
   {
    "id": "1525197",
    "yil": "2024",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "1491656",
    "yil": "2024",
    "basliklar": [
-    "din-ve-ahlak"
+    "din-ve-ahlak",
+    "insan-tasavvurlari",
+    "ozgurluk"
    ],
    "kaynak": "anahtar"
   },
@@ -1355,7 +1347,6 @@
    "id": "1413592",
    "yil": "2024",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube",
     "olum-ve-otesi"
    ],
@@ -1365,7 +1356,6 @@
    "id": "1418963",
    "yil": "2024",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -1446,7 +1436,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "1447133",
@@ -1534,7 +1526,6 @@
    "id": "1398635",
    "yil": "2023",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -1550,16 +1541,16 @@
    "id": "1332231",
    "yil": "2023",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "1353150",
    "yil": "2023",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -1582,8 +1573,7 @@
    "id": "1338249",
    "yil": "2023",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -1619,9 +1609,7 @@
     "din-ve-bilim",
     "kotuluk-problemi",
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
-    "tanrinin-sifatlari",
-    "teizme-yonelik-itirazlar"
+    "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
   },
@@ -1648,15 +1636,18 @@
   {
    "id": "1350918",
    "yil": "2023",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari",
+    "ozgurluk"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "1336641",
    "yil": "2023",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -1696,8 +1687,9 @@
    "id": "1362670",
    "yil": "2023",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "insan-tasavvurlari",
+    "ozgurluk",
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -1723,7 +1715,6 @@
    "yil": "2023",
    "basliklar": [
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-varliginin-delilleri"
    ],
    "kaynak": "anahtar"
@@ -1758,7 +1749,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "1448109",
@@ -1773,16 +1766,16 @@
    "yil": "2023",
    "basliklar": [
     "kotuluk-problemi",
-    "olum-ve-otesi",
-    "teizme-yonelik-itirazlar"
+    "olum-ve-otesi"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "1344469",
    "yil": "2023",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari"
+   ],
    "kaynak": "elle"
   },
   {
@@ -1840,7 +1833,6 @@
    "id": "1251576",
    "yil": "2023",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "elle"
@@ -1859,8 +1851,7 @@
    "id": "1255426",
    "yil": "2023",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -1868,16 +1859,17 @@
    "id": "1272117",
    "yil": "2023",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "insan-tasavvurlari",
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "elle"
   },
   {
    "id": "1258083",
    "yil": "2023",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -1919,7 +1911,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "insan-tasavvurlari"
+   ]
   },
   {
    "id": "1215166",
@@ -1945,8 +1939,7 @@
    "yil": "2022",
    "basliklar": [
     "dini-pratik",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -1954,8 +1947,7 @@
    "id": "1212667",
    "yil": "2022",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -1982,7 +1974,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "insan-tasavvurlari"
+   ]
   },
   {
    "id": "1077353",
@@ -2006,8 +2000,7 @@
    "id": "1139202",
    "yil": "2022",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "elle"
   },
@@ -2017,7 +2010,6 @@
    "basliklar": [
     "olum-ve-otesi",
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-varliginin-delilleri"
    ],
    "kaynak": "anahtar"
@@ -2026,8 +2018,7 @@
    "id": "1140099",
    "yil": "2022",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -2072,8 +2063,7 @@
    "yil": "2022",
    "basliklar": [
     "din-ve-ahlak",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -2113,8 +2103,9 @@
   {
    "id": "1166077",
    "yil": "2022",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2147,7 +2138,6 @@
    "yil": "2022",
    "basliklar": [
     "din-dili",
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari",
     "teizme-yonelik-itirazlar"
    ],
@@ -2165,7 +2155,8 @@
    "id": "1256476",
    "yil": "2022",
    "basliklar": [
-    "tanri-tasavvurlari",
+    "insan-tasavvurlari",
+    "ozgurluk",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2191,8 +2182,9 @@
   {
    "id": "1119420",
    "yil": "2022",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2210,8 +2202,7 @@
    "yil": "2022",
    "basliklar": [
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
@@ -2238,14 +2229,15 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "1128640",
    "yil": "2022",
    "basliklar": [
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2279,8 +2271,7 @@
    "id": "1104469",
    "yil": "2022",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "elle"
   },
@@ -2296,8 +2287,7 @@
    "id": "1052666",
    "yil": "2022",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "elle"
   },
@@ -2312,16 +2302,16 @@
    "id": "1064379",
    "yil": "2022",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "1136208",
    "yil": "2022",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2338,9 +2328,7 @@
    "yil": "2022",
    "basliklar": [
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "tanrinin-sifatlari",
-    "teizme-yonelik-itirazlar"
+    "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
   },
@@ -2381,7 +2369,6 @@
    "id": "1054693",
    "yil": "2022",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -2409,8 +2396,7 @@
    "yil": "2021",
    "basliklar": [
     "din-ve-ahlak",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -2459,8 +2445,7 @@
    "id": "1051533",
    "yil": "2021",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -2468,8 +2453,7 @@
    "id": "1017091",
    "yil": "2021",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -2492,6 +2476,8 @@
    "id": "973374",
    "yil": "2021",
    "basliklar": [
+    "insan-tasavvurlari",
+    "ozgurluk",
     "tanrinin-varliginin-delilleri"
    ],
    "kaynak": "anahtar"
@@ -2522,7 +2508,9 @@
    "id": "882188",
    "yil": "2021",
    "basliklar": [
-    "din-ve-ahlak"
+    "din-ve-ahlak",
+    "insan-tasavvurlari",
+    "ozgurluk"
    ],
    "kaynak": "anahtar"
   },
@@ -2538,7 +2526,6 @@
    "id": "891855",
    "yil": "2021",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2554,8 +2541,9 @@
   {
    "id": "939701",
    "yil": "2021",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2563,8 +2551,7 @@
    "yil": "2021",
    "basliklar": [
     "kotuluk-problemi",
-    "tanrinin-varliginin-delilleri",
-    "teizme-yonelik-itirazlar"
+    "tanrinin-varliginin-delilleri"
    ],
    "kaynak": "anahtar"
   },
@@ -2594,9 +2581,10 @@
    "id": "851771",
    "yil": "2021",
    "basliklar": [
+    "insan-tasavvurlari",
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "ozgurluk",
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
@@ -2612,7 +2600,6 @@
    "id": "857680",
    "yil": "2021",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -2628,8 +2615,9 @@
   {
    "id": "802699",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2643,22 +2631,23 @@
   {
    "id": "780337",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "826415",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "809068",
    "yil": "2020",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2667,8 +2656,7 @@
    "id": "795463",
    "yil": "2020",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -2684,8 +2672,7 @@
    "id": "810719",
    "yil": "2020",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -2707,7 +2694,6 @@
    "id": "779075",
    "yil": "2020",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -2718,16 +2704,16 @@
    "basliklar": [
     "din-epistemolojisi",
     "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "teizme-yonelik-itirazlar"
+    "tanri-tasavvurlari"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "714478",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2735,8 +2721,7 @@
    "yil": "2020",
    "basliklar": [
     "dini-pratik",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -2761,16 +2746,17 @@
    "id": "732328",
    "yil": "2020",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
   {
    "id": "741202",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:ozgurluk",
+   "basliklar": [
+    "insan-tasavvurlari",
+    "ozgurluk"
+   ],
    "kaynak": "elle"
   },
   {
@@ -2787,21 +2773,23 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "685216",
    "yil": "2020",
-   "basliklar": [],
-   "durum": "oneri:insan-tasavvurlari",
+   "basliklar": [
+    "insan-tasavvurlari"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "697552",
    "yil": "2020",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -2840,7 +2828,6 @@
    "id": "551691",
    "yil": "2019",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2915,7 +2902,6 @@
    "id": "462020",
    "yil": "2018",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -2935,7 +2921,6 @@
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
    "ilgili_basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube",
     "tanrinin-varliginin-delilleri"
    ]
@@ -2961,7 +2946,6 @@
    "yil": "2019",
    "basliklar": [
     "tanri-alem-iliskisi",
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -2972,7 +2956,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "595319",
@@ -2981,7 +2967,6 @@
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
    "ilgili_basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ]
   },
@@ -2989,8 +2974,7 @@
    "id": "529367",
    "yil": "2019",
    "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -3025,8 +3009,7 @@
    "yil": "2019",
    "basliklar": [
     "din-epistemolojisi",
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -3083,7 +3066,6 @@
    "id": "448346",
    "yil": "2018",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube",
     "tanrinin-varliginin-delilleri"
    ],
@@ -3093,7 +3075,6 @@
    "id": "497589",
    "yil": "2018",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -3117,15 +3098,17 @@
   {
    "id": "506389",
    "yil": "2018",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
    "id": "506391",
    "yil": "2018",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -3152,7 +3135,6 @@
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
    "ilgili_basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ]
   },
@@ -3160,7 +3142,8 @@
    "id": "439624",
    "yil": "2018",
    "basliklar": [
-    "tanri-tasavvurlari",
+    "insan-tasavvurlari",
+    "ozgurluk",
     "tanrinin-sifatlari"
    ],
    "kaynak": "elle"
@@ -3178,7 +3161,6 @@
    "id": "418724",
    "yil": "2018",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -3204,7 +3186,6 @@
    "id": "389180",
    "yil": "2018",
    "basliklar": [
-    "tanri-tasavvurlari",
     "tanrinin-sifatlari"
    ],
    "kaynak": "anahtar"
@@ -3221,8 +3202,9 @@
   {
    "id": "489266",
    "yil": "2018",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -3237,7 +3219,7 @@
    "id": "363797",
    "yil": "2017",
    "basliklar": [
-    "din-epistemolojisi",
+    "din-felsefesi-tanim-yontem-tarih",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -3266,7 +3248,9 @@
    "basliklar": [],
    "durum": "tanitim-ceviri",
    "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": []
+   "ilgili_basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ]
   },
   {
    "id": "852440",
@@ -3279,8 +3263,9 @@
   {
    "id": "238965",
    "yil": "2016",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -3295,7 +3280,6 @@
    "id": "136478",
    "yil": "2016",
    "basliklar": [
-    "din-epistemolojisi",
     "dini-tecrube"
    ],
    "kaynak": "anahtar"
@@ -3337,8 +3321,9 @@
    "yil": "2014",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "insan-tasavvurlari",
+    "ozgurluk",
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -3347,8 +3332,9 @@
    "yil": "2014",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "insan-tasavvurlari",
+    "ozgurluk",
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -3357,8 +3343,7 @@
    "yil": "2014",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
+    "tanri-alem-iliskisi"
    ],
    "kaynak": "anahtar"
   },
@@ -3391,8 +3376,7 @@
    "id": "847282",
    "yil": "2012",
    "basliklar": [
-    "kotuluk-problemi",
-    "teizme-yonelik-itirazlar"
+    "kotuluk-problemi"
    ],
    "kaynak": "anahtar"
   },
@@ -3400,7 +3384,6 @@
    "id": "848040",
    "yil": "2012",
    "basliklar": [
-    "din-epistemolojisi",
     "din-ve-bilim",
     "dini-tecrube"
    ],
@@ -3418,8 +3401,9 @@
   {
    "id": "846636",
    "yil": "2012",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {
@@ -3433,8 +3417,9 @@
   {
    "id": "203747",
    "yil": "2010",
-   "basliklar": [],
-   "durum": "oneri:din-felsefesi-yontem-tarih",
+   "basliklar": [
+    "din-felsefesi-tanim-yontem-tarih"
+   ],
    "kaynak": "elle"
   },
   {

@@ -17,8 +17,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 VERI = ROOT / "data" / "dergipark"
-UST = {"kotuluk-problemi": "teizme-yonelik-itirazlar", "tanrinin-sifatlari": "tanri-tasavvurlari",
-       "tanri-alem-iliskisi": "tanri-tasavvurlari", "dini-tecrube": "din-epistemolojisi"}
+UST = {"ozgurluk": "insan-tasavvurlari"}  # alt başlık -> üst başlık
 
 
 def katla(s: str) -> str:
