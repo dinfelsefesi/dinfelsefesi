@@ -104,7 +104,30 @@ jobs:
             HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/"
           fi
           echo "::warning::Yükleme klasörü: $HEDEF"
-          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --verbose=1 $HARIC site/ $HEDEF; bye" > ftp.log 2>&1; then
+          # Yalnızca içeriği değişen dosyalar yüklensin: sunucudaki bir önceki yüklemenin özet listesi indirilir,
+          # içeriği aynı kalan dosyaların tarihi eskiye çekilir, mirror --only-newer onları atlar.
+          lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; get $HEDEF/.yayin-ozeti -o eski_ozet.txt; bye" >/dev/null 2>&1 || true
+          python3 - <<'PY'
+          import hashlib, os
+          from pathlib import Path
+          eski = {}
+          if Path("eski_ozet.txt").exists():
+              for l in Path("eski_ozet.txt").read_text(encoding="utf-8").splitlines():
+                  h, _, f = l.partition(" ")
+                  eski[f] = h
+          yeni, ayni = [], 0
+          for f in sorted(Path("site").rglob("*")):
+              if f.is_file():
+                  r = str(f.relative_to("site"))
+                  h = hashlib.md5(f.read_bytes()).hexdigest()
+                  yeni.append(f"{h} {r}")
+                  if eski.get(r) == h:
+                      os.utime(f, (946684800, 946684800))
+                      ayni += 1
+          Path("site/.yayin-ozeti").write_text("\n".join(yeni), encoding="utf-8")
+          print(f"::notice::Toplam {len(yeni)} dosya, değişmeyen {ayni}")
+          PY
+          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; mkdir -f -p $HEDEF; mirror --reverse --delete --only-newer --parallel=4 --verbose=1 $HARIC site/ $HEDEF; bye" > ftp.log 2>&1; then
             echo "::error::FTP hatası: $(grep -v -i pass ftp.log | tail -5 | tr '\n' ' ' | cut -c1-600)"; exit 1
           fi
           echo "::notice::Yüklenen dosya sayısı: $(grep -c -i 'transferring\|Yeni dosya\|file' ftp.log || true)"

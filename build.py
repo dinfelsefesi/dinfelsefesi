@@ -1965,6 +1965,9 @@ RewriteRule ^ https://dinfelsefesi.com.tr%{REQUEST_URI} [L,R=301]
 # Eski deneme adresi /yeni/... yeni yerine yönlendirilir
 RewriteRule ^yeni/?(.*)$ /$1 [L,R=301]
 ErrorDocument 404 /404.html
+<Files ".yayin-ozeti">
+  Require all denied
+</Files>
 AddDefaultCharset utf-8
 <IfModule mod_expires.c>
   ExpiresActive On

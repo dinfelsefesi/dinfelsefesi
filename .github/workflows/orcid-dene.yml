@@ -1,0 +1,22 @@
+name: ORCID denemesi
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  dene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python3 scripts/orcid_dene.py
+      - name: Sonucu kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/orcid/deneme.json
+          git commit -m "ORCID denemesi sonucu" || exit 0
+          git pull --rebase -q && git push -q
