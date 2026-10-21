@@ -43,3 +43,7 @@ Ana başlıkta ayrıca `kume` (`disiplin` | `tanri` | `bilgi-dil` | `insan-deger
 ## Türkçe makaleler (DergiPark)
 
 Eserler sayfası eser fişlerini ve `data/dergipark/` klasöründeki taramadan gelen Türkçe makaleleri tek listede gösterir. Liste konuya ve yayın türüne (kitap, makale, kitap tanıtımı, tercüme vb.) göre süzülür ve her derlemede yeniden üretilir. Makaleler ilişki ağına da eser düğümü olarak girer. Konu başlıkları sözlükten (`sozluk.yaml`) ve elle verilen kararlardan (`elle_tasnif.yaml`) gelir. Yanlış atanmış bir makale `elle_tasnif.yaml` dosyasına liste biçiminde karar yazılarak düzeltilir (ör. `karar: [din-dili]`); `karar: kapsam-disi` makaleyi listeden çıkarır. Kitap tanıtımı, çeviri ve söyleşiler `yayin_turu.yaml` dosyasında işaretlenir, konu başlıklarına katılmaz. Başlık yazımı hatalı olan makaleler `baslik_duzeltme.yaml` dosyasında düzeltilir. Her başlık sayfası o başlıktaki en yeni beş makaleyi gösterir. Yazar adı Türkiye akademisi listesindeki bir adla eşleşirse listeye bağlanır.
+
+## Akademisyen sayfaları
+
+Türkiye akademisi listesindeki her kişi için `/kisiler/akademi/<ad>/` adresinde bir sayfa kendiliğinden üretilir. Sayfada YÖK kaydındaki unvan ve kurum, DergiPark makaleleri, makalelerin girdiği başlıklar, ortak yazarlar ve makale başlığında adı geçen düşünür fişleri yer alır. Listeye `orcid` alanı eklenirse sayfada ORCID bağlantısı da görünür. Başlık sayfalarındaki "Türkiye'de bu konuda çalışanlar" bölümü aynı veriden üretilir.

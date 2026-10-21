@@ -417,6 +417,14 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .tr-makaleler h3{font-family:var(--display);font-style:italic;font-weight:500;color:var(--gold);font-size:1.1rem;margin:1.2rem 0 .2rem}
 .m-hepsi{margin:.3rem 0 0;font-size:.95rem}
 .m-yil-tel{display:none}
+.akademi-bag{font-style:italic;font-size:.95rem;margin:-.4rem 0 1.4rem}
+.akademi-not{margin-top:1.6rem;font-size:.88rem}
+.calisanlar{margin-top:2rem}
+ul.calisan-liste{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:var(--measure)}
+ul.calisan-liste li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
+ul.calisan-liste li a{text-decoration:none;color:var(--ink)}
+ul.calisan-liste li a:hover{color:var(--accent)}
+aside.yan ul.calisan-liste.dikey{flex-direction:column;align-items:flex-start;gap:.3rem}
 .k-ara{display:flex;align-items:center;gap:.6rem;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin:.8rem 0 .9rem}
 .k-ara input{font:inherit;font-style:normal;font-size:.98rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.4rem .9rem;width:min(100%,22rem)}
 .k-ara input:focus{outline:2px solid var(--accent);outline-offset:1px}
@@ -890,7 +898,7 @@ def render_baslik(k) -> str:
 <h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
-  <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}</div>
+  <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
 </div>"""
     gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
@@ -1062,7 +1070,7 @@ def turkiye_listesi() -> tuple[str, int]:
     kisiler = sorted(kisiler, key=lambda p: tr_anahtar(p['ad']))
     for p in kisiler:
         kim = p.get("kimlik") or fis_ad.get(p["ad"])
-        ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else e(p["ad"])
+        ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else f'<a href="{akademi_url(slugify(p["ad"]))}">{e(p["ad"])}</a>'
         durum = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
         yok = f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK</a>' if p.get("yok") else ""
         n = makale_say.get(ad_anahtari(p["ad"]), 0)
@@ -1430,10 +1438,7 @@ def dp_yazar_sayilari() -> dict:
 
 
 def dp_kunye(m, yazar_bag=True) -> str:
-    dizin = akademisyen_dizini() if yazar_bag else {}
-    yazar = ", ".join(
-        f'<a href="{SITE_URL}/kisiler/#{dizin[ad_anahtari(y)]}">{e(y)}</a>' if ad_anahtari(y) in dizin else e(y)
-        for y in m["yazarlar"])
+    yazar = ", ".join(akademisyen_bag(y) if yazar_bag else e(y) for y in m["yazarlar"])
     dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
     return yazar, dergi
 
@@ -1462,6 +1467,138 @@ def baslik_makaleleri(k) -> str:
 
 
 
+
+
+# ---------------------------------------------------------------- akademisyen sayfaları
+
+_AKADEMI = None
+
+
+def akademi_url(slug: str) -> str:
+    return f"{SITE_URL}/kisiler/akademi/{slug}/"
+
+
+def akademi_verisi() -> dict:
+    """Türkiye akademisi listesindeki her kişi için: liste kaydı, DergiPark makaleleri, başlık sayıları,
+    ortak yazarlar ve makale başlığında adı geçen düşünür fişleri. Anahtar: kişinin adres kısaltması (slug)."""
+    global _AKADEMI
+    if _AKADEMI is not None:
+        return _AKADEMI
+    _AKADEMI = {}
+    dosya = CONTENT / "turkiye_akademisi.yaml"
+    if not dosya.exists():
+        return _AKADEMI
+    kisiler = (yaml.safe_load(dosya.read_text(encoding="utf-8")) or {}).get("kisiler") or []
+    anahtar = {}
+    for p in kisiler:
+        slug = slugify(p["ad"])
+        _AKADEMI[slug] = {"p": p, "makaleler": [], "baslik": {}, "ortak": {}, "dusunur": {}}
+        anahtar[ad_anahtari(p["ad"])] = slug
+    soyad_say = {}
+    for (t, k), h in FIS.items():
+        if t == "kisi":
+            soyad_say[ad(t, h).split()[-1]] = soyad_say.get(ad(t, h).split()[-1], 0) + 1
+    dusunur = []
+    for (t, k), h in FIS.items():
+        if t == "kisi" and h.get("kapsam", "uluslararasi") == "uluslararasi":
+            adlar = [ad(t, h)] + ([ad(t, h).split()[-1]] if soyad_say[ad(t, h).split()[-1]] == 1 else [])
+            dusunur.append((k, re.compile("|".join(f"(?<![{HARF}]){re.escape(a)}(?![{HARF}])" for a in adlar))))
+    for m in dp_veri():
+        uyeler = list(dict.fromkeys(anahtar[ad_anahtari(y)] for y in m["yazarlar"] if ad_anahtari(y) in anahtar))
+        for s in uyeler:
+            v = _AKADEMI[s]
+            v["makaleler"].append(m)
+            for b in (m["konular"] or m["ilgili"]):
+                if ("baslik", b) in FIS:
+                    v["baslik"][b] = v["baslik"].get(b, 0) + 1
+            for k, desen in dusunur:
+                if desen.search(m["baslik"]):
+                    v["dusunur"][k] = v["dusunur"].get(k, 0) + 1
+            for o in uyeler:
+                if o != s:
+                    v["ortak"][o] = v["ortak"].get(o, 0) + 1
+    return _AKADEMI
+
+
+def akademisyen_bag(ad_: str) -> str:
+    """Makale listelerindeki yazar adı: Türkiye akademisinde ise kişinin sayfasına bağlanır."""
+    s = slugify(ad_)
+    v = akademi_verisi().get(s)
+    if v and ad_anahtari(v["p"]["ad"]) == ad_anahtari(ad_):
+        return f'<a href="{akademi_url(s)}">{e(ad_)}</a>'
+    return e(ad_)
+
+
+def baslik_calisanlari(k) -> str:
+    """Başlık sayfasındaki 'Türkiye'de bu konuda çalışanlar' bölümü (DergiPark makalelerine göre)."""
+    hedef = soy(k)
+    say = []
+    for s, v in akademi_verisi().items():
+        n = sum(1 for m in v["makaleler"] if set(m["konular"]) & hedef)
+        if n:
+            say.append((n, s, v))
+    if not say:
+        return ""
+    say.sort(key=lambda x: (-x[0], tr_anahtar(x[2]["p"]["ad"])))
+    ogeler = "".join(f'<li><a href="{akademi_url(s)}">{e(v["p"]["ad"])}</a> <span class="say">{n}</span></li>' for n, s, v in say)
+    return (f'<section class="calisanlar"><h2>Türkiye\'de bu konuda çalışanlar</h2>'
+            f'<p class="aciklama-kisa">Türkiye akademisi listesindeki akademisyenler, bu başlığa giren DergiPark makalelerinin sayısıyla.</p>'
+            f'<ul class="calisan-liste">{ogeler}</ul></section>')
+
+
+def render_akademisyen(s: str) -> str:
+    v = akademi_verisi()[s]
+    p = v["p"]
+    emekli = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
+    kurum = " · ".join(e(x) for x in [p.get("unvan"), p.get("universite"), p.get("fakulte")] if x)
+    baglar = []
+    if p.get("yok"):
+        baglar.append(f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK Akademik profili ↗</a>')
+    if p.get("orcid"):
+        baglar.append(f'<a class="dis" href="https://orcid.org/{e(p["orcid"])}" rel="noopener" target="_blank">ORCID {e(p["orcid"])} ↗</a>')
+    ana = [(b, n) for b, n in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
+    alt = [(b, n) for b, n in v["baslik"].items() if FIS[("baslik", b)].get("ust_baslik")]
+    sira = lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99))
+    konular = "".join(f'<li><a href="{fis_url("baslik", b)}">{e(FIS[("baslik", b)]["ad"])}</a> <span class="say">{n}</span></li>'
+                      for b, n in sorted(ana, key=sira) + sorted(alt, key=sira))
+    makaleler = []
+    for m in v["makaleler"]:
+        yazar = ", ".join(akademisyen_bag(y) if slugify(y) != s else e(y) for y in m["yazarlar"])
+        dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
+        tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        konu = ", ".join(bag("baslik", b) for b in m["konular"] if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
+        makaleler.append(f'<li><a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
+                         f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
+                         + (f'<span class="eser-konu"> · {konu}</span>' if konu else "") + '</span></li>')
+    yan = []
+    if konular:
+        yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
+    if v["dusunur"]:
+        yan.append('<h2>Makalelerinde adı geçen düşünürler</h2><ul>' +
+                   "".join(f'<li>{bag("kisi", k)}</li>' for k in sorted(v["dusunur"], key=lambda k: tr_anahtar(ad("kisi", FIS[("kisi", k)])))) + '</ul>')
+    if v["ortak"]:
+        yan.append('<h2>Ortak yazarları</h2><ul>' +
+                   "".join(f'<li><a href="{akademi_url(o)}">{e(akademi_verisi()[o]["p"]["ad"])}</a></li>'
+                           for o in sorted(v["ortak"], key=lambda o: tr_anahtar(akademi_verisi()[o]["p"]["ad"]))) + '</ul>')
+    if v["makaleler"]:
+        yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak=kisi-tr/{s}">İlişki ağında göster →</a>')
+    tarih = dp_tarama_tarihi()
+    metin = (f'<h2>DergiPark\'taki makaleleri <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
+             if makaleler else
+             '<p class="giris">DergiPark taramasında anahtar kelimelerinde din felsefesi geçen bir makalesi bulunamadı.</p>')
+    body = f"""
+<p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
+<h1>{e(p["ad"])}{emekli}</h1>
+<p class="giris">{kurum}</p>
+{f'<p class="akademi-bag">{" · ".join(baglar)}</p>' if baglar else ''}
+<div class="fis-duzen">
+  <div class="metin">{metin}
+    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır. Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+  </div>
+  <aside class="yan">{"".join(yan)}</aside>
+</div>"""
+    desc = f'{p["ad"]}, {p.get("unvan", "")}, {p.get("universite", "")}. Din felsefesi alanındaki makaleleri ve çalıştığı konular.'
+    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s))
 
 
 # ---------------------------------------------------------------- ilişki ağı
@@ -1562,7 +1699,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         aciklama = " · ".join(x for x in [p.get("unvan", ""), p.get("universite", "")] if x)
         dugumler.append({
             "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi",
-            "suz": "kisi-tr", "url": f"{SITE_URL}/kisiler/#k-{slugify(p['ad'])}", "aciklama": aciklama,
+            "suz": "kisi-tr", "url": akademi_url(slugify(p['ad'])), "aciklama": aciklama,
             "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}",
             "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
     baglar += [[a, b, n, "d"] for (a, b), n in dolayli.items()]
@@ -1590,6 +1727,14 @@ def onizleme_verisi(items) -> dict:
     for m in items:
         v[urlparse(entry_url(m)).path] = {"t": "Makale tanıtımı", "ad": m["title_tr"],
                                           "alt": f'{m.get("authors", "")} · {m.get("journal", "")}', "a": kisalt_metin(m.get("lead", ""))}
+    for s_, d in akademi_verisi().items():
+        p = d["p"]
+        konular = [FIS[("baslik", b)]["ad"] for b, _ in sorted(d["baslik"].items(), key=lambda x: -x[1])
+                   if not FIS[("baslik", b)].get("ust_baslik")][:4]
+        metin = (f'{len(d["makaleler"])} makale. Çalıştığı başlıklar: {", ".join(konular)}.' if d["makaleler"] and konular
+                 else f'{len(d["makaleler"])} makale.' if d["makaleler"] else "")
+        v[urlparse(akademi_url(s_)).path] = {"t": "Türkiye akademisi", "ad": p["ad"],
+                                             "alt": " · ".join(x for x in [p.get("unvan", ""), p.get("universite", "")] if x), "a": metin}
     return v
 
 
@@ -1761,6 +1906,8 @@ def main() -> None:
     for t in ("terim", "kisi"):
         yaz(KLASOR[t], render_dizin(t))
     yaz("eserler", render_eserler())
+    for s_ in akademi_verisi():
+        yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
     yaz("ag", render_ag(items))
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 

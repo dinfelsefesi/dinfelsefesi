@@ -148,7 +148,7 @@
     if (d.aciklama) { var p = document.createElement("p"); p.className = "ag-aciklama"; p.textContent = d.aciklama; panel.appendChild(p); }
     var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac";
     if (d.dis) { a.target = "_blank"; a.rel = "noopener"; }
-    a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen listesinde gösterin →" : d.dis ? "Makaleyi açın ↗" : "Fişi açın →";
+    a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen sayfasını açın →" : d.dis ? "Makaleyi açın ↗" : "Fişi açın →";
     panel.appendChild(a);
     if (d.makaleler && d.makaleler.length) {
       var mh = document.createElement("h3"); mh.textContent = "DergiPark'taki makaleleri (" + d.makaleler.length + ")"; panel.appendChild(mh);
