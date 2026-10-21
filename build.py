@@ -1689,9 +1689,11 @@ def render_ana(items) -> str:
 {f'''<div class="bolum-baslik"><h2>Önceki günlerin makaleleri</h2><a href="{SITE_URL}/gunun-makalesi/">Bütün günler</a></div>
 {"".join(makale_satiri(m) for m in items[1:5])}''' if len(items) > 1 else ""}
 """
-    gorsel = (paylasim_gorseli(f"makale-{items[0]['slug']}", f"Günün makalesi · {tr_date(items[0]['gun'])}", items[0]["title_tr"],
-                               f"{items[0].get('authors', '')} · {items[0].get('journal', '')}") if items else "")
-    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel)
+    # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
+    gorsel = f"{SITE_URL}/paylas/site.png"
+    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel,
+                desc="Din felsefesinin başlıkları, terimleri, kişileri ve eserleri. Türkiye'deki din felsefesi akademisyenleri, "
+                     "DergiPark'taki din felsefesi makaleleri ve her gün bir makale tanıtımı.")
 
 
 ABOUT = f"""
