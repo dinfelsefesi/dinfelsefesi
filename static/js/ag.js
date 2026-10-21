@@ -127,12 +127,20 @@
     secili = d; boya();
     // Seçili düğüm adrese yazılır; bir fişe gidip geri dönüldüğünde aynı düğüm yeniden seçili gelir.
     try { history.replaceState(null, "", location.pathname + (d ? "?odak=" + encodeURIComponent(d.id) : "")); } catch (_) {}
-    if (!d) { panel.hidden = true; return; }
+    if (!d) { panel.hidden = true; document.body.classList.remove("ag-panel-acik"); return; }
     var komsular = Array.from(d.komsu).map(function (id) { return byId[id]; })
       .sort(function (a, b) { return a.ad.localeCompare(b.ad, "tr"); });
     panel.innerHTML = "";
+    // telefonda kart kapalı (küçük) açılır; tutamağa dokununca büyür
+    var dar = kap.clientWidth <= 760;
+    panel.classList.toggle("kapali", dar);
+    var tut = document.createElement("button"); tut.type = "button"; tut.className = "ag-tutamak";
+    tut.setAttribute("aria-label", "Kartı büyüt ya da küçült");
+    tut.addEventListener("click", function () { panel.classList.toggle("kapali"); });
+    panel.appendChild(tut);
     var ust = document.createElement("p"); ust.className = "ust-etiket"; ust.textContent = d.turAd; panel.appendChild(ust);
     var h = document.createElement("h2"); h.textContent = d.ad; panel.appendChild(h);
+    if (dar) h.addEventListener("click", function () { panel.classList.toggle("kapali"); });
     if (d.aciklama) { var p = document.createElement("p"); p.className = "ag-aciklama"; p.textContent = d.aciklama; panel.appendChild(p); }
     var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac";
     if (d.dis) { a.target = "_blank"; a.rel = "noopener"; }
@@ -168,14 +176,15 @@
     kapat.addEventListener("click", function () { sec(null); });
     panel.appendChild(kapat);
     panel.hidden = false;
-    if (ortala || kap.clientWidth <= 760) ortalaDugum(d);
+    document.body.classList.add("ag-panel-acik");
+    if (ortala || dar) ortalaDugum(d);
   }
   function ortalaDugum(d, k) {
     k = k || Math.max(olcek, 1.3);
     var pay = (!panel.hidden && kap.clientWidth > 760) ? panel.offsetWidth / 2 : 0;
     // telefonda panel ekranın altını kapladığı için düğüm tuvalin üst kısmına getirilir
     var dar = kap.clientWidth <= 760 && !panel.hidden;
-    var t = d3.zoomIdentity.translate(kap.clientWidth / 2 - pay, kap.clientHeight * (dar ? 0.3 : 0.5)).scale(k).translate(-d.x, -d.y);
+    var t = d3.zoomIdentity.translate(kap.clientWidth / 2 - pay, kap.clientHeight * (dar ? 0.42 : 0.5)).scale(k).translate(-d.x, -d.y);
     svg.transition().duration(azHareket ? 0 : 600).call(yakinlik.transform, t);
   }
 

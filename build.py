@@ -529,6 +529,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-dugum.gizli,.ag-baglar line.gizli{display:none}
 .ag-panel{position:absolute;top:1rem;right:1rem;width:min(22rem,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.2rem 1rem;box-shadow:0 14px 34px -22px rgba(20,30,50,.45)}
 .ag-panel h2{margin:0 2rem .4rem 0;font-size:1.45rem}
+.ag-tutamak{display:none}
 .ag-panel .ag-aciklama{margin:0 0 .6rem;font-size:.95rem;color:var(--ink-soft)}
 .ag-panel .ag-ac{font-style:italic}
 .ag-panel h3{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.05rem;color:var(--gold);margin:1rem 0 .3rem}
@@ -591,7 +592,12 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
   .liste li,.makale,dl.kunye div{grid-template-columns:1fr;gap:.15rem}
   .kart{padding:1.1rem 1.1rem 1rem}
   /* Telefonda bilgi paneli ekranın altından açılan bir kart olur; ağın altında kaybolmaz. */
-  .ag-panel{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:55vh;z-index:30;border-radius:16px 16px 0 0;border-width:1px 0 0;padding:1rem 1.1rem calc(1rem + env(safe-area-inset-bottom));box-shadow:0 -12px 30px -18px rgba(20,30,50,.5)}
+  .ag-panel{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:60vh;z-index:30;border-radius:16px 16px 0 0;border-width:1px 0 0;padding:.3rem 1.1rem calc(1rem + env(safe-area-inset-bottom));box-shadow:0 -12px 30px -18px rgba(20,30,50,.5);transition:max-height .25s}
+  /* kapalı kart: yalnızca türü, adı ve açıklamanın başı görünür; tutamağa dokununca açılır */
+  .ag-panel.kapali{max-height:7.4rem;overflow:hidden}
+  .ag-tutamak{display:block;width:100%;background:none;border:0;padding:.35rem 0 .55rem;cursor:pointer}
+  .ag-tutamak::before{content:"";display:block;width:2.6rem;height:4px;border-radius:2px;background:var(--rule);margin:0 auto}
+  body.ag-panel-acik main{padding-bottom:9rem}
   .ag-tuval{height:62vh;min-height:360px}
   .ag-ipucu{display:none}
   table.kisiler thead{display:block}
