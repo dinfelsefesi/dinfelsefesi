@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: dini-tecrube
 ad: Dinî Tecrübe
-sira: 8
+sira: 9
 ust_baslik: ''
 kume: bilgi-dil
 ozet: Dinî ve mistik tecrübenin mahiyeti ile dinî inanç için bir bilgi kaynağı olup olamayacağı.

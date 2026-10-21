@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: tanri-alem-iliskisi
 ad: Tanrı-Âlem İlişkisi
-sira: 3
+sira: 4
 ust_baslik: ''
 kume: tanri
 ozet: Tanrı ile âlem arasındaki ilişkinin nasıl tasavvur edildiği ve Tanrı'nın âlemdeki etkinliğinin nasıl

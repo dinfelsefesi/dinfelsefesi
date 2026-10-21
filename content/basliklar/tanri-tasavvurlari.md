@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: tanri-tasavvurlari
 ad: Tanrı Tasavvurları
-sira: 1
+sira: 2
 ust_baslik: ''
 kume: tanri
 ozet: Klasik teizm, açık teizm ve süreç teizmi gibi farklı Tanrı tasavvurları ve bunların tutarlılığı.

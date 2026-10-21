@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: kotuluk-problemi
 ad: Kötülük Problemi
-sira: 6
+sira: 7
 ust_baslik: ''
 kume: tanri
 ozet: >-

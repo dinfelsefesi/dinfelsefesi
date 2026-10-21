@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: insan-tasavvurlari
 ad: İnsan Tasavvurları
-sira: 10
+sira: 11
 ust_baslik: ''
 kume: insan-deger
 ozet: İnsanın mahiyeti, Tanrı ile ilişkisi ve hayatın anlamı hakkındaki dinî ve felsefi anlayışlar.

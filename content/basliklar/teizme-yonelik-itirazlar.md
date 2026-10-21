@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: teizme-yonelik-itirazlar
 ad: Teizme Yönelik İtirazlar
-sira: 5
+sira: 6
 ust_baslik: ''
 kume: tanri
 ozet: Tanrı'nın varlığına ya da teizmin tutarlılığına karşı ileri sürülen argümanlar.

@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: din-felsefesi-tanim-yontem-tarih
 ad: "Din Felsefesi: Tanım, Yöntem, Tarih"
-sira: 16
+sira: 1
 ust_baslik: ''
 kume: disiplin
 ozet: Din felsefesinin konusu, yöntemi ve tarihî gelişimi ile Türkiye'deki din felsefesi çalışmaları.

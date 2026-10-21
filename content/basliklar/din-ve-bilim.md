@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: din-ve-bilim
 ad: Din ve Bilim
-sira: 13
+sira: 14
 ust_baslik: ''
 kume: din-bilim-kultur
 ozet: Dinî inançlar ile bilimsel bilgi arasındaki ilişki.

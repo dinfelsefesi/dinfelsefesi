@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: din-epistemolojisi
 ad: Din Epistemolojisi
-sira: 7
+sira: 8
 ust_baslik: ''
 kume: bilgi-dil
 ozet: Dinî inançların gerekçelendirilmesi, rasyonelliği ve bilgi değeri üzerine yürütülen tartışmalar.

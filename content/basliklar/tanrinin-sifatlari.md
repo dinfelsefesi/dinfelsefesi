@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: tanrinin-sifatlari
 ad: Tanrı'nın Sıfatları
-sira: 2
+sira: 3
 ust_baslik: ''
 kume: tanri
 ozet: Tanrı'ya nispet edilen zâtî ve fiilî sıfatların anlamı, tutarlılığı ve birbirleriyle ilişkisi.

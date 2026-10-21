@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: tanrinin-varliginin-delilleri
 ad: Tanrı'nın Varlığının Delilleri
-sira: 4
+sira: 5
 ust_baslik: ''
 kume: tanri
 ozet: Tanrı'nın varlığını temellendirmek için ileri sürülen argümanlar ve bunlara yöneltilen eleştiriler.

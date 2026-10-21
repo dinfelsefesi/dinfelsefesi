@@ -726,8 +726,8 @@ def render_makale(m: dict) -> str:
 # ---------------------------------------------------------------- başlıklar
 
 # Ana başlıklar bu tematik kümelerde gösterilir. Kümeler yalnızca görsel ayraçtır, kendi sayfaları yoktur.
-KUMELER = [("tanri", "Tanrı"), ("bilgi-dil", "Bilgi ve dil"), ("insan-deger", "İnsan ve değer"),
-           ("din-bilim-kultur", "Din, bilim ve kültür"), ("disiplin", "Disiplin")]
+KUMELER = [("disiplin", "Disiplin"), ("tanri", "Tanrı"), ("bilgi-dil", "Bilgi ve dil"), ("insan-deger", "İnsan ve değer"),
+           ("din-bilim-kultur", "Din, bilim ve kültür")]
 
 
 def kumeli_basliklar():
