@@ -1204,7 +1204,7 @@ def render_eserler() -> str:
                for t, a in ESER_TURLERI if say.get(t)]
     tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
-            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri ve DergiPark\'ta yayımlanan Türkçe din felsefesi makaleleri. '
+            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri ve DergiPark\'ta yayımlanan, anahtar kelimelerinde din felsefesi geçen makaleler. '
             f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
@@ -1321,7 +1321,7 @@ def dp_veri() -> list:
     sinif = {x["id"]: x for x in sonuc}
     for r in makaleler:
         x = sinif.get(r["id"]) or {}
-        if x.get("durum") == "kapsam-disi":
+        if x.get("durum") in ("kapsam-disi", "anahtar-kelime-yok"):
             continue
         basliklar = r.get("baslik") or {}
         dil = "tr-TR" if "tr-TR" in basliklar else next(iter(basliklar), "")
@@ -1345,6 +1345,7 @@ def dp_veri() -> list:
             "baglanti": doi or (baglanti[0] if baglanti else ""), "doi": bool(doi),
             "konular": [] if x.get("yayin_turu") else list(x.get("basliklar") or []),
             "ilgili": list(x.get("ilgili_basliklar") or []), "tur": x.get("yayin_turu") or "",
+            "kelimeler": dps.anahtar_kelimeler(r),
         })
     _DP.sort(key=lambda m: (m["tarih"], m["id"]), reverse=True)
     return _DP
@@ -1476,15 +1477,25 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
             adlar = [ad(t, h)] + ([ad(t, h).split()[-1]] if soyad_say[ad(t, h).split()[-1]] == 1 else [])
             desen = re.compile("|".join(f"(?<![{HARF}]){re.escape(a)}(?![{HARF}])" for a in adlar))
             dusunur.append((f"kisi/{k}", desen))
-    makaleler, dp_dugum, baglar = {}, [], []
+    # terim fişleri: adı makalenin anahtar kelimelerinde ya da başlığında (ekleriyle) geçerse bağlanır
+    terimler = [(f"terim/{k}", re.compile(f"(?<![{HARF}]){re.escape(tr_kucuk(ad(t, h)))}[{HARF}]*(?![{HARF}])"))
+                for (t, k), h in FIS.items() if t == "terim"]
+    makaleler, dp_dugum, baglar, dolayli = {}, [], [], {}
     for m in dp_veri():
         mid = f"dp/{m['id']}"
         uyeler = [ad_anahtari(y) for y in m["yazarlar"] if ad_anahtari(y) in liste_]
         kenar = [f"baslik/{b}" for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS]
         kenar += [f"kisi-tr/{slugify(liste_[a]['ad'])}" for a in uyeler]
         kenar += [did for did, desen in dusunur if desen.search(m["baslik"])]
+        metin = tr_kucuk(m["baslik"] + " | " + " | ".join(m["kelimeler"]))
+        kenar += [tid for tid, desen in terimler if desen.search(metin)]
         for a in uyeler:
             makaleler.setdefault(a, []).append(m)
+            # makaleler gizlendiğinde kişinin hangi başlık ve terimlerle çalıştığı dolaylı bağlarla görünür
+            for x in dict.fromkeys(kenar):
+                if x.startswith(("baslik/", "terim/")):
+                    anahtar = (f"kisi-tr/{slugify(liste_[a]['ad'])}", x)
+                    dolayli[anahtar] = dolayli.get(anahtar, 0) + 1
         if not kenar:
             continue
         tur = DP_TUR_ESER[m["tur"]]
@@ -1501,6 +1512,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
             "suz": "kisi-tr", "url": f"{SITE_URL}/kisiler/#k-{slugify(p['ad'])}", "aciklama": aciklama,
             "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}",
             "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
+    baglar += [[a, b, n, "d"] for (a, b), n in dolayli.items()]
     return dugumler + dp_dugum, baglar
 
 
@@ -1537,7 +1549,7 @@ def render_ag(items) -> str:
                        for k, a, r, sinif in suzgec if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki Türkçe makaleler (küçük noktalar) konu başlıklarına, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Türkiye akademisinden yazarlar içi boş halkalarla gösterilir.</p>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki Türkçe makaleler (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Türkiye akademisinden yazarlar içi boş halkalarla gösterilir. Eserler gizlendiğinde yazarlar, makaleleri üzerinden ilişkili oldukları başlık ve terimlere doğrudan bağlanır.</p>
 <div class="ag-arac">
   <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
   <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>

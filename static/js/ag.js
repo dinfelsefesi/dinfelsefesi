@@ -12,13 +12,18 @@
   var azHareket = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var dugumler = V.dugumler.map(function (d) { return Object.assign({}, d); });
-  var baglar = V.baglar.map(function (b) { return { source: b[0], target: b[1], w: b[2] || 1 }; });
+  // b[3] === "d": dolaylı bağ (kişi -> başlık/terim, makaleleri üzerinden). Yalnızca eserler gizliyken görünür.
+  var baglar = V.baglar.map(function (b) { return { source: b[0], target: b[1], w: b[2] || 1, dolayli: b[3] === "d" }; });
   var suz = function (d) { return d.tur; };
   var byId = {};
-  dugumler.forEach(function (d) { byId[d.id] = d; d.komsu = new Set(); });
-  baglar.forEach(function (b) { byId[b.source].komsu.add(b.target); byId[b.target].komsu.add(b.source); });
+  dugumler.forEach(function (d) { byId[d.id] = d; d.dogrudan = new Set(); d.dolayliK = new Set(); });
+  baglar.forEach(function (b) {
+    var k = b.dolayli ? "dolayliK" : "dogrudan";
+    byId[b.source][k].add(b.target); byId[b.target][k].add(b.source);
+  });
   dugumler.forEach(function (d) {
-    d.derece = d.komsu.size;
+    d.komsu = d.dogrudan;
+    d.derece = d.dogrudan.size;
     d.r = d.kucuk ? 3 + 1.2 * Math.sqrt(d.derece) : 5 + 3.2 * Math.sqrt(d.derece);
   });
 
@@ -43,7 +48,7 @@
   var sim = d3.forceSimulation(dugumler)
     .force("bag", d3.forceLink(baglar).id(function (d) { return d.id; })
       .distance(function (l) { return (l.source.kucuk || l.target.kucuk ? 30 : 55) + 16 * Math.sqrt(Math.min(30, Math.max(l.source.derece || 1, l.target.derece || 1))); })
-      .strength(0.45))
+      .strength(function (l) { return l.dolayli ? 0.08 : 0.45; }))
     .force("itme", d3.forceManyBody().strength(function (d) { return d.kucuk ? -40 : -260 - 34 * Math.min(d.derece, 30); }))
     .force("carpisma", d3.forceCollide(function (d) { return d.r + (d.kucuk ? 3 : 18); }))
     .force("x", d3.forceX(genislik / 2).strength(0.05))
@@ -73,6 +78,19 @@
 
   // Vurgulama
   var secili = null, uzerinde = null, gizliTurler = new Set(), aramaEslesen = null;
+  function bagGizli(b) {
+    if (gizliTurler.has(suz(b.source)) || gizliTurler.has(suz(b.target))) return true;
+    return b.dolayli && !gizliTurler.has("eser");
+  }
+  function komsulariKur() {
+    var eserGizli = gizliTurler.has("eser");
+    dugumler.forEach(function (d) {
+      var s = new Set();
+      d.dogrudan.forEach(function (x) { if (!gizliTurler.has(suz(byId[x]))) s.add(x); });
+      if (eserGizli) d.dolayliK.forEach(function (x) { if (!gizliTurler.has(suz(byId[x]))) s.add(x); });
+      d.komsu = s;
+    });
+  }
   function odakKumesi() {
     var d = uzerinde || secili;
     if (!d) return null;
@@ -85,7 +103,7 @@
       .classed("gizli", function (d) { return gizliTurler.has(suz(d)); });
     cizgi.classed("vurgu", function (b) { var d = uzerinde || secili; return d && (b.source.id === d.id || b.target.id === d.id); })
       .classed("soluk", function (b) { var d = uzerinde || secili; return (d && b.source.id !== d.id && b.target.id !== d.id) || !!aramaEslesen; })
-      .classed("gizli", function (b) { return gizliTurler.has(suz(b.source)) || gizliTurler.has(suz(b.target)); });
+      .classed("gizli", bagGizli);
     etiketleriAyarla();
   }
   function etiketleriAyarla() {
@@ -165,6 +183,8 @@
       var kod = b.dataset.tur, acik = b.getAttribute("aria-pressed") === "true";
       b.setAttribute("aria-pressed", acik ? "false" : "true");
       if (acik) gizliTurler.add(kod); else gizliTurler.delete(kod);
+      komsulariKur();
+      if (secili && !gizliTurler.has(suz(secili))) { sec(secili); return; }
       if (secili && gizliTurler.has(suz(secili))) sec(null); else boya();
     });
   });

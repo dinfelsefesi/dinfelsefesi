@@ -2,32 +2,33 @@
  "makale": 401,
  "siniflandirilamayan": 0,
  "durumlar": {
-  "kapsam-disi": 35,
-  "tanitim-ceviri": 22
+  "kapsam-disi": 21,
+  "anahtar-kelime-yok": 70,
+  "tanitim-ceviri": 17
  },
  "yayin_turleri": {
-  "kitap-tanitimi": 20,
+  "kitap-tanitimi": 15,
   "ceviri": 1,
   "ceviri-degerlendirmesi": 1
  },
  "baslik_sayilari": {
-  "din-epistemolojisi": 60,
-  "din-ve-ahlak": 53,
-  "din-ve-bilim": 44,
-  "tanri-tasavvurlari": 38,
-  "tanri-alem-iliskisi": 37,
-  "din-dili": 36,
-  "kotuluk-problemi": 32,
-  "tanrinin-varliginin-delilleri": 31,
-  "olum-ve-otesi": 29,
-  "tanrinin-sifatlari": 26,
-  "insan-tasavvurlari": 25,
-  "teizme-yonelik-itirazlar": 21,
+  "din-epistemolojisi": 50,
+  "din-ve-ahlak": 40,
+  "din-ve-bilim": 38,
+  "tanri-alem-iliskisi": 34,
+  "tanri-tasavvurlari": 31,
+  "din-dili": 30,
+  "kotuluk-problemi": 28,
+  "tanrinin-varliginin-delilleri": 27,
+  "tanrinin-sifatlari": 23,
+  "olum-ve-otesi": 23,
+  "insan-tasavvurlari": 22,
+  "teizme-yonelik-itirazlar": 20,
   "din-felsefesi-tanim-yontem-tarih": 20,
-  "ozgurluk": 19,
-  "dini-tecrube": 18,
-  "dini-cesitlilik": 17,
-  "dini-pratik": 11
+  "ozgurluk": 16,
+  "dini-tecrube": 16,
+  "dini-cesitlilik": 14,
+  "dini-pratik": 7
  },
  "makaleler": [
   {
@@ -67,11 +68,9 @@
   {
    "id": "1931455",
    "yil": "2026",
-   "basliklar": [
-    "din-epistemolojisi",
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1886013",
@@ -103,18 +102,16 @@
   {
    "id": "1749131",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-bilim"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1899641",
    "yil": "2026",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1960588",
@@ -153,10 +150,9 @@
   {
    "id": "1818186",
    "yil": "2025",
-   "basliklar": [
-    "din-dili"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1826273",
@@ -170,18 +166,16 @@
   {
    "id": "1817489",
    "yil": "2025",
-   "basliklar": [
-    "din-dili"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1859690",
    "yil": "2026",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1718300",
@@ -245,21 +239,16 @@
   {
    "id": "1708476",
    "yil": "2025",
-   "basliklar": [
-    "kotuluk-problemi",
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1749626",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-ahlak",
-    "insan-tasavvurlari",
-    "ozgurluk"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1735297",
@@ -289,10 +278,9 @@
   {
    "id": "1743330",
    "yil": "2025",
-   "basliklar": [
-    "tanrinin-sifatlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1743211",
@@ -331,10 +319,9 @@
   {
    "id": "1674588",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1772337",
@@ -347,10 +334,9 @@
   {
    "id": "1800748",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1813913",
@@ -366,13 +352,8 @@
    "id": "1850930",
    "yil": "2025",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": [
-    "din-ve-bilim",
-    "tanri-alem-iliskisi",
-    "tanrinin-varliginin-delilleri"
-   ]
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1823253",
@@ -404,25 +385,22 @@
    "id": "1811956",
    "yil": "2025",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1821231",
    "yil": "2025",
-   "basliklar": [
-    "tanrinin-sifatlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1843168",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-ahlak",
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1755648",
@@ -533,12 +511,9 @@
   {
    "id": "1630898",
    "yil": "2025",
-   "basliklar": [
-    "kotuluk-problemi",
-    "tanri-tasavvurlari",
-    "tanrinin-varliginin-delilleri"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1726257",
@@ -667,12 +642,9 @@
   {
    "id": "1633072",
    "yil": "2025",
-   "basliklar": [
-    "din-ve-ahlak",
-    "insan-tasavvurlari",
-    "ozgurluk"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1621713",
@@ -689,8 +661,8 @@
    "id": "1650396",
    "yil": "2025",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1593644",
@@ -713,11 +685,9 @@
   {
    "id": "1660801",
    "yil": "2025",
-   "basliklar": [
-    "din-epistemolojisi",
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1591853",
@@ -772,10 +742,9 @@
   {
    "id": "1580087",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-bilim"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1711075",
@@ -795,20 +764,16 @@
   {
    "id": "1717958",
    "yil": "2025",
-   "basliklar": [
-    "dini-cesitlilik",
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1630815",
    "yil": "2025",
-   "basliklar": [
-    "din-epistemolojisi",
-    "din-ve-bilim"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1602239",
@@ -831,19 +796,16 @@
   {
    "id": "1601799",
    "yil": "2024",
-   "basliklar": [
-    "tanri-alem-iliskisi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1602426",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak",
-    "dini-pratik"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1590689",
@@ -997,10 +959,9 @@
   {
    "id": "1600740",
    "yil": "2024",
-   "basliklar": [
-    "dini-cesitlilik"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1584249",
@@ -1023,34 +984,30 @@
   {
    "id": "1545239",
    "yil": "2024",
-   "basliklar": [
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1577273",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1590101",
    "yil": "2024",
-   "basliklar": [
-    "din-dili",
-    "kotuluk-problemi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1544369",
    "yil": "2024",
-   "basliklar": [
-    "tanrinin-varliginin-delilleri"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1576315",
@@ -1091,32 +1048,30 @@
   {
    "id": "1560203",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1576957",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1585645",
    "yil": "2024",
-   "basliklar": [
-    "dini-pratik"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1608437",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1534063",
@@ -1147,11 +1102,8 @@
    "id": "1585276",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": [
-    "din-ve-ahlak"
-   ]
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1554592",
@@ -1179,34 +1131,30 @@
   {
    "id": "1535032",
    "yil": "2024",
-   "basliklar": [
-    "dini-pratik"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1549432",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1589698",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1511163",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-bilim",
-    "tanrinin-varliginin-delilleri"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1515595",
@@ -1220,11 +1168,8 @@
    "id": "1578199",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": [
-    "tanrinin-sifatlari"
-   ]
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1557913",
@@ -1237,10 +1182,9 @@
   {
    "id": "1456108",
    "yil": "2024",
-   "basliklar": [
-    "din-dili"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1477098",
@@ -1262,27 +1206,23 @@
   {
    "id": "1491656",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak",
-    "insan-tasavvurlari",
-    "ozgurluk"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1468461",
    "yil": "2024",
-   "basliklar": [
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1451987",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1463105",
@@ -1295,10 +1235,9 @@
   {
    "id": "1465449",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1456994",
@@ -1342,11 +1281,9 @@
   {
    "id": "1413592",
    "yil": "2024",
-   "basliklar": [
-    "dini-tecrube",
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1418963",
@@ -1359,35 +1296,30 @@
   {
    "id": "1462519",
    "yil": "2024",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1423003",
    "yil": "2024",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1461043",
    "yil": "2024",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1458979",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-bilim",
-    "tanrinin-varliginin-delilleri",
-    "teizme-yonelik-itirazlar"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1444345",
@@ -1403,11 +1335,8 @@
    "id": "1486705",
    "yil": "2024",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": [
-    "din-ve-ahlak"
-   ]
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1475234",
@@ -1420,11 +1349,9 @@
   {
    "id": "1495214",
    "yil": "2024",
-   "basliklar": [
-    "tanri-alem-iliskisi",
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1479899",
@@ -1474,10 +1401,9 @@
   {
    "id": "1398765",
    "yil": "2023",
-   "basliklar": [
-    "din-ve-ahlak"
-   ],
-   "kaynak": "elle"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1398785",
@@ -1490,26 +1416,23 @@
   {
    "id": "1424404",
    "yil": "2024",
-   "basliklar": [
-    "din-ve-ahlak",
-    "dini-pratik"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1391909",
    "yil": "2023",
-   "basliklar": [
-    "din-dili"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1393557",
    "yil": "2023",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1387756",
@@ -1530,8 +1453,8 @@
    "id": "1404388",
    "yil": "2023",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1332231",
@@ -1585,10 +1508,9 @@
   {
    "id": "1412512",
    "yil": "2023",
-   "basliklar": [
-    "din-dili"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1332257",
@@ -1601,13 +1523,9 @@
   {
    "id": "1381474",
    "yil": "2023",
-   "basliklar": [
-    "din-ve-bilim",
-    "kotuluk-problemi",
-    "tanri-alem-iliskisi",
-    "tanrinin-sifatlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1385697",
@@ -1659,25 +1577,22 @@
    "id": "1392359",
    "yil": "2023",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1400312",
    "yil": "2023",
-   "basliklar": [
-    "dini-cesitlilik"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1365731",
    "yil": "2023",
-   "basliklar": [
-    "din-epistemolojisi",
-    "dini-tecrube"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1362670",
@@ -1692,19 +1607,16 @@
   {
    "id": "1409351",
    "yil": "2023",
-   "basliklar": [
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1343310",
    "yil": "2023",
-   "basliklar": [
-    "din-ve-ahlak",
-    "tanri-tasavvurlari"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1343637",
@@ -1735,26 +1647,22 @@
    "id": "1447930",
    "yil": "2023",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1448097",
    "yil": "2023",
    "basliklar": [],
-   "durum": "tanitim-ceviri",
-   "yayin_turu": "kitap-tanitimi",
-   "ilgili_basliklar": [
-    "din-felsefesi-tanim-yontem-tarih"
-   ]
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1448109",
    "yil": "2023",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1274270",
@@ -1794,10 +1702,9 @@
   {
    "id": "1351001",
    "yil": "2023",
-   "basliklar": [
-    "olum-ve-otesi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1351014",
@@ -2396,10 +2303,9 @@
   {
    "id": "1747345",
    "yil": "2021",
-   "basliklar": [
-    "din-epistemolojisi"
-   ],
-   "kaynak": "anahtar"
+   "basliklar": [],
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "1007812",
@@ -2454,8 +2360,8 @@
    "id": "1009307",
    "yil": "2021",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "971476",
@@ -2560,8 +2466,8 @@
    "id": "933307",
    "yil": "2021",
    "basliklar": [],
-   "durum": "kapsam-disi",
-   "kaynak": "elle"
+   "durum": "anahtar-kelime-yok",
+   "kaynak": "tarama"
   },
   {
    "id": "855986",

@@ -85,6 +85,10 @@ def siniflandir():
                         kalip_say[(b, kal)] += 1
                         break
         kaynak = "anahtar"
+        if "anahtar" not in (r.get("eslesme") or ["anahtar"]):
+            # Yalnızca DergiPark konu alanı "Din Felsefesi" olan, anahtar kelimelerinde din felsefesi geçmeyen makaleler alınmaz.
+            sonuc.append({"id": r["id"], "yil": yil(r), "basliklar": [], "durum": "anahtar-kelime-yok", "kaynak": "tarama"})
+            continue
         if (ELLE.get(r["id"]) or {}).get("karar") == "kapsam-disi":  # kapsam dışı kararı her şeyden önce gelir
             sonuc.append({"id": r["id"], "yil": yil(r), "basliklar": [], "durum": "kapsam-disi", "kaynak": "elle"})
             continue
