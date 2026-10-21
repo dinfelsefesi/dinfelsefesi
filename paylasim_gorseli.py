@@ -55,7 +55,13 @@ def kart(hedef: Path, ust: str, baslik: str, alt: str = ""):
             y += 38
     c.line([x, Y - 128, G - x, Y - 128], fill=CIZGI, width=2)
     c.line([x, Y - 122, G - x, Y - 122], fill=CIZGI, width=1)
-    c.text((x, Y - 108), "Din Felsefesi", font=_font(YAZI, 38), fill=MUREKKEP)
+    logo_yolu = KOK / "static" / "img" / "logo-512.png"
+    yx = x
+    if logo_yolu.exists():
+        logo = Image.open(logo_yolu).convert("RGBA").resize((54, 54), Image.LANCZOS)
+        im.paste(logo, (x, Y - 104), logo)
+        yx = x + 70
+    c.text((yx, Y - 104), "Din Felsefesi", font=_font(YAZI, 38), fill=MUREKKEP)
     f2 = _font(EGIK, 28, "Regular")
     sag = "dinfelsefesi.com.tr"
     c.text((G - x - c.textlength(sag, font=f2), Y - 100), sag, font=f2, fill=SOLUK)

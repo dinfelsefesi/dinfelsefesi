@@ -274,8 +274,10 @@ a:hover{color:var(--accent)}
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
 header.site{background:var(--paper);border-bottom:3px double var(--rule)}
-header.site .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
-.marka{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.1rem}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
+.marka{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.75rem}
+.marka-yazi{display:flex;flex-direction:column;gap:.1rem}
+.marka-logo{width:44px;height:44px;flex:none}
 .marka b{font-family:var(--display);font-weight:500;font-size:1.75rem;line-height:1.05}
 .marka small{order:2;font-style:italic;font-size:.86rem;color:var(--ink-soft)}
 nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.04rem}
@@ -584,6 +586,10 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <meta name="description" content="{e(desc)}">
 {canon}
 {og}
+<link rel="icon" href="{SITE_URL}/static/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{SITE_URL}/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="{SITE_URL}/static/img/apple-touch-icon.png">
+<meta name="theme-color" content="#f8f4ec">
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -593,7 +599,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="marka" href="{SITE_URL}/"><b>{e(SITE_NAME)}</b><small>Türkçe başvuru kaynağı</small></a>
+  <a class="marka" href="{SITE_URL}/"><img class="marka-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="44" height="44"><span class="marka-yazi"><b>{e(SITE_NAME)}</b><small>Türkçe başvuru kaynağı</small></span></a>
   <nav class="ana" aria-label="Ana menü">{menu}</nav>
 </div></header>
 {deneme}
@@ -1414,6 +1420,8 @@ AddDefaultCharset utf-8
         f'<h1>Sayfa bulunamadı</h1><p class="giris">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir. '
         f'<a href="{SITE_URL}/">Ana sayfaya</a> dönebilir ya da <a href="{SITE_URL}/basliklar/">başlıklara</a> göz atabilirsiniz.</p>'),
         encoding="utf-8")
+    if (ROOT / "static" / "img" / "favicon.ico").exists():
+        shutil.copy(ROOT / "static" / "img" / "favicon.ico", OUT / "favicon.ico")
     (OUT / "google08c007317a4ad095.html").write_text("google-site-verification: google08c007317a4ad095.html", encoding="utf-8")
     if (ROOT / "static").exists():
         shutil.copytree(ROOT / "static", OUT / "static")
