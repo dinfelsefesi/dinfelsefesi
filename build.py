@@ -437,6 +437,18 @@ table.kisiler tbody tr:hover{background:var(--panel)}
 .emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
+.eser-konu-sec{margin:.9rem 0 .6rem}
+.eser-konu-sec button{font-size:.9rem;padding:.22rem .75rem}
+.eser-konu-sec button.alt{font-style:italic}
+.eser-konu-sec button.plan{opacity:.5}
+.eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
+.eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
+.eser-tur-sec button{font-size:.9rem;padding:.22rem .75rem}
+.eser-sayi{font-style:italic;font-size:.9rem;color:var(--ink-soft);margin:.6rem 0 .2rem}
+ul.eser-liste{list-style:none;margin:0;padding:0;max-width:52rem}
+ul.eser-liste li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
+ul.eser-liste li[hidden]{display:none}
+.eser-konu{font-style:italic}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
 .eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
 .eser-ad:hover{color:var(--accent)}
@@ -1029,7 +1041,7 @@ def turkiye_listesi() -> tuple[str, int]:
         n = makale_say.get(ad_anahtari(p["ad"]), 0)
         if n:
             from urllib.parse import quote
-            yok += f' <a class="k-makale" href="{SITE_URL}/eserler/?ara={quote(tr_kucuk(p["ad"]))}#makaleler">{n} makale</a>'
+            yok += f' <a class="k-makale" href="{SITE_URL}/eserler/?ara={quote(tr_kucuk(p["ad"]))}">{n} makale</a>'
         ara = tr_kucuk(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
         satirlar.append(f'<tr id="k-{slugify(p["ad"])}" data-ara="{e(ara)}" data-unvan="{UNVAN_SIRA.get(p.get("unvan"), 9)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
                         f'<td data-etiket="Unvan">{e(p.get("unvan"))}{durum}</td>'
@@ -1111,30 +1123,49 @@ TUR_COGUL = [("kitap", "Kitaplar"), ("kitap-bolumu", "Kitap bölümleri"), ("mak
              ("bildiri", "Bildiriler"), ("tez", "Tezler")]
 
 
-def tur_secici(eserler) -> str:
-    sayi = {t: sum(1 for k in eserler if FIS[("eser", k)].get("eser_turu") == t) for t, _ in TUR_COGUL}
-    dugmeler = [f'<button type="button" data-secim="" aria-pressed="true">Tümü <span class="say">{len(eserler)}</span></button>']
-    for t, a in TUR_COGUL:
-        if sayi[t]:
-            dugmeler.append(f'<button type="button" data-secim="{t}" aria-pressed="false">{a} <span class="say">{sayi[t]}</span></button>')
-    return f'<div class="tur-secici" role="group" aria-label="Eser türü">{"".join(dugmeler)}</div>'
+# Eserler sayfası: eser fişleri ve DergiPark'taki Türkçe makaleler tek listede, konuya ve türe göre süzülür.
+ESER_TURLERI = [("kitap", "Kitaplar"), ("kitap-bolumu", "Kitap bölümleri"), ("makale", "Makaleler"),
+                ("bildiri", "Bildiriler"), ("tez", "Tezler"), ("kitap-tanitimi", "Kitap tanıtımları"),
+                ("ceviri", "Tercümeler"), ("soylesi", "Söyleşiler")]
+DP_TUR_ESER = {"": "makale", "kitap-tanitimi": "kitap-tanitimi", "ceviri": "ceviri",
+               "ceviri-degerlendirmesi": "ceviri", "soylesi": "soylesi"}
 
 
-TUR_SECICI_JS = """<script>
-(function(){
-  var d=document.querySelectorAll('.tur-secici:not(.sekmeler) button');
-  function uygula(t){
-    d.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.secim===t?'true':'false');});
-    document.querySelectorAll('ul.eserler li').forEach(function(li){li.hidden = !!t && li.dataset.tur!==t;});
-    document.querySelectorAll('ul.eserler').forEach(function(ul){
-      var bos=!ul.querySelector('li:not([hidden])'); ul.hidden=bos;
-      var h=ul.previousElementSibling; if(h && h.tagName==='H3'){h.hidden=bos;}
-    });
-    document.querySelectorAll('.eser-bolum').forEach(function(s){s.hidden=!s.querySelector('ul.eserler:not([hidden])');});
-  }
-  d.forEach(function(b){b.addEventListener('click',function(){uygula(b.dataset.secim);});});
-})();
-</script>"""
+def atalar(b) -> set:
+    out = set()
+    while b and ("baslik", b) in FIS:
+        out.add(b)
+        b = FIS[("baslik", b)].get("ust_baslik")
+    return out
+
+
+def eser_ogeleri() -> list:
+    """Eserler sayfasındaki bütün öğeler: önce eser fişleri, ardından DergiPark makaleleri (yeniden eskiye)."""
+    ogeler = []
+    fisler = sorted([k for (t, k) in FIS if t == "eser"],
+                    key=lambda k: (TUR_SIRA.get(FIS[("eser", k)].get("eser_turu"), 9), str(FIS[("eser", k)].get("yil", "")),
+                                   tr_anahtar(FIS[("eser", k)]["baslik"])))
+    for k in fisler:
+        h = FIS[("eser", k)]
+        konu = set()
+        for b in liste(h.get("basliklar")):
+            konu |= atalar(b)
+        yazar_ad = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
+        ogeler.append({"html": eser_satiri(k), "tur": h.get("eser_turu", ""), "konu": konu,
+                       "ara": tr_kucuk(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
+    for m in dp_veri():
+        yazar, dergi = dp_kunye(m)
+        tur = DP_TUR_ESER[m["tur"]]
+        konu = set(m["konular"] or m["ilgili"])
+        etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
+                            if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
+        html_ = (f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{etiket}'
+                 f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
+                 + (f'<span class="eser-konu"> · {e(konu_ad)}</span>' if konu_ad else "") + '</span>')
+        ogeler.append({"html": html_, "tur": tur, "konu": konu,
+                       "ara": tr_kucuk(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
+    return ogeler
 
 
 def eser_satiri(k) -> str:
@@ -1152,57 +1183,75 @@ def eser_satiri(k) -> str:
         bilgi.append(f'<a class="dis" href="{e(hedef)}" rel="noopener">{etiket}</a>')
     if h.get("acik_erisim") == "evet":
         bilgi.append('<span class="ae">Açık erişim</span>')
-    return (f'<li data-tur="{e(h.get("eser_turu", ""))}"><a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
-            f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span></li>')
+    return (f'<a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
+            f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span>')
 
 
 def render_eserler() -> str:
-    eserler = [k for (t, k) in FIS if t == "eser"]
-    def sirala(ks):
-        return sorted(ks, key=lambda k: (TUR_SIRA.get(FIS[("eser", k)].get("eser_turu"), 9),
-                                         str(FIS[("eser", k)].get("yil", "")), tr_anahtar(FIS[("eser", k)]["baslik"])))
-    anas = ana_basliklar()
-    gezinti, bolumler, yerlesen = [], [], set()
-    for a in anas:
-        hedef = soy(a)
-        ilgili = [k for k in eserler if set(liste(FIS[("eser", k)].get("basliklar"))) & hedef]
-        n = len(ilgili)
-        gezinti.append(f'<li class="{"dolu" if n else "plan"}">'
-                       + (f'<a href="#{a}">{e(FIS[("baslik", a)]["ad"])}</a> <span class="say">{n}</span>' if n
-                          else f'<span>{e(FIS[("baslik", a)]["ad"])}</span>') + '</li>')
-        if not n:
-            continue
-        ic = []
-        dogrudan = [k for k in ilgili if a in liste(FIS[("eser", k)].get("basliklar"))]
-        if dogrudan:
-            ic.append(f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(dogrudan))}</ul>')
-        for alt in sorted(COCUK.get(a, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
-            altdaki = [k for k in ilgili if set(liste(FIS[("eser", k)].get("basliklar"))) & soy(alt)]
-            if altdaki:
-                ic.append(f'<h3><a href="{fis_url("baslik", alt)}">{e(FIS[("baslik", alt)]["ad"])}</a></h3>'
-                          f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(altdaki))}</ul>')
-        yerlesen |= set(ilgili)
-        bolumler.append(f'<section class="eser-bolum" id="{a}"><h2><a href="{fis_url("baslik", a)}">{e(FIS[("baslik", a)]["ad"])}</a> '
-                        f'<span class="say">{n} eser</span></h2>{"".join(ic)}</section>')
-    kalan = [k for k in eserler if k not in yerlesen]
-    if kalan:
-        bolumler.append(f'<section class="eser-bolum"><h2>Başlığı belirlenmemiş eserler</h2>'
-                        f'<ul class="eserler">{"".join(eser_satiri(k) for k in sirala(kalan))}</ul></section>')
-    secilmis = (f'<p class="aciklama-kisa">Din felsefesinin temel kitap ve makaleleri, ait oldukları başlıklara göre. '
-                f'Her başlığın altında eserler türe ve yayın yılına göre sıralanır.</p>'
-                f'<nav class="baslik-gezinti" aria-label="Başlıklar"><ul>{"".join(gezinti)}</ul></nav>'
-                f'{tur_secici(eserler)}'
-                + ("".join(bolumler) or '<p class="giris">Henüz eser fişi eklenmedi.</p>'))
-    makaleler, m_say = makale_tablosu()
-    sekmeler = [("secilmis", "Seçilmiş eserler", len(eserler), "eser", secilmis),
-                ("makaleler", "Türkçe makaleler", m_say, "makale", makaleler)]
-    dugmeler = "".join(f'<button type="button" data-sekme="{kod}" aria-pressed="{"true" if i == 0 else "false"}">{ad_} '
-                       f'<span class="say">{n}</span></button>' for i, (kod, ad_, n, _, _) in enumerate(sekmeler))
-    bolum = "".join(f'<section class="eser-sekme sekme-bolum" id="{kod}"><h2 class="sekme-ad">{ad_} <span class="say">{n} {birim}</span></h2>{ic}</section>'
-                    for kod, ad_, n, birim, ic in sekmeler)
+    ogeler = eser_ogeleri()
+    satirlar = "".join(f'<li data-tur="{e(o["tur"])}" data-konu=" {e(" ".join(sorted(o["konu"])))} " data-ara="{e(o["ara"])}">{o["html"]}</li>'
+                       for o in ogeler)
+    konular = [f'<button type="button" data-konu="" aria-pressed="true">Bütün konular <span class="say">{len(ogeler)}</span></button>']
+    for k in ana_basliklar():
+        konular.append(f'<button type="button" data-konu="{k}" aria-pressed="false">{e(FIS[("baslik", k)]["ad"])} <span class="say"></span></button>')
+        for c in sorted(COCUK.get(k, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
+            konular.append(f'<button type="button" class="alt" data-konu="{c}" aria-pressed="false">{e(FIS[("baslik", c)]["ad"])} <span class="say"></span></button>')
+    say = {}
+    for o in ogeler:
+        say[o["tur"]] = say.get(o["tur"], 0) + 1
+    turler = [f'<button type="button" data-tur="" aria-pressed="true">Tümü <span class="say">{len(ogeler)}</span></button>']
+    turler += [f'<button type="button" data-tur="{t}" aria-pressed="false">{a} <span class="say">{say[t]}</span></button>'
+               for t, a in ESER_TURLERI if say.get(t)]
+    tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
-            f'<div class="tur-secici sekmeler eser-sekmeler" role="group" aria-label="Eser grubu">{dugmeler}</div>{bolum}')
-    return page(f"Eserler · {SITE_NAME}", body + TUR_SECICI_JS + MAKALE_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
+            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri ve DergiPark\'ta yayımlanan Türkçe din felsefesi makaleleri. '
+            f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
+            f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
+            f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
+            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            f'<div class="tur-secici eser-konu-sec" role="group" aria-label="Konu">{"".join(konular)}</div>'
+            f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div>'
+            '<label class="k-ara"><span>Ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label></div>'
+            f'<p class="eser-sayi"><span id="eser-say"></span></p>'
+            f'<ul class="eser-liste">{satirlar}</ul><p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
+    return page(f"Eserler · {SITE_NAME}", body + ESER_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
+
+
+ESER_JS = """<script>
+(function(){
+  var lis=[].slice.call(document.querySelectorAll('ul.eser-liste li'));
+  var kb=document.querySelectorAll('.eser-konu-sec button'), tb=document.querySelectorAll('.eser-tur-sec button');
+  var g=document.getElementById('eser-ara');
+  var konu='', tur='';
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  function uygula(yaz){
+    var q=kucuk(g.value.trim()), n=0, ks={};
+    lis.forEach(function(li){
+      var uy=(!q||li.dataset.ara.indexOf(q)>-1)&&(!tur||li.dataset.tur===tur);
+      if(uy){ li.dataset.konu.trim().split(' ').forEach(function(k){ if(k) ks[k]=(ks[k]||0)+1; }); ks['']=(ks['']||0)+1; }
+      var v=uy&&(!konu||li.dataset.konu.indexOf(' '+konu+' ')>-1);
+      li.hidden=!v; if(v)n++;
+    });
+    kb.forEach(function(b){
+      var c=ks[b.dataset.konu]||0; b.querySelector('.say').textContent=c;
+      b.setAttribute('aria-pressed', b.dataset.konu===konu?'true':'false'); b.classList.toggle('plan', !c);
+    });
+    tb.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.tur===tur?'true':'false');});
+    document.getElementById('eser-say').textContent=n+' eser';
+    document.querySelector('.eser-bos').hidden=n>0;
+    if(yaz){
+      var p=new URLSearchParams(); if(konu)p.set('konu',konu); if(tur)p.set('tur',tur); if(g.value.trim())p.set('ara',g.value.trim());
+      try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}
+    }
+  }
+  kb.forEach(function(b){b.addEventListener('click',function(){konu=b.dataset.konu; uygula(true);});});
+  tb.forEach(function(b){b.addEventListener('click',function(){tur=b.dataset.tur; uygula(true);});});
+  g.addEventListener('input',function(){uygula(true);});
+  var p=new URLSearchParams(location.search);
+  konu=p.get('konu')||''; tur=p.get('tur')||''; g.value=p.get('ara')||'';
+  uygula(false);
+})();
+</script>"""
 
 
 # ---------------------------------------------------------------- Türkçe makaleler (DergiPark)
@@ -1335,63 +1384,6 @@ def dp_kunye(m, yazar_bag=True) -> str:
     return yazar, dergi
 
 
-def makale_tablosu() -> tuple[str, int]:
-    veri = dp_veri()
-    if not veri:
-        return '<p class="giris">Liste hazırlanıyor.</p>', 0
-    satirlar = []
-    for m in veri:
-        yazar, dergi = dp_kunye(m)
-        konu = ", ".join(bag("baslik", b) for b in m["konular"] if ("baslik", b) in FIS)
-        tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
-        ara = tr_kucuk(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))
-        satirlar.append(
-            f'<tr data-ara="{e(ara)}" data-yil="{e(m["yil"])}" data-konu=" {e(" ".join(m["konular"]))} " data-tur="{e(m["tur"] or "arastirma")}">'
-            f'<td class="m-yazar" data-etiket="Yazar">{yazar}</td>'
-            f'<td class="m-makale" data-etiket="Makale"><a class="dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
-            f'<span class="m-dergi">{dergi}<span class="m-yil-tel">, {e(m["yil"])}</span></span></td>'
-            f'<td class="m-yil" data-etiket="Yıl">{e(m["yil"])}</td>'
-            f'<td class="m-konu" data-etiket="Konu">{konu}</td></tr>')
-    secenek = ['<option value="">Bütün başlıklar</option>']
-    for kad, ks in kumeli_basliklar():
-        ops = []
-        for k in ks:
-            ops.append(f'<option value="{k}">{e(FIS[("baslik", k)]["ad"])}</option>')
-            for c in sorted(COCUK.get(k, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
-                ops.append(f'<option value="{c}">&nbsp;&nbsp;{e(FIS[("baslik", c)]["ad"])}</option>')
-        secenek.append(f'<optgroup label="{e(kad)}">{"".join(ops)}</optgroup>')
-    turler = Counter_(m["tur"] or "arastirma" for m in veri)
-    tur_sec = ['<option value="">Bütün yayın türleri</option>',
-               f'<option value="arastirma">Araştırma makaleleri ({turler.get("arastirma", 0)})</option>']
-    tur_sec += [f'<option value="{t}">{a} ({turler[t]})</option>' for t, a in DP_TUR_AD.items() if turler.get(t)]
-    tarih = dp_tarama_tarihi()
-    ust = (f'<p class="aciklama-kisa">DergiPark\'ta yayımlanan ve konu alanında ya da anahtar kelimelerinde din felsefesi geçen makaleler'
-           f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. Liste her ay yenilenir. '
-           'Konu başlıkları makalelerin anahtar kelimelerine göre atanmıştır, bir kısmı özetleri okunarak düzeltilmiştir. '
-           'Kitap tanıtımları ve çeviriler listede yer alır ama konu başlıklarına katılmaz. '
-           f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
-           '<div class="m-arac">'
-           '<label class="k-ara"><span>Ara</span><input type="search" id="makale-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label>'
-           f'<label class="m-sec"><span class="gizli">Konu başlığı</span><select id="makale-konu">{"".join(secenek)}</select></label>'
-           f'<label class="m-sec"><span class="gizli">Yayın türü</span><select id="makale-tur">{"".join(tur_sec)}</select></label>'
-           '<span class="say" id="makale-say"></span></div>')
-    basliklar = [("Yazar", "yazar"), ("Makale", "makale"), ("Yıl", "yil"), ("Konu", None)]
-    tablo = ('<div class="tablo-kap"><table class="kisiler makaleler"><thead><tr>'
-             + "".join((f'<th aria-sort="{"descending" if s == "yil" else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}'
-                        f'<span class="ok" aria-hidden="true"></span></button></th>') if s else f'<th>{b}</th>'
-                       for i, (b, s) in enumerate(basliklar))
-             + f'</tr></thead><tbody>{"".join(satirlar)}</tbody></table></div>'
-             '<p class="giris m-bos" hidden>Seçime uyan makale bulunamadı.</p>')
-    return ust + tablo, len(veri)
-
-
-def Counter_(it):
-    out = {}
-    for x in it:
-        out[x] = out.get(x, 0) + 1
-    return out
-
-
 def baslik_makaleleri(k) -> str:
     """Başlık sayfasındaki Türkçe makaleler bölümü: en yeni beş makale ve listenin tamamına bağlantı."""
     veri = dp_veri()
@@ -1409,57 +1401,13 @@ def baslik_makaleleri(k) -> str:
     out = '<section class="tr-makaleler"><h2>Türkçe makaleler</h2>'
     if ms:
         out += (f'<ul class="m-liste">{"".join(satir(m) for m in ms[:5])}</ul>'
-                f'<p class="m-hepsi"><a href="{SITE_URL}/eserler/?konu={k}#makaleler">Bu başlıktaki {len(ms)} makalenin tamamı →</a></p>')
+                f'<p class="m-hepsi"><a href="{SITE_URL}/eserler/?konu={k}">Bu başlıktaki bütün eserler ({len(ms)} makale) →</a></p>')
     if tc:
         out += f'<h3>Kitap tanıtımları ve çeviriler</h3><ul class="m-liste">{"".join(satir(m) for m in tc)}</ul>'
     return out + '</section>'
 
 
-MAKALE_JS = """<script>
-(function(){
-  var sd=document.querySelectorAll('.eser-sekmeler button'), sb=document.querySelectorAll('.eser-sekme');
-  function ac(kod){
-    sd.forEach(function(x){x.setAttribute('aria-pressed', x.dataset.sekme===kod?'true':'false');});
-    sb.forEach(function(s){s.hidden = s.id!==kod;});
-  }
-  sd.forEach(function(x){x.addEventListener('click',function(){ac(x.dataset.sekme); try{history.replaceState(null,'',location.pathname+location.search+'#'+x.dataset.sekme);}catch(_){}});});
-  ac(location.hash==='#makaleler'?'makaleler':'secilmis');
-  var tb=document.querySelector('table.makaleler tbody');
-  if(!tb) return;
-  var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
-  var metin=function(r,i){return (r.cells[i].innerText||'').trim();};
-  var ths=document.querySelectorAll('table.makaleler thead th[aria-sort]');
-  document.querySelectorAll('table.makaleler button.sirala').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var i=+btn.dataset.sutun, th=btn.parentNode, yon=th.getAttribute('aria-sort')==='ascending'?-1:1;
-      ths.forEach(function(t){t.setAttribute('aria-sort','none');});
-      th.setAttribute('aria-sort',yon===1?'ascending':'descending');
-      var r=[].slice.call(tb.rows);
-      r.sort(function(a,b){
-        var f = i===2 ? (+a.dataset.yil)-(+b.dataset.yil) : kar(metin(a,i),metin(b,i));
-        return f*yon || kar(metin(a,1),metin(b,1));
-      });
-      r.forEach(function(x){tb.appendChild(x);});
-    });
-  });
-  var g=document.getElementById('makale-ara'), k=document.getElementById('makale-konu'), t=document.getElementById('makale-tur');
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
-  function suz(){
-    var q=kucuk(g.value.trim()), kv=k.value, tv=t.value, n=0;
-    [].forEach.call(tb.rows,function(r){
-      var v=(!q||r.dataset.ara.indexOf(q)>-1)&&(!kv||r.dataset.konu.indexOf(' '+kv+' ')>-1)&&(!tv||r.dataset.tur===tv);
-      r.hidden=!v; if(v)n++;
-    });
-    document.querySelector('.m-bos').hidden=n>0;
-    document.getElementById('makale-say').textContent=n+' makale';
-  }
-  var p=new URLSearchParams(location.search);
-  if(p.get('konu')) k.value=p.get('konu');
-  if(p.get('ara')) g.value=p.get('ara');
-  [g,k,t].forEach(function(x){x.addEventListener('input',suz);});
-  suz();
-})();
-</script>"""
+
 
 
 # ---------------------------------------------------------------- ilişki ağı
@@ -1510,8 +1458,8 @@ def ag_verisi(items) -> dict:
 
 
 def ag_turkiye_akademisi() -> tuple[list, list]:
-    """Türkiye akademisi listesinden DergiPark'ta makalesi olanlar: başlıklara (makale sayısıyla),
-    makale başlığında adı geçen düşünür fişlerine ve ortak yazarlarına bağlanır."""
+    """DergiPark'taki Türkçe makaleler eser düğümü olarak ağa girer. Her makale konu başlıklarına,
+    Türkiye akademisi listesindeki yazarlarına ve başlığında adı geçen düşünür fişlerine bağlanır."""
     dosya = CONTENT / "turkiye_akademisi.yaml"
     if not dosya.exists() or not dp_veri():
         return [], []
@@ -1528,21 +1476,22 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
             adlar = [ad(t, h)] + ([ad(t, h).split()[-1]] if soyad_say[ad(t, h).split()[-1]] == 1 else [])
             desen = re.compile("|".join(f"(?<![{HARF}]){re.escape(a)}(?![{HARF}])" for a in adlar))
             dusunur.append((f"kisi/{k}", desen))
-    makaleler, baslik_say, kisi_bag, ortak = {}, {}, {}, {}
+    makaleler, dp_dugum, baglar = {}, [], []
     for m in dp_veri():
+        mid = f"dp/{m['id']}"
         uyeler = [ad_anahtari(y) for y in m["yazarlar"] if ad_anahtari(y) in liste_]
+        kenar = [f"baslik/{b}" for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS]
+        kenar += [f"kisi-tr/{slugify(liste_[a]['ad'])}" for a in uyeler]
+        kenar += [did for did, desen in dusunur if desen.search(m["baslik"])]
         for a in uyeler:
             makaleler.setdefault(a, []).append(m)
-            for b in m["konular"]:
-                if ("baslik", b) in FIS:
-                    baslik_say[(a, b)] = baslik_say.get((a, b), 0) + 1
-            for did, desen in dusunur:
-                if desen.search(m["baslik"]):
-                    kisi_bag[(a, did)] = kisi_bag.get((a, did), 0) + 1
-        for i, a in enumerate(uyeler):
-            for b in uyeler[i + 1:]:
-                if a != b:
-                    ortak[tuple(sorted((a, b)))] = ortak.get(tuple(sorted((a, b))), 0) + 1
+        if not kenar:
+            continue
+        tur = DP_TUR_ESER[m["tur"]]
+        dp_dugum.append({"id": mid, "ad": m["baslik"], "tur": "eser", "turAd": DP_TUR_AD.get(m["tur"], "Makale"),
+                         "url": m["baglanti"], "dis": True, "kucuk": True,
+                         "aciklama": " · ".join(x for x in [", ".join(m["yazarlar"]), m["dergi"], m["yil"]] if x)})
+        baglar += [[mid, x] for x in dict.fromkeys(kenar)]
     dugumler = []
     for a, ms in makaleler.items():
         p = liste_[a]
@@ -1550,14 +1499,9 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         dugumler.append({
             "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi",
             "suz": "kisi-tr", "url": f"{SITE_URL}/kisiler/#k-{slugify(p['ad'])}", "aciklama": aciklama,
-            "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}#makaleler",
+            "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}",
             "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
-    kimlik = lambda a: f"kisi-tr/{slugify(liste_[a]['ad'])}"
-    baglar = ([[kimlik(a), f"baslik/{b}", n] for (a, b), n in baslik_say.items()]
-              + [[kimlik(a), d, n] for (a, d), n in kisi_bag.items()]
-              + [[kimlik(a), kimlik(b), n] for (a, b), n in ortak.items()])
-    bagli = {x for b in baglar for x in b[:2]}  # hiçbir bağlantısı olmayan akademisyen ağa alınmaz
-    return [d for d in dugumler if d["id"] in bagli], baglar
+    return dugumler + dp_dugum, baglar
 
 
 def kisalt_metin(t: str, n: int = 230) -> str:
@@ -1593,7 +1537,7 @@ def render_ag(items) -> str:
                        for k, a, r, sinif in suzgec if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. Türkiye akademisinden akademisyenler (içi boş halkalar) DergiPark'taki makalelerine göre başlıklara, makale başlığında adı geçen düşünürlere ve ortak yazarlarına bağlanır. Çizginin kalınlığı makale sayısını gösterir.</p>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki Türkçe makaleler (küçük noktalar) konu başlıklarına, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Türkiye akademisinden yazarlar içi boş halkalarla gösterilir.</p>
 <div class="ag-arac">
   <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
   <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>

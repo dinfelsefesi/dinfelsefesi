@@ -19,7 +19,7 @@
   baglar.forEach(function (b) { byId[b.source].komsu.add(b.target); byId[b.target].komsu.add(b.source); });
   dugumler.forEach(function (d) {
     d.derece = d.komsu.size;
-    d.r = 5 + 3.2 * Math.sqrt(d.derece);
+    d.r = d.kucuk ? 3 + 1.2 * Math.sqrt(d.derece) : 5 + 3.2 * Math.sqrt(d.derece);
   });
 
   var svg = d3.select(kap).append("svg").attr("role", "img")
@@ -42,10 +42,10 @@
   var genislik = kap.clientWidth, yukseklik = kap.clientHeight;
   var sim = d3.forceSimulation(dugumler)
     .force("bag", d3.forceLink(baglar).id(function (d) { return d.id; })
-      .distance(function (l) { return 55 + 16 * Math.sqrt(Math.max(l.source.derece || 1, l.target.derece || 1)); })
+      .distance(function (l) { return (l.source.kucuk || l.target.kucuk ? 30 : 55) + 16 * Math.sqrt(Math.min(30, Math.max(l.source.derece || 1, l.target.derece || 1))); })
       .strength(0.45))
-    .force("itme", d3.forceManyBody().strength(function (d) { return -260 - 34 * d.derece; }))
-    .force("carpisma", d3.forceCollide(function (d) { return d.r + 18; }))
+    .force("itme", d3.forceManyBody().strength(function (d) { return d.kucuk ? -40 : -260 - 34 * Math.min(d.derece, 30); }))
+    .force("carpisma", d3.forceCollide(function (d) { return d.r + (d.kucuk ? 3 : 18); }))
     .force("x", d3.forceX(genislik / 2).strength(0.05))
     .force("y", d3.forceY(yukseklik / 2).strength(0.08))
     .stop();
@@ -115,7 +115,8 @@
     var h = document.createElement("h2"); h.textContent = d.ad; panel.appendChild(h);
     if (d.aciklama) { var p = document.createElement("p"); p.className = "ag-aciklama"; p.textContent = d.aciklama; panel.appendChild(p); }
     var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac";
-    a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen listesinde gösterin →" : "Fişi açın →";
+    if (d.dis) { a.target = "_blank"; a.rel = "noopener"; }
+    a.textContent = d.tur === "makale" ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen listesinde gösterin →" : d.dis ? "Makaleyi açın ↗" : "Fişi açın →";
     panel.appendChild(a);
     if (d.makaleler && d.makaleler.length) {
       var mh = document.createElement("h3"); mh.textContent = "DergiPark'taki makaleleri (" + d.makaleler.length + ")"; panel.appendChild(mh);
