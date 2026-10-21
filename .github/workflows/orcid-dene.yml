@@ -17,6 +17,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/orcid/deneme.json
+          git add data/orcid/
           git commit -m "ORCID denemesi sonucu" || exit 0
           git pull --rebase -q && git push -q
