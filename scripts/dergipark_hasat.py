@@ -210,7 +210,8 @@ def main() -> None:
             bu_ay = date.today().strftime("%Y-%m")
             sirada, ay = [], bu_ay
             while ay >= EN_ESKI:
-                if ay not in ilerleme["pencereler"] or ay == bu_ay:
+                # Bu ay ve geçen ay her çalışmada yeniden taranır (ay sonunda eklenen kayıtlar kaçmasın)
+                if ay not in ilerleme["pencereler"] or ay in (bu_ay, onceki_ay(bu_ay)):
                     sirada.append(ay)
                 ay = onceki_ay(ay)
         for ay in sirada:

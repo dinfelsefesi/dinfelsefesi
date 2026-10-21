@@ -1,10 +1,10 @@
 name: DergiPark hasadı
 
-# Geçmiş tarama bitene kadar üç saatte bir çalışır, her seferinde
-# kaldığı yerden devam eder. Tarama bitince aylık takvime geçirilecek.
+# Geçmiş tarama (2005-2026) 21 Ekim 2026'da tamamlandı. Artık her ayın 2'sinde
+# bu ayı ve geçen ayı yeniden tarar.
 on:
   schedule:
-    - cron: "23 */3 * * *"
+    - cron: "23 3 2 * *"
   workflow_dispatch:
     inputs:
       dakika:
