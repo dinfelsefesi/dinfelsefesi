@@ -669,10 +669,15 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 </html>"""
 
 
+SAYFALAR = []  # site haritasına girecek sayfalar (yönlendirmeler hariç)
+
+
 def yaz(yol_: str, icerik: str):
     p = OUT / yol_ / "index.html" if yol_ else OUT / "index.html"
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(icerik, encoding="utf-8")
+    if 'http-equiv="refresh"' not in icerik:
+        SAYFALAR.append(yol_)
 
 
 # ---------------------------------------------------------------- makaleler
@@ -1716,6 +1721,13 @@ def main() -> None:
     (OUT / "api" / "fisler.json").write_text(json.dumps(
         [{k: v for k, v in h.items() if not k.startswith("_")} | {"tur": t, "url": fis_url(t, kk), "metin": h["_govde"]}
          for (t, kk), h in FIS.items()], ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+
+    # Site haritası ve robots.txt. Deneme yayınında (NOINDEX) sayfalar yine taranabilir ama "noindex" etiketi
+    # yüzünden dizine eklenmez; yayına geçildiğinde yalnızca NOINDEX kapatılır.
+    harita = "".join(f"<url><loc>{e(SITE_URL + '/' + (y + '/' if y else ''))}</loc></url>" for y in SAYFALAR)
+    (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                     f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{harita}</urlset>\n', encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
 
     now = format_datetime(datetime.now(timezone.utc))
     rss_items = "".join(f"""
