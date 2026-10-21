@@ -417,7 +417,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .tr-makaleler h3{font-family:var(--display);font-style:italic;font-weight:500;color:var(--gold);font-size:1.1rem;margin:1.2rem 0 .2rem}
 .m-hepsi{margin:.3rem 0 0;font-size:.95rem}
 .m-yil-tel{display:none}
-.akademi-bag{font-style:italic;font-size:.95rem;margin:-.4rem 0 1.4rem}
+.akademi-bag{font-style:italic;font-size:.95rem;margin:-.4rem 0 1.4rem;line-height:1.9}
+.akademi-bag a{white-space:nowrap}
 .akademi-not{margin-top:1.6rem;font-size:.88rem}
 .calisanlar{margin-top:2rem}
 ul.calisan-liste{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:var(--measure)}
@@ -1627,7 +1628,7 @@ def render_akademisyen(s: str) -> str:
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <h1>{e(p["ad"])}{emekli}</h1>
 <p class="giris">{kurum}</p>
-{f'<p class="akademi-bag">{" · ".join(baglar)}</p>' if baglar else ''}
+{f'<p class="akademi-bag">{"<br>".join(baglar)}</p>' if baglar else ''}
 <div class="fis-duzen">
   <div class="metin">{metin}
     <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası DergiPark makale sayfalarından alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
