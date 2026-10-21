@@ -168,12 +168,14 @@
     kapat.addEventListener("click", function () { sec(null); });
     panel.appendChild(kapat);
     panel.hidden = false;
-    if (ortala) ortalaDugum(d);
+    if (ortala || kap.clientWidth <= 760) ortalaDugum(d);
   }
   function ortalaDugum(d, k) {
     k = k || Math.max(olcek, 1.3);
     var pay = (!panel.hidden && kap.clientWidth > 760) ? panel.offsetWidth / 2 : 0;
-    var t = d3.zoomIdentity.translate(kap.clientWidth / 2 - pay, kap.clientHeight / 2).scale(k).translate(-d.x, -d.y);
+    // telefonda panel ekranın altını kapladığı için düğüm tuvalin üst kısmına getirilir
+    var dar = kap.clientWidth <= 760 && !panel.hidden;
+    var t = d3.zoomIdentity.translate(kap.clientWidth / 2 - pay, kap.clientHeight * (dar ? 0.3 : 0.5)).scale(k).translate(-d.x, -d.y);
     svg.transition().duration(azHareket ? 0 : 600).call(yakinlik.transform, t);
   }
 

@@ -521,7 +521,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-dugum{cursor:pointer;transition:opacity .2s}
 .ag-dugum circle{stroke:var(--card);stroke-width:2px}
 .ag-dugum.secili circle{stroke:var(--ink);stroke-width:2.5px}
-.ag-dugum:focus-visible{outline:none}
+.ag-dugum:focus,.ag-dugum:focus-visible{outline:none}
 .ag-dugum:focus-visible circle{stroke:var(--accent);stroke-width:3px}
 .ag-dugum text{font-family:var(--serif);fill:var(--ink);text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:4px;stroke-linejoin:round;pointer-events:none;opacity:0;transition:opacity .2s}
 .ag-dugum text.goster{opacity:1}
@@ -590,7 +590,8 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
   aside.yan{position:static}
   .liste li,.makale,dl.kunye div{grid-template-columns:1fr;gap:.15rem}
   .kart{padding:1.1rem 1.1rem 1rem}
-  .ag-panel{position:static;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;box-shadow:none}
+  /* Telefonda bilgi paneli ekranın altından açılan bir kart olur; ağın altında kaybolmaz. */
+  .ag-panel{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:55vh;z-index:30;border-radius:16px 16px 0 0;border-width:1px 0 0;padding:1rem 1.1rem calc(1rem + env(safe-area-inset-bottom));box-shadow:0 -12px 30px -18px rgba(20,30,50,.5)}
   .ag-tuval{height:62vh;min-height:360px}
   .ag-ipucu{display:none}
   table.kisiler thead{display:block}
