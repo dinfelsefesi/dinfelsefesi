@@ -65,7 +65,7 @@ jobs:
         run: python build.py
         env:
           SITE_URL: ${{ vars.HOSTING_URL || 'https://dinfelsefesi.com.tr' }}
-          NOINDEX: ${{ vars.HOSTING_NOINDEX || '1' }}
+          NOINDEX: ${{ vars.HOSTING_NOINDEX || '0' }}  # asıl site arama motorlarına açık (21.10.2026)
           TASLAK_GOSTER: ${{ vars.HOSTING_TASLAK_GOSTER || '1' }}
       - name: FTP ile yükle
         env:

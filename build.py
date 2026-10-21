@@ -660,8 +660,14 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
     robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
     menu = "".join(
         f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
-    deneme = ('<div class="deneme"><div class="wrap">Deneme sürümü. İçerikler taslak hâlindedir ve '
-              'henüz yayımlanmamıştır.</div></div>') if (NOINDEX or TASLAK_GOSTER) else ""
+    if NOINDEX:
+        deneme = ('<div class="deneme"><div class="wrap">Deneme sürümü. İçerikler taslak hâlindedir ve '
+                  'henüz yayımlanmamıştır.</div></div>')
+    elif TASLAK_GOSTER:
+        deneme = (f'<div class="deneme"><div class="wrap">Site geliştirme aşamasındadır. Düzeltme ve önerileriniz için: '
+                  f'<a href="mailto:{ILETISIM}">{ILETISIM}</a></div></div>')
+    else:
+        deneme = ""
     return f"""<!doctype html>
 <html lang="tr">
 <head>
