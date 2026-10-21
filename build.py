@@ -256,11 +256,12 @@ def yol(k) -> str:
 # ---------------------------------------------------------------- sayfa iskeleti
 
 CSS = """
-/* Yerleşim: bir kitap sayfası. Fildişi kâğıt, mürekkep rengi yazı; vurgu rengi lâcivert,
-   ikinci renk tezhip altını. Başlıklar içindekiler gibi, yan sütunlar hâşiye gibi. Tek tema (açık). */
+/* Yerleşim: bir kitap sayfası. Fildişi kâğıt, mürekkep rengi yazı. Renkler logodan gelir: lâcivert (#23446e)
+   ve tezhip altını (#c9a14a). Logo altını yalnızca süs çizgilerinde kullanılır; yazıda okunurluk için
+   daha koyu bir altın tonu (--gold) kullanılır. Tek tema (açık). */
 :root{
   --ink:#2b2621;--ink-soft:#6a5f53;--rule:#e2d9c8;--paper:#f8f4ec;--panel:#f1eadc;--card:#fcfaf5;
-  --accent:#2a4f7f;--accent-ink:#22426b;--accent-soft:#e7ecf2;--gold:#9a7428;--gold-soft:#f2e8d0;
+  --accent:#23446e;--accent-ink:#1d3a5f;--accent-soft:#e6ebf2;--gold:#86641e;--gold-logo:#c9a14a;--gold-soft:#f4ead3;
   --display:"EB Garamond","Garamond","Georgia",serif;
   --serif:"Literata",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3","Segoe UI",system-ui,sans-serif;
@@ -270,13 +271,13 @@ CSS = """
 *{box-sizing:border-box}
 html{font-size:16px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--gold-logo) 70%,transparent);text-underline-offset:3px}
 a:hover{text-decoration-color:currentColor}
 a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
-header.site{background:var(--paper);border-bottom:3px double var(--rule)}
+header.site{background:var(--paper);border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo)}
 header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
 .marka{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.75rem}
 .marka-yazi{display:flex;flex-direction:column;gap:.1rem}
@@ -286,7 +287,8 @@ header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content
 nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.04rem}
 nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
 nav.ana a:hover{color:var(--ink)}
-nav.ana a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
+nav.ana a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
+nav.ana a:hover{border-bottom-color:color-mix(in srgb,var(--gold-logo) 45%,transparent)}
 .deneme{background:var(--gold-soft);font-style:italic;font-size:.88rem;color:var(--ink-soft)}
 .deneme .wrap{padding-block:.45rem}
 main{padding-block:2.2rem 3.5rem}
@@ -384,7 +386,7 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
 .baslik-gezinti li.plan{color:var(--ink-soft)}
 .baslik-gezinti a{text-decoration:none;color:var(--ink)}
-.eser-bolum{border-top:1px solid var(--gold);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
+.eser-bolum{border-top:1px solid var(--gold-logo);padding-top:.4rem;margin-top:2rem;scroll-margin-top:1rem}
 .eser-bolum h2{margin:.3rem 0 .6rem;font-size:1.4rem;font-weight:500;display:flex;align-items:baseline;gap:.7rem}
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
 .eser-bolum h3{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:1.2rem 0 .3rem;font-weight:500}
@@ -427,7 +429,7 @@ th[aria-sort="ascending"] button.sirala,th[aria-sort="descending"] button.sirala
 .ok::after{content:"↕";opacity:.35;font-size:.9em}
 th[aria-sort="ascending"] .ok::after{content:"▲";opacity:1;font-size:.7em}
 th[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-size:.7em}
-table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold)}
+table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold-logo)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
 table.kisiler td.k-yok{font-style:italic;font-size:.9rem;white-space:nowrap}
@@ -443,7 +445,7 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 .rozet.ae-rozet{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent;letter-spacing:0}
 .ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
 .eser-bilgi{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
-footer.site{border-top:3px double var(--rule);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.82rem}
+footer.site{border-top:1px solid var(--gold-logo);box-shadow:inset 0 -4px 0 var(--accent);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.82rem}
 footer.site .wrap{padding-block:1rem 1.3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.3rem 2rem}
 footer.site p{margin:0}
 footer.site a{color:var(--ink-soft)}
@@ -523,8 +525,9 @@ a.ic-bag{text-decoration-style:dotted}
 .karsilama p{font-size:1.04rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
 .karsilama .durum-satiri{font-style:italic;font-size:.98rem}
 .karsilama .karsilama-git{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-family:var(--display);font-size:1.2rem;margin-top:1.1rem}
-.susleme{display:flex;align-items:center;gap:1rem;color:var(--gold);margin:2.4rem 0 1.4rem}
-.susleme::before,.susleme::after{content:"";flex:1;height:1px;background:var(--rule)}
+.susleme{display:flex;align-items:center;gap:1rem;color:var(--gold-logo);margin:2.4rem 0 1.4rem}
+.susleme::before,.susleme::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-logo))}
+.susleme::after{background:linear-gradient(90deg,var(--gold-logo),transparent)}
 .susleme span{font-family:var(--display);font-size:1.3rem;line-height:1}
 .okuma{background:var(--card);border:1px solid var(--rule);padding:1.7rem 1.9rem 1.5rem;box-shadow:0 14px 34px -28px rgba(60,40,10,.4)}
 .okuma .ust-etiket{margin-bottom:.4rem}
@@ -533,6 +536,7 @@ a.ic-bag{text-decoration-style:dotted}
 .okuma .ozet{font-style:italic;color:var(--ink-soft);margin:0}
 .okuma .alinti{margin:0;font-size:.97rem;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
 .okuma .alinti::first-letter{font-family:var(--display);float:left;font-size:3.4em;line-height:.82;padding:.06em .1em 0 0;color:var(--gold)}
+.okuma.gunun{border-top:3px solid var(--gold-logo)}
 .okuma.gunun h2{font-size:1.45rem;line-height:1.25}
 .okuma .orij{margin:0 0 .25rem;font-style:italic;color:var(--ink-soft);font-size:.9rem}
 .okuma .kunye{margin:0 0 .7rem;color:var(--ink-soft);font-size:.88rem}
@@ -552,9 +556,9 @@ a.ic-bag{text-decoration-style:dotted}
 .icindekiler .altlar-metin{margin-top:.35rem;font-size:.95rem;font-style:italic;color:var(--ink-soft)}
 .icindekiler .altlar-metin a{font-style:normal}
 .icindekiler .say{display:block;margin-top:.25rem}
-.icindekiler li.kume-ad{display:block;padding:1.2rem 0 .2rem;border-bottom:1px solid var(--gold);break-after:avoid;font-style:italic;color:var(--gold);font-size:.95rem}
+.icindekiler li.kume-ad{display:block;padding:1.2rem 0 .2rem;border-bottom:1px solid var(--gold-logo);break-after:avoid;font-style:italic;color:var(--gold);font-size:.95rem}
 .icindekiler li.kume-ad:first-child{padding-top:0}
-h2.kume-ad{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.15rem;color:var(--gold);margin:2rem 0 .7rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+h2.kume-ad{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.15rem;color:var(--gold);margin:2rem 0 .7rem;padding-bottom:.25rem;border-bottom:1px solid var(--gold-logo)}
 h2.kume-ad:first-of-type{margin-top:1.2rem}
 @media (max-width:760px){
   html{font-size:16px}
@@ -1460,7 +1464,7 @@ MAKALE_JS = """<script>
 
 # ---------------------------------------------------------------- ilişki ağı
 
-AG_TURLER = [("baslik", "Başlık", "#2a4f7f"), ("terim", "Terim", "#a5802f"), ("kisi", "Kişi", "#3f6b4f"),
+AG_TURLER = [("baslik", "Başlık", "#23446e"), ("terim", "Terim", "#c9a14a"), ("kisi", "Kişi", "#3f6b4f"),
              ("eser", "Eser", "#7a4a6b"), ("makale", "Makale tanıtımı", "#7b8794")]
 
 

@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 KOK = Path(__file__).parent
 YAZI = KOK / "fontlar" / "EBGaramond.ttf"
 EGIK = KOK / "fontlar" / "EBGaramond-Italic.ttf"
-KAGIT, MUREKKEP, SOLUK, ALTIN, CIZGI = "#f8f4ec", "#2b2621", "#6a5f53", "#9a7428", "#e2d9c8"
+KAGIT, MUREKKEP, SOLUK, ALTIN, CIZGI = "#f8f4ec", "#2b2621", "#6a5f53", "#86641e", "#e2d9c8"
 G, Y = 1200, 630
 
 
