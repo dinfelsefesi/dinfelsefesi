@@ -1392,6 +1392,10 @@ def main() -> None:
     except ImportError:
         print("uyarı: Pillow yok, paylaşım görselleri üretilmedi")
     (OUT / ".htaccess").write_text("""# dinfelsefesi.com.tr (durağan site)
+# Eski WordPress döneminden kalan sunucu önbelleği kullanılmasın
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\\. [NC]
