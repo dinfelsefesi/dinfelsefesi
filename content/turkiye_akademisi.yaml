@@ -1,7 +1,8 @@
 # Türkiye akademisi listesi
-# Kaynak: YÖK Akademik Arama (20.10.2026). İki yoldan gelen kişiler:
+# Kaynak: YÖK Akademik Arama (20-21.10.2026). Üç yoldan gelen kişiler:
 #   yok_alan: Din Felsefesi             -> bilim alanı "İlahiyat Temel Alanı / Din Felsefesi"
 #   yok_alan: Felsefe ve Din Bilimleri  -> "İlahiyat Temel Alanı / Felsefe ve Din Bilimleri", ilk anahtar kelime Din Felsefesi
+#   yok_alan: Felsefe                   -> "Sosyal, Beşeri ve İdari Bilimler Temel Alanı / Felsefe", ilk anahtar kelime Din Felsefesi (21.10.2026)
 # Alanlar: ad, unvan, universite, fakulte, durum (emekli | boş), yok (YÖK authorId), yok_alan,
 # kimlik (isteğe bağlı: kişinin fişi yazıldığında content/kisiler/ içindeki kimliği).
 # Yalnızca kamuya açık bilgiler. E-posta ve fotoğraf konmaz.
@@ -865,3 +866,159 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: 9AB7428926CCDB3E
   yok_alan: Din Felsefesi
+- ad: Ferhat Yöney
+  unvan: Dr. Öğr. Üyesi
+  universite: İstanbul Medeniyet Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: 160CB555AD6256A4
+  yok_alan: Felsefe
+- ad: Kevser Çelik
+  unvan: Prof. Dr.
+  universite: Süleyman Demirel Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: 5B261AA1B247E9B0
+  yok_alan: Felsefe
+- ad: Musa Kazım Arıcan
+  unvan: Prof. Dr.
+  universite: Ankara Yıldırım Beyazıt Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: AE9A98466A836327
+  yok_alan: Felsefe
+- ad: Ahmet Kavlak
+  unvan: Doç. Dr.
+  universite: Iğdır Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: C692FEF01406478F
+  yok_alan: Felsefe
+- ad: Mevlüt Albayrak
+  unvan: Prof. Dr.
+  universite: Süleyman Demirel Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: 76A215CC2FBD1B98
+  yok_alan: Felsefe
+- ad: Alber Erol Nahum
+  unvan: Dr. Öğr. Üyesi
+  universite: Galatasaray Üniversitesi
+  fakulte: Fen-Edebiyat Fakültesi
+  yok: 8F1B6DB02C514BE3
+  yok_alan: Felsefe
+- ad: Kasım Müminoğlu
+  unvan: Prof. Dr.
+  universite: Muş Alparslan Üniversitesi
+  fakulte: Fen-Edebiyat Fakültesi
+  yok: 96EEF8C2C98EB30A
+  yok_alan: Felsefe
+- ad: Osman Caner Taslaman
+  unvan: Prof. Dr.
+  universite: Yıldız Teknik Üniversitesi
+  fakulte: Fen-Edebiyat Fakültesi
+  yok: 794E203AAC1B4059
+  yok_alan: Felsefe
+- ad: Fatih Taştan
+  unvan: Dr. Öğr. Üyesi
+  universite: Ağrı İbrahim Çeçen Üniversitesi
+  fakulte: Fen-Edebiyat Fakültesi
+  yok: 982505BBF4792A9E
+  yok_alan: Felsefe
+- ad: Chrysi Sidiropoulou
+  unvan: Prof. Dr.
+  universite: Boğaziçi Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: 7D12060D6469DD7F
+  yok_alan: Felsefe
+- ad: Melih Taştan
+  unvan: Dr. Öğr. Üyesi
+  universite: Tokat Gaziosmanpaşa Üniversitesi
+  fakulte: İslami İlimler Fakültesi
+  yok: 54150C6E35146212
+  yok_alan: Felsefe
+- ad: Mehmet Ulukütük
+  unvan: Prof. Dr.
+  universite: Bursa Teknik Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: 5E31ED776D557FBC
+  yok_alan: Felsefe
+- ad: Abdurrahman Aliy
+  unvan: Prof. Dr.
+  universite: İstanbul Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: 19F3AFE62537CABF
+  yok_alan: Felsefe
+- ad: Atilla Akalın
+  unvan: Doç. Dr.
+  universite: İstanbul Gelişim Üniversitesi
+  fakulte: İstanbul Gelişim Meslek Yüksekokulu
+  yok: A5B54A6A3E4A8274
+  yok_alan: Felsefe
+- ad: Yasin Ramazan Başaran
+  unvan: Dr. Öğr. Üyesi
+  universite: Boğaziçi Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: 5BF547B34D0B2349
+  yok_alan: Felsefe
+- ad: Enis Doko
+  unvan: Prof. Dr.
+  universite: İbn Haldun Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: D30E4FFFF404DFFE
+  yok_alan: Felsefe
+- ad: Melek Aygül Özdoğan
+  unvan: Arş. Gör.
+  universite: Karamanoğlu Mehmetbey Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: 1D360BCF7C08CED6
+  yok_alan: Felsefe
+- ad: Muhammet Sait Duran
+  unvan: Dr. Öğr. Üyesi
+  universite: Erciyes Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: E62E642C419ACF86
+  yok_alan: Felsefe
+- ad: Özkan Yıldız
+  unvan: Arş. Gör.
+  universite: Erzurum Teknik Üniversitesi
+  fakulte: Edebiyat Fakültesi
+  yok: E25323CCDE37F511
+  yok_alan: Felsefe
+- ad: Hasan Er
+  unvan: Dr. Öğr. Üyesi
+  universite: Yalova Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 7C012F80FB8E5464
+  yok_alan: Felsefe
+- ad: Nur Betül Atakul
+  unvan: Dr. Öğr. Üyesi
+  universite: Ankara Yıldırım Beyazıt Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: D80709B92F9FA9A4
+  yok_alan: Felsefe
+- ad: Ozan Aşkan
+  unvan: Arş. Gör.
+  universite: Hakkari Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: 9B94B406F09B8499
+  yok_alan: Felsefe
+- ad: Kelly James Clark
+  unvan: Prof. Dr.
+  universite: İbn Haldun Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: A2090220FB92CED3
+  yok_alan: Felsefe
+- ad: Ferhat Taşkın
+  unvan: Dr. Öğr. Üyesi
+  universite: Boğaziçi Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: CB185012355826BF
+  yok_alan: Felsefe
+- ad: Yusuf Şahin
+  unvan: Arş. Gör.
+  universite: Bingöl Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok: A285A272F940C3D6
+  yok_alan: Felsefe
+- ad: İsmail Hakkı Kumbasar
+  unvan: Dr. Öğr. Üyesi
+  universite: Yalova Üniversitesi
+  fakulte: İnsan ve Toplum Bilimleri Fakültesi
+  yok: F8374AC2EF50B7BB
+  yok_alan: Felsefe

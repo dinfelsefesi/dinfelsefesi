@@ -24,7 +24,7 @@ Yaşayan Türk akademisyenler için yalnızca kamuya açık bilgiler kullanılı
 
 İlişki ağı (`/ag/`) fişler arasındaki bütün bağlantılardan otomatik olarak çizilir. Güncel makaleler, etiketleri bir fişin adıyla (kişilerde soyadıyla) aynı olduğunda ağa girer.
 
-Kişiler sayfasının "Türkiye akademisi" sekmesi (sütun başlıklarına basılarak sıralanabilir tablo) `content/turkiye_akademisi.yaml` dosyasından üretilir (ad, unvan, üniversite, fakülte, `durum: emekli`, YÖK profil kimliği, `yok_alan`). Listeye YÖK'te bilim alanı Din Felsefesi olanlar ile Felsefe ve Din Bilimleri alanında ilk anahtar kelimesi Din Felsefesi olanlar girer. Bir kişinin fişi yazıldığında listedeki adı fişe bağlanır. Ad fişteki `ad` ile aynı değilse listeye `kimlik` alanı eklenir.
+Kişiler sayfasının "Türkiye akademisi" sekmesi (sütun başlıklarına basılarak sıralanabilir tablo) `content/turkiye_akademisi.yaml` dosyasından üretilir (ad, unvan, üniversite, fakülte, `durum: emekli`, YÖK profil kimliği, `yok_alan`). Listeye YÖK'te bilim alanı İlahiyat / Din Felsefesi olanlar ile İlahiyat / Felsefe ve Din Bilimleri ya da Sosyal, Beşeri ve İdari Bilimler / Felsefe alanında ilk anahtar kelimesi Din Felsefesi olanlar girer. Bir kişinin fişi yazıldığında listedeki adı fişe bağlanır. Ad fişteki `ad` ile aynı değilse listeye `kimlik` alanı eklenir.
 
 ## Eser (`content/eserler/`)
 
