@@ -7,6 +7,12 @@
 
 basliklar:
   din-epistemolojisi:
+    - kanıtlan
+    - provability
+    - nübüvvet
+    - peygamberlik
+    - prophethood
+    - haber bilgisi
     - bilgi$
     - knowledge$
     - kanıt$
@@ -46,6 +52,8 @@ basliklar:
     - temel inanç
     - properly basic
   dini-tecrube:
+    - mistis
+    - tasavvuf tecrübesi
     - dini tecrübe
     - dinî tecrübe
     - dini deneyim
@@ -58,6 +66,13 @@ basliklar:
     - keşf
     - tasavvufi bilgi
   tanrinin-varliginin-delilleri:
+    - tanıt
+    - isbât-ı vâcib
+    - isbat-ı vacib
+    - vâcibü'l-vücûd
+    - necessary existent
+    - doğal teoloji
+    - natural theology
     - anselm
     - yeter sebep
     - sufficient reason
@@ -154,6 +169,9 @@ basliklar:
     - analytic theology
     - tevhid
   tanrinin-sifatlari:
+    - tanrı'nın bilgisi
+    - tanrının bilgisi
+    - tanrı'nın özgürlüğü
     - sıfat
     - attribute
     - her şeye gücü
@@ -203,6 +221,10 @@ basliklar:
     - tanrı-alem
     - god and the world
   din-dili:
+    - dil felsefesi
+    - philosophy of language
+    - dinî sözce
+    - dini sözce
     - müteşabih
     - te'vil
     - tevil
@@ -238,6 +260,12 @@ basliklar:
     - tenzih
     - wittgenstein
   din-ve-bilim:
+    - din-bilim
+    - bilim paradigması
+    - bilimsel gerçekçilik
+    - scientific realism
+    - izafiyet
+    - relativity
     - bilim$
     - science
     - bilim ve din
@@ -267,6 +295,7 @@ basliklar:
     - transhümanizm
     - transhumanism
   dini-cesitlilik:
+    - tekelcilik
     - çoğulculuk
     - pluralism
     - dini çeşitlilik

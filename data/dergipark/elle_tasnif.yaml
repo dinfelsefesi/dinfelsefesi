@@ -1,0 +1,342 @@
+# Elle tasnif (TASLAK): anahtar kelimeyle sınıflandırılamayan makaleler, başlık ve özetleri okunarak.
+# karar: başlık kimliği | kapsam-disi | oneri:... (yeni başlık önerileri, editör kararı bekliyor)
+# kapsam-disi makaleler din felsefesi istatistiklerine katılmaz.
+'1009307':
+  karar: kapsam-disi
+  gerekce: Karşılaştırmalı edebiyat; din felsefesi konusu yok.
+'1037647':
+  karar: din-ve-bilim
+  gerekce: Bilişsel gelişim bulguları ve doğada tasarım sezgisi (bilişsel din bilimi).
+'1039584':
+  karar: tanri-tasavvurlari
+  gerekce: Teslis ve kişi kavramı; ayrık-beyin vakası üzerinden.
+'1052666':
+  karar: tanri-alem-iliskisi
+  gerekce: Cusa'da panteistik Tanrı-âlem ilişkisi.
+'1080153':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Taliaferro'nun 'What is Philosophy of Religion?' kitabının tanıtımı.
+'1084102':
+  karar: kapsam-disi
+  gerekce: Latin İbn Rüşdçülüğü üzerine çeviri; felsefe tarihi.
+'1084695':
+  karar: kapsam-disi
+  gerekce: Boethius üzerine çeviri; felsefe tarihi.
+'1086860':
+  karar: kapsam-disi
+  gerekce: Saramago'da otorite; siyaset felsefesi ve edebiyat.
+'1104469':
+  karar: tanri-alem-iliskisi
+  gerekce: Doğa, ekolojik bilinç ve süreç felsefesi; Tanrı-doğa ilişkisi.
+'1107437':
+  karar: dini-cesitlilik
+  gerekce: Cusa'da öteki ve dinler arası uzlaşı.
+'1119420':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Kelam, analitik gelenek ve Türkiye'de din felsefesinin yeri.
+'1130991':
+  karar: din-ve-ahlak
+  gerekce: Tanrı kavramının hatırlatılmasının toplum yanlısı davranışa etkisi (deneysel).
+'1136208':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Bergson felsefesinin din için anlamı; din felsefesi tarihi.
+'1139202':
+  karar: tanri-alem-iliskisi
+  gerekce: Plotinos'un Gnostiklere reddiyesi; demiurgos ve evren.
+'1166077':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: İzzetbegoviç'te din kavramı; düşünür incelemesi.
+'1215166':
+  karar: tanri-tasavvurlari
+  gerekce: Hegel'de kenosis ve kendini boşaltan özne.
+'1219628':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Modern Batı düşüncesinde din ve insan, anlam sorunu (kitap tanıtımı).
+'1234937':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Latif Tokat, Anlam Sorunu (kitap tanıtımı).
+'1251576':
+  karar: tanrinin-sifatlari
+  gerekce: 'Tanrı israf eder mi: ilahi fiillerde amaç ve hikmet.'
+'1258083':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: William James'te hümanizm ve din.
+'1272117':
+  karar: tanri-alem-iliskisi
+  gerekce: Moltmann'ın ekoteolojisi ve ilişkisellik.
+'1332257':
+  karar: olum-ve-otesi
+  gerekce: İbn Sînâ'nın uçan adamı; nefsin benlik bilinci.
+'1336641':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Solovyov'un İslam ve Batı eleştirisi; düşünür incelemesi.
+'1344469':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Kierkegaard ve Camus'da varoluşsal kabul ve ret.
+'1350918':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Varoluşsal suç, günah ve özgürlük.
+'1353150':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Habermas'ın metafizik sonrası düşüncesi ve din felsefesi.
+'1387756':
+  karar: kapsam-disi
+  gerekce: Augustinus'un Tanrı Devleti; siyaset felsefesi.
+'1392359':
+  karar: kapsam-disi
+  gerekce: Sekülerleşme ve dinin geleceği (Rorty, Vattimo); din sosyolojisine yakın.
+'1393557':
+  karar: kapsam-disi
+  gerekce: Schmitt ve Voegelin'de siyasal teoloji.
+'1398765':
+  karar: din-ve-ahlak
+  gerekce: Nietzsche'de asketik ahlak eleştirisi.
+'1404388':
+  karar: kapsam-disi
+  gerekce: İsmet Özel'in düşünce dünyası.
+'1415686':
+  karar: din-epistemolojisi
+  gerekce: Kant'ta metafiziğin yöntemi; Tanrı bilgisinin imkânı.
+'1421648':
+  karar: teizme-yonelik-itirazlar
+  gerekce: Freud'da dinin kökeni (yansıtma eleştirisi).
+'1423003':
+  karar: kapsam-disi
+  gerekce: Garaudy'de İslam iktisadı.
+'1447930':
+  karar: kapsam-disi
+  gerekce: Starr'ın İbn Sînâ ve Bîrûnî kitabının tanıtımı; bilim tarihi.
+'1448097':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Charlesworth, Platon'dan Derrida'ya Felsefe ve Din (kitap tanıtımı).
+'1451987':
+  karar: kapsam-disi
+  gerekce: İslami açıdan liderlik.
+'1456994':
+  karar: kapsam-disi
+  gerekce: Romanlarda dini yönelim; din psikolojisi alan çalışması.
+'1462519':
+  karar: din-epistemolojisi
+  gerekce: Platon'un mağara alegorisi ve Mâtürîdî'de haber bilgisi.
+'1468461':
+  karar: tanri-tasavvurlari
+  gerekce: Kearney'in anateizm kavramı ve yeni Tanrı tasavvuru.
+'1475234':
+  karar: tanri-tasavvurlari
+  gerekce: Buber ve Jung'da Tanrı anlayışı.
+'1479899':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Frazer, The Golden Bough (kitap tanıtımı); din teorileri.
+'1514932':
+  karar: din-ve-bilim
+  gerekce: Bilimsel gerçekçilik ve kelam (Mâtürîdî).
+'1515595':
+  karar: tanri-tasavvurlari
+  gerekce: Cusanus'ta Tanrı'nın sureti öğretisi.
+'1525197':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Hegel'in din felsefesinin kapsamı ve amacı.
+'1534611':
+  karar: kapsam-disi
+  gerekce: Uluğ Nutku'da felsefeylemek.
+'1534811':
+  karar: oneri:ozgurluk
+  gerekce: Tillich'te insan, günah, özgürlük ve kader.
+'1535032':
+  karar: dini-pratik
+  gerekce: Kinikler ve ilk sûfîlerde zühd ve riyâzet; çileci yaşam.
+'1544369':
+  karar: tanrinin-varliginin-delilleri
+  gerekce: Enbiyâ 22 ve vahdâniyet delili (temânu).
+'1545239':
+  karar: tanri-tasavvurlari
+  gerekce: Derrida ve Caputo'da hayalet olarak Tanrı.
+'1547388':
+  karar: kapsam-disi
+  gerekce: Mehmet Akif İnan'da medeniyet ve aydın sorunu.
+'1549432':
+  karar: kapsam-disi
+  gerekce: Byung-Chul Han, Zen Budizm Felsefesi (kitap tanıtımı); dinler tarihi.
+'1549785':
+  karar: tanrinin-varliginin-delilleri
+  gerekce: Miletlilerde doğal teoloji.
+'1576374':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Dârülfünun'da din felsefesi; Mustafa Şekip Tunç.
+'1576957':
+  karar: kapsam-disi
+  gerekce: Batılı Kur'an araştırmaları söyleşisi.
+'1577273':
+  karar: kapsam-disi
+  gerekce: Aboulela'nın romanlarında sufizm; edebiyat.
+'1591853':
+  karar: kapsam-disi
+  gerekce: Śaṅkara'da dharma ve kimlik; Hint felsefesi.
+'1602239':
+  karar: oneri:insan-tasavvurlari
+  gerekce: İkbal'in benlik felsefesinde Mevlânâ.
+'1608437':
+  karar: kapsam-disi
+  gerekce: İslami psikoloji (kitap tanıtımı).
+'1617010':
+  karar: din-dili
+  gerekce: Pragmatik gerçekçi bir din felsefesi; gerçekçilik ve ontolojik bağlılık.
+'1639051':
+  karar: kapsam-disi
+  gerekce: Roman üzerinden varoluşçu bakış; edebiyat.
+'1648976':
+  karar: kapsam-disi
+  gerekce: İhvân-ı Safâ'da avam ve havas; İslam felsefesi.
+'1650396':
+  karar: kapsam-disi
+  gerekce: Feminist teoloji ve Lilith; mitoloji.
+'1698941':
+  karar: din-ve-ahlak
+  gerekce: Savaş ve barış; adil savaş ve pasifizm.
+'1704111':
+  karar: kapsam-disi
+  gerekce: Baba ve Tanrı otoritesi; din psikolojisi ve sosyolojisi.
+'1706979':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: İshak Arslan, Din Düşüncesi (kitap tanıtımı).
+'1711075':
+  karar: kapsam-disi
+  gerekce: Din antropolojisi.
+'171923':
+  karar: teizme-yonelik-itirazlar
+  gerekce: Mauvillon'un din kritiği.
+'1743211':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Byung-Chul Han'ın çağ eleştirisi ve varoluşun anlamı.
+'1749131':
+  karar: din-ve-bilim
+  gerekce: Deepak Chopra'nın yeni ruhçuluğu; kuantum ve bilinç.
+'1753407':
+  karar: din-ve-bilim
+  gerekce: Dijital çağda din ve bilim paradigmalarının bütünleşmesi.
+'1785611':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: İlahiyatın bilgi nesnesi ve fenomenoloji; yöntem.
+'1811956':
+  karar: kapsam-disi
+  gerekce: Hz. İsa kıssasının işârî yorumu; tefsir.
+'1813913':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Özcan Akdağ, Din Felsefesi (kitap tanıtımı).
+'1823253':
+  karar: din-epistemolojisi
+  gerekce: Marion'da Tanrı'yı bilmek ve negatif kesinlik.
+'1827130':
+  karar: din-ve-ahlak
+  gerekce: Leopold'un toprak etiği; çevre etiği.
+'1837087':
+  karar: tanrinin-varliginin-delilleri
+  gerekce: Sühreverdî'de isbât-ı vâcib.
+'1838700':
+  karar: kapsam-disi
+  gerekce: İslam düşünürlerinde dinî istismar eleştirisi.
+'184011':
+  karar: din-ve-bilim
+  gerekce: İzafiyet teorisi, değerler ve Tanrı-evren ilişkisi.
+'1840601':
+  karar: kapsam-disi
+  gerekce: Thomas Reid'de güzellik; estetik.
+'1853333':
+  karar: kapsam-disi
+  gerekce: Îliyyâ Ebû Mâdî'nin şiiri; edebiyat.
+'1857755':
+  karar: din-epistemolojisi
+  gerekce: Varoluşçu teolojide Tanrı'nın kanıtlanabilirliği ve iman.
+'1899641':
+  karar: din-epistemolojisi
+  gerekce: Peygamberliğin imkânı aleyhine tefekkür ve tevazu argümanları (Râzî).
+'203747':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Hayyam'ın rubaileri; düşünür incelemesi.
+'238965':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Harputlu İshak Efendi'nin din felsefesi meselelerine yaklaşımı.
+'255054':
+  karar: dini-cesitlilik
+  gerekce: Dinî tekelcilik (dışlayıcılık) kavramı.
+'290950':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Hegel, Din Felsefesi Dersleri (kitap tanıtımı).
+'356998':
+  karar: kapsam-disi
+  gerekce: Bir çevirinin değerlendirmesi.
+'439624':
+  karar: tanrinin-sifatlari
+  gerekce: Gazâlî ve Aquinas'ta Tanrı'nın özgürlüğü.
+'489266':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Türkiye'de din felsefesi doktora tezlerinin konu analizi.
+'506389':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: İlahiyat eğitiminde din felsefesi eğitimi.
+'506391':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Din felsefesi ve kelam ilişkisi.
+'506426':
+  karar: tanrinin-sifatlari
+  gerekce: Meşşâî felsefede Tanrı'nın bilgisi (kitap tanıtımı).
+'509772':
+  karar: din-dili
+  gerekce: İdeal din dilinin imkânsızlığı.
+'546603':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Latif Tokat (ed.), Din Felsefesi (kitap tanıtımı).
+'578171':
+  karar: kapsam-disi
+  gerekce: Fuat Sezgin ve Müslümanların bilimsel başarıları; bilim tarihi.
+'595319':
+  karar: dini-tecrube
+  gerekce: Meister Eckhart'ın eserleri (kitap tanıtımı); mistisizm.
+'654032':
+  karar: tanrinin-varliginin-delilleri
+  gerekce: Hegel'de Tanrı'nın varlığının kanıtları.
+'682613':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Türkiye'de otantik felsefe ve din felsefesi (kitap tanıtımı).
+'685216':
+  karar: oneri:insan-tasavvurlari
+  gerekce: Nurettin Topçu'da var olmak, irade ve hareket.
+'714478':
+  karar: oneri:insan-tasavvurlari
+  gerekce: İkbal'de eğitim felsefesi ve insan.
+'722093':
+  karar: kapsam-disi
+  gerekce: Topçu'da millet mistiği; ahlak ve milliyet.
+'741202':
+  karar: oneri:ozgurluk
+  gerekce: İnsanın eyleminin öznesi ya da nesnesi olması; özgürlük ve Tanrı.
+'744144':
+  karar: kapsam-disi
+  gerekce: Fârâbî'nin İbn Meymûn'a etkisi; felsefe tarihi.
+'780337':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: 'Teoloji ve din felsefesi ilişkisi: Hegel ve Tillich.'
+'802699':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Victor Cousin'de evrensel ilkeler ve Tanrı; düşünür incelemesi.
+'826415':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Din kavramının Batılı inşası eleştirisi.
+'833059':
+  karar: kapsam-disi
+  gerekce: Said Nursi'yi İslam geleneği içinde okumak.
+'846636':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Din felsefesinin tanımı ve mahiyeti.
+'855986':
+  karar: kapsam-disi
+  gerekce: Câmî'de güzellik ve aşk; edebiyat ve estetik.
+'883488':
+  karar: kapsam-disi
+  gerekce: Voltaire ve Osmanlı aydınları; düşünce tarihi.
+'933307':
+  karar: kapsam-disi
+  gerekce: Vefat tarihi manzumesi.
+'939701':
+  karar: oneri:din-felsefesi-yontem-tarih
+  gerekce: Fenomenolojik din felsefesi; yöntem.
