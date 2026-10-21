@@ -504,8 +504,6 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-tur button[aria-pressed="false"]{opacity:.45;background:var(--card);color:var(--ink);border-color:var(--rule)}
 .ag-tur button[aria-pressed="true"]{background:var(--card);color:var(--ink);border-color:var(--ink-soft)}
 .nokta{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.45em;vertical-align:.02em;background:var(--renk)}
-.nokta.halka{background:transparent;box-shadow:inset 0 0 0 2px var(--renk)}
-.ag-dugum.halka circle{fill:var(--card);stroke-width:2.6px}
 .ag-panel ol.ag-makaleler{list-style:none;padding:0;margin:0;display:grid;gap:.35rem;font-size:.9rem}
 .ag-panel ol.ag-makaleler a{color:var(--ink);text-decoration:none}
 .ag-panel ol.ag-makaleler a:hover{color:var(--accent);text-decoration:underline}
@@ -1604,7 +1602,7 @@ def render_ag(items) -> str:
                        for k, a, r, sinif in suzgec if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki Türkçe makaleler (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Türkiye akademisinden yazarlar içi boş halkalarla gösterilir. Eserler gizlendiğinde yazarlar, makaleleri üzerinden ilişkili oldukları başlık ve terimlere doğrudan bağlanır.</p>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki Türkçe makaleler (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleriyle birlikte, eserleri üzerinden çalıştığı başlık ve terimler de görünür.</p>
 <div class="ag-arac">
   <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
   <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>

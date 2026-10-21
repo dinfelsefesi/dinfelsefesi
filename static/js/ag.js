@@ -8,7 +8,8 @@
   var V = JSON.parse(veriEl.textContent);
   var TURLER = V.turler; // [{kod, ad, renk}]
   var RENK = {};
-  TURLER.forEach(function (t) { RENK[t.kod] = t.renk; });
+  var SIRA = {};  // panelde komşular türe göre (başlık, terim, kişi, eser) sonra ada göre dizilir
+  TURLER.forEach(function (t, i) { RENK[t.kod] = t.renk; SIRA[t.kod] = i; });
   var azHareket = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var dugumler = V.dugumler.map(function (d) { return Object.assign({}, d); });
@@ -33,12 +34,11 @@
   var cizgi = g.append("g").attr("class", "ag-baglar").selectAll("line").data(baglar).join("line")
     .style("stroke-width", function (b) { return b.w > 1 ? (1.1 + 0.9 * Math.log2(b.w)) + "px" : null; });
   var dugum = g.append("g").attr("class", "ag-dugumler").selectAll("g").data(dugumler).join("g")
-    .attr("class", function (d) { return "ag-dugum tur-" + d.tur + (d.suz === "kisi-tr" ? " halka" : ""); })
+    .attr("class", function (d) { return "ag-dugum tur-" + d.tur; })
     .attr("tabindex", 0).attr("role", "button")
     .attr("aria-label", function (d) { return d.ad + " (" + d.turAd + ")"; });
   dugum.append("circle").attr("r", function (d) { return d.r; })
-    .attr("fill", function (d) { return d.suz === "kisi-tr" ? null : RENK[d.tur]; })
-    .style("stroke", function (d) { return d.suz === "kisi-tr" ? RENK[d.tur] : null; });
+    .attr("fill", function (d) { return RENK[d.tur]; });
   var kisalt = function (t, n) { return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : t; };
   var etiket = dugum.append("text").text(function (d) { return kisalt(d.ad, 34); })
     .attr("dy", function (d) { return d.r + 13; })
@@ -78,16 +78,20 @@
 
   // Vurgulama
   var secili = null, uzerinde = null, gizliTurler = new Set(), aramaEslesen = null;
+  // Dolaylı bağlar (kişi -> başlık/terim) eserler gizliyken hep, eserler açıkken yalnızca o kişi seçili ya da üzerindeyken görünür.
+  // Böylece her kişiye tıklandığında hem eserleri hem çalıştığı konular birlikte görünür.
   function bagGizli(b) {
     if (gizliTurler.has(suz(b.source)) || gizliTurler.has(suz(b.target))) return true;
-    return b.dolayli && !gizliTurler.has("eser");
+    if (!b.dolayli || gizliTurler.has("eser")) return false;
+    var d = uzerinde || secili;
+    return !(d && (b.source.id === d.id || b.target.id === d.id));
   }
   function komsulariKur() {
     var eserGizli = gizliTurler.has("eser");
     dugumler.forEach(function (d) {
       var s = new Set();
       d.dogrudan.forEach(function (x) { if (!gizliTurler.has(suz(byId[x]))) s.add(x); });
-      if (eserGizli) d.dolayliK.forEach(function (x) { if (!gizliTurler.has(suz(byId[x]))) s.add(x); });
+      if (eserGizli || d.tur === "kisi") d.dolayliK.forEach(function (x) { if (!gizliTurler.has(suz(byId[x]))) s.add(x); });
       d.komsu = s;
     });
   }
@@ -129,7 +133,7 @@
     try { history.replaceState(null, "", location.pathname + (d ? "?odak=" + encodeURIComponent(d.id) : "")); } catch (_) {}
     if (!d) { panel.hidden = true; document.body.classList.remove("ag-panel-acik"); return; }
     var komsular = Array.from(d.komsu).map(function (id) { return byId[id]; })
-      .sort(function (a, b) { return a.ad.localeCompare(b.ad, "tr"); });
+      .sort(function (a, b) { return (SIRA[a.tur] - SIRA[b.tur]) || a.ad.localeCompare(b.ad, "tr"); });
     panel.innerHTML = "";
     // telefonda kart kapalı (küçük) açılır; tutamağa dokununca büyür
     var dar = kap.clientWidth <= 760;
@@ -164,7 +168,7 @@
       komsular.forEach(function (n) {
         var li = document.createElement("li");
         var b = document.createElement("button"); b.type = "button";
-        b.innerHTML = '<span class="nokta' + (n.suz === "kisi-tr" ? " halka" : "") + '" style="--renk:' + RENK[n.tur] + '"></span>';
+        b.innerHTML = '<span class="nokta" style="--renk:' + RENK[n.tur] + '"></span>';
         b.appendChild(document.createTextNode(n.ad));
         b.addEventListener("click", function () { sec(n, true); });
         li.appendChild(b); ul.appendChild(li);
@@ -244,5 +248,6 @@
     genislik = kap.clientWidth; yukseklik = kap.clientHeight;
     sim.force("x").x(genislik / 2); sim.force("y").y(yukseklik / 2);
   }).observe(kap);
+  komsulariKur();
   boya();
 })();
