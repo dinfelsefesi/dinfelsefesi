@@ -623,6 +623,16 @@ MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"
 GORSELLER = []   # (dosya yolu, üst yazı, başlık, alt yazı): derleme sonunda üretilir
 
 
+def surum(yol_: str) -> str:
+    """Betik ve dosya adreslerine içerik özetini ekler (?v=...). Dosya değişince adres de değişir,
+    tarayıcılar eski kopyayı önbellekten kullanmaz."""
+    import hashlib
+    try:
+        return hashlib.md5((ROOT / yol_).read_bytes()).hexdigest()[:8]
+    except OSError:
+        return "0"
+
+
 def paylasim_gorseli(ad_: str, ust: str, baslik_: str, alt: str = "") -> str:
     GORSELLER.append((f"paylas/{ad_}.png", ust, baslik_, alt))
     return f"{SITE_URL}/paylas/{ad_}.png"
@@ -664,7 +674,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
-<script src="{SITE_URL}/static/js/onizleme.js" data-veri="{SITE_URL}/api/onizleme.json" defer></script>
+<script src="{SITE_URL}/static/js/onizleme.js?v={surum('static/js/onizleme.js')}" data-veri="{SITE_URL}/api/onizleme.json" defer></script>
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -1607,7 +1617,7 @@ def render_ag(items) -> str:
 </div>
 <script id="ag-veri" type="application/json">{veri}</script>
 <script src="{SITE_URL}/static/js/d3-7.9.0.min.js"></script>
-<script src="{SITE_URL}/static/js/ag.js"></script>"""
+<script src="{SITE_URL}/static/js/ag.js?v={surum('static/js/ag.js')}"></script>"""
     return page(f"İlişki ağı · {SITE_NAME}", body, "ag", canonical=f"{SITE_URL}/ag/")
 
 
@@ -1815,6 +1825,14 @@ AddDefaultCharset utf-8
   ExpiresActive On
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+# Sayfalar ve veri dosyaları her açılışta sunucuya sorulur; betikler sürüm ekiyle (?v=) yenilenir.
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(html|json|xml)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
 </IfModule>
 """, encoding="utf-8")
     (OUT / "404.html").write_text(page(f"Sayfa bulunamadı · {SITE_NAME}",
