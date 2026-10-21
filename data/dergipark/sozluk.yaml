@@ -1,0 +1,374 @@
+# Anahtar kelime sözlüğü (TASLAK): DergiPark'taki din felsefesi makalelerini başlıklara ayırmak için.
+# Her başlığın altında, makalenin anahtar kelimelerinde aranacak kalıplar yer alır.
+# Kalıplar küçük harfle yazılır ve kelime başından eşleşir: "teodise" kalıbı "teodisenin" kelimesini de yakalar.
+# Kalıbın sonuna "$" konursa yalnızca tam eşleşme aranır ("ruh$" kalıbı "ruhban" kelimesini yakalamaz).
+# Bir makale birden fazla başlığa girebilir. Alt başlığa giren makale üst başlığa da sayılır.
+# "genel" listesi bilerek hiçbir başlığa bağlanmayan, çok genel kelimelerdir.
+
+basliklar:
+  din-epistemolojisi:
+    - bilgi$
+    - knowledge$
+    - kanıt$
+    - evidence$
+    - delil ve inanç
+    - epistemoloji
+    - epistemology
+    - dini bilgi
+    - dinî bilgi
+    - religious knowledge
+    - iman$
+    - faith$
+    - inanç$
+    - inancın
+    - belief
+    - akıl$
+    - akıl ve
+    - reason$
+    - rasyonalite
+    - rationality
+    - aklîlik
+    - gerekçe
+    - justification
+    - delilcilik
+    - evidentialism
+    - reformcu epistemoloji
+    - reformed epistemology
+    - fideizm
+    - fideism
+    - şüphecilik
+    - skepticism
+    - şüphe$
+    - doubt$
+    - vahiy
+    - revelation
+    - bilgi değeri
+    - temel inanç
+    - properly basic
+  dini-tecrube:
+    - dini tecrübe
+    - dinî tecrübe
+    - dini deneyim
+    - dinî deneyim
+    - religious experience
+    - mistik
+    - mistisizm
+    - mysticism
+    - mystical
+    - keşf
+    - tasavvufi bilgi
+  tanrinin-varliginin-delilleri:
+    - anselm
+    - yeter sebep
+    - sufficient reason
+    - multiverse
+    - çoklu evren
+    - ontolojik delil
+    - ontological argument
+    - ontolojik kanıt
+    - kozmolojik
+    - cosmological
+    - kelam kozmolojik
+    - kalam cosmological
+    - teleolojik
+    - teleological
+    - tasarım delili
+    - design argument
+    - intelligent design
+    - akıllı tasarım
+    - ince ayar
+    - fine-tuning
+    - fine tuning
+    - ahlak delili
+    - ahlâk delili
+    - moral argument
+    - hudûs
+    - hudus
+    - imkân delili
+    - imkan delili
+    - contingency argument
+    - tanrı'nın varlığı
+    - tanrının varlığı
+    - existence of god
+    - tanrı'nın varlığının delilleri
+    - delil
+    - argument for
+    - ispat
+    - bayes
+    - olasılık
+    - probability
+  teizme-yonelik-itirazlar:
+    - schellenberg
+    - ateizm
+    - atheism
+    - ateist
+    - atheist
+    - agnostisizm
+    - agnosticism
+    - agnostik
+    - yeni ateizm
+    - new atheism
+    - saklılık
+    - hiddenness
+    - ilahi saklılık
+    - divine hiddenness
+    - dawkins
+    - inançsızlık
+    - unbelief
+  kotuluk-problemi:
+    - kötülüğ
+    - rowe
+    - kötülük
+    - evil
+    - şer$
+    - şerrin
+    - teodise
+    - theodicy
+    - acı$
+    - suffering
+    - ahlâkî kötülük
+    - doğal kötülük
+    - özgür irade savunması
+    - free will defense
+  tanri-tasavvurlari:
+    - antropomorfizm
+    - anthropomorphism
+    - aşkınlık
+    - transcendence
+    - teşhis
+    - teizm
+    - theism
+    - klasik teizm
+    - classical theism
+    - açık teizm
+    - open theism
+    - süreç teolojisi
+    - process theology
+    - process theism
+    - tanrı tasavvuru
+    - tanrı anlayışı
+    - concept of god
+    - mükemmel varlık
+    - perfect being
+    - analitik teoloji
+    - analytic theology
+    - tevhid
+  tanrinin-sifatlari:
+    - sıfat
+    - attribute
+    - her şeye gücü
+    - omnipoten
+    - kudret
+    - her şeyi bilen
+    - omniscien
+    - ilahi bilgi
+    - divine knowledge
+    - önbilgi
+    - foreknowledge
+    - ezel
+    - eternity
+    - zamansız
+    - timeless
+    - değişmezlik
+    - immutability
+    - basitlik
+    - simplicity
+    - iyilik$
+    - goodness
+  tanri-alem-iliskisi:
+    - deizm
+    - deism
+    - deist
+    - panteizm
+    - pantheism
+    - panenteizm
+    - panentheism
+    - yaratma
+    - yaratılış
+    - creation
+    - inayet
+    - providence
+    - mucize
+    - miracle
+    - vesilecilik
+    - occasionalism
+    - illiyet
+    - nedensellik
+    - causality
+    - causation
+    - vahdet-i vücûd
+    - vahdet-i vücud
+    - vahdetü'l-vücûd
+    - tanrı-âlem
+    - tanrı-alem
+    - god and the world
+  din-dili:
+    - müteşabih
+    - te'vil
+    - tevil
+    - katı belirtici
+    - rigid designator
+    - gönderim
+    - reference$
+    - semantik
+    - din dili
+    - dini dil
+    - dinî dil
+    - religious language
+    - dil$
+    - language$
+    - anlam$
+    - meaning$
+    - metafor
+    - metaphor
+    - analoji
+    - analogy
+    - söz edim
+    - speech act
+    - sembol
+    - symbol
+    - hermenötik
+    - hermeneutik
+    - hermeneutics
+    - doğrulanabilirlik
+    - verification
+    - yanlışlanabilirlik
+    - falsification
+    - teşbih
+    - tenzih
+    - wittgenstein
+  din-ve-bilim:
+    - bilim$
+    - science
+    - bilim ve din
+    - din ve bilim
+    - bilim felsefesi
+    - philosophy of science
+    - evrim
+    - evolution
+    - darwin
+    - kuantum
+    - quantum
+    - fizik
+    - physics
+    - kozmoloji
+    - cosmology
+    - big bang
+    - natüralizm
+    - naturalizm
+    - naturalism
+    - pozitivizm
+    - positivism
+    - nörobilim
+    - neuroscience
+    - yapay zeka
+    - yapay zekâ
+    - artificial intelligence
+    - transhümanizm
+    - transhumanism
+  dini-cesitlilik:
+    - çoğulculuk
+    - pluralism
+    - dini çeşitlilik
+    - dinî çeşitlilik
+    - religious diversity
+    - dışlayıcılık
+    - exclusivism
+    - kapsayıcılık
+    - inclusivism
+    - dinler arası
+    - interreligious
+    - interfaith
+    - kurtuluş
+    - salvation
+    - hick
+  din-ve-ahlak:
+    - adalet
+    - justice
+    - moral philosophy
+    - ahlak felsefesi
+    - ahlak
+    - ahlâk
+    - morality
+    - moral$
+    - etik
+    - ethics
+    - ilahi buyruk
+    - ilâhî buyruk
+    - divine command
+    - euthyphro
+    - euthyphron
+    - doğal yasa
+    - natural law
+    - erdem
+    - virtue
+    - değer$
+    - values
+    - hüsün
+    - kubuh
+    - husn
+  olum-ve-otesi:
+    - ölüm
+    - death
+    - ölümsüzlük
+    - immortality
+    - ahiret
+    - afterlife
+    - ruh$
+    - soul
+    - nefs
+    - beden
+    - body
+    - diriliş
+    - resurrection
+    - haşr
+    - kişisel kimlik
+    - personal identity
+    - cennet
+    - cehennem
+    - heaven
+    - hell
+    - tenasüh
+    - reenkarnasyon
+    - reincarnation
+    - ölüm sonrası
+  dini-pratik:
+    - ibadet
+    - worship
+    - dua$
+    - prayer
+    - ritüel
+    - ritual
+    - litürji
+    - liturgy
+    - namaz
+    - oruç
+    - hac$
+    - zikir
+    - kulluk
+    - ubûdiyet
+    - dindarlık
+    - religiosity
+    - maneviyat
+    - spiritüalite
+    - spirituality
+
+# Hiçbir başlığa bağlanmayan genel kelimeler
+genel:
+  - din$
+  - religion$
+  - tanrı$
+  - god$
+  - allah$
+  - felsefe$
+  - philosophy$
+  - islam$
+  - insan$
+  - human$
+  - religion philosophy
+  - analitik din felsefesi
+  - فلسفة الدين
+  - analytic philosophy of religion
+  - religious studies
+  - toplum ve kültür araştırmaları
+  - society and culture studies
