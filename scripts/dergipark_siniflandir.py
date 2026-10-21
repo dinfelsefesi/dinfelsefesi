@@ -87,7 +87,9 @@ def siniflandir():
         kaynak = "anahtar"
         if r["id"] in YAYIN_TURU:  # kitap tanıtımı, çeviri vb.: başlık sayımına girmez
             karar = (ELLE.get(r["id"]) or {}).get("karar", "")
-            if karar and karar != "kapsam-disi" and not karar.startswith("oneri:"):
+            if isinstance(karar, list):
+                basliklar = set(karar)
+            elif karar and karar != "kapsam-disi" and not karar.startswith("oneri:"):
                 basliklar.add(karar)
             for b in list(basliklar):
                 if b in UST:
@@ -95,7 +97,11 @@ def siniflandir():
             sonuc.append({"id": r["id"], "yil": yil(r), "basliklar": [], "durum": "tanitim-ceviri",
                           "yayin_turu": YAYIN_TURU[r["id"]], "ilgili_basliklar": sorted(basliklar)})
             continue
-        if r["id"] in ELLE:  # özeti okunarak verilen karar, anahtar kelime sonucundan önce gelir
+        if r["id"] in ELLE and isinstance(ELLE[r["id"]]["karar"], list):
+            # liste biçimindeki karar, anahtar kelime sonucunun yerine geçer (tek tek düzeltme için)
+            basliklar = set(ELLE[r["id"]]["karar"])
+            kaynak = "elle"
+        elif r["id"] in ELLE:  # tek başlıklı karar, anahtar kelime sonucuna eklenir
             karar = ELLE[r["id"]]["karar"]
             kaynak = "elle"
             if karar == "kapsam-disi" or karar.startswith("oneri:"):

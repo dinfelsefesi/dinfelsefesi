@@ -1,6 +1,8 @@
 # Elle tasnif (TASLAK): anahtar kelimeyle sınıflandırılamayan makaleler, başlık ve özetleri okunarak.
-# karar: başlık kimliği | kapsam-disi | oneri:... (yeni başlık önerileri, editör kararı bekliyor)
-# kapsam-disi makaleler din felsefesi istatistiklerine katılmaz.
+# Tek tek düzeltmeler de bu dosyaya yazılır.
+# karar tek bir başlık kimliği ise anahtar kelimelerle bulunan başlıklara eklenir.
+# karar bir liste ise ([din-dili, din-epistemolojisi] gibi) anahtar kelime sonucunun yerine geçer.
+# karar: kapsam-disi makaleyi listeden ve sayımlardan çıkarır.
 '1009307':
   karar: kapsam-disi
   gerekce: Karşılaştırmalı edebiyat; din felsefesi konusu yok.
