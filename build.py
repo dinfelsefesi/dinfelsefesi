@@ -1489,10 +1489,15 @@ def akademi_verisi() -> dict:
     if not dosya.exists():
         return _AKADEMI
     kisiler = (yaml.safe_load(dosya.read_text(encoding="utf-8")) or {}).get("kisiler") or []
+    orcid_dosya, eser_dosya = ROOT / "data/orcid/orcid.json", ROOT / "data/orcid/eserler.json"
+    orcidler = json.loads(orcid_dosya.read_text(encoding="utf-8")).get("orcid", {}) if orcid_dosya.exists() else {}
+    orcid_eser = json.loads(eser_dosya.read_text(encoding="utf-8")).get("eserler", {}) if eser_dosya.exists() else {}
     anahtar = {}
     for p in kisiler:
         slug = slugify(p["ad"])
-        _AKADEMI[slug] = {"p": p, "makaleler": [], "baslik": {}, "ortak": {}, "dusunur": {}}
+        oid = p.get("orcid") or orcidler.get(slug, "")  # listeye elle yazılan ORCID önce gelir
+        _AKADEMI[slug] = {"p": p, "orcid": oid, "orcid_eser": orcid_eser.get(oid, []) if oid else [],
+                          "makaleler": [], "baslik": {}, "ortak": {}, "dusunur": {}}
         anahtar[ad_anahtari(p["ad"])] = slug
     soyad_say = {}
     for (t, k), h in FIS.items():
@@ -1546,6 +1551,37 @@ def baslik_calisanlari(k) -> str:
             f'<ul class="calisan-liste">{ogeler}</ul></section>')
 
 
+ORCID_TUR = {"journal-article": "Makale", "book": "Kitap", "book-chapter": "Kitap bölümü", "conference-paper": "Bildiri",
+             "conference-abstract": "Bildiri özeti", "dissertation-thesis": "Tez", "edited-book": "Editörlü kitap",
+             "translation": "Çeviri", "book-review": "Kitap tanıtımı", "encyclopedia-entry": "Ansiklopedi maddesi",
+             "review": "Değerlendirme", "preprint": "Ön baskı", "other": "Diğer"}
+
+
+def orcid_diger_eserler(v) -> str:
+    """ORCID kaydındaki eserlerden DergiPark listesinde olmayanlar (DOI ya da başlık eşleşmesine göre ayıklanır)."""
+    if not v["orcid_eser"]:
+        return ""
+    doiler = {m["baglanti"].lower().removeprefix("https://doi.org/") for m in v["makaleler"] if m["doi"]}
+    basliklar = {slugify(m["baslik"]) for m in v["makaleler"]}
+    goruldu, ogeler = set(), []
+    for w in sorted(v["orcid_eser"], key=lambda w: w["yil"] or "0", reverse=True):
+        ad_ = slugify(w["baslik"])
+        if (w["doi"] and w["doi"].lower() in doiler) or ad_ in basliklar or ad_ in goruldu:
+            continue
+        goruldu.add(ad_)
+        hedef = f'https://doi.org/{w["doi"]}' if w["doi"] else w["url"]
+        bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(w["baslik"])}</a>' if hedef
+               else f'<span class="eser-ad">{e(w["baslik"])}</span>')
+        bilgi = " · ".join(x for x in [ORCID_TUR.get(w["tur"], ""), e(w["dergi"]), e(w["yil"])] if x)
+        ogeler.append(f'<li>{bas}<span class="eser-bilgi">{bilgi}</span></li>')
+    if not ogeler:
+        return ""
+    return (f'<h2>ORCID kaydındaki diğer yayınları <span class="say">{len(ogeler)}</span></h2>'
+            f'<p class="aciklama-kisa">Kişinin ORCID kaydında yer alan ve yukarıdaki DergiPark listesinde bulunmayan yayınlar. '
+            f'Konu sınırlaması yoktur, liste ORCID kaydının güncelliğine bağlıdır.</p>'
+            f'<ul class="eser-liste">{"".join(ogeler)}</ul>')
+
+
 def render_akademisyen(s: str) -> str:
     v = akademi_verisi()[s]
     p = v["p"]
@@ -1554,8 +1590,8 @@ def render_akademisyen(s: str) -> str:
     baglar = []
     if p.get("yok"):
         baglar.append(f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK Akademik profili ↗</a>')
-    if p.get("orcid"):
-        baglar.append(f'<a class="dis" href="https://orcid.org/{e(p["orcid"])}" rel="noopener" target="_blank">ORCID {e(p["orcid"])} ↗</a>')
+    if v["orcid"]:
+        baglar.append(f'<a class="dis" href="https://orcid.org/{e(v["orcid"])}" rel="noopener" target="_blank">ORCID {e(v["orcid"])} ↗</a>')
     ana = [(b, n) for b, n in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
     alt = [(b, n) for b, n in v["baslik"].items() if FIS[("baslik", b)].get("ust_baslik")]
     sira = lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99))
@@ -1583,9 +1619,10 @@ def render_akademisyen(s: str) -> str:
     if v["makaleler"]:
         yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak=kisi-tr/{s}">İlişki ağında göster →</a>')
     tarih = dp_tarama_tarihi()
+    diger = orcid_diger_eserler(v)
     metin = (f'<h2>DergiPark\'taki makaleleri <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
              if makaleler else
-             '<p class="giris">DergiPark taramasında anahtar kelimelerinde din felsefesi geçen bir makalesi bulunamadı.</p>')
+             '<p class="giris">DergiPark taramasında anahtar kelimelerinde din felsefesi geçen bir makalesi bulunamadı.</p>') + diger
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <h1>{e(p["ad"])}{emekli}</h1>
@@ -1593,7 +1630,7 @@ def render_akademisyen(s: str) -> str:
 {f'<p class="akademi-bag">{" · ".join(baglar)}</p>' if baglar else ''}
 <div class="fis-duzen">
   <div class="metin">{metin}
-    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır. Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası DergiPark makale sayfalarından alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>"""
