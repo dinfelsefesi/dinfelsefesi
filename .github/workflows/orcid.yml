@@ -1,0 +1,30 @@
+name: ORCID toplama
+# Türkiye akademisi listesindeki kişilerin ORCID numaraları DergiPark makale sayfalarından,
+# eser listeleri ORCID kayıtlarından alınır. Ayda bir, DergiPark hasadından sonra çalışır.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "53 5 2 * *"
+permissions:
+  contents: write
+concurrency:
+  group: orcid
+  cancel-in-progress: false
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pyyaml
+      - run: python3 scripts/orcid_topla.py
+      - name: Sonucu kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/orcid/
+          git commit -m "ORCID: numaralar ve eser listeleri güncellendi" || exit 0
+          git pull --rebase -q && git push -q
