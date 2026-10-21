@@ -1544,7 +1544,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         p = liste_[a]
         aciklama = " · ".join(x for x in [p.get("unvan", ""), p.get("universite", "")] if x)
         dugumler.append({
-            "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi · Türkiye akademisi",
+            "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi",
             "suz": "kisi-tr", "url": f"{SITE_URL}/kisiler/#k-{slugify(p['ad'])}", "aciklama": aciklama,
             "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}#makaleler",
             "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
@@ -1582,13 +1582,9 @@ def onizleme_verisi(items) -> dict:
 
 def render_ag(items) -> str:
     v = ag_verisi(items)
-    suzgec = []
-    for k, a, r in AG_TURLER:
-        if k == "kisi":
-            suzgec += [("kisi", "Kişi · uluslararası", r, ""), ("kisi-tr", "Kişi · Türkiye akademisi", r, " halka")]
-        else:
-            suzgec.append((k, a, r, ""))
-    say = {k: sum(1 for d in v["dugumler"] if d.get("suz", d["tur"]) == k) for k, _, _, _ in suzgec}
+    cogul = {"baslik": "Başlıklar", "terim": "Terimler", "kisi": "Kişiler", "eser": "Eserler", "makale": "Makale tanıtımları"}
+    suzgec = [(k, cogul.get(k, a), r, "") for k, a, r in AG_TURLER]
+    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _, _ in suzgec}
     dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta{sinif}" style="--renk:{r}"></span>{e(a)} <span class="say">{say[k]}</span></button>'
                        for k, a, r, sinif in suzgec if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")

@@ -13,7 +13,7 @@
 
   var dugumler = V.dugumler.map(function (d) { return Object.assign({}, d); });
   var baglar = V.baglar.map(function (b) { return { source: b[0], target: b[1], w: b[2] || 1 }; });
-  var suz = function (d) { return d.suz || d.tur; };
+  var suz = function (d) { return d.tur; };
   var byId = {};
   dugumler.forEach(function (d) { byId[d.id] = d; d.komsu = new Set(); });
   baglar.forEach(function (b) { byId[b.source].komsu.add(b.target); byId[b.target].komsu.add(b.source); });
