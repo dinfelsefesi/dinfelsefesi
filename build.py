@@ -406,6 +406,7 @@ table.makaleler td.m-makale a:hover{color:var(--accent);text-decoration:underlin
 table.makaleler td.m-yil{white-space:nowrap;font-variant-numeric:tabular-nums}
 table.makaleler td.m-konu{width:20%;font-size:.88rem;font-style:italic}
 .m-dergi{display:block;font-size:.86rem;font-style:italic;color:var(--ink-soft);margin-top:.15rem}
+.m-kaynak{display:inline-block;font-size:.7rem;letter-spacing:.03em;color:var(--accent);border:1px solid currentColor;border-radius:6px;padding:0 .35rem;margin-left:.35rem;vertical-align:.1em;opacity:.8}
 .m-tur{display:inline-block;font-size:.75rem;font-style:italic;color:var(--gold);border:1px solid currentColor;border-radius:6px;padding:0 .4rem;margin-left:.35rem;vertical-align:.1em}
 table.kisiler tbody tr:target{background:var(--accent-soft)}
 .k-makale{font-size:.85rem;white-space:nowrap}
@@ -1252,7 +1253,7 @@ ESER_TURLERI = [("kitap", "Kitaplar"), ("kitap-bolumu", "Kitap bölümleri"), ("
                 ("bildiri", "Bildiriler"), ("tez", "Tezler"), ("kitap-tanitimi", "Kitap tanıtımları"),
                 ("ceviri", "Tercümeler"), ("soylesi", "Söyleşiler")]
 DP_TUR_ESER = {"": "makale", "kitap-tanitimi": "kitap-tanitimi", "ceviri": "ceviri",
-               "ceviri-degerlendirmesi": "ceviri", "soylesi": "soylesi"}
+               "ceviri-degerlendirmesi": "ceviri", "soylesi": "soylesi", "kitap": "kitap", "kitap-bolumu": "kitap-bolumu"}
 
 
 def atalar(b) -> set:
@@ -1283,6 +1284,7 @@ def eser_ogeleri() -> list:
         tur = DP_TUR_ESER[m["tur"]]
         konu = set(m["konular"] or m["ilgili"])
         etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        etiket += ORCID_ISARET if m.get("kaynak") == "orcid" else ""
         konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
         html_ = (f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{etiket}'
@@ -1331,7 +1333,7 @@ def render_eserler() -> str:
                           for k, a in [("yil", "Yıl"), ("yazar", "Yazar"), ("ad", "Eser adı")]) + '</div>')
     tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
-            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri ve DergiPark\'ta yayımlanan, anahtar kelimelerinde din felsefesi geçen makaleler. '
+            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri, DergiPark\'ta yayımlanan ve anahtar kelimelerinde din felsefesi geçen makaleler ile Türkiye akademisindeki hocaların ORCID kayıtlarında yer alan DOI\'li çalışmalar. '
             f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
@@ -1407,7 +1409,7 @@ ESER_JS = """<script>
 
 DP_DIZIN = ROOT / "data" / "dergipark"
 DP_TUR_AD = {"kitap-tanitimi": "Kitap tanıtımı", "ceviri": "Çeviri", "ceviri-degerlendirmesi": "Çeviri değerlendirmesi",
-             "soylesi": "Söyleşi"}
+             "soylesi": "Söyleşi", "kitap": "Kitap", "kitap-bolumu": "Kitap bölümü"}
 _DP = None
 KUCUK_KELIME = {"ve", "ile", "veya", "ya", "da", "de", "ki", "mi", "mı", "mu", "mü", "a", "an", "the", "of", "and", "or",
                 "in", "on", "at", "to", "for", "from", "by", "with", "as", "der", "die", "das"}
@@ -1496,8 +1498,45 @@ def dp_veri() -> list:
             "ilgili": list(x.get("ilgili_basliklar") or []), "tur": x.get("yayin_turu") or "",
             "kelimeler": dps.anahtar_kelimeler(r),
         })
+    _DP += orcid_eserleri()
     _DP.sort(key=lambda m: (m["tarih"], m["id"]), reverse=True)
     return _DP
+
+
+ORCID_ISARET = ' <span class="m-kaynak" title="ORCID kaydından">ORCID</span>'
+
+
+def orcid_eserleri() -> list:
+    """ORCID kayıtlarındaki DOI'li eserlerden, anahtar kelimeleri bir başlığa uyanlar (scripts/orcid_siniflandir.py).
+    DergiPark listesinde zaten bulunanlar orada ayıklanmıştır. Yazar listesinde akademisyenin adı listedeki yazılışıyla yer alır."""
+    dosya = ROOT / "data/orcid/eser_sinif.json"
+    if not dosya.exists():
+        return []
+    out = []
+    for doi, x in json.loads(dosya.read_text(encoding="utf-8")).items():
+        if x["durum"] != "konulu":
+            continue
+        yazarlar = [y.strip() for y in x["yazarlar"] if y.strip()]
+        for s in x["sahipler"]:
+            if any(ad_anahtari(y) == ad_anahtari(s) for y in yazarlar):
+                continue
+            soy_ = slugify(s.split()[-1])
+            i = next((i for i, y in enumerate(yazarlar) if y.split() and slugify(y.split()[-1]) == soy_), None)
+            if i is None:
+                yazarlar.append(s)
+            else:
+                yazarlar[i] = s
+        baslik = x["baslik"]
+        if baslik.isupper():
+            baslik = harf_duzelt(baslik, "tr-TR")
+        tanitim = x["tur"] in ("kitap-tanitimi", "ceviri")
+        out.append({
+            "id": "orcid-" + slugify(doi), "baslik": baslik, "yazarlar": yazarlar, "dergi": x["dergi"], "cilt_sayi": "",
+            "yil": x["yil"], "tarih": x["yil"], "baglanti": "https://doi.org/" + doi, "doi": True,
+            "konular": [] if tanitim else list(x["basliklar"]), "ilgili": list(x["ilgili"]), "tur": x["tur"],
+            "kelimeler": x["kelimeler"], "kaynak": "orcid",
+        })
+    return out
 
 
 def dp_tarama_tarihi() -> str:
@@ -1543,12 +1582,13 @@ def baslik_makaleleri(k) -> str:
     def satir(m):
         yazar, dergi = dp_kunye(m)
         tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        tur += ORCID_ISARET if m.get("kaynak") == "orcid" else ""
         return (f'<li><a class="dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
                 f'<span class="m-dergi">{yazar} · {dergi}, {e(m["yil"])}</span></li>')
-    out = '<section class="tr-makaleler"><h2>Türkçe makaleler</h2>'
+    out = '<section class="tr-makaleler"><h2>Türkiye akademisinden çalışmalar</h2>'
     if ms:
         out += (f'<ul class="m-liste">{"".join(satir(m) for m in ms[:5])}</ul>'
-                f'<p class="m-hepsi"><a href="{SITE_URL}/eserler/?konu={k}">Bu başlıktaki bütün eserler ({len(ms)} makale) →</a></p>')
+                f'<p class="m-hepsi"><a href="{SITE_URL}/eserler/?konu={k}">Bu başlıktaki bütün eserler ({len(ms)} çalışma) →</a></p>')
     if tc:
         out += f'<h3>Kitap tanıtımları ve çeviriler</h3><ul class="m-liste">{"".join(satir(m) for m in tc)}</ul>'
     return out + '</section>'
@@ -1637,7 +1677,7 @@ def baslik_calisanlari(k) -> str:
     say.sort(key=lambda x: (-x[0], tr_anahtar(x[2]["p"]["ad"])))
     ogeler = "".join(f'<li><a href="{akademi_url(s)}">{e(v["p"]["ad"])}</a> <span class="say">{n}</span></li>' for n, s, v in say)
     return (f'<section class="calisanlar"><h2>Türkiye\'de bu konuda çalışanlar</h2>'
-            f'<p class="aciklama-kisa">Türkiye akademisi listesindeki akademisyenler, bu başlığa giren DergiPark makalelerinin sayısıyla.</p>'
+            f'<p class="aciklama-kisa">Türkiye akademisi listesindeki akademisyenler, bu başlığa giren çalışmalarının sayısıyla (DergiPark taraması ve ORCID kaydındaki DOI\'li yayınlar).</p>'
             f'<ul class="calisan-liste">{ogeler}</ul></section>')
 
 
@@ -1667,7 +1707,7 @@ def orcid_diger_eserler(v) -> str:
     if not ogeler:
         return ""
     return (f'<h2>ORCID kaydındaki diğer yayınları <span class="say">{len(ogeler)}</span></h2>'
-            f'<p class="aciklama-kisa">Kişinin ORCID kaydında yer alan ve yukarıdaki DergiPark listesinde bulunmayan yayınlar. '
+            f'<p class="aciklama-kisa">Kişinin ORCID kaydında yer alan ve yukarıdaki listede bulunmayan yayınlar. '
             f'Konu sınırlaması yoktur, liste ORCID kaydının güncelliğine bağlıdır.</p>'
             f'<ul class="eser-liste">{"".join(ogeler)}</ul>')
 
@@ -1698,6 +1738,7 @@ def render_akademisyen(s: str) -> str:
         yazar = ", ".join(akademisyen_bag(y) if slugify(y) != s else e(y) for y in m["yazarlar"])
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
         tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        tur += ORCID_ISARET if m.get("kaynak") == "orcid" else ""
         konu = ", ".join(bag("baslik", b) for b in m["konular"] if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
         makaleler.append(f'<li><a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
                          f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
@@ -1716,9 +1757,9 @@ def render_akademisyen(s: str) -> str:
         yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak=kisi-tr/{s}">İlişki ağında göster →</a>')
     tarih = dp_tarama_tarihi()
     diger = orcid_diger_eserler(v)
-    metin = (f'<h2>DergiPark\'taki makaleleri <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
+    metin = (f'<h2>Din felsefesi çalışmaları <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
              if makaleler else
-             '<p class="giris">DergiPark taramasında anahtar kelimelerinde din felsefesi geçen bir makalesi bulunamadı.</p>') + diger
+             '<p class="giris">DergiPark taramasında ve ORCID kaydında anahtar kelimeleri din felsefesi başlıklarına uyan bir çalışması bulunamadı.</p>') + diger
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <section class="kartvizit" aria-label="Künye">
@@ -1733,7 +1774,7 @@ def render_akademisyen(s: str) -> str:
 </section>
 <div class="fis-duzen">
   <div class="metin">{metin}
-    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""} ve ORCID kaydındaki DOI'li yayınlara göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>"""
@@ -1842,7 +1883,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         if not kenar:
             continue
         tur = DP_TUR_ESER[m["tur"]]
-        dp_dugum.append({"id": mid, "ad": m["baslik"], "tur": "eser", "turAd": DP_TUR_AD.get(m["tur"], "Makale"),
+        dp_dugum.append({"id": mid, "ad": m["baslik"], "tur": "eser", "turAd": DP_TUR_AD.get(m["tur"], "Makale") + (" (ORCID)" if m.get("kaynak") == "orcid" else ""),
                          "url": m["baglanti"], "dis": True, "kucuk": True,
                          "aciklama": " · ".join(x for x in [", ".join(m["yazarlar"]), m["dergi"], m["yil"]] if x)})
         baglar += [[mid, x] for x in dict.fromkeys(kenar)]
