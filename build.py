@@ -417,8 +417,21 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .tr-makaleler h3{font-family:var(--display);font-style:italic;font-weight:500;color:var(--gold);font-size:1.1rem;margin:1.2rem 0 .2rem}
 .m-hepsi{margin:.3rem 0 0;font-size:.95rem}
 .m-yil-tel{display:none}
-.akademi-bag{font-style:italic;font-size:.95rem;margin:-.4rem 0 1.4rem;line-height:1.9}
-.akademi-bag a{white-space:nowrap}
+/* Akademisyen sayfasının künyesi: kartvizit */
+.kartvizit{position:relative;display:flex;gap:1.4rem;align-items:flex-start;max-width:40rem;margin:.6rem 0 2.2rem;
+  padding:1.5rem 1.7rem 1.3rem;background:#fff;border:1px solid var(--accent);border-radius:14px;
+  box-shadow:6px 6px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent),0 18px 34px -24px rgba(20,30,50,.45)}
+.kv-monogram{flex:none;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--gold-logo);
+  display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.6rem;letter-spacing:.04em}
+.kv-govde{min-width:0}
+.kv-unvan{margin:0;font-style:italic;font-size:.92rem;color:var(--gold)}
+.kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15}
+.kv-kurum{margin:0;font-size:.98rem;color:var(--ink-soft);line-height:1.5}
+.kv-bag{margin:.9rem 0 0;padding-top:.7rem;border-top:1px solid var(--gold-logo);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-style:italic;font-size:.92rem}
+.kv-bag a{white-space:nowrap}
+.kv-logo{position:absolute;top:1rem;right:1rem;width:34px;height:34px;border-radius:8px;opacity:.9}
+@media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
+  .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.88rem}
 .calisanlar{margin-top:2rem}
 ul.calisan-liste{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:var(--measure)}
@@ -1467,7 +1480,7 @@ def dp_veri() -> list:
         cs = kaynak[len(dergi):]
         mc = re.search(r"Vol\.\s*(\S+)", cs)
         ms_ = re.search(r"No\.\s*(.+)", cs)
-        cilt_sayi = ", ".join(x for x in [f"C. {mc.group(1)}" if mc and mc.group(1) not in ("0", "00") else "",
+        cilt_sayi = ", ".join(x for x in [f"C. {mc.group(1)}" if mc and mc.group(1) not in ("0", "00") and not re.fullmatch(r"(19|20)\d\d", mc.group(1)) else "",
                                            f"S. {ms_.group(1).strip()}" if ms_ and ms_.group(1).strip()[:1].isdigit() else ""] if x)
         baglanti = r.get("baglanti") or []
         doi = next((b for b in baglanti if "doi.org" in b), "")
@@ -1657,6 +1670,12 @@ def orcid_diger_eserler(v) -> str:
             f'<ul class="eser-liste">{"".join(ogeler)}</ul>')
 
 
+def bas_harfler(ad_: str) -> str:
+    parca = [x for x in ad_.split() if x]
+    harf = lambda w: {"i": "İ", "ı": "I"}.get(w[0], w[0].upper())
+    return (harf(parca[0]) + (harf(parca[-1]) if len(parca) > 1 else "")) if parca else ""
+
+
 def render_akademisyen(s: str) -> str:
     v = akademi_verisi()[s]
     p = v["p"]
@@ -1700,9 +1719,16 @@ def render_akademisyen(s: str) -> str:
              '<p class="giris">DergiPark taramasında anahtar kelimelerinde din felsefesi geçen bir makalesi bulunamadı.</p>') + diger
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
-<h1>{e(p["ad"])}{emekli}</h1>
-<p class="giris">{kurum}</p>
-{f'<p class="akademi-bag">{"<br>".join(baglar)}</p>' if baglar else ''}
+<section class="kartvizit" aria-label="Künye">
+  <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
+  <div class="kv-govde">
+    <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
+    <h1>{e(p["ad"])}</h1>
+    <p class="kv-kurum">{"<br>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
+    {f'<p class="kv-bag">{"".join(f"<span>{b}</span>" for b in baglar)}</p>' if baglar else ''}
+  </div>
+  <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
+</section>
 <div class="fis-duzen">
   <div class="metin">{metin}
     <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası DergiPark makale sayfalarından alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
