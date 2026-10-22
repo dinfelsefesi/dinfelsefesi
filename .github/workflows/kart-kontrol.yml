@@ -1,0 +1,22 @@
+name: Paylaşım kartı kontrolü
+# X (Twitter) ve WhatsApp'ın tarayıcılarının bir sayfayı ve paylaşım görselini alıp alamadığını dener. Elle çalıştırılır.
+on:
+  workflow_dispatch:
+    inputs:
+      adres:
+        description: "Denenecek sayfa"
+        default: "https://dinfelsefesi.com.tr/"
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dene
+        env:
+          ADRES: ${{ inputs.adres }}
+        run: |
+          for UA in "Twitterbot/1.0" "facebookexternalhit/1.1" "WhatsApp/2.23"; do
+            KOD=$(curl -s -o sayfa.html -w "%{http_code}" -A "$UA" "$ADRES")
+            GORSEL=$(grep -o 'property="og:image" content="[^"]*"' sayfa.html | sed 's/.*content="//;s/"$//')
+            GKOD=$(curl -s -o /dev/null -w "%{http_code} %{content_type} %{size_download}" -A "$UA" "$GORSEL")
+            echo "::notice::$UA sayfa=$KOD görsel=$GKOD ($GORSEL)"
+          done
