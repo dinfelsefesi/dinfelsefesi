@@ -70,11 +70,15 @@ def main():
     VERI.mkdir(parents=True, exist_ok=True)
     kisiler = yaml.safe_load((ROOT / "content/turkiye_akademisi.yaml").read_text(encoding="utf-8"))["kisiler"]
     liste = {kisalt(p["ad"]): p for p in kisiler}
-    makaleler = [json.loads(l) for l in (ROOT / "data/dergipark/din_felsefesi.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+    makaleler = [json.loads(l) for ad_ in ("din_felsefesi.jsonl", "akademisyen_makaleleri.jsonl")
+                 if (ROOT / "data/dergipark" / ad_).exists()
+                 for l in (ROOT / "data/dergipark" / ad_).read_text(encoding="utf-8").splitlines() if l.strip()]
 
     # 1) Listedeki bir kişinin yazar olduğu makalelerin sayfalarını oku (önceden okunanlar atlanır)
     dosya = VERI / "makale_yazar.json"
     onbellek = json.loads(dosya.read_text(encoding="utf-8")) if dosya.exists() else {}
+    profil_dosya = VERI / "makale_profil.json"  # makale -> {yazar adı: DergiPark profil adresi}
+    profiller = json.loads(profil_dosya.read_text(encoding="utf-8")) if profil_dosya.exists() else {}
     okunacak = []
     for r in makaleler:
         adlar = [f"{y.partition(',')[2].strip()} {y.partition(',')[0].strip()}".strip() for y in r.get("yazarlar") or []]
@@ -87,15 +91,24 @@ def main():
         html = al(url)
         if html is not None:
             onbellek[mid] = yazarlar_sayfadan(html)
+            profiller[mid] = {unescape(ad_).strip(): yol for yol, ad_ in
+                              re.findall(r'href="/(?:tr|en)/pub/(@[^"/?#]+)"[^>]*>\s*([^<]+?)\s*<', html)}
         if i % 25 == 0:
             print(f"  {i}/{len(okunacak)}")
             dosya.write_text(json.dumps(onbellek, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+            profil_dosya.write_text(json.dumps(profiller, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
         time.sleep(1)
     dosya.write_text(json.dumps(onbellek, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+    profil_dosya.write_text(json.dumps(profiller, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
     # 2) Kişi -> ORCID (tek ve çelişkisiz olanlar)
+    # Kişinin ORCID'i yalnızca din felsefesi makalelerinden çıkarılır; akademisyen adıyla bulunan öteki
+    # makalelerde aynı adı taşıyan başka kişiler olabilir (bu makaleler ORCID'le sonradan doğrulanır).
+    df_id = {json.loads(l)["id"] for l in (ROOT / "data/dergipark/din_felsefesi.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
     gorulen = {}
-    for yazarlar in onbellek.values():
+    for mid_, yazarlar in onbellek.items():
+        if mid_ not in df_id:
+            continue
         for y in yazarlar:
             k = kisalt(y["ad"])
             if k in liste and y["orcid"]:
