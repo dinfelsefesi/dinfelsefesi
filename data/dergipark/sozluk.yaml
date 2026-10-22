@@ -361,21 +361,25 @@ basliklar:
     - reenkarnasyon
     - reincarnation
     - ölüm sonrası
-  dini-pratik:
+  ibadet:
     - ibadet
     - worship
+    - namaz
+    - salat$
+    - oruç
+    - hac$
+    - zikir
+    - kulluk
+    - ubûdiyet
+    - ubudiyet
+    - abd$
+  dini-pratik:
     - dua$
     - prayer
     - ritüel
     - ritual
     - litürji
     - liturgy
-    - namaz
-    - oruç
-    - hac$
-    - zikir
-    - kulluk
-    - ubûdiyet
     - dindarlık
     - religiosity
     - maneviyat

@@ -7,7 +7,7 @@ ust_baslik: ''
 kume: din-bilim-kultur
 ozet: İbadet, dua ve ritüel gibi dinî eylemlerin felsefi açıdan incelenmesi.
 alt_basliklar:
-- İbadet
+- ibadet
 - Dua
 - Ritüel ve litürji
 ilgili_basliklar:

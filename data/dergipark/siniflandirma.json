@@ -28,7 +28,8 @@
   "ozgurluk": 16,
   "dini-tecrube": 16,
   "dini-cesitlilik": 14,
-  "dini-pratik": 7
+  "dini-pratik": 7,
+  "ibadet": 3
  },
  "makaleler": [
   {
@@ -126,7 +127,8 @@
    "yil": "2026",
    "basliklar": [
     "din-ve-ahlak",
-    "dini-pratik"
+    "dini-pratik",
+    "ibadet"
    ],
    "kaynak": "anahtar"
   },
@@ -209,7 +211,8 @@
    "yil": "2025",
    "basliklar": [
     "dini-cesitlilik",
-    "dini-pratik"
+    "dini-pratik",
+    "ibadet"
    ],
    "kaynak": "anahtar"
   },
@@ -431,7 +434,8 @@
    "id": "1738939",
    "yil": "2025",
    "basliklar": [
-    "dini-pratik"
+    "dini-pratik",
+    "ibadet"
    ],
    "kaynak": "anahtar"
   },
