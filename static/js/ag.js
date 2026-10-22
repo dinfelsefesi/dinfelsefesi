@@ -151,7 +151,7 @@
     a.textContent = d.tanitim ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen sayfasını açın →" : d.dis ? "Makaleyi açın ↗" : "Fişi açın →";
     panel.appendChild(a);
     if (d.makaleler && d.makaleler.length) {
-      var mh = document.createElement("h3"); mh.textContent = "DergiPark'taki makaleleri (" + d.makaleler.length + ")"; panel.appendChild(mh);
+      var mh = document.createElement("h3"); mh.textContent = "Din felsefesi çalışmaları (" + d.makaleler.length + ")"; panel.appendChild(mh);
       var ol = document.createElement("ol"); ol.className = "ag-makaleler";
       d.makaleler.slice(0, 8).forEach(function (m) {
         var li = document.createElement("li"), ma = document.createElement("a");

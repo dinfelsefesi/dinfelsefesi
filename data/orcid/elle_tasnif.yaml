@@ -1,0 +1,134 @@
+# ORCID eserleri için elle düzeltmeler (DOI'ye göre).
+# karar: kapsam-disi  -> eser ağa ve eser listelerine girmez, yalnızca akademisyenin sayfasında kalır.
+# karar: [başlık, ...] -> anahtar kelime sonucunun yerine geçer. tur: kitap-tanitimi | ceviri | kitap | kitap-bolumu | '' ile türü düzeltilir.
+# İlk gözden geçirme 22 Ekim 2026: konusu kesin olmayan ya da din felsefesi dışında kalan eserler kapsam dışı sayıldı.
+'10.53844/flsf.1577687':  # AHLAKİ MUTLAKÇILIK VE EYLEM SONUÇÇULUĞU ARASINDA BİR SEÇENEK OLARAK KU
+  karar: kapsam-disi
+'10.7827/turkishstudies.51659':  # An Evaluation of Post-Modern Theology of the Contemporary Period
+  karar: kapsam-disi
+'10.12730/13091719.2013.42.84':  # Avicenna and Thomas Aquinas on the Possibility of Talking about God
+  karar: [din-dili, tanrinin-sifatlari]
+'10.36484/liberal.1698282':  # Ayn Rand'ın Felsefesinde Bireyin Özgürleşme Serüveni
+  karar: kapsam-disi
+'10.30622/tarr.807382':  # Aziz Nesin Düşüncesinde Ateizmin Yansımaları
+  karar: [teizme-yonelik-itirazlar]
+'10.29029/busbed.331591':  # BERDYAEV FELSEFESİNİN TEMEL ÖZELLİKLERİ
+  karar: kapsam-disi
+'10.52886/ilak.1203280':  # Ben Bilinci, Deney ve Bilgi
+  karar: kapsam-disi
+'10.32711/tiad.1142073':  # Bir Erdem Olarak ‘Kendini Bil’ Öğretisi
+  karar: kapsam-disi
+'10.55256/temasa.1170298':  # Bir Faaliyet Olarak Felsefe ve Düşünce
+  karar: kapsam-disi
+'10.37609/akya.3945':  # Biyoetik Açıdan İnsan Doğası
+  karar: kapsam-disi
+'10.30627/cuilah.620881':  # BİR OSMANLI AYDINI AHMET MİTHAT EFENDİ VE BAZI FELSEFİ GÖRÜŞLERİ
+  karar: kapsam-disi
+'10.12730/is.1435255':  # Caputo’s Postmodern Understanding of Religion
+  karar: kapsam-disi
+'10.29228/beytulhikme.65716':  # Considerations on Contemporary Philosophy of Religion: A Critical and 
+  karar: [din-felsefesi-tanim-yontem-tarih]
+'10.17050/kafkasilahiyat.1175775':  # DESCARTES'TA 'DÜŞÜNÜYORUM' VE RUHUN VARLIĞININ ARGÜMANLARI
+  karar: [olum-ve-otesi]
+'10.37697/eskiyeni.1597037':  # David Hume'un Teleolojik Argüman Eleştirisinin Eleştirisi
+  karar: [tanrinin-varliginin-delilleri]
+'10.20981/kaygi.1447609':  # Deleuzecü Dil Anlayışının Söz Edimleri Kuramı Açısından Değerlendirilm
+  karar: kapsam-disi
+'10.20981/kaygi.790348':  # Dine Eleştirel Yaklaşımlar Bağlamında Pozitivizmin Serencamı
+  karar: [din-ve-bilim, teizme-yonelik-itirazlar]
+'10.70458/fcr.9786255536617':  # Dusunme Bicimleri
+  karar: kapsam-disi
+'10.18506/anemon.773477':  # Dİltheyda Tarix va Ma'no
+  karar: kapsam-disi
+'10.33722/afes.1104912':  # Evaluation of Erzurumlu Ibrahim Hakkı's Views on Human Nature
+  karar: [insan-tasavvurlari]
+'10.53844/flsf.1526476':  # FELSEFİ VE MİTOLOJİK İNSAN ANLAYIŞININ KÖKENLERİ ÜZERİNE: HOMEROS VE A
+  karar: kapsam-disi
+'10.20981/kaygi.612790':  # Felsefedeki Metodolojik Bir Yaklaşım Olarak Deneysel Felsefe Akımının 
+  karar: kapsam-disi
+'10.51404/metazihin.1695620':  # Fenomenolojik Perspektiften Yapay Zekâya Bakış: Yönelimsellik, Beden v
+  karar: kapsam-disi
+'10.3390/rel17050575':  # From Combination to Individuation: A Sufi–Sadrian Case for the Metaphy
+  karar: [din-ve-bilim]
+'10.51553/bozifder.1955364':  # From Tripartite Freedom to Fair Opportunity: T. H. Green and David O. 
+  karar: kapsam-disi
+'10.18505/cuifd.78659':  # GAZÂLÎ VE THOMAS AQUINAS’TA TANRI’NIN KUDRETİ VE İMKÂNSIZLIK
+  karar: [tanrinin-sifatlari]
+'10.55256/temasa.1406890':  # Hume’un Tanrı Anlayışı: Epistemolojik Temel Üzerinden Bir İnceleme
+  karar: [din-epistemolojisi, tanri-tasavvurlari, teizme-yonelik-itirazlar]
+'10.24204/ejpr.v9i3.1993':  # Imaginings
+  karar: kapsam-disi
+'10.20981/kaygi.1514096':  # Jean Luc Marion Düşüncesinde Fenomenoloji ve Teolojinin Kesişimi
+  karar: kapsam-disi
+'10.33227/auifd.994824':  # Kant'ın Eleştirel Felsefe Öncesi Eserlerinde ve Eleştirel Felsefesinde
+  karar: [tanrinin-varliginin-delilleri]
+'10.33227/auifd.1257019':  # Kant’ta Ruhun Basitliği Safsatası
+  karar: [olum-ve-otesi]
+'10.64759/kdty.9786258697612':  # Kariyer Planlamasında Değerlerin Belirleyici Rolü
+  karar: kapsam-disi
+'10.70458/fcr.9786255536143':  # Kavramsal Putperestlik ve Felsefe-Jean-Luc Marion Felsefesine Bir Giri
+  karar: [tanri-tasavvurlari]
+'10.18020/kesit.1520':  # KİŞİLİK OLUŞUMUNDA DİLİN, DİNİN VE AHLAKİ DEĞERLERİN ROLÜ?
+  karar: kapsam-disi
+'10.58634/felsefedunyasi.1282276':  # LEVİNAS'A KARŞI LEVİNAS
+  karar: kapsam-disi
+'10.48139/aybukulliye.1336720':  # Modern Batı Düşüncesi Bağlamında Ş. Teoman Duralı’nın İnsan Tasavvuru 
+  karar: kapsam-disi
+'10.17859/pauifd.800778':  # Mutahhari, Materyalizm ve Eleştirisi
+  karar: [din-ve-bilim]
+'10.15745/da.92682':  # Nikolay Berdyayev ve Sartre Felsefesinde Kişilik ve Özgürlük Problemi
+  karar: kapsam-disi
+'10.66163/jokohtu.1641864':  # PSİKOLOJİDE YAPAY ZEKÂ KULLANIMI VE UYGULAMALARI
+  karar: kapsam-disi
+'10.29228/beytulhikme.72250':  # Philosophical Approaches and Influential Philosophical Movements in Re
+  karar: kapsam-disi
+'10.1007/s11245-026-10496-1':  # Philosophizing About “Religion” by Doing Social Ontology: The Islamic 
+  karar: kapsam-disi
+'10.55709/tsbsbildirilerdergisi.479':  # Platon’un Phaidon Diyaloğunda Uyum Argümanı ve Elemeci Materyalist Zih
+  karar: [olum-ve-otesi]
+'10.70458/fcr.9786258596601':  # Postmetafizik Düşüncede Hakikat, Tanrı ve Ahlak
+  karar: [din-ve-ahlak]
+'10.17819/felsefelogos.7':  # Rus Felsefesinin Tarihsel Gelişimi ve Genel Karakteristikleri
+  karar: kapsam-disi
+'10.17121/ressjournal.706':  # SOSYAL ONTOLOJİ AÇISINDAN DİL VE YÖNELİMSELLİK
+  karar: kapsam-disi
+'10.36484/liberal.1519230':  # Sağ Siyasetin Ontolojik Grameri
+  karar: kapsam-disi
+'10.31122/sinefilozofi.1709138':  # Searle’ün Dil ve Bilinç Anlayışından Hareketle Arrival Filmine Bir Bak
+  karar: kapsam-disi
+'10.1501/ilhfak_0000000026':  # Swinburne ve İlâhi Zamansallık
+  karar: [tanrinin-sifatlari]
+'10.29029/busbed.429079':  # SÜREÇ FELSEFESİNDE ‘İRADE’ KAVRAMININ TEMELLENDİRLİŞİ
+  karar: kapsam-disi
+'10.47526/3007-8598.6523':  # The Eternity of the World in Islamic and Christian Thought: A Comparat
+  karar: [tanri-alem-iliskisi, tanrinin-sifatlari]
+'10.29228/beytulhikme.65733':  # Theory of Active Intellect in Ikhwân as-Safâ Philosophy
+  karar: kapsam-disi
+'10.54637/vizetek.9786255531520':  # Türkiye Yüzyılı Maarif Modeli:Çeşitli Perspektifler Açısından Bir Değe
+  karar: kapsam-disi
+'10.20304/humanitas.1195750':  # Vladimir Sergeyeviç Solovyov ve Rus Kozmizmi
+  karar: kapsam-disi
+'10.20981/kaygi.1048317':  # Wittgenstein’ın Anti-Felsefesi
+  karar: kapsam-disi
+'10.58634/felsefedunyasi.1423291':  # Yapay Eğilimler ve Eğilimsel Bağdaşırcılık Üzerine Bir Deneme
+  karar: kapsam-disi
+'10.29228/beytulhikme.88942':  # Yapay Zekâ, Bilinç ve Özgür İrade Arasındaki İlişkinin Epistemolojik v
+  karar: kapsam-disi
+'10.17120/omuifd.515183':  # Yorumun Dinselleşmesinde Cemaat Söyleminin Rolü
+  karar: kapsam-disi
+'10.34247/artukluakademi.1143092':  # Özneyi Anlamak ve Karakteri Eğitmek: Kant Düşüncesinde Özgür Ahlaki Bi
+  karar: kapsam-disi
+'10.30523/mutefekkir.1312434':  # İbn Rüşd’de İrade Teorisi ve İrade-Siyaset İlişkisi
+  karar: kapsam-disi
+'10.54637/vizetek.9786253823283':  # İlahiyat Alanında Güncel Çalışmalar
+  karar: kapsam-disi
+'10.14527/9786257052870.02':  # İnsan Haklarının Etik Temeli
+  karar: kapsam-disi
+'10.18317/kaderdergi.797731':  # İyilik ve Sonsuzluk: Mâtürîdî ve Debûsî’nin Metafiziğinde Ölüm ve Haya
+  karar: [olum-ve-otesi]
+'10.26650/iuitd.2020.751852':  # İzmirli İsmail Hakkı’nın Metafizik Alana Dair Bilinmeyen Eseri: Muhtas
+  karar: kapsam-disi
+'10.18506/anemon.457828':  # İşletmelerde Etik Değerlerin Uygulanmasının Örgütsel Bağlılığa Etkisin
+  karar: kapsam-disi
+'10.56720/mevzu.1750364':  # “Kant’ın Kadın Algısı” ile “Kant Düşüncesinde Kadın” Ayrımının Gerekli
+  karar: kapsam-disi

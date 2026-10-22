@@ -23,6 +23,8 @@ jobs:
       - run: python3 scripts/orcid_topla.py
       - name: DOI'li eserlerin künye ve anahtar kelimeleri
         run: python3 scripts/orcid_doi.py
+      - name: Eserleri başlıklara ayır
+        run: python3 scripts/orcid_siniflandir.py
       - name: Sonucu kaydet
         run: |
           git config user.name "github-actions[bot]"
