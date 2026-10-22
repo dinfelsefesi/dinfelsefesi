@@ -1760,7 +1760,8 @@ def ag_verisi(items) -> dict:
         if not hedefler:
             continue
         mid = f"makale/{m['slug']}"
-        dugumler.append({"id": mid, "ad": m["title_tr"], "tur": "makale", "turAd": tur_ad["makale"],
+        # makale tanıtımları ağda eser olarak sayılır (süzgeçte ayrı bir düğme açmaz)
+        dugumler.append({"id": mid, "ad": m["title_tr"], "tur": "eser", "turAd": tur_ad["makale"], "tanitim": True,
                          "url": entry_url(m), "aciklama": m.get("lead", "")})
         baglar |= {(mid, x) for x in hedefler}
     for d in dugumler:
