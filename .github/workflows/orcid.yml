@@ -1,6 +1,6 @@
 name: ORCID toplama
 # Türkiye akademisi listesindeki kişilerin ORCID numaraları DergiPark makale sayfalarından,
-# eser listeleri ORCID kayıtlarından alınır. Ayda bir, DergiPark hasadından sonra çalışır.
+# eser listeleri ORCID kayıtlarından alınır. DOI'li eserlerin anahtar kelimeleri OpenAlex ve DergiPark'tan okunur. Ayda bir, DergiPark hasadından sonra çalışır.
 on:
   workflow_dispatch:
   schedule:
@@ -21,6 +21,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -q pyyaml
       - run: python3 scripts/orcid_topla.py
+      - name: DOI'li eserlerin künye ve anahtar kelimeleri
+        run: python3 scripts/orcid_doi.py
       - name: Sonucu kaydet
         run: |
           git config user.name "github-actions[bot]"
