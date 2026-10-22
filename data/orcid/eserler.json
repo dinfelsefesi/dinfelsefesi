@@ -1,6 +1,160 @@
 {
- "tarih": "2026-10-21",
+ "tarih": "2026-10-22",
  "eserler": {
+  "0000-0001-6585-9340": [
+   {
+    "baslik": "Practical Theology: Is Theology as a Praxis Possible in a Multicultural World?",
+    "tur": "journal-article",
+    "dergi": "Turkish Studies-Comparative Religious Studies",
+    "yil": "2026",
+    "doi": "10.7827/TurkishStudies.87252",
+    "url": "https://doi.org/10.7827/TurkishStudies.87252"
+   },
+   {
+    "baslik": "Deleuzecü Dil Anlayışının Söz Edimleri Kuramı Açısından Değerlendirilmesi",
+    "tur": "journal-article",
+    "dergi": "Kaygı. Uludağ Üniversitesi Fen-Edebiyat Fakültesi Felsefe Dergisi",
+    "yil": "2024",
+    "doi": "10.20981/kaygi.1447609",
+    "url": "https://doi.org/10.20981/kaygi.1447609"
+   },
+   {
+    "baslik": "Considerations on Contemporary Philosophy of Religion: A Critical and Hermeneutic Analysis",
+    "tur": "journal-article",
+    "dergi": "Beytulhikme An International Journal of Philosophy",
+    "yil": "2022",
+    "doi": "10.29228/beytulhikme.65716",
+    "url": "https://doi.org/10.29228/beytulhikme.65716"
+   },
+   {
+    "baslik": "NIETZSCHE’NİN İNSAN, DOĞA VE DEĞER ANLAYIŞININ GÜNÜMÜZ DÜNYASINA YANSIMALARI NIETZSCHECİ BİR YAKLAŞIM",
+    "tur": "conference-paper",
+    "dergi": "VI. Uluslararası Dini Araştırmalar ve İnsan Sempozyumu “Olağandışı Dönemlerde Ahlak ve Vicdan Ekseninde Değişim, Süreklilik ve Sürdürülebilirlik” , 2021",
+    "yil": "2021",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "DİJİTALLEŞEN DÜNYADA DİN, İNSAN VE DEĞERİN KONUMLANIŞI",
+    "tur": "conference-paper",
+    "dergi": ":İSLÂM VE YORUM V: DİJİTALLEŞME VE DİN (İMKÂNLAR, SORUNLAR VE SINIRLAR)",
+    "yil": "2021",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "DİJİTALLEŞEN DÜNYADA DİN, İNSAN VE DEĞERİN KONUMLANIŞI",
+    "tur": "conference-paper",
+    "dergi": "İSLÂM VE YORUM V: DİJİTALLEŞME VE DİN (İMKÂNLAR, SORUNLAR VE SINIRLAR)",
+    "yil": "2021",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "POSTMODERN TEOLOJİ",
+    "tur": "book",
+    "dergi": "DBY Yayınları",
+    "yil": "2021",
+    "doi": "",
+    "url": "https://akademik.yok.gov.tr/AkademikArama/view/viewAuthorBook.jsp"
+   },
+   {
+    "baslik": "Modern Bilinç Teorileri Açısından Nöroteolojik Yaklaşımın İmkânı: Avantaj ve Dezavantajları",
+    "tur": "journal-article",
+    "dergi": "Beytulhikme An International Journal of Philosophy",
+    "yil": "2021",
+    "doi": "10.18491/beytulhikme.1763",
+    "url": "http://dx.doi.org/10.18491/beytulhikme.1763"
+   },
+   {
+    "baslik": "Modern Sonrası Çağdaş Dönem Teolojisi Üzerine Bir Değerlendirme",
+    "tur": "journal-article",
+    "dergi": "Turkish Studies-Comparative Religious Studies",
+    "yil": "2021",
+    "doi": "10.7827/turkishstudies.51659",
+    "url": "http://dx.doi.org/10.7827/turkishstudies.51659"
+   },
+   {
+    "baslik": "Ontolojinin Epistemolojisi: Aklın/DüşünceninSosyal İnşası",
+    "tur": "book-chapter",
+    "dergi": "AKIL KİTABI -I",
+    "yil": "2020",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "ÇAĞDAŞ ZAMANLARDA DİN VE DİNDARLIK",
+    "tur": "book-chapter",
+    "dergi": "İSLAM VE YORUM IV-III. CİLT",
+    "yil": "2020",
+    "doi": "",
+    "url": "http://admin.inonu.edu.tr/application/ModuleAnnouncement/1001/04-01-2021_032011921.pdf"
+   },
+   {
+    "baslik": "Felsefedeki Metodolojik Bir Yaklaşım Olarak Deneysel Felsefe Akımının Yargı Analizlerinin Epistemik Değeri",
+    "tur": "journal-article",
+    "dergi": "Kaygı. Uludağ Üniversitesi Fen-Edebiyat Fakültesi Felsefe Dergisi",
+    "yil": "2019",
+    "doi": "10.20981/kaygi.612790",
+    "url": "http://dx.doi.org/10.20981/kaygi.612790"
+   },
+   {
+    "baslik": "DİNİ İFADELERİN EDİM SÖZEL AÇIDAN SINIFLANDIRILMASI",
+    "tur": "conference-paper",
+    "dergi": "5.ULUSLARARASI SOSYAL BİLİMLERKONGRESİ (27-30 HAZİRAN 2019) ÜSKÜP/KUZEYMAKEDONYA , 2019",
+    "yil": "2019",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "ANALİTİK FELSEFÎ TEOLOJİ'NİN İMKÂNI",
+    "tur": "journal-article",
+    "dergi": "Route Educational and Social Science Journal",
+    "yil": "2018",
+    "doi": "10.17121/ressjournal.1228",
+    "url": "http://dx.doi.org/10.17121/ressjournal.1228"
+   },
+   {
+    "baslik": "İnsan Bilimlerinde Olgu-Değer Ayrımının Meydana Getirdiği Problemler",
+    "tur": "journal-article",
+    "dergi": "İNSAN VE TOPLUM BİLİMLERİ ARAŞTIRMALARI DERGİSİ",
+    "yil": "2017",
+    "doi": "",
+    "url": "http://www.itobiad.com/tr/download/article-file/317463"
+   },
+   {
+    "baslik": "SÖZ EDİMLERİ TEORİSİ AÇISINDAN DİN DİLİ",
+    "tur": "book",
+    "dergi": "Emin Yayınları",
+    "yil": "2017",
+    "doi": "",
+    "url": "https://akademik.yok.gov.tr/AkademikArama/view/viewAuthorBook.jsp"
+   },
+   {
+    "baslik": "HUSSERL FENOMENOLOJİSİ BAĞLAMINDA FENOMENOLOJİ VE ANALİTİK FELSEFENİN BENZERLİK",
+    "tur": "journal-article",
+    "dergi": "Route Educational and Social Science Journal",
+    "yil": "2017",
+    "doi": "10.17121/ressjournal.868",
+    "url": "http://dx.doi.org/10.17121/ressjournal.868"
+   },
+   {
+    "baslik": "SOSYAL ONTOLOJİ AÇISINDAN DİL VE YÖNELİMSELLİK",
+    "tur": "journal-article",
+    "dergi": "Route Educational and Social Science Journal",
+    "yil": "2017",
+    "doi": "10.17121/ressjournal.706",
+    "url": "http://dx.doi.org/10.17121/ressjournal.706"
+   },
+   {
+    "baslik": "Dilsel Anlam Probleminin Searlecü Yaklaşım Bağlamında Performatif Açıdan Değerlendirilmesi",
+    "tur": "journal-article",
+    "dergi": "Uludağ Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2014",
+    "doi": "",
+    "url": "https://dergipark.org.tr/tr/download/article-file/144291"
+   }
+  ],
   "0000-0001-9660-9424": [
    {
     "baslik": "The Theological Translation of Irascibility  and Concupiscence: On The Existential Constitution of The Problems of Freedom And Evil",
@@ -265,6 +419,7 @@
     "url": "https://doi.org/10.37697/eskiyeni.1597037"
    }
   ],
+  "0000-0002-8797-8006": [],
   "0000-0003-3610-4525": [],
   "0000-0001-7507-4475": [
    {
@@ -277,6 +432,8 @@
    }
   ],
   "0000-0003-2093-4428": [],
+  "0000-0003-2134-8500": [],
+  "0000-0002-4419-9440": [],
   "0000-0002-6983-7891": [
    {
     "baslik": "Kantta Özgürlük Ahlak ve Din",
@@ -295,6 +452,8 @@
     "url": "https://doi.org/10.47425/marifetname.vi.1415686"
    }
   ],
+  "0000-0002-0866-8596": [],
+  "0009-0006-4236-6432": [],
   "0000-0003-1687-993X": [
    {
     "baslik": "Varlıkların Devamına Yönelik Güzellik Argümanı: Tanrı, Güzellik ve Devamlılık İlişkisi",
@@ -505,6 +664,8 @@
     "url": "https://www.yediiklimdergisi.com/20-cilt-201-sayi/"
    }
   ],
+  "0000-0001-8756-0841": [],
+  "0000-0002-8314-5795": [],
   "0000-0002-8385-5287": [
    {
     "baslik": "Beyond Atomism and Nihilism: The Metaphysical Challenge of Gunk Ontology",
@@ -587,6 +748,7 @@
     "url": "https://publons.com/wos-op/publon/56528025/"
    }
   ],
+  "0000-0002-2479-1084": [],
   "0000-0003-3905-018X": [
    {
     "baslik": "Kötü-Tanrı İtirazı",
@@ -1303,7 +1465,42 @@
     "url": ""
    }
   ],
+  "0000-0002-0441-3780": [],
   "0000-0002-2196-4744": [],
+  "0000-0003-3278-0999": [
+   {
+    "baslik": "Pragmatik Gerçekçi Bir Din Felsefesi",
+    "tur": "journal-article",
+    "dergi": "İslami İlimler Dergisi",
+    "yil": "2025",
+    "doi": "10.34082/islamiilimler.1617010",
+    "url": "http://dx.doi.org/10.34082/islamiilimler.1617010"
+   },
+   {
+    "baslik": "Şihâbüddîn Es-Sühreverdî’de Husûlî Ve Huzûrî Bilgi Açısından Bilgiyi Temellendirmede Kendilik Bilgisinin Rolü",
+    "tur": "journal-article",
+    "dergi": "Dinbilimleri Akademik Araştırma Dergisi",
+    "yil": "2022",
+    "doi": "10.33415/daad.1118521",
+    "url": "https://doi.org/10.33415/daad.1118521"
+   },
+   {
+    "baslik": "Molla Fenârî (ö. 834/1431)",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "2022",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Şihâbüddîn es-Sühreverdî (ö. 587/1191)",
+    "tur": "book-chapter",
+    "dergi": "İslam Düşüncesini Etkileyen Şahıslar",
+    "yil": "2022",
+    "doi": "",
+    "url": ""
+   }
+  ],
   "0000-0001-8733-959X": [
    {
     "baslik": "Paul K. Moser’in Dinsel Epistemolojisi: Delil, İrade ve İlahi Gizlilik Problemi",
@@ -1386,7 +1583,9 @@
     "url": "https://doi.org/10.12730/is.1435255"
    }
   ],
+  "0000-0002-4594-4502": [],
   "0000-0002-3586-981X": [],
+  "0000-0002-0201-2289": [],
   "0000-0003-3282-8534": [
    {
     "baslik": "İlahiyat Alanında Güncel Çalışmalar",
@@ -1405,6 +1604,7 @@
     "url": ""
    }
   ],
+  "0000-0002-7697-0746": [],
   "0000-0002-8993-3522": [
    {
     "baslik": "God, Ethics, and Evolution: An Islamic Rejoinder to Sterba’s Moral Critique",
@@ -1469,6 +1669,24 @@
     "yil": "2020",
     "doi": "10.11616/basbed.v20i58861.793862",
     "url": "https://doi.org/10.11616/basbed.v20i58861.793862"
+   }
+  ],
+  "0000-0002-5440-2457": [
+   {
+    "baslik": "Tanrı-Âlem İlişkisi -Monizm ve Monoteizm-",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "10.70458/fcr.9786256781955",
+    "url": "https://doi.org/10.70458/fcr.9786256781955"
+   },
+   {
+    "baslik": "Paul Helm’de Teolojik Determinizm ve İlahi İnayet",
+    "tur": "journal-article",
+    "dergi": "Artuklu Akademi",
+    "yil": "2023",
+    "doi": "10.34247/artukluakademi.1162295",
+    "url": "https://doi.org/10.34247/artukluakademi.1162295"
    }
   ],
   "0000-0003-3611-6489": [
@@ -1601,6 +1819,80 @@
     "yil": "2020",
     "doi": "",
     "url": ""
+   }
+  ],
+  "0000-0002-6545-4033": [
+   {
+    "baslik": "Związki między metafizyką a Kalam: Awicenna a Siradż al-Din al-Urmałi",
+    "tur": "journal-article",
+    "dergi": "Studia Philosophica Wratislaviensia",
+    "yil": "2024",
+    "doi": "10.19195/1895-8001.19.1.2",
+    "url": "https://doi.org/10.19195/1895-8001.19.1.2"
+   },
+   {
+    "baslik": "The Place of God in Metaphysics: A Short Analysis of Ibn Sīnā’s Critique of Aristotle",
+    "tur": "journal-article",
+    "dergi": "Studia Philosophica Wratislaviensia",
+    "yil": "2022",
+    "doi": "10.19195/1895-8001.17.1.4",
+    "url": "https://doi.org/10.19195/1895-8001.17.1.4"
+   },
+   {
+    "baslik": "Tecrîd Geleneğinde Zorunlu Varlık'ın Zorunluluğu Tartışması: İsfehâni, Kuşçu ve Devvânî",
+    "tur": "journal-article",
+    "dergi": "Beytulhikme An International Journal of Philosophy",
+    "yil": "2021",
+    "doi": "10.18491/beytulhikme.1782",
+    "url": "http://dx.doi.org/10.18491/beytulhikme.1782"
+   },
+   {
+    "baslik": "Ibn Sīnā's Critique of Deism: A Debate on God's Creation and Sustaining",
+    "tur": "book-chapter",
+    "dergi": "Revisiting Ibn Sina's (Avicenna) Heritage",
+    "yil": "2021",
+    "doi": "",
+    "url": "https://www.peterlang.com/document/1140470"
+   },
+   {
+    "baslik": "İYİLİK VE SONSUZLUK: MÂTÜRÎDÎ VE DEBÛSÎ'NİN METAFİZİĞİNDE ÖLÜM VE HAYATIN ANLAMI",
+    "tur": "journal-article",
+    "dergi": "Kader",
+    "yil": "2020",
+    "doi": "10.18317/kaderdergi.797731",
+    "url": "http://dx.doi.org/10.18317/kaderdergi.797731"
+   },
+   {
+    "baslik": "Varlıktan Tanrı'ya: İbn Sina'nın Metafizik Delili",
+    "tur": "book",
+    "dergi": "Endülüs",
+    "yil": "2016",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "İbni Sina'nın Metafizik Delili",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2011",
+    "doi": "10.1501/ilhfak_0000001059",
+    "url": "http://dx.doi.org/10.1501/ilhfak_0000001059"
+   },
+   {
+    "baslik": "Kant'ın Vahiy Anlayışı Üzerine",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2007",
+    "doi": "10.1501/ilhfak_0000000942",
+    "url": "http://dx.doi.org/10.1501/ilhfak_0000000942"
+   },
+   {
+    "baslik": "Swinburne ve İlâhi Zamansallık",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2005",
+    "doi": "10.1501/ilhfak_0000000026",
+    "url": "http://dx.doi.org/10.1501/ilhfak_0000000026"
    }
   ],
   "0000-0001-9021-6021": [
@@ -1741,7 +2033,101 @@
     "url": ""
    }
   ],
+  "0000-0002-3755-6729": [
+   {
+    "baslik": "Gelenekten Postmoderniteye Dinî Tasavvurun Dönüşümü: Tarihsel ve Felsefi Bir Analiz",
+    "tur": "journal-article",
+    "dergi": "Türkiye İlahiyat Araştırmaları Dergisi",
+    "yil": "2026",
+    "doi": "10.32711/tiad.1902574",
+    "url": "https://doi.org/10.32711/tiad.1902574"
+   },
+   {
+    "baslik": "Theoretical and Practical Reasons for Distancing from Faith (I)",
+    "tur": "journal-article",
+    "dergi": "Afro Eurasian Studies",
+    "yil": "2022",
+    "doi": "10.33722/afes.1093276",
+    "url": "https://doi.org/10.33722/afes.1093276"
+   },
+   {
+    "baslik": "Dil Oyunları Teorisi Perspektifinde Kur’ân-ı Kerîm’e Yaklaşma Denemesi",
+    "tur": "journal-article",
+    "dergi": "Eskiyeni",
+    "yil": "2020",
+    "doi": "10.37697/eskiyeni.668954",
+    "url": "https://doi.org/10.37697/eskiyeni.668954"
+   },
+   {
+    "baslik": "Modern Batı Düşüncesinde Dini Konumlandırma Problemi",
+    "tur": "journal-article",
+    "dergi": "Türkiye İlahiyat Araştırmaları Dergisi",
+    "yil": "2019",
+    "doi": "10.32711/tiad.545868",
+    "url": "https://doi.org/10.32711/tiad.545868"
+   }
+  ],
   "0000-0001-7732-2487": [],
+  "0000-0002-8609-1905": [
+   {
+    "baslik": "From Tripartite Freedom to Fair Opportunity: T. H. Green and David O. Brink",
+    "tur": "journal-article",
+    "dergi": "Bozok Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2026",
+    "doi": "10.51553/bozifder.1955364",
+    "url": "https://doi.org/10.51553/bozifder.1955364"
+   },
+   {
+    "baslik": "Bireysel Sorumluluktan Kolektif Failliğe: Yapay Zekâ Etiğinde Dönüşen Etik Paradigmalar",
+    "tur": "conference-proceedings",
+    "dergi": "",
+    "yil": "2026",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Theistic Arguments and an Evidentialist Approach in Richard Swinburne",
+    "tur": "journal-article",
+    "dergi": "Entelekya",
+    "yil": "2025",
+    "doi": "10.5281/ZENODO.17602040",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17602040"
+   },
+   {
+    "baslik": "David O. Brink'in Ahlaki Realizm Anlayışı",
+    "tur": "dissertation-thesis",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Çağdaş Metaetik Açısından T. H. Green: Ahlaki Mükemmeliyetçilik ve Faillik Üzerine Bir İnceleme",
+    "tur": "conference-proceedings",
+    "dergi": "I. Uluslararası Van Sosyal Bilimler Sempozyumu",
+    "yil": "2025",
+    "doi": "",
+    "url": ""
+   }
+  ],
+  "0000-0001-6713-3199": [
+   {
+    "baslik": "Özneyi Anlamak ve Karakteri Eğitmek: Kant Düşüncesinde Özgür Ahlaki Bir Varlık Olarak İnsan",
+    "tur": "journal-article",
+    "dergi": "Artuklu Akademi",
+    "yil": "2022",
+    "doi": "10.34247/artukluakademi.1143092",
+    "url": "https://doi.org/10.34247/artukluakademi.1143092"
+   },
+   {
+    "baslik": "İnsan Haklarının Etik Temeli",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "2020",
+    "doi": "10.14527/9786257052870.02",
+    "url": "https://doi.org/10.14527/9786257052870.02"
+   }
+  ],
   "0000-0002-6644-7177": [
    {
     "baslik": "Kant’ta Ruhun Basitliği Safsatası",
@@ -1812,6 +2198,8 @@
    }
   ],
   "0000-0002-4079-8120": [],
+  "0000-0002-7236-6656": [],
+  "0000-0002-4890-6149": [],
   "0000-0002-3725-0498": [
    {
     "baslik": "A Functionalist-Antirealist and Humanist Interpretation of Religion: The Example of Erich Fromm",
@@ -1873,6 +2261,114 @@
     "url": "https://doi.org/10.33227/auifd.1258091"
    }
   ],
+  "0000-0002-0965-7637": [
+   {
+    "baslik": "Open theism and retroactive prayers",
+    "tur": "journal-article",
+    "dergi": "International Journal for Philosophy of Religion",
+    "yil": "2026",
+    "doi": "10.1007/s11153-026-10032-6",
+    "url": "https://doi.org/10.1007/s11153-026-10032-6"
+   },
+   {
+    "baslik": "David Baggett and Jerry L. Walls, The Good, the Right, and the Real: Is Value a Fact? (New York: Oxford University Press, 2026). Pp. xxii + 304 (pbk). ISBN 9780197607138",
+    "tur": "journal-article",
+    "dergi": "Religious Studies",
+    "yil": "2026",
+    "doi": "10.1017/S0034412526101917",
+    "url": "https://doi.org/10.1017/S0034412526101917"
+   },
+   {
+    "baslik": "Open Theism and Prophecy",
+    "tur": "journal-article",
+    "dergi": "Sophia",
+    "yil": "2025",
+    "doi": "10.1007/s11841-025-01070-0",
+    "url": "https://doi.org/10.1007/s11841-025-01070-0"
+   },
+   {
+    "baslik": "AHLAKİ MUTLAKÇILIK VE EYLEM SONUÇÇULUĞU ARASINDA BİR SEÇENEK OLARAK KURAL SONUÇÇULUĞU",
+    "tur": "journal-article",
+    "dergi": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
+    "yil": "2025",
+    "doi": "10.53844/flsf.1577687",
+    "url": "https://doi.org/10.53844/flsf.1577687"
+   },
+   {
+    "baslik": "An open theist critique of Peels’ account of divine repentance",
+    "tur": "journal-article",
+    "dergi": "International Journal for Philosophy of Religion",
+    "yil": "2025",
+    "doi": "10.1007/s11153-024-09932-2",
+    "url": "https://doi.org/10.1007/s11153-024-09932-2"
+   },
+   {
+    "baslik": "The Semantic Case Against Open Theism and Experimental Philosophy",
+    "tur": "book-chapter",
+    "dergi": "Theological Perspectives on Free Will: Compatibility, Christology, and Community",
+    "yil": "2023",
+    "doi": "",
+    "url": "https://www.routledge.com/Theological-Perspectives-on-Free-Will-Compatibility-Christology-and-Community/Visala-Vainio/p/book/9781032274423"
+   },
+   {
+    "baslik": "Moral Normativity: Naturalism vs. Theism",
+    "tur": "journal-article",
+    "dergi": "International Journal for Philosophy of Religion",
+    "yil": "2022",
+    "doi": "10.1007/s11153-022-09841-2",
+    "url": ""
+   },
+   {
+    "baslik": "Review of Craig, William Lane, Wielenberg, Erik J., Johnson, Adam Lloyd, ed. A Debate on God and Morality: What is the Best Account of Objective Moral Values and Duties?. New York: Routledge, 2020. xii+234 pp.",
+    "tur": "journal-article",
+    "dergi": "European Journal for Philosophy of Religion",
+    "yil": "2021",
+    "doi": "10.24204/ejpr.2021.3570",
+    "url": "https://doi.org/10.24204/ejpr.2021.3570"
+   },
+   {
+    "baslik": "Review of Imran Aijaz, Islam: A Contemporary Philosophical Investigation",
+    "tur": "journal-article",
+    "dergi": "Sophia",
+    "yil": "2020",
+    "doi": "10.1007/s11841-020-00798-1",
+    "url": "https://doi.org/10.1007/s11841-020-00798-1"
+   },
+   {
+    "baslik": "Islam, the Divine Command Theory, and Religious Fundamentalism",
+    "tur": "journal-article",
+    "dergi": "Islam and Christian–Muslim Relations",
+    "yil": "2019",
+    "doi": "10.1080/09596410.2019.1696024",
+    "url": "https://doi.org/10.1080/09596410.2019.1696024"
+   },
+   {
+    "baslik": "An Examination of the Biblical Evidence for Open Theism",
+    "tur": "journal-article",
+    "dergi": "The Heythrop Journal",
+    "yil": "2019",
+    "doi": "10.1111/heyj.13338",
+    "url": ""
+   },
+   {
+    "baslik": "The Moral Argument: A History, written by David Baggett and Jerry L. Walls",
+    "tur": "journal-article",
+    "dergi": "Journal of Moral Philosophy",
+    "yil": "",
+    "doi": "10.1163/17455243-20050004",
+    "url": ""
+   }
+  ],
+  "0000-0001-9062-2492": [
+   {
+    "baslik": "İşletmelerde Etik Değerlerin Uygulanmasının Örgütsel Bağlılığa Etkisinde Örgütsel Adaletin Aracı Rolü",
+    "tur": "journal-article",
+    "dergi": "Anemon Muş Alparslan Üniversitesi Sosyal Bilimler Dergisi",
+    "yil": "2019",
+    "doi": "10.18506/anemon.457828",
+    "url": "https://doi.org/10.18506/anemon.457828"
+   }
+  ],
   "0000-0001-5579-2330": [],
   "0000-0003-3910-6542": [
    {
@@ -1925,6 +2421,25 @@
    }
   ],
   "0000-0002-8953-2200": [],
+  "0000-0003-4977-9054": [
+   {
+    "baslik": "Muhammed İkbâl’in Mücadele Teodisesi ile Kötülüğü Aşma Denemesi",
+    "tur": "journal-article",
+    "dergi": "İlahiyat Tetkikleri Dergisi",
+    "yil": "2026",
+    "doi": "10.29288/ilted.1758488",
+    "url": "https://doi.org/10.29288/ilted.1758488"
+   },
+   {
+    "baslik": "Tanrı’nın Varlığına Bir Delil Olarak Dinî Tecrübe: Duyu Tecrübesi ve Saf Bilinç İddiaları Örneği",
+    "tur": "journal-article",
+    "dergi": "Cumhuriyet İlahiyat Dergisi",
+    "yil": "2018",
+    "doi": "10.18505/cuid.448346",
+    "url": "https://doi.org/10.18505/cuid.448346"
+   }
+  ],
+  "0000-0002-1924-0456": [],
   "0000-0003-3927-8088": [
    {
     "baslik": "Postmetafizik Düşüncede Hakikat, Tanrı ve Ahlak",
@@ -2023,8 +2538,193 @@
     "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85114813179&partnerID=MN8TOARS"
    }
   ],
+  "0000-0001-9292-6801": [],
+  "0000-0001-9752-3497": [
+   {
+    "baslik": "Matüridi'de Dini Çoğulculuk",
+    "tur": "book",
+    "dergi": "MÜ İlahiyat Fakültesi Vakfı Yayınları, İstanbul",
+    "yil": "2013",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Matüridi’ye Göre Din-Şeriat Ayrımının Felsefi Temelleri",
+    "tur": "book-chapter",
+    "dergi": "Büyük Türk Bilgini İmam Matüridi ve Matüridilik",
+    "yil": "2012",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Mtüridi’ye Göre Dinde Birlik Dini Gelenekte (Şeriat) Çokluk",
+    "tur": "book-chapter",
+    "dergi": "Maturidi’nin Düşünce Dünyası",
+    "yil": "2011",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Türk Düşünce Hayatında Matüridilik",
+    "tur": "book",
+    "dergi": "Cedid Neşriyat",
+    "yil": "2011",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Farabi’nin İki Eseri",
+    "tur": "book",
+    "dergi": "MÜ İlahiyat Fakültesi Vakfı Yayınları, İstanbul",
+    "yil": "2005",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "İlk Müslüman Türk Devletlerinde Düşünce",
+    "tur": "journal-article",
+    "dergi": "Türkler Ansiklopedisi",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "BİRBİRİNE ZIT İKİ EPİSTEMOLOJİK YAKLAŞIM:\" TEMELCİLİK\" VE\" İMANCILIK\"",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1999",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Maturı̂dı̂'de Bilgi Problemi",
+    "tur": "book",
+    "dergi": "MÜ İlahiyat Fakültesi Vakfı Yayınları, İstanbul",
+    "yil": "1998",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Epistemolojik Açıdan İman",
+    "tur": "book",
+    "dergi": "MÜ İlahiyat Fakültesi Vakfı Yayınları, İstanbul",
+    "yil": "1997",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Matüridi'ye Göre Kur'an'daki Kıssa ve Mesellerin Epistemolojik Amaç ve Önemi",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1995",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Matüridi'ye Göre “İman-İslam-İhsan” ve “Küfür” İlişkisi",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1994",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Bilgi-Obje İlişkisi Açısından İnsan Hürriyeti",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1989",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Ebu Hayyan et-Tevhidi Bir Ateist midir?",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1989",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Matüridi'nin Bilgi Teorisinde “Fıkh” Terimi",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "1987",
+    "doi": "",
+    "url": ""
+   }
+  ],
+  "0000-0002-5932-1314": [],
   "0000-0001-7412-7635": [],
+  "0000-0003-2895-8176": [
+   {
+    "baslik": "EBU'L-MUİN EN-NESEFİNİN TANRI TASAVVURUNDA TEMEL KAVRAMLAR",
+    "tur": "journal-article",
+    "dergi": "Kesit Akademi",
+    "yil": "2018",
+    "doi": "10.18020/kesit.1543",
+    "url": ""
+   },
+   {
+    "baslik": "İHVAN-I SAFA FELSEFESİNDE İHTİLAF KAVRAMI VE İHTİLAFA DÜŞÜLME SEBEPLERİ",
+    "tur": "journal-article",
+    "dergi": "Kesit Akademi",
+    "yil": "2017",
+    "doi": "10.18020/kesit.1368",
+    "url": ""
+   },
+   {
+    "baslik": "Ahlak Felsefesi Ekseninde Günah Kavramı",
+    "tur": "journal-article",
+    "dergi": "Mütefekkir",
+    "yil": "2014",
+    "doi": "10.30523/mutefekkir.130220",
+    "url": ""
+   }
+  ],
   "0000-0001-8549-7746": [],
+  "0000-0002-2401-1666": [],
+  "0000-0001-6384-4145": [
+   {
+    "baslik": "İHVÂN-I SAFÂ FELSEFESİNDE İNSANIN MAHİYETİ VE NEFS-BEDEN İLİŞKİSİ",
+    "tur": "journal-article",
+    "dergi": "Fırat Üniversitesi Sosyal Bilimler Dergisi",
+    "yil": "2023",
+    "doi": "10.18069/firatsbed.1207310",
+    "url": "https://doi.org/10.18069/firatsbed.1207310"
+   },
+   {
+    "baslik": "Malebranche Düşüncesinde Din-Felsefe İlişkisi",
+    "tur": "journal-article",
+    "dergi": "Fırat Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2014",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Malebranche'ın Hayatı, Eserleri Ve Döneminin Felsefi Yapısı/Malebranche's Life, his Works and Philosophical Pattern of his Period",
+    "tur": "journal-article",
+    "dergi": "Hikmet Yurdu Düşünce-Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "IMMANUEL KANT�IN ÖLÜMSÜZLÜK ANLAYIŞI",
+    "tur": "journal-article",
+    "dergi": "",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "X. YÜZYILIN BİLİMLER AKADEMİSİ: İHV̂AN-I SAF̂A TEŞKİLATI",
+    "tur": "journal-article",
+    "dergi": "",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   }
+  ],
   "0000-0002-8159-7595": [
    {
     "baslik": "DİJİTAL ÇAĞDA DİN-BİLİM ENTEGRASYONUNUN ONTOLOJİK GEREKLİLİĞİ: PLATON VE BAUDRİLLARD’IN SİMULAKR KAVRAMLARI IŞIĞINDA BİR ARAYIŞ",
@@ -2083,6 +2783,240 @@
     "url": ""
    }
   ],
+  "0000-0002-4920-4501": [
+   {
+    "baslik": "Grounding the idea of renewal in Islamic thought, and collective ihya': a study from the perspectives of the philosophy of religion and fiqh",
+    "tur": "journal-article",
+    "dergi": "Humanities & Social Sciences Communications",
+    "yil": "2025",
+    "doi": "10.1057/S41599-025-05198-9",
+    "url": "https://publons.com/wos-op/publon/76632433/"
+   },
+   {
+    "baslik": "Süreç Teizmi'nin (Whitehead) Tanrı Anlayışı",
+    "tur": "book",
+    "dergi": "Kimlik Yayınları",
+    "yil": "2020",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "LİSANS EĞİTİMİNDE MATERYAL GELİŞTİRME: KLASİK MANTIK",
+    "tur": "conference-paper",
+    "dergi": "3. ULUSLARASI SOSYAL BİLİMLER SEMPOZYUMU (ASOS CONGRESS)",
+    "yil": "2017",
+    "doi": "",
+    "url": "http://kayit.asoscongress.com/files/Maras_Ilahiyat_Tam_Metin.pdf"
+   },
+   {
+    "baslik": "ŞEMALARLA KLASİK MANTIK",
+    "tur": "book",
+    "dergi": "GECE KİTAPLIĞI",
+    "yil": "2017",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "MUST GOD CREATE THE BEST ?",
+    "tur": "other",
+    "dergi": "Türk Kültürünü Araştirma Ensti̇tüsü Yayinlari",
+    "yil": "2015",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "MUST GOD CREATE THE BEST ?",
+    "tur": "translation",
+    "dergi": "TÜRK KÜLTÜRÜNÜ ARAŞTIRMA ENSTİTÜSÜ YAYINLARI",
+    "yil": "2015",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "WHİTEHEAD’DE METAFİZİK VEYA SPEKÜLATİF FELSEFE",
+    "tur": "journal-article",
+    "dergi": "FIRAT ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ DERGİSİ",
+    "yil": "2014",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/dizgi5%2B%20h%C3%BCsamettin%20y%C4%B1ld%C4%B1r%C4%B1m.pdf"
+   },
+   {
+    "baslik": "WHİTEHEAD’DE TANRI’NIN YARATICILIĞI PROBLEMİ",
+    "tur": "journal-article",
+    "dergi": "FIRAT ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ DERGİSİ",
+    "yil": "2014",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/dizgi6%2B%20h%C3%BCsamettin%20y%C4%B1ld%C4%B1r%C4%B1m.pdf"
+   },
+   {
+    "baslik": "WHİTEHEAD’DE METAFİZİK VEYA SPEKÜLATİF FELSEFE",
+    "tur": "journal-article",
+    "dergi": "Firat Üni̇versi̇tesi̇ İlahi̇yat Fakültesi̇ Dergi̇si̇",
+    "yil": "2014",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/dizgi5%2B%20h%C3%BCsamettin%20y%C4%B1ld%C4%B1r%C4%B1m.pdf"
+   },
+   {
+    "baslik": "WHİTEHEAD’DE TANRI’NIN YARATICILIĞI PROBLEMİ",
+    "tur": "journal-article",
+    "dergi": "Firat Üni̇versi̇tesi̇ İlahi̇yat Fakültesi̇ Dergi̇si̇",
+    "yil": "2014",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/dizgi6%2B%20h%C3%BCsamettin%20y%C4%B1ld%C4%B1r%C4%B1m.pdf"
+   },
+   {
+    "baslik": "“IS GOD “SİGNİFİCANTLY FREE?",
+    "tur": "translation",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/156/pdf"
+   },
+   {
+    "baslik": "BATI DÜŞÜNCESİNDE İLAHİ HÜRRİYET PROBLEMİ",
+    "tur": "journal-article",
+    "dergi": "Fırat Univeristesi İlahiyat Fakültesi Dergisi 16:1 (2011)",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "FREE WILL DEFENSE",
+    "tur": "translation",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/140"
+   },
+   {
+    "baslik": "GOD'S PERFECTİON AND FREEDOM: A REPLY TO  MORRİSTON",
+    "tur": "translation",
+    "dergi": "FIRAT ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ DERGİSİ",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "TEHÂFÜTLERDE İLAHİ HÜRRİYET’İN MAHİYETİ",
+    "tur": "journal-article",
+    "dergi": "Fırat Universitesi İlahiyat Fakültesi Dergisi 16:1 (2011)",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "TEHÂFÜTLERİN İSLAM DÜŞÜNCESİNDEKİ YERİ VE ÖNEMİ",
+    "tur": "journal-article",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/135"
+   },
+   {
+    "baslik": "BATI DÜŞÜNCESİNDE İLAHİ HÜRRİYET PROBLEMİ",
+    "tur": "journal-article",
+    "dergi": "Fırat Univeristesi İlahiyat Fakültesi Dergisi 16:1 (2011)",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "FREE WILL DEFENSE",
+    "tur": "other",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/140"
+   },
+   {
+    "baslik": "GOD'S PERFECTİON AND FREEDOM: A REPLY TO  MORRİSTON",
+    "tur": "other",
+    "dergi": "Firat Üni̇versi̇tesi̇ İlahi̇yat Fakültesi̇ Dergi̇si̇",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "TEHÂFÜTLERDE İLAHİ HÜRRİYET’İN MAHİYETİ",
+    "tur": "journal-article",
+    "dergi": "Fırat Universitesi İlahiyat Fakültesi Dergisi 16:1 (2011)",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/tr/node/203"
+   },
+   {
+    "baslik": "TEHÂFÜTLERİN İSLAM DÜŞÜNCESİNDEKİ YERİ VE ÖNEMİ",
+    "tur": "journal-article",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/135"
+   },
+   {
+    "baslik": "“IS GOD “SİGNİFİCANTLY FREE?",
+    "tur": "other",
+    "dergi": "HİKMET YURDU Düşünce – Yorum Sosyal Bilimler Araştırma Dergisi",
+    "yil": "2011",
+    "doi": "",
+    "url": "http://www.hikmetyurdu.com/index.php/hikmetyurdu/article/view/156/pdf"
+   },
+   {
+    "baslik": "TEHÂFÜTLERDE İLAHİ HÜRRİYET PROBLEMİNİN ELE ALINIŞI",
+    "tur": "journal-article",
+    "dergi": "FIRAT ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ DERGİSİ",
+    "yil": "2010",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/14%20D%C4%B0ZG%C4%B0-KALIP-TEH%C3%82F%C3%9CTLERDE%20%C4%B0LAH%C4%B0%20H%C3%9CRR%C4%B0YET%20PROBLEM%C4%B0N%C4%B0N%20ELE%20ALINI%C5%9EI.pdf"
+   },
+   {
+    "baslik": "TEHÂFÜTLERDE İLAHİ HÜRRİYET PROBLEMİNİN ELE ALINIŞI",
+    "tur": "journal-article",
+    "dergi": "Firat Üni̇versi̇tesi̇ İlahi̇yat Fakültesi̇ Dergi̇si̇",
+    "yil": "2010",
+    "doi": "",
+    "url": "http://ilahiyat.firat.edu.tr/sites/ilahiyat.firat.edu.tr/files/14%20D%C4%B0ZG%C4%B0-KALIP-TEH%C3%82F%C3%9CTLERDE%20%C4%B0LAH%C4%B0%20H%C3%9CRR%C4%B0YET%20PROBLEM%C4%B0N%C4%B0N%20ELE%20ALINI%C5%9EI.pdf"
+   },
+   {
+    "baslik": "The problem of divine freedom in the tahafut tradition",
+    "tur": "dissertation-thesis",
+    "dergi": "",
+    "yil": "2008",
+    "doi": "",
+    "url": "https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp"
+   },
+   {
+    "baslik": "The problem of divine freedom in the tahafut tradition",
+    "tur": "other",
+    "dergi": "",
+    "yil": "2008",
+    "doi": "",
+    "url": "https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp"
+   },
+   {
+    "baslik": "The Conception of God (Whitehead) of Process Theism",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2001",
+    "doi": "",
+    "url": "https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp"
+   },
+   {
+    "baslik": "The Conception of God (Whitehead) of process Teism",
+    "tur": "dissertation-thesis",
+    "dergi": "",
+    "yil": "2001",
+    "doi": "",
+    "url": "https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp"
+   },
+   {
+    "baslik": "LİSANS EĞİTİMİNDE MATERYAL GELİŞTİRME: KLASİK MANTIK",
+    "tur": "conference-paper",
+    "dergi": "3. Uluslarasi Sosyal Bi̇li̇mler Sempozyumu (Asos Congress)",
+    "yil": "",
+    "doi": "",
+    "url": "http://kayit.asoscongress.com/files/Maras_Ilahiyat_Tam_Metin.pdf"
+   }
+  ],
   "0000-0002-8598-826X": [
    {
     "baslik": "Din Felsefesinin Ana Konuları -İslam Düşüncesinden Seçme Metinler-, Rahim Acar vd. (ed.)",
@@ -2123,6 +3057,74 @@
    }
   ],
   "0000-0001-5466-9648": [],
+  "0009-0002-7482-0784": [
+   {
+    "baslik": "“Kant’ın Kadın Algısı” ile “Kant Düşüncesinde Kadın” Ayrımının Gerekliliği Üzerine Metodik Bir Değerlendirme",
+    "tur": "journal-article",
+    "dergi": "Mevzu Sosyal Bilimler Dergisi",
+    "yil": "2026",
+    "doi": "",
+    "url": "https://mevzusbd.com/article/view/322"
+   },
+   {
+    "baslik": "“Kant’ın Kadın Algısı” ile “Kant Düşüncesinde Kadın” Ayrımının Gerekliliği Üzerine Metodik Bir Değerlendirme",
+    "tur": "journal-article",
+    "dergi": "Mevzu – Sosyal Bilimler Dergisi",
+    "yil": "2026",
+    "doi": "10.56720/mevzu.1750364",
+    "url": "https://doi.org/10.56720/mevzu.1750364"
+   }
+  ],
+  "0000-0001-5682-7013": [
+   {
+    "baslik": "HACI BEKTAŞ VELİ’NİN MAKÂLÂT ADLI ESERİNDE AKIL-İMAN-AMEL İLİŞKİSİ",
+    "tur": "journal-article",
+    "dergi": "Türk Kültürü ve Hacı Bektaş Veli Araştırma Dergisi",
+    "yil": "2026",
+    "doi": "10.60163/tkhcbva.1793720",
+    "url": "https://doi.org/10.60163/tkhcbva.1793720"
+   },
+   {
+    "baslik": "Öfke ve Kızgınlığın Yansıması Olarak Mizoteizm",
+    "tur": "journal-article",
+    "dergi": "Mizanü'l-Hak: İslami İlimler Dergisi",
+    "yil": "2026",
+    "doi": "10.47502/mizan.1886320",
+    "url": "https://doi.org/10.47502/mizan.1886320"
+   },
+   {
+    "baslik": "DİN HİZMETLERİ ÇALIŞANLARININ ÇAĞDAŞ İNANÇ PROBLEMLERİ YETERLİLİĞİ ÖLÇEĞİ",
+    "tur": "journal-article",
+    "dergi": "Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2025",
+    "doi": "10.17859/pauifd.1776765",
+    "url": "https://doi.org/10.17859/pauifd.1776765"
+   },
+   {
+    "baslik": "Apateizm Nedir? Ne Değildir?",
+    "tur": "journal-article",
+    "dergi": "Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2023",
+    "doi": "10.17859/pauifd.1296518",
+    "url": "https://doi.org/10.17859/pauifd.1296518"
+   },
+   {
+    "baslik": "Bir Erdem Olarak ‘Kendini Bil’ Öğretisi",
+    "tur": "journal-article",
+    "dergi": "Türkiye İlahiyat Araştırmaları Dergisi",
+    "yil": "2022",
+    "doi": "10.32711/tiad.1142073",
+    "url": "https://doi.org/10.32711/tiad.1142073"
+   },
+   {
+    "baslik": "Mutahhari, Materyalizm ve Eleştirisi",
+    "tur": "journal-article",
+    "dergi": "Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2020",
+    "doi": "10.17859/pauifd.800778",
+    "url": "https://doi.org/10.17859/pauifd.800778"
+   }
+  ],
   "0000-0002-0210-1708": [
    {
     "baslik": "Kurtuluş ve Hakikat İddiaları Bağlamında William Lane Craig’in Dinî Tekelcilik Yaklaşımı ve Eleştirisi",
@@ -2592,7 +3594,68 @@
    }
   ],
   "0000-0003-0243-5625": [],
+  "0000-0002-8967-3433": [
+   {
+    "baslik": "1. Kelly James Clark, “Calling Abraham’s Children”",
+    "tur": "book-chapter",
+    "dergi": "Abraham's Children",
+    "yil": "2017",
+    "doi": "10.12987/9780300183337-002",
+    "url": ""
+   },
+   {
+    "baslik": "Imaginings",
+    "tur": "journal-article",
+    "dergi": "European Journal for Philosophy of Religion",
+    "yil": "2017",
+    "doi": "10.24204/ejpr.v9i3.1993",
+    "url": ""
+   }
+  ],
+  "0000-0002-1091-4127": [
+   {
+    "baslik": "Is the Distinction between Revealed and Natural Theology Applicable to Ibn Rushd’s Islamic Theism? Aristotelian Deistic Theism in Ibn Rushd",
+    "tur": "journal-article",
+    "dergi": "Islam and Christian–Muslim Relations",
+    "yil": "2026",
+    "doi": "10.1080/09596410.2026.2652195",
+    "url": "https://doi.org/10.1080/09596410.2026.2652195"
+   },
+   {
+    "baslik": "Averroesian Religious Common Sense Natural Theology as Reflective Knowledge in the Form of Teleological Argument",
+    "tur": "journal-article",
+    "dergi": "Religions",
+    "yil": "2024",
+    "doi": "10.3390/rel15121429",
+    "url": "https://doi.org/10.3390/rel15121429"
+   },
+   {
+    "baslik": "The Highest Intellectual Virtue in Aristotle",
+    "tur": "journal-article",
+    "dergi": "Journal of Sakarya University Faculty of Theology",
+    "yil": "2016",
+    "doi": "",
+    "url": "https://publons.com/wos-op/publon/56773630/"
+   },
+   {
+    "baslik": "Virtue Epistemology of Ernest Sosa",
+    "tur": "journal-article",
+    "dergi": "Journal of Sakarya University Faculty of Theology",
+    "yil": "2016",
+    "doi": "",
+    "url": "https://publons.com/wos-op/publon/56773611/"
+   },
+   {
+    "baslik": "Necessity Of Natural Laws, Divine Action and Miracle -Can God Act in the World?",
+    "tur": "journal-article",
+    "dergi": "Journal of Sakarya University Faculty of Theology",
+    "yil": "2009",
+    "doi": "",
+    "url": "https://publons.com/wos-op/publon/56890037/"
+   }
+  ],
   "0000-0001-6604-3650": [],
+  "0000-0003-0292-6563": [],
   "0000-0003-0006-7224": [
    {
     "baslik": "İlahiyat Neyin Bilgisidir? İlahiyat ve Fenomenoloji",
@@ -2604,6 +3667,8 @@
    }
   ],
   "0000-0003-0222-4318": [],
+  "0000-0001-9922-2233": [],
+  "0000-0001-5974-3931": [],
   "0000-0002-8844-8875": [
    {
     "baslik": "The Self-Consciousness of the Soul in the Context of Avicenna’s Flying Man Theory",
@@ -2792,8 +3857,30 @@
   ],
   "0000-0001-9537-3851": [],
   "0000-0002-5537-0469": [],
+  "0000-0002-4438-8209": [],
+  "0000-0003-4748-8130": [],
   "0000-0003-1527-498X": [],
   "0000-0001-8203-691X": [],
+  "0000-0002-9694-1344": [
+   {
+    "baslik": "Sağ Siyasetin Ontolojik Grameri",
+    "tur": "journal-article",
+    "dergi": "Liberal Düşünce Dergisi",
+    "yil": "2024",
+    "doi": "10.36484/liberal.1519230",
+    "url": "https://doi.org/10.36484/liberal.1519230"
+   },
+   {
+    "baslik": "İmparatorluğun Ontolojik Grameri versus Ulus-Devletin İdeolojik Mantığı",
+    "tur": "journal-article",
+    "dergi": "Liberal Düşünce Dergisi",
+    "yil": "2019",
+    "doi": "10.36484/liberal.605860",
+    "url": "https://doi.org/10.36484/liberal.605860"
+   }
+  ],
+  "0000-0001-5571-0788": [],
+  "0000-0002-3371-2122": [],
   "0000-0002-2867-140X": [
    {
     "baslik": "Din Dilinde Gönderim Problemi",
@@ -2804,6 +3891,8 @@
     "url": "https://doi.org/10.18498/amailad.1184204"
    }
   ],
+  "0000-0002-3591-9936": [],
+  "0000-0002-3040-8133": [],
   "0000-0001-5967-6783": [],
   "0000-0003-1857-9826": [
    {
@@ -2983,6 +4072,116 @@
     "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85071007807&partnerID=MN8TOARS"
    }
   ],
+  "0009-0004-2824-4856": [
+   {
+    "baslik": "İnsani Değerlerin Kur'anî Temelleri: Din, Ahlak ve İnsan İlişkisi",
+    "tur": "journal-article",
+    "dergi": "Zenodo",
+    "yil": "2025",
+    "doi": "10.5281/ZENODO.17947755",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17947755"
+   },
+   {
+    "baslik": "Kariyer Planlamasında Değerlerin Belirleyici Rolü",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "10.64759/kdty.9786258697612",
+    "url": "http://dx.doi.org/10.64759/kdty.9786258697612"
+   },
+   {
+    "baslik": "Tanrısız Ahlakın İmkânı ve Sınırları: Ateizm ve Seküler Etik Üzerine Eleştirel Bir İnceleme",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "10.64759/kdty.9786255729972",
+    "url": "http://dx.doi.org/10.64759/kdty.9786255729972"
+   }
+  ],
+  "0000-0002-5131-3846": [],
+  "0000-0003-1939-1526": [],
+  "0000-0002-7961-2661": [
+   {
+    "baslik": "FELSEFİ VE MİTOLOJİK İNSAN ANLAYIŞININ KÖKENLERİ ÜZERİNE: HOMEROS VE ARİSTOTELES'İN MEDENİ İNSAN ANLAYIŞININ “KENDİNİ TANI” İLKESİ IŞIĞINDA DEĞERLENDİRİLMESİ",
+    "tur": "journal-article",
+    "dergi": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
+    "yil": "2025",
+    "doi": "10.53844/flsf.1526476",
+    "url": "https://doi.org/10.53844/flsf.1526476"
+   },
+   {
+    "baslik": "Gründe des Interesses am Theoretischen: Die Tendenz der Griechischen und Arabischen Gesellschaft zur Philosophie",
+    "tur": "journal-article",
+    "dergi": "Türkisch-Deutsche Perspektiven",
+    "yil": "2023",
+    "doi": "10.60501/TDP.2023.1.100257",
+    "url": "https://journals.ub.uni-heidelberg.de/index.php/tdp/article/view/100257"
+   },
+   {
+    "baslik": "Teorik Bilgiye Duyulan İlginin Nedenleri: Yunan ve Arap-İslam Toplumunun Felsefeye Eğiliminin Temelleri",
+    "tur": "journal-article",
+    "dergi": "Türk-Alman Bakış Açıları",
+    "yil": "2023",
+    "doi": "10.60501/TDP.2023.1.100304",
+    "url": "https://journals.ub.uni-heidelberg.de/index.php/tdp/article/view/100304"
+   },
+   {
+    "baslik": "Kuyudaki Bilgin: Teori-Pratik Çatışmasına Yeni Bir Yaklaşım Denemesi",
+    "tur": "conference-paper",
+    "dergi": "INTERNATIONAL AEGEAN CONFERENCES ON SOCIAL SCIENCES & HUMANITIES-VIII",
+    "yil": "2023",
+    "doi": "",
+    "url": "https://tr.aegeanconference.com/_files/ugd/614b1f_c81ac5744b62420eb734c3fdd6b6afa3.pdf"
+   },
+   {
+    "baslik": "Bir Faaliyet Olarak Felsefe ve Düşünce",
+    "tur": "journal-article",
+    "dergi": "Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi",
+    "yil": "2022",
+    "doi": "10.55256/temasa.1170298",
+    "url": "https://doi.org/10.55256/temasa.1170298"
+   },
+   {
+    "baslik": "Euthyphron-İkilemi: Ahlak ve İlahi İrade İlişkisi",
+    "tur": "magazine-article",
+    "dergi": "Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi",
+    "yil": "2020",
+    "doi": "",
+    "url": "https://dergipark.org.tr/tr/pub/temasa/issue/58551/790882#article_cite"
+   },
+   {
+    "baslik": "Habermas'ın Söylem Etiğinde Ahlak ve Hukuk",
+    "tur": "journal-article",
+    "dergi": "İstanbul Üniversitesi Hukuk Fakültesi Mecmuası",
+    "yil": "2017",
+    "doi": "",
+    "url": "https://search.trdizin.gov.tr/tr/yayin/detay/275176/habermasin-soylem-etiginde-ahlak-ve-hukuk"
+   },
+   {
+    "baslik": "Kant'ın Ödev Ahlakı Üzerine",
+    "tur": "magazine-article",
+    "dergi": "Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi",
+    "yil": "2017",
+    "doi": "",
+    "url": "https://dergipark.org.tr/tr/pub/temasa/issue/27577/292467"
+   },
+   {
+    "baslik": "Anlamsal Tümevarım (İstikrâ-i Mânevî)",
+    "tur": "magazine-article",
+    "dergi": "Tarihin Peşinde Uluslararası Tarih ve Sosyal Araştırmalar Dergisi",
+    "yil": "2016",
+    "doi": "",
+    "url": "http://www.tarihinpesinde.com/dergimiz/sayi16/M16_10.pdf"
+   },
+   {
+    "baslik": "Zur Theorie einer teleologischen Methode in der islamischen Normenlehre",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2015",
+    "doi": "",
+    "url": ""
+   }
+  ],
   "0000-0002-2360-9922": [
    {
     "baslik": "ARNOLD GEULINCX’İN ONTOLOJİK VE ETİK KABULLERİ BAĞLAMINDA OKAZYONALİST GÖRÜŞLERİ",
@@ -3009,9 +4208,262 @@
     "url": "https://publons.com/wos-op/publon/86075190/"
    }
   ],
+  "0000-0001-5671-2769": [
+   {
+    "baslik": "Reformasyon Düşüncesinde Eskatoloji: Martin Luther’de Kurtuluş ve Ahiret",
+    "tur": "journal-article",
+    "dergi": "Türkiye Din Eğitimi Araştırmaları Dergisi",
+    "yil": "2017",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Ölüm ve Ölümsüzlük",
+    "tur": "book-chapter",
+    "dergi": "Recep Kılıç, Mehmet Sait Reçber (ed.), Din Felsefesi: El Kitabı",
+    "yil": "2014",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "The Problem of Evil and Theodicy in Jewish, Christian and Islamic Thought",
+    "tur": "other",
+    "dergi": "",
+    "yil": "2013",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Biyoetik Bir Sorun Olarak Ötanazi: Tarihi, Çeşitleri ve Felsefesi",
+    "tur": "journal-article",
+    "dergi": "Felsefe Dünyası",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Das Problem der Religiösen Vielfalt",
+    "tur": "book-chapter",
+    "dergi": "Die islamischen Wissenschaften aus Sicht muslimischer Theologen: Quellen, ihre Erfassung und neue Zugänge im Kontext kultureller Differenzen",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Divine Retribution Again: Is The Current Economic Crisis God’s Punishment?",
+    "tur": "journal-article",
+    "dergi": "İstanbul Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Human Nature and Life after Death in Thomas Aquinas",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Lingua Franca’dan Lingua Sacra’ya: İnsan Hakları Sistemi Küresel Sekülerizmin Amentüsü Mü?",
+    "tur": "book-chapter",
+    "dergi": "İnsan Hakları ve Din",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Modern Felsefi Tartışmalarda Hayatın Anlamı",
+    "tur": "other",
+    "dergi": "",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Redemptive Suffering in Islamic Thought: A Critical Approach",
+    "tur": "journal-article",
+    "dergi": "",
+    "yil": "2010",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Sosyal Değişime Cevap Olarak Otantiklik",
+    "tur": "book-chapter",
+    "dergi": "Çağımızda Sosyal Değişme ve İsl̂am",
+    "yil": "2007",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Ibn Bajja, Abu Bakr al-Sa'igh",
+    "tur": "book-chapter",
+    "dergi": "Biographical Encyclopaedia of Islamic Philosophy",
+    "yil": "2006",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "al-Ma’arri, Abu'l A'la",
+    "tur": "book-chapter",
+    "dergi": "Biographical Encyclopaedia of Islamic Philosophy",
+    "yil": "2006",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "al-Tawhidi, Abu Hayyan",
+    "tur": "book-chapter",
+    "dergi": "Biographical Encyclopaedia of Islamic Philosophy",
+    "yil": "2006",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Ülken, Hilmi Ziya",
+    "tur": "book-chapter",
+    "dergi": "Biographical Encyclopaedia of Islamic Philosophy",
+    "yil": "2006",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Derrida ve Din",
+    "tur": "other",
+    "dergi": "",
+    "yil": "2004",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Holocaust Problemi ve Tanrı: Teolojik ve Felsef̂ı Cevaplar",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2003",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Süreç Felsefesinde Ölümsüzlük: Eleştirel Bir Bakış",
+    "tur": "journal-article",
+    "dergi": "İslami Araştırmalar Dergisi",
+    "yil": "2003",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "İslam Düşüncesinde Zaman",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2003",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Ethical Implications of the Belief in Life After Death: An Islamic Perspective",
+    "tur": "journal-article",
+    "dergi": "The Islamic Quarterly",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Kişisel Kimlik ve Ölüm Sonrası Hayat",
+    "tur": "journal-article",
+    "dergi": "Felsefe Dünyası",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "The Problem of the Plurality of Religions and Interfaith Dialogue",
+    "tur": "journal-article",
+    "dergi": "Akademik Araştırmalar Dergisi",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Yahudi Düşüncesinde Holocaust ve Tanrı",
+    "tur": "other",
+    "dergi": "",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Yahudi ve Hıristiyan Düşüncesinde Ölüm Sonrası Hayat ve Diriliş İnancının Dini ve Teolojik Temelleri",
+    "tur": "journal-article",
+    "dergi": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2002",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Bütün Felsefi Teodise Denemelerinin Başarısızlığı Üzerine",
+    "tur": "journal-article",
+    "dergi": "Doğu Batı",
+    "yil": "2001",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "Tanrı Var mı?",
+    "tur": "other",
+    "dergi": "Yrd. Doç. Dr. Muhsin Akbaş, Arasta Yayınları",
+    "yil": "2001",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "İlahi Ceza Yeniden: Mevcut Ekonomik Kriz İlahi Ceza mı?",
+    "tur": "journal-article",
+    "dergi": "İstanbul Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   }
+  ],
   "0000-0001-6906-3366": [],
+  "0000-0001-7053-3214": [],
+  "0000-0001-8345-7142": [],
   "0000-0002-6833-9970": [],
+  "0000-0002-9194-6824": [
+   {
+    "baslik": "William James’te Kötülük",
+    "tur": "journal-article",
+    "dergi": "Kader",
+    "yil": "2026",
+    "doi": "10.18317/kaderdergi.1894862",
+    "url": "https://doi.org/10.18317/kaderdergi.1894862"
+   },
+   {
+    "baslik": "Bilinçaltı ve Din: William James’in Hülyası",
+    "tur": "journal-article",
+    "dergi": "İlahiyat Akademi",
+    "yil": "2025",
+    "doi": "10.52886/ilak.1742944",
+    "url": "https://doi.org/10.52886/ilak.1742944"
+   }
+  ],
+  "0000-0001-6248-0503": [],
   "0000-0001-7468-1417": [],
+  "0000-0003-4028-3917": [],
+  "0000-0002-4969-6227": [
+   {
+    "baslik": "MEVLÂNÂ’DA AHLÂKÎ ÖZNE OLARAK İDEAL İNSANIN İNŞASI",
+    "tur": "journal-article",
+    "dergi": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
+    "yil": "2025",
+    "doi": "10.53844/flsf.1685266",
+    "url": "https://doi.org/10.53844/flsf.1685266"
+   }
+  ],
+  "0000-0003-4396-454X": [],
+  "0000-0002-5686-0101": [],
+  "0000-0001-6014-6018": [],
   "0000-0003-3946-9909": [
    {
     "baslik": "LEVİNAS'A KARŞI LEVİNAS",
@@ -3038,6 +4490,7 @@
     "url": "http://dx.doi.org/10.33227/auifd.994824"
    }
   ],
+  "0000-0002-3777-8305": [],
   "0000-0002-4108-7697": [
    {
     "baslik": "İHVÂN-I SAFÂ RİSALELERİNDE RÜYANIN MAHİYETİ VE FONKSİYONU ÜZERİNE BİR DEĞERLENDİRME",
@@ -3266,7 +4719,51 @@
     "url": "http://dx.doi.org/10.9775/kausbed.2017.017"
    }
   ],
+  "0000-0003-0761-3830": [
+   {
+    "baslik": "An Examination on The Problem of the Legitimacy of Islamic Philosophy in the Maktab-e Tafkīk School",
+    "tur": "journal-article",
+    "dergi": "Mütefekkir",
+    "yil": "2025",
+    "doi": "10.30523/mutefekkir.1775336",
+    "url": "https://doi.org/10.30523/mutefekkir.1775336"
+   },
+   {
+    "baslik": "An Inquiry on the Opposition to Reason and Philosophy in the Akhbārī School During the Safavid Era",
+    "tur": "journal-article",
+    "dergi": "Bilimname",
+    "yil": "2025",
+    "doi": "10.28949/bilimname.1577704",
+    "url": "https://doi.org/10.28949/bilimname.1577704"
+   },
+   {
+    "baslik": "Philosophical Approaches and Influential Philosophical Movements in Republican Turkiye",
+    "tur": "journal-article",
+    "dergi": "Beytulhikme An International Journal of Philosophy",
+    "yil": "2023",
+    "doi": "10.29228/beytulhikme.72250",
+    "url": "https://doi.org/10.29228/beytulhikme.72250"
+   },
+   {
+    "baslik": "Vicdan ve Vicdanın Ahlâkî Değeri Üzerine Bir İnceleme",
+    "tur": "journal-article",
+    "dergi": "Marife Dini Araştırmalar Dergisi",
+    "yil": "2021",
+    "doi": "10.33420/marife.989944",
+    "url": "https://doi.org/10.33420/marife.989944"
+   }
+  ],
   "0000-0002-4942-3835": [],
+  "0000-0002-5538-3278": [
+   {
+    "baslik": "The possibility of religious pluralism in Turkey at the crossroad of the traditional and global existences",
+    "tur": "journal-article",
+    "dergi": "Danubius",
+    "yil": "2015",
+    "doi": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85000608393&partnerID=MN8TOARS"
+   }
+  ],
   "0000-0003-0348-594X": [
    {
     "baslik": "The Holism of Morality in Taha Abdurrahman’s Work",
@@ -3751,6 +5248,24 @@
     "url": ""
    }
   ],
+  "0000-0001-7143-3303": [
+   {
+    "baslik": "Immanuel Wallerstein’in Düşünsel Kaynakları Bağlamında Dünya-Sistemleri Analizi",
+    "tur": "journal-article",
+    "dergi": "Mavi Atlas",
+    "yil": "2025",
+    "doi": "10.18795/gumusmaviatlas.1689089",
+    "url": "https://doi.org/10.18795/gumusmaviatlas.1689089"
+   },
+   {
+    "baslik": "Hume’un Tanrı Anlayışı: Epistemolojik Temel Üzerinden Bir İnceleme",
+    "tur": "journal-article",
+    "dergi": "Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi",
+    "yil": "2024",
+    "doi": "10.55256/temasa.1406890",
+    "url": "https://doi.org/10.55256/temasa.1406890"
+   }
+  ],
   "0000-0003-0812-8554": [
    {
     "baslik": "Dinsel Düşüncenin Rasyonelleşme İmkanı ve Zorlukları",
@@ -3921,6 +5436,41 @@
     "url": ""
    }
   ],
+  "0000-0002-0913-0608": [
+   {
+    "baslik": "Düşünme Biçimleri",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "10.70458/fcr.9786255536617",
+    "url": "https://doi.org/10.70458/fcr.9786255536617"
+   },
+   {
+    "baslik": "Philosophy of Religion in Islam",
+    "tur": "book",
+    "dergi": "Bloomsbury",
+    "yil": "2025",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "“Ibn Sīnā’s Conception of Divine Omniscience,”",
+    "tur": "book-chapter",
+    "dergi": "Describing God? Christian and Muslim Approaches to the Divine Attributes in Dialogue",
+    "yil": "2025",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "\"Why Miracles are not Enough: Epistemic Circularity in the Early Ashʿarite Approach to True Prophecy,\"",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "2023",
+    "doi": "",
+    "url": ""
+   }
+  ],
+  "0000-0002-7260-9451": [],
   "0000-0001-8715-3023": [
    {
     "baslik": "Aliya İzzetbegoviç’e Göre Bireyin ve Toplumun Eğitiminde Kadının Rolü",
@@ -3980,6 +5530,7 @@
    }
   ],
   "0000-0002-1673-2607": [],
+  "0000-0001-9666-3092": [],
   "0000-0002-0150-7239": [
    {
     "baslik": "Some Approaches to the Concepts of War and Peace in Terms of Philosophy of Religion",
@@ -4192,6 +5743,48 @@
    }
   ],
   "0000-0002-4424-8601": [],
+  "0000-0002-1949-8940": [
+   {
+    "baslik": "Philosophizing About “Religion” by Doing Social Ontology: The Islamic Philosophical Theology Tradition",
+    "tur": "journal-article",
+    "dergi": "Topoi",
+    "yil": "2026",
+    "doi": "10.1007/s11245-026-10496-1",
+    "url": "https://doi.org/10.1007/s11245-026-10496-1"
+   },
+   {
+    "baslik": "Islamic Bioethical Reflections on Organ Bioprinting: Promises and Challenges",
+    "tur": "journal-article",
+    "dergi": "Bioethics",
+    "yil": "2026",
+    "doi": "10.1111/bioe.70025",
+    "url": "https://doi.org/10.1111/bioe.70025"
+   },
+   {
+    "baslik": "Tanrı, İyilik ve İrade",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2024",
+    "doi": "10.70981/kure.9786256624054",
+    "url": "https://doi.org/10.70981/kure.9786256624054"
+   },
+   {
+    "baslik": "Is God Perfectly Good In Islam",
+    "tur": "journal-article",
+    "dergi": "European journal of analytic philosophy",
+    "yil": "2022",
+    "doi": "10.31820/ejap.18.2.10",
+    "url": "https://doi.org/10.31820/ejap.18.2.10"
+   },
+   {
+    "baslik": "Can Al-Ghazali's Conception of Modality Propose a Solution to\nRowe's Argument against Divine Freedom?",
+    "tur": "journal-article",
+    "dergi": "Res Philosophica",
+    "yil": "2021",
+    "doi": "10.11612/resphil.2043",
+    "url": "http://dx.doi.org/10.11612/resphil.2043"
+   }
+  ],
   "0000-0001-7907-4763": [
    {
     "baslik": "Tanrı’nın Varlığına Dair Kanıt Yükünün Mahiyeti",
@@ -4216,6 +5809,16 @@
     "yil": "2024",
     "doi": "10.33460/beuifd.1542191",
     "url": "https://doi.org/10.33460/beuifd.1542191"
+   }
+  ],
+  "0000-0002-8381-7539": [
+   {
+    "baslik": "David Hume’da Kendilik İnşasında Öteki’nin Yeri",
+    "tur": "journal-article",
+    "dergi": "Journal of The Near East University Islamic Research Center",
+    "yil": "2024",
+    "doi": "10.32955/neu.istem.2024.10.1.01",
+    "url": "https://doi.org/10.32955/neu.istem.2024.10.1.01"
    }
   ],
   "0000-0002-8094-2238": [
@@ -4295,7 +5898,83 @@
    }
   ],
   "0000-0001-8453-5800": [],
+  "0009-0006-7513-1795": [],
+  "0000-0002-3843-9786": [],
   "0000-0002-0379-5625": [],
+  "0000-0002-6289-0876": [
+   {
+    "baslik": "John Hickin Din Felsefesi",
+    "tur": "book",
+    "dergi": "",
+    "yil": "2025",
+    "doi": "10.70458/fcr.9786255536877",
+    "url": "https://doi.org/10.70458/fcr.9786255536877"
+   },
+   {
+    "baslik": "WITTGENSTEIN’IN ANTİ-FELSEFESİ",
+    "tur": "journal-article",
+    "dergi": "Kaygı. Uludağ Üniversitesi Fen-Edebiyat Fakültesi Felsefe Dergisi",
+    "yil": "2022",
+    "doi": "10.20981/KAYGI.1048317",
+    "url": "https://publons.com/publon/51691755/"
+   },
+   {
+    "baslik": "Dine Eleştirel Yaklaşımlar Bağlamında Pozitivizmin Serencamı",
+    "tur": "journal-article",
+    "dergi": "Kaygı. Uludağ Üniversitesi Fen-Edebiyat Fakültesi Felsefe Dergisi",
+    "yil": "2020",
+    "doi": "10.20981/kaygi.790348",
+    "url": "http://dx.doi.org/10.20981/kaygi.790348"
+   },
+   {
+    "baslik": "JOHN HICK’E GÖRE İNANÇ VE BİLGİNİN EPİSTEMİK STATÜSÜ",
+    "tur": "journal-article",
+    "dergi": "Sosyal Bilimler Elektronik Dergisi  / Electronic Journal of Social Sciences",
+    "yil": "2020",
+    "doi": "10.29228/sbe.46208",
+    "url": "http://dx.doi.org/10.29228/sbe.46208"
+   },
+   {
+    "baslik": "Aristoteles'e göre Dostluk Erdemi",
+    "tur": "conference-paper",
+    "dergi": "",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "DİNİ OLGULARI ANLAMA BAKIMINDAN WITTGENSTEIN'IN İKİNCİ DÖNEM FELSEFESİ",
+    "tur": "journal-article",
+    "dergi": "",
+    "yil": "",
+    "doi": "10.13140/RG.2.2.10824.19209",
+    "url": "https://publons.com/publon/51865923/"
+   },
+   {
+    "baslik": "Entelektüalitenin Tek Değerli Rasyonalitesi mi Yaşamın Çok Değerli Rasyonalitesi mi?",
+    "tur": "conference-paper",
+    "dergi": "",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   },
+   {
+    "baslik": "John Hick'te Din Dili",
+    "tur": "journal-article",
+    "dergi": "",
+    "yil": "",
+    "doi": "10.13140/RG.2.2.36055.55205",
+    "url": "https://publons.com/publon/51865927/"
+   },
+   {
+    "baslik": "Muhammed İkbal’e göre Din Mümkün müdür?",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "",
+    "doi": "",
+    "url": ""
+   }
+  ],
   "0000-0003-4699-7451": [
    {
     "baslik": "Düşünme Biçimleri",
@@ -4354,6 +6033,7 @@
     "url": "https://philpapers.org/rec/BASTMO-15"
    }
   ],
+  "0009-0000-6554-0188": [],
   "0009-0008-1205-3501": [],
   "0000-0002-6137-4626": [
    {
@@ -4398,6 +6078,25 @@
    }
   ],
   "0000-0002-3805-3875": [],
+  "0000-0003-3950-2393": [
+   {
+    "baslik": "Skepticism in al-Ghazālī and Descartes: A Reply to Sami M. Najm",
+    "tur": "journal-article",
+    "dergi": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+    "yil": "2024",
+    "doi": "10.33227/auifd.1258110",
+    "url": "https://doi.org/10.33227/auifd.1258110"
+   },
+   {
+    "baslik": "An Occasionalist Reading of Al-Ashʿarī's Theory of Kasb in Kitāb al-Lumaʿ",
+    "tur": "journal-article",
+    "dergi": "The Muslim World",
+    "yil": "2024",
+    "doi": "10.1111/muwo.12478",
+    "url": "http://dx.doi.org/10.1111/muwo.12478"
+   }
+  ],
+  "0000-0001-6948-4689": [],
   "0000-0002-7298-8519": [],
   "0000-0001-6226-1642": []
  }
