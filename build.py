@@ -1584,7 +1584,9 @@ def akademi_verisi() -> dict:
     for p in kisiler:
         slug = slugify(p["ad"])
         oid = p.get("orcid") or orcidler.get(slug, "")  # listeye elle yazılan ORCID önce gelir
-        _AKADEMI[slug] = {"p": p, "orcid": oid, "orcid_eser": orcid_eser.get(oid, []) if oid else [],
+        _AKADEMI[slug] = {"p": p, "orcid": oid,
+                          "orcid_kaynak": "YÖK Akademik kaydından" if p.get("orcid") else "DergiPark makale sayfalarından",
+                          "orcid_eser": orcid_eser.get(oid, []) if oid else [],
                           "makaleler": [], "baslik": {}, "ortak": {}, "dusunur": {}}
         anahtar[ad_anahtari(p["ad"])] = slug
     soyad_say = {}
@@ -1731,7 +1733,7 @@ def render_akademisyen(s: str) -> str:
 </section>
 <div class="fis-duzen">
   <div class="metin">{metin}
-    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası DergiPark makale sayfalarından alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+    <p class="aciklama-kisa akademi-not">Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar DergiPark taramasına göredir{" (" + tr_date(tarih) + ")" if tarih else ""}. Makalelerin konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>"""

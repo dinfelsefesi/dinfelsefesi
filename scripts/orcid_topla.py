@@ -102,6 +102,11 @@ def main():
                 gorulen.setdefault(k, set()).add(y["orcid"])
     atanan = {k: next(iter(v)) for k, v in gorulen.items() if len(v) == 1}
     celiski = {k: sorted(v) for k, v in gorulen.items() if len(v) > 1}
+    # Listeye elle yazılan ORCID (YÖK Akademik kaydından) önce gelir; eserleri de onunla çekilir
+    for k, p in liste.items():
+        if p.get("orcid"):
+            atanan[k] = p["orcid"]
+            celiski.pop(k, None)
     (VERI / "orcid.json").write_text(json.dumps({"tarih": date.today().isoformat(), "kaynak": "DergiPark makale sayfaları",
                                                  "orcid": dict(sorted(atanan.items())), "celiskiler": celiski},
                                                 ensure_ascii=False, indent=1), encoding="utf-8")

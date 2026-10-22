@@ -14,6 +14,7 @@ kisiler:
   universite: Marmara Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 1AD7C3794E50FEA9
+  orcid: '0000-0002-0913-0608'
   yok_alan: Din Felsefesi
 - ad: Abdullah Arif Adalar
   unvan: Arş. Gör.
@@ -38,6 +39,7 @@ kisiler:
   universite: İzmir Katip Çelebi Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 50FEE4410AE0D2DD
+  orcid: '0000-0001-5671-2769'
   yok_alan: Din Felsefesi
 - ad: Özcan Akdağ
   unvan: Prof. Dr.
@@ -62,6 +64,7 @@ kisiler:
   universite: Van Yüzüncü Yıl Üniversitesi
   fakulte: Eğitim Fakültesi
   yok: D63E58171055FCC9
+  orcid: '0000-0001-6713-3199'
   yok_alan: Din Felsefesi
 - ad: Recep Alpyağıl
   unvan: Prof. Dr.
@@ -80,6 +83,7 @@ kisiler:
   universite: Amasya Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 3A6ECA392A214025
+  orcid: '0000-0001-9922-2233'
   yok_alan: Din Felsefesi
 - ad: Serdar Atalay
   unvan: Arş. Gör.
@@ -98,12 +102,14 @@ kisiler:
   universite: Gaziantep İslam Bilim ve Teknoloji Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 13C5AAACD243DBF0
+  orcid: '0000-0001-8345-7142'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Hasan Atsız
   unvan: Dr. Öğr. Üyesi
   universite: Ondokuz Mayıs Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: F4400BCEA7ED9658
+  orcid: '0000-0002-5932-1314'
   yok_alan: Din Felsefesi
 - ad: Hüsnü Aydeniz
   unvan: Prof. Dr.
@@ -116,12 +122,14 @@ kisiler:
   universite: Ordu Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 42BBCE805120EBB5
+  orcid: '0000-0002-3777-8305'
   yok_alan: Din Felsefesi
 - ad: Muzaffer Ayvaz
   unvan: Dr. Öğr. Üyesi
   universite: Trabzon Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: C8C88F3DBC88576C
+  orcid: '0000-0002-4969-6227'
   yok_alan: Din Felsefesi
 - ad: Mehmet Ata Az
   unvan: Prof. Dr.
@@ -146,12 +154,14 @@ kisiler:
   universite: Erzincan Binali Yıldırım Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 804A28086E5A07A5
+  orcid: '0009-0006-7513-1795'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Kemal Batak
   unvan: Prof. Dr.
   universite: Sakarya Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 375B889C98AA0FE9
+  orcid: '0000-0002-1091-4127'
   yok_alan: Din Felsefesi
 - ad: Emine Gören Bayam
   unvan: Doç. Dr.
@@ -218,6 +228,7 @@ kisiler:
   universite: Ondokuz Mayıs Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: ADDA8CECD008897C
+  orcid: '0000-0003-3278-0999'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Halis Çavuşoğlu
   unvan: Arş. Gör.
@@ -254,12 +265,14 @@ kisiler:
   universite: Atatürk Üniversitesi
   fakulte: Rektörlük
   yok: D59E31EEC318EC72
+  orcid: '0009-0004-2824-4856'
   yok_alan: Din Felsefesi
 - ad: Bayram Dalkılıç
   unvan: Prof. Dr.
   universite: Necmettin Erbakan Üniversitesi
   fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
   yok: 0D69331FBE3D2870
+  orcid: '0000-0002-0441-3780'
   yok_alan: Din Felsefesi
 - ad: Mehmet Demirtaş
   unvan: Prof. Dr.
@@ -278,54 +291,63 @@ kisiler:
   universite: Çanakkale Onsekiz Mart Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: A65A36C79E08BBA3
+  orcid: '0000-0002-5538-3278'
   yok_alan: Din Felsefesi
 - ad: Ali Osman Dilek
   unvan: Arş. Gör.
   universite: Siirt Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: C52F44475107666C
+  orcid: '0009-0006-4236-6432'
   yok_alan: Din Felsefesi
 - ad: Mustafa Emre Dorman
   unvan: Prof. Dr.
   universite: Acıbadem Mehmet Ali Aydınlar Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: 7484AF2C3B2CD821
+  orcid: '0000-0001-6248-0503'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Haydar Dölek
   unvan: Dr. Öğr. Üyesi
   universite: Fırat Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: AFAC9618B2834304
+  orcid: '0000-0001-6384-4145'
   yok_alan: Din Felsefesi
 - ad: Mustafa Dönmez
   unvan: Dr. Öğr. Üyesi
   universite: Muş Alparslan Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: F1126BD838E88C21
+  orcid: '0000-0002-9194-6824'
   yok_alan: Din Felsefesi
 - ad: Şahin Efil
   unvan: Prof. Dr.
   universite: İnönü Üniversitesi
   fakulte: Fen-Edebiyat Fakültesi
   yok: 92988E97EF2BB673
+  orcid: '0000-0001-9666-3092'
   yok_alan: Din Felsefesi
 - ad: Şeyma Yazıcı Elsebahy
   unvan: Dr. Öğr. Üyesi
   universite: Ankara Yıldırım Beyazıt Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: B5C8BB486983E7BD
+  orcid: '0000-0002-1949-8940'
   yok_alan: Din Felsefesi
 - ad: Engin Erdem
   unvan: Prof. Dr.
   universite: Ankara Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 1E298F03E716D7DC
+  orcid: '0000-0002-6545-4033'
   yok_alan: Din Felsefesi
 - ad: Ömer Faruk Erdem
   unvan: Doç. Dr.
   universite: Necmettin Erbakan Üniversitesi
   fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
   yok: 6FB4A8F51B756380
+  orcid: '0000-0003-0761-3830'
   yok_alan: Din Felsefesi
 - ad: Mustafa Eren
   unvan: Doç. Dr.
@@ -338,6 +360,7 @@ kisiler:
   universite: Ankara Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 869D0FDF67CA9E91
+  orcid: '0000-0003-2134-8500'
   yok_alan: Din Felsefesi
 - ad: Ramazan Ertürk
   unvan: Prof. Dr.
@@ -362,6 +385,7 @@ kisiler:
   universite: Yozgat Bozok Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: CD36178C37C11CA6
+  orcid: '0000-0002-6289-0876'
   yok_alan: Din Felsefesi
 - ad: Fatımanur Güçlüer
   unvan: Dr. Öğr. Üyesi
@@ -374,6 +398,7 @@ kisiler:
   universite: Karamanoğlu Mehmetbey Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 59CA9E280E661C09
+  orcid: '0000-0002-4890-6149'
   yok_alan: Din Felsefesi
 - ad: Saim Gündoğan
   unvan: Doç. Dr.
@@ -386,18 +411,21 @@ kisiler:
   universite: Şırnak Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: CA97A3B9E38417BB
+  orcid: '0000-0003-0292-6563'
   yok_alan: Din Felsefesi
 - ad: Muhammed İkbal Hardal
   unvan: Arş. Gör.
   universite: Dokuz Eylül Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: BB3552B135EE54AC
+  orcid: '0000-0002-5131-3846'
   yok_alan: Din Felsefesi
 - ad: Hakan Hemşinli
   unvan: Doç. Dr.
   universite: Van Yüzüncü Yıl Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 02F1FEC62B8F5586
+  orcid: '0000-0003-4977-9054'
   yok_alan: Din Felsefesi
 - ad: Tuncay İmamoğlu
   unvan: Prof. Dr.
@@ -447,12 +475,14 @@ kisiler:
   universite: Tokat Gaziosmanpaşa Üniversitesi
   fakulte: İslami İlimler Fakültesi
   yok: FC6E1819CC29F728
+  orcid: '0000-0002-8314-5795'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Zeynep Baktemur Kayaduman
   unvan: Dr. Öğr. Üyesi
   universite: Marmara Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 21037188EFA4AE4E
+  orcid: '0000-0001-6948-4689'
   yok_alan: Din Felsefesi
 - ad: Huzeyfe Kılıç
   unvan: Arş. Gör.
@@ -466,6 +496,7 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   durum: emekli
   yok: 6EF023ABF217EC46
+  orcid: '0000-0002-7260-9451'
   yok_alan: Din Felsefesi
 - ad: Afra Konyalı
   unvan: Arş. Gör.
@@ -478,18 +509,21 @@ kisiler:
   universite: Recep Tayyip Erdoğan Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: A33831C2A6060DC5
+  orcid: '0000-0002-1924-0456'
   yok_alan: Din Felsefesi
 - ad: Aliye Çınar Köysüren
   unvan: Prof. Dr.
   universite: Karamanoğlu Mehmetbey Üniversitesi
   fakulte: Edebiyat Fakültesi
   yok: 0E7F15711319C3F4
+  orcid: '0000-0001-8756-0841'
   yok_alan: Din Felsefesi
 - ad: Hanifi Laçin
   unvan: Arş. Gör.
   universite: Karabük Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 4A457CDE26AD2B92
+  orcid: '0000-0001-9292-6801'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Rafız Manafov
   unvan: Prof. Dr.
@@ -502,6 +536,7 @@ kisiler:
   universite: Iğdır Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 56D26EB751CA0732
+  orcid: '0000-0003-2895-8176'
   yok_alan: Din Felsefesi
 - ad: Ayşe Sıdıka Oktay
   unvan: Prof. Dr.
@@ -520,12 +555,14 @@ kisiler:
   universite: Kütahya Dumlupınar Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: D2BF1C6BE832EF57
+  orcid: '0000-0002-3755-6729'
   yok_alan: Din Felsefesi
 - ad: Hatice Kübra Ömeroğlu
   unvan: Arş. Gör.
   universite: Kilis 7 Aralık Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: E97A9A2A54C4ACE5
+  orcid: '0000-0002-2401-1666'
   yok_alan: Din Felsefesi
 - ad: Kayhan Özaykal
   unvan: Dr. Öğr. Üyesi
@@ -539,6 +576,7 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   durum: emekli
   yok: 7B917BD2359AC7EB
+  orcid: '0000-0001-9752-3497'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Zeki Özcan
   unvan: Prof. Dr.
@@ -558,18 +596,21 @@ kisiler:
   universite: Bayburt Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 5E65BDCD796F4851
+  orcid: '0000-0002-5440-2457'
   yok_alan: Din Felsefesi
 - ad: Mehmet Şükrü Özkan
   unvan: Prof. Dr.
   universite: Şırnak Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 697424A7A1CDAE91
+  orcid: '0000-0003-4748-8130'
   yok_alan: Din Felsefesi
 - ad: Yunus Emre Özşimşek
   unvan: Arş. Gör.
   universite: Gaziantep Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: A8071E2FC9071B59
+  orcid: '0009-0000-6554-0188'
   yok_alan: Din Felsefesi
 - ad: Sevcan Öztürk
   unvan: Doç. Dr.
@@ -588,6 +629,7 @@ kisiler:
   universite: Kocaeli Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 79B60FAFF8240FCF
+  orcid: '0000-0002-3591-9936'
   yok_alan: Din Felsefesi
 - ad: Sait Polat
   unvan: Dr. Öğr. Üyesi
@@ -600,18 +642,21 @@ kisiler:
   universite: Ankara Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 88856229BD5A7697
+  orcid: '0000-0002-4438-8209'
   yok_alan: Din Felsefesi
 - ad: Mehmet Alperen Saz
   unvan: Arş. Gör.
   universite: Ankara Hacı Bayram Veli Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: B7B4B3BD1562BB62
+  orcid: '0000-0001-5974-3931'
   yok_alan: Din Felsefesi
 - ad: Bülent Sönmez
   unvan: Prof. Dr.
   universite: İzmir Katip Çelebi Üniversitesi
   fakulte: Sosyal ve Beşeri Bilimler Fakültesi
   yok: F6EA5DED89DD1706
+  orcid: '0000-0002-4594-4502'
   yok_alan: Din Felsefesi
 - ad: Mehmet Sulhan
   unvan: Dr. Öğr. Üyesi
@@ -630,6 +675,7 @@ kisiler:
   universite: Necmettin Erbakan Üniversitesi
   fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
   yok: 41EEEBC090BC398B
+  orcid: '0000-0003-4396-454X'
   yok_alan: Din Felsefesi
 - ad: Muharrem Şahiner
   unvan: Doç. Dr.
@@ -648,12 +694,14 @@ kisiler:
   universite: Pamukkale Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: FC75AA3C340CDD59
+  orcid: '0000-0001-5682-7013'
   yok_alan: Din Felsefesi
 - ad: Necmettin Tan
   unvan: Dr. Öğr. Üyesi
   universite: Fırat Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 3F28EB75E044E66F
+  orcid: '0000-0002-5686-0101'
   yok_alan: Din Felsefesi
 - ad: Hasan Tanrıverdi
   unvan: Prof. Dr.
@@ -678,12 +726,14 @@ kisiler:
   universite: Ankara Sosyal Bilimler Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: EBE7BB0DF6929C6F
+  orcid: '0000-0003-3950-2393'
   yok_alan: Din Felsefesi
 - ad: Vedat Tezcan
   unvan: Doç. Dr.
   universite: Süleyman Demirel Üniversitesi
   fakulte: İletişim Fakültesi
   yok: 4F7EB487707B4847
+  orcid: '0000-0002-3843-9786'
   yok_alan: Din Felsefesi
 - ad: Latif Tokat
   unvan: Prof. Dr.
@@ -696,6 +746,7 @@ kisiler:
   universite: İstanbul Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: B4E3175E31FC9062
+  orcid: '0000-0002-2479-1084'
   yok_alan: Din Felsefesi
 - ad: Fatih Topaloğlu
   unvan: Prof. Dr.
@@ -714,6 +765,7 @@ kisiler:
   universite: Tekirdağ Namık Kemal Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: D97E51A292B95AE5
+  orcid: '0000-0002-8381-7539'
   yok_alan: Din Felsefesi
 - ad: Gülsüm Turhan
   unvan: Doç. Dr.
@@ -756,6 +808,7 @@ kisiler:
   universite: Necmettin Erbakan Üniversitesi
   fakulte: Ahmet Keleşoğlu İlahiyat Fakültesi
   yok: 6D36892ED38E5AC4
+  orcid: '0000-0003-1939-1526'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Ferit Uslu
   unvan: Prof. Dr.
@@ -763,30 +816,35 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   durum: emekli
   yok: 5812AB428513265C
+  orcid: '0000-0001-9062-2492'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Nilüfer Nur Uslu
   unvan: Arş. Gör.
   universite: Zonguldak Bülent Ecevit Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: AA2B6BA317005D76
+  orcid: '0000-0001-6014-6018'
   yok_alan: Din Felsefesi
 - ad: Mustafa Usta
   unvan: Prof. Dr.
   universite: Yalova Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: EFF8C939BCC4613C
+  orcid: '0000-0003-4028-3917'
   yok_alan: Din Felsefesi
 - ad: Abdulhan Ünlüsoy
   unvan: Doç. Dr.
   universite: Eskişehir Osmangazi Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 3900E70280CB80E8
+  orcid: '0000-0001-6585-9340'
   yok_alan: Din Felsefesi
 - ad: Esma Aygün Yakın
   unvan: Arş. Gör.
   universite: Yozgat Bozok Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 3FBB959AF48A28E3
+  orcid: '0000-0002-8609-1905'
   yok_alan: Din Felsefesi
 - ad: İsmail Yalçıntaş
   unvan: Dr. Öğr. Üyesi
@@ -799,18 +857,21 @@ kisiler:
   universite: Ondokuz Mayıs Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 96E2165B32A9A1C5
+  orcid: '0000-0002-0201-2289'
   yok_alan: Din Felsefesi
 - ad: Metin Yasa
   unvan: Prof. Dr.
   universite: Ondokuz Mayıs Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 348FB1BE535E7F9C
+  orcid: '0000-0002-3040-8133'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Fatımatüzzehra Yaşar
   unvan: Dr. Öğr. Üyesi
   universite: Bingöl Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: A70A7CD607769884
+  orcid: '0000-0002-7236-6656'
   yok_alan: Felsefe ve Din Bilimleri
 - ad: Merve Yavuz
   unvan: Arş. Gör.
@@ -847,6 +908,7 @@ kisiler:
   universite: Fırat Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: 216AB54D8D53876F
+  orcid: '0000-0002-4920-4501'
   yok_alan: Din Felsefesi
 - ad: İbrahim Yıldız
   unvan: Doç. Dr.
@@ -871,6 +933,7 @@ kisiler:
   universite: İstanbul Medeniyet Üniversitesi
   fakulte: Edebiyat Fakültesi
   yok: 160CB555AD6256A4
+  orcid: '0000-0002-0965-7637'
   yok_alan: Felsefe
 - ad: Kevser Çelik
   unvan: Prof. Dr.
@@ -883,12 +946,14 @@ kisiler:
   universite: Ankara Yıldırım Beyazıt Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: AE9A98466A836327
+  orcid: '0000-0001-7053-3214'
   yok_alan: Felsefe
 - ad: Ahmet Kavlak
   unvan: Doç. Dr.
   universite: Iğdır Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: C692FEF01406478F
+  orcid: '0000-0002-4419-9440'
   yok_alan: Felsefe
 - ad: Mevlüt Albayrak
   unvan: Prof. Dr.
@@ -901,6 +966,7 @@ kisiler:
   universite: Galatasaray Üniversitesi
   fakulte: Fen-Edebiyat Fakültesi
   yok: 8F1B6DB02C514BE3
+  orcid: '0000-0002-0866-8596'
   yok_alan: Felsefe
 - ad: Kasım Müminoğlu
   unvan: Prof. Dr.
@@ -925,24 +991,28 @@ kisiler:
   universite: Boğaziçi Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: 7D12060D6469DD7F
+  orcid: '0000-0002-7697-0746'
   yok_alan: Felsefe
 - ad: Melih Taştan
   unvan: Dr. Öğr. Üyesi
   universite: Tokat Gaziosmanpaşa Üniversitesi
   fakulte: İslami İlimler Fakültesi
   yok: 54150C6E35146212
+  orcid: '0000-0002-3371-2122'
   yok_alan: Felsefe
 - ad: Mehmet Ulukütük
   unvan: Prof. Dr.
   universite: Bursa Teknik Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: 5E31ED776D557FBC
+  orcid: '0000-0002-9694-1344'
   yok_alan: Felsefe
 - ad: Abdurrahman Aliy
   unvan: Prof. Dr.
   universite: İstanbul Üniversitesi
   fakulte: Edebiyat Fakültesi
   yok: 19F3AFE62537CABF
+  orcid: '0000-0002-8797-8006'
   yok_alan: Felsefe
 - ad: Atilla Akalın
   unvan: Doç. Dr.
@@ -967,18 +1037,21 @@ kisiler:
   universite: Karamanoğlu Mehmetbey Üniversitesi
   fakulte: Edebiyat Fakültesi
   yok: 1D360BCF7C08CED6
+  orcid: '0000-0001-5571-0788'
   yok_alan: Felsefe
 - ad: Muhammet Sait Duran
   unvan: Dr. Öğr. Üyesi
   universite: Erciyes Üniversitesi
   fakulte: İlahiyat Fakültesi
   yok: E62E642C419ACF86
+  orcid: '0000-0002-7961-2661'
   yok_alan: Felsefe
 - ad: Özkan Yıldız
   unvan: Arş. Gör.
   universite: Erzurum Teknik Üniversitesi
   fakulte: Edebiyat Fakültesi
   yok: E25323CCDE37F511
+  orcid: '0000-0001-7143-3303'
   yok_alan: Felsefe
 - ad: Hasan Er
   unvan: Dr. Öğr. Üyesi
@@ -1003,6 +1076,7 @@ kisiler:
   universite: İbn Haldun Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: A2090220FB92CED3
+  orcid: '0000-0002-8967-3433'
   yok_alan: Felsefe
 - ad: Ferhat Taşkın
   unvan: Dr. Öğr. Üyesi
@@ -1021,4 +1095,5 @@ kisiler:
   universite: Yalova Üniversitesi
   fakulte: İnsan ve Toplum Bilimleri Fakültesi
   yok: F8374AC2EF50B7BB
+  orcid: '0009-0002-7482-0784'
   yok_alan: Felsefe
