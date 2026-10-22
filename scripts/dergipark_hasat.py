@@ -4,7 +4,10 @@
 DergiPark'ın OAI-PMH veri kapısından bütün dergilerin kayıtlarını tarih
 aralıklarıyla (aylık pencereler) çeker. Konu alanında ya da anahtar
 kelimelerinde "din felsefesi" / "philosophy of religion" geçen makaleleri
-data/dergipark/din_felsefesi.jsonl dosyasına yazar.
+data/dergipark/din_felsefesi.jsonl dosyasına yazar. Türkiye akademisi listesindeki
+(content/turkiye_akademisi.yaml) kişilerin adıyla yazılmış öteki makaleler de
+data/dergipark/akademisyen_makaleleri.jsonl dosyasına yazılır. Ad benzerliğinden doğan
+yanlış eşleşmeler sonradan makale sayfasındaki ORCID bilgisiyle ayıklanır (orcid_topla.py).
 
 Tarama en yeni aydan geriye doğru ilerler ve kaldığı yeri
 data/dergipark/ilerleme.json dosyasında tutar. Böylece her çalışma bir
@@ -20,6 +23,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -29,6 +33,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 VERI = ROOT / "data" / "dergipark"
 ESLESEN = VERI / "din_felsefesi.jsonl"
+YAZAR = VERI / "akademisyen_makaleleri.jsonl"
 ILERLEME = VERI / "ilerleme.json"
 
 OAI = "https://dergipark.org.tr/api/public/oai/"
@@ -138,6 +143,32 @@ def kaydi_coz(rec: ET.Element) -> dict | None:
     }
 
 
+def ad_anahtari(ad: str) -> str:
+    """Ad karşılaştırması için: Türkçe harfler sadeleştirilir, yalnızca harf ve rakam kalır."""
+    s = kucult(ad).translate(str.maketrans("çğıöşüâîû", "cgiosuaiu"))
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+
+def akademisyenler() -> dict:
+    import yaml
+    kisiler = yaml.safe_load((ROOT / "content/turkiye_akademisi.yaml").read_text(encoding="utf-8"))["kisiler"]
+    return {ad_anahtari(p["ad"]): p["ad"] for p in kisiler}
+
+
+AKADEMISYEN = {}
+
+
+def yazar_eslesir(k: dict) -> list[str]:
+    out = []
+    for y in k["yazarlar"]:
+        soy, _, ad = y.partition(",")
+        anahtar = ad_anahtari(f"{ad} {soy}" if ad else y)
+        if anahtar in AKADEMISYEN:
+            out.append(AKADEMISYEN[anahtar])
+    return out
+
+
 def eslesir_mi(k: dict) -> list[str]:
     """Eşleşmenin nereden geldiğini döndürür: 'alan', 'anahtar' ya da ikisi."""
     nedenler = set()
@@ -150,12 +181,12 @@ def eslesir_mi(k: dict) -> list[str]:
     return sorted(nedenler)
 
 
-def pencereyi_tara(ay: str, bilinen: set, cikti) -> dict:
+def pencereyi_tara(ay: str, bilinen: set, cikti, bilinen_y: set, cikti_y) -> dict:
     y, m = map(int, ay.split("-"))
     son = date(y + (m == 12), m % 12 + 1, 1)
     params = {"verb": "ListRecords", "metadataPrefix": "oai_dc",
               "from": f"{ay}-01", "until": (date.fromordinal(son.toordinal() - 1)).isoformat()}
-    toplam = eslesen = 0
+    toplam = eslesen = yazar_eslesen = 0
     while True:
         kok = istek(params)
         hata = kok.find("oai:error", NS)
@@ -175,12 +206,20 @@ def pencereyi_tara(ay: str, bilinen: set, cikti) -> dict:
                 cikti.write(json.dumps(k, ensure_ascii=False) + "\n")
                 bilinen.add(k["id"])
                 eslesen += 1
+            elif not neden and k["id"] not in bilinen_y:
+                kim = yazar_eslesir(k)
+                if kim:
+                    k["akademisyen"] = kim
+                    k["pencere"] = ay
+                    cikti_y.write(json.dumps(k, ensure_ascii=False) + "\n")
+                    bilinen_y.add(k["id"])
+                    yazar_eslesen += 1
         tok = kok.find("oai:ListRecords/oai:resumptionToken", NS)
         if tok is None or not metin(tok):
             break
         params = {"verb": "ListRecords", "resumptionToken": metin(tok)}
         time.sleep(BEKLEME)
-    return {"kayit": toplam, "eslesen": eslesen}
+    return {"kayit": toplam, "eslesen": eslesen, "yazar_eslesen": yazar_eslesen}
 
 
 def onceki_ay(ay: str) -> str:
@@ -202,8 +241,16 @@ def main() -> None:
             if satir.strip():
                 bilinen.add(json.loads(satir)["id"])
 
+    AKADEMISYEN.update(akademisyenler())
+    bilinen_y = set()
+    if YAZAR.exists():
+        for satir in YAZAR.read_text(encoding="utf-8").splitlines():
+            if satir.strip():
+                bilinen_y.add(json.loads(satir)["id"])
+    yazar_p = ilerleme.setdefault("yazar_pencereler", {})
+
     bitis = time.time() + args.dakika * 60
-    with ESLESEN.open("a", encoding="utf-8") as cikti:
+    with ESLESEN.open("a", encoding="utf-8") as cikti, YAZAR.open("a", encoding="utf-8") as cikti_y:
         if args.ay:
             sirada = [args.ay]
         else:
@@ -211,7 +258,8 @@ def main() -> None:
             sirada, ay = [], bu_ay
             while ay >= EN_ESKI:
                 # Bu ay ve geçen ay her çalışmada yeniden taranır (ay sonunda eklenen kayıtlar kaçmasın)
-                if ay not in ilerleme["pencereler"] or ay in (bu_ay, onceki_ay(bu_ay)):
+                # Akademisyen adına göre tarama sonradan eklendiği için o taramadan geçmemiş aylar da sıraya girer
+                if ay not in ilerleme["pencereler"] or ay not in yazar_p or ay in (bu_ay, onceki_ay(bu_ay)):
                     sirada.append(ay)
                 ay = onceki_ay(ay)
         for ay in sirada:
@@ -220,7 +268,7 @@ def main() -> None:
                 break
             t0 = time.time()
             try:
-                sonuc = pencereyi_tara(ay, bilinen, cikti)
+                sonuc = pencereyi_tara(ay, bilinen, cikti, bilinen_y, cikti_y)
             except Exception as hata:  # noqa: BLE001
                 cikti.flush()
                 mesaj = f"{ay}: {type(hata).__name__}: {hata}"[:500]
@@ -229,14 +277,16 @@ def main() -> None:
                 ILERLEME.write_text(json.dumps(ilerleme, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
                 continue
             cikti.flush()
+            cikti_y.flush()
             ilerleme.get("hatalar", {}).pop(ay, None)
             sonuc["sure_sn"] = round(time.time() - t0)
             sonuc["tarandi"] = date.today().isoformat()
-            ilerleme["pencereler"][ay] = sonuc
+            ilerleme["pencereler"][ay] = {k: v for k, v in sonuc.items() if k != "yazar_eslesen"}
+            yazar_p[ay] = {"eslesen": sonuc["yazar_eslesen"], "tarandi": sonuc["tarandi"]}
             ILERLEME.write_text(json.dumps(ilerleme, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-            print(f"{ay}: {sonuc['kayit']} kayıt, {sonuc['eslesen']} yeni eşleşme, {sonuc['sure_sn']} sn")
-    kalan = [a for a in sirada if a not in ilerleme["pencereler"]]
-    print(f"toplam eşleşme: {len(bilinen)}; taranmamış pencere: {len(kalan)}")
+            print(f"{ay}: {sonuc['kayit']} kayıt, {sonuc['eslesen']} yeni eşleşme, {sonuc['yazar_eslesen']} akademisyen makalesi, {sonuc['sure_sn']} sn")
+    kalan = [a for a in sirada if a not in yazar_p or a not in ilerleme["pencereler"]]
+    print(f"toplam eşleşme: {len(bilinen)}; akademisyen makalesi: {len(bilinen_y)}; taranmamış pencere: {len(kalan)}")
 
 
 if __name__ == "__main__":

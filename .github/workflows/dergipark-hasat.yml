@@ -27,10 +27,12 @@ jobs:
     timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # sırada bekleyen çalışma da en son ilerleme dosyasıyla başlasın
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install lxml
+      - run: pip install lxml pyyaml
       - name: Kayıtları çek
         run: |
           if [ -n "${{ github.event.inputs.ay }}" ]; then
