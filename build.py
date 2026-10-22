@@ -1933,7 +1933,7 @@ def icindekiler_html() -> str:
 def paylas_dugmesi(m: dict) -> str:
     from urllib.parse import quote
     metin = f"Günün makalesi: {m['title_tr']} ({m.get('authors', '')}, {m.get('journal', '')}) #dinfelsefesi"
-    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m) + '?ref=x')}&via={X_HESABI}"
+    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m))}&via={X_HESABI}"
     return f'<a class="x-paylas" href="{e(adres)}" target="_blank" rel="noopener">X\'te paylaş</a>'
 
 
