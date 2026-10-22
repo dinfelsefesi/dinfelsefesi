@@ -669,6 +669,8 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
           + f'<meta property="og:image" content="{e(gorsel or SITE_URL + "/paylas/site.png")}">'
           f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
           f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@{X_HESABI}">'
+          f'<meta name="twitter:title" content="{e(og_baslik)}"><meta name="twitter:description" content="{e(desc)}">'
+          f'<meta name="twitter:image" content="{e(gorsel or SITE_URL + "/paylas/site.png")}">'
           f'<meta name="google-site-verification" content="google08c007317a4ad095">')
     robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
     menu = "".join(
@@ -1930,7 +1932,7 @@ def icindekiler_html() -> str:
 def paylas_dugmesi(m: dict) -> str:
     from urllib.parse import quote
     metin = f"Günün makalesi: {m['title_tr']} ({m.get('authors', '')}, {m.get('journal', '')}) #dinfelsefesi"
-    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m))}&via={X_HESABI}"
+    adres = f"https://x.com/intent/post?text={quote(metin)}&url={quote(entry_url(m) + '?ref=x')}&via={X_HESABI}"
     return f'<a class="x-paylas" href="{e(adres)}" target="_blank" rel="noopener">X\'te paylaş</a>'
 
 
