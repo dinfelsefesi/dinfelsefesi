@@ -522,6 +522,12 @@ footer.site a{color:var(--ink-soft)}
 footer.site .iletisim a{text-decoration:none}
 footer.site .iletisim .adres{text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--gold-logo) 70%,transparent);text-underline-offset:3px}
 footer.site .simge{font-style:normal;margin-right:.3em}
+@media (max-width:560px){
+  /* telefonda sayfa altı ortalı, küçük ve düz yazıyla iki satır */
+  footer.site .wrap{flex-direction:column;align-items:center;gap:.25rem;text-align:center;padding-block:.8rem 1rem}
+  footer.site{font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:-.005em}
+  footer.site .alan{display:none}  /* site adı telefonda tekrar edilmez, satır kısalsın */
+}
 footer.site a:hover{color:var(--accent-ink)}
 .atif{margin:1.2rem 0 0;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;font-family:"Times New Roman",Times,serif;font-size:.8rem;line-height:1.35;max-width:var(--measure);background:transparent;color:var(--ink-soft)}
 .atif .ust-etiket{display:inline;font-family:inherit;font-size:inherit;font-style:italic;color:var(--ink-soft);margin:0 .3rem 0 0}
@@ -759,7 +765,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 {body}
 </div></main>
 <footer class="site"><div class="wrap">
-  <p>© {YIL} <a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · Din felsefesi için Türkçe başvuru kaynağı</p>
+  <p>© {YIL} <span class="alan"><a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · </span>Din felsefesi için Türkçe başvuru kaynağı</p>
   <p class="iletisim"><a href="mailto:{ILETISIM}"><span class="simge" aria-hidden="true">✉</span><span class="gizli">E-posta: </span><span class="adres">{ILETISIM}</span></a> · <a href="https://x.com/{X_HESABI}" rel="noopener"><span class="simge" aria-hidden="true">𝕏</span><span class="gizli">X: </span><span class="adres">@{X_HESABI}</span></a></p>
 </div></footer>
 </body>
