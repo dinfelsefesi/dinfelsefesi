@@ -1908,8 +1908,12 @@ def render_akademisyen(s: str) -> str:
     ogeler = []
     for k in v["kitaplar"]:
         h = FIS[("eser", k)]
+        # kişi sayfasında eser fişine değil, varsa eserin kendi adresine (DOI, yayınevi, açık erişim) gidilir
+        hedef = eser_baglantisi(h)
+        ad_html = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(h["baslik"])}</a>' if hedef
+                   else f'<span class="eser-ad">{e(h["baslik"])}</span>')
         ogeler.append({"grup": "df", "tur": h.get("eser_turu", "kitap"), "yil": str(h.get("yil") or ""), "ad": h["baslik"],
-                       "html": eser_satiri(k)})
+                       "html": ad_html + f'<span class="eser-bilgi">{e(h.get("yayin") or h.get("yil") or "")}</span>'})
     for m in v["makaleler"]:
         yazar = ", ".join(akademisyen_bag(y) if slugify(y) != s else e(y) for y in m["yazarlar"])
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
