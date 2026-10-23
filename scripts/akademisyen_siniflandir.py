@@ -13,7 +13,7 @@ Yazar doğrulaması. Ad benzerliği yetmez; makalenin o kişiye ait olduğu şu 
   1. makalenin DOI'si kişinin ORCID kaydında var,
   2. makale sayfasında yazarın ORCID numarası kişininkiyle aynı (farklıysa makale başkasınındır),
   3. sayfadaki DergiPark profili, kişiye ait olduğu başka bir makaleyle kanıtlanmış profille aynı,
-  4. sayfadaki yazar kurumu kişinin YÖK'teki üniversitesiyle aynı.
+  4. sayfadaki yazar kurumu kişinin YÖK'teki üniversitesiyle ya da listedeki önceki kurumlarından biriyle (onceki_kurumlar) aynı.
 Kanıt bulunamayan makaleler alınmaz.
 
 Durumlar: konulu (ağa ve eser listelerine girer), konusuz / kelime-yok / kapsam-disi (yalnızca akademisyen sayfasında).
@@ -60,7 +60,7 @@ def main():
     kisiler = yaml.safe_load((ROOT / "content/turkiye_akademisi.yaml").read_text(encoding="utf-8"))["kisiler"]
     orcid_kayit = oku_json(OR / "orcid.json", "orcid")
     orcid = {p["ad"]: (p.get("orcid") or orcid_kayit.get(kisalt(p["ad"]), "")) for p in kisiler}
-    universite = {p["ad"]: p.get("universite", "") for p in kisiler}
+    universite = {p["ad"]: " ".join([p.get("universite", "")] + list(p.get("onceki_kurumlar") or [])) for p in kisiler}
     eserler = oku_json(OR / "eserler.json", "eserler")
     orcid_doi = {ad: {doi_temiz(w["doi"]) for w in eserler.get(o, []) if w.get("doi")} for ad, o in orcid.items() if o}
     sayfa = oku_json(OR / "makale_yazar.json")
