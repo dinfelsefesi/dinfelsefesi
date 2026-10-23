@@ -2323,6 +2323,7 @@ def main() -> None:
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
 
+    tum_ogeler = list(items)
     items = gunleri_ata(items)
     yaz("", render_ana(items))
     yaz("gunun-makalesi", render_makaleler(items))
@@ -2334,6 +2335,15 @@ def main() -> None:
         yaz(eski, yonlendirme(f"{SITE_URL}/{yeni}/"))
     for m in items:
         yaz(f"makale/{m['slug']}", render_makale(m))
+    # Yarının makale sayfası ve paylaşım görseli bir gün önceden yayımlanır (bağlantı verilmez, arama motorlarına kapalı).
+    # Gece derlemesi gecikse de paylaşım bağlantısı X tarafından ilk okunduğunda sayfa ve görsel hazır olur.
+    from datetime import date, timedelta
+    yarin = (date.fromisoformat(bugun()) + timedelta(days=1)).isoformat()
+    for m in tum_ogeler:
+        if m.get("gun") == yarin:
+            yaz(f"makale/{m['slug']}", render_makale(m).replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
+            if f"makale/{m['slug']}" in SAYFALAR:  # site haritasına girmez
+                SAYFALAR.remove(f"makale/{m['slug']}")
     yaz("basliklar", render_basliklar())
     for (t, k) in FIS:
         if t == "baslik":
