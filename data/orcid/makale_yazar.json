@@ -391,6 +391,13 @@
    "orcid": "0000-0002-9024-5284"
   }
  ],
+ "1044850": [
+  {
+   "ad": "Osman Zahid Çifçi",
+   "kurum": "Necmettin Erbakan Üniversitesi, Sosyal Bilimler Enstitüsü, Felsefe ve Din Bilimleri Programı",
+   "orcid": ""
+  }
+ ],
  "1045322": [
   {
    "ad": "Mustafa Eren",
@@ -612,6 +619,18 @@
    "orcid": "0000-0002-4942-3835"
   }
  ],
+ "1064526": [
+  {
+   "ad": "Atilla Akalın",
+   "kurum": "İSTANBUL GELİŞİM ÜNİVERSİTESİ, İSTANBUL GELİŞİM MESLEK YÜKSEKOKULU",
+   "orcid": "0000-0002-8385-5287"
+  },
+  {
+   "ad": "Meltem İşler Sevindi",
+   "kurum": "İSTANBUL GELİŞİM ÜNİVERSİTESİ, İSTANBUL GELİŞİM MESLEK YÜKSEKOKULU",
+   "orcid": "0000-0002-8429-8574"
+  }
+ ],
  "1065038": [
   {
    "ad": "Tuncay İmamoğlu",
@@ -651,6 +670,13 @@
    "ad": "Melayib Bilgin",
    "kurum": "AKSARAY ÜNİVERSİTESİ",
    "orcid": "0000-0003-1086-5019"
+  }
+ ],
+ "1067223": [
+  {
+   "ad": "Haydar Dölek",
+   "kurum": "",
+   "orcid": ""
   }
  ],
  "1067452": [
@@ -1148,6 +1174,13 @@
    "ad": "Suat Karakaya",
    "kurum": "Department of Mechatronics Engineering, Kocaeli University, Kocaeli, Turkey",
    "orcid": "0000-0002-3082-0304"
+  }
+ ],
+ "109323": [
+  {
+   "ad": "Ali Yıldırım",
+   "kurum": "MARMARA ÜNİVERSİTESİ",
+   "orcid": "0000-0003-1687-993X"
   }
  ],
  "1093276": [
@@ -2232,6 +2265,13 @@
    "ad": "Fatih Özgökman",
    "kurum": "Çanakkale Onsekiz Mart Üniversitesi",
    "orcid": "0000-0002-6644-7177"
+  }
+ ],
+ "1204327": [
+  {
+   "ad": "Sait Polat",
+   "kurum": "Milli Eğitim Bakanlığı",
+   "orcid": "0000-0003-1852-7129"
   }
  ],
  "1204847": [
@@ -4272,6 +4312,25 @@
    "orcid": "0000-0003-0243-5625"
   }
  ],
+ "1469753": [
+  {
+   "ad": "Emine Gören Bayam",
+   "kurum": "DİCLE ÜNİVERSİTESİ",
+   "orcid": "0000-0003-2464-1008"
+  }
+ ],
+ "1474446": [
+  {
+   "ad": "Nesuh Kaya",
+   "kurum": "AKDENİZ ÜNİVERSİTESİ",
+   "orcid": "0000-0003-0077-1430"
+  },
+  {
+   "ad": "Rıfat Atay",
+   "kurum": "AKDENİZ ÜNİVERSİTESİ",
+   "orcid": "0000-0001-8715-3023"
+  }
+ ],
  "1475234": [
   {
    "ad": "Fırat Karadağ",
@@ -5513,6 +5572,13 @@
    "orcid": "0000-0003-3927-8088"
   }
  ],
+ "1676183": [
+  {
+   "ad": "Bilal Bekalp",
+   "kurum": "Bursa Uludağ Üniversitesi",
+   "orcid": "0000-0001-8733-959X"
+  }
+ ],
  "1676509": [
   {
    "ad": "Selin Olur",
@@ -6014,6 +6080,13 @@
    "orcid": "0009-0006-5424-706X"
   }
  ],
+ "1733366": [
+  {
+   "ad": "Abdullah Arif Adalar",
+   "kurum": "SAKARYA UNIVERSITY",
+   "orcid": "0000-0003-3481-3213"
+  }
+ ],
  "1735297": [
   {
    "ad": "Erol Çetin",
@@ -6038,11 +6111,46 @@
    "orcid": "0000-0002-1673-2607"
   }
  ],
+ "173706": [
+  {
+   "ad": "Muammer İskenderoğlu*",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "173707": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "173722": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "173756": [
+  {
+   "ad": "Muammer İskenderoğlu*",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "1738939": [
   {
    "ad": "Mehmet Sulhan",
    "kurum": "Siirt Üniversitesi",
    "orcid": "0000-0003-1527-498X"
+  }
+ ],
+ "173903": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
   }
  ],
  "1739633": [
@@ -6072,6 +6180,13 @@
    "ad": "Zana Karaboğa",
    "kurum": "HARRAN ÜNİVERSİTESİ",
    "orcid": "0000-0002-1836-588X"
+  }
+ ],
+ "1742944": [
+  {
+   "ad": "Mustafa Dönmez",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ",
+   "orcid": "0000-0002-9194-6824"
   }
  ],
  "1743211": [
@@ -6138,6 +6253,13 @@
    "ad": "Ruhattin Yazoğlu",
    "kurum": "ATATÜRK ÜNİVERSİTESİ",
    "orcid": "0000-0002-1673-2607"
+  }
+ ],
+ "1758488": [
+  {
+   "ad": "Hakan Hemşinli",
+   "kurum": "Van Yüzüncü Yıl Üniversitesi",
+   "orcid": "0000-0003-4977-9054"
   }
  ],
  "1763999": [
@@ -6226,6 +6348,20 @@
    "orcid": "0009-0006-5500-9338"
   }
  ],
+ "1777186": [
+  {
+   "ad": "Alber Erol Nahum",
+   "kurum": "GALATASARAY ÜNİVERSİTESİ",
+   "orcid": "0000-0002-0866-8596"
+  }
+ ],
+ "1781542": [
+  {
+   "ad": "Zafer Çaylı",
+   "kurum": "HATAY MUSTAFA KEMAL ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ",
+   "orcid": "0000-0002-6137-4626"
+  }
+ ],
  "1782084": [
   {
    "ad": "Münteha Beki",
@@ -6305,6 +6441,13 @@
    "ad": "Sait Polat",
    "kurum": "ÇUKUROVA ÜNİVERSİTESİ, TIP FAKÜLTESİ",
    "orcid": "0000-0003-1646-8831"
+  }
+ ],
+ "1793720": [
+  {
+   "ad": "İsmail Şimşek",
+   "kurum": "Pamukkale Üniversitesi İlahiyat Fakültesi",
+   "orcid": "0000-0001-5682-7013"
   }
  ],
  "1793772": [
@@ -6451,6 +6594,18 @@
    "orcid": "0000-0003-0812-8554"
   }
  ],
+ "1817851": [
+  {
+   "ad": "Fırat Karadağ",
+   "kurum": "BAYBURT ÜNİVERSİTESİ, İLAHİYAT FAKÜLTESİ, FELSEFE VE DİN BİLİMLERİ BÖLÜMÜ",
+   "orcid": "0009-0004-4107-8346"
+  },
+  {
+   "ad": "Ruhattin Yazoğlu",
+   "kurum": "ATATÜRK ÜNİVERSİTESİ",
+   "orcid": "0000-0002-1673-2607"
+  }
+ ],
  "1819089": [
   {
    "ad": "Muhammet Emin Sözkesen",
@@ -6530,6 +6685,18 @@
    "ad": "Yusuf Şahin",
    "kurum": "MARMARA ÜNİVERSİTESİ",
    "orcid": "0000-0001-5934-2003"
+  }
+ ],
+ "1835473": [
+  {
+   "ad": "Fatih Tiyek",
+   "kurum": "KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ",
+   "orcid": "0000-0001-8225-479X"
+  },
+  {
+   "ad": "Erol Çetin",
+   "kurum": "KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ",
+   "orcid": "0000-0001-7732-2487"
   }
  ],
  "1836682": [
@@ -6847,6 +7014,13 @@
    "orcid": "0000-0003-4619-3007"
   }
  ],
+ "1873741": [
+  {
+   "ad": "Osman Karaağaç",
+   "kurum": "ERZİNCAN BİNALİ YILDIRIM ÜNİVERSİTESİ İLAHİYAT FAKÜLTESİ",
+   "orcid": "0000-0002-4942-3835"
+  }
+ ],
  "1875953": [
   {
    "ad": "İbrahim Yıldız",
@@ -6871,6 +7045,20 @@
    "ad": "Recep Kılıç",
    "kurum": "SAKARYA UNIVERSITY OF APPLIED SCIENCES",
    "orcid": "0000-0003-1580-1997"
+  }
+ ],
+ "1886320": [
+  {
+   "ad": "İsmail Şimşek",
+   "kurum": "Pamukkale Üniversitesi İlahiyat Fakültesi",
+   "orcid": "0000-0001-5682-7013"
+  }
+ ],
+ "1894862": [
+  {
+   "ad": "Mustafa Dönmez",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ",
+   "orcid": "0000-0002-9194-6824"
   }
  ],
  "189525": [
@@ -6995,6 +7183,13 @@
    "orcid": ""
   }
  ],
+ "1902574": [
+  {
+   "ad": "Ergin Ögcem",
+   "kurum": "KÜTAHYA DUMLUPINAR ÜNİVERSİTESİ, İSLAMİ İLİMLER FAKÜLTESİ",
+   "orcid": "0000-0002-3755-6729"
+  }
+ ],
  "190488": [
   {
    "ad": "Sinan Bilgin",
@@ -7044,6 +7239,13 @@
    "ad": "Mehmet Demirtas",
    "kurum": "",
    "orcid": ""
+  }
+ ],
+ "1907811": [
+  {
+   "ad": "Bilal Bekalp",
+   "kurum": "INONU UNIVERSITY, FACULTY OF THEOLOGY",
+   "orcid": "0000-0001-8733-959X"
   }
  ],
  "190858": [
@@ -7102,6 +7304,23 @@
    "ad": "Hasan Atsız",
    "kurum": "On Dokuz Mayıs Üniversitesi İlahiyat Fakültesi",
    "orcid": "0000-0002-5932-1314"
+  }
+ ],
+ "1914404": [
+  {
+   "ad": "Teceli Karasu",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ",
+   "orcid": "0000-0003-4218-2802"
+  },
+  {
+   "ad": "İbrahim Yıldız",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ",
+   "orcid": "0000-0003-3139-2169"
+  },
+  {
+   "ad": "Rabia Sümeyye Aykan",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ",
+   "orcid": "0000-0003-0454-6636"
   }
  ],
  "191565": [
@@ -7401,6 +7620,20 @@
    "orcid": "0000-0002-0001-4184"
   }
  ],
+ "1953111": [
+  {
+   "ad": "Fatma Yüce",
+   "kurum": "SAMSUN ÜNİVERSİTESİ",
+   "orcid": "0000-0002-8168-5982"
+  }
+ ],
+ "1955281": [
+  {
+   "ad": "Hasan Tanrıverdi",
+   "kurum": "ORDU ÜNİVERSİTESİ, İLAHİYAT FAKÜLTESİ",
+   "orcid": "0000-0001-8549-7746"
+  }
+ ],
  "1970714": [
   {
    "ad": "Yusuf Şahin",
@@ -7583,6 +7816,13 @@
  "20928": [
   {
    "ad": "Engin Erdem",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "210068": [
+  {
+   "ad": "Necmettin Tan",
    "kurum": "",
    "orcid": ""
   }
@@ -7884,6 +8124,13 @@
    "orcid": ""
   }
  ],
+ "237973": [
+  {
+   "ad": "Hasan Tanrıverdi",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "238874": [
   {
    "ad": "Ali Yıldırım",
@@ -8049,6 +8296,13 @@
    "orcid": ""
   }
  ],
+ "248104": [
+  {
+   "ad": "Ayşe Sıdıka Oktay",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "25107": [
   {
    "ad": "Mustafa Yıldırım",
@@ -8163,6 +8417,13 @@
    "orcid": ""
   }
  ],
+ "255171": [
+  {
+   "ad": "İbrahim Yıldız",
+   "kurum": "ANKARA ÜNİVERSİTESİ",
+   "orcid": ""
+  }
+ ],
  "255671": [
   {
    "ad": "Zikri Yavuz",
@@ -8258,6 +8519,13 @@
    "orcid": ""
   }
  ],
+ "267169": [
+  {
+   "ad": "Mehmet Fatih Kalın",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "271947": [
   {
    "ad": "Türker Koksal",
@@ -8322,6 +8590,90 @@
    "orcid": ""
   }
  ],
+ "273287": [
+  {
+   "ad": "Ayşe Sıdıka Oktay",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273326": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273340": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273345": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273362": [
+  {
+   "ad": "Ayşe Sıdıka Oktay",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273488": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273489": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273502": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273505": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "273509": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "274865": [
+  {
+   "ad": "Ali Yıldırım",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "276373": [
+  {
+   "ad": "Rıfat Atay",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "277934": [
   {
    "ad": "Abdulhan Ünlüsoy",
@@ -8333,6 +8685,25 @@
   {
    "ad": "Ergin Ögcem",
    "kurum": "DUMLUPINAR UNIV",
+   "orcid": ""
+  }
+ ],
+ "279541": [
+  {
+   "ad": "Osman Zahid Çifçi",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "279582": [
+  {
+   "ad": "Osman Zahid Çifçi",
+   "kurum": "AKSARAY ÜNİVERSİTESİ, İSLAMİ İLİMLER FAKÜLTESİ",
+   "orcid": ""
+  },
+  {
+   "ad": "Hüsamettin Erdem",
+   "kurum": "NECMETTİN ERBAKAN ÜNİVERSİTESİ, İLAHİYAT FAKÜLTESİ",
    "orcid": ""
   }
  ],
@@ -8603,6 +8974,20 @@
    "orcid": ""
   }
  ],
+ "295269": [
+  {
+   "ad": "Ruhattin Yazoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "295274": [
+  {
+   "ad": "Mehmet Fatih Kalın",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "29535": [
   {
    "ad": "Gülfidan Coşkun",
@@ -8773,6 +9158,20 @@
    "orcid": ""
   }
  ],
+ "310502": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "310503": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "311150": [
   {
    "ad": "Ali Yıldırım",
@@ -8781,6 +9180,13 @@
   },
   {
    "ad": "Fatma Sinecen",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "313684": [
+  {
+   "ad": "Ali Yıldırım",
    "kurum": "",
    "orcid": ""
   }
@@ -8874,6 +9280,13 @@
    "orcid": ""
   }
  ],
+ "326961": [
+  {
+   "ad": "Betül Akdemir Süleyman",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "330112": [
   {
    "ad": "Ali Yıldırım",
@@ -8896,6 +9309,13 @@
  "331937": [
   {
    "ad": "Yaşar Türkben",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "334058": [
+  {
+   "ad": "Tuncay İmamoğlu",
    "kurum": "",
    "orcid": ""
   }
@@ -8929,6 +9349,13 @@
  "338169": [
   {
    "ad": "Fatih Topaloğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "338372": [
+  {
+   "ad": "Ahmet Bayındır",
    "kurum": "",
    "orcid": ""
   }
@@ -9337,6 +9764,23 @@
   }
  ],
  "36769": [
+  {
+   "ad": "Celal Büyük",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "36818": [
+  {
+   "ad": "İsmail Bulut",
+   "kurum": "",
+   "orcid": ""
+  },
+  {
+   "ad": "İsmail Arıcı",
+   "kurum": "",
+   "orcid": ""
+  },
   {
    "ad": "Celal Büyük",
    "kurum": "",
@@ -10015,6 +10459,13 @@
    "orcid": ""
   }
  ],
+ "429079": [
+  {
+   "ad": "Kasım Müminoğlu",
+   "kurum": "MUŞ ALPARSLAN ÜNİVERSİTESİ, FEN-EDEBİYAT FAKÜLTESİ",
+   "orcid": "0000-0001-6649-4144"
+  }
+ ],
  "429441": [
   {
    "ad": "Cafer Sadık Yaran",
@@ -10186,6 +10637,13 @@
    "orcid": "0000-0002-0759-3262"
   }
  ],
+ "443907": [
+  {
+   "ad": "Tuncay İmamoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
  "445340": [
   {
    "ad": "Gonca İnce",
@@ -10295,6 +10753,13 @@
  "44794": [
   {
    "ad": "Yusuf Şahin",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "448301": [
+  {
+   "ad": "Rahim Acar",
    "kurum": "",
    "orcid": ""
   }
@@ -10758,6 +11223,41 @@
  "488044": [
   {
    "ad": "Osman Murat Deniz",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "488064": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "488090": [
+  {
+   "ad": "Muammer İskenderoğlu",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "488224": [
+  {
+   "ad": "Engin Erdem",
+   "kurum": "ANKARA ÜNİVERSİTESİ, İLAHİYAT FAKÜLTESİ",
+   "orcid": ""
+  }
+ ],
+ "488350": [
+  {
+   "ad": "Necmettin Tan",
+   "kurum": "",
+   "orcid": ""
+  }
+ ],
+ "488604": [
+  {
+   "ad": "Engin Erdem",
    "kurum": "",
    "orcid": ""
   }
@@ -11853,6 +12353,13 @@
    "orcid": "0000-0003-3638-9196"
   }
  ],
+ "611700": [
+  {
+   "ad": "Ayşe Sıdıka Oktay",
+   "kurum": "Süleyman Demirel Üniversitesi",
+   "orcid": ""
+  }
+ ],
  "612790": [
   {
    "ad": "Abdulhan Ünlüsoy",
@@ -11865,6 +12372,20 @@
    "ad": "Ahmet Kavlak",
    "kurum": "Yıldırım Beyazıt Üniversitesi",
    "orcid": "0000-0002-4419-9440"
+  }
+ ],
+ "616681": [
+  {
+   "ad": "Ali Yıldırım",
+   "kurum": "Yrd.Doç.Dr., Gaziosmanpaşa Üniversitesi İlahiyat Fakültesi Felsefe ve Din Bilimleri Bölümü Öğretim üyesi",
+   "orcid": ""
+  }
+ ],
+ "617160": [
+  {
+   "ad": "Ali Yıldırım",
+   "kurum": "Yrd. Doç. Dr., Gaziosmanpaşa Üniversitesi İlahiyat Fakültesi Felsefe ve Din Bilimleri Bölümü.",
+   "orcid": ""
   }
  ],
  "617297": [
@@ -13546,6 +14067,13 @@
    "orcid": "0000-0003-1857-9826"
   }
  ],
+ "813264": [
+  {
+   "ad": "Atilla Akalın",
+   "kurum": "İstanbul Gelişim Universitesi Meslek Yuksekokulu, Halkla İlişkiler ve Tanıtım Programı",
+   "orcid": ""
+  }
+ ],
  "814779": [
   {
    "ad": "Kenan Karagul",
@@ -14146,6 +14674,13 @@
    "orcid": "0000-0002-7236-6656"
   }
  ],
+ "872760": [
+  {
+   "ad": "Yasin Ramazan Başaran",
+   "kurum": "Marmara University",
+   "orcid": "0000-0003-4699-7451"
+  }
+ ],
  "873241": [
   {
    "ad": "Mustafa Çakmak",
@@ -14472,6 +15007,18 @@
    "ad": "Ali Yıldırım",
    "kurum": "Göteborg Üniversitesi",
    "orcid": "0000-0001-7350-0741"
+  }
+ ],
+ "915815": [
+  {
+   "ad": "Nusret Taş",
+   "kurum": "Öğretmen, Diyarbakır Bilim ve Sanat Merkez",
+   "orcid": ""
+  },
+  {
+   "ad": "Haydar Dölek",
+   "kurum": "Fırat Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı",
+   "orcid": ""
   }
  ],
  "915913": [
