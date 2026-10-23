@@ -4033,6 +4033,33 @@
    "orcid": "0000-0001-6266-1128"
   }
  ],
+ "1421866": [
+  {
+   "ad": "Turan Koç",
+   "kurum": "KAHRAMANMARAS SUTCU IMAM UNIVERSITY",
+   "orcid": ""
+  },
+  {
+   "ad": "Orhan Berger",
+   "kurum": "GAZIANTEP UNIVERSITY",
+   "orcid": ""
+  },
+  {
+   "ad": "Şebnem Rumeli",
+   "kurum": "MERSIN UNIVERSITY",
+   "orcid": ""
+  },
+  {
+   "ad": "Alev Bobuş Örs",
+   "kurum": "MERSIN UNIVERSITY",
+   "orcid": ""
+  },
+  {
+   "ad": "Nail Can Öztürk",
+   "kurum": "MERSIN UNIVERSITY",
+   "orcid": ""
+  }
+ ],
  "1423003": [
   {
    "ad": "Fırat Karadağ",
@@ -5469,6 +5496,23 @@
    "orcid": "0000-0002-4108-7697"
   }
  ],
+ "1670580": [
+  {
+   "ad": "Gülden Kayan",
+   "kurum": "MERSIN UNIVERSITY, SCHOOL OF MEDICINE",
+   "orcid": "0000-0002-0042-8803"
+  },
+  {
+   "ad": "Alev Bobus Örs",
+   "kurum": "MERSIN UNIVERSITY, SCHOOL OF MEDICINE, MEDICINE PR.",
+   "orcid": "0000-0003-4026-5460"
+  },
+  {
+   "ad": "Turan Koç",
+   "kurum": "KAHRAMANMARAS SUTCU IMAM UNIVERSITY, SCHOOL OF MEDICINE, MEDICINE PR.",
+   "orcid": "0000-0001-6970-3351"
+  }
+ ],
  "167139": [
   {
    "ad": "Murat Akyol",
@@ -6021,6 +6065,23 @@
    "ad": "Selim Kapur",
    "kurum": "ÇUKUROVA ÜNİVERSİTESİ",
    "orcid": "0000-0003-2224-1983"
+  }
+ ],
+ "1722911": [
+  {
+   "ad": "Turan Koç",
+   "kurum": "KAHRAMANMARAS SUTCU IMAM UNIVERSITY, SCHOOL OF MEDICINE, MEDICINE PR.",
+   "orcid": "0000-0001-6970-3351"
+  },
+  {
+   "ad": "Rabia Filik",
+   "kurum": "Kahramanmaraş Sütçü İmam Universitesi, Sağlık Bilimleri Enstitüsü, Anatomi Anabilim Dalı",
+   "orcid": "0009-0008-9826-566X"
+  },
+  {
+   "ad": "Sibel Ateşoğlu Karabaş",
+   "kurum": "Kahramanmaraş Sütçü İmam Üniversitesi Tıp Fakültesi Anatomi Anabilim Dalı",
+   "orcid": "0000-0002-8469-4518"
   }
  ],
  "1723945": [
@@ -10498,6 +10559,13 @@
   {
    "ad": "Rahim Acar",
    "kurum": "MARMARA ÜNİVERSİTESİ",
+   "orcid": ""
+  }
+ ],
+ "430499": [
+  {
+   "ad": "Turan Koç",
+   "kurum": "İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ",
    "orcid": ""
   }
  ],
