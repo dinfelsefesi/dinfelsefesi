@@ -391,7 +391,9 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
 .eser-bolum h3{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:1.2rem 0 .3rem;font-weight:500}
 .eser-bolum h3 a{color:var(--accent-ink)}
-.aciklama-kisa{font-size:1rem;color:var(--ink-soft);margin:0 0 .7rem;max-width:62ch}
+.aciklama-kisa{font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem;max-width:62ch}
+/* açıklama notları gövde metninden ayrılsın: farklı yazı ailesi, küçük punto ve başta bilgi işareti */
+.aciklama-kisa::before{content:"ℹ️";margin-right:.35em;font-size:.95em}
 .sekmeler{margin-top:.4rem}
 .sekmeler button{font-size:1rem;padding:.45rem 1.1rem}
 .sekme-bolum{margin-top:1rem}
@@ -433,7 +435,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-logo{position:absolute;top:1rem;right:1rem;width:34px;height:34px;border-radius:8px;opacity:.9}
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
-.akademi-not{margin-top:1.6rem;font-size:.88rem}
+.akademi-not{margin-top:1.6rem;font-size:.8rem}
 .calisanlar{margin-top:2rem}
 ul.calisan-liste{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:var(--measure)}
 ul.calisan-liste li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
