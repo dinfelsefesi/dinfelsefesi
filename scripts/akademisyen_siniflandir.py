@@ -79,6 +79,8 @@ def main():
     # 1) Yazar doğrulaması (iki tur: ilk turda kanıtlanan profiller ikinci turda kullanılır)
     # Elle bildirilen, kişiye ait olduğu bilinen DergiPark profilleri ve bu profillerde listelenen makaleler
     profiller = {ad: {str(h) for h in hs or []} for ad, hs in oku_yaml(DP / "profiller.yaml").items()}
+    for ad, hs in oku_json(DP / "profil_bulunan.json").items():
+        profiller.setdefault(ad, set()).update(hs)
     profil_listesi = {ad: set(ids) for ad, ids in oku_json(DP / "profil_makaleleri.json").items()}
     karar = {}
     for _ in range(2):

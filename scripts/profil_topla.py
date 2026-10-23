@@ -3,6 +3,8 @@
 
 Girdi: data/dergipark/profiller.yaml  kişi adı -> [DergiPark profil kısaltmaları (@...)]
        Buraya yalnızca kişinin kendisine ait olduğu doğrulanmış profiller yazılır.
+       Ayrıca kişiye ORCID ile bağlanmış makalelerin sayfalarında yazarın adına bağlı profiller de kendiliğinden alınır
+       (data/dergipark/akademisyen_sinif.json ve data/orcid/makale_profil.json); bunlar profil_bulunan.json'a yazılır.
 Çıktı: data/dergipark/profil_makaleleri.json  kişi adı -> [makale kimliği]
        Profilde olup hasatta bulunmayan makaleler (ad farklı yazılmış olabilir) makale sayfasından okunur ve
        data/dergipark/akademisyen_makaleleri.jsonl dosyasına eklenir.
@@ -56,7 +58,23 @@ def yazar_oai(ad: str) -> str:
 
 
 def main():
-    profiller = yaml.safe_load((DP / "profiller.yaml").read_text(encoding="utf-8")) or {}
+    profiller = {k: list(v or []) for k, v in (yaml.safe_load((DP / "profiller.yaml").read_text(encoding="utf-8")) or {}).items()}
+    # ORCID ile doğrulanmış makalelerin sayfalarından öğrenilen profiller
+    from orcid_topla import kisalt
+    sinif_d, profil_d = DP / "akademisyen_sinif.json", ROOT / "data/orcid/makale_profil.json"
+    bulunan = {}
+    if sinif_d.exists() and profil_d.exists():
+        sinif, profil = json.loads(sinif_d.read_text(encoding="utf-8")), json.loads(profil_d.read_text(encoding="utf-8"))
+        for mid, v in sinif.items():
+            for ad, kanit in v["kanit"].items():
+                if kanit in ("orcid", "orcid-kaydi"):
+                    for n, h in profil.get(mid, {}).items():
+                        if kisalt(n) == kisalt(ad):
+                            bulunan.setdefault(ad, set()).add(h)
+    for ad, hs in bulunan.items():
+        profiller[ad] = list(dict.fromkeys(profiller.get(ad, []) + sorted(hs)))
+    (DP / "profil_bulunan.json").write_text(json.dumps({k: sorted(v) for k, v in sorted(bulunan.items())}, ensure_ascii=False, indent=1),
+                                            encoding="utf-8")
     kayit = DP / "akademisyen_makaleleri.jsonl"
     bilinen = set()
     for dosya in (DP / "din_felsefesi.jsonl", kayit):

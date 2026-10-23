@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/orcid/ data/dergipark/akademisyen_sinif.json data/dergipark/akademisyen_makaleleri.jsonl data/dergipark/profil_makaleleri.json
+          git add data/orcid/ data/dergipark/akademisyen_sinif.json data/dergipark/akademisyen_makaleleri.jsonl data/dergipark/profil_makaleleri.json data/dergipark/profil_bulunan.json
           git commit -m "ORCID: numaralar ve eser listeleri güncellendi" || exit 0
           git pull --rebase -q && git push -q
