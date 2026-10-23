@@ -391,7 +391,7 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .eser-bolum h2 a,.eser-bolum h3 a{color:var(--ink);text-decoration:none}
 .eser-bolum h3{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--gold);margin:1.2rem 0 .3rem;font-weight:500}
 .eser-bolum h3 a{color:var(--accent-ink)}
-.aciklama-kisa{font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem;max-width:62ch}
+.aciklama-kisa{font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem;max-width:52rem}
 /* açıklama notları gövde metninden ayrılsın: farklı yazı ailesi, küçük punto ve başta bilgi işareti */
 .aciklama-kisa::before{content:"ℹ️";margin-right:.35em;font-size:.95em}
 .sekmeler{margin-top:.4rem}
