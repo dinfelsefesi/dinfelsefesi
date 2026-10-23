@@ -6063,13 +6063,15 @@
    "Turan Koç"
   ],
   "baslik": "İslam Sanat Geleneği ve Estetik",
-  "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "basliklar": [
+   "din-ve-sanat"
+  ],
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
   "ilgili": [],
   "kanit": {
-   "Turan Koç": "kurum"
+   "Turan Koç": "elle"
   },
   "tur": ""
  },
