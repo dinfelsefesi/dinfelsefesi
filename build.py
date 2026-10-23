@@ -1200,17 +1200,12 @@ def turkiye_listesi() -> tuple[str, int]:
     kisiler = veri.get("kisiler") or []
     fis_ad = {FIS[(t, k)]["ad"]: k for (t, k) in FIS if t == "kisi"}
     satirlar = []
-    makale_say = dp_yazar_sayilari()
     kisiler = sorted(kisiler, key=lambda p: tr_anahtar(p['ad']))
     for p in kisiler:
         kim = p.get("kimlik") or fis_ad.get(p["ad"])
         ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else f'<a href="{akademi_url(slugify(p["ad"]))}">{e(p["ad"])}</a>'
         durum = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
         yok = f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK</a>' if p.get("yok") else ""
-        n = makale_say.get(ad_anahtari(p["ad"]), 0)
-        if n:
-            from urllib.parse import quote
-            yok += f' <a class="k-makale" href="{SITE_URL}/eserler/?ara={quote(tr_kucuk(p["ad"]))}">{n} makale</a>'
         ara = tr_kucuk(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
         satirlar.append(f'<tr id="k-{slugify(p["ad"])}" data-ara="{e(ara)}" data-unvan="{UNVAN_SIRA.get(p.get("unvan"), 9)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
                         f'<td data-etiket="Unvan">{e(p.get("unvan"))}{durum}</td>'
