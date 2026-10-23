@@ -1102,5 +1102,6 @@ kisiler:
   universite: İstanbul Sabahattin Zaim Üniversitesi
   fakulte: İslami İlimler Fakültesi
   kimlik: turan-koc
+  orcid: '0000-0001-7391-1858'   # Abdullah Akgül'ün bildirdiği kayıt (23 Ekim 2026); kayıtta eser yok
   onceki_kurumlar: [Erciyes Üniversitesi]
   elle: true   # YÖK'teki alan ölçütüne uymadığı için listeye girmiyordu; alanın öncülerinden olduğu için elle eklendi (23 Ekim 2026). Kurum bilgisi İSAM kişi sayfasından (2024).
