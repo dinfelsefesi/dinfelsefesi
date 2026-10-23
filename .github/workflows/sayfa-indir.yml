@@ -1,0 +1,21 @@
+name: Sayfa indir (hata ayıklama)
+# Elle çalıştırılır: verilen DergiPark sayfasını indirip 'hata-ayiklama' dalına kaydeder.
+on:
+  workflow_dispatch:
+    inputs:
+      adres:
+        description: "İndirilecek sayfa"
+        required: true
+permissions:
+  contents: write
+jobs:
+  indir:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out && cd out && git init -q && git checkout -q -b hata-ayiklama
+          curl -sL -A "dinfelsefesi.com.tr (dinfelsefesi@gmail.com)" "${{ github.event.inputs.adres }}" -o sayfa.html
+          ls -la
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sayfa.html && git commit -q -m "sayfa"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" hata-ayiklama
