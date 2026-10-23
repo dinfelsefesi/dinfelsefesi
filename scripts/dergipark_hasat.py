@@ -248,6 +248,12 @@ def main() -> None:
             if satir.strip():
                 bilinen_y.add(json.loads(satir)["id"])
     yazar_p = ilerleme.setdefault("yazar_pencereler", {})
+    # Listeye yeni kişi eklendiyse akademisyen adına göre tarama bütün aylar için yeniden yapılır
+    adlar = sorted(set(AKADEMISYEN.values()))
+    if ilerleme.get("yazar_adlari") is not None and set(adlar) - set(ilerleme["yazar_adlari"]):
+        print(f"listeye yeni eklenen: {sorted(set(adlar) - set(ilerleme['yazar_adlari']))}; akademisyen taraması baştan yapılacak")
+        yazar_p.clear()
+    ilerleme["yazar_adlari"] = adlar
 
     bitis = time.time() + args.dakika * 60
     with ESLESEN.open("a", encoding="utf-8") as cikti, YAZAR.open("a", encoding="utf-8") as cikti_y:

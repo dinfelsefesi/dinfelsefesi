@@ -1178,7 +1178,8 @@ def turkiye_listesi() -> tuple[str, int]:
            f'Liste, YÖK Akademik\'te bilim alanı olarak İlahiyat Temel Alanı\'nda Din Felsefesi\'ni işaretlemiş akademisyenler ile '
            f'İlahiyat Temel Alanı\'nda Felsefe ve Din Bilimleri ya da Sosyal, Beşeri ve İdari Bilimler Temel Alanı\'nda Felsefe alanında '
            f'ilk anahtar kelimesi Din Felsefesi olan akademisyenlerden oluşmaktadır'
-           f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.</p>'
+           f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.'
+           f'{" Bu ölçütlere uymayan ama alanın öncülerinden olan " + str(sum(1 for p in kisiler if p.get("elle"))) + " isim listeye elle eklenmiştir." if any(p.get("elle") for p in kisiler) else ""}</p>'
            '<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
     tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr>'
              + "".join(f'<th aria-sort="{"ascending" if i == 0 else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}<span class="ok" aria-hidden="true"></span></button></th>'
@@ -1823,7 +1824,7 @@ def render_akademisyen(s: str) -> str:
                    "".join(f'<li><a href="{akademi_url(o)}">{e(akademi_verisi()[o]["p"]["ad"])}</a></li>'
                            for o in sorted(v["ortak"], key=lambda o: tr_anahtar(akademi_verisi()[o]["p"]["ad"]))) + '</ul>')
     if v["makaleler"]:
-        yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak=kisi-tr/{s}">İlişki ağında göster →</a>')
+        yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak={ag_kisi_kimligi(p)}">İlişki ağında göster →</a>')
     tarih = dp_tarama_tarihi()
     diger = orcid_diger_eserler(v)
     metin = (f'<h2>Din felsefesi çalışmaları <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
@@ -1906,9 +1907,22 @@ def ag_verisi(items) -> dict:
         if d["tur"] == "kisi":
             d["suz"] = "kisi"
     tr_dugum, tr_bag = ag_turkiye_akademisi()
-    dugumler += tr_dugum
+    # fişi olan Türkiye akademisi üyeleri tek düğümde birleşir (fişin bağlantısı ve makale listesi birlikte)
+    var = {d["id"]: d for d in dugumler}
+    for d in tr_dugum:
+        if d["id"] in var:
+            var[d["id"]].update({k: v for k, v in d.items() if k in ("makaleler", "tumu")})
+        else:
+            dugumler.append(d)
     return {"turler": [{"kod": k, "ad": a, "renk": r} for k, a, r in AG_TURLER],
             "dugumler": dugumler, "baglar": [list(b) for b in sorted(baglar)] + tr_bag}
+
+
+def ag_kisi_kimligi(p) -> str:
+    """Listedeki kişinin ağdaki düğüm kimliği: kişi fişi varsa fişin düğümü, yoksa akademisyen düğümü."""
+    if p.get("kimlik") and ("kisi", p["kimlik"]) in FIS:
+        return f"kisi/{p['kimlik']}"
+    return f"kisi-tr/{slugify(p['ad'])}"
 
 
 def ag_turkiye_akademisi() -> tuple[list, list]:
@@ -1938,7 +1952,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         mid = f"dp/{m['id']}"
         uyeler = [ad_anahtari(y) for y in m["yazarlar"] if ad_anahtari(y) in liste_]
         kenar = [f"baslik/{b}" for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS]
-        kenar += [f"kisi-tr/{slugify(liste_[a]['ad'])}" for a in uyeler]
+        kenar += [ag_kisi_kimligi(liste_[a]) for a in uyeler]
         kenar += [did for did, desen in dusunur if desen.search(m["baslik"])]
         metin = tr_kucuk(m["baslik"] + " | " + " | ".join(m["kelimeler"]))
         kenar += [tid for tid, desen in terimler if desen.search(metin)]
@@ -1947,7 +1961,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
             # makaleler gizlendiğinde kişinin hangi başlık ve terimlerle çalıştığı dolaylı bağlarla görünür
             for x in dict.fromkeys(kenar):
                 if x.startswith(("baslik/", "terim/")):
-                    anahtar = (f"kisi-tr/{slugify(liste_[a]['ad'])}", x)
+                    anahtar = (ag_kisi_kimligi(liste_[a]), x)
                     dolayli[anahtar] = dolayli.get(anahtar, 0) + 1
         if not kenar:
             continue
@@ -1961,7 +1975,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         p = liste_[a]
         aciklama = " · ".join(x for x in [p.get("unvan", ""), p.get("universite", "")] if x)
         dugumler.append({
-            "id": f"kisi-tr/{slugify(p['ad'])}", "ad": p["ad"], "tur": "kisi", "turAd": "Kişi",
+            "id": ag_kisi_kimligi(p), "ad": p["ad"], "tur": "kisi", "turAd": "Kişi",
             "suz": "kisi-tr", "url": akademi_url(slugify(p['ad'])), "aciklama": aciklama,
             "tumu": f"{SITE_URL}/eserler/?ara={quote(tr_kucuk(p['ad']))}",
             "makaleler": [{"b": m["baslik"], "y": m["yil"], "u": m["baglanti"]} for m in ms]})
