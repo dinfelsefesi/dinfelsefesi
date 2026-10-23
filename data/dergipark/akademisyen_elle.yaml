@@ -1,0 +1,266 @@
+# Türkiye akademisi listesindeki kişilerin adıyla bulunan DergiPark makaleleri için elle kararlar (makale kimliğine göre).
+# karar: kapsam-disi -> ağa ve eser listelerine girmez, yalnızca akademisyenin sayfasında kalır.
+# karar: [başlık, ...] -> anahtar kelime sonucunun yerine geçer. tur: kitap-tanitimi | ceviri ile türü düzeltilir.
+# karar: yanlis-kisi -> makale bu kişiye ait değil ya da makale sayılmaz; hiçbir yerde gösterilmez.
+# İlk gözden geçirme 23 Ekim 2026: konusu kesin olmayan ya da din felsefesi dışında kalan makaleler kapsam dışı sayıldı.
+'1496662':  # 8. Sınıf Öğrencilerinin LGS Matematik Sorularına Yönelik Metaforik Alg
+  karar: kapsam-disi
+'851697':  # AHLAK FELSEFESİNDE OLGU DEĞER AYRIMI VE NESNELCİ AHLAKİ REALİZM AÇISIN
+  karar: kapsam-disi
+'1001576':  # AHLAK-BENLİK BÜTÜNLÜĞÜ: AHLAKİ KİMLİK
+  karar: kapsam-disi
+'555991':  # AHLÂK VE EDEBİYAT İLİŞKİSİ AÇISINDAN MEHMET AKİF ERSOY ÖRNEĞİ
+  karar: kapsam-disi
+'844254':  # ALASDAIR MACINTYRE'DA OTORİTE VE DİNİ İNANCIN TEMELİ
+  karar: [din-epistemolojisi]
+'36884':  # ALVARLI MUHAMMED LUTFÎ EFENDİ’NİN ŞİİRLERİNDE ALLAH TASAVVURU
+  karar: [tanri-tasavvurlari]
+'555295':  # ALİYA İZZETBEGOVİÇ’İN SİYASAL ONTOLOJİSİ
+  karar: kapsam-disi
+'261082':  # ARİSTOTELES'TE EN YÜKSEK ENTELEKTÜEL ERDEM
+  karar: kapsam-disi
+'851528':  # ARİSTOTELES'TE ENTELEKTÜEL ERDEMLER -BİR ERDEM EPİSTEMOLOJİSİ ÖRNEĞİ-
+  karar: kapsam-disi
+'1364215':  # ATEİST BİR FİLOZOF İÇKİNCİ BİR ONTOLOJİ: DELEUZE’DE YARATICI İNSAN
+  karar: kapsam-disi
+'1137659':  # Ahlakî Yükümlülük ve Ahlakî Nesnellik
+  karar: kapsam-disi
+'864464':  # Ahmet Bayındır, Ockhamlı William’ın Din Felsefesi. Bursa: Emin Yayınla
+  karar: [din-felsefesi-tanim-yontem-tarih]
+  tur: kitap-tanitimi
+'649479':  # Are We Bodies or Souls? New York, NY: Oxford University Press, 2019
+  karar: [olum-ve-otesi]
+  tur: kitap-tanitimi
+'1095352':  # Arif: Mevlana’da Bilinmeyenin Bilgesi
+  karar: kapsam-disi
+'1263574':  # Aristoteles ve İbn Meymûn’da Entelektüel ve Ahlaki Erdemlerin İnsani Y
+  karar: kapsam-disi
+'1135132':  # Aykut Alper Yılmaz. İnsan Nedir? Teistik Materyalizmin İmkânı. İstanbu
+  karar: [insan-tasavvurlari, tanri-tasavvurlari]
+  tur: kitap-tanitimi
+'455863':  # BATI FELSEFESİ BAĞLAMINDA SCHOPENHAUER’A GÖRE AKIL VE HAKİKAT
+  karar: kapsam-disi
+'1033836':  # Badiou’nun Hakikat Etiği Terör ve Kötülükleri Savuşturabilir mi?
+  karar: kapsam-disi
+'375694':  # Baha Tevfik’in Hayatı, Eserleri ve Felsefî Düşünce Yapısı
+  karar: kapsam-disi
+'373037':  # Baha Tevfik’in Tanrı Problemine Yaklaşımı
+  karar: [tanri-tasavvurlari, teizme-yonelik-itirazlar]
+'369994':  # Bireysel-Toplumsal Farklılıklar ve Ahlâkî Görecelik Sorunu
+  karar: kapsam-disi
+'1000682':  # Cafer Sadık Yaran. Sanat Ahlâkı.
+  karar: [din-ve-ahlak]
+  tur: kitap-tanitimi
+'626301':  # Dil Felsefesi III: İkinci Wittgenstein’da Gramer Paradigması
+  karar: kapsam-disi
+'818466':  # Dil, Tercüme, Felsefe
+  karar: kapsam-disi
+'163441':  # Dilsel Anlam Probleminin Searlecü Yaklaşım Bağlamında Performatif Açıd
+  karar: kapsam-disi
+'466884':  # Din-Kültür İlişkisi Üzerine Bir Değerlendirme
+  karar: kapsam-disi
+'767869':  # DİL-KÜLTÜR İLİŞKİSİ
+  karar: kapsam-disi
+'1776765':  # DİN HİZMETLERİ ÇALIŞANLARININ ÇAĞDAŞ İNANÇ PROBLEMLERİ YETERLİLİĞİ ÖLÇ
+  karar: kapsam-disi
+'36660':  # DİN-SANAT İLİŞKİSİ VE BUNUN SOMUT BİR YANSIMASI OLARAK MEVLEVÎ SEMÂ ÂY
+  karar: [dini-pratik]
+'852434':  # ERNEST SOSA VE ENTELEKTÜEL ERDEMLER
+  karar: kapsam-disi
+'292618':  # ERNEST SOSA’NIN ERDEM EPİSTEMOLOJİSİ
+  karar: kapsam-disi
+'816294':  # Êthostan Ahlâka Antik Yunan Ahlâk Literatürünün İslâm Dünyası
+  karar: kapsam-disi
+'541090':  # FRANKFURT OKULU’NUN TEMEL ELEŞTİRİ VE AMAÇLARI
+  karar: kapsam-disi
+'770355':  # Farâbî’nin Eserlerinin Latinceye Tercüme Süreci ve Latin Düşüncesine E
+  karar: kapsam-disi
+'553908':  # Gadamer’in Felsefî Hermenötiğinde Öne Çıkan Hususlar
+  karar: kapsam-disi
+'690929':  # Geleneksel Değerler Üzerinden Bir Transhümanizm Eleştirisi
+  karar: kapsam-disi
+'846969':  # HALLAC-I MANSUR’DA TANRI-VARLIK ve BENLİK PROBLEMİ
+  karar: kapsam-disi
+'808328':  # Hayatın İçinde Olarak Tanrı/Allah ve Hayat: Besmele ve İnsanın Etik-Es
+  karar: kapsam-disi
+'339181':  # Hermeneutiğin Ortaya Çıkışı ve Gelişimi
+  karar: kapsam-disi
+'1070222':  # Imre Lakatos’ta Bilimde Nesnellik Sorunu
+  karar: kapsam-disi
+'292467':  # KANT’IN ÖDEV AHLAKI ÜZERİNE
+  karar: kapsam-disi
+'1281991':  # Kahramanmaraş Depremleri Örneğinde Yeni Medyadaki Etik İhlaller
+  karar: kapsam-disi
+'1582082':  # Kant, Analitik Felsefe ve Metafizik
+  karar: kapsam-disi
+'1113114':  # Kendi Yurdunda Yabancı Olmak! Adası Olmadan Yaşamak
+  karar: kapsam-disi
+'573047':  # Kierkegaard'da Ahlakın Öznelliği Problemi
+  karar: kapsam-disi
+'1072567':  # Kişisel Kimlik Bağlamında Ölümsüzlük Düşüncesinin Temel Dayanakları
+  karar: [olum-ve-otesi]
+'569693':  # MANTIKÇI PARADİGMA VE GÜNDELİK DİL FELSEFESİ
+  karar: kapsam-disi
+'757297':  # MEVLÂNA DÜŞÜNCESİNDE FELSEFE VE HAKİKAT
+  karar: kapsam-disi
+'740570':  # MODERN TIPTA ÖLÜMÜN NELİĞİ ÜZERİNE
+  karar: kapsam-disi
+'685510':  # Mehmet Akif Ersoy Düşüncesinde Bireysel Ahlak İlkeleri
+  karar: kapsam-disi
+'1162784':  # Mevlana’nın Alanlararası Genişleme Üzerinden Erdem Çözümlemesi
+  karar: kapsam-disi
+'545868':  # Modern Batı Düşüncesinde Dini Konumlandırma Problemi
+  karar: kapsam-disi
+'844307':  # NASİRÜDDIN TÜSİ'NİN İLİM/HİKMET SINIFLANDIRMASINA YANSIYAN DİN FELSEFE
+  karar: kapsam-disi
+'1151770':  # NATURALİST VERİLERİN TEİSTİK SONUÇLARI (Fıtrat Kavramı Özelinde Bir Yo
+  karar: [tanri-tasavvurlari, insan-tasavvurlari]
+'850953':  # NECATİ ÖNER, FELSEFE VE ELEŞTİREL RASYONALİZM
+  karar: kapsam-disi
+'536022':  # Nikomakhos’a Etik Bağlamında Aristoteles’in Erdem Etiği
+  karar: kapsam-disi
+'348849':  # Nurettin Topçu’nun Ahlâkî Sorunlarımıza İlişkin Görüşlerinin Günümüze 
+  karar: kapsam-disi
+'1060414':  # Nurettin Topçu’nun İdeoloji Olarak Bilim Eleştirisi
+  karar: kapsam-disi
+'1194599':  # Okul Ethosu ve Etik Karar Verme
+  karar: kapsam-disi
+'735990':  # POLİTİKA-SIZ DİL, ESTETK-SİZ SÖZ “MEDENİYET DİLİ OLARAK TÜRKÇE”
+  karar: kapsam-disi
+'866414':  # Resim ve Etik: Batı Resim Sanatında Ahlaki Temalar ve Örnekler
+  karar: kapsam-disi
+'1582240':  # Ruh, Bilinç ve Zombiler: Metafizik Çıkmazlar ve Alternatif Yollar
+  karar: kapsam-disi
+'860681':  # SAMUEL ALEXANDER’IN MEKÂN-ZAMANDAKİ TANRI BELİRİMCİLİĞİ VE DOĞRU-YANLI
+  karar: [tanri-tasavvurlari]
+'436288':  # Sadreddin Konevi’de İnsan-ı Kâmil Anlayışı ve Medeniyete Etkileri
+  karar: kapsam-disi
+'953710':  # Saf Deneyim Dünyası: William James’in Radikal Deneyimciliği
+  karar: kapsam-disi
+'718958':  # Shaftesbury’de Ahlakın Temeli: Ahlak Duygusu
+  karar: kapsam-disi
+'981763':  # Siyasetnamelerde İfade Özgürlüğü ve Bunun Kapsamı
+  karar: kapsam-disi
+'589602':  # Sophialogos’tan Logosophia’ya Felsefeye Anlam Merkezli Yeni Bir Perspe
+  karar: kapsam-disi
+'1013393':  # Spinoza’nın Dil Kuramı: Eleştiriden Pratiğe
+  karar: kapsam-disi
+'1187226':  # TARKOVSKY’DE SANAT YAPITI: ÖZDEĞİN SINIRLARINI SONSUZA ZORLAMAK
+  karar: kapsam-disi
+'219644':  # THOMAS AQUINAS'TA MUTLULUK
+  karar: kapsam-disi
+'491725':  # TIP FELSEFESİ YAPABİLMENİN İMKÂNI ÜZERİNE BİR SORUŞTURMA
+  karar: kapsam-disi
+'1754023':  # TRANSHÜMANİZM BAĞLAMINDA BİYOTEKNOLOJİK GELİŞMELERİN AİLE KAVRAMI VE A
+  karar: kapsam-disi
+'291078':  # TWO DIFFERENT PERSPECTIVES OF MACINTYRE ON HUME: REVISITING ALASDAIR M
+  karar: kapsam-disi
+'356627':  # Tanrı Doğasının Nedeni Olabilir mi?
+  karar: [tanrinin-sifatlari]
+'331937':  # Tanrı’nın Gizlenmesine Dair Farklı Yaklaşımlar
+  karar: [teizme-yonelik-itirazlar]
+'582360':  # Temsil-Taklit İlişkisi Açısından Tasvirin Teorik Zemini -İbnü’l-Arabî’
+  karar: kapsam-disi
+'448369':  # Tertibu’s-Sa’âdât ve Menâzilu’l-Ulûm, Mutluluk ve Felsefe. Neşr, Tercü
+  karar: kapsam-disi
+'1068464':  # Toplumsal Cinsiyet Rollerinin Mekân Bağlamında Analizi: Feminist Yakla
+  karar: kapsam-disi
+'1369797':  # Türkiye Cumhuriyeti’nin 100. Yılında Atatürk ve Bilim İnsanının Değeri
+  karar: kapsam-disi
+'1368050':  # VAROLUŞSAL ANLAM ARAYIŞI VE DİNDARLIK İLİŞKİSİ: PSİKO-FELSEFİK BİR DEĞ
+  karar: kapsam-disi
+'1588533':  # Varoluşsal Sorumluluk Dünya İçinde Olarak Rahmete Dayalı Sorumluluk Et
+  karar: kapsam-disi
+'1126514':  # Vicdan: Eğitimi ve Gelişimi
+  karar: kapsam-disi
+'774269':  # Whitehead’in Postmodern Felsefi Perspektifinden Kendini Belirleyen Din
+  karar: kapsam-disi
+'1028310':  # YUNUS EMRE’DE FITRAT OLARAK ‘DOST ETİĞİ’
+  karar: kapsam-disi
+'774829':  # Yönetim amacı farklı orman alanlarındaki ekoturizm çekiciliklerinin ön
+  karar: kapsam-disi
+'1177395':  # Zahra Ayubi. Gendered Morality: Classical Islamic Ethics of the Self, 
+  karar: [din-ve-ahlak]
+  tur: kitap-tanitimi
+'411088':  # Çağdaş Ahlaki Doğaüstücülük ve Russ Shafer-Landau
+  karar: kapsam-disi
+'495941':  # Çağdaş Nörobilim ve Dini Tecrübe: Nöroteolojik Tezler Bir Zihinsel Dur
+  karar: [din-ve-bilim, dini-tecrube]
+'354405':  # ÜÇ DÖNEM, ÜÇ TAKVİM: 2002, 2007 VE 2011 YILLARI TAKVİMLERİ ÖRNEĞİNDE D
+  karar: kapsam-disi
+'1017620':  # İBN SÎNÂ’NIN ESERLERİNİN LATİNCEYE TERCÜME SÜRECİ VE LATİN İBN SÎNÂCIL
+  karar: kapsam-disi
+'462937':  # İSLAM DÜŞÜNCESİNDE “ÖLÇÜLÜ VE DENGELİ OLMAK” BİR DEĞER OLARAK NASIL EL
+  karar: kapsam-disi
+'433116':  # İbn Sînâ’nın Mâhiyet-Vücûd Ayrımının Dekonstrüksiyonu ve Vâcibu’l-Vücû
+  karar: kapsam-disi
+'420391':  # İftira Bir “Kötülük”tür ve “İnsanlık Suçu”dur!
+  karar: kapsam-disi
+'277934':  # İnsan Bilimlerinde Olgu-Değer Ayrımının Meydana Getirdiği Problemler
+  karar: kapsam-disi
+'408406':  # İnsanlık Ürünü Olumsuzluklar Karşısında İnsan ve Aşk
+  karar: kapsam-disi
+'345989':  # İrade Hürriyeti Bağlamında 15 Temmuz’un Felsefî Tahlili
+  karar: kapsam-disi
+'184071':  # İrfânî Yorum ve Şâirin Niyeti Gazzâlî’nin Şiir Anlayışı Üzerine Bir İn
+  karar: kapsam-disi
+'474055':  # İshâk Bin Hasan Tokadî’nin İlimler Tasnifi ve Mantık İlmine Dair Görüş
+  karar: kapsam-disi
+'184037':  # İslam Düşüncesine Özgü Bir Poetikadan Söz Edilebilir mi? : İlk Dönem K
+  karar: kapsam-disi
+'971756':  # İzmirli İsmail Hakkı’nın Mantık Tasavvurunun Gelişimi
+  karar: kapsam-disi
+'288057':  # Şehir ve Entelektüel Üretkenlik
+  karar: kapsam-disi
+'254729':  # “HER DEĞİŞMENİN BİR NEDENİ VARDIR” SENTETİK A PRİORİ ÖNERMESİ DOĞRULTU
+  karar: [tanri-alem-iliskisi]
+'758059':  # “Varlık Dağını Delmek”: İbnü’l-Arabî’nin Eserleri Esâsında Varlık, Tec
+  karar: kapsam-disi
+'711843':  # Akıllı Turizm (Eyüp Aktürk adına; başka alan)
+  karar: yanlis-kisi
+'1496662':  # LGS matematik (Mehmet Sulhan adına; başka alan)
+  karar: yanlis-kisi
+'774829':  # Ormancılık/ekoturizm (Tuncay Akgün adına; başka alan)
+  karar: yanlis-kisi
+'1804582':  # Karpuz yetiştiriciliği (İsmail Şimşek adına; başka alan)
+  karar: yanlis-kisi
+'1324239':  # Otizmli öğrencilerde din eğitimi (İbrahim Yıldız adına; emin değil)
+  karar: yanlis-kisi
+'621596':  # Kilitbahir dergi sayısı (makale değil)
+  karar: yanlis-kisi
+'706008':  # Kilitbahir dergi sayısı (makale değil)
+  karar: yanlis-kisi
+'1174841':  # Düzeltme notu (makale değil)
+  karar: yanlis-kisi
+# Anahtar kelimesi sözlüğe uymayan ama konusu başlığından açık olan makaleler
+'1305097':  # Ortaçağ İslam düşüncesinde din dili problemi
+  karar: [din-dili]
+'194492':  # Antony Flew'de Tanrı'ya dair paradigma değişikliği
+  karar: [teizme-yonelik-itirazlar, tanri-tasavvurlari]
+'284903':  # Tanrı-mekân ilişkisi: her yerde bulunma ve aşkınlık
+  karar: [tanrinin-sifatlari]
+'1174647':  # Descartes'ta Tanrı fikri ve Tanrı'nın varlığı
+  karar: [tanrinin-varliginin-delilleri]
+'511603':  # Klasik İslam düşüncesinde iki farklı Tanrı tasavvuru
+  karar: [tanri-tasavvurlari]
+'36674':  # Engels'in materyalizmi ve din eleştirisi
+  karar: [teizme-yonelik-itirazlar]
+'555342':  # Bowne'un Tanrı'nın kişiliği problemine yaklaşımı
+  karar: [tanri-tasavvurlari]
+'1185997':  # Kutbüddîn Şîrâzî'nin Tanrı anlayışı
+  karar: [tanri-tasavvurlari]
+'1065038':  # Eskatolojik doğrulama (Crombie ve Hick)
+  karar: [din-dili]
+'447271':  # Sartre'ın Tanrı tanımazlık tasarımı
+  karar: [teizme-yonelik-itirazlar]
+'695621':  # Fârâbî'de din-felsefe, peygamber-filozof ilişkisi
+  karar: [din-epistemolojisi]
+'108251':  # Teosentrik çevre etiği
+  karar: [din-ve-ahlak]
+'219817':  # İbn Sina ve Aquinas'ta kötülük problemi
+  karar: [kotuluk-problemi]
+'1723945':  # İhtiyat ilkesi ve inanma iradesi argümanı
+  karar: [din-epistemolojisi]
+'1222024':  # Sterba, Is a Good God Logically Possible? (kitap tanıtımı)
+  karar: [tanrinin-varliginin-delilleri, tanrinin-sifatlari]
+  tur: kitap-tanitimi

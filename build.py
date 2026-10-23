@@ -1474,33 +1474,77 @@ def dp_veri() -> list:
         x = sinif.get(r["id"]) or {}
         if x.get("durum") in ("kapsam-disi", "anahtar-kelime-yok"):
             continue
-        basliklar = r.get("baslik") or {}
-        dil = "tr-TR" if "tr-TR" in basliklar else next(iter(basliklar), "")
-        baslik = duzeltme.get(r["id"]) or harf_duzelt(basliklar.get(dil, ""), dil)
-        kaynak = (r.get("kaynak") or [""])[0]
-        dergi = re.split(r",?\s*(?:Vol\.|No\.)", kaynak)[0].rstrip(", ")
-        cs = kaynak[len(dergi):]
-        mc = re.search(r"Vol\.\s*(\S+)", cs)
-        ms_ = re.search(r"No\.\s*(.+)", cs)
-        cilt_sayi = ", ".join(x for x in [f"C. {mc.group(1)}" if mc and mc.group(1) not in ("0", "00") and not re.fullmatch(r"(19|20)\d\d", mc.group(1)) else "",
-                                           f"S. {ms_.group(1).strip()}" if ms_ and ms_.group(1).strip()[:1].isdigit() else ""] if x)
-        baglanti = r.get("baglanti") or []
-        doi = next((b for b in baglanti if "doi.org" in b), "")
-        yazarlar = []
-        for y in r.get("yazarlar") or []:
-            soy_, _, ad_ = y.partition(",")
-            yazarlar.append(f"{ad_.strip()} {soy_.strip()}".strip() if ad_ else y.strip())
-        _DP.append({
-            "id": r["id"], "baslik": baslik, "yazarlar": yazarlar, "dergi": dergi.strip(), "cilt_sayi": cilt_sayi,
-            "yil": ((r.get("tarih") or [""])[0] or "")[:4], "tarih": (r.get("tarih") or [""])[0] or "",
-            "baglanti": doi or (baglanti[0] if baglanti else ""), "doi": bool(doi),
-            "konular": [] if x.get("yayin_turu") else list(x.get("basliklar") or []),
-            "ilgili": list(x.get("ilgili_basliklar") or []), "tur": x.get("yayin_turu") or "",
-            "kelimeler": dps.anahtar_kelimeler(r),
-        })
+        _DP.append(dp_kaydi(r, x, duzeltme, dps))
+    # Türkiye akademisi listesindeki kişilerin öteki DergiPark makaleleri: yazarı doğrulanmış ve konusu belli olanlar
+    for r, x in akademisyen_dp():
+        if x["durum"] == "konulu":
+            _DP.append(dp_kaydi(r, {"basliklar": x["basliklar"], "ilgili_basliklar": x["ilgili"], "yayin_turu": x["tur"]},
+                                duzeltme, dps) | {"kaynak": "dergipark-akademisyen"})
     _DP += orcid_eserleri()
     _DP.sort(key=lambda m: (m["tarih"], m["id"]), reverse=True)
     return _DP
+
+
+_AK_DP = None
+
+
+def akademisyen_dp() -> list:
+    """(DergiPark kaydı, doğrulama ve sınıflandırma sonucu) çiftleri; yalnızca yazarı doğrulanmış makaleler."""
+    global _AK_DP
+    if _AK_DP is None:
+        _AK_DP = []
+        kayit, sinif = DP_DIZIN / "akademisyen_makaleleri.jsonl", DP_DIZIN / "akademisyen_sinif.json"
+        if kayit.exists() and sinif.exists():
+            s = json.loads(sinif.read_text(encoding="utf-8"))
+            for l in kayit.read_text(encoding="utf-8").splitlines():
+                if l.strip():
+                    r = json.loads(l)
+                    if r["id"] in s:
+                        _AK_DP.append((r, s[r["id"]]))
+    return _AK_DP
+
+
+_LISTE_ADLARI = None
+
+
+def yazar_adi(y: str) -> str:
+    """Türkiye akademisi listesindeki kişiler listedeki yazılışıyla; büyük harfle kaydedilmiş adlar başlık düzeninde."""
+    global _LISTE_ADLARI
+    if _LISTE_ADLARI is None:
+        dosya = CONTENT / "turkiye_akademisi.yaml"
+        kisiler = (yaml.safe_load(dosya.read_text(encoding="utf-8")) or {}).get("kisiler") or [] if dosya.exists() else []
+        _LISTE_ADLARI = {ad_anahtari(p["ad"]): p["ad"] for p in kisiler}
+    if ad_anahtari(y) in _LISTE_ADLARI:
+        return _LISTE_ADLARI[ad_anahtari(y)]
+    return " ".join(harf_duzelt(p, "tr-TR") if len(p) > 1 and p.isupper() else p for p in y.split())
+
+
+def dp_kaydi(r, x, duzeltme, dps) -> dict:
+    """DergiPark OAI kaydını sitedeki makale biçimine çevirir."""
+    basliklar = r.get("baslik") or {}
+    dil = "tr-TR" if "tr-TR" in basliklar else next(iter(basliklar), "")
+    baslik = duzeltme.get(r["id"]) or harf_duzelt(basliklar.get(dil, ""), dil)
+    kaynak = (r.get("kaynak") or [""])[0]
+    dergi = re.split(r",?\s*(?:Vol\.|No\.)", kaynak)[0].rstrip(", ")
+    cs = kaynak[len(dergi):]
+    mc = re.search(r"Vol\.\s*(\S+)", cs)
+    ms_ = re.search(r"No\.\s*(.+)", cs)
+    cilt_sayi = ", ".join(x for x in [f"C. {mc.group(1)}" if mc and mc.group(1) not in ("0", "00") and not re.fullmatch(r"(19|20)\d\d", mc.group(1)) else "",
+                                       f"S. {ms_.group(1).strip()}" if ms_ and ms_.group(1).strip()[:1].isdigit() else ""] if x)
+    baglanti = r.get("baglanti") or []
+    doi = next((b for b in baglanti if "doi.org" in b), "")
+    yazarlar = []
+    for y in r.get("yazarlar") or []:
+        soy_, _, ad_ = y.partition(",")
+        yazarlar.append(yazar_adi(f"{ad_.strip()} {soy_.strip()}".strip() if ad_ else y.strip()))
+    return {
+        "id": r["id"], "baslik": baslik, "yazarlar": yazarlar, "dergi": dergi.strip(), "cilt_sayi": cilt_sayi,
+        "yil": ((r.get("tarih") or [""])[0] or "")[:4], "tarih": (r.get("tarih") or [""])[0] or "",
+        "baglanti": doi or (baglanti[0] if baglanti else ""), "doi": bool(doi),
+        "konular": [] if x.get("yayin_turu") else list(x.get("basliklar") or []),
+        "ilgili": list(x.get("ilgili_basliklar") or []), "tur": x.get("yayin_turu") or "",
+        "kelimeler": dps.anahtar_kelimeler(r),
+    }
 
 
 ORCID_ISARET = ' <span class="m-kaynak" title="ORCID kaydından">ORCID</span>'
@@ -1630,7 +1674,7 @@ def akademi_verisi() -> dict:
         _AKADEMI[slug] = {"p": p, "orcid": oid,
                           "orcid_kaynak": "YÖK Akademik kaydından" if p.get("orcid") else "DergiPark makale sayfalarından",
                           "orcid_eser": orcid_eser.get(oid, []) if oid else [],
-                          "makaleler": [], "baslik": {}, "ortak": {}, "dusunur": {}}
+                          "makaleler": [], "dp_diger": [], "baslik": {}, "ortak": {}, "dusunur": {}}
         anahtar[ad_anahtari(p["ad"])] = slug
     soyad_say = {}
     for (t, k), h in FIS.items():
@@ -1641,7 +1685,16 @@ def akademi_verisi() -> dict:
         if t == "kisi" and h.get("kapsam", "uluslararasi") == "uluslararasi":
             adlar = [ad(t, h)] + ([ad(t, h).split()[-1]] if soyad_say[ad(t, h).split()[-1]] == 1 else [])
             dusunur.append((k, re.compile("|".join(f"(?<![{HARF}]){re.escape(a)}(?![{HARF}])" for a in adlar))))
-    for m in dp_veri():
+    veri = dp_veri()
+    import dergipark_siniflandir as dps
+    # yazarı doğrulanmış ama hiçbir başlığa girmeyen DergiPark makaleleri yalnızca kişinin sayfasında listelenir
+    for r, x in akademisyen_dp():
+        if x["durum"] != "konulu":
+            m = dp_kaydi(r, {}, {}, dps)
+            for ad_ in x["akademisyenler"]:
+                if slugify(ad_) in _AKADEMI:
+                    _AKADEMI[slugify(ad_)]["dp_diger"].append(m)
+    for m in veri:
         uyeler = list(dict.fromkeys(anahtar[ad_anahtari(y)] for y in m["yazarlar"] if ad_anahtari(y) in anahtar))
         for s in uyeler:
             v = _AKADEMI[s]
@@ -1691,28 +1744,39 @@ ORCID_TUR = {"journal-article": "Makale", "book": "Kitap", "book-chapter": "Kita
 
 
 def orcid_diger_eserler(v) -> str:
-    """ORCID kaydındaki eserlerden DergiPark listesinde olmayanlar (DOI ya da başlık eşleşmesine göre ayıklanır)."""
-    if not v["orcid_eser"]:
-        return ""
+    """Kişinin din felsefesi başlıklarına girmeyen yayınları: yazarı doğrulanmış öteki DergiPark makaleleri ve
+    ORCID kaydındaki eserler (yukarıdaki listede ya da DergiPark'ta zaten bulunanlar DOI ve başlıkla ayıklanır)."""
     doiler = {m["baglanti"].lower().removeprefix("https://doi.org/") for m in v["makaleler"] if m["doi"]}
     basliklar = {slugify(m["baslik"]) for m in v["makaleler"]}
-    goruldu, ogeler = set(), []
+    ogeler = []
+    for m in sorted(v["dp_diger"], key=lambda m: m["tarih"], reverse=True):
+        ad_ = slugify(m["baslik"])
+        d = m["baglanti"].lower().removeprefix("https://doi.org/") if m["doi"] else ""
+        if ad_ in basliklar or (d and d in doiler):
+            continue
+        basliklar.add(ad_)
+        if d:
+            doiler.add(d)
+        dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
+        ogeler.append((m["yil"], f'<li><a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
+                                 f'<span class="eser-bilgi">Makale · {dergi} · {e(m["yil"])}</span></li>'))
     for w in sorted(v["orcid_eser"], key=lambda w: w["yil"] or "0", reverse=True):
         ad_ = slugify(w["baslik"])
-        if (w["doi"] and w["doi"].lower() in doiler) or ad_ in basliklar or ad_ in goruldu:
+        if (w["doi"] and w["doi"].lower() in doiler) or ad_ in basliklar:
             continue
-        goruldu.add(ad_)
+        basliklar.add(ad_)
         hedef = f'https://doi.org/{w["doi"]}' if w["doi"] else w["url"]
         bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(w["baslik"])}</a>' if hedef
                else f'<span class="eser-ad">{e(w["baslik"])}</span>')
         bilgi = " · ".join(x for x in [ORCID_TUR.get(w["tur"], ""), e(w["dergi"]), e(w["yil"])] if x)
-        ogeler.append(f'<li>{bas}<span class="eser-bilgi">{bilgi}</span></li>')
+        ogeler.append((w["yil"] or "0", f'<li>{bas}<span class="eser-bilgi">{bilgi}</span></li>'))
     if not ogeler:
         return ""
-    return (f'<h2>ORCID kaydındaki diğer yayınları <span class="say">{len(ogeler)}</span></h2>'
-            f'<p class="aciklama-kisa">Kişinin ORCID kaydında yer alan ve yukarıdaki listede bulunmayan yayınlar. '
-            f'Konu sınırlaması yoktur, liste ORCID kaydının güncelliğine bağlıdır.</p>'
-            f'<ul class="eser-liste">{"".join(ogeler)}</ul>')
+    ogeler.sort(key=lambda x: x[0], reverse=True)
+    return (f'<h2>Diğer yayınları <span class="say">{len(ogeler)}</span></h2>'
+            f'<p class="aciklama-kisa">Kişinin DergiPark\'taki öteki makaleleri ve ORCID kaydında yer alan yayınlar. '
+            f'Bu yayınlar din felsefesi başlıklarına bağlanmamıştır. Liste DergiPark taramasının ve ORCID kaydının güncelliğine bağlıdır.</p>'
+            f'<ul class="eser-liste">{"".join(o for _, o in ogeler)}</ul>')
 
 
 def bas_harfler(ad_: str) -> str:

@@ -67,8 +67,15 @@ def main():
             sahip.setdefault(oid, []).append(p["ad"])
 
     # DergiPark listesinde zaten olanlar: DOI, makale kimliği ya da başlık eşleşmesi
+    # Akademisyen adıyla bulunan ve yazarı doğrulanmış DergiPark makaleleri de sayılır (akademisyen_siniflandir.py)
     dp_doi, dp_id, dp_ad = set(), set(), set()
-    for l in (ROOT / "data/dergipark/din_felsefesi.jsonl").read_text(encoding="utf-8").splitlines():
+    ak_dosya = ROOT / "data/dergipark/akademisyen_sinif.json"
+    dogrulanan = set(json.loads(ak_dosya.read_text(encoding="utf-8"))) if ak_dosya.exists() else set()
+    satirlar = (ROOT / "data/dergipark/din_felsefesi.jsonl").read_text(encoding="utf-8").splitlines()
+    if (ROOT / "data/dergipark/akademisyen_makaleleri.jsonl").exists():
+        satirlar += [l for l in (ROOT / "data/dergipark/akademisyen_makaleleri.jsonl").read_text(encoding="utf-8").splitlines()
+                     if l.strip() and json.loads(l)["id"] in dogrulanan]
+    for l in satirlar:
         if not l.strip():
             continue
         r = json.loads(l)

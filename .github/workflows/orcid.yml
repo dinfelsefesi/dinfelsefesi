@@ -23,12 +23,14 @@ jobs:
       - run: python3 scripts/orcid_topla.py
       - name: DOI'li eserlerin künye ve anahtar kelimeleri
         run: python3 scripts/orcid_doi.py
+      - name: Akademisyen adıyla bulunan DergiPark makalelerini doğrula ve başlıklara ayır
+        run: python3 scripts/akademisyen_siniflandir.py
       - name: Eserleri başlıklara ayır
         run: python3 scripts/orcid_siniflandir.py
       - name: Sonucu kaydet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/orcid/
+          git add data/orcid/ data/dergipark/akademisyen_sinif.json
           git commit -m "ORCID: numaralar ve eser listeleri güncellendi" || exit 0
           git pull --rebase -q && git push -q

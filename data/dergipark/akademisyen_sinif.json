@@ -1,0 +1,7780 @@
+{
+ "1000682": {
+  "akademisyenler": [
+   "Mehmet Akif Altunışık"
+  ],
+  "baslik": "Cafer Sadık Yaran. Sanat Ahlâkı.",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "morality → din-ve-ahlak"
+  ],
+  "ilgili": [
+   "din-ve-ahlak"
+  ],
+  "kanit": {
+   "Mehmet Akif Altunışık": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1001576": {
+  "akademisyenler": [
+   "Eyüp Aktürk"
+  ],
+  "baslik": "AHLAK-BENLİK BÜTÜNLÜĞÜ: AHLAKİ KİMLİK",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlaki kimlik → din-ve-ahlak",
+   "ahlaki motivasyon → din-ve-ahlak",
+   "ahlaki eylem → din-ve-ahlak",
+   "ahlaki gelisim → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Eyüp Aktürk": "profil"
+  },
+  "tur": ""
+ },
+ "1001906": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Ramon Harvey. Transcendent God, Rational World: A Māturīdī Theology",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "100651": {
+  "akademisyenler": [
+   "Celal Büyük"
+  ],
+  "baslik": "Wilfred Cantwell Smith’de Dini Araştırmaların Objektifliği Problemi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Celal Büyük": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1011590": {
+  "akademisyenler": [
+   "Enis Doko"
+  ],
+  "baslik": "İslam ve Evrim: Bir Savunma",
+  "basliklar": [
+   "din-ve-bilim",
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "evrim → din-ve-bilim",
+   "insan evrimi → din-ve-bilim",
+   "evrimsel biyoloji → din-ve-bilim",
+   "kotuluk sorunu → kotuluk-problemi",
+   "evolution → din-ve-bilim",
+   "human evolution → din-ve-bilim",
+   "evolutionary biology → din-ve-bilim",
+   "problem of evil → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Enis Doko": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1011609": {
+  "akademisyenler": [
+   "Sait Polat"
+  ],
+  "baslik": "Tanrı’nın Aşkınlığı ve İçkinliği Bağlamında İnsanın Hürriyeti Problemi",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "ozgurluk",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "askinlik → tanri-tasavvurlari",
+   "insan hurriyeti → ozgurluk",
+   "klasik teizm → tanri-tasavvurlari",
+   "acik teizm → tanri-tasavvurlari",
+   "transcendence → tanri-tasavvurlari",
+   "human freedom → ozgurluk",
+   "classical theism → tanri-tasavvurlari",
+   "open theism → tanri-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Sait Polat": "orcid"
+  },
+  "tur": ""
+ },
+ "1012974": {
+  "akademisyenler": [
+   "Şahin Efil"
+  ],
+  "baslik": "SORU SORMA VE SORGULAMA TARZI OLARAK ÖLÜM",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "death → olum-ve-otesi",
+   "consciousness of death → olum-ve-otesi",
+   "olum → olum-ve-otesi",
+   "olum bilinci → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Şahin Efil": "orcid"
+  },
+  "tur": ""
+ },
+ "1013393": {
+  "akademisyenler": [
+   "Alber Erol Nahum"
+  ],
+  "baslik": "Spinoza’nın Dil Kuramı: Eleştiriden Pratiğe",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Alber Erol Nahum": "orcid"
+  },
+  "tur": ""
+ },
+ "1015221": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "SPİNOZA'DA CONATUS KAVRAMI",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1015714": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Daimî Varoluşsal Kaygı: İsmet Özel Şiiri Örneği",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid"
+  },
+  "tur": ""
+ },
+ "1016022": {
+  "akademisyenler": [
+   "Sait Polat"
+  ],
+  "baslik": "Klasik ve Açık Teizm Bağlamında Tanrı’nın Bilgisi ve İnsanın Özgürlüğü",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "ozgurluk",
+   "tanri-tasavvurlari",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "insanin hurriyeti → ozgurluk",
+   "tanri'nin bilgisi → tanrinin-sifatlari",
+   "klasik teizm → tanri-tasavvurlari",
+   "acik teizm → tanri-tasavvurlari",
+   "teolojik determinizm → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Sait Polat": "orcid"
+  },
+  "tur": ""
+ },
+ "1017503": {
+  "akademisyenler": [
+   "Mustafa Dönmez"
+  ],
+  "baslik": "Cennet Ceren Çavuş, İbn Arabî ve Schuon: Tasavvufi Metafizik ve Ezelî Hikmet, İstanbul: İnsan Yayınları, 2021, 357 sayfa. ISBN:9786057074669",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ezeli hikmet → tanrinin-sifatlari",
+   "ezeli hikmet → tanrinin-sifatlari"
+  ],
+  "ilgili": [
+   "tanrinin-sifatlari"
+  ],
+  "kanit": {
+   "Mustafa Dönmez": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1017620": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "İBN SÎNÂ’NIN ESERLERİNİN LATİNCEYE TERCÜME SÜRECİ VE LATİN İBN SÎNÂCILIĞI (AVICENNAISM)",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "soul → olum-ve-otesi",
+   "kitabu'n-nefs → olum-ve-otesi",
+   "nefs → olum-ve-otesi",
+   "akil → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid"
+  },
+  "tur": ""
+ },
+ "1026249": {
+  "akademisyenler": [
+   "Fatma Nur Ağca"
+  ],
+  "baslik": "Kant ve Ontolojik Argüman",
+  "basliklar": [
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "anselm → tanrinin-varliginin-delilleri",
+   "ontological argument → tanrinin-varliginin-delilleri",
+   "anselm → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatma Nur Ağca": "orcid"
+  },
+  "tur": ""
+ },
+ "1028310": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "YUNUS EMRE’DE FITRAT OLARAK ‘DOST ETİĞİ’",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "fitrat → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1030354": {
+  "akademisyenler": [
+   "Şahin Efil"
+  ],
+  "baslik": "Doğal Kötülük Sorunu Bağlamında Şifa Delilinin Analizi ve Eleştirisi",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "theodicy → kotuluk-problemi",
+   "sifa delili → tanrinin-varliginin-delilleri",
+   "teodise → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Şahin Efil": "profil"
+  },
+  "tur": ""
+ },
+ "1033836": {
+  "akademisyenler": [
+   "Kevser Çelik"
+  ],
+  "baslik": "Badiou’nun Hakikat Etiği Terör ve Kötülükleri Savuşturabilir mi?",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "kotuluk → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kevser Çelik": "orcid"
+  },
+  "tur": ""
+ },
+ "1039833": {
+  "akademisyenler": [
+   "Asım Kaya"
+  ],
+  "baslik": "Mehmet Akif Ersoy: Tanrı, İnsan ve Eylem",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Asım Kaya": "kurum"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1040442": {
+  "akademisyenler": [
+   "Kevser Çelik"
+  ],
+  "baslik": "Whitehead ve Badiou’da Olay Felsefesi “Olay” Kavramı ve “Felsefenin Koşulları”",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Kevser Çelik": "orcid"
+  },
+  "tur": ""
+ },
+ "1048317": {
+  "akademisyenler": [
+   "Yasin Gökhan"
+  ],
+  "baslik": "Wittgenstein’ın Anti-Felsefesi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "wittgenstein's critique of metaphysics → din-dili",
+   "wittgenstein'in metafizik elestirisi → din-dili",
+   "gundelik dil felsefesi → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yasin Gökhan": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1050758": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "“ZAMANE YATLI”SI DİNİ DEĞİL “HEVA”SINI TEMSİL EDER",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1051437": {
+  "akademisyenler": [
+   "Kevser Çelik"
+  ],
+  "baslik": "Yunusça Bir Hakikat İfadesi Olarak Gönül Hakikati: Yunus Emre ve Gönül Felsefesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Kevser Çelik": "orcid"
+  },
+  "tur": ""
+ },
+ "1053599": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "On İki İmam Şiîliği’nde Veliyy-i Fakih’in Adâlet Sıfatı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1055233": {
+  "akademisyenler": [
+   "Selin Olur"
+  ],
+  "baslik": "İSLAM KÜLTÜRÜNDE KURUCU PARADİGMANIN DEĞİŞİMİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Selin Olur": "orcid"
+  },
+  "tur": ""
+ },
+ "1060414": {
+  "akademisyenler": [
+   "Mustafa Eren"
+  ],
+  "baslik": "Nurettin Topçu’nun İdeoloji Olarak Bilim Eleştirisi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilim → din-ve-bilim",
+   "science → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Eren": "kurum"
+  },
+  "tur": ""
+ },
+ "1061354": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "Robert Adams’ın İlahi Emir Teorisinin Hz. İbrahim’in Hikayesi Üzerinden Analizi",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1065038": {
+  "akademisyenler": [
+   "Tuncay İmamoğlu"
+  ],
+  "baslik": "Eskatolojik Doğrulama Üzerine (I. M. Crombie ve J. Hick)",
+  "basliklar": [
+   "din-dili"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tuncay İmamoğlu": "kurum"
+  },
+  "tur": ""
+ },
+ "1068464": {
+  "akademisyenler": [
+   "Hasan Atsız"
+  ],
+  "baslik": "Toplumsal Cinsiyet Rollerinin Mekân Bağlamında Analizi: Feminist Yaklaşımlar ve Özen Etiği Perspektifi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ethics of care → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hasan Atsız": "orcid"
+  },
+  "tur": ""
+ },
+ "1070222": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "Imre Lakatos’ta Bilimde Nesnellik Sorunu",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilim felsefesi → din-ve-bilim",
+   "philosophy of science → din-ve-bilim",
+   "verification → din-dili",
+   "falsification → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "orcid"
+  },
+  "tur": ""
+ },
+ "1071209": {
+  "akademisyenler": [
+   "Haydar Dölek"
+  ],
+  "baslik": "ÖLÜMSÜZLÜK PROBLEMi AÇlSlNDAN TEHAFÜTLER",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "olumsuzluk → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Haydar Dölek": "profil"
+  },
+  "tur": ""
+ },
+ "1072567": {
+  "akademisyenler": [
+   "Sait Polat"
+  ],
+  "baslik": "Kişisel Kimlik Bağlamında Ölümsüzlük Düşüncesinin Temel Dayanakları",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "immortality → olum-ve-otesi",
+   "personal identity → olum-ve-otesi",
+   "evidence → din-epistemolojisi",
+   "morality → din-ve-ahlak",
+   "olumsuzluk → olum-ve-otesi",
+   "kisisel kimlik → olum-ve-otesi",
+   "delil → tanrinin-varliginin-delilleri",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Sait Polat": "orcid"
+  },
+  "tur": ""
+ },
+ "1073866": {
+  "akademisyenler": [
+   "Sümeyra Turan"
+  ],
+  "baslik": "Kendilik Bilinci Bağlamında İbn Bâcce’nin Tedbîru’l-Mütevahhid Kavramı İle F. H. Bradley’in Kendini Gerçekleştirme [Self-Realisation] Kavramları Üzerine Bir İnceleme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Sümeyra Turan": "orcid"
+  },
+  "tur": ""
+ },
+ "1074311": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "Philosophical Theology in Islam: Later Ashʿarism East and West, edited by Ayman Shihadeh and Jan Thiele",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1074388": {
+  "akademisyenler": [
+   "İbrahim Bor"
+  ],
+  "baslik": "DIVINE MANIFESTATION IN THE MIRROR OF WOMAN IN DIWAN OF MULLA AL-JAZIRI",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "İbrahim Bor": "orcid"
+  },
+  "tur": ""
+ },
+ "1077776": {
+  "akademisyenler": [
+   "Necmettin Tan"
+  ],
+  "baslik": "İMKÂNDELİLİNDEN TRANSANDANTAL İDEALE: KANT'TA TANRI KAVRAMININ KÖKLERİ",
+  "basliklar": [
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "imkan delili → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Necmettin Tan": "profil"
+  },
+  "tur": ""
+ },
+ "1078554": {
+  "akademisyenler": [
+   "Haydar Dölek"
+  ],
+  "baslik": "MALEBRANCHE'DA TANRI'NlN VARLIGI VE DELiLLENDiRiLMESi SORUNU",
+  "basliklar": [
+   "tanri-alem-iliskisi",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "vesilecilik → tanri-alem-iliskisi",
+   "onto~ojik delil → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Haydar Dölek": "profil"
+  },
+  "tur": ""
+ },
+ "1078568": {
+  "akademisyenler": [
+   "Necmettin Tan"
+  ],
+  "baslik": "DOGUŞTAN iDELER BAGLAMINDA LOCKE VE LEiBNiZ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Necmettin Tan": "profil"
+  },
+  "tur": ""
+ },
+ "108251": {
+  "akademisyenler": [
+   "Gülşen Yaylı"
+  ],
+  "baslik": "The Human- Nature Relationship in the Context of Theo-Centric Environmental Ethics",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Gülşen Yaylı": "profil"
+  },
+  "tur": ""
+ },
+ "1083163": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Between Heaven and Hell : Islam, Salvation, and the Fate of Others, edited by Mohammad Hassan Khalil, with a foreword by Tariq Ramadan",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "heaven and hell → olum-ve-otesi",
+   "salvation → dini-cesitlilik"
+  ],
+  "ilgili": [
+   "dini-cesitlilik",
+   "olum-ve-otesi"
+  ],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1084322": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "Avicenna and Thomas Aquinas on the Possibility of Talking about God",
+  "basliklar": [
+   "din-dili",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "attribute → tanrinin-sifatlari",
+   "attribute → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1085412": {
+  "akademisyenler": [
+   "Abdullah Kartal"
+  ],
+  "baslik": "An Analysis of the Content of Waḥdat al-Wujūd: the Relationship between Essence and Existence",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Abdullah Kartal": "orcid"
+  },
+  "tur": ""
+ },
+ "1088486": {
+  "akademisyenler": [
+   "Nusret Taş"
+  ],
+  "baslik": "Vahyin Dilini Vahiyle Özdeşleştirme Çabalarına Din Felsefesi Bağlamında Eleştirel Bir Değerlendirme",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "language of revelation → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Nusret Taş": "orcid"
+  },
+  "tur": ""
+ },
+ "1088666": {
+  "akademisyenler": [
+   "Haydar Dölek"
+  ],
+  "baslik": "DESCARTES'IN CEVHER VE RUH ANLAYlŞlNA LEIBNIZ'iN ELEŞTiRiSi",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ruh → olum-ve-otesi",
+   "beden → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Haydar Dölek": "profil"
+  },
+  "tur": ""
+ },
+ "1088669": {
+  "akademisyenler": [
+   "Necmettin Tan"
+  ],
+  "baslik": "SANMA, BiLME VE iMAN: KANT'IN iMAN ANLAYlŞlNlN KAVRAMSAL ÇERÇEVESi",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "iman → din-epistemolojisi",
+   "ahlaki iman → din-ve-ahlak",
+   "bilgi → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Necmettin Tan": "profil"
+  },
+  "tur": ""
+ },
+ "1093835": {
+  "akademisyenler": [
+   "Aykut Alper Yılmaz"
+  ],
+  "baslik": "Ruhçu Düşünceye Karşı Bir Argüman Olarak Ayrık-Beyin Vakası",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mind-body dualism → olum-ve-otesi",
+   "ruh-beden dualizmi → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Aykut Alper Yılmaz": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1095352": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "Arif: Mevlana’da Bilinmeyenin Bilgesi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilgi → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "orcid"
+  },
+  "tur": ""
+ },
+ "1098373": {
+  "akademisyenler": [
+   "Ahmet Erkan"
+  ],
+  "baslik": "Mekânsal Düzenliliklere Dayalı Tasarım Argümanı: William A. Dembski Örneği",
+  "basliklar": [
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "intelligent design → tanrinin-varliginin-delilleri",
+   "akilli tasarim → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Erkan": "orcid"
+  },
+  "tur": ""
+ },
+ "1104912": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "Erzurumlu Ibrahim Hakkı’nın İnsan Tabiatına Dair Görüşlerinin Değerlendirilmesi",
+  "basliklar": [
+   "insan-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "sosyal ahlak → din-ve-ahlak",
+   "social ethics → din-ve-ahlak",
+   "human nature → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1106875": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "Mevlana’da Marifet: Var Olanın Fenomenolojik ve Epistemolojik Yönlerine Duyulan Eğilim",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "epistemolojik yon → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "orcid"
+  },
+  "tur": ""
+ },
+ "1107136": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Bir Kur’an Terimi Olarak Habl-i Verid İfadesinin Tarihsel Süreci",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid"
+  },
+  "tur": ""
+ },
+ "1111782": {
+  "akademisyenler": [
+   "Ferhat Yöney"
+  ],
+  "baslik": "Tanrısal Ön Bilgi-Özgür İrade Sorunu: Ockhamcı Çözüm",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "olum-ve-otesi",
+   "ozgurluk",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "gelecege iliskin olumsal onermeler → olum-ve-otesi",
+   "ozgur irade → ozgurluk",
+   "determinism → ozgurluk",
+   "free will → ozgurluk",
+   "divine foreknowledge → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Yöney": "orcid"
+  },
+  "tur": ""
+ },
+ "11118": {
+  "akademisyenler": [
+   "Adem İrmak"
+  ],
+  "baslik": "Din Felsefesi Ana Bilim Dalı VI. Koordinasyon Toplantısı “Din Felsefesi Açısından Teleolojik Delilin Anlam ve Önemi” (1-2 Kasım 2013 İstanbul)",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Adem İrmak": "profil"
+  },
+  "tur": ""
+ },
+ "1113114": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "Kendi Yurdunda Yabancı Olmak! Adası Olmadan Yaşamak",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "erdemli sehir → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1118521": {
+  "akademisyenler": [
+   "Beyza Nur Çavuş"
+  ],
+  "baslik": "Şihâbüddîn Es-Sühreverdî’de Husûlî Ve Huzûrî Bilgi Açısından Bilgiyi Temellendirmede Kendilik Bilgisinin Rolü",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Beyza Nur Çavuş": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1119411": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Metodolojik Tabiatçılık Tartışmaları Bağlamında Gazali’nin Tabiî Nedensellik Eleştirisi",
+  "basliklar": [
+   "din-felsefesi-tanim-yontem-tarih",
+   "din-ve-bilim",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "methodological naturalism → din-ve-bilim",
+   "philosopohical naturalism → din-ve-bilim",
+   "miracles → tanri-alem-iliskisi",
+   "criticism against causation → tanri-alem-iliskisi",
+   "deism → tanri-alem-iliskisi",
+   "metodolojik tabiatcilik → din-felsefesi-tanim-yontem-tarih",
+   "mucize → tanri-alem-iliskisi",
+   "nedensellik elestirisi → tanri-alem-iliskisi",
+   "deizm → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "orcid"
+  },
+  "tur": ""
+ },
+ "1126514": {
+  "akademisyenler": [
+   "Eyüp Aktürk"
+  ],
+  "baslik": "Vicdan: Eğitimi ve Gelişimi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "ahlaki duygular → din-ve-ahlak",
+   "ahlaki gelisim → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Eyüp Aktürk": "orcid"
+  },
+  "tur": ""
+ },
+ "1126934": {
+  "akademisyenler": [
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "Renê Guênon’un Gelenekselci Düşüncesinde Bütüncül İnsan Anlayışının Modern Dünyadaki Yeri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ruhattin Yazoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "1131672": {
+  "akademisyenler": [
+   "Tugay Taşçı"
+  ],
+  "baslik": "Talal Asad, Secular Translations: Nation-State, Modern Self, and Calculative Reason. New York, NY: Columbia University Press, 2018. 225 pp.",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tugay Taşçı": "profil"
+  },
+  "tur": ""
+ },
+ "1135132": {
+  "akademisyenler": [
+   "Abdullah Arif Adalar"
+  ],
+  "baslik": "Aykut Alper Yılmaz. İnsan Nedir? Teistik Materyalizmin İmkânı. İstanbul: Albaraka Yayınları, 2022. 340 s. ISBN: 978-625-7312-67-7",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "teizm → tanri-tasavvurlari",
+   "ruh-beden → olum-ve-otesi",
+   "theism → tanri-tasavvurlari"
+  ],
+  "ilgili": [
+   "insan-tasavvurlari",
+   "tanri-tasavvurlari"
+  ],
+  "kanit": {
+   "Abdullah Arif Adalar": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1137659": {
+  "akademisyenler": [
+   "Münteha Beki"
+  ],
+  "baslik": "Ahlakî Yükümlülük ve Ahlakî Nesnellik",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Münteha Beki": "orcid"
+  },
+  "tur": ""
+ },
+ "1137764": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Ortaçağ Siyaset Teorisinin Kaynakları ve Ortaçağ Politikası ile Bağlantısı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1139804": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Âyetullah Humeynî’de Velâyet-i Fakîh Düşüncesinin Gelişimi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "1142073": {
+  "akademisyenler": [
+   "İsmail Şimşek"
+  ],
+  "baslik": "Bir Erdem Olarak ‘Kendini Bil’ Öğretisi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "erdem → din-ve-ahlak",
+   "virtue → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Şimşek": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1142701": {
+  "akademisyenler": [
+   "Münteha Beki"
+  ],
+  "baslik": "Tanrı ve Ahlaki Müeyyide",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "morality → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Münteha Beki": "orcid"
+  },
+  "tur": ""
+ },
+ "1143092": {
+  "akademisyenler": [
+   "Eyüp Aktürk"
+  ],
+  "baslik": "Özneyi Anlamak ve Karakteri Eğitmek: Kant Düşüncesinde Özgür Ahlaki Bir Varlık Olarak İnsan",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlaki yasa → din-ve-ahlak",
+   "ahlaki ozne → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Eyüp Aktürk": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1151770": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "NATURALİST VERİLERİN TEİSTİK SONUÇLARI (Fıtrat Kavramı Özelinde Bir Yorum Denemesi)",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "teizm → tanri-tasavvurlari",
+   "fitrat → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "profil"
+  },
+  "tur": ""
+ },
+ "1161524": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "Kötülük Problemini Yeniden Konumlandırma: Güncel Bir Tartışmanın Analizi Ve Değerlendirilmesi",
+  "basliklar": [
+   "din-ve-ahlak",
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "problem of evil → kotuluk-problemi",
+   "ahlak → din-ve-ahlak",
+   "kotuluk problemi → kotuluk-problemi",
+   "mantiksal kotuluk problemi → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1162295": {
+  "akademisyenler": [
+   "Emine Arslan Özkan"
+  ],
+  "baslik": "Paul Helm’de Teolojik Determinizm ve İlahi İnayet",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "kotuluk-problemi",
+   "ozgurluk",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "theological determinism → ozgurluk",
+   "providence → tanri-alem-iliskisi",
+   "problem of evil → kotuluk-problemi",
+   "teolojik determinizm → ozgurluk",
+   "inayet → tanri-alem-iliskisi",
+   "ozgur irade → ozgurluk",
+   "kotuluk problemi → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Emine Arslan Özkan": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1162784": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "Mevlana’nın Alanlararası Genişleme Üzerinden Erdem Çözümlemesi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "erdem → din-ve-ahlak",
+   "ahlaki yasanti → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "orcid"
+  },
+  "tur": ""
+ },
+ "1166035": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "İlâhî Adâlet ve İnsan Kaderi",
+  "basliklar": [
+   "din-ve-ahlak",
+   "insan-tasavvurlari",
+   "kotuluk-problemi",
+   "ozgurluk"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "divine justice → din-ve-ahlak",
+   "predestination (qadar) → ozgurluk",
+   "theodicy → kotuluk-problemi",
+   "divine justice → din-ve-ahlak",
+   "predestination (qadar) → ozgurluk",
+   "theodicy → kotuluk-problemi",
+   "divine justice → din-ve-ahlak",
+   "predestination (qadar) → ozgurluk",
+   "theodicy → kotuluk-problemi",
+   "divine justice → din-ve-ahlak",
+   "predestination (qadar) → ozgurluk",
+   "theodicy → kotuluk-problemi",
+   "ilahi adalet → din-ve-ahlak",
+   "ahlaki sans → din-ve-ahlak",
+   "kader → ozgurluk",
+   "teodise → kotuluk-problemi",
+   "divine justice → din-ve-ahlak",
+   "predestination (qadar) → ozgurluk",
+   "theodicy → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "1170298": {
+  "akademisyenler": [
+   "Muhammet Sait Duran"
+  ],
+  "baslik": "Bir Faaliyet Olarak Felsefe ve Düşünce",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dusunme-ahlak iliskisi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhammet Sait Duran": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1174647": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "Descartes’ta Tanrı Fikri ve Tanrı’nın Varlığı",
+  "basliklar": [
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1174687": {
+  "akademisyenler": [
+   "Asım Kaya"
+  ],
+  "baslik": "Arthur O. Lovejoy’un “Büyük Varlık Zinciri”nin Kökeni ve Batı Düşüncesindeki İzdüşümleri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Asım Kaya": "orcid"
+  },
+  "tur": ""
+ },
+ "1175775": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "DESCARTES'TA 'DÜŞÜNÜYORUM' VE RUHUN VARLIĞININ ARGÜMANLARI",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "ruh → olum-ve-otesi",
+   "beden → olum-ve-otesi",
+   "basitlik → tanrinin-sifatlari",
+   "soul → olum-ve-otesi",
+   "body → olum-ve-otesi",
+   "simplicity → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1177395": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "Zahra Ayubi. Gendered Morality: Classical Islamic Ethics of the Self, Family, and Society. New York: Columbia University Press, 2019. 344 s. ISBN: 978-023-1191-33-3",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "gendered morality: classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality → din-ve-ahlak",
+   "classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality: classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality → din-ve-ahlak",
+   "classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality: classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality → din-ve-ahlak",
+   "classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality → din-ve-ahlak",
+   "classical islamic ethics of the self → din-ve-ahlak",
+   "gendered morality → din-ve-ahlak",
+   "islam ahlak dusuncesi → din-ve-ahlak"
+  ],
+  "ilgili": [
+   "din-ve-ahlak"
+  ],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1179662": {
+  "akademisyenler": [
+   "İbrahim Yıldız"
+  ],
+  "baslik": "Antony Flew’un Düşünsel Dönüşümü ve İslam Algısı",
+  "basliklar": [
+   "din-epistemolojisi",
+   "tanri-alem-iliskisi",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "deism → tanri-alem-iliskisi",
+   "atheism → teizme-yonelik-itirazlar",
+   "evidence → din-epistemolojisi",
+   "deizm → tanri-alem-iliskisi",
+   "ateizm → teizme-yonelik-itirazlar",
+   "kanit → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İbrahim Yıldız": "orcid"
+  },
+  "tur": ""
+ },
+ "1181538": {
+  "akademisyenler": [
+   "Rafız Manafov"
+  ],
+  "baslik": "Dinsel Düşüncenin Rasyonelleşme İmkânı ve Zorlukları",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rafız Manafov": "orcid"
+  },
+  "tur": ""
+ },
+ "1182285": {
+  "akademisyenler": [
+   "Melek Aygül Özdoğan"
+  ],
+  "baslik": "Dilbilimsel Yapısalcılıktan Yapısal Antropolojiye: Ferdinand de Saussure ve Claude Lévi-Strauss",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Melek Aygül Özdoğan": "orcid"
+  },
+  "tur": ""
+ },
+ "1185997": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "KUTBÜDDÎN ŞÎRÂZÎ’NİN TANRI ANLAYIŞI",
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "profil"
+  },
+  "tur": ""
+ },
+ "1187226": {
+  "akademisyenler": [
+   "Vedat Tezcan"
+  ],
+  "baslik": "TARKOVSKY’DE SANAT YAPITI: ÖZDEĞİN SINIRLARINI SONSUZA ZORLAMAK",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Vedat Tezcan": "kurum"
+  },
+  "tur": ""
+ },
+ "1194599": {
+  "akademisyenler": [
+   "Eyüp Aktürk"
+  ],
+  "baslik": "Okul Ethosu ve Etik Karar Verme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik baglam → din-ve-ahlak",
+   "etik karar-verme → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Eyüp Aktürk": "orcid"
+  },
+  "tur": ""
+ },
+ "1195750": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "Vladimir Sergeyeviç Solovyov ve Rus Kozmizmi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "spirituality → dini-pratik",
+   "morality → din-ve-ahlak",
+   "maneviyat → dini-pratik",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1198211": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "Fuzûlî’de Ölüm ve Sonrası",
+  "basliklar": [
+   "olum-ve-otesi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "death → olum-ve-otesi",
+   "soul → olum-ve-otesi",
+   "bodily resurrection → olum-ve-otesi",
+   "eternity → tanrinin-sifatlari",
+   "olum → olum-ve-otesi",
+   "ruh → olum-ve-otesi",
+   "bedensel dirilis → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "orcid"
+  },
+  "tur": ""
+ },
+ "1203280": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "Ben Bilinci, Deney ve Bilgi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1207310": {
+  "akademisyenler": [
+   "Nusret Taş",
+   "Haydar Dölek"
+  ],
+  "baslik": "İHVÂN-I SAFÂ FELSEFESİNDE İNSANIN MAHİYETİ VE NEFS-BEDEN İLİŞKİSİ",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "nefs-beden iliskisi → olum-ve-otesi",
+   "soul-body relationship → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Haydar Dölek": "orcid-kaydi",
+   "Nusret Taş": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1222024": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "James P. Sterba, Is a Good God Logically Possible?, Palgrave Macmillan, 2019, 209 s.",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [
+   "tanrinin-sifatlari",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1241267": {
+  "akademisyenler": [
+   "Aykut Alper Yılmaz"
+  ],
+  "baslik": "Trenton Merricks. Self and Identity. New York: Oxford University Press, 2022. 208 s. ISBN: 978–0–19–284343–2",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "personal identity → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Aykut Alper Yılmaz": "orcid"
+  },
+  "tur": ""
+ },
+ "1246395": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Otantik Varoluş Biçiminin Bir Örneği Olarak Körkütük (2020) Filmi: Heideggerci Yaklaşım",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1247433": {
+  "akademisyenler": [
+   "Tuncay İmamoğlu"
+  ],
+  "baslik": "An üzerine felsefi ve teolojik bir değerlendirme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tuncay İmamoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "1253014": {
+  "akademisyenler": [
+   "Mehmet Sulhan"
+  ],
+  "baslik": "Roger Garaudy’ye Göre İslam Toplum Medeniyeti ve Çöküş Nedenleri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sulhan": "orcid"
+  },
+  "tur": ""
+ },
+ "1255765": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "Kötülüğün Kaynağı ve Tarihin Anlamı: Nikolay Aleksandroviç Berdyaev",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kotuluk problemi → kotuluk-problemi",
+   "iyilik → tanrinin-sifatlari",
+   "kotuluk tecrubesi → kotuluk-problemi",
+   "the problem of evil → kotuluk-problemi",
+   "goodness → tanrinin-sifatlari",
+   "suffering → kotuluk-problemi",
+   "experience of evil → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1257019": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "Kant’ta Ruhun Basitliği Safsatası",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "immortality → olum-ve-otesi",
+   "simplicity → tanrinin-sifatlari",
+   "ruh → olum-ve-otesi",
+   "olumsuzluk → olum-ve-otesi",
+   "basitlik → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1258091": {
+  "akademisyenler": [
+   "Ferhat Taşkın"
+  ],
+  "baslik": "Özgür İrade Savunusu ve Cennet'te Özgür İrade Sorunu",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "kotuluk-problemi",
+   "olum-ve-otesi",
+   "ozgurluk",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "free will defense → kotuluk-problemi",
+   "freedom → ozgurluk",
+   "heaven → olum-ve-otesi",
+   "evil → kotuluk-problemi",
+   "ozgurluk → ozgurluk",
+   "cennet → olum-ve-otesi",
+   "iyilik → tanrinin-sifatlari",
+   "kotuluk → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Taşkın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1258110": {
+  "akademisyenler": [
+   "Zeyneb Betül Taşkın"
+  ],
+  "baslik": "el-Ġazālī ve Descartes’ta Şüphecilik: Sami M. Najm’e Bir Cevap",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "skepticism → din-epistemolojisi",
+   "methodological skepticism → din-epistemolojisi",
+   "philosophical skepticism → din-epistemolojisi",
+   "suphecilik → din-epistemolojisi",
+   "felsefi suphecilik → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeyneb Betül Taşkın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1262005": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "Kant Descartes’a Karşı: Tözsellik Mantıksal Yanlış Çıkarımı",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid"
+  },
+  "tur": ""
+ },
+ "1263574": {
+  "akademisyenler": [
+   "Semra Tüfenkci"
+  ],
+  "baslik": "Aristoteles ve İbn Meymûn’da Entelektüel ve Ahlaki Erdemlerin İnsani Yetkinlikteki Rolü",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "entelektuel erdemler → din-ve-ahlak",
+   "ahlaki erdemler → din-ve-ahlak",
+   "intellectual virtues → din-ve-ahlak",
+   "moral virtues → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Semra Tüfenkci": "orcid"
+  },
+  "tur": ""
+ },
+ "1281782": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Helene Thibault. Sekülerleşme Karşısında İslam: Tacikistan’ın Dönüşümü",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1281991": {
+  "akademisyenler": [
+   "Mehmet Türkeri"
+  ],
+  "baslik": "Kahramanmaraş Depremleri Örneğinde Yeni Medyadaki Etik İhlaller",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ethics → din-ve-ahlak",
+   "professional ethics of journalism → din-ve-ahlak",
+   "communication ethics → din-ve-ahlak",
+   "etik → din-ve-ahlak",
+   "etik ihlaller → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Türkeri": "orcid"
+  },
+  "tur": ""
+ },
+ "1282276": {
+  "akademisyenler": [
+   "Nur Betül Atakul"
+  ],
+  "baslik": "LEVİNAS'A KARŞI LEVİNAS",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak",
+   "ahlak → din-ve-ahlak",
+   "ethics → din-ve-ahlak",
+   "morality → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Nur Betül Atakul": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1283109": {
+  "akademisyenler": [
+   "Enis Doko"
+  ],
+  "baslik": "Islamic Classical Theism and the Prospect of Strong Artificial Intelligence",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "classical theism → tanri-tasavvurlari",
+   "artificial intelligence → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Enis Doko": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1296518": {
+  "akademisyenler": [
+   "İsmail Şimşek"
+  ],
+  "baslik": "Apateizm Nedir? Ne Değildir?",
+  "basliklar": [
+   "tanri-tasavvurlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ateizm → teizme-yonelik-itirazlar",
+   "teizm → tanri-tasavvurlari",
+   "agnostisizm → teizme-yonelik-itirazlar"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Şimşek": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1298804": {
+  "akademisyenler": [
+   "Mehmet Fatih Kalın"
+  ],
+  "baslik": "SON DÖNEM İNGİLİZ FİLOZOFLARINDAN HYWEL D. LEWIS’E GÖRE FELSEFE, DİN VE BİLİM",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Fatih Kalın": "orcid"
+  },
+  "tur": ""
+ },
+ "130220": {
+  "akademisyenler": [
+   "Hasan Ocak"
+  ],
+  "baslik": "Ahlak Felsefesi Ekseninde Günah Kavramı",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "ethics → din-ve-ahlak",
+   "ahlak → din-ve-ahlak",
+   "ahlak felsefesi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hasan Ocak": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "130243": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Yahudilik",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "profil"
+  },
+  "tur": ""
+ },
+ "130256": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Tanrı Bir Rastlantı mı?",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "yaratiliscilik → tanri-alem-iliskisi",
+   "evrim → din-ve-bilim",
+   "bilim → din-ve-bilim",
+   "creationism → tanri-alem-iliskisi",
+   "evolution → din-ve-bilim",
+   "science → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "profil"
+  },
+  "tur": ""
+ },
+ "130263": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Cumhuriyet Dönemi Lise Felsefe Müfredatlarında Din Algısı ve İdeolojik Arka Plan",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "profil"
+  },
+  "tur": ""
+ },
+ "1305097": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Ortaçağ İslam Düşüncesinin Oluşumunda Temel Bir Etken Olarak Din Dili Problemi",
+  "basliklar": [
+   "din-dili"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "orcid"
+  },
+  "tur": ""
+ },
+ "1309946": {
+  "akademisyenler": [
+   "Ergin Ögcem"
+  ],
+  "baslik": "Akıllı Tasarımın Bilimselliği Problemi",
+  "basliklar": [
+   "din-ve-bilim"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "bilim → din-ve-bilim",
+   "evrim → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ergin Ögcem": "orcid"
+  },
+  "tur": ""
+ },
+ "1312434": {
+  "akademisyenler": [
+   "Tuncay Akgün"
+  ],
+  "baslik": "İbn Rüşd’de İrade Teorisi ve İrade-Siyaset İlişkisi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tuncay Akgün": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1323172": {
+  "akademisyenler": [
+   "Fatih Özgökman"
+  ],
+  "baslik": "KANT’IN DÖRDÜNCÜ MANTIKSAL YANLIŞ ÇIKARIMI ELEŞTİRİSİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Özgökman": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1336720": {
+  "akademisyenler": [
+   "Zafer Çaylı"
+  ],
+  "baslik": "Modern Batı Düşüncesi Bağlamında Ş. Teoman Duralı’nın İnsan Tasavvuru Anlayışına Eleştirel Bir Bakış",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "science → din-ve-bilim",
+   "evolution → din-ve-bilim",
+   "morality → din-ve-ahlak",
+   "bilim → din-ve-bilim",
+   "evrim → din-ve-bilim",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zafer Çaylı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1350629": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "Zor Eşiği Aşmak: İnsanın Hür İradesi Meselesinde Cebrî-İhtiyarî Dikotomisine Mâturîdî’nin Çözümü",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "ozgurluk"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "free will → ozgurluk",
+   "determinism → ozgurluk",
+   "cebriyye (determinizm) → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "1355544": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Red Pill Hareketi ile Woke Kültürü Arasında Bir Köprü Olarak ‘Oneitis’ Kavramı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1364215": {
+  "akademisyenler": [
+   "Vedat Tezcan"
+  ],
+  "baslik": "ATEİST BİR FİLOZOF İÇKİNCİ BİR ONTOLOJİ: DELEUZE’DE YARATICI İNSAN",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "anahtar kelimeler: ateizm → teizme-yonelik-itirazlar",
+   "virtuel → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Vedat Tezcan": "kurum"
+  },
+  "tur": ""
+ },
+ "1364486": {
+  "akademisyenler": [
+   "Sümeyra Turan"
+  ],
+  "baslik": "David Hume’da Kendilik İnşasında Öteki’nin Yeri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Sümeyra Turan": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1368050": {
+  "akademisyenler": [
+   "Erol Çetin"
+  ],
+  "baslik": "VAROLUŞSAL ANLAM ARAYIŞI VE DİNDARLIK İLİŞKİSİ: PSİKO-FELSEFİK BİR DEĞERLENDİRME",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dindarlik → dini-pratik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Erol Çetin": "kurum"
+  },
+  "tur": ""
+ },
+ "1369730": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "Türkiye Cumhuriyeti’nin 100. Yılında Din ve Politika Olgusu “Din Samimiyettir”",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1369797": {
+  "akademisyenler": [
+   "Kevser Çelik"
+  ],
+  "baslik": "Türkiye Cumhuriyeti’nin 100. Yılında Atatürk ve Bilim İnsanının Değeri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilim → din-ve-bilim",
+   "deger → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kevser Çelik": "orcid"
+  },
+  "tur": ""
+ },
+ "1370120": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "GELECEK BİR GEÇMİŞ OLARAK İSLAM DÜŞÜNCESİ: MUḤAMMED ʿĀBİD EL-CĀBİRĪ’YE GÖRE İSLAM DÜŞÜNCESİNİN YENİDEN YAPILANDIRILMASINDA İBN HAZM’IN ROLÜ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "kurum"
+  },
+  "tur": ""
+ },
+ "1406890": {
+  "akademisyenler": [
+   "Özkan Yıldız"
+  ],
+  "baslik": "Hume’un Tanrı Anlayışı: Epistemolojik Temel Üzerinden Bir İnceleme",
+  "basliklar": [
+   "din-epistemolojisi",
+   "tanri-tasavvurlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "epistemology → din-epistemolojisi",
+   "causality → tanri-alem-iliskisi",
+   "theism → tanri-tasavvurlari",
+   "atheism → teizme-yonelik-itirazlar",
+   "agnosticism → teizme-yonelik-itirazlar",
+   "epistemoloji → din-epistemolojisi",
+   "nedensellik → tanri-alem-iliskisi",
+   "teizm → tanri-tasavvurlari",
+   "ateizm → teizme-yonelik-itirazlar",
+   "agnostisizm → teizme-yonelik-itirazlar"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Özkan Yıldız": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1423291": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Yapay Eğilimler ve Eğilimsel Bağdaşırcılık Üzerine Bir Deneme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ozgur irade → ozgurluk",
+   "yapay zeka → din-ve-bilim",
+   "compatibilism → ozgurluk",
+   "free will → ozgurluk",
+   "artificial intelligence → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1435255": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Caputo’s Postmodern Understanding of Religion",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "hermeneutics → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1447609": {
+  "akademisyenler": [
+   "Abdulhan Ünlüsoy"
+  ],
+  "baslik": "Deleuzecü Dil Anlayışının Söz Edimleri Kuramı Açısından Değerlendirilmesi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili",
+   "soz edimleri kurami → din-dili",
+   "language → din-dili",
+   "speech act theory → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Abdulhan Ünlüsoy": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1463947": {
+  "akademisyenler": [
+   "Hanifi Laçin"
+  ],
+  "baslik": "Gadamer Ontolojisindeki Köprüleri Yıkmak: Geç Dönem Energeia Kullanımının Oyun ve Organizma Kavramlarıyla Birlikte Düşünülmesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hanifi Laçin": "orcid"
+  },
+  "tur": ""
+ },
+ "1465612": {
+  "akademisyenler": [
+   "Hande Nur Bozbuğa"
+  ],
+  "baslik": "İslâm’da Düşünsel Faaliyetler Üzerine Güncel Bir İnceleme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hande Nur Bozbuğa": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1468241": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "Mâtürîdî’de Ahlaki Mükellefiyet ve Tabiî Hukuk",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "etik → din-ve-ahlak",
+   "ahlaki mukellefiyet → din-ve-ahlak",
+   "ethics → din-ve-ahlak",
+   "natural law → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "1514096": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Jean Luc Marion Düşüncesinde Fenomenoloji ve Teolojinin Kesişimi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "revelation → din-epistemolojisi",
+   "vahiy → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1519230": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "Sağ Siyasetin Ontolojik Grameri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "wittgenstein → din-dili",
+   "wittgenstein → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1526476": {
+  "akademisyenler": [
+   "Muhammet Sait Duran"
+  ],
+  "baslik": "FELSEFİ VE MİTOLOJİK İNSAN ANLAYIŞININ KÖKENLERİ ÜZERİNE: HOMEROS VE ARİSTOTELES'İN MEDENİ İNSAN ANLAYIŞININ “KENDİNİ TANI” İLKESİ IŞIĞINDA DEĞERLENDİRİLMESİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "insan tasavvuru → insan-tasavvurlari",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhammet Sait Duran": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1543472": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Doğallık ve Yapı Kavramları Çerçevesinde Ted Sider'ın Post-Modal Metafizik Anlayışı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid"
+  },
+  "tur": ""
+ },
+ "1550927": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Karamsarlığa Bir Alternatif Olarak Umudun Olay Teorisi: Stoacı Olmayan Bir Yaklaşım",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1577687": {
+  "akademisyenler": [
+   "Ferhat Yöney"
+  ],
+  "baslik": "AHLAKİ MUTLAKÇILIK VE EYLEM SONUÇÇULUĞU ARASINDA BİR SEÇENEK OLARAK KURAL SONUÇÇULUĞU",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlaki mutlakcilik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Yöney": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1582082": {
+  "akademisyenler": [
+   "Mehmet Sait Reçber"
+  ],
+  "baslik": "Kant, Analitik Felsefe ve Metafizik",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilgi → din-epistemolojisi",
+   "wittgenstein → din-dili",
+   "mantiksal pozitivizm → din-ve-bilim",
+   "dil → din-dili",
+   "knowledge → din-epistemolojisi",
+   "wittgenstein → din-dili",
+   "logical positivism → din-ve-bilim",
+   "language → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sait Reçber": "orcid"
+  },
+  "tur": ""
+ },
+ "1582240": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "Ruh, Bilinç ve Zombiler: Metafizik Çıkmazlar ve Alternatif Yollar",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "determinism → ozgurluk",
+   "determinizm → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "1588533": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "Varoluşsal Sorumluluk Dünya İçinde Olarak Rahmete Dayalı Sorumluluk Etiği",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "orcid"
+  },
+  "tur": ""
+ },
+ "1619690": {
+  "akademisyenler": [
+   "Şeyma Demirtaş"
+  ],
+  "baslik": "Hans-Johann Glock’un Analitik Felsefe Nedir? Kitabı Üzerine Bir İnceleme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Şeyma Demirtaş": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "1628970": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Jeffrey Kotyk. Sino-Iranian and Sino-Arabian Relations in Late Antiquity: China and the Parthians, Sasanians, and Arabs in the First Millennium",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "163422": {
+  "akademisyenler": [
+   "Mustafa Çakmak"
+  ],
+  "baslik": "Evrim Teorisi Tanrının Varlığı İçin Gerçek Bir Tehdit midir?",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "evrim → din-ve-bilim",
+   "darwin → din-ve-bilim",
+   "naturalizm → din-ve-bilim",
+   "akilli tasarim → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Çakmak": "profil"
+  },
+  "tur": ""
+ },
+ "163441": {
+  "akademisyenler": [
+   "Abdulhan Ünlüsoy"
+  ],
+  "baslik": "Dilsel Anlam Probleminin Searlecü Yaklaşım Bağlamında Performatif Açıdan Değerlendirilmesi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili",
+   "anlam → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Abdulhan Ünlüsoy": "profil"
+  },
+  "tur": ""
+ },
+ "1637853": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Kapitalist Gerçekçilik Karşısında Postmarksizm: Umut ve Saçmalığın Söylemsel İlişkisi Üzerine",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1640419": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Noémie Verdon. The Books Sānk and Pātanğal: A Socio-cultural History of al-Bīrūnī’s Interpretations of Sāṅkhya and Yoga",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1641864": {
+  "akademisyenler": [
+   "Afra Konyalı"
+  ],
+  "baslik": "PSİKOLOJİDE YAPAY ZEKÂ KULLANIMI VE UYGULAMALARI",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "yapay zeka → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Afra Konyalı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1662732": {
+  "akademisyenler": [
+   "Hikmet Çamcı"
+  ],
+  "baslik": "Hapishanenin Doğuşu: Gözetim Altında Tutmak ve Cezalandırmak Kitabı Çerçevesinde Modern Toplumun Oluşumuna Dair Bir Okuma",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hikmet Çamcı": "orcid"
+  },
+  "tur": ""
+ },
+ "1676509": {
+  "akademisyenler": [
+   "Selin Olur"
+  ],
+  "baslik": "Antik Yunan Düşüncesinde Köken Arayışı: Mitoloji-Din İlişkisi ve Felsefenin Ortaya Çıkışı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Selin Olur": "orcid"
+  },
+  "tur": ""
+ },
+ "1679570": {
+  "akademisyenler": [
+   "Yasin Ramazan Başaran"
+  ],
+  "baslik": "Doğanın Metafizik Bütünlüğü Hakkında İçkin Zorunluluk Savunusu",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "nedensellik → tanri-alem-iliskisi",
+   "causation → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yasin Ramazan Başaran": "orcid"
+  },
+  "tur": ""
+ },
+ "1682500": {
+  "akademisyenler": [
+   "Fatma Yüce"
+  ],
+  "baslik": "Héléne L’Heuillet, Gecikmeye Övgü: Zaman Nereye Gitti?",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Fatma Yüce": "kurum"
+  },
+  "tur": ""
+ },
+ "1684129": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Fenomenolojinin Ontolojik İddiası: Husserl'den Heidegger'e Bir Değerlendirme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1685266": {
+  "akademisyenler": [
+   "Muzaffer Ayvaz"
+  ],
+  "baslik": "MEVLÂNÂ’DA AHLÂKÎ ÖZNE OLARAK İDEAL İNSANIN İNŞASI",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "tasavvufi ahlak → din-ve-ahlak",
+   "ahlaki ozne → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muzaffer Ayvaz": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1689089": {
+  "akademisyenler": [
+   "Özkan Yıldız"
+  ],
+  "baslik": "Immanuel Wallerstein’in Düşünsel Kaynakları Bağlamında Dünya-Sistemleri Analizi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Özkan Yıldız": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1695620": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Fenomenolojik Perspektiften Yapay Zekâya Bakış: Yönelimsellik, Beden ve Çerçeve Problemi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "artificial intelligence → din-ve-bilim",
+   "yapay zeka → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1696933": {
+  "akademisyenler": [
+   "Nusret Taş"
+  ],
+  "baslik": "İlk Dönem Müslüman Düşünürlerde Kadın Algısı: İhvân-ı Safâ Örneği",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Nusret Taş": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1698282": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "Ayn Rand'ın Felsefesinde Bireyin Özgürleşme Serüveni",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak",
+   "ozgurluk → ozgurluk",
+   "ethics → din-ve-ahlak",
+   "freedom → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1699644": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Netflix Dizisi Adolescence (2025) Bağlamında Incel ve Red Pill Akımlarının Kurgusal Temsili",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1705321": {
+  "akademisyenler": [
+   "Melek Aygül Özdoğan"
+  ],
+  "baslik": "Hannah Arendt Düşüncesinde Yargı Yetisinin Politik Anlamı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Melek Aygül Özdoğan": "orcid"
+  },
+  "tur": ""
+ },
+ "1709138": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Searle’ün Dil ve Bilinç Anlayışından Hareketle Arrival Filmine Bir Bakış",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili",
+   "language → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1723945": {
+  "akademisyenler": [
+   "Gülşen Yaylı"
+  ],
+  "baslik": "EPİSTEMİK BELİRSİZLİKTEN AHLAKİ YÜKÜMLÜLÜĞE: İHTİYAT İLKESİ VE İNANMA İRADESİ ARGÜMANI",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Gülşen Yaylı": "kurum"
+  },
+  "tur": ""
+ },
+ "1750364": {
+  "akademisyenler": [
+   "İsmail Hakkı Kumbasar"
+  ],
+  "baslik": "“Kant’ın Kadın Algısı” ile “Kant Düşüncesinde Kadın” Ayrımının Gerekliliği Üzerine Metodik Bir Değerlendirme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Hakkı Kumbasar": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1754023": {
+  "akademisyenler": [
+   "Fatımanur Güçlüer",
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "TRANSHÜMANİZM BAĞLAMINDA BİYOTEKNOLOJİK GELİŞMELERİN AİLE KAVRAMI VE AHLÂKÎ DEĞERLER ÜZERİNDEKİ DÖNÜŞTÜRÜCÜ ETKİSİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "transhumanizm → din-ve-bilim",
+   "ethics → din-ve-ahlak",
+   "transhumanizm → din-ve-bilim",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatımanur Güçlüer": "orcid",
+   "Ruhattin Yazoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "1776765": {
+  "akademisyenler": [
+   "İsmail Şimşek"
+  ],
+  "baslik": "DİN HİZMETLERİ ÇALIŞANLARININ ÇAĞDAŞ İNANÇ PROBLEMLERİ YETERLİLİĞİ ÖLÇEĞİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "religious sciences → din-ve-bilim",
+   "contemporary beliefs → din-epistemolojisi",
+   "belief problems → din-epistemolojisi",
+   "competence in coping with belief problems → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Şimşek": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1788792": {
+  "akademisyenler": [
+   "Rafız Manafov"
+  ],
+  "baslik": "İlahiyat Metafiziğin Nesi Oluyor? Rasyonel Metafizikten Varoluşçu Teolojiye",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rafız Manafov": "orcid"
+  },
+  "tur": ""
+ },
+ "1793916": {
+  "akademisyenler": [
+   "Hanifi Laçin"
+  ],
+  "baslik": "V. Metin Demir’in “Yaşamın Metafiziği: Hegel’de Doğa, Tarih ve Alışkanlık” Adlı Eserinin Değerlendirilmesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hanifi Laçin": "orcid"
+  },
+  "tur": ""
+ },
+ "183916": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "Uluslararası İstanbul Semineri: Aristoteles, İbn Sînâ, İbn Rüşd ve Aquino’lu Thomas’da İnsan Fiilleri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "184019": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "Metaforların Kognitif İçeriklerinin Felsefe ve Şiir Dili Açısından incelenmesi -F arabi, İbn Sina ve İbn Rüşd Örnekleri-",
+  "basliklar": [
+   "din-dili"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "metafor. mecaz → din-dili",
+   "tesbih → din-dili",
+   "din dili → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "184037": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "İslam Düşüncesine Özgü Bir Poetikadan Söz Edilebilir mi? : İlk Dönem Kelam ve Dil Alimlerinde Din Dili-Mecaz/Şiir-Mecaz ilişkisi Üzerine Bir İnceleme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil felsefesi → din-dili",
+   "din dili problemi → din-dili",
+   "anlam → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "184071": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "İrfânî Yorum ve Şâirin Niyeti Gazzâlî’nin Şiir Anlayışı Üzerine Bir İnceleme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "184122": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Dinî Çeşitliliği Değerlendirme Yetkisi: Frithjof Schuon Örneği",
+  "basliklar": [
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "religious diversity → dini-cesitlilik",
+   "dini cesitlilik → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "profil"
+  },
+  "tur": ""
+ },
+ "1860884": {
+  "akademisyenler": [
+   "Fatih Taştan"
+  ],
+  "baslik": "ARTHUR COLLIER'IN CLAVIS UNIVERSALIS'İNDE DIŞ DÜNYANIN REDDİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Taştan": "orcid"
+  },
+  "tur": ""
+ },
+ "1872560": {
+  "akademisyenler": [
+   "Naim Şahin"
+  ],
+  "baslik": "DIOGENES LAERTIOS VE BİYOGRAFİK FELSEFE TARİHÇİLİĞİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Naim Şahin": "orcid"
+  },
+  "tur": ""
+ },
+ "1876046": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Mostafa Najafi. Language and Reason in Islamic Thought: Faḫr al-Dīn al-Rāzī’s Reconciliation of Manṭiq and Bayān",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "1913286": {
+  "akademisyenler": [
+   "Hasan Atsız"
+  ],
+  "baslik": "Karl Jaspers'te Din, Bilim ve Hakikat Sorunu: Felsefi İnanç Kavramı Üzerine Bir Değerlendirme",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-bilim",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "askinlik → tanri-tasavvurlari",
+   "philosophical belief → din-epistemolojisi",
+   "transcendence → tanri-tasavvurlari",
+   "philosophy-science relationship → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hasan Atsız": "orcid"
+  },
+  "tur": ""
+ },
+ "194492": {
+  "akademisyenler": [
+   "Ergin Ögcem"
+  ],
+  "baslik": "ANTONY FLEW’DE TANRIYA DAİR PARADİGMA DEĞİŞİKLİĞİ",
+  "basliklar": [
+   "tanri-tasavvurlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ergin Ögcem": "profil"
+  },
+  "tur": ""
+ },
+ "203952": {
+  "akademisyenler": [
+   "Mustafa Eren"
+  ],
+  "baslik": "UYGULANABİLİRLİK SORUNU AÇISINDAN SÖYLEM ETİĞİ İLE KÜRESEL AHLAK DÜŞÜNCESİNİN KARŞILAŞTIRILMASI",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Eren": "profil"
+  },
+  "tur": ""
+ },
+ "204012": {
+  "akademisyenler": [
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "EBU’L-HASAN HARAKÂNÎ’DE HOŞGÖRÜ VE İNSAN SEVGİ / Tolerance and Human Love of Ebu’l-Hasan Harakâni",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ruhattin Yazoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "219524": {
+  "akademisyenler": [
+   "Kemal Batak"
+  ],
+  "baslik": "DOĞA YASALARININ ZORUNLULUĞU, İLAHİ FİİL VE MUCİZE -TANRI DÜNYADA FİİLDE BULUNABİLİR Mİ?-",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mucize → tanri-alem-iliskisi",
+   "nedensellik → tanri-alem-iliskisi",
+   "kuantum teorisi → din-ve-bilim",
+   "miracle → tanri-alem-iliskisi",
+   "causality → tanri-alem-iliskisi",
+   "quantum theory → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kemal Batak": "profil"
+  },
+  "tur": ""
+ },
+ "219536": {
+  "akademisyenler": [
+   "Recep Alpyağıl"
+  ],
+  "baslik": "MODEL İLE ENGAGEMENT ARASINDA DİN FELSEFESİ",
+  "basliklar": [
+   "din-felsefesi-tanim-yontem-tarih"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "methodology → din-felsefesi-tanim-yontem-tarih",
+   "methodology → din-felsefesi-tanim-yontem-tarih"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Recep Alpyağıl": "kurum"
+  },
+  "tur": ""
+ },
+ "219542": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "AVİCENNE, REFUTATİON DE L'ASTROLOGİE",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "profil"
+  },
+  "tur": ""
+ },
+ "219644": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "THOMAS AQUINAS'TA MUTLULUK",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak",
+   "ahlak teorisi → din-ve-ahlak",
+   "ethics → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "219746": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "İRAN’DA RESMÎ DİNÎ YORUMUN ELEŞTİRİSİ: MUHAMMED MÜÇTEHİD ŞEBİSTERÎ ÖRNEĞİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "219817": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "İbn Sina ve Thomas Aquinas'ta Kötülük Problemi",
+  "basliklar": [
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "kurum"
+  },
+  "tur": ""
+ },
+ "219834": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "TÜRKİYE'DE KADIN VE ÇOCUKLARA HİZMET VEREN BİR KURUM OLARAK CAMİ",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "238874": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "Din Dilinin Ahlâkî Yorumu",
+  "basliklar": [
+   "din-dili",
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "din dili → din-dili",
+   "ethics → din-ve-ahlak",
+   "religious language → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "profil"
+  },
+  "tur": ""
+ },
+ "238966": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "Gazâlî ve Thomas Aquınas’ta Tanrı’nın Kudreti ve İmkânsızlık",
+  "basliklar": [
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "tanri'nin kudreti → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "profil"
+  },
+  "tur": ""
+ },
+ "238969": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "Gazâlî ve Aquino’lu Thomas’a Göre Tanrı’nın Özgürlüğü",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "ozgurluk"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ozgurluk → ozgurluk",
+   "freedom → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "profil"
+  },
+  "tur": ""
+ },
+ "254695": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "KANT'IN ''İNANCA YER AÇMAK İÇİN BİLGİYİ :iNKAR EITİM\" SÖZÜNÜN İMAN VE BİLGİ AÇlSINDAN DEGERLENDİRİLMESİ",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "belief → din-epistemolojisi",
+   "knowledge → din-epistemolojisi",
+   "inanc → din-epistemolojisi",
+   "bilgi → din-epistemolojisi",
+   "iman → din-epistemolojisi",
+   "akil → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "profil"
+  },
+  "tur": ""
+ },
+ "254729": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "“HER DEĞİŞMENİN BİR NEDENİ VARDIR” SENTETİK A PRİORİ ÖNERMESİ DOĞRULTUSUNDA KANT, HUME VE GAZALİ’DE NEDENSELLİK İLKESİ",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "bilgi → din-epistemolojisi",
+   "mucize → tanri-alem-iliskisi",
+   "nedensellik → tanri-alem-iliskisi",
+   "causality → tanri-alem-iliskisi",
+   "knowledge → din-epistemolojisi",
+   "miracle → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "profil"
+  },
+  "tur": ""
+ },
+ "255016": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "GAZALI: MUCiZELER VE ZORUNLU İLİŞKİ ÜZERİNE",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "causality → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "261082": {
+  "akademisyenler": [
+   "Kemal Batak"
+  ],
+  "baslik": "ARİSTOTELES'TE EN YÜKSEK ENTELEKTÜEL ERDEM",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "virtue → din-ve-ahlak",
+   "reason → din-epistemolojisi",
+   "erdem → din-ve-ahlak",
+   "akil → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kemal Batak": "kurum"
+  },
+  "tur": ""
+ },
+ "261089": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "İslam Hukuk Felsefesi: Kaynaklar, Yöntemler, Amaçlar, Allâl el-Fâsî",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "277934": {
+  "akademisyenler": [
+   "Abdulhan Ünlüsoy"
+  ],
+  "baslik": "İnsan Bilimlerinde Olgu-Değer Ayrımının Meydana Getirdiği Problemler",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "naturel sciences → din-ve-bilim",
+   "human sciences → din-ve-bilim",
+   "positivism → din-ve-bilim",
+   "pozitivizm → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Abdulhan Ünlüsoy": "profil"
+  },
+  "tur": ""
+ },
+ "278883": {
+  "akademisyenler": [
+   "Ergin Ögcem"
+  ],
+  "baslik": "İnsan Doğa İlişkisinde Ahlaki Bir Neden Olarak Tanrı Faktörü",
+  "basliklar": [
+   "din-ve-ahlak",
+   "din-ve-bilim"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "science → din-ve-bilim",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ergin Ögcem": "profil"
+  },
+  "tur": ""
+ },
+ "279786": {
+  "akademisyenler": [
+   "Ergin Ögcem"
+  ],
+  "baslik": "OLGUCU YAKLAŞIMLAR PERSPEKTİFİNDE DİN DİLİ (ALFRED JULES AYER ÖRNEĞİ)",
+  "basliklar": [
+   "din-dili",
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "religious language → din-dili",
+   "principle of verification → din-dili",
+   "ethics → din-ve-ahlak",
+   "din dili → din-dili",
+   "etik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ergin Ögcem": "profil"
+  },
+  "tur": ""
+ },
+ "284494": {
+  "akademisyenler": [
+   "Mehmet Şükrü Özkan"
+  ],
+  "baslik": "WILFRED CANTWELL SMITH’İN İMAN TEOLOJİSİ",
+  "basliklar": [
+   "din-epistemolojisi",
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "dini cogulculuk → dini-cesitlilik",
+   "dini dislayicilik → dini-cesitlilik",
+   "iman → din-epistemolojisi",
+   "kurtulus → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Şükrü Özkan": "kurum"
+  },
+  "tur": ""
+ },
+ "284903": {
+  "akademisyenler": [
+   "Eyüp Aktürk"
+  ],
+  "baslik": "TANRI-MEKÂN İLİŞKİSİ: ‘HER YERDE BULUNMA’ VE ‘AŞKINLIK’ SORUNU",
+  "basliklar": [
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Eyüp Aktürk": "profil"
+  },
+  "tur": ""
+ },
+ "285734": {
+  "akademisyenler": [
+   "Mehmet Şükrü Özkan"
+  ],
+  "baslik": "Din Kavramına Eleştirel Yaklaşım: Wilfred Cantwell Smith Örneği",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "faith → din-epistemolojisi",
+   "belief → din-epistemolojisi",
+   "iman → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Şükrü Özkan": "profil"
+  },
+  "tur": ""
+ },
+ "288057": {
+  "akademisyenler": [
+   "Ahmet Kavlak"
+  ],
+  "baslik": "Şehir ve Entelektüel Üretkenlik",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "akil → din-epistemolojisi",
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Kavlak": "profil"
+  },
+  "tur": ""
+ },
+ "290571": {
+  "akademisyenler": [
+   "Mehmet Şükrü Özkan"
+  ],
+  "baslik": "PAUL F. KNITTER’İN DİNLER ARASI DİYALOG ANLAYIŞI",
+  "basliklar": [
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kurtulus → dini-cesitlilik",
+   "salvation → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Şükrü Özkan": "profil"
+  },
+  "tur": ""
+ },
+ "291078": {
+  "akademisyenler": [
+   "Elif Nur Erkan Balcı"
+  ],
+  "baslik": "TWO DIFFERENT PERSPECTIVES OF MACINTYRE ON HUME: REVISITING ALASDAIR MACINTYRE’S APPROACH TO DAVID HUME’S MORAL PHILOSOPHY",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "modern ahlak → din-ve-ahlak",
+   "modern morality → din-ve-ahlak",
+   "practical rationality → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Elif Nur Erkan Balcı": "profil"
+  },
+  "tur": ""
+ },
+ "292467": {
+  "akademisyenler": [
+   "Muhammet Sait Duran"
+  ],
+  "baslik": "KANT’IN ÖDEV AHLAKI ÜZERİNE",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "odev ahlaki → din-ve-ahlak",
+   "ozgurluk → ozgurluk",
+   "evrensel ahlak → din-ve-ahlak",
+   "ahlaki formalizm → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhammet Sait Duran": "profil"
+  },
+  "tur": ""
+ },
+ "292618": {
+  "akademisyenler": [
+   "Kemal Batak"
+  ],
+  "baslik": "ERNEST SOSA’NIN ERDEM EPİSTEMOLOJİSİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "virtue epistemology → din-epistemolojisi",
+   "virtue epistemology → din-ve-ahlak",
+   "intellectual virtue → din-ve-ahlak",
+   "erdem epistemolojisi → din-epistemolojisi",
+   "erdem epistemolojisi → din-ve-ahlak",
+   "entelektuel erdem → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kemal Batak": "profil"
+  },
+  "tur": ""
+ },
+ "304907": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "Göçün Öznelerinin Anlatımı Problemi: Konukseverlik, Hayırseverlik ve Hakseverlik Bağlamında Felsefî Soruşturmalar / The Issue of Expressions by the Subjects of Migration: Philosophical Examinations in terms of Hospitality, Philanthropy, and Fairness / مشكلة التعبير عن موضوعات الهجرة في سياق العمل الخيري والضيافة والإحسان؛ تحقيقات فلسفية",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "profil"
+  },
+  "tur": ""
+ },
+ "305783": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "Manevi Rehberlikte Varlıklararası Olumlu Derin İlişkiler Kurmanın Mistik Değeri -Yunus Emre Örneği-",
+  "basliklar": [
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mistik deger → dini-tecrube",
+   "mystical value → dini-tecrube"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "profil"
+  },
+  "tur": ""
+ },
+ "305794": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Sosyal Bilimler Tarihi ve Felsefesi",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "308945": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Hasan el-Benna’yı Yeniden Okumak: Müslüman Kardeşler’de Söylem Eylem İlişkisi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "331591": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "BERDYAEV FELSEFESİNİN TEMEL ÖZELLİKLERİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dini-mistisizm → dini-tecrube",
+   "ahlak → din-ve-ahlak",
+   "religious-mysticism → dini-tecrube",
+   "morality → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "331937": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "Tanrı’nın Gizlenmesine Dair Farklı Yaklaşımlar",
+  "basliklar": [
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "tenzih → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "339181": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "Hermeneutiğin Ortaya Çıkışı ve Gelişimi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "hermeneutics → din-dili",
+   "hermeneutik → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "345909": {
+  "akademisyenler": [
+   "Muharrem Şahiner"
+  ],
+  "baslik": "Kierkegaard’a Göre İmanın Gereği: Bireysel Varoluş",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "iman → din-epistemolojisi",
+   "etik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muharrem Şahiner": "kurum"
+  },
+  "tur": ""
+ },
+ "345989": {
+  "akademisyenler": [
+   "Erol Çetin"
+  ],
+  "baslik": "İrade Hürriyeti Bağlamında 15 Temmuz’un Felsefî Tahlili",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "freedom → ozgurluk",
+   "freedom of will → ozgurluk",
+   "hurriyet → ozgurluk",
+   "irade hurriyeti → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Erol Çetin": "profil"
+  },
+  "tur": ""
+ },
+ "347435": {
+  "akademisyenler": [
+   "Atilla Akalın"
+  ],
+  "baslik": "Soyut-Makineler ve Energeia Kavramları Üzerinden Kafka’nın Ceza Kolonisi ve Duchamp’ın Büyük Cam Yapıtlarının Analizi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Atilla Akalın": "kurum"
+  },
+  "tur": ""
+ },
+ "348092": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "XIII. Yüzyıl Avrupa’sında Gazâlî İmajı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "348849": {
+  "akademisyenler": [
+   "Erol Çetin"
+  ],
+  "baslik": "Nurettin Topçu’nun Ahlâkî Sorunlarımıza İlişkin Görüşlerinin Günümüze Yansımaları",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Erol Çetin": "profil"
+  },
+  "tur": ""
+ },
+ "351507": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "İDEALİST FİLOZOF JOSIAH ROYCE’A GÖRE FELSEFENİN DİNÎ YÖNÜ",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-ahlak",
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "ruh → olum-ve-otesi",
+   "iman → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "profil"
+  },
+  "tur": ""
+ },
+ "354405": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "ÜÇ DÖNEM, ÜÇ TAKVİM: 2002, 2007 VE 2011 YILLARI TAKVİMLERİ ÖRNEĞİNDE DİYANET SÖYLEMİNİN ANALİZİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "values → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "356627": {
+  "akademisyenler": [
+   "İsmail Şimşek"
+  ],
+  "baslik": "Tanrı Doğasının Nedeni Olabilir mi?",
+  "basliklar": [
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "ozgurluk → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Şimşek": "profil"
+  },
+  "tur": ""
+ },
+ "356802": {
+  "akademisyenler": [
+   "Muharrem Şahiner"
+  ],
+  "baslik": "İSLAM FİLOZOFLARINA GÖRE FELSEFEDEN ÖNCE ÖĞRENİLMESİ GEREKEN İLİMLER",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muharrem Şahiner": "profil"
+  },
+  "tur": ""
+ },
+ "357158": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "SEVGİNİN MAHREM DÜNYASI",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "profil"
+  },
+  "tur": ""
+ },
+ "358216": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "İslâm Ahlâk Esasları ve Felsefesi",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "364653": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "AMELÎ HİKMETİN YOZGATLI ÖNCÜSÜ: HALİL İPEK HOCAEFENDİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "36660": {
+  "akademisyenler": [
+   "Hüsnü Aydeniz"
+  ],
+  "baslik": "DİN-SANAT İLİŞKİSİ VE BUNUN SOMUT BİR YANSIMASI OLARAK MEVLEVÎ SEMÂ ÂYİNİ",
+  "basliklar": [
+   "dini-pratik"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "sembol → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hüsnü Aydeniz": "profil"
+  },
+  "tur": ""
+ },
+ "366736": {
+  "akademisyenler": [
+   "Habib Şener"
+  ],
+  "baslik": "Felsefî ve Tasavvufî Açıdan Harakânî’de Bilgi Problemi",
+  "basliklar": [
+   "din-epistemolojisi",
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mysticism → dini-tecrube",
+   "knowledge → din-epistemolojisi",
+   "mistisizm → dini-tecrube",
+   "bilgi → din-epistemolojisi",
+   "kesf → dini-tecrube"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Habib Şener": "profil"
+  },
+  "tur": ""
+ },
+ "36674": {
+  "akademisyenler": [
+   "Hüsnü Aydeniz"
+  ],
+  "baslik": "ENGELS’İN MATERYALİZMİ VE DİN ELEŞTİRİSİ",
+  "basliklar": [
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hüsnü Aydeniz": "profil"
+  },
+  "tur": ""
+ },
+ "36676": {
+  "akademisyenler": [
+   "Hakan Hemşinli"
+  ],
+  "baslik": "DİNÎ TECRÜBENİN NESNELLİĞİ ÜZERİNE",
+  "basliklar": [
+   "din-epistemolojisi",
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "dini tecrube → dini-tecrube",
+   "mistik → dini-tecrube",
+   "bilgi → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hakan Hemşinli": "profil"
+  },
+  "tur": ""
+ },
+ "368403": {
+  "akademisyenler": [
+   "Necmettin Tan"
+  ],
+  "baslik": "KÖMÜRCÜNÜN İMANI",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "fideizm → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Necmettin Tan": "orcid"
+  },
+  "tur": ""
+ },
+ "36884": {
+  "akademisyenler": [
+   "Habib Şener"
+  ],
+  "baslik": "ALVARLI MUHAMMED LUTFÎ EFENDİ’NİN ŞİİRLERİNDE ALLAH TASAVVURU",
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "creation → tanri-alem-iliskisi",
+   "yaratma → tanri-alem-iliskisi",
+   "delil → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Habib Şener": "profil"
+  },
+  "tur": ""
+ },
+ "369994": {
+  "akademisyenler": [
+   "Mehmet Akif Altunışık"
+  ],
+  "baslik": "Bireysel-Toplumsal Farklılıklar ve Ahlâkî Görecelik Sorunu",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "deger → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Akif Altunışık": "orcid"
+  },
+  "tur": ""
+ },
+ "372700": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "FRİTHJOF SCHUON’UN DİNİ ÇOĞULCULUK DÜŞÜNCELERİ AÇISINDAN MODERNİZM ELEŞTİRİSİ",
+  "basliklar": [
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "dini cogulculuk → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "profil"
+  },
+  "tur": ""
+ },
+ "373037": {
+  "akademisyenler": [
+   "Mustafa Ateş"
+  ],
+  "baslik": "Baha Tevfik’in Tanrı Problemine Yaklaşımı",
+  "basliklar": [
+   "tanri-tasavvurlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "naturalizm → din-ve-bilim",
+   "pozitivizm → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Ateş": "orcid"
+  },
+  "tur": ""
+ },
+ "375694": {
+  "akademisyenler": [
+   "Mustafa Ateş"
+  ],
+  "baslik": "Baha Tevfik’in Hayatı, Eserleri ve Felsefî Düşünce Yapısı",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "naturalizm → din-ve-bilim",
+   "pozitivizm → din-ve-bilim",
+   "determinizm → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Ateş": "orcid"
+  },
+  "tur": ""
+ },
+ "398729": {
+  "akademisyenler": [
+   "Muhsin Akbaş"
+  ],
+  "baslik": "M. (2017). Reformasyon düşüncesinde eskatoloji: Martin Luther’de kurtuluş ve ahiret. Türkiye Din Eğitimi Araştırmaları Dergisi, 3, 23-30.",
+  "basliklar": [
+   "dini-cesitlilik",
+   "olum-ve-otesi",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "inayet → tanri-alem-iliskisi",
+   "olum → olum-ve-otesi",
+   "ahiret → olum-ve-otesi",
+   "kurtulus → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhsin Akbaş": "kurum"
+  },
+  "tur": ""
+ },
+ "401176": {
+  "akademisyenler": [
+   "Adem İrmak"
+  ],
+  "baslik": "Yehuda Halevi ve Ahiret Düşüncesi",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahiret inanci → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Adem İrmak": "profil"
+  },
+  "tur": ""
+ },
+ "408406": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "İnsanlık Ürünü Olumsuzluklar Karşısında İnsan ve Aşk",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "olumsuzluklar → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "profil"
+  },
+  "tur": ""
+ },
+ "410153": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "İslam Düşüncesinde Felsefi ve Dini Bir Etkinlik Olarak Ahlak",
+  "basliklar": [
+   "din-ve-ahlak",
+   "dini-pratik",
+   "ibadet"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ibadet → ibadet",
+   "ahlak → din-ve-ahlak",
+   "ahlaki davranis → din-ve-ahlak",
+   "worship → ibadet",
+   "ethics → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "411088": {
+  "akademisyenler": [
+   "Ferhat Yöney"
+  ],
+  "baslik": "Çağdaş Ahlaki Doğaüstücülük ve Russ Shafer-Landau",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlaki dogaustuculuk → din-ve-ahlak",
+   "ahlaki realizm → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Yöney": "orcid"
+  },
+  "tur": ""
+ },
+ "411498": {
+  "akademisyenler": [
+   "Habib Şener"
+  ],
+  "baslik": "PAUL TİLLİCH’İN VAHİY ANLAYIŞI",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "vahiy → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Habib Şener": "profil"
+  },
+  "tur": ""
+ },
+ "417640": {
+  "akademisyenler": [
+   "Enis Doko"
+  ],
+  "baslik": "Kalam Cosmological Argument and the Modern Science",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kalam cosmological argument → tanrinin-varliginin-delilleri",
+   "existence of god → tanrinin-varliginin-delilleri",
+   "big bang theory → din-ve-bilim",
+   "quantum mechanics → din-ve-bilim",
+   "hudus delili → tanrinin-varliginin-delilleri",
+   "kelam'in kozmolojik argumani → tanrinin-varliginin-delilleri",
+   "kelam'in kozmolojik argumani → din-ve-bilim",
+   "tanri'nin varligi → tanrinin-varliginin-delilleri",
+   "kuantum mekanigi → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Enis Doko": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "420391": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "İftira Bir “Kötülük”tür ve “İnsanlık Suçu”dur!",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "evil → kotuluk-problemi",
+   "kotuluk → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "profil"
+  },
+  "tur": ""
+ },
+ "424477": {
+  "akademisyenler": [
+   "Mehmet Fatih Kalın"
+  ],
+  "baslik": "Yesevî’nin Divân-I Hikmet’inde İlahî Aşk ve Allah Düşüncesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Fatih Kalın": "profil"
+  },
+  "tur": ""
+ },
+ "424828": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "İbn Sina’nın Varlık-Mâhiyet Ayniliği/Ayırımının Aquinas’ın Eleştirileri Bağlamında Değerlendirilmesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "profil"
+  },
+  "tur": ""
+ },
+ "426325": {
+  "akademisyenler": [
+   "Sümeyra Turan"
+  ],
+  "baslik": "Alvin Plantinga'nın \"Bilim ve Din: Çatışma Nerede Yatmaktadır\" Adlı Konuşmasının Değerlendirilmesi",
+  "basliklar": [
+   "din-ve-bilim"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "bilim ve din → din-ve-bilim",
+   "science and religion → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Sümeyra Turan": "orcid"
+  },
+  "tur": ""
+ },
+ "429441": {
+  "akademisyenler": [
+   "Cafer Sadık Yaran"
+  ],
+  "baslik": "Modernitenin İnsan Sevgisine Etkileri",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Cafer Sadık Yaran": "profil"
+  },
+  "tur": ""
+ },
+ "429732": {
+  "akademisyenler": [
+   "Cafer Sadık Yaran"
+  ],
+  "baslik": "İnsan-Evren İlişkisi ve İnsancı Kozmolojik İlke",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kozmolojik ilke → tanrinin-varliginin-delilleri",
+   "kozmolojik ilke → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Cafer Sadık Yaran": "profil"
+  },
+  "tur": ""
+ },
+ "429738": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "Doğaya Saygı-Din Felsefesi Açısından Kısa Bir Değerlendirme",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "kurum"
+  },
+  "tur": ""
+ },
+ "430238": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Tanrı-İnsan İlişkileri",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "profil"
+  },
+  "tur": ""
+ },
+ "430520": {
+  "akademisyenler": [
+   "Recep Kılıç"
+  ],
+  "baslik": "Dinde Yenilenme Teceddüd Tedebbül ve Tahrif Kavramları",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Recep Kılıç": "kurum"
+  },
+  "tur": ""
+ },
+ "430555": {
+  "akademisyenler": [
+   "Zeki Özcan"
+  ],
+  "baslik": "İslamileştirilmiş Senkretizmler Güncelleştirilebilir mi",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Zeki Özcan": "profil"
+  },
+  "tur": ""
+ },
+ "433116": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "İbn Sînâ’nın Mâhiyet-Vücûd Ayrımının Dekonstrüksiyonu ve Vâcibu’l-Vücûd’un Mâhiyeti",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "vacibu'l-vucud → tanrinin-varliginin-delilleri",
+   "necessary existent → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "434769": {
+  "akademisyenler": [
+   "Muzaffer Ayvaz"
+  ],
+  "baslik": "MEVLÂNÂ CELÂLEDDÎN RÛMÎ’NİN AHLÂK ÖĞRETİSİNDE MUTLULUK",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muzaffer Ayvaz": "profil"
+  },
+  "tur": ""
+ },
+ "435052": {
+  "akademisyenler": [
+   "Hanifi Özcan"
+  ],
+  "baslik": "Misyonerlik Faaliyetlerinin Felsefi Temelleri",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hanifi Özcan": "kurum"
+  },
+  "tur": ""
+ },
+ "436288": {
+  "akademisyenler": [
+   "Ömer Faruk Erdem"
+  ],
+  "baslik": "Sadreddin Konevi’de İnsan-ı Kâmil Anlayışı ve Medeniyete Etkileri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "islamic mysticism → dini-tecrube",
+   "insan-i kamil → insan-tasavvurlari",
+   "vahdet-i vucud → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ömer Faruk Erdem": "kurum"
+  },
+  "tur": ""
+ },
+ "446392": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "The Legacy That Frederick Robert Tennant Left to Theism",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "theism → tanri-tasavvurlari",
+   "evolution → din-ve-bilim",
+   "science → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "kurum"
+  },
+  "tur": ""
+ },
+ "446511": {
+  "akademisyenler": [
+   "Mustafa Çakmak"
+  ],
+  "baslik": "An Evaluation of Epicurus and Lukretius' Perceptions of Death and Non-Existence",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "death → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Çakmak": "profil"
+  },
+  "tur": ""
+ },
+ "446513": {
+  "akademisyenler": [
+   "Sevcan Öztürk"
+  ],
+  "baslik": "The Construction of Muhammad Iqbal’s Theory of Action in the Context of Charles Taylor’s Philosophy of Action",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Sevcan Öztürk": "kurum"
+  },
+  "tur": ""
+ },
+ "447271": {
+  "akademisyenler": [
+   "Vedat Tezcan"
+  ],
+  "baslik": "SARTRE’IN TANRI TANIMAZLIK TASARIMI VE BULANTI",
+  "basliklar": [
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Vedat Tezcan": "profil"
+  },
+  "tur": ""
+ },
+ "448369": {
+  "akademisyenler": [
+   "Hakan Hemşinli"
+  ],
+  "baslik": "Tertibu’s-Sa’âdât ve Menâzilu’l-Ulûm, Mutluluk ve Felsefe. Neşr, Tercüme ve İnceleme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "islam ahlak felsefesi → din-ve-ahlak",
+   "islamic moral philosophy → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hakan Hemşinli": "orcid"
+  },
+  "tur": ""
+ },
+ "450184": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "Batı Felsefesi ve “Taşrası”: Efendiler İcadı ile Köleler Üretiminin Merkez-Taşra İkileminde Yansımaları",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "profil"
+  },
+  "tur": ""
+ },
+ "455863": {
+  "akademisyenler": [
+   "Ahmet Uğurlu"
+  ],
+  "baslik": "BATI FELSEFESİ BAĞLAMINDA SCHOPENHAUER’A GÖRE AKIL VE HAKİKAT",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "akil → din-epistemolojisi",
+   "kotuluk → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Uğurlu": "profil"
+  },
+  "tur": ""
+ },
+ "457828": {
+  "akademisyenler": [
+   "Ferit Uslu"
+  ],
+  "baslik": "İşletmelerde Etik Değerlerin Uygulanmasının Örgütsel Bağlılığa Etkisinde Örgütsel Adaletin Aracı Rolü",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ethics → din-ve-ahlak",
+   "business ethics → din-ve-ahlak",
+   "organizational justice → din-ve-ahlak",
+   "etik → din-ve-ahlak",
+   "etik iklim → din-ve-ahlak",
+   "orgutsel adalet → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferit Uslu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "462797": {
+  "akademisyenler": [
+   "Betül Akdemir Süleyman"
+  ],
+  "baslik": "Mistisizmin Bağlamsalcı Okuması I: Steven T. Katz’ın Mistik Tecrübeye İlişkin Düşünceleri",
+  "basliklar": [
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mistik tecrube → dini-tecrube"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Betül Akdemir Süleyman": "profil"
+  },
+  "tur": ""
+ },
+ "462937": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "İSLAM DÜŞÜNCESİNDE “ÖLÇÜLÜ VE DENGELİ OLMAK” BİR DEĞER OLARAK NASIL ELE ALINMIŞTIR?",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "deger → din-ve-ahlak",
+   "erdem → din-ve-ahlak",
+   "adalet → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "profil"
+  },
+  "tur": ""
+ },
+ "463640": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Türkçe Ezan Uygulamasının Toplumsal Hafızada Yol Açtığı Travmalar Üzerine",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "466884": {
+  "akademisyenler": [
+   "Hasan Tanrıverdi"
+  ],
+  "baslik": "Din-Kültür İlişkisi Üzerine Bir Değerlendirme",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dini ritueller → dini-pratik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hasan Tanrıverdi": "orcid"
+  },
+  "tur": ""
+ },
+ "467404": {
+  "akademisyenler": [
+   "Osman Murat Deniz"
+  ],
+  "baslik": "“Pietizm: Kökenleri, Temel Özellikleri ve Gelişimi”",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Osman Murat Deniz": "profil"
+  },
+  "tur": ""
+ },
+ "467768": {
+  "akademisyenler": [
+   "Celal Büyük"
+  ],
+  "baslik": "Ahmet Hamdi Akseki’nin Din Karşıtı Akımlar İle Mücadelesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Celal Büyük": "orcid"
+  },
+  "tur": ""
+ },
+ "472782": {
+  "akademisyenler": [
+   "Ahmet Uğurlu"
+  ],
+  "baslik": "KANT’IN LEİBNİZ’İN MONADOLOJİSİNDEKİ UZAY VE ZAMAN ANLAYIŞINI ELEŞTİRİSİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Uğurlu": "kurum"
+  },
+  "tur": ""
+ },
+ "473651": {
+  "akademisyenler": [
+   "Habib Şener"
+  ],
+  "baslik": "PAUL TILLICH’TE AKIL-İMAN İLİŞKİSİ",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "akil → din-epistemolojisi",
+   "iman → din-epistemolojisi",
+   "inanc → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Habib Şener": "kurum"
+  },
+  "tur": ""
+ },
+ "474055": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "İshâk Bin Hasan Tokadî’nin İlimler Tasnifi ve Mantık İlmine Dair Görüşleri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "classification of sciences → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "47494": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Religious Belief as an Evolutionary Accident",
+  "basliklar": [
+   "din-ve-bilim"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "evolution → din-ve-bilim",
+   "evolutionary accident → din-ve-bilim",
+   "evolution → din-ve-bilim",
+   "evolutionary accident → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "profil"
+  },
+  "tur": ""
+ },
+ "476934": {
+  "akademisyenler": [
+   "Mehmet Şükrü Özkan"
+  ],
+  "baslik": "Antony Flew’ün Ateizmden Tanrı İnancına Yolculuğunda Kanıtların Rolü: Eleştirel Bir Yaklaşım",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-bilim",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "atheism → teizme-yonelik-itirazlar",
+   "science → din-ve-bilim",
+   "faith → din-epistemolojisi",
+   "ateizm → teizme-yonelik-itirazlar",
+   "bilim → din-ve-bilim",
+   "iman → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Şükrü Özkan": "kurum"
+  },
+  "tur": ""
+ },
+ "48013": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "Bukalemun Erkek: Osmanlı İmparatorluğunda ve Türkiye Cumhuriyeti'nde Ataerkil Yapı lar ve Modern Edebiyat",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "profil"
+  },
+  "tur": ""
+ },
+ "488018": {
+  "akademisyenler": [
+   "Osman Murat Deniz"
+  ],
+  "baslik": "Dini Plüralizm: Dinler Yoluyla Kurtuluş Mu, Dinlerden Kurtuluş Mu?",
+  "basliklar": [
+   "dini-cesitlilik",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kurtulus → dini-cesitlilik",
+   "deizm → tanri-alem-iliskisi",
+   "religious pluralism → dini-cesitlilik",
+   "salvation → dini-cesitlilik",
+   "deism → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Murat Deniz": "orcid"
+  },
+  "tur": ""
+ },
+ "488036": {
+  "akademisyenler": [
+   "Osman Murat Deniz"
+  ],
+  "baslik": "John Calvin’in Vahiy ve Kutsal Kitap Anlayışı",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "revelation → din-epistemolojisi",
+   "vahiy → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Murat Deniz": "orcid"
+  },
+  "tur": ""
+ },
+ "490776": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Tariq Jaffer. Rāzī Master of Qurʾānic Interpretation and Theological Reasoning. New York: Oxford University Press, 2017. 244 pp. ISBN 978-0-19-066351-3.",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "491725": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "TIP FELSEFESİ YAPABİLMENİN İMKÂNI ÜZERİNE BİR SORUŞTURMA",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "profil"
+  },
+  "tur": ""
+ },
+ "495941": {
+  "akademisyenler": [
+   "Enis Doko"
+  ],
+  "baslik": "Çağdaş Nörobilim ve Dini Tecrübe: Nöroteolojik Tezler Bir Zihinsel Durum Olan Tanrı İnancını Yanlışlayabilir mi?",
+  "basliklar": [
+   "din-ve-bilim",
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "belief in god → din-epistemolojisi",
+   "atheism → teizme-yonelik-itirazlar",
+   "ateizm → teizme-yonelik-itirazlar"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Enis Doko": "profil"
+  },
+  "tur": ""
+ },
+ "507036": {
+  "akademisyenler": [
+   "Vedat Tezcan"
+  ],
+  "baslik": "SANATSAL EYLEMDE GERÇEKLİK ALGISI VE NEOKLASİSİZM SONRASI KÜSKÜN DUYGU",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Vedat Tezcan": "profil"
+  },
+  "tur": ""
+ },
+ "511603": {
+  "akademisyenler": [
+   "Hasan Ocak"
+  ],
+  "baslik": "Klasik İslam Düşüncesinde İki Farklı Tanrı Tasavvuru",
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hasan Ocak": "orcid"
+  },
+  "tur": ""
+ },
+ "514414": {
+  "akademisyenler": [
+   "Celal Büyük"
+  ],
+  "baslik": "Ahmed Hamdi Akseki’nin Ahlak Felsefesinde Vicdan ve Ahlaki Müeyyide / Conscience and Moral Sanction in the Ethical Philosophy of Ahmed Hamdi Akseki / الضمير والرادع الأخلاقي في فلسفة الأخلاق لدى أحمد حمدي آقسكي",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "morality → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Celal Büyük": "orcid"
+  },
+  "tur": ""
+ },
+ "515183": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "Yorumun Dinselleşmesinde Cemaat Söyleminin Rolü",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "anlam → din-dili",
+   "meaning → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "522704": {
+  "akademisyenler": [
+   "Zafer Çaylı"
+  ],
+  "baslik": "PLATON’UN ŞÖLEN’İ BAĞLAMINDA EROS KAVRAMI İLE TASAVVUFTAKİ AŞK KAVRAMI",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Zafer Çaylı": "orcid"
+  },
+  "tur": ""
+ },
+ "536022": {
+  "akademisyenler": [
+   "Zeki Özcan"
+  ],
+  "baslik": "Nikomakhos’a Etik Bağlamında Aristoteles’in Erdem Etiği",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "erdem etigi → din-ve-ahlak",
+   "ahlak felsefesi → din-ve-ahlak",
+   "erdem → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeki Özcan": "orcid"
+  },
+  "tur": ""
+ },
+ "538338": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "Orta Çağ Yahudi Düşüncesi: Gersonides ve Felsefesi Üzerine",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "orcid"
+  },
+  "tur": ""
+ },
+ "539706": {
+  "akademisyenler": [
+   "Ahmet Kavlak"
+  ],
+  "baslik": "Hıristiyanlıkta İncil Yorumlarının Tarihsel Kaynakları",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Kavlak": "orcid"
+  },
+  "tur": ""
+ },
+ "540639": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "KANT’IN ÖLÜMSÜZLÜK VARSAYIMI BAĞLAMINDA ÖLÜMDEN SONRAKİ HAYATIN FELSEFİ GEREKÇESİ OLARAK AHLÂK",
+  "basliklar": [
+   "din-ve-ahlak",
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "olum → olum-ve-otesi",
+   "olumsuzluk → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "orcid"
+  },
+  "tur": ""
+ },
+ "541090": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "FRANKFURT OKULU’NUN TEMEL ELEŞTİRİ VE AMAÇLARI",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "pozitivizm elestirisi → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid"
+  },
+  "tur": ""
+ },
+ "545868": {
+  "akademisyenler": [
+   "Ergin Ögcem"
+  ],
+  "baslik": "Modern Batı Düşüncesinde Dini Konumlandırma Problemi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "revelation → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ergin Ögcem": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "552582": {
+  "akademisyenler": [
+   "Osman Karaağaç"
+  ],
+  "baslik": "İbnü’l ‘Arabî’nin Ahlâk Anlayışı",
+  "basliklar": [
+   "din-ve-ahlak",
+   "insan-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ethics → din-ve-ahlak",
+   "el-husn wa al-kubh → din-ve-ahlak",
+   "ahlak → din-ve-ahlak",
+   "insan-i kamil → insan-tasavvurlari",
+   "husun ve kubuh → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Osman Karaağaç": "orcid"
+  },
+  "tur": ""
+ },
+ "553577": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "The Evaluation of Averroes’ Doctrine of Conjunction of Material Intellect with Agent Intellect and Their Identity in the Context of Thomas Aquinas’ Criticism",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid"
+  },
+  "tur": ""
+ },
+ "553908": {
+  "akademisyenler": [
+   "Erol Çetin"
+  ],
+  "baslik": "Gadamer’in Felsefî Hermenötiğinde Öne Çıkan Hususlar",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "hermenotik → din-dili",
+   "felsefi hermenotik → din-dili",
+   "yontem → din-felsefesi-tanim-yontem-tarih",
+   "anlam → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Erol Çetin": "orcid"
+  },
+  "tur": ""
+ },
+ "555109": {
+  "akademisyenler": [
+   "İsmail Hakkı Kumbasar"
+  ],
+  "baslik": "Herakleitos ve Lao Tzu’nun Düşüncelerinin Logos ve Tao Kavramları Merkezinde Karşılaştırılması",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Hakkı Kumbasar": "profil"
+  },
+  "tur": ""
+ },
+ "555295": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "ALİYA İZZETBEGOVİÇ’İN SİYASAL ONTOLOJİSİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "poltics and ethics → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "profil"
+  },
+  "tur": ""
+ },
+ "555342": {
+  "akademisyenler": [
+   "Mustafa Ateş"
+  ],
+  "baslik": "Borden Parker Bowne'un Tanrı'nın Kişiliği Problemine Yaklaşımı",
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Ateş": "orcid"
+  },
+  "tur": ""
+ },
+ "555991": {
+  "akademisyenler": [
+   "Melih Taştan"
+  ],
+  "baslik": "AHLÂK VE EDEBİYAT İLİŞKİSİ AÇISINDAN MEHMET AKİF ERSOY ÖRNEĞİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Melih Taştan": "orcid"
+  },
+  "tur": ""
+ },
+ "566830": {
+  "akademisyenler": [
+   "Muharrem Şahiner"
+  ],
+  "baslik": "GAZZALİ'NİN NEDENSELLİK ANLAYIŞI İLE MALEBRANCHE'IN OKAZYONALİZMİNİN KARŞILAŞTIRILMASI",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "nedensellik; gazali; malebranche; irade; devamli yaratma → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muharrem Şahiner": "profil"
+  },
+  "tur": ""
+ },
+ "569693": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "MANTIKÇI PARADİGMA VE GÜNDELİK DİL FELSEFESİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "anlam → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid"
+  },
+  "tur": ""
+ },
+ "573047": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Kierkegaard'da Ahlakın Öznelliği Problemi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "oznel ahlak → din-ve-ahlak",
+   "subjective ethics → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "orcid"
+  },
+  "tur": ""
+ },
+ "577866": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Kayıp Aydınlanma: Arap Fetihlerinden Timur’a Orta Asya’nın Altın Çağı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "581849": {
+  "akademisyenler": [
+   "Mehmet Akif Altunışık"
+  ],
+  "baslik": "İLK DEİSTLERE GÖRE DEİZMİN TEMEL İNANÇLARI",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-ahlak",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "belief → din-epistemolojisi",
+   "deism → tanri-alem-iliskisi",
+   "reason → din-epistemolojisi",
+   "revelation → din-epistemolojisi",
+   "morality → din-ve-ahlak",
+   "inanc → din-epistemolojisi",
+   "deizm → tanri-alem-iliskisi",
+   "akil → din-epistemolojisi",
+   "vahiy → din-epistemolojisi",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Akif Altunışık": "orcid"
+  },
+  "tur": ""
+ },
+ "582360": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "Temsil-Taklit İlişkisi Açısından Tasvirin Teorik Zemini -İbnü’l-Arabî’nin Eserleri Esasında-",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "creation → tanri-alem-iliskisi",
+   "salvation → dini-cesitlilik",
+   "kurtulus → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "586864": {
+  "akademisyenler": [
+   "Ahmet Uğurlu"
+  ],
+  "baslik": "Kant’ın Ruhun Ölümsüzlüğüne İlişkin Görüşlere Yönelik Eleştirileri ve Phaidon Diyaloğundan Hareketle Platon’un Bu Eleştirelere Verebileceği Olası Cevaplar",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Uğurlu": "orcid"
+  },
+  "tur": ""
+ },
+ "589602": {
+  "akademisyenler": [
+   "Fatma Yüce"
+  ],
+  "baslik": "Sophialogos’tan Logosophia’ya Felsefeye Anlam Merkezli Yeni Bir Perspektif",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "anlam → din-dili",
+   "meaning → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatma Yüce": "orcid"
+  },
+  "tur": ""
+ },
+ "605860": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "İmparatorluğun Ontolojik Grameri versus Ulus-Devletin İdeolojik Mantığı",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "612790": {
+  "akademisyenler": [
+   "Abdulhan Ünlüsoy"
+  ],
+  "baslik": "Felsefedeki Metodolojik Bir Yaklaşım Olarak Deneysel Felsefe Akımının Yargı Analizlerinin Epistemik Değeri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "metodoloji → din-felsefesi-tanim-yontem-tarih"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Abdulhan Ünlüsoy": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "612794": {
+  "akademisyenler": [
+   "Ahmet Kavlak"
+  ],
+  "baslik": "“Nedensellik” Üzerine",
+  "basliklar": [
+   "tanri-alem-iliskisi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "nedensellik → tanri-alem-iliskisi",
+   "zorunlu sifatlar → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Kavlak": "orcid"
+  },
+  "tur": ""
+ },
+ "617297": {
+  "akademisyenler": [
+   "Ali Yıldırım"
+  ],
+  "baslik": "Ödev Etiğinin Dini Etik Açısından Değerlendirilmesi",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ilahi buyruk etigi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ali Yıldırım": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "620881": {
+  "akademisyenler": [
+   "Zafer Çaylı"
+  ],
+  "baslik": "BİR OSMANLI AYDINI AHMET MİTHAT EFENDİ VE BAZI FELSEFİ GÖRÜŞLERİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "positivism → din-ve-bilim",
+   "morality → din-ve-ahlak",
+   "pozitivizm → din-ve-bilim",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zafer Çaylı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "626301": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "Dil Felsefesi III: İkinci Wittgenstein’da Gramer Paradigması",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil felsefesi → din-dili",
+   "wittgenstein → din-dili",
+   "gundelik dil felsefesi → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "orcid"
+  },
+  "tur": ""
+ },
+ "640199": {
+  "akademisyenler": [
+   "Muharrem Şahiner"
+  ],
+  "baslik": "İHVÂN-I SAFÂ’NIN DİN DİLİ BAĞLAMINDA ESKATOLOJİ",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "death → olum-ve-otesi",
+   "resurrection → olum-ve-otesi",
+   "olum → olum-ve-otesi",
+   "dirilis → olum-ve-otesi",
+   "ahiret hayati → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muharrem Şahiner": "orcid"
+  },
+  "tur": ""
+ },
+ "644502": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "Thomas Aquinas’ın De Aeterniate Mundi (Âlemin Ezeliliğine Dair) Risalesinin Değerlendirmesi",
+  "basliklar": [
+   "tanri-alem-iliskisi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ezelilik → tanrinin-sifatlari",
+   "zamansal yaratma → tanri-alem-iliskisi",
+   "ezeli yaratma → tanrinin-sifatlari",
+   "ezeli yaratma → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "647683": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Tertîbu’l-ulûm ve Kevâkib-i Seb’a’daki Öğrenim Kademeleri Benzerliği Üzerine",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "649479": {
+  "akademisyenler": [
+   "Aykut Alper Yılmaz"
+  ],
+  "baslik": "Are We Bodies or Souls? New York, NY: Oxford University Press, 2019",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "bedenler → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [
+   "olum-ve-otesi"
+  ],
+  "kanit": {
+   "Aykut Alper Yılmaz": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "650183": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "İMKÂNSIZ DEVLET: MODERN ÇAĞDA BİR İSLAM DEVLETİ NİÇİN MÜMKÜN DEĞİLDİR?",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "656785": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Delilci Kötülük Argümanının Sınırları",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "willam rowe → kotuluk-problemi",
+   "problem of evil → kotuluk-problemi",
+   "willam rowe → kotuluk-problemi",
+   "kotuluk problemi → kotuluk-problemi",
+   "delilci arguman → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "orcid"
+  },
+  "tur": ""
+ },
+ "659171": {
+  "akademisyenler": [
+   "Rafız Manafov"
+  ],
+  "baslik": "Aristoteles’in Epistemolojisinde Tümevarım ve Soyutlama İlkesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rafız Manafov": "orcid"
+  },
+  "tur": ""
+ },
+ "668717": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "Musa b. Meymûn (Maimonides), Delâletu'l-Hâirîn",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "kurum"
+  },
+  "tur": ""
+ },
+ "669878": {
+  "akademisyenler": [
+   "Adem İrmak"
+  ],
+  "baslik": "Dialectical Encounters: Contemporary Turkish Muslim Thought in Dialogue",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Adem İrmak": "orcid"
+  },
+  "tur": ""
+ },
+ "685195": {
+  "akademisyenler": [
+   "Sümeyra Turan"
+  ],
+  "baslik": "Abdurrahman Bedevî ve Bir Varoluşçuluk Denemesi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Sümeyra Turan": "orcid"
+  },
+  "tur": ""
+ },
+ "685510": {
+  "akademisyenler": [
+   "Melih Taştan"
+  ],
+  "baslik": "Mehmet Akif Ersoy Düşüncesinde Bireysel Ahlak İlkeleri",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bireysel ahlak → din-ve-ahlak",
+   "bireysel ahlak ilkeleri → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Melih Taştan": "orcid"
+  },
+  "tur": ""
+ },
+ "690853": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "FUAT SEZGİN’İN BİLİMLER TARİHİ PARADİGMASI: GELECEK BİR GEÇMİŞ OLARAK BİLİMLER TARİHİNİN TAHAYYÜLÜ VE İHSAN FAZLIOĞLU İLE TEFEKKÜRÜ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "orcid"
+  },
+  "tur": ""
+ },
+ "690929": {
+  "akademisyenler": [
+   "Hüsnü Aydeniz"
+  ],
+  "baslik": "Geleneksel Değerler Üzerinden Bir Transhümanizm Eleştirisi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "transhumanizm → din-ve-bilim",
+   "bilim → din-ve-bilim",
+   "transhumanism → din-ve-bilim",
+   "traditional values → din-ve-ahlak",
+   "science → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hüsnü Aydeniz": "orcid"
+  },
+  "tur": ""
+ },
+ "695621": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "Fârâbî’nin Sisteminde Din-Felsefe, Peygambe r-Filozof ilişkisi ve Karşılıklı İşlevleri",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "profil"
+  },
+  "tur": ""
+ },
+ "704626": {
+  "akademisyenler": [
+   "Ahmet Kavlak"
+  ],
+  "baslik": "“İrade” ve “Kelam” Sıfatları Üzerine",
+  "basliklar": [
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "sifat → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Kavlak": "orcid"
+  },
+  "tur": ""
+ },
+ "715711": {
+  "akademisyenler": [
+   "Fatih Taştan"
+  ],
+  "baslik": "REFLECTIONS OF SUBJECTIVISM IN NIETZSCHE'S THOUGHT",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Fatih Taştan": "profil"
+  },
+  "tur": ""
+ },
+ "718958": {
+  "akademisyenler": [
+   "Mehmet Akif Altunışık"
+  ],
+  "baslik": "Shaftesbury’de Ahlakın Temeli: Ahlak Duygusu",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "human nature → insan-tasavvurlari",
+   "ethical justification → din-epistemolojisi",
+   "virtue → din-ve-ahlak",
+   "insan dogasi → insan-tasavvurlari",
+   "ahlak duygusu → din-ve-ahlak",
+   "etik temellendirme → din-ve-ahlak",
+   "erdem → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Akif Altunışık": "orcid"
+  },
+  "tur": ""
+ },
+ "721844": {
+  "akademisyenler": [
+   "Cafer Sadık Yaran"
+  ],
+  "baslik": "Kur’an ve Mantık: Kur’an’da Kanıtlı Düşünmenin Önemi ve Örnekleri",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Cafer Sadık Yaran": "profil"
+  },
+  "tur": ""
+ },
+ "722374": {
+  "akademisyenler": [
+   "Aykut Alper Yılmaz"
+  ],
+  "baslik": "Richard Swinburne'ün Düalizm Savunusu",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "soul → olum-ve-otesi",
+   "ruh → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Aykut Alper Yılmaz": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "735959": {
+  "akademisyenler": [
+   "Metin Yasa"
+  ],
+  "baslik": "SAVAŞ VE BARIŞ DURUMU: NEDENLER, İSTENÇLER VE BENLİKLER ÜZERİNDEN BİR TARTIŞMA",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Metin Yasa": "kurum"
+  },
+  "tur": ""
+ },
+ "735990": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "POLİTİKA-SIZ DİL, ESTETK-SİZ SÖZ “MEDENİYET DİLİ OLARAK TÜRKÇE”",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "kurum"
+  },
+  "tur": ""
+ },
+ "739237": {
+  "akademisyenler": [
+   "Mehmet Sait Reçber"
+  ],
+  "baslik": "Bayle, Spinoza ve Panteizm Meselesi",
+  "basliklar": [
+   "tanri-alem-iliskisi",
+   "tanri-tasavvurlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "panteizm → tanri-alem-iliskisi",
+   "ateizm → teizme-yonelik-itirazlar",
+   "askinlik → tanri-tasavvurlari",
+   "pantheism → tanri-alem-iliskisi",
+   "atheism → teizme-yonelik-itirazlar",
+   "transcendence → tanri-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sait Reçber": "orcid"
+  },
+  "tur": ""
+ },
+ "740570": {
+  "akademisyenler": [
+   "Şahin Efil"
+  ],
+  "baslik": "MODERN TIPTA ÖLÜMÜN NELİĞİ ÜZERİNE",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "olum → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Şahin Efil": "orcid"
+  },
+  "tur": ""
+ },
+ "741670": {
+  "akademisyenler": [
+   "Rahim Acar"
+  ],
+  "baslik": "Dinin Temeli: Farabi'nin ve İbn Sina'nın Mevzisine Dair Bir Değerlendirme",
+  "basliklar": [
+   "din-dili",
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "din dili → din-dili",
+   "dini cesitlilik → dini-cesitlilik",
+   "religious language → din-dili",
+   "religious diversity → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rahim Acar": "orcid"
+  },
+  "tur": ""
+ },
+ "74494": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "Gazali'nin Nedensellik Teorisi",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "causality → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "74499": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "Gazalî'nin Sebeplilik Düşüncesi Üzerine Yapılan Tartışmalar",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "causality → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "747915": {
+  "akademisyenler": [
+   "Tuncay İmamoğlu"
+  ],
+  "baslik": "DİN ve MODERN DÜŞÜNCE ÜZERİNE",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tuncay İmamoğlu": "kurum"
+  },
+  "tur": ""
+ },
+ "750621": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Thomas Bauer, Müphemlik Kültürü ve İslâm: Farklı bir İslâm Tarihi Okuması",
+  "basliklar": [],
+  "durum": "kelime-yok",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "751852": {
+  "akademisyenler": [
+   "Hande Nur Bozbuğa"
+  ],
+  "baslik": "İzmirli İsmail Hakkı'nın Metafizik Alana Dair Bilinmeyen Bir Eseri: Muhtasar mâ ba'de't-tabîa",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Hande Nur Bozbuğa": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "752748": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "2./8. Yüzyılda Önemli Bir Tartışma: Halku'l-Kur'ân (Kur’an’ın Yaratılmışlığı Meselesi)",
+  "basliklar": [
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ilahi sifatlar → tanrinin-sifatlari",
+   "divine attributes → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid"
+  },
+  "tur": ""
+ },
+ "754340": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "God’s Command",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ilahi buyruk teorisi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "755563": {
+  "akademisyenler": [
+   "Mehmet Ulukütük"
+  ],
+  "baslik": "Tarihsel/Toplumsal Apriori ve Ahd-i Zihnî/Hâricî Kavramları Üzerine Bir İnceleme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ulukütük": "orcid"
+  },
+  "tur": ""
+ },
+ "757297": {
+  "akademisyenler": [
+   "Gülşen Yaylı"
+  ],
+  "baslik": "MEVLÂNA DÜŞÜNCESİNDE FELSEFE VE HAKİKAT",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "akil → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Gülşen Yaylı": "kurum"
+  },
+  "tur": ""
+ },
+ "758059": {
+  "akademisyenler": [
+   "Zeynep Gemuhluoğlu"
+  ],
+  "baslik": "“Varlık Dağını Delmek”: İbnü’l-Arabî’nin Eserleri Esâsında Varlık, Tecrübe ve Ahlâk Açısından Aşk",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "mysticism (tasawwuf) → dini-tecrube",
+   "ethics → din-ve-ahlak",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Zeynep Gemuhluoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "762545": {
+  "akademisyenler": [
+   "Kibar Gürbüz"
+  ],
+  "baslik": "Spinoza’s Distinction between Religion and Reason",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "reason → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kibar Gürbüz": "orcid"
+  },
+  "tur": ""
+ },
+ "767869": {
+  "akademisyenler": [
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "DİL-KÜLTÜR İLİŞKİSİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ruhattin Yazoğlu": "kurum"
+  },
+  "tur": ""
+ },
+ "768094": {
+  "akademisyenler": [
+   "Tuncay İmamoğlu"
+  ],
+  "baslik": "SÜREKLİLİK VE DEĞİŞİM ARASINDA AHMET HAMDI TANPINAR",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tuncay İmamoğlu": "kurum"
+  },
+  "tur": ""
+ },
+ "770355": {
+  "akademisyenler": [
+   "Mehmet Ata Az"
+  ],
+  "baslik": "Farâbî’nin Eserlerinin Latinceye Tercüme Süreci ve Latin Düşüncesine Etkisi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "classification of sciences → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Ata Az": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "773477": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "Dİltheyda Tarix va Ma'no",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "akil → din-epistemolojisi",
+   "anlam → din-dili",
+   "hermeneutik → din-dili",
+   "akil → din-epistemolojisi",
+   "anlam → din-dili",
+   "hermeneutics → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "774269": {
+  "akademisyenler": [
+   "Vedat Tezcan"
+  ],
+  "baslik": "Whitehead’in Postmodern Felsefi Perspektifinden Kendini Belirleyen Dindar Oluş",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "causality → tanri-alem-iliskisi",
+   "dindarlik → dini-pratik",
+   "nedensellik → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Vedat Tezcan": "orcid"
+  },
+  "tur": ""
+ },
+ "778810": {
+  "akademisyenler": [
+   "Beyza Nur Çavuş"
+  ],
+  "baslik": "KİMİ NÖROLOJİK VERİLER IŞIĞINDA BEYİN-BİLİNÇ İLİŞKİSİ II",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Beyza Nur Çavuş": "profil"
+  },
+  "tur": ""
+ },
+ "782680": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Aliya İzzetbegoviç’e Göre Bireyin ve Toplumun Eğitiminde Kadının Rolü",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "790263": {
+  "akademisyenler": [
+   "Mehmet Sulhan"
+  ],
+  "baslik": "Covid-19 Bağlamında Kötülük Probleminin Çeşitleri",
+  "basliklar": [
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kotuluk → kotuluk-problemi",
+   "evil → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sulhan": "orcid"
+  },
+  "tur": ""
+ },
+ "790348": {
+  "akademisyenler": [
+   "Yasin Gökhan"
+  ],
+  "baslik": "Dine Eleştirel Yaklaşımlar Bağlamında Pozitivizmin Serencamı",
+  "basliklar": [
+   "din-ve-bilim",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "akil → din-epistemolojisi",
+   "bilim → din-ve-bilim",
+   "pozitivizm → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yasin Gökhan": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "790882": {
+  "akademisyenler": [
+   "Muhammet Sait Duran"
+  ],
+  "baslik": "Euthyphron-İkilemi: Ahlak ve İlahi İrade İlişkisi",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak metafizigi → din-ve-ahlak",
+   "husun ve kubuh → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhammet Sait Duran": "orcid"
+  },
+  "tur": ""
+ },
+ "791101": {
+  "akademisyenler": [
+   "Şahin Efil"
+  ],
+  "baslik": "TOLSTOY'DA SANATIN DİN VE AHLAKLA İLİŞKİSİ",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "morality → din-ve-ahlak",
+   "ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Şahin Efil": "profil"
+  },
+  "tur": ""
+ },
+ "795848": {
+  "akademisyenler": [
+   "Engin Erdem"
+  ],
+  "baslik": "EBÛ HANÎFE’NİN İMAN ANLAYIŞI ÜZERİNE BAZI FELSEFİ MÜLAHAZALAR",
+  "basliklar": [
+   "din-epistemolojisi",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "iman → din-epistemolojisi",
+   "akil → din-epistemolojisi",
+   "delil → tanrinin-varliginin-delilleri",
+   "faith → din-epistemolojisi",
+   "reason → din-epistemolojisi",
+   "evidence → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Engin Erdem": "orcid"
+  },
+  "tur": ""
+ },
+ "797570": {
+  "akademisyenler": [
+   "Betül Akdemir Süleyman"
+  ],
+  "baslik": "Mistisizmin Bağlamsalcı Okuması II: Mistik Tecrübe Bağlam İlişkisi",
+  "basliklar": [
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mistik tecrube → dini-tecrube"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Betül Akdemir Süleyman": "orcid"
+  },
+  "tur": ""
+ },
+ "797731": {
+  "akademisyenler": [
+   "Engin Erdem"
+  ],
+  "baslik": "İyilik ve Sonsuzluk: Mâtürîdî ve Debûsî’nin Metafiziğinde Ölüm ve Hayatın Anlamı",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "death → olum-ve-otesi",
+   "faith → din-epistemolojisi",
+   "olum → olum-ve-otesi",
+   "iman → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Engin Erdem": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "799449": {
+  "akademisyenler": [
+   "Kasım Müminoğlu"
+  ],
+  "baslik": "Felsefe ve Sinema",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Kasım Müminoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "800778": {
+  "akademisyenler": [
+   "İsmail Şimşek"
+  ],
+  "baslik": "Mutahhari, Materyalizm ve Eleştirisi",
+  "basliklar": [
+   "din-ve-bilim"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "evrim → din-ve-bilim",
+   "yaratilis → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "İsmail Şimşek": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "802559": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Hintliler İneğe Mi Tapar? Bîrûnî’nin Tahkîku Mâ Li’l-Hind Üzerinden Bir Değerlendirme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "803261": {
+  "akademisyenler": [
+   "Mehmet Akif Altunışık"
+  ],
+  "baslik": "SHAFTESBURY'DE DİN-AHLAK İLİŞKİSİ",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "relationship between religion and morality → din-ve-ahlak",
+   "virtue → din-ve-ahlak",
+   "religious morality → din-ve-ahlak",
+   "secular morality → din-ve-ahlak",
+   "din-ahlak iliskisi → din-ve-ahlak",
+   "erdem → din-ve-ahlak",
+   "dini ahlak → din-ve-ahlak",
+   "dindisi ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Akif Altunışık": "profil"
+  },
+  "tur": ""
+ },
+ "807382": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Aziz Nesin Düşüncesinde Ateizmin Yansımaları",
+  "basliklar": [
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "atheism → teizme-yonelik-itirazlar",
+   "ateizm → teizme-yonelik-itirazlar",
+   "ahiret → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "808328": {
+  "akademisyenler": [
+   "Mevlüt Albayrak"
+  ],
+  "baslik": "Hayatın İçinde Olarak Tanrı/Allah ve Hayat: Besmele ve İnsanın Etik-Estetik Oluşum Resmi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mevlüt Albayrak": "kurum"
+  },
+  "tur": ""
+ },
+ "812523": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Alaa Al-Din Arafat, Egypt in Crisis: The Fall of Islamism and Prospects of Democratization",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "815098": {
+  "akademisyenler": [
+   "Mehmet Demirtaş"
+  ],
+  "baslik": "KÖTÜLÜK PROBLEMİ TEİZMİN ÜSTESİNDEN GELEMEYECEĞİ BİR KONU MUDUR?",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanri-tasavvurlari",
+   "tanrinin-sifatlari",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "teizm → tanri-tasavvurlari",
+   "ateizm → teizme-yonelik-itirazlar",
+   "iyilik → tanrinin-sifatlari",
+   "kotuluk → kotuluk-problemi",
+   "kudret → tanrinin-sifatlari",
+   "teizm → tanri-tasavvurlari",
+   "ateizm → teizme-yonelik-itirazlar",
+   "iyilik → tanrinin-sifatlari",
+   "kotuluk → kotuluk-problemi",
+   "kudret → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Demirtaş": "orcid"
+  },
+  "tur": ""
+ },
+ "816294": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Êthostan Ahlâka Antik Yunan Ahlâk Literatürünün İslâm Dünyasına İntikali ve Alımlanışı",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlak → din-ve-ahlak",
+   "islam ahlak felsefesi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "818466": {
+  "akademisyenler": [
+   "Kevser Çelik"
+  ],
+  "baslik": "Dil, Tercüme, Felsefe",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "dil → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kevser Çelik": "kurum"
+  },
+  "tur": ""
+ },
+ "829010": {
+  "akademisyenler": [
+   "Rıfat Atay"
+  ],
+  "baslik": "Meryem Cemile'nin Öteki Algısı -Batı Düşüncesi Örneği-",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rıfat Atay": "orcid"
+  },
+  "tur": ""
+ },
+ "829092": {
+  "akademisyenler": [
+   "Mehmet Sait Reçber"
+  ],
+  "baslik": "Oakes, Teizm ve Panteizm",
+  "basliklar": [
+   "tanri-alem-iliskisi",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "theism → tanri-tasavvurlari",
+   "pantheism → tanri-alem-iliskisi",
+   "creation → tanri-alem-iliskisi",
+   "teizm → tanri-tasavvurlari",
+   "panteizm → tanri-alem-iliskisi",
+   "yaratma → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sait Reçber": "orcid"
+  },
+  "tur": ""
+ },
+ "843268": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "IBN RÜŞD DÜŞÜNCESİNDE MUCİZENİN KANITLANMASI SORUNU",
+  "basliklar": [
+   "din-epistemolojisi",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "vahiy → din-epistemolojisi",
+   "nedensellik → tanri-alem-iliskisi",
+   "miracle → tanri-alem-iliskisi",
+   "causality → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "profil"
+  },
+  "tur": ""
+ },
+ "844145": {
+  "akademisyenler": [
+   "Şahin Efil"
+  ],
+  "baslik": "İBN ARABÎ’YE GÖRE TASAVVUF FELSEFESİNDE KÖTÜLÜK PROBLEMİ VE TEODİSE",
+  "basliklar": [
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kotuluk problemi → kotuluk-problemi",
+   "teodise → kotuluk-problemi",
+   "the problem of evil → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Şahin Efil": "kurum"
+  },
+  "tur": ""
+ },
+ "844172": {
+  "akademisyenler": [
+   "Yaşar Türkben"
+  ],
+  "baslik": "D. Z. PHILLIPS’DE KÖTÜLÜK PROBLEMİ",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kotuluk → kotuluk-problemi",
+   "evil → kotuluk-problemi",
+   "omnipotent → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Yaşar Türkben": "profil"
+  },
+  "tur": ""
+ },
+ "844254": {
+  "akademisyenler": [
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "ALASDAIR MACINTYRE'DA OTORİTE VE DİNİ İNANCIN TEMELİ",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "wittgenstein → din-dili",
+   "wittgenstein → din-dili",
+   "religious language → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ruhattin Yazoğlu": "kurum"
+  },
+  "tur": ""
+ },
+ "844307": {
+  "akademisyenler": [
+   "Ayşe Sıdıka Oktay"
+  ],
+  "baslik": "NASİRÜDDIN TÜSİ'NİN İLİM/HİKMET SINIFLANDIRMASINA YANSIYAN DİN FELSEFE İLİŞKİLERİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "classification of science/knowledge → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ayşe Sıdıka Oktay": "profil"
+  },
+  "tur": ""
+ },
+ "846918": {
+  "akademisyenler": [
+   "Hande Nur Bozbuğa"
+  ],
+  "baslik": "İzmirli İsmail Hakkı’da Kötülük Problemi ve Teodise",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "the problem of evil → kotuluk-problemi",
+   "theodicy → kotuluk-problemi",
+   "kotuluk problemi → kotuluk-problemi",
+   "teodise → kotuluk-problemi",
+   "inayet → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hande Nur Bozbuğa": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "846969": {
+  "akademisyenler": [
+   "Bilal Bekalp"
+  ],
+  "baslik": "HALLAC-I MANSUR’DA TANRI-VARLIK ve BENLİK PROBLEMİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "bilgi → din-epistemolojisi",
+   "knowledge → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Bilal Bekalp": "profil"
+  },
+  "tur": ""
+ },
+ "848940": {
+  "akademisyenler": [
+   "Osman Zahid Çifçi"
+  ],
+  "baslik": "Birbirinin yerine kullanılan iki farklı kavram: dünyevileşme ve sekülerleşme",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Osman Zahid Çifçi": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "850953": {
+  "akademisyenler": [
+   "Mehmet Sait Reçber"
+  ],
+  "baslik": "NECATİ ÖNER, FELSEFE VE ELEŞTİREL RASYONALİZM",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "insan dogasi → insan-tasavvurlari",
+   "human nature → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sait Reçber": "kurum"
+  },
+  "tur": ""
+ },
+ "851404": {
+  "akademisyenler": [
+   "Ferhat Yöney"
+  ],
+  "baslik": "TANRISAL ÖNBILGI – ÖZGÜR İRADE SORUNU: ZAMAN DIŞI SONSUZLUK ÇÖZÜMÜ",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "ozgurluk",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "tanrisal onbilgi → tanrinin-sifatlari",
+   "ozgur irade → ozgurluk",
+   "divine foreknowledge → tanrinin-sifatlari",
+   "free will → ozgurluk",
+   "divine eternity → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Yöney": "profil"
+  },
+  "tur": ""
+ },
+ "851528": {
+  "akademisyenler": [
+   "Kemal Batak"
+  ],
+  "baslik": "ARİSTOTELES'TE ENTELEKTÜEL ERDEMLER -BİR ERDEM EPİSTEMOLOJİSİ ÖRNEĞİ-",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "virtue → din-ve-ahlak",
+   "intellectual virtues → din-ve-ahlak",
+   "moral virtues → din-ve-ahlak",
+   "virtue epistemology → din-epistemolojisi",
+   "virtue epistemology → din-ve-ahlak",
+   "erdem → din-ve-ahlak",
+   "entelektuel erdemler → din-ve-ahlak",
+   "ahlaki erdemler → din-ve-ahlak",
+   "erdem epistemolojisi → din-epistemolojisi",
+   "erdem epistemolojisi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kemal Batak": "kurum"
+  },
+  "tur": ""
+ },
+ "851697": {
+  "akademisyenler": [
+   "Ferhat Yöney"
+  ],
+  "baslik": "AHLAK FELSEFESİNDE OLGU DEĞER AYRIMI VE NESNELCİ AHLAKİ REALİZM AÇISINDAN DEĞERLENDİRİLMESİ",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ahlaki realizm → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ferhat Yöney": "profil"
+  },
+  "tur": ""
+ },
+ "852236": {
+  "akademisyenler": [
+   "Betül Akdemir Süleyman"
+  ],
+  "baslik": "Çağdaş Epistemolojide Mistik İnançların Epistemolojik Değerine İlişkin Problemler ve Çözüm Arayışları",
+  "basliklar": [
+   "din-epistemolojisi",
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "mistik tecrube → dini-tecrube",
+   "cagdas epistemoloji → din-epistemolojisi",
+   "gerekcelendirilmis dogru inanc → din-epistemolojisi",
+   "mistik birlik → dini-tecrube",
+   "mystical experience → dini-tecrube",
+   "contemporary epistemology → din-epistemolojisi",
+   "justified true belief → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Betül Akdemir Süleyman": "orcid"
+  },
+  "tur": ""
+ },
+ "852304": {
+  "akademisyenler": [
+   "Özcan Akdağ"
+  ],
+  "baslik": "İBNİ MEYMUN'A GÖRE KÖTÜLÜK SORUNU",
+  "basliklar": [
+   "din-ve-ahlak",
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kotuluk → kotuluk-problemi",
+   "ahlaki kotuluk → kotuluk-problemi",
+   "ahlaki kotuluk → din-ve-ahlak",
+   "evil → kotuluk-problemi",
+   "moral evil → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Özcan Akdağ": "kurum"
+  },
+  "tur": ""
+ },
+ "852434": {
+  "akademisyenler": [
+   "Kemal Batak"
+  ],
+  "baslik": "ERNEST SOSA VE ENTELEKTÜEL ERDEMLER",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "intellectual virtue → din-ve-ahlak",
+   "virtue epistemology → din-epistemolojisi",
+   "virtue epistemology → din-ve-ahlak",
+   "entelektuel erdem → din-ve-ahlak",
+   "erdem epistemolojisi → din-epistemolojisi",
+   "erdem epistemolojisi → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kemal Batak": "kurum"
+  },
+  "tur": ""
+ },
+ "852664": {
+  "akademisyenler": [
+   "Ramazan Ertürk"
+  ],
+  "baslik": "KANT'IN DOĞANIN BİLİMSEL ARAŞTIRILMASI İÇİN FELSEFİ YÖNTEMİ",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ramazan Ertürk": "kurum"
+  },
+  "tur": ""
+ },
+ "852666": {
+  "akademisyenler": [
+   "Ramazan Ertürk"
+  ],
+  "baslik": "KANT'IN BİLİMSEL DOĞA ARAŞTIRMASI KONUSUNDAKİ FELSEFİ METODU",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Ramazan Ertürk": "kurum"
+  },
+  "tur": ""
+ },
+ "855385": {
+  "akademisyenler": [
+   "Mehmet Sait Reçber"
+  ],
+  "baslik": "PUTNAM, REALİZM VE DİNİ İNANÇ",
+  "basliklar": [
+   "din-dili",
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "wittgenstein → din-dili",
+   "wittgenstein → din-dili",
+   "religious belief → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mehmet Sait Reçber": "kurum"
+  },
+  "tur": ""
+ },
+ "858605": {
+  "akademisyenler": [
+   "Aykut Alper Yılmaz"
+  ],
+  "baslik": "Gazzâlî’de Ruhun Tabiatı Tartışması: Maddi mi Gayri Maddi mi?",
+  "basliklar": [
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ruh → olum-ve-otesi",
+   "soul → olum-ve-otesi",
+   "the nature of the soul → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Aykut Alper Yılmaz": "orcid"
+  },
+  "tur": ""
+ },
+ "860341": {
+  "akademisyenler": [
+   "Hüsnü Aydeniz"
+  ],
+  "baslik": "Molla Sadrâ’da Allah’ı Bilmenin İmkânı ve O’nun Hakkında Konuşmanın Sınırları",
+  "basliklar": [
+   "din-dili",
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "religious language → din-dili",
+   "knowledge → din-epistemolojisi",
+   "din dili → din-dili",
+   "bilgi → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hüsnü Aydeniz": "orcid"
+  },
+  "tur": ""
+ },
+ "860681": {
+  "akademisyenler": [
+   "Ruhattin Yazoğlu"
+  ],
+  "baslik": "SAMUEL ALEXANDER’IN MEKÂN-ZAMANDAKİ TANRI BELİRİMCİLİĞİ VE DOĞRU-YANLIŞ ANLAYIŞI",
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "emergent evolution → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ruhattin Yazoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "864464": {
+  "akademisyenler": [
+   "Sümeyra Turan"
+  ],
+  "baslik": "Ahmet Bayındır, Ockhamlı William’ın Din Felsefesi. Bursa: Emin Yayınları, 2019. 209 s.",
+  "basliklar": [],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "epistemoloji → din-epistemolojisi"
+  ],
+  "ilgili": [
+   "din-felsefesi-tanim-yontem-tarih"
+  ],
+  "kanit": {
+   "Sümeyra Turan": "orcid"
+  },
+  "tur": "kitap-tanitimi"
+ },
+ "866414": {
+  "akademisyenler": [
+   "Cafer Sadık Yaran"
+  ],
+  "baslik": "Resim ve Etik: Batı Resim Sanatında Ahlaki Temalar ve Örnekler",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "etik → din-ve-ahlak",
+   "ahlak → din-ve-ahlak",
+   "erdem → din-ve-ahlak",
+   "ethics → din-ve-ahlak",
+   "morality → din-ve-ahlak",
+   "virtue → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Cafer Sadık Yaran": "orcid"
+  },
+  "tur": ""
+ },
+ "867711": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "İslam Cumhuriyeti’nde 40 Yıl: İran’da Toplum, Siyaset ve Değişim",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "869619": {
+  "akademisyenler": [
+   "Fatımatüzzehra Yaşar"
+  ],
+  "baslik": "Dini Bilginin İmkanı Bağlamında İmajist Bilgi",
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "knowledge → din-epistemolojisi",
+   "religious knowledge → din-epistemolojisi",
+   "epistemology → din-epistemolojisi",
+   "bilgi → din-epistemolojisi",
+   "dini bilgi → din-epistemolojisi",
+   "epistemoloji → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Fatımatüzzehra Yaşar": "orcid"
+  },
+  "tur": ""
+ },
+ "887932": {
+  "akademisyenler": [
+   "Emine Gören Bayam"
+  ],
+  "baslik": "LEİBNİZ’DE İLAHİ NEDENSELLİK",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "divine causation → tanri-alem-iliskisi",
+   "occasionalism → tanri-alem-iliskisi",
+   "continuous creation → tanri-alem-iliskisi",
+   "ilahi nedensellik → tanri-alem-iliskisi",
+   "surekli yaratma → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Emine Gören Bayam": "orcid"
+  },
+  "tur": ""
+ },
+ "892130": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Alexander Bevilacqua. Şark Kütüphanesi: İslam ve Avrupa Aydınlanması.",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "orcid"
+  },
+  "tur": ""
+ },
+ "906725": {
+  "akademisyenler": [
+   "Rafız Manafov"
+  ],
+  "baslik": "Akılsal Zorunluluk ve Dinî Meşruiyet Bağlamında İbn Rüşd’ün Felsefe Savunusu",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Rafız Manafov": "orcid"
+  },
+  "tur": ""
+ },
+ "915913": {
+  "akademisyenler": [
+   "Tugay Taşçı"
+  ],
+  "baslik": "Galen’in Element Teorisi ve Acı Argümanı Bağlamında Antik Atomcu Teoriye Getirdiği Eleştiriler",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Tugay Taşçı": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "928539": {
+  "akademisyenler": [
+   "Ahmet Bayındır"
+  ],
+  "baslik": "DİNÎ AHLÂKIN OTONOMLUĞUNUN İMKÂNI",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "religious morality → din-ve-ahlak",
+   "dini ahlak → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Ahmet Bayındır": "orcid"
+  },
+  "tur": ""
+ },
+ "932024": {
+  "akademisyenler": [
+   "Sevcan Öztürk"
+  ],
+  "baslik": "TEOLOJİK-EPİSTEMOLOJİK BİR MESELE OLARAK KARL RAHNER’DA ATEİZM VE ATEİSTLERİN KURTULUŞUNUN İMKANI SORUSU",
+  "basliklar": [
+   "dini-cesitlilik",
+   "teizme-yonelik-itirazlar"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "dini kapsayicilik → dini-cesitlilik",
+   "ateizm → teizme-yonelik-itirazlar",
+   "dini kapsayicilik → dini-cesitlilik",
+   "atheism → teizme-yonelik-itirazlar",
+   "religious inclusivism → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Sevcan Öztürk": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "940133": {
+  "akademisyenler": [
+   "Enis Doko"
+  ],
+  "baslik": "Evren Kendi Kendine Ortaya Çıkmış Olabilir mi?",
+  "basliklar": [
+   "din-ve-bilim",
+   "tanri-alem-iliskisi",
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kelam'in kozmolojik argumani → tanrinin-varliginin-delilleri",
+   "kelam'in kozmolojik argumani → din-ve-bilim",
+   "nedensellik ilkesi → tanri-alem-iliskisi",
+   "hudus delili → tanrinin-varliginin-delilleri",
+   "kelam'in kozmolojik argumani → tanrinin-varliginin-delilleri",
+   "kelam'in kozmolojik argumani → din-ve-bilim",
+   "tanri'nin varligi → tanrinin-varliginin-delilleri",
+   "kalam cosmological argument → tanrinin-varliginin-delilleri",
+   "existence of god → tanrinin-varliginin-delilleri"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Enis Doko": "orcid"
+  },
+  "tur": ""
+ },
+ "948264": {
+  "akademisyenler": [
+   "Nusret Taş"
+  ],
+  "baslik": "Sudûr Nazariyesini Savunan İlk Dönem İslam Filozoflarının Kötülük Problemi Bağlamında Başvurdukları Temel Kavramlar",
+  "basliklar": [
+   "kotuluk-problemi",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "goodness → tanrinin-sifatlari",
+   "evil → kotuluk-problemi",
+   "iyilik → tanrinin-sifatlari",
+   "kotuluk → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Nusret Taş": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "949166": {
+  "akademisyenler": [
+   "Semra Tüfenkci"
+  ],
+  "baslik": "İBN MEYMÛN’DA TANRI’NIN İLMİ VE İNÂYET İLİŞKİSİ PROBLEMİNE ELEŞTİREL BİR YAKLAŞIM",
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "hak etmeye gore inayet → tanri-alem-iliskisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Semra Tüfenkci": "orcid"
+  },
+  "tur": ""
+ },
+ "953710": {
+  "akademisyenler": [
+   "Betül Akdemir Süleyman"
+  ],
+  "baslik": "Saf Deneyim Dünyası: William James’in Radikal Deneyimciliği",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "epistemoloji → din-epistemolojisi",
+   "epistemoloji → din-epistemolojisi",
+   "epistemology → din-epistemolojisi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Betül Akdemir Süleyman": "orcid"
+  },
+  "tur": ""
+ },
+ "963560": {
+  "akademisyenler": [
+   "Selin Olur"
+  ],
+  "baslik": "Sevgi ve Adalet Yazar: Paul Ricoeur (İstanbul: Sel Yayınları, 2016)",
+  "basliklar": [
+   "din-dili"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "din dili → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Selin Olur": "orcid"
+  },
+  "tur": ""
+ },
+ "964858": {
+  "akademisyenler": [
+   "Kayhan Özaykal"
+  ],
+  "baslik": "Üç Kardeş Meselesi ve İlahi Adaletin İmkanı",
+  "basliklar": [
+   "din-ve-ahlak",
+   "kotuluk-problemi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "problem of evil → kotuluk-problemi",
+   "theodicy → kotuluk-problemi",
+   "divine justice → din-ve-ahlak",
+   "teodise → kotuluk-problemi",
+   "ilahi adalet → din-ve-ahlak",
+   "kotuluk problemi → kotuluk-problemi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Kayhan Özaykal": "orcid"
+  },
+  "tur": ""
+ },
+ "971756": {
+  "akademisyenler": [
+   "Hande Nur Bozbuğa"
+  ],
+  "baslik": "İzmirli İsmail Hakkı’nın Mantık Tasavvurunun Gelişimi",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "methodology → din-felsefesi-tanim-yontem-tarih",
+   "metodoloji → din-felsefesi-tanim-yontem-tarih"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hande Nur Bozbuğa": "orcid"
+  },
+  "tur": ""
+ },
+ "981763": {
+  "akademisyenler": [
+   "Hüsnü Aydeniz"
+  ],
+  "baslik": "Siyasetnamelerde İfade Özgürlüğü ve Bunun Kapsamı",
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "ifade ozgurlugu → ozgurluk",
+   "ifade ozgurlugunun sinirlandirilmasi → ozgurluk",
+   "the freedom of speech → ozgurluk",
+   "the limits of freedom of speech → ozgurluk"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Hüsnü Aydeniz": "orcid"
+  },
+  "tur": ""
+ },
+ "982407": {
+  "akademisyenler": [
+   "Emine Gören Bayam"
+  ],
+  "baslik": "Açık Teizmde İlahi Zamansallık",
+  "basliklar": [
+   "tanri-tasavvurlari",
+   "tanrinin-sifatlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "open theism → tanri-tasavvurlari",
+   "acik teizm → tanri-tasavvurlari",
+   "ilahi zamansizlik → tanrinin-sifatlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Emine Gören Bayam": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "985830": {
+  "akademisyenler": [
+   "Mustafa Çakmak"
+  ],
+  "baslik": "Skolastik Felsefede Ahlâkın İnsan Doğası ve Tanrı ile İlişkisi",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "ahlak felsefesi → din-ve-ahlak",
+   "dogal yasa → din-ve-ahlak",
+   "moral philosophy → din-ve-ahlak",
+   "divine command → din-ve-ahlak",
+   "natural law → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Çakmak": "kurum"
+  },
+  "tur": ""
+ },
+ "994824": {
+  "akademisyenler": [
+   "Nur Betül Atakul"
+  ],
+  "baslik": "Kant'ın Eleştirel Felsefe Öncesi Eserlerinde ve Eleştirel Felsefesinde Fiziko-Teolojik Delilin Kullanımı",
+  "basliklar": [
+   "tanrinin-varliginin-delilleri"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "design argument → tanrinin-varliginin-delilleri",
+   "teistik deliller → tanrinin-varliginin-delilleri",
+   "fiziko-teolojik delil → tanrinin-varliginin-delilleri",
+   "fiziko-teolojik delil → din-ve-bilim",
+   "tasarim delili → tanrinin-varliginin-delilleri",
+   "ahlak delili → tanrinin-varliginin-delilleri",
+   "ahlak delili → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Nur Betül Atakul": "orcid-kaydi"
+  },
+  "tur": ""
+ },
+ "996210": {
+  "akademisyenler": [
+   "Mustafa Çakmak"
+  ],
+  "baslik": "EUTHYPHRON İKİLEMİNİN İŞARET ETTİĞİ BAZI AHLÂKÎ AÇMAZLAR",
+  "basliklar": [
+   "din-ve-ahlak"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "euthyphro dilemma → din-ve-ahlak",
+   "divine command → din-ve-ahlak",
+   "natural law → din-ve-ahlak",
+   "euthyphron ikilemi → din-ve-ahlak",
+   "dogal yasa → din-ve-ahlak",
+   "ahlaki iyi → din-ve-ahlak",
+   "ahlaki zorunluluk → din-ve-ahlak"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Mustafa Çakmak": "orcid"
+  },
+  "tur": ""
+ },
+ "998885": {
+  "akademisyenler": [
+   "Muammer İskenderoğlu"
+  ],
+  "baslik": "Muhammad Afzal Upal & Carole M. Cusack (eds.). Handbook of Islamic Sects and Movements.",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Muammer İskenderoğlu": "profil"
+  },
+  "tur": ""
+ },
+ "999154": {
+  "akademisyenler": [
+   "Selin Olur"
+  ],
+  "baslik": "İrrasyonalite ve Felsefî Sistemlerin Çoğulluğu",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Selin Olur": "profil"
+  },
+  "tur": ""
+ },
+ "999465": {
+  "akademisyenler": [
+   "Nusret Taş"
+  ],
+  "baslik": "DİYARBAKIR SINIRLARI İÇİNDE YER ALAN TARİHİ MEKANLARDAKİ GAYRİMÜSLİM MABETLERİ ÜZERİNE İNANÇ TARİHİ AÇISINDAN BİR DEĞERLENDİRME",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": false,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Nusret Taş": "orcid-kaydi"
+  },
+  "tur": ""
+ }
+}
