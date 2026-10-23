@@ -438,6 +438,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
+.akademi-metin{max-width:40rem}  /* yayın paneli kartvizitle aynı genişlikte */
 /* kişi sayfası yayın paneli: kartvizitten daha sakin bir kart */
 .yayin-panel{background:var(--card);border:1px solid color-mix(in srgb,var(--gold-logo) 35%,var(--rule));border-radius:10px;
   box-shadow:0 2px 10px rgba(35,68,110,.06);padding:1rem 1.2rem 1.1rem;margin-top:1.4rem}
@@ -1932,7 +1933,7 @@ def render_akademisyen(s: str) -> str:
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
 </section>
 <div class="fis-duzen">
-  <div class="metin">{metin}
+  <div class="metin akademi-metin">{metin}
     <p class="aciklama-kisa akademi-not">{"Listeye elle eklenmiştir. Unvan ve kurum bilgisi " + e(p.get("kurum_kaynagi") or "kamuya açık kaynaklara") + " göre, makaleler ve başlıklar" if p.get("elle") else "Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar"} DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""} ve ORCID kaydındaki DOI'li yayınlara göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] and not p.get("elle") else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
   </div>
   <aside class="yan">{"".join(yan)}</aside>
