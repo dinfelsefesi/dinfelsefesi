@@ -438,6 +438,29 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
+/* kişi sayfası yayın paneli: kartvizitten daha sakin bir kart */
+.yayin-panel{background:var(--card);border:1px solid color-mix(in srgb,var(--gold-logo) 35%,var(--rule));border-radius:10px;
+  box-shadow:0 2px 10px rgba(35,68,110,.06);padding:1rem 1.2rem 1.1rem;margin-top:1.4rem}
+.yp-bas{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem 1rem}
+.yp-bas h2{margin:0}
+.yp-sirala{display:flex;align-items:baseline;gap:.15rem .6rem;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft)}
+.yp-sirala button{font:inherit;background:none;border:0;padding:.1rem .15rem;color:var(--ink-soft);cursor:pointer;border-bottom:1px solid transparent}
+.yp-sirala button[aria-pressed="true"]{color:var(--accent-ink);border-bottom-color:var(--gold-logo)}
+.yp-sekme{margin:.7rem 0 .3rem}
+.yp-sekme button{font-size:.88rem;padding:.2rem .75rem}
+.yayin-liste{list-style:none;margin:.4rem 0 0;padding:0;counter-reset:yayin}
+.yayin-liste li{counter-increment:yayin;position:relative;padding:.6rem 0 .6rem 2.1rem;border-top:1px solid var(--rule)}
+.yayin-liste li:first-child{border-top:0}
+.yayin-liste li::before{content:counter(yayin) ".";position:absolute;left:0;top:.62rem;width:1.6rem;text-align:right;
+  font-family:var(--sans);font-size:.85rem;color:var(--gold)}
+.yayin-liste .eser-ad{font-weight:600}
+.yayin-liste .eser-bilgi{display:block}
+.yt{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+  padding:.05rem .4rem;border-radius:4px;margin-right:.45rem;vertical-align:.12em;border:1px solid currentColor;color:var(--ink-soft)}
+.yt-kitap{background:var(--accent);border-color:var(--accent);color:#fff}
+.yt-kitap-bolumu{color:var(--accent)}
+.yt-makale{color:var(--gold)}
+.yt-bildiri,.yt-tez{color:var(--accent-ink)}
 .calisanlar{margin-top:2rem}
 ul.calisan-liste{list-style:none;padding:0;margin:.4rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:var(--measure)}
 ul.calisan-liste li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
@@ -1763,9 +1786,9 @@ ORCID_TUR = {"journal-article": "Makale", "book": "Kitap", "book-chapter": "Kita
              "review": "Değerlendirme", "preprint": "Ön baskı", "other": "Diğer"}
 
 
-def orcid_diger_eserler(v) -> str:
+def diger_yayin_ogeleri(v) -> list:
     """Kişinin din felsefesi başlıklarına girmeyen yayınları: yazarı doğrulanmış öteki DergiPark makaleleri ve
-    ORCID kaydındaki eserler (yukarıdaki listede ya da DergiPark'ta zaten bulunanlar DOI ve başlıkla ayıklanır)."""
+    ORCID kaydındaki eserler (din felsefesi listesinde ya da DergiPark'ta zaten bulunanlar DOI ve başlıkla ayıklanır)."""
     doiler = {m["baglanti"].lower().removeprefix("https://doi.org/") for m in v["makaleler"] if m["doi"]}
     basliklar = {slugify(m["baslik"]) for m in v["makaleler"]}
     ogeler = []
@@ -1778,8 +1801,9 @@ def orcid_diger_eserler(v) -> str:
         if d:
             doiler.add(d)
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
-        ogeler.append((m["yil"], f'<li><a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
-                                 f'<span class="eser-bilgi">Makale · {dergi} · {e(m["yil"])}</span></li>'))
+        ogeler.append({"grup": "diger", "tur": "makale", "yil": m["yil"], "ad": m["baslik"],
+                       "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
+                               f'<span class="eser-bilgi">{dergi}, {e(m["yil"])}</span>'})
     for w in sorted(v["orcid_eser"], key=lambda w: w["yil"] or "0", reverse=True):
         ad_ = slugify(w["baslik"])
         if (w["doi"] and w["doi"].lower() in doiler) or ad_ in basliklar:
@@ -1788,15 +1812,61 @@ def orcid_diger_eserler(v) -> str:
         hedef = f'https://doi.org/{w["doi"]}' if w["doi"] else w["url"]
         bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(w["baslik"])}</a>' if hedef
                else f'<span class="eser-ad">{e(w["baslik"])}</span>')
-        bilgi = " · ".join(x for x in [ORCID_TUR.get(w["tur"], ""), e(w["dergi"]), e(w["yil"])] if x)
-        ogeler.append((w["yil"] or "0", f'<li>{bas}<span class="eser-bilgi">{bilgi}</span></li>'))
+        bilgi = ", ".join(x for x in [e(w["dergi"]), e(w["yil"])] if x)
+        ogeler.append({"grup": "diger", "tur": ORCID_YAYIN_TUR.get(w["tur"], "diger"), "yil": w["yil"] or "", "ad": w["baslik"],
+                       "html": f'{bas}<span class="eser-bilgi">{bilgi}</span>'})
+    return ogeler
+
+
+# Kişi sayfasındaki yayın listesinde tür etiketleri
+YAYIN_TUR_AD = {"kitap": "Kitap", "kitap-bolumu": "Kitap bölümü", "makale": "Makale", "bildiri": "Bildiri", "tez": "Tez",
+                "kitap-tanitimi": "Tanıtım", "ceviri": "Çeviri", "soylesi": "Söyleşi", "diger": "Diğer"}
+YAYIN_TUR_SIRA = {k: i for i, k in enumerate(YAYIN_TUR_AD)}
+ORCID_YAYIN_TUR = {"journal-article": "makale", "book": "kitap", "edited-book": "kitap", "book-chapter": "kitap-bolumu",
+                   "conference-paper": "bildiri", "conference-abstract": "bildiri", "dissertation-thesis": "tez",
+                   "translation": "ceviri", "book-review": "kitap-tanitimi", "review": "kitap-tanitimi"}
+DP_YAYIN_TUR = {"": "makale", "kitap-tanitimi": "kitap-tanitimi", "ceviri": "ceviri", "ceviri-degerlendirmesi": "ceviri",
+                "soylesi": "soylesi", "kitap": "kitap", "kitap-bolumu": "kitap-bolumu"}
+
+
+def yayin_paneli(ogeler) -> str:
+    """Kişi sayfasındaki yayın listesi: sekmeler (din felsefesi / diğer / tümü), sıralama, numara ve tür etiketi."""
     if not ogeler:
         return ""
-    ogeler.sort(key=lambda x: x[0], reverse=True)
-    return (f'<h2>Diğer yayınları <span class="say">{len(ogeler)}</span></h2>'
-            f'<p class="aciklama-kisa">Kişinin DergiPark\'taki öteki makaleleri ve ORCID kaydında yer alan yayınlar. '
-            f'Bu yayınlar din felsefesi başlıklarına bağlanmamıştır. Liste DergiPark taramasının ve ORCID kaydının güncelliğine bağlıdır.</p>'
-            f'<ul class="eser-liste">{"".join(o for _, o in ogeler)}</ul>')
+    say = {"df": sum(1 for o in ogeler if o["grup"] == "df"), "diger": sum(1 for o in ogeler if o["grup"] == "diger")}
+    ilk = "df" if say["df"] else "tumu"
+    sekmeler = "".join(f'<button type="button" data-grup="{k}" aria-pressed="{"true" if k == ilk else "false"}">{a} <span class="say">{n}</span></button>'
+                       for k, a, n in [("df", "Din felsefesi", say["df"]), ("diger", "Diğer", say["diger"]), ("tumu", "Tümü", len(ogeler))] if n)
+    siralama = ('<div class="yp-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
+                + "".join(f'<button type="button" data-alan="{k}" aria-pressed="{"true" if k == "yil" else "false"}">{a}</button>'
+                          for k, a in [("yil", "Yıl"), ("ad", "Ad"), ("tur", "Tür")]) + '</div>')
+    satirlar = "".join(
+        f'<li data-grup="{o["grup"]}" data-yil="{e(o["yil"])}" data-ad="{e(tr_anahtar(o["ad"]))}" data-tur="{YAYIN_TUR_SIRA.get(o["tur"], 99)}"'
+        f'{" hidden" if ilk != "tumu" and o["grup"] != ilk else ""}>'
+        f'<span class="yt yt-{o["tur"]}">{YAYIN_TUR_AD.get(o["tur"], "Diğer")}</span>{o["html"]}</li>'
+        for o in sorted(ogeler, key=lambda o: (o["yil"] or "0"), reverse=True))
+    notlar = ('<p class="aciklama-kisa yp-not" data-not="df">Konusu anahtar kelimelerine göre din felsefesi başlıklarına bağlanan yayınlar.</p>'
+              '<p class="aciklama-kisa yp-not" data-not="diger" hidden>DergiPark\'taki öteki makaleler ve ORCID kaydındaki yayınlar. '
+              'Bunlar din felsefesi başlıklarına bağlanmamıştır.</p>')
+    return (f'<section class="yayin-panel"><div class="yp-bas"><h2>Yayınları <span class="say">{len(ogeler)}</span></h2>{siralama}</div>'
+            f'<div class="tur-secici yp-sekme" role="group" aria-label="Yayın grubu">{sekmeler}</div>{notlar}'
+            f'<ol class="yayin-liste">{satirlar}</ol></section>' + YAYIN_JS)
+
+
+YAYIN_JS = """<script>
+(function(){var p=document.querySelector('.yayin-panel');if(!p)return;var ol=p.querySelector('.yayin-liste');
+var lis=[].slice.call(ol.children);var alan='yil';
+function grup(g){p.querySelectorAll('.yp-sekme button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.grup===g)});
+lis.forEach(function(li){li.hidden=!(g==='tumu'||li.dataset.grup===g)});
+p.querySelectorAll('.yp-not').forEach(function(n){n.hidden=(g==='tumu'||n.dataset.not!==g)})}
+function sirala(a){alan=a;p.querySelectorAll('.yp-sirala button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.alan===a)});
+lis.sort(function(x,y){if(a==='yil')return (y.dataset.yil||'0').localeCompare(x.dataset.yil||'0')||x.dataset.ad.localeCompare(y.dataset.ad,'tr');
+if(a==='tur')return (+x.dataset.tur)-(+y.dataset.tur)||(y.dataset.yil||'0').localeCompare(x.dataset.yil||'0');
+return x.dataset.ad.localeCompare(y.dataset.ad,'tr')});lis.forEach(function(li){ol.appendChild(li)})}
+p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){grup(b.dataset.grup)})});
+p.querySelectorAll('.yp-sirala button').forEach(function(b){b.addEventListener('click',function(){sirala(b.dataset.alan)})});
+})();
+</script>"""
 
 
 def bas_harfler(ad_: str) -> str:
@@ -1820,16 +1890,21 @@ def render_akademisyen(s: str) -> str:
     sira = lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99))
     konular = "".join(f'<li><a href="{fis_url("baslik", b)}">{e(FIS[("baslik", b)]["ad"])}</a> <span class="say">{n}</span></li>'
                       for b, n in sorted(ana, key=sira) + sorted(alt, key=sira))
-    makaleler = []
+    ogeler = []
+    for k in v["kitaplar"]:
+        h = FIS[("eser", k)]
+        ogeler.append({"grup": "df", "tur": h.get("eser_turu", "kitap"), "yil": str(h.get("yil") or ""), "ad": h["baslik"],
+                       "html": eser_satiri(k)})
     for m in v["makaleler"]:
         yazar = ", ".join(akademisyen_bag(y) if slugify(y) != s else e(y) for y in m["yazarlar"])
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
-        tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
-        tur += ORCID_ISARET if m.get("kaynak") == "orcid" else ""
-        konu = ", ".join(bag("baslik", b) for b in m["konular"] if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
-        makaleler.append(f'<li><a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
-                         f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
-                         + (f'<span class="eser-konu"> · {konu}</span>' if konu else "") + '</span></li>')
+        isaret = ORCID_ISARET if m.get("kaynak") == "orcid" else ""
+        konu = ", ".join(bag("baslik", b) for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
+        ogeler.append({"grup": "df", "tur": DP_YAYIN_TUR.get(m["tur"], "makale"), "yil": m["yil"], "ad": m["baslik"],
+                       "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{isaret}'
+                               f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
+                               + (f'<span class="eser-konu"> · {konu}</span>' if konu else "") + '</span>'})
+    ogeler += diger_yayin_ogeleri(v)
     yan = []
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
@@ -1843,15 +1918,7 @@ def render_akademisyen(s: str) -> str:
     if v["makaleler"] or v["kitaplar"]:
         yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak={ag_kisi_kimligi(p)}">İlişki ağında göster →</a>')
     tarih = dp_tarama_tarihi()
-    diger = orcid_diger_eserler(v)
-    kitap_html = ""
-    if v["kitaplar"]:
-        sirali = sorted(v["kitaplar"], key=lambda k: str(FIS[("eser", k)].get("yil") or ""))
-        kitap_html = (f'<h2>Kitapları <span class="say">{len(sirali)}</span></h2>'
-                      f'<ul class="eser-liste">{"".join(f"<li>{eser_satiri(k)}</li>" for k in sirali)}</ul>')
-    metin = kitap_html + (f'<h2>Din felsefesi çalışmaları <span class="say">{len(v["makaleler"])}</span></h2><ul class="eser-liste">{"".join(makaleler)}</ul>'
-             if makaleler else
-             ('' if kitap_html else '<p class="giris">DergiPark taramasında ve ORCID kaydında anahtar kelimeleri din felsefesi başlıklarına uyan bir çalışması bulunamadı.</p>')) + diger
+    metin = yayin_paneli(ogeler) or '<p class="giris">DergiPark taramasında ve ORCID kaydında bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <section class="kartvizit" aria-label="Künye">
