@@ -1,6 +1,7 @@
 # Türkiye akademisi listesindeki kişilerin adıyla bulunan DergiPark makaleleri için elle kararlar (makale kimliğine göre).
 # karar: kapsam-disi -> ağa ve eser listelerine girmez, yalnızca akademisyenin sayfasında kalır.
 # karar: [başlık, ...] -> anahtar kelime sonucunun yerine geçer. tur: kitap-tanitimi | ceviri ile türü düzeltilir.
+# yazar: dogru -> sayfada kanıt bulunmayan makaleyi kişiye bağlar (ad ve konu açıkça kişiyi gösteriyorsa).
 # karar: yanlis-kisi -> makale bu kişiye ait değil ya da makale sayılmaz; hiçbir yerde gösterilmez.
 # İlk gözden geçirme 23 Ekim 2026: konusu kesin olmayan ya da din felsefesi dışında kalan makaleler kapsam dışı sayıldı.
 '1496662':  # 8. Sınıf Öğrencilerinin LGS Matematik Sorularına Yönelik Metaforik Alg
@@ -264,3 +265,15 @@
 '1222024':  # Sterba, Is a Good God Logically Possible? (kitap tanıtımı)
   karar: [tanrinin-varliginin-delilleri, tanrinin-sifatlari]
   tur: kitap-tanitimi
+# Latif Tokat: eski makalelerde ORCID ve profil yok; ad ve konular kendisini gösteriyor (23 Ekim 2026)
+'100826':  # Dünya Görüşü-Din İlişkisi (Hitit İlahiyat, 2006)
+  yazar: dogru
+'183976':  # Sanat Kutsalın İfşâsı mıdır? (Marmara İlahiyat, 2014)
+  yazar: dogru
+  karar: [dini-tecrube]
+'184002':  # Heidegger'de Şiirsel Dil-Metafizik İlişkisi (Marmara İlahiyat, 2014)
+  yazar: dogru
+'478316':  # Entelektüel Kimdir? (Dinbilimleri, 2017)
+  yazar: dogru
+'378899':  # Dini İstismara Açık Bilgi Kaynağı Olarak Ayrıcalıklı Bilgi
+  karar: [din-epistemolojisi, dini-tecrube]

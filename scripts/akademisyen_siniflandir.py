@@ -17,6 +17,7 @@ Yazar doğrulaması. Ad benzerliği yetmez; makalenin o kişiye ait olduğu şu 
 Kanıt bulunamayan makaleler alınmaz.
 
 Durumlar: konulu (ağa ve eser listelerine girer), konusuz / kelime-yok / kapsam-disi (yalnızca akademisyen sayfasında).
+Elle "yazar: dogru" başka kanıt bulunamayan makaleyi kişiye bağlar (ad ve konu açıkça kişiyi gösteriyorsa).
 Elle karar "yanlis-kisi" makaleyi tamamen çıkarır (DergiPark sayfasında başka bir kişinin ORCID'i ya da profili bağlanmış olabiliyor).
 """
 import json
@@ -87,7 +88,9 @@ def main():
                     continue
                 g, h, o = giris(r, ad), profili(r, ad), orcid.get(ad)
                 d = doi_temiz(r.get("doi") or "")
-                if r["id"] in profil_listesi.get(ad, set()):
+                if (elle.get(r["id"]) or {}).get("yazar") == "dogru":
+                    s = ("dogru", "elle")
+                elif r["id"] in profil_listesi.get(ad, set()):
                     s = ("dogru", "profil-listesi")
                 elif d and d in orcid_doi.get(ad, set()):
                     s = ("dogru", "orcid-kaydi")

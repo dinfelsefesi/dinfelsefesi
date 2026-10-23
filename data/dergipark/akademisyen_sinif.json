@@ -69,6 +69,29 @@
   },
   "tur": ""
  },
+ "100826": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Dünya Görüşü-Din İlişkisi",
+  "basliklar": [
+   "din-ve-bilim",
+   "insan-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [
+   "science → din-ve-bilim",
+   "meaning of life → insan-tasavvurlari",
+   "bilim → din-ve-bilim",
+   "hayatin anlami → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "elle"
+  },
+  "tur": ""
+ },
  "1011590": {
   "akademisyenler": [
    "Enis Doko"
@@ -3052,6 +3075,38 @@
   },
   "tur": ""
  },
+ "183976": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Sanat Kutsalın İfşâsı mıdır?",
+  "basliklar": [
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "elle"
+  },
+  "tur": ""
+ },
+ "184002": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Heidegger'de Şiirsel Dil-Metafizik İlişkisi",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "elle"
+  },
+  "tur": ""
+ },
  "184019": {
   "akademisyenler": [
    "Zeynep Gemuhluoğlu"
@@ -4323,10 +4378,11 @@
   ],
   "baslik": "Dini İstismara Açık Bilgi Kaynağı Olarak “Ayrıcalıklı Bilgi”: Keşf, İlham ve Rüya –Felsefi Bir Analiz-",
   "basliklar": [
+   "din-epistemolojisi",
    "dini-tecrube"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "kesf → dini-tecrube",
    "kesf → dini-tecrube"
@@ -5067,6 +5123,21 @@
   "ilgili": [],
   "kanit": {
    "Mehmet Şükrü Özkan": "kurum"
+  },
+  "tur": ""
+ },
+ "478316": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "ENTELEKTÜEL KİMDİR? -TÜRKİYE’NİN ENTELEKTÜEL SORUNU-",
+  "basliklar": [],
+  "durum": "konusuz",
+  "elle": true,
+  "eslesen": [],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "elle"
   },
   "tur": ""
  },
