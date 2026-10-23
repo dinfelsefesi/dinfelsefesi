@@ -2,7 +2,7 @@
 tur: eser
 kimlik: koc-1995-din-dili
 baslik: Din Dili
-yazar: [turan-koc]
+yazar: [Turan Koç]
 eser_turu: kitap
 yil: 1995
 yayin: 'Kayseri: Rey Yayıncılık, 1995 (sonraki baskılar: İstanbul: İz Yayıncılık)'

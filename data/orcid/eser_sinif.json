@@ -271,11 +271,15 @@
  },
  "10.1016/j.sbspro.2015.01.745": {
   "baslik": "The Importance of Aesthetics in Theological Education: A Philosophical Reading of the Recent Discussions in the Turkish Case",
-  "basliklar": [],
+  "basliklar": [
+   "din-ve-sanat"
+  ],
   "dergi": "Procedia - Social and Behavioral Sciences",
-  "durum": "konusuz",
+  "durum": "konulu",
   "elle": false,
-  "eslesen": [],
+  "eslesen": [
+   "aesthetics → din-ve-sanat"
+  ],
   "ilgili": [],
   "kaynak": "openalex",
   "kelimeler": [

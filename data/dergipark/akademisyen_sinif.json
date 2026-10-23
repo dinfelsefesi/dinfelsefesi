@@ -8,11 +8,14 @@
   "durum": "konulu",
   "elle": true,
   "eslesen": [
+   "sanat → din-ve-sanat",
    "ahlak → din-ve-ahlak",
+   "art → din-ve-sanat",
    "morality → din-ve-ahlak"
   ],
   "ilgili": [
-   "din-ve-ahlak"
+   "din-ve-ahlak",
+   "din-ve-sanat"
   ],
   "kanit": {
    "Mehmet Akif Altunışık": "profil-listesi"
@@ -712,10 +715,15 @@
    "İbrahim Bor"
   ],
   "baslik": "DIVINE MANIFESTATION IN THE MIRROR OF WOMAN IN DIWAN OF MULLA AL-JAZIRI",
-  "basliklar": [],
-  "durum": "konusuz",
+  "basliklar": [
+   "din-ve-sanat"
+  ],
+  "durum": "konulu",
   "elle": false,
-  "eslesen": [],
+  "eslesen": [
+   "beauty → din-ve-sanat",
+   "5. beauty → din-ve-sanat"
+  ],
   "ilgili": [],
   "kanit": {
    "İbrahim Bor": "profil-listesi"
@@ -1529,6 +1537,7 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
+   "dusunme-estetik iliskisi → din-ve-sanat",
    "dusunme-ahlak iliskisi → din-ve-ahlak"
   ],
   "ilgili": [],
@@ -2629,9 +2638,12 @@
   ],
   "baslik": "Gadamer Ontolojisindeki Köprüleri Yıkmak: Geç Dönem Energeia Kullanımının Oyun ve Organizma Kavramlarıyla Birlikte Düşünülmesi",
   "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
-  "eslesen": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "sanat → din-ve-sanat",
+   "art → din-ve-sanat"
+  ],
   "ilgili": [],
   "kanit": {
    "Hanifi Laçin": "profil-listesi"
@@ -3654,11 +3666,14 @@
   ],
   "baslik": "Sanat Kutsalın İfşâsı mıdır?",
   "basliklar": [
+   "din-ve-sanat",
    "dini-tecrube"
   ],
   "durum": "konulu",
   "elle": true,
-  "eslesen": [],
+  "eslesen": [
+   "sanat → din-ve-sanat"
+  ],
   "ilgili": [],
   "kanit": {
    "Latif Tokat": "elle"
@@ -3671,9 +3686,12 @@
   ],
   "baslik": "Heidegger'de Şiirsel Dil-Metafizik İlişkisi",
   "basliklar": [],
-  "durum": "konusuz",
+  "durum": "kapsam-disi",
   "elle": true,
-  "eslesen": [],
+  "eslesen": [
+   "sanat → din-ve-sanat",
+   "art → din-ve-sanat"
+  ],
   "ilgili": [],
   "kanit": {
    "Latif Tokat": "elle"
@@ -5473,11 +5491,13 @@
   ],
   "baslik": "DİN-SANAT İLİŞKİSİ VE BUNUN SOMUT BİR YANSIMASI OLARAK MEVLEVÎ SEMÂ ÂYİNİ",
   "basliklar": [
+   "din-ve-sanat",
    "dini-pratik"
   ],
   "durum": "konulu",
   "elle": true,
   "eslesen": [
+   "sanat → din-ve-sanat",
    "sembol → din-dili"
   ],
   "ilgili": [],
@@ -6744,9 +6764,11 @@
   ],
   "baslik": "SANATSAL EYLEMDE GERÇEKLİK ALGISI VE NEOKLASİSİZM SONRASI KÜSKÜN DUYGU",
   "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
-  "eslesen": [],
+  "durum": "kapsam-disi",
+  "elle": true,
+  "eslesen": [
+   "sanatta gerceklik algisi → din-ve-sanat"
+  ],
   "ilgili": [],
   "kanit": {
    "Vedat Tezcan": "profil-listesi"
@@ -7164,7 +7186,9 @@
   "eslesen": [
    "creation → tanri-alem-iliskisi",
    "salvation → dini-cesitlilik",
-   "kurtulus → dini-cesitlilik"
+   "art → din-ve-sanat",
+   "kurtulus → dini-cesitlilik",
+   "sanat → din-ve-sanat"
   ],
   "ilgili": [],
   "kanit": {
@@ -7825,6 +7849,7 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
+   "estetiksiz → din-ve-sanat",
    "dil → din-dili"
   ],
   "ilgili": [],
@@ -8132,7 +8157,9 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "classification of sciences → din-ve-bilim"
+   "muzik → din-ve-sanat",
+   "classification of sciences → din-ve-bilim",
+   "music → din-ve-sanat"
   ],
   "ilgili": [],
   "kanit": {
@@ -8279,12 +8306,16 @@
   ],
   "baslik": "TOLSTOY'DA SANATIN DİN VE AHLAKLA İLİŞKİSİ",
   "basliklar": [
-   "din-ve-ahlak"
+   "din-ve-ahlak",
+   "din-ve-sanat"
   ],
   "durum": "konulu",
   "elle": false,
   "eslesen": [
+   "art → din-ve-sanat",
    "morality → din-ve-ahlak",
+   "sanat → din-ve-sanat",
+   "guzellik → din-ve-sanat",
    "ahlak → din-ve-ahlak"
   ],
   "ilgili": [],
@@ -8497,7 +8528,8 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "etik → din-ve-ahlak"
+   "etik → din-ve-ahlak",
+   "estetik → din-ve-sanat"
   ],
   "ilgili": [],
   "kanit": {

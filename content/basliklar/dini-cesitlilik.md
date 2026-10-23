@@ -2,7 +2,7 @@
 tur: baslik
 kimlik: dini-cesitlilik
 ad: Dinî Çeşitlilik
-sira: 15
+sira: 16
 ust_baslik: ''
 kume: din-bilim-kultur
 ozet: Farklı dinlerin hakikat ve kurtuluş iddialarının birbirine göre nasıl değerlendirileceği.

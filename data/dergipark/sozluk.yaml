@@ -259,6 +259,22 @@ basliklar:
     - teşbih
     - tenzih
     - wittgenstein
+  din-ve-sanat:
+    - sanat
+    - art$
+    - arts$
+    - religious art
+    - islamic art
+    - sacred art
+    - art and religion
+    - estetik
+    - aesthetic
+    - güzellik
+    - beauty
+    - müzik
+    - music
+    - din ve edebiyat
+    - religion and literature
   din-ve-bilim:
     - din-bilim
     - bilim paradigması

@@ -50,7 +50,7 @@
 '369994':  # Bireysel-Toplumsal Farklılıklar ve Ahlâkî Görecelik Sorunu
   karar: kapsam-disi
 '1000682':  # Cafer Sadık Yaran. Sanat Ahlâkı.
-  karar: [din-ve-ahlak]
+  karar: [din-ve-ahlak, din-ve-sanat]
   tur: kitap-tanitimi
 '626301':  # Dil Felsefesi III: İkinci Wittgenstein’da Gramer Paradigması
   karar: kapsam-disi
@@ -65,7 +65,7 @@
 '1776765':  # DİN HİZMETLERİ ÇALIŞANLARININ ÇAĞDAŞ İNANÇ PROBLEMLERİ YETERLİLİĞİ ÖLÇ
   karar: kapsam-disi
 '36660':  # DİN-SANAT İLİŞKİSİ VE BUNUN SOMUT BİR YANSIMASI OLARAK MEVLEVÎ SEMÂ ÂY
-  karar: [dini-pratik]
+  karar: [din-ve-sanat, dini-pratik]
 '852434':  # ERNEST SOSA VE ENTELEKTÜEL ERDEMLER
   karar: kapsam-disi
 '292618':  # ERNEST SOSA’NIN ERDEM EPİSTEMOLOJİSİ
@@ -270,9 +270,7 @@
   yazar: dogru
 '183976':  # Sanat Kutsalın İfşâsı mıdır? (Marmara İlahiyat, 2014)
   yazar: dogru
-  karar: [dini-tecrube]
-'184002':  # Heidegger'de Şiirsel Dil-Metafizik İlişkisi (Marmara İlahiyat, 2014)
-  yazar: dogru
+  karar: [din-ve-sanat, dini-tecrube]
 '478316':  # Entelektüel Kimdir? (Dinbilimleri, 2017)
   yazar: dogru
 '378899':  # Dini İstismara Açık Bilgi Kaynağı Olarak Ayrıcalıklı Bilgi
@@ -342,3 +340,11 @@
 '273488':  # Vasalou, Moral Agents and Their Deserts (kitap tanıtımı)
   karar: [din-ve-ahlak]
   tur: kitap-tanitimi
+# Din ve Sanat başlığı açıldıktan sonra (23 Ekim 2026)
+'1463947':  # Gadamer ontolojisinde energeia ve oyun
+  karar: kapsam-disi
+'184002':  # Heidegger'de şiirsel dil-metafizik ilişkisi
+  yazar: dogru
+  karar: kapsam-disi
+'507036':  # Sanatsal eylemde gerçeklik algısı
+  karar: kapsam-disi

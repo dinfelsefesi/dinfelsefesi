@@ -2,7 +2,7 @@
 tur: eser
 kimlik: koc-1991-olumsuzluk-dusuncesi
 baslik: Ölümsüzlük Düşüncesi
-yazar: [turan-koc]
+yazar: [Turan Koç]
 eser_turu: kitap
 yil: 1991
 yayin: 'İstanbul: İz Yayıncılık, 1991'

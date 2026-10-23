@@ -29,7 +29,8 @@
   "dini-tecrube": 16,
   "dini-cesitlilik": 14,
   "dini-pratik": 7,
-  "ibadet": 3
+  "ibadet": 3,
+  "din-ve-sanat": 2
  },
  "makaleler": [
   {
@@ -77,7 +78,8 @@
    "id": "1886013",
    "yil": "2026",
    "basliklar": [
-    "din-dili"
+    "din-dili",
+    "din-ve-sanat"
    ],
    "kaynak": "anahtar"
   },
@@ -469,7 +471,7 @@
    "basliklar": [
     "din-ve-ahlak"
    ],
-   "kaynak": "anahtar"
+   "kaynak": "elle"
   },
   {
    "id": "1783353",
@@ -632,7 +634,7 @@
    "basliklar": [
     "din-ve-ahlak"
    ],
-   "kaynak": "anahtar"
+   "kaynak": "elle"
   },
   {
    "id": "1635609",
@@ -716,6 +718,7 @@
    "id": "1656752",
    "yil": "2025",
    "basliklar": [
+    "din-ve-sanat",
     "tanri-alem-iliskisi",
     "tanrinin-sifatlari"
    ],
