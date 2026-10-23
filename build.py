@@ -1797,7 +1797,7 @@ def diger_yayin_ogeleri(v) -> list:
     """Kişinin din felsefesi başlıklarına girmeyen yayınları: yazarı doğrulanmış öteki DergiPark makaleleri ve
     ORCID kaydındaki eserler (din felsefesi listesinde ya da DergiPark'ta zaten bulunanlar DOI ve başlıkla ayıklanır)."""
     doiler = {m["baglanti"].lower().removeprefix("https://doi.org/") for m in v["makaleler"] if m["doi"]}
-    basliklar = {slugify(m["baslik"]) for m in v["makaleler"]}
+    basliklar = {slugify(m["baslik"]) for m in v["makaleler"]} | {slugify(FIS[("eser", k)]["baslik"]) for k in v["kitaplar"]}
     ogeler = []
     for m in sorted(v["dp_diger"], key=lambda m: m["tarih"], reverse=True):
         ad_ = slugify(m["baslik"])
