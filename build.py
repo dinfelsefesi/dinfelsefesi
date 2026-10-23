@@ -495,6 +495,9 @@ footer.site{border-top:1px solid var(--gold-logo);box-shadow:inset 0 -4px 0 var(
 footer.site .wrap{padding-block:1rem 1.3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.3rem 2rem}
 footer.site p{margin:0}
 footer.site a{color:var(--ink-soft)}
+footer.site .iletisim a{text-decoration:none}
+footer.site .iletisim .adres{text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--gold-logo) 70%,transparent);text-underline-offset:3px}
+footer.site .simge{font-style:normal;margin-right:.3em}
 footer.site a:hover{color:var(--accent-ink)}
 .atif{margin:1.2rem 0 0;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;font-family:"Times New Roman",Times,serif;font-size:.8rem;line-height:1.35;max-width:var(--measure);background:transparent;color:var(--ink-soft)}
 .atif .ust-etiket{display:inline;font-family:inherit;font-size:inherit;font-style:italic;color:var(--ink-soft);margin:0 .3rem 0 0}
@@ -733,7 +736,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 </div></main>
 <footer class="site"><div class="wrap">
   <p>© {YIL} <a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · Din felsefesi için Türkçe başvuru kaynağı</p>
-  <p>Düzeltme ve öneriler için: <a href="mailto:{ILETISIM}">{ILETISIM}</a> · X: <a href="https://x.com/{X_HESABI}" rel="noopener">@{X_HESABI}</a></p>
+  <p class="iletisim"><a href="mailto:{ILETISIM}"><span class="simge" aria-hidden="true">✉</span><span class="gizli">E-posta: </span><span class="adres">{ILETISIM}</span></a> · <a href="https://x.com/{X_HESABI}" rel="noopener"><span class="simge" aria-hidden="true">𝕏</span><span class="gizli">X: </span><span class="adres">@{X_HESABI}</span></a></p>
 </div></footer>
 </body>
 </html>"""
