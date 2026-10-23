@@ -1,6 +1,6 @@
 # ORCID eserleri için elle düzeltmeler (DOI'ye göre).
 # karar: kapsam-disi  -> eser ağa ve eser listelerine girmez, yalnızca akademisyenin sayfasında kalır.
-# karar: [başlık, ...] -> anahtar kelime sonucunun yerine geçer. tur: kitap-tanitimi | ceviri | kitap | kitap-bolumu | '' ile türü düzeltilir.
+# karar: [başlık, ...] -> anahtar kelime sonucunun yerine geçer. baslik: kaynaktaki eser adı hatalıysa doğrusu. tur: kitap-tanitimi | ceviri | kitap | kitap-bolumu | '' ile türü düzeltilir.
 # İlk gözden geçirme 22 Ekim 2026: konusu kesin olmayan ya da din felsefesi dışında kalan eserler kapsam dışı sayıldı.
 '10.53844/flsf.1577687':  # AHLAKİ MUTLAKÇILIK VE EYLEM SONUÇÇULUĞU ARASINDA BİR SEÇENEK OLARAK KU
   karar: kapsam-disi
@@ -134,3 +134,4 @@
   karar: kapsam-disi
 '10.26449/sssj.781':  # Gazâlî'nin Ontolojisinde Tanrı ve Âlem (Abdullah Akgül)
   karar: [tanri-alem-iliskisi]
+  baslik: Gazâlî'nin Ontolojisinde Tanrı ve Âlem   # kaynaktaki yazım hatası (Ontolosinde) düzeltildi

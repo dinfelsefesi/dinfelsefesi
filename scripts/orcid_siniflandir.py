@@ -132,7 +132,7 @@ def main():
             durum = "konulu"
         tanitim = tur in ("kitap-tanitimi", "ceviri")
         sonuc[d] = {
-            "baslik": baslik, "yazarlar": k.get("yazarlar") or [], "sahipler": x["sahipler"],
+            "baslik": e_.get("baslik") or baslik, "yazarlar": k.get("yazarlar") or [], "sahipler": x["sahipler"],
             "dergi": (k.get("dergi") or w.get("dergi") or "").strip(), "yil": str(k.get("yil") or w.get("yil") or ""),
             "tur": tur, "basliklar": [] if tanitim else sorted(basliklar), "ilgili": sorted(basliklar) if tanitim else [],
             "durum": durum, "kelimeler": kelimeler, "eslesen": eslesen, "kaynak": k.get("kaynak") or "",
