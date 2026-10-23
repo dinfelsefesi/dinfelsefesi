@@ -1,0 +1,7 @@
+# Kişinin kendisine ait olduğu doğrulanmış DergiPark profilleri (kişi adı listedeki yazılışıyla).
+# Profilde listelenen makaleler kişiye doğrudan bağlanır; profil kısaltması makale sayfasında görülürse de kanıt sayılır.
+# Bir kişinin birden fazla hesabı olabilir; hepsi ayrı satırda yazılır.
+Latif Tokat:
+  - "@latif.tokat"   # Abdullah Akgül'ün bildirdiği aktif hesap (23 Ekim 2026)
+Abdullah Akgül:
+  - "@abdullahakgul"

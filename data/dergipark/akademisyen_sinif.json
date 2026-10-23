@@ -3920,6 +3920,27 @@
   },
   "tur": ""
  },
+ "347522": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Modern Batı Dünya Görüşünün Tanrı Ve İnsan Tasavvuru Açısından Tahlil Ve Eleştirisi",
+  "basliklar": [
+   "insan-tasavvurlari",
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "tanri tasavvuru → tanri-tasavvurlari",
+   "insan tasavvuru → insan-tasavvurlari"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "profil"
+  },
+  "tur": ""
+ },
  "348092": {
   "akademisyenler": [
    "Özcan Akdağ"
@@ -4271,6 +4292,26 @@
   "ilgili": [],
   "kanit": {
    "Mustafa Ateş": "orcid"
+  },
+  "tur": ""
+ },
+ "378899": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Dini İstismara Açık Bilgi Kaynağı Olarak “Ayrıcalıklı Bilgi”: Keşf, İlham ve Rüya –Felsefi Bir Analiz-",
+  "basliklar": [
+   "dini-tecrube"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "kesf → dini-tecrube",
+   "kesf → dini-tecrube"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "profil"
   },
   "tur": ""
  },

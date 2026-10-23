@@ -20,6 +20,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -q pyyaml
+      - name: Bildirilen DergiPark profillerindeki yayınlar
+        run: python3 scripts/profil_topla.py
       - run: python3 scripts/orcid_topla.py
       - name: DOI'li eserlerin künye ve anahtar kelimeleri
         run: python3 scripts/orcid_doi.py
@@ -31,6 +33,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/orcid/ data/dergipark/akademisyen_sinif.json
+          git add data/orcid/ data/dergipark/akademisyen_sinif.json data/dergipark/akademisyen_makaleleri.jsonl data/dergipark/profil_makaleleri.json
           git commit -m "ORCID: numaralar ve eser listeleri güncellendi" || exit 0
           git pull --rebase -q && git push -q

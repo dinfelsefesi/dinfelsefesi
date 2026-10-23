@@ -9,6 +9,7 @@ Girdi: data/dergipark/akademisyen_makaleleri.jsonl (dergipark_hasat.py), data/or
 Çıktı: data/dergipark/akademisyen_sinif.json  makale kimliği -> {akademisyenler, basliklar, ilgili, tur, durum, ...}
 
 Yazar doğrulaması. Ad benzerliği yetmez; makalenin o kişiye ait olduğu şu kanıtlardan biriyle kabul edilir:
+  0. makale kişinin DergiPark profilinde listeleniyor (data/dergipark/profiller.yaml, profil_topla.py),
   1. makalenin DOI'si kişinin ORCID kaydında var,
   2. makale sayfasında yazarın ORCID numarası kişininkiyle aynı (farklıysa makale başkasınındır),
   3. sayfadaki DergiPark profili, kişiye ait olduğu başka bir makaleyle kanıtlanmış profille aynı,
@@ -75,7 +76,10 @@ def main():
         return next((h for n, h in profil.get(r["id"], {}).items() if kisalt(n) == kisalt(ad)), None)
 
     # 1) Yazar doğrulaması (iki tur: ilk turda kanıtlanan profiller ikinci turda kullanılır)
-    karar, profiller = {}, {}
+    # Elle bildirilen, kişiye ait olduğu bilinen DergiPark profilleri ve bu profillerde listelenen makaleler
+    profiller = {ad: {str(h) for h in hs or []} for ad, hs in oku_yaml(DP / "profiller.yaml").items()}
+    profil_listesi = {ad: set(ids) for ad, ids in oku_json(DP / "profil_makaleleri.json").items()}
+    karar = {}
     for _ in range(2):
         for r in makaleler:
             for ad in r.get("akademisyen") or []:
@@ -83,7 +87,9 @@ def main():
                     continue
                 g, h, o = giris(r, ad), profili(r, ad), orcid.get(ad)
                 d = doi_temiz(r.get("doi") or "")
-                if d and d in orcid_doi.get(ad, set()):
+                if r["id"] in profil_listesi.get(ad, set()):
+                    s = ("dogru", "profil-listesi")
+                elif d and d in orcid_doi.get(ad, set()):
                     s = ("dogru", "orcid-kaydi")
                 elif g and g["orcid"] and o:
                     s = ("dogru", "orcid") if g["orcid"] == o else ("yanlis", "orcid-farkli")
