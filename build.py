@@ -455,6 +455,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .yp-sirala{display:flex;align-items:baseline;gap:.15rem .6rem;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft)}
 .yp-sirala button{font:inherit;background:none;border:0;padding:.1rem .15rem;color:var(--ink-soft);cursor:pointer;border-bottom:1px solid transparent}
 .yp-sirala button[aria-pressed="true"]{color:var(--accent-ink);border-bottom-color:var(--gold-logo)}
+.yp-sirala .ok{display:inline-block;min-width:.7em;margin-left:.15em}
 .yp-sekme{margin:.7rem 0 .3rem}
 .yp-sekme button{font-size:.88rem;padding:.2rem .75rem}
 .yayin-liste{list-style:none;margin:.4rem 0 0;padding:0;counter-reset:yayin}
@@ -1848,10 +1849,10 @@ def yayin_paneli(ogeler) -> str:
     sekmeler = "".join(f'<button type="button" data-grup="{k}" aria-pressed="{"true" if k == ilk else "false"}">{a} <span class="say">{n}</span></button>'
                        for k, a, n in [("df", "Din felsefesi", say["df"]), ("diger", "Diğer", say["diger"]), ("tumu", "Tümü", len(ogeler))] if n)
     siralama = ('<div class="yp-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
-                + "".join(f'<button type="button" data-alan="{k}" aria-pressed="{"true" if k == "yil" else "false"}">{a}</button>'
+                + "".join(f'<button type="button" data-alan="{k}" aria-pressed="{"true" if k == "yil" else "false"}">{a}<span class="ok" aria-hidden="true">{"↓" if k == "yil" else ""}</span></button>'
                           for k, a in [("yil", "Yıl"), ("ad", "Ad"), ("tur", "Tür")]) + '</div>')
     satirlar = "".join(
-        f'<li data-grup="{o["grup"]}" data-yil="{e(o["yil"])}" data-ad="{e(tr_anahtar(o["ad"]))}" data-tur="{YAYIN_TUR_SIRA.get(o["tur"], 99)}"'
+        f'<li data-grup="{o["grup"]}" data-yil="{e(o["yil"])}" data-ad="{e(tr_kucuk(o["ad"]))}" data-tur="{YAYIN_TUR_SIRA.get(o["tur"], 99)}"'
         f'{" hidden" if ilk != "tumu" and o["grup"] != ilk else ""}>'
         f'<span class="yt yt-{o["tur"]}">{YAYIN_TUR_AD.get(o["tur"], "Diğer")}</span>{o["html"]}</li>'
         for o in sorted(ogeler, key=lambda o: (o["yil"] or "0"), reverse=True))
@@ -1865,14 +1866,23 @@ def yayin_paneli(ogeler) -> str:
 
 YAYIN_JS = """<script>
 (function(){var p=document.querySelector('.yayin-panel');if(!p)return;var ol=p.querySelector('.yayin-liste');
-var lis=[].slice.call(ol.children);var alan='yil';
+var lis=[].slice.call(ol.children);var alan='yil',yon=-1;
 function grup(g){p.querySelectorAll('.yp-sekme button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.grup===g)});
 lis.forEach(function(li){li.hidden=!(g==='tumu'||li.dataset.grup===g)});
 p.querySelectorAll('.yp-not').forEach(function(n){n.hidden=(g==='tumu'||n.dataset.not!==g)})}
-function sirala(a){alan=a;p.querySelectorAll('.yp-sirala button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.alan===a)});
-lis.sort(function(x,y){if(a==='yil')return (y.dataset.yil||'0').localeCompare(x.dataset.yil||'0')||x.dataset.ad.localeCompare(y.dataset.ad,'tr');
-if(a==='tur')return (+x.dataset.tur)-(+y.dataset.tur)||(y.dataset.yil||'0').localeCompare(x.dataset.yil||'0');
-return x.dataset.ad.localeCompare(y.dataset.ad,'tr')});lis.forEach(function(li){ol.appendChild(li)})}
+function ad(x,y){return x.dataset.ad.localeCompare(y.dataset.ad,'tr')}
+function yil(x,y){return (x.dataset.yil||'0').localeCompare(y.dataset.yil||'0')}
+function sirala(a){
+  /* aynı düğmeye yeniden basılınca yön değişir; yıl önce yeniden eskiye, ad ve tür önce artan */
+  if(a===alan){yon=-yon}else{alan=a;yon=(a==='yil')?-1:1}
+  p.querySelectorAll('.yp-sirala button').forEach(function(b){var on=b.dataset.alan===a;b.setAttribute('aria-pressed',on);
+    b.querySelector('.ok').textContent=on?(yon>0?'↑':'↓'):''});
+  lis.sort(function(x,y){var r;
+    if(a==='yil')r=yon*yil(x,y)||ad(x,y);
+    else if(a==='tur')r=yon*((+x.dataset.tur)-(+y.dataset.tur))||-yil(x,y)||ad(x,y);
+    else r=yon*ad(x,y);
+    return r});
+  lis.forEach(function(li){ol.appendChild(li)})}
 p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){grup(b.dataset.grup)})});
 p.querySelectorAll('.yp-sirala button').forEach(function(b){b.addEventListener('click',function(){sirala(b.dataset.alan)})});
 })();
