@@ -438,6 +438,14 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
+.onceki-gunler{list-style:none;margin:.4rem 0 0;padding:0;max-width:52rem}
+.onceki-gunler li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);column-gap:1rem;padding:.55rem 0;border-top:1px solid var(--rule)}
+.onceki-gunler li:first-child{border-top:0}
+.onceki-gunler .og-tarih{font-family:var(--sans);font-size:.82rem;color:var(--gold);padding-top:.15rem}
+.onceki-gunler a{font-family:var(--display);font-size:1.08rem;line-height:1.3}
+.onceki-gunler .og-yazar{grid-column:2;font-size:.85rem;color:var(--ink-soft)}
+.og-hepsi{margin:.6rem 0 0;font-style:italic}
+@media (max-width:560px){.onceki-gunler li{grid-template-columns:1fr}.onceki-gunler .og-yazar{grid-column:1}}
 .akademi-metin{max-width:40rem}  /* yayın paneli kartvizitle aynı genişlikte */
 /* kişi sayfası yayın paneli: kartvizitten daha sakin bir kart */
 .yayin-panel{background:var(--card);border:1px solid color-mix(in srgb,var(--gold-logo) 35%,var(--rule));border-radius:10px;
@@ -2212,6 +2220,18 @@ def gunun_makalesi_html(items) -> str:
 </aside>"""
 
 
+def onceki_gunler_html(items) -> str:
+    """Ana sayfada önceki günlerin makaleleri: yalnızca tarih ve Türkçe başlıkla son beş gün, tamamı ayrı sayfada."""
+    if len(items) < 2:
+        return ""
+    satirlar = "".join(f'<li><span class="og-tarih">{e(tr_date(m["gun"]))}</span>'
+                       f'<a href="{entry_url(m)}">{e(m["title_tr"])}</a>'
+                       f'<span class="og-yazar">{e(m.get("authors", ""))}</span></li>' for m in items[1:6])
+    return (f'<div class="bolum-baslik"><h2>Önceki günlerin makaleleri</h2></div>'
+            f'<ul class="onceki-gunler">{satirlar}</ul>'
+            f'<p class="og-hepsi"><a href="{SITE_URL}/gunun-makalesi/">Bütün günlerin makaleleri ({len(items) - 1}) →</a></p>')
+
+
 def render_ana(items) -> str:
     say = {t: sum(1 for (x, _) in FIS if x == t) for t in KLASOR}
     tr_dosya = CONTENT / "turkiye_akademisi.yaml"
@@ -2232,8 +2252,7 @@ def render_ana(items) -> str:
 <div class="bolum-baslik"><h2>Başlıklar</h2><a href="{SITE_URL}/basliklar/">Başlık haritası</a></div>
 {icindekiler_html()}
 <div class="susleme" aria-hidden="true"><span>❦</span></div>
-{f'''<div class="bolum-baslik"><h2>Önceki günlerin makaleleri</h2><a href="{SITE_URL}/gunun-makalesi/">Bütün günler</a></div>
-{"".join(makale_satiri(m) for m in items[1:5])}''' if len(items) > 1 else ""}
+{onceki_gunler_html(items)}
 """
     # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
     gorsel = f"{SITE_URL}/paylas/site.png"
