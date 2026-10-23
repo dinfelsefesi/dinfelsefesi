@@ -1818,10 +1818,12 @@
  },
  "10.26449/sssj.781": {
   "baslik": "GAZÂLÎ'NİN ONTOLOSİNDE TANRI VE ÂLEM",
-  "basliklar": [],
+  "basliklar": [
+   "tanri-alem-iliskisi"
+  ],
   "dergi": "Social Sciences Studies Journal",
-  "durum": "konusuz",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
   "ilgili": [],
   "kaynak": "openalex",
