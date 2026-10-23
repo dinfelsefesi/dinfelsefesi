@@ -1861,6 +1861,28 @@
   },
   "tur": ""
  },
+ "127950": {
+  "akademisyenler": [
+   "Latif Tokat"
+  ],
+  "baslik": "Dini Çoğulculuk Hangi Açıdan Mümkündür?",
+  "basliklar": [
+   "din-dili",
+   "dini-cesitlilik"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "dini cogulculuk → dini-cesitlilik",
+   "j. hick → dini-cesitlilik",
+   "din dili → din-dili"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Latif Tokat": "profil-listesi"
+  },
+  "tur": ""
+ },
  "1281782": {
   "akademisyenler": [
    "Muammer İskenderoğlu"
@@ -3937,7 +3959,7 @@
   ],
   "ilgili": [],
   "kanit": {
-   "Latif Tokat": "profil"
+   "Latif Tokat": "profil-listesi"
   },
   "tur": ""
  },
@@ -4311,7 +4333,7 @@
   ],
   "ilgili": [],
   "kanit": {
-   "Latif Tokat": "profil"
+   "Latif Tokat": "profil-listesi"
   },
   "tur": ""
  },
