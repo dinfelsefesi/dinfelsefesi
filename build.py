@@ -279,7 +279,19 @@ a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
-header.site{background:var(--paper);border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo)}
+header.site{background:var(--paper);border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo);
+  position:sticky;top:0;z-index:60;transition:transform .25s ease,box-shadow .2s ease}
+html{scroll-padding-top:4.5rem}
+/* aşağı inildiğinde şerit incelir: küçük logo, alt yazı gizli */
+body.ust-ince header.site{box-shadow:0 2px 8px rgba(35,68,110,.08)}
+body.ust-ince header.site .wrap{padding-block:.45rem .4rem}
+body.ust-ince .marka-logo{width:30px;height:30px}
+body.ust-ince .marka b{font-size:1.3rem}
+body.ust-ince .marka small{display:none}
+header.site .wrap,.marka-logo,.marka b{transition:padding .2s ease,width .2s ease,height .2s ease,font-size .2s ease}
+/* telefonda aşağı inerken gizlenir, yukarı kaydırılınca geri gelir */
+@media (max-width:760px){body.ust-gizli header.site{transform:translateY(-110%)}}
+@media (prefers-reduced-motion:reduce){header.site,header.site .wrap,.marka-logo,.marka b{transition:none}}
 header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 2rem;padding-block:1.3rem 1.1rem}
 .marka{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.75rem}
 .marka-yazi{display:flex;flex-direction:column;gap:.1rem}
@@ -777,6 +789,13 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
   <p>© {YIL} <span class="alan"><a href="{SITE_URL}/">dinfelsefesi.com.tr</a> · </span>Din felsefesi için Türkçe başvuru kaynağı</p>
   <p class="iletisim"><a href="mailto:{ILETISIM}"><span class="simge" aria-hidden="true">✉</span><span class="gizli">E-posta: </span><span class="adres">{ILETISIM}</span></a> · <a href="https://x.com/{X_HESABI}" rel="noopener"><span class="simge" aria-hidden="true">𝕏</span><span class="gizli">X: </span><span class="adres">@{X_HESABI}</span></a></p>
 </div></footer>
+<script>
+(function(){{var b=document.body,son=window.scrollY,tel=window.matchMedia('(max-width:760px)');
+function bak(){{var y=window.scrollY;b.classList.toggle('ust-ince',y>80);
+  if(tel.matches){{if(y>son+4&&y>140)b.classList.add('ust-gizli');else if(y<son-4||y<140)b.classList.remove('ust-gizli')}}
+  else b.classList.remove('ust-gizli');son=y}}
+window.addEventListener('scroll',bak,{{passive:true}});bak()}})();
+</script>
 </body>
 </html>"""
 
