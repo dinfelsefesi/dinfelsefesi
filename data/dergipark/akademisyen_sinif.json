@@ -1181,10 +1181,13 @@
   ],
   "baslik": "Andrew Moore & Micheal Scott (Eds.), Realism and Religion: Philosophical and Theological Perspectives, Hampshire and Burlington: Ashgate, 2007, 172 p",
   "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
-  "ilgili": [],
+  "ilgili": [
+   "din-dili",
+   "din-epistemolojisi"
+  ],
   "kanit": {
    "Kayhan Özaykal": "profil-listesi"
   },
@@ -2331,11 +2334,9 @@
    "Osman Zahid Çifçi"
   ],
   "baslik": "Ahlâk ve Demokrasi",
-  "basliklar": [
-   "din-ve-ahlak"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "ahlak → din-ve-ahlak"
   ],
@@ -2552,11 +2553,9 @@
    "Rıfat Atay"
   ],
   "baslik": "Şer‘İyye Mahkemeleri Araştırmalarında Değişen Bakış Açıları: Metodolojiler ve Paradigmalar-Theme Issue: Shifting Perspectives In the Study of Shariʿa Courts: Methodologies and Paradigms",
-  "basliklar": [
-   "din-felsefesi-tanim-yontem-tarih"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "metodoloji → din-felsefesi-tanim-yontem-tarih"
   ],
@@ -2700,12 +2699,9 @@
    "Tugay Taşçı"
   ],
   "baslik": "Sağduyu Naturalizmi",
-  "basliklar": [
-   "din-epistemolojisi",
-   "din-ve-bilim"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "naturalizm → din-ve-bilim",
    "epistemoloji → din-epistemolojisi",
@@ -3608,11 +3604,9 @@
    "Ruhattin Yazoğlu"
   ],
   "baslik": "Yapay Zekâ ve İnsan Aklı: Felsefî Açıdan Bir Karşılaştırma",
-  "basliklar": [
-   "din-ve-bilim"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "yapay zeka felsefesi → din-ve-bilim",
    "yapay zeka bilinci → din-ve-bilim",
@@ -3984,11 +3978,9 @@
    "Fatma Yüce"
   ],
   "baslik": "İdeal Ahlak ile Reel Ahlak Arasındaki Çatışmayı Aşma Denemesi: Erdem Temelli Şahsiyet İnşası Modeli",
-  "basliklar": [
-   "din-ve-ahlak"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "ahlak felsefesi → din-ve-ahlak",
    "ideal ahlak → din-ve-ahlak",
@@ -4007,11 +3999,11 @@
   ],
   "baslik": "Divine Agency, Will and Freedom in Avicenna",
   "basliklar": [
-   "insan-tasavvurlari",
-   "ozgurluk"
+   "tanri-alem-iliskisi",
+   "tanrinin-sifatlari"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "hurriyet → ozgurluk"
   ],
@@ -4057,10 +4049,11 @@
   ],
   "baslik": "PAUL TILLICH'İN TANRI ANLAYIŞI",
   "basliklar": [
-   "din-dili"
+   "din-dili",
+   "tanri-tasavvurlari"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "sembolizm → din-dili"
   ],
@@ -4232,11 +4225,10 @@
   ],
   "baslik": "İbn Haldun’un Vahiy Anlayışı",
   "basliklar": [
-   "din-epistemolojisi",
-   "olum-ve-otesi"
+   "din-epistemolojisi"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "vahiy → din-epistemolojisi",
    "bilgi → din-epistemolojisi",
@@ -4426,12 +4418,9 @@
    "Kasım Müminoğlu"
   ],
   "baslik": "Nikolay Berdyayev ve Sartre Felsefesinde Kişilik ve Özgürlük Problemi",
-  "basliklar": [
-   "insan-tasavvurlari",
-   "ozgurluk"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "ozgurluk → ozgurluk"
   ],
@@ -4482,10 +4471,11 @@
   ],
   "baslik": "Shankara Mistisizminde Tanrı",
   "basliklar": [
-   "dini-tecrube"
+   "dini-tecrube",
+   "tanri-tasavvurlari"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "mistisizm → dini-tecrube"
   ],
@@ -4530,9 +4520,11 @@
    "Muammer İskenderoğlu"
   ],
   "baslik": "Thomas Aquinas'ta iman, teoloji ve akıl ilişkisi",
-  "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "basliklar": [
+   "din-epistemolojisi"
+  ],
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
   "ilgili": [],
   "kanit": {
@@ -4576,14 +4568,16 @@
   ],
   "baslik": "Sophia Vasalou - Moral Agents and Their Deserts: The Character of Mu‘tazilite Ethics",
   "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
-  "ilgili": [],
+  "ilgili": [
+   "din-ve-ahlak"
+  ],
   "kanit": {
    "Muammer İskenderoğlu": "profil-listesi"
   },
-  "tur": ""
+  "tur": "kitap-tanitimi"
  },
  "273489": {
   "akademisyenler": [
@@ -4621,14 +4615,16 @@
   ],
   "baslik": "Mariam al-Attar - Islamic Ethics: Divine Command Theory in Arabo-Islamic Thought",
   "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
-  "ilgili": [],
+  "ilgili": [
+   "din-ve-ahlak"
+  ],
   "kanit": {
    "Muammer İskenderoğlu": "profil-listesi"
   },
-  "tur": ""
+  "tur": "kitap-tanitimi"
  },
  "273509": {
   "akademisyenler": [
@@ -4651,10 +4647,10 @@
   ],
   "baslik": "Postmodern İnsanın Tanrı Anlayışı",
   "basliklar": [
-   "tanri-alem-iliskisi"
+   "tanri-tasavvurlari"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "deizm → tanri-alem-iliskisi"
   ],
@@ -5066,11 +5062,9 @@
    "Ali Yıldırım"
   ],
   "baslik": "GÜNÜMÜZ TÜRK TOPLUMUNDA FELSEFEYE YÖNELİK OLUMSUZ BAKIŞIN TARİHSEL ARKA PLANI ÜZERİNE BİR İNCELEME",
-  "basliklar": [
-   "din-ve-bilim"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "pozitivizm → din-ve-bilim"
   ],
@@ -5104,12 +5098,9 @@
    "Muhammet Sait Duran"
   ],
   "baslik": "MORAL AND LAW IN THE HABERMAS’S DISCOURSE ETHICS",
-  "basliklar": [
-   "din-ve-ahlak",
-   "din-ve-bilim"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "natural law → din-ve-ahlak",
    "legal positivism → din-ve-bilim"
@@ -5449,11 +5440,9 @@
    "Selin Olur"
   ],
   "baslik": "Anlama ve Gelenek: Hans-Georg Gadamer’in Felsefî Hermeneutiğinde Anlamada Geleneğin Rolü Sorunu",
-  "basliklar": [
-   "din-dili"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "hermeneutik → din-dili"
   ],
@@ -5565,12 +5554,9 @@
    "Celal Büyük"
   ],
   "baslik": "ÖĞRETMENLERE GÖRE İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ PROGRAMINDA YER ALAN İNANÇ ÖĞRENME ALANI KAZANIMLARININ GERÇEKLEŞME DÜZEYİ",
-  "basliklar": [
-   "din-epistemolojisi",
-   "din-ve-ahlak"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "inanc → din-epistemolojisi",
    "ilkogretim din kulturu ve ahlak bilgisi dersi → din-ve-ahlak"
@@ -5892,11 +5878,9 @@
    "Selin Olur"
   ],
   "baslik": "Heidegger’de Varlığın Açığa Çıkarılmasında Dil ve Geleneğin Rolü",
-  "basliklar": [
-   "din-dili"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "dil → din-dili"
   ],
@@ -5976,11 +5960,9 @@
    "Kasım Müminoğlu"
   ],
   "baslik": "SÜREÇ FELSEFESİNDE ‘İRADE’ KAVRAMININ TEMELLENDİRLİŞİ",
-  "basliklar": [
-   "din-epistemolojisi"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "akil → din-epistemolojisi"
   ],
@@ -6162,9 +6144,11 @@
    "Tuncay İmamoğlu"
   ],
   "baslik": "DİN FELSEFESİ ÜZERİNE BAZI DÜŞÜNCELER",
-  "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
+  "basliklar": [
+   "din-felsefesi-tanim-yontem-tarih"
+  ],
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
   "ilgili": [],
   "kanit": {
@@ -6630,14 +6614,16 @@
   ],
   "baslik": "Cafer Sadık Yaran. Din felsefesine giriş. İstanbul: Rağbet Yayınları, 2010. 271 s. ISBN 978-605-4074-62-4.",
   "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
-  "ilgili": [],
+  "ilgili": [
+   "din-felsefesi-tanim-yontem-tarih"
+  ],
   "kanit": {
    "Muammer İskenderoğlu": "profil-listesi"
   },
-  "tur": ""
+  "tur": "kitap-tanitimi"
  },
  "488224": {
   "akademisyenler": [
@@ -6645,14 +6631,16 @@
   ],
   "baslik": "İbni Sina'nın Metafizik Delili",
   "basliklar": [],
-  "durum": "kelime-yok",
-  "elle": false,
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
-  "ilgili": [],
+  "ilgili": [
+   "tanrinin-varliginin-delilleri"
+  ],
   "kanit": {
    "Engin Erdem": "profil-listesi"
   },
-  "tur": ""
+  "tur": "ceviri"
  },
  "488350": {
   "akademisyenler": [
@@ -7210,11 +7198,10 @@
   ],
   "baslik": "MEVLÂNÂ CELÂLEDDÎN RÛMÎ’NİN AHLAK ÖĞRETİSİNDE NEFS-RUH AYRIMI",
   "basliklar": [
-   "din-ve-ahlak",
-   "olum-ve-otesi"
+   "din-ve-ahlak"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "moral → din-ve-ahlak",
    "soul → olum-ve-otesi",
@@ -7325,9 +7312,11 @@
    "Ali Yıldırım"
   ],
   "baslik": "Süreç Felsefesinin Tanrı Anlayışının Mehmet Akif Ersoy’un Tanrı Anlayışı ile Karşılaştırılmas",
-  "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
+  "basliklar": [
+   "tanri-tasavvurlari"
+  ],
+  "durum": "konulu",
+  "elle": true,
   "eslesen": [],
   "ilgili": [],
   "kanit": {
@@ -7400,11 +7389,10 @@
   ],
   "baslik": "Akıl-Vahiy İlişkisinde Bir Denge Filozofu (Aydınlanma Çağının Farklı Bir Yüzü Olarak John Toland)",
   "basliklar": [
-   "din-epistemolojisi",
-   "tanri-alem-iliskisi"
+   "din-epistemolojisi"
   ],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "reason → din-epistemolojisi",
    "miracle → tanri-alem-iliskisi",
@@ -8467,11 +8455,9 @@
    "Rıfat Atay"
   ],
   "baslik": "An Introduction to the Quranic Hermeneutic of Dr. Irfan A. Khan",
-  "basliklar": [
-   "din-dili"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "hermenotik → din-dili"
   ],
@@ -9257,11 +9243,9 @@
    "Nusret Taş"
   ],
   "baslik": "X. YÜZYILIN BİLİMLER AKADEMİSİ: İHVÂN-I SAFÂ TEŞKİLATI",
-  "basliklar": [
-   "din-epistemolojisi"
-  ],
-  "durum": "konulu",
-  "elle": false,
+  "basliklar": [],
+  "durum": "kapsam-disi",
+  "elle": true,
   "eslesen": [
    "akil → din-epistemolojisi"
   ],

@@ -277,3 +277,68 @@
   yazar: dogru
 '378899':  # Dini İstismara Açık Bilgi Kaynağı Olarak Ayrıcalıklı Bilgi
   karar: [din-epistemolojisi, dini-tecrube]
+# Profillerden gelen makaleler, ilk gözden geçirme (23 Ekim 2026)
+'1312496':  # Ahlâk ve Demokrasi
+  karar: kapsam-disi
+'623394':  # Akıl-Vahiy İlişkisinde Bir Denge Filozofu (Aydınlanma Çağının Farklı B
+  karar: [din-epistemolojisi]
+'805172':  # An Introduction to the Quranic Hermeneutic of Dr. Irfan A. Khan
+  karar: kapsam-disi
+'364620':  # Anlama ve Gelenek: Hans-Georg Gadamer’in Felsefî Hermeneutiğinde Anlam
+  karar: kapsam-disi
+'1955281':  # Divine Agency, Will and Freedom in Avicenna
+  karar: [tanrinin-sifatlari, tanri-alem-iliskisi]
+'313684':  # GÜNÜMÜZ TÜRK TOPLUMUNDA FELSEFEYE YÖNELİK OLUMSUZ BAKIŞIN TARİHSEL ARK
+  karar: kapsam-disi
+'422858':  # Heidegger’de Varlığın Açığa Çıkarılmasında Dil ve Geleneğin Rolü
+  karar: kapsam-disi
+'589574':  # MEVLÂNÂ CELÂLEDDÎN RÛMÎ’NİN AHLAK ÖĞRETİSİNDE NEFS-RUH AYRIMI
+  karar: [din-ve-ahlak]
+'330051':  # MORAL AND LAW IN THE HABERMAS’S DISCOURSE ETHICS
+  karar: kapsam-disi
+'255685':  # Nikolay Berdyayev ve Sartre Felsefesinde Kişilik ve Özgürlük Problemi
+  karar: kapsam-disi
+'210068':  # PAUL TILLICH'İN TANRI ANLAYIŞI
+  karar: [tanri-tasavvurlari, din-dili]
+'274865':  # Postmodern İnsanın Tanrı Anlayışı
+  karar: [tanri-tasavvurlari]
+'1472547':  # Sağduyu Naturalizmi
+  karar: kapsam-disi
+'267169':  # Shankara Mistisizminde Tanrı
+  karar: [dini-tecrube, tanri-tasavvurlari]
+'429079':  # SÜREÇ FELSEFESİNDE ‘İRADE’ KAVRAMININ TEMELLENDİRLİŞİ
+  karar: kapsam-disi
+'915815':  # X. YÜZYILIN BİLİMLER AKADEMİSİ: İHVÂN-I SAFÂ TEŞKİLATI
+  karar: kapsam-disi
+'1817851':  # Yapay Zekâ ve İnsan Aklı: Felsefî Açıdan Bir Karşılaştırma
+  karar: kapsam-disi
+'36818':  # ÖĞRETMENLERE GÖRE İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ PROGRAMINDA 
+  karar: kapsam-disi
+'237973':  # İbn Haldun’un Vahiy Anlayışı
+  karar: [din-epistemolojisi]
+'1953111':  # İdeal Ahlak ile Reel Ahlak Arasındaki Çatışmayı Aşma Denemesi: Erdem T
+  karar: kapsam-disi
+'1414477':  # Şer‘İyye Mahkemeleri Araştırmalarında Değişen Bakış Açıları: Metodoloj
+  karar: kapsam-disi
+# Profillerden gelen, anahtar kelimesi sözlüğe uymayan ama konusu açık olanlar
+'488090':  # Yaran, Din Felsefesine Giriş (kitap tanıtımı)
+  karar: [din-felsefesi-tanim-yontem-tarih]
+  tur: kitap-tanitimi
+'443907':  # Din Felsefesi Üzerine Bazı Düşünceler
+  karar: [din-felsefesi-tanim-yontem-tarih]
+'616681':  # Süreç felsefesinin Tanrı anlayışı ve Mehmet Akif
+  karar: [tanri-tasavvurlari]
+'273340':  # Thomas Aquinas'ta iman, teoloji ve akıl ilişkisi
+  karar: [din-epistemolojisi]
+'488224':  # İbni Sina'nın Metafizik Delili (çeviri)
+  karar: [tanrinin-varliginin-delilleri]
+  tur: ceviri
+'1120020':  # Realism and Religion (kitap tanıtımı)
+  karar: [din-dili, din-epistemolojisi]
+  tur: kitap-tanitimi
+'273505':  # al-Attar, Islamic Ethics: Divine Command Theory (kitap tanıtımı)
+  karar: [din-ve-ahlak]
+  tur: kitap-tanitimi
+'273488':  # Vasalou, Moral Agents and Their Deserts (kitap tanıtımı)
+  karar: [din-ve-ahlak]
+  tur: kitap-tanitimi
