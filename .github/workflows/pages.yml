@@ -8,8 +8,8 @@ on:
       - "content/adaylar.json"
   workflow_dispatch:
   schedule:
-    # Her gece 00.07'de (İstanbul) yeniden derlenir, günün makalesi böylece değişir
-    - cron: "7 21 * * *"
+    # Her akşam 19.47'de (İstanbul) yeniden derlenir; ertesi günün makalesi 20.00 civarında yayına girer
+    - cron: "47 16 * * *"
 
 permissions:
   contents: read

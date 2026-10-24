@@ -826,8 +826,11 @@ GUN_ADLARI = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartes
 
 
 def bugun() -> str:
+    """Günün makalesi için 'bugün'. Yeni günün makalesi İstanbul saatiyle akşam 19.30'dan itibaren yayımlanır
+    (gece derlemesi 19.47'de başlar); bu yüzden saate 4,5 saat eklenerek gün hesaplanır."""
+    from datetime import timedelta
     from zoneinfo import ZoneInfo
-    return os.environ.get("BUGUN") or datetime.now(ZoneInfo("Europe/Istanbul")).date().isoformat()
+    return os.environ.get("BUGUN") or (datetime.now(ZoneInfo("Europe/Istanbul")) + timedelta(hours=4, minutes=30)).date().isoformat()
 
 
 def gunleri_ata(items) -> list:
