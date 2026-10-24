@@ -29,6 +29,7 @@
   "dini-tecrube": 16,
   "dini-cesitlilik": 14,
   "dini-pratik": 7,
+  "yapay-zeka-ve-teknoloji": 5,
   "ibadet": 3,
   "din-ve-sanat": 2
  },
@@ -309,7 +310,8 @@
    "id": "1753407",
    "yil": "2025",
    "basliklar": [
-    "din-ve-bilim"
+    "din-ve-bilim",
+    "yapay-zeka-ve-teknoloji"
    ],
    "kaynak": "elle"
   },
@@ -428,7 +430,8 @@
    "yil": "2025",
    "basliklar": [
     "din-ve-bilim",
-    "tanri-alem-iliskisi"
+    "tanri-alem-iliskisi",
+    "yapay-zeka-ve-teknoloji"
    ],
    "kaynak": "anahtar"
   },
@@ -486,7 +489,8 @@
    "id": "1739633",
    "yil": "2025",
    "basliklar": [
-    "din-ve-bilim"
+    "din-ve-bilim",
+    "yapay-zeka-ve-teknoloji"
    ],
    "kaynak": "anahtar"
   },
@@ -526,7 +530,8 @@
    "yil": "2025",
    "basliklar": [
     "din-ve-bilim",
-    "dini-tecrube"
+    "dini-tecrube",
+    "yapay-zeka-ve-teknoloji"
    ],
    "kaynak": "anahtar"
   },
@@ -927,7 +932,8 @@
    "yil": "2024",
    "basliklar": [
     "din-ve-bilim",
-    "olum-ve-otesi"
+    "olum-ve-otesi",
+    "yapay-zeka-ve-teknoloji"
    ],
    "kaynak": "anahtar"
   },

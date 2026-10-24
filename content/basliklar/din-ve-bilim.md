@@ -6,7 +6,7 @@ sira: 14
 ust_baslik: ''
 kume: din-bilim-kultur
 ozet: Dinî inançlar ile bilimsel bilgi arasındaki ilişki.
-alt_basliklar: []
+alt_basliklar: ["yapay-zeka-ve-teknoloji"]
 ilgili_basliklar:
 - tanri-alem-iliskisi
 imza: dinfelsefesi.com.tr

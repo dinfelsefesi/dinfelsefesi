@@ -2161,7 +2161,7 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "artificial intelligence → din-ve-bilim",
+   "artificial intelligence → yapay-zeka-ve-teknoloji",
    "free will → ozgurluk",
    "epistemology → din-epistemolojisi"
   ],
@@ -2559,7 +2559,8 @@
  "10.3390/rel17050575": {
   "baslik": "From Combination to Individuation: A Sufi–Sadrian Case for the Metaphysical Possibility of Strong AI",
   "basliklar": [
-   "din-ve-bilim"
+   "din-ve-bilim",
+   "yapay-zeka-ve-teknoloji"
   ],
   "dergi": "Religions",
   "durum": "konulu",
@@ -2908,7 +2909,7 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "artificial intelligence in education → din-ve-bilim"
+   "artificial intelligence in education → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kaynak": "openalex",
@@ -3009,7 +3010,7 @@
   "elle": true,
   "eslesen": [
    "immortality of the soul → olum-ve-otesi",
-   "artificial intelligence → din-ve-bilim"
+   "artificial intelligence → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kaynak": "openalex",
@@ -3332,6 +3333,7 @@
   "elle": true,
   "eslesen": [
    "epistemology → din-epistemolojisi",
+   "ethics of technology → yapay-zeka-ve-teknoloji",
    "ethics of technology → din-ve-ahlak"
   ],
   "ilgili": [],

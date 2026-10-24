@@ -1001,7 +1001,9 @@ def render_baslik(k) -> str:
         fis_grubu(b, "kisi", "Kişiler"),
         (f"<h2>Okuma listesi · giriş</h2><ul>{''.join(f'<li>{bag("eser", x)}</li>' for x in liste(ok.get('giris')))}</ul>" if liste(ok.get("giris")) else ""),
         (f"<h2>Okuma listesi · ileri</h2><ul>{''.join(f'<li>{bag("eser", x)}</li>' for x in liste(ok.get('ileri')))}</ul>" if liste(ok.get("ileri")) else ""),
-        fis_grubu(b, "eser", "Eserler") if not ok else "",
+        fis_grubu(b, "eser", "Eserler") if not ok else
+        fis_grubu({(x, y) for x, y in b if not (x == "eser" and y in set(liste(ok.get("giris"))) | set(liste(ok.get("ileri"))))},
+                  "eser", "Başlığa bağlı diğer eserler"),
         (f"<h2>İlgili başlıklar</h2><ul>{''.join(f'<li>{bag("baslik", x)}</li>' for x in liste(h.get('ilgili_basliklar')))}</ul>" if liste(h.get("ilgili_basliklar")) else ""),
     ])
     sorular = "".join(f"<li>{satir_ici(s)}</li>" for s in liste(h.get("tartisma_sorulari")))

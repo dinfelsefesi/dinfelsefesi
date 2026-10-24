@@ -259,6 +259,31 @@ basliklar:
     - teşbih
     - tenzih
     - wittgenstein
+  yapay-zeka-ve-teknoloji:
+    - yapay zeka
+    - yapay zekâ
+    - artificial intelligence
+    - yapay bilinç
+    - transhümanizm
+    - transhumanism
+    - posthümanizm
+    - posthumanism
+    - insan ötesi
+    - dijital
+    - digital religion
+    - algoritma
+    - algorithm
+    - robot
+    - teknoloji
+    - technology
+    - makine öğrenme
+    - machine learning
+    - büyük dil model
+    - large language model
+    - chatgpt
+    - sanal gerçeklik
+    - virtual reality
+    - metaverse
   din-ve-sanat:
     - sanat
     - art$
@@ -305,11 +330,6 @@ basliklar:
     - positivism
     - nörobilim
     - neuroscience
-    - yapay zeka
-    - yapay zekâ
-    - artificial intelligence
-    - transhümanizm
-    - transhumanism
   dini-cesitlilik:
     - tekelcilik
     - çoğulculuk

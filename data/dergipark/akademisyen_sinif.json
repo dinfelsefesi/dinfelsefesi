@@ -2158,13 +2158,14 @@
   "baslik": "Islamic Classical Theism and the Prospect of Strong Artificial Intelligence",
   "basliklar": [
    "din-ve-bilim",
-   "tanri-tasavvurlari"
+   "tanri-tasavvurlari",
+   "yapay-zeka-ve-teknoloji"
   ],
   "durum": "konulu",
   "elle": false,
   "eslesen": [
    "classical theism → tanri-tasavvurlari",
-   "artificial intelligence → din-ve-bilim"
+   "artificial intelligence → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kanit": {
@@ -2584,10 +2585,10 @@
   "elle": true,
   "eslesen": [
    "ozgur irade → ozgurluk",
-   "yapay zeka → din-ve-bilim",
+   "yapay zeka → yapay-zeka-ve-teknoloji",
    "compatibilism → ozgurluk",
    "free will → ozgurluk",
-   "artificial intelligence → din-ve-bilim"
+   "artificial intelligence → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kanit": {
@@ -3030,7 +3031,8 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "yapay zeka → din-ve-bilim"
+   "yapay zeka → yapay-zeka-ve-teknoloji",
+   "sohbet robotu → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kanit": {
@@ -3177,8 +3179,8 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "artificial intelligence → din-ve-bilim",
-   "yapay zeka → din-ve-bilim"
+   "artificial intelligence → yapay-zeka-ve-teknoloji",
+   "yapay zeka → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kanit": {
@@ -3473,9 +3475,9 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "transhumanizm → din-ve-bilim",
+   "transhumanizm → yapay-zeka-ve-teknoloji",
    "ethics → din-ve-ahlak",
-   "transhumanizm → din-ve-bilim",
+   "transhumanizm → yapay-zeka-ve-teknoloji",
    "ahlak → din-ve-ahlak"
   ],
   "ilgili": [],
@@ -3620,9 +3622,9 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "yapay zeka felsefesi → din-ve-bilim",
-   "yapay zeka bilinci → din-ve-bilim",
-   "yapay zeka etigi → din-ve-bilim"
+   "yapay zeka felsefesi → yapay-zeka-ve-teknoloji",
+   "yapay zeka bilinci → yapay-zeka-ve-teknoloji",
+   "yapay zeka etigi → yapay-zeka-ve-teknoloji"
   ],
   "ilgili": [],
   "kanit": {
@@ -7706,9 +7708,11 @@
   "durum": "kapsam-disi",
   "elle": true,
   "eslesen": [
-   "transhumanizm → din-ve-bilim",
+   "transhumanizm → yapay-zeka-ve-teknoloji",
+   "teknoloji → yapay-zeka-ve-teknoloji",
    "bilim → din-ve-bilim",
-   "transhumanism → din-ve-bilim",
+   "transhumanism → yapay-zeka-ve-teknoloji",
+   "technology → yapay-zeka-ve-teknoloji",
    "traditional values → din-ve-ahlak",
    "science → din-ve-bilim"
   ],
