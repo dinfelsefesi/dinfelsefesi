@@ -732,7 +732,7 @@ def ld_yayinci() -> dict:
 
 
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "",
-         gorsel: str = "", og_tur: str = "website", jsonld: dict | None = None) -> str:
+         gorsel: str = "", og_tur: str = "website", jsonld: dict | None = None, dizinleme: bool = True) -> str:
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
     if jsonld:
         canon += ld(jsonld)
@@ -747,7 +747,8 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
           f'<meta name="twitter:title" content="{e(og_baslik)}"><meta name="twitter:description" content="{e(desc)}">'
           f'<meta name="twitter:image" content="{e(gorsel or SITE_URL + "/paylas/site.png")}">'
           f'<meta name="google-site-verification" content="google08c007317a4ad095">')
-    robots = '<meta name="robots" content="noindex,nofollow">' if NOINDEX else ""
+    robots = ('<meta name="robots" content="noindex,nofollow">' if NOINDEX
+              else '<meta name="robots" content="noindex,follow">' if not dizinleme else "")
     menu = "".join(
         f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
     if NOINDEX:
@@ -2000,7 +2001,9 @@ def render_akademisyen(s: str) -> str:
     if konular:
         kisi["knowsAbout"] = konular
     jl = {"@type": "ProfilePage", "url": akademi_url(s), "inLanguage": "tr", "mainEntity": kisi}
-    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s), jsonld=jl)
+    # Akademisyen sayfaları arama motorlarına kapalıdır: genel aramalarda sitenin yerine tek tek kişilerin sayfaları
+    # çıkmasın, yaşayan kişiler hakkında otomatik derlenmiş sayfalar aramalarda öne geçmesin. Sayfalar site içinde açıktır.
+    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s), jsonld=jl, dizinleme=False)
 
 
 # ---------------------------------------------------------------- ilişki ağı
@@ -2375,7 +2378,8 @@ def main() -> None:
 
     # Site haritası ve robots.txt. Deneme yayınında (NOINDEX) sayfalar yine taranabilir ama "noindex" etiketi
     # yüzünden dizine eklenmez; yayına geçildiğinde yalnızca NOINDEX kapatılır.
-    harita = "".join(f"<url><loc>{e(SITE_URL + '/' + (y + '/' if y else ''))}</loc></url>" for y in SAYFALAR)
+    harita = "".join(f"<url><loc>{e(SITE_URL + '/' + (y + '/' if y else ''))}</loc></url>" for y in SAYFALAR
+                     if not y.startswith("kisiler/akademi/"))
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{harita}</urlset>\n', encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
