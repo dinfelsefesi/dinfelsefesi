@@ -511,13 +511,16 @@ table.kisiler tbody tr:hover{background:var(--panel)}
 .emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 ul.eserler{list-style:none;margin:0;padding:0;columns:2 26rem;column-gap:2.5rem}
-.eser-konu-sec{margin:.9rem 0 .6rem}
+.secim-etiket{margin:1rem 0 .35rem;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.secim-ayrac{border-top:1px solid color-mix(in srgb,var(--gold-logo) 45%,var(--rule));padding-top:.8rem;margin-top:.9rem}
+.eser-konu-sec{margin:0 0 .4rem}
 .eser-konu-sec button{font-size:.9rem;padding:.22rem .75rem}
 .eser-konu-sec button.alt{font-style:italic}
 .eser-konu-sec button.plan{opacity:.5}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
 .eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
-.eser-tur-sec button{font-size:.9rem;padding:.22rem .75rem}
+/* tür seçicisi konu düğmelerinden ayrışsın: düz yazı, köşeli, küçük */
+.eser-tur-sec button{font-family:var(--sans);font-size:.82rem;padding:.25rem .7rem;border-radius:6px}
 .eser-ust{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem 1.5rem;max-width:52rem;margin:.7rem 0 .2rem;border-bottom:1px solid var(--gold-logo);padding-bottom:.3rem}
 .eser-sayi{font-style:italic;font-size:.9rem;color:var(--ink-soft);margin:0}
 .eser-sirala{display:flex;gap:1rem;align-items:baseline;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
@@ -1399,7 +1402,8 @@ def render_eserler() -> str:
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
-            f'<div class="tur-secici eser-konu-sec" role="group" aria-label="Konu">{"".join(konular)}</div>'
+            f'<p class="secim-etiket">Konu</p><div class="tur-secici eser-konu-sec" role="group" aria-label="Konu">{"".join(konular)}</div>'
+            f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div>'
             '<label class="k-ara"><span>Ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
