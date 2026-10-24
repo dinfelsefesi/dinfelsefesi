@@ -770,6 +770,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 {og}
 <link rel="icon" href="{SITE_URL}/static/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{SITE_URL}/favicon.ico" sizes="48x48">
+<link rel="icon" href="{SITE_URL}/static/img/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="{SITE_URL}/static/img/apple-touch-icon.png">
 <meta name="theme-color" content="#f3f4f6">
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
@@ -2294,7 +2295,7 @@ def render_ana(items) -> str:
           "inLanguage": "tr", "description": "Din felsefesi için Türkçe başvuru kaynağı", "publisher": ld_yayinci(),
           "editor": {"@type": "Person", "name": EDITOR, "url": "https://abdullahakgul.com",
                      "sameAs": ["https://orcid.org/0000-0001-9660-9424"]}}
-    return page(SITE_NAME, body, "", canonical=SITE_URL + "/", gorsel=gorsel, jsonld=jl,
+    return page(f"{SITE_NAME} · Türkçe Başvuru Kaynağı", body, "", canonical=SITE_URL + "/", gorsel=gorsel, jsonld=jl,
                 desc="Din felsefesinin başlıkları, terimleri, kişileri ve eserleri. Türkiye'deki din felsefesi akademisyenleri, "
                      "DergiPark'taki din felsefesi makaleleri ve her gün bir makale tanıtımı.")
 
