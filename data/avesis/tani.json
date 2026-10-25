@@ -21,9 +21,6 @@
   "Mehmet Ata Az": [
    "https://avesis.aybu.edu.tr"
   ],
-  "Mehmet Sait Reçber": [
-   "https://avesis.ankara.edu.tr"
-  ],
   "Merve Yavuz": [
    "https://avesis.uludag.edu.tr"
   ],
@@ -224,7 +221,7 @@
    "avesis.nku.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Tokat Gaziosmanpaşa Üniversitesi": [
-   "avesis.gop.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gop.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "avesis.gop.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>",
    "avesis.gaziosmanpasa.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "avesis.gaziosmanpasa.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
@@ -275,12 +272,6 @@
    ],
    "profil": 3876
   },
-  "https://avesis.atauni.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 2839
-  },
   "https://avesis.aybu.edu.tr": {
    "parca": [
     "cvpages.xml"
@@ -293,35 +284,11 @@
    ],
    "profil": 1054
   },
-  "https://avesis.cu.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 2448
-  },
-  "https://avesis.deu.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 3710
-  },
   "https://avesis.erciyes.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
    "profil": 2989
-  },
-  "https://avesis.gelisim.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 794
-  },
-  "https://avesis.gsu.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 322
   },
   "https://avesis.istanbul.edu.tr": {
    "parca": [
@@ -348,12 +315,6 @@
    "profil": 2949
   },
   "https://avesis.yildiz.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 1835
-  },
-  "https://avesis.yyu.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],

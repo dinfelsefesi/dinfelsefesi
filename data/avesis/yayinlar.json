@@ -7263,6 +7263,783 @@
    }
   ]
  },
+ "Mehmet Sait Reçber": {
+  "profil": "https://avesis.ankara.edu.tr/recber",
+  "yayinlar": [
+   {
+    "baslik": "Kant, Analitik Felsefe ve Metafizik",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.82, ss.4-25, 2025 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/826a779f-4ab7-494b-9b25-55d0654c6956/kant-analitik-felsefe-ve-metafizik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "Oakes, Teizm ve Panteizm",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Felsefe Araştırmaları, cilt.3, sa.6, ss.137-159, 2020 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/1e59c4ca-33ac-4c5d-bee5-a23f901c3aa6/oakes-teizm-ve-panteizm",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Bayle, Spinoza ve Panteizm Meselesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Felsefe Araştırmaları, cilt.3, sa.5, ss.5-27, 2020 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/dc46c00c-ffc2-4e25-a278-023f3180853e/bayle-spinoza-ve-panteizm-meselesi",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "The Metaphysics of Knowledge: A Qur'anic Perspective",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "BEYTULHIKME-AN INTERNATIONAL JOURNAL OF PHILOSOPHY, cilt.9, sa.3, ss.573-584, 2019 (ESCI, TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/a174ce02-2ddf-4aa2-8360-671434357186/the-metaphysics-of-knowledge-a-quranic-perspective",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Necati Öner, Felsefe ve Eleştirel Rasyonalizm",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.69, 2019 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/6d4b5deb-9298-47ea-a25f-c2a03e1c82e3/necati-oner-felsefe-ve-elestirel-rasyonalizm",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Kur’an ve Ahlâk Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Toplum, cilt.5, sa.3, 2018 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/94eefb07-0872-46a7-9c3e-b1771c5947f3/kuran-ve-ahlak-uzerine",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Religion after Enlightenment: The case for Islam",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Islam and Christian-Muslim Relations, cilt.23, sa.3, ss.305-314, 2012 (SCI-Expanded, Scopus)",
+    "url": "https://avesis.ankara.edu.tr/yayin/d36d1c7b-df6e-4120-8df8-12be62f0b53d/religion-after-enlightenment-the-case-for-islam",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2012"
+   },
+   {
+    "baslik": "Din Felsefesi Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Dünyası, sa.55, 2012 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/d45a558d-2645-4246-9899-599614ed0c4e/din-felsefesi-uzerine",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2012"
+   },
+   {
+    "baslik": "Din ve Doğruluk Meselesi Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Toplum, 2012 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/bbdd5821-c9f1-497d-acef-56f54130bd80/din-ve-dogruluk-meselesi-uzerine",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2012"
+   },
+   {
+    "baslik": "Plotinus: Tanrı'nın Birliği ve Basitliği Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Ankara Universitesi Ilahiyat Fakultesi Dergisi, cilt.51, sa.1, ss.59-78, 2010 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/4192afe6-16db-4c31-b72e-08d2679157b5/plotinus-tanrinin-birligi-ve-basitligi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2010"
+   },
+   {
+    "baslik": "Putnam, Realizm ve Dinî İnanç",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.50, ss.27-47, 2009 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/5f08abfd-8a57-49ef-ad59-67f8e3c926f6/putnam-realizm-ve-dini-inanc",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2009"
+   },
+   {
+    "baslik": "Alisdair MacIntyre, Ethics and Politics, Volume 2.",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "İslam Araştırmaları Dergisi, sa.21, 2009 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/5b21cde5-bb40-4a87-a8d7-21dc9c4b3a17/alisdair-macintyre-ethics-and-politics-volume-2",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2009"
+   },
+   {
+    "baslik": "İslam ve Batı: Bir Çözümleme Denemesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "EskiYeni, sa.8, 2008 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/fe73da83-5f32-42f3-a1e1-b6ce266989b8/islam-ve-bati-bir-cozumleme-denemesi",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2008"
+   },
+   {
+    "baslik": "Din ve Değişim Üzerine Bir Çözümleme",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Toplum, 2008 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/ac075299-2864-401b-9771-61e2471df830/din-ve-degisim-uzerine-bir-cozumleme",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2008"
+   },
+   {
+    "baslik": "İslam, Adalet ve Küresel Barış",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Toplum, 2007 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/83310b56-6b8f-41a4-b6ac-8da0c6591e4b/islam-adalet-ve-kuresel-baris",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Akıl, Bilgi ve İman",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Din ve Toplum, 2007 (Hakemsiz Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/a5b9487e-2d44-41e4-9a20-b576fe823e8f/akil-bilgi-ve-iman",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Ibn al Arabi Hick and Religious Pluralism",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Asian and African Area Studies (Kyoto University), sa.7/2, ss.145-157, 2007 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/9e21d37e-8b11-47e6-b06e-5372782f5cbf/ibn-al-arabi-hick-and-religious-pluralism",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Değerlerin Küreselleşmesi ve Küreselleşmenin Değerleri",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Dünyası, sa.41, 2005 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/c6fde00a-1e98-43e3-92b8-0994ffe96a39/degerlerin-kuresellesmesi-ve-kuresellesmenin-degerleri",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2005"
+   },
+   {
+    "baslik": "Hick, the real and Al-Haqq",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Islam and Christian-Muslim Relations, cilt.16, sa.1, ss.3-10, 2005 (SCI-Expanded, Scopus)",
+    "url": "https://avesis.ankara.edu.tr/yayin/97be79f9-16e6-4ef6-8d59-b62023c92c6d/hick-the-real-and-al-haqq",
+    "yazarlar": [
+     "Reçber M. S.",
+     "Hick J."
+    ],
+    "yil": "2005"
+   },
+   {
+    "baslik": "Plantinga ve Tanrı İnancının Temelselliği",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.39, ss.20-41, 2004 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/8c9d30d9-a280-445f-b8d5-02ed83c854dc/plantinga-ve-tanri-inancinin-temelselligi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "İslam, Din ve Çağdaş Durum",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "İslamiyat, cilt.7, 2004 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/26d1f68a-869d-4fb0-811d-6890ef0dddc9/islam-din-ve-cagdas-durum",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "Şafak Ural ve Diğerleri, Mantık Matematik ve Felsefe",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Dünyası, sa.39, 2004 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/431114e1-263a-482e-bd6d-cfff7bef3414/safak-ural-ve-digerleri-mantik-matematik-ve-felsefe",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "Plantinga, Bilgi ve Doğru İşlevselcilik",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.38, ss.41-57, 2003 (TRDizin)",
+    "url": "https://avesis.ankara.edu.tr/yayin/23b1abfc-614e-4987-8ffa-7d0ee156801f/plantinga-bilgi-ve-dogru-islevselcilik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "Tanrı ve Ahlâkî Doğruların Zorunluluğu",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Ankara Universitesi Ilahiyat Fakultesi Dergisi, cilt.44, sa.1, ss.135-160, 2003 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/63ace523-4980-4964-8c3a-994031f8ca3c/tanri-ve-ahlaki-dogrularin-zorunlulugu",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "G.R. Hawting, The Idea of Idolatry and the Emergence of Islam: From Polemic to History",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "The Muslim World, cilt.93, 2003 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/b9667af7-376f-414f-babc-3163304fdb13/g-r-hawting-the-idea-of-idolatry-and-the-emergence-of-islam-from-polemic-to-history",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "Al Ghazali Platonism and the Metaphysics of the Self",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Annals of Japan Association for Middle East Studies, cilt.19, sa.2, ss.73-86, 2003 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/ce201c61-1870-4b54-84e4-684e407d8830/al-ghazali-platonism-and-the-metaphysics-of-the-self",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "Realizm, Din ve Dünyevileşme",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "İslamiyat, cilt.4, 2001 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/57dc235b-b322-4d2f-9a89-b53ba88415a5/realizm-din-ve-dunyevilesme",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2001"
+   },
+   {
+    "baslik": "Ben’liğin Varlığı ve Bilgisi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Dünyası, sa.33, ss.75, 2001 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/a8b5e025-8aca-4743-9a4d-d64d287b9b7c/benligin-varligi-ve-bilgisi",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2001"
+   },
+   {
+    "baslik": "'Tanrı' Teriminin Anlam ve Referansı",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.32, ss.49-66, 2000 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/1ec0f321-c00f-4298-af94-16c56565196d/tanri-teriminin-anlam-ve-referansi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2000"
+   },
+   {
+    "baslik": "'Tanrı' Terimi Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, sa.31, ss.65-79, 2000 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/20b96c6c-0be2-40c6-98d1-8830005eb11d/tanri-terimi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2000"
+   },
+   {
+    "baslik": "Adnan Aslan, Religious Pluralism in Christian and Islamic Philosophy: The Thought of John Hick and Seyyed Hossein Nasr",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "İslamiyat, cilt.3, sa.4, 2000 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/25abd545-817b-43b5-8a9c-abe2be055bcd/adnan-aslan-religious-pluralism-in-christian-and-islamic-philosophy-the-thought-of-john-hick-and-seyyed-hossein-nasr",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2000"
+   },
+   {
+    "baslik": "Swinburne’ün Teslis Felsefesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "İslamiyat, cilt.3, sa.4, 2000 (Hakemli Dergi)",
+    "url": "https://avesis.ankara.edu.tr/yayin/2aa729c7-aa78-43e3-8a1d-7c48993076ff/swinburneun-teslis-felsefesi",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2000"
+   },
+   {
+    "baslik": "Çağdaş İnanç Krizleri ve İstikamet",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Hayatın Ölçüsü: Sırat-ı Müstakim Sempozyumu, İstanbul, Türkiye, 26 Nisan 2025, ss.117-139, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/af93f8ea-8486-44eb-9b93-59d87c9fef12/cagdas-inanc-krizleri-ve-istikamet",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "İlahiyat: Sistematik ve Felsefi Yaklaşımlar Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "70. Yılında Ankara Üniversitesi İlahiyat Fakültesi -Geçmiş ve Gelecek Perspektifleri, Ankara, Türkiye, 7 - 08 Kasım 2019, ss.11-26, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/056a3436-5b4e-431a-b777-4b0cb02d570b/ilahiyat-sistematik-ve-felsefi-yaklasimlar-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Eleştiri ve Tahammülün Mantığı Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam Düşüncesinde Eleştiri Kültürü ve Tahammül Ahlâkı -III, Muş, Türkiye, 28 Mayıs 2021, ss.59-72, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/cf901b73-512c-43cc-aced-60378abc86b2/elestiri-ve-tahammulun-mantigi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İlahiyat ve Din Bilimlerinin Mantığı Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Türkiye'de İlahiyat Fakültelerinin Konumu ve Dini Bilginin Niteliği Uluslararası Sempozyumu, Ankara, Türkiye, 16 Ekim 2009, ss.103-122, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/01e91cdb-01f3-4611-8dfc-e60a679ba289/ilahiyat-ve-din-bilimlerinin-mantigi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2009"
+   },
+   {
+    "baslik": "On al-Ghazali and Necessary Truths",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "900 Jahre al-Gazali im Spiegel der islamischen Wissenschaften, Osnabrück, Almanya, 28 Ekim 2011, ss.117-126, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/7b05fad2-83df-4e6e-999e-94f6237b46ca/on-al-ghazali-and-necessary-truths",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "Gazzâlî ve 'Zorunlu Varlık' Kavramı",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "900. Vefat Yılında Uluslararası Gazzâlî Sempozyumu, İstanbul, Türkiye, 07 Ekim 2011, ss.547-560, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/0fb976e4-24ed-45c1-8a67-9cf8ae725859/gazzali-ve-zorunlu-varlik-kavrami",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "'Felsefî Hayat'ın Anlam ve Referansı Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "I. Ilgaz Felsefe Günleri Sempozyumu, Çankırı, Türkiye, 04 Kasım 2010, ss.87-94, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/2f00b2ad-99ee-4928-b380-87cafb73edfe/felsefi-hayatin-anlam-ve-referansi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2010"
+   },
+   {
+    "baslik": "Vâcib’ül-Vucûd'un Mâhiyeti Meselesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası İbn Sînâ Sempozyumu, İstanbul, Türkiye, 22 Mayıs 2008, ss.307-315, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/07d11ef1-ea35-423c-bc99-cadad35be7a0/vacibul-vucudun-mahiyeti-meselesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2008"
+   },
+   {
+    "baslik": "Kur'an ve Ahlâk Metafiziği",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "IX. Kur'an Sempozyumu, Konya, Türkiye, 14 Nisan 2006, ss.53-67, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/caa3bb24-0085-421a-b20f-3c1e6456a002/kuran-ve-ahlak-metafizigi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Fârâbî ve Tanrı'nın Basitliği Meselesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Fârâbî Sempozyumu, Ankara, Türkiye, 07 Ekim 2004, ss.213-227, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/bb9ddf85-f80f-4df6-89ad-c39522d5af93/farabi-ve-tanrinin-basitligi-meselesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "Watt ve İslam Vahyi'nin Kaynağı: Eleştirel Bir Analiz",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Oryantalizmi Yeniden Okumak: Batı'da İslam Çalışmaları Sempozyumu, Sakarya, Türkiye, 11 Mayıs 2002, ss.195-212, (Tam Metin Bildiri)",
+    "url": "https://avesis.ankara.edu.tr/yayin/c9325cf7-6371-43b9-8cfa-f92ac7844bed/watt-ve-islam-vahyinin-kaynagi-elestirel-bir-analiz",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2002"
+   },
+   {
+    "baslik": "Al-Ghazali Against al-Falasifa (the Philosophers) on Divine Simplicity",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Describing God?, Klaus von Stosch,Lukas Wiesenhütter, Editör, Brill, Leiden, Paderborn, ss.137-153, 2025",
+    "url": "https://avesis.ankara.edu.tr/yayin/38f03a20-1a39-402d-91ab-0dda35da9d91/al-ghazali-against-al-falasifa-the-philosophers-on-divine-simplicity",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "Prophecy and the Justification of Revelation: An Islamic Outline",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "God's Own Mouthpieces: Prophecy and Reason in Judaism, Christianity and Islam, Heiko Schulz, Editör, Mohr Siebeck, Stuttgart, ss.321-331, 2023",
+    "url": "https://avesis.ankara.edu.tr/yayin/9a303892-cbce-4cd5-a912-11577b631a85/prophecy-and-the-justification-of-revelation-an-islamic-outline",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Tanrı, Varlık ve Ötesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Türkiye'de İslam Felsefesi: Prof. Dr. Mehmet Bayrakdar'a Armağan, Mehmet Vural, Editör, Elis, Ankara, ss.427-444, 2022",
+    "url": "https://avesis.ankara.edu.tr/yayin/5bcd7b2f-67ce-49fb-98a1-f1fbcfc65d2a/tanri-varlik-ve-otesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "On al-Ghazali and the Decline of Philosophical Thought in Islam",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Niedergangsthesen auf dem Prüfstand/ Narratives of Decline Revisited, Dziri, Bacem/ Güneş Merdan, Editör, Peter Lang, ss.129-142, 2020",
+    "url": "https://avesis.ankara.edu.tr/yayin/3c917cb5-7636-4857-8ec4-bb2a9785b9ea/on-al-ghazali-and-the-decline-of-philosophical-thought-in-islam",
+    "yazarlar": [
+     "REÇBER M. S."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Din Felsefesinin Haklılaştırılması Üzerine",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Türkiye'de Din Felsefesi: Mehmet S. Aydın Onuruna, Rahim Acar,Nesrin Bağcı Erciyas, Editör, Elis, Ankara, ss.115-131, 2019",
+    "url": "https://avesis.ankara.edu.tr/yayin/5ca01628-9ea1-4340-a0f6-9691164e3dc6/din-felsefesinin-haklilastirilmasi-uzerine",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Kur'an Metafiziği: Vahyin İmkanı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Vahiy ve Peygamberlik, Yusuf Şevki Yavuz, Editör, Kuramer, Ankara, ss.249-274, 2018",
+    "url": "https://avesis.ankara.edu.tr/yayin/62b44f7f-f7a5-4893-83de-091fab71a4cc/kuran-metafizigi-vahyin-imkani",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Dindarlık ve Rasyonellik",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Dinin Kaderi: Çağdaş Sorunların Kıskacında Din, Abdüllatif Tüzer, Editör, Elis, Ankara, ss.73-88, 2017",
+    "url": "https://avesis.ankara.edu.tr/yayin/b60401a4-6542-4952-8a93-91a8083cee72/dindarlik-ve-rasyonellik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Islam, the Enlightenment and the Justification of Human Dignity",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "New Approaches to Human Dignity in the Context of Qur’anic Anthroplogy: The Quest for Humanity,, Rüdiger Braun-Hüseyin I. Çiçek, Editör, Cambridge Scholars Publishing, Newcastle Upon Tyne, ss.250-259, 2017",
+    "url": "https://avesis.ankara.edu.tr/yayin/3017c10c-fc7d-4c66-9fe5-1a862399922a/islam-the-enlightenment-and-the-justification-of-human-dignity",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Din Felsefesi El Kitabı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Grafiker Yayınları, Ankara, 2014",
+    "url": "https://avesis.ankara.edu.tr/yayin/3e7bd59e-a826-4680-b4b6-d148c160fa8b/din-felsefesi-el-kitabi",
+    "yazarlar": [
+     "Kılıç R. (Editör)",
+     "Reçber M. S. (Editör)"
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Din Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi El Kitabı, Recep Kılıç,Mehmet Sait Reçber, Editör, Grafiker Yayınları, Ankara, ss.13-28, 2014",
+    "url": "https://avesis.ankara.edu.tr/yayin/6582ffaa-f2ef-4102-bfd4-0a49bb4d348d/din-felsefesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Tanrı'nın Sıfatları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi El Kitabı, Recep Kılıç,Mehmet Sait Reçber, Editör, Grafiker Yayınları, Ankara, ss.81-120, 2014",
+    "url": "https://avesis.ankara.edu.tr/yayin/f3cad1a1-a6e0-434b-b931-5bdc3909bf69/tanrinin-sifatlari",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Felsefe ve Din",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.1-26, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/8f1ecea3-6790-45f8-bbff-0dd5c8103435/felsefe-ve-din",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Akıl ve İman",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.175-222, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/278d7fcf-5a7d-4234-8405-974ae049e5d3/akil-ve-iman",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Dinî Çeşitlilik",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.337-366, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/b731f03a-f14a-44e6-a54b-1e51adb926ed/dini-cesitlilik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Tanrı'nın Varlığının Delilleri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.97-132, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/730f8a75-3d28-419d-867c-def6ae5761cf/tanrinin-varliginin-delilleri",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Tanrı ve Sıfatları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.59-94, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/7e7c0ac2-0add-4ba0-aa79-3628eeab69e1/tanri-ve-sifatlari",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Tanrı'nın Varlığının Delilleri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi El Kitabı, Recep Kılıç,Mehmet Sait Reçber, Editör, Grafiker Yayınları, Ankara, ss.123-154, 2013",
+    "url": "https://avesis.ankara.edu.tr/yayin/17517b67-b2e2-4345-8732-63ec4c10d58c/tanrinin-varliginin-delilleri",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Tanrı: Tasavvurları, Sıfatları ve Delilleri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din ve Ahlak Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.21-71, 2007",
+    "url": "https://avesis.ankara.edu.tr/yayin/f4d5da40-12bc-4ff7-9a7e-535999bb4953/tanri-tasavvurlari-sifatlari-ve-delilleri",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Felsefe ve Din",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din ve Ahlak Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.1-19, 2007",
+    "url": "https://avesis.ankara.edu.tr/yayin/55a8eb0c-8f22-4cd1-a4ee-8157a9a8d876/felsefe-ve-din",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Ateizm ve Ateistik Deliller",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din ve Ahlak Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.111-143, 2007",
+    "url": "https://avesis.ankara.edu.tr/yayin/aee79b45-29b4-4eaa-bce1-1bfe02fd55f7/ateizm-ve-ateistik-deliller",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Dinî Çeşitlilik",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din ve Ahlak Felsefesi, Recep Kılıç, Editör, Ankuzem, Ankara, ss.145-166, 2007",
+    "url": "https://avesis.ankara.edu.tr/yayin/10f2ef4b-4703-428e-850d-1d7bda69c9c2/dini-cesitlilik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Dil Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Felsefe, Mehmet Bayrakdar, Editör, Ankuzem, Ankara, ss.179-212, 2006",
+    "url": "https://avesis.ankara.edu.tr/yayin/d9d4fdb6-1f2b-4232-94c2-2c47dd312049/dil-felsefesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Çağdaş Felsefe Akımları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Felsefe, Mehmet Bayrakdar, Editör, Ankuzem, Ankara, ss.392-429, 2006",
+    "url": "https://avesis.ankara.edu.tr/yayin/212675c6-9bbb-4814-a3e2-6a2bd2df2308/cagdas-felsefe-akimlari",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Varlık Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Felsefe, Mehmet Bayrakdar, Editör, Ankuzem, Ankara, ss.103-137, 2006",
+    "url": "https://avesis.ankara.edu.tr/yayin/5232feae-3677-4ed6-ba64-ae3d6918249d/varlik-felsefesi",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Tanrı'yı Bilmenin İmkânı ve Mahiyeti",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Kitabiyat Yayınları, Ankara, 2004",
+    "url": "https://avesis.ankara.edu.tr/yayin/c9f459ed-93f5-4cee-ac46-d995d7fd16ae/tanriyi-bilmenin-imkani-ve-mahiyeti",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "A Priori-A Posteriori",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Etik, ss.1-4, 2003",
+    "url": "https://avesis.ankara.edu.tr/yayin/41f5ced8-217d-4460-98a4-5523c1483b44/a-priori-a-posteriori",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "Analitik-Sentetik",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Etik, ss.356-361, 2003",
+    "url": "https://avesis.ankara.edu.tr/yayin/47c604cc-0c64-4e87-b449-6e04cee9ec7b/analitik-sentetik",
+    "yazarlar": [
+     "Reçber M. S."
+    ],
+    "yil": "2003"
+   }
+  ]
+ },
  "Mehmet Türkeri": {
   "profil": "https://avesis.deu.edu.tr/mehmet.turkeri",
   "yayinlar": [
