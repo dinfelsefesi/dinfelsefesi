@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleleri adlarıyla OpenAlex'te arar.
+"""YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleleri adlarıyla OpenAlex'te ve TR Dizin'de arar.
 
 DergiPark'ın arama sayfası otomatik isteklerde doğrulama (CAPTCHA) sayfasına yönlendirdiği için DergiPark'ta arama
 yapılmaz. DergiPark'taki makaleler zaten OAI-PMH hasadıyla (dergipark_hasat.py) yazar adına göre toplanmaktadır.
@@ -95,20 +95,52 @@ def openalex_ara(y: dict):
     return None
 
 
+def trdizin_ara(y: dict):
+    """TR Dizin'in açık arama servisinde adla arar; dergi makalelerinin iki dildeki adları, özetleri ve varsa anahtar
+    kelimeleri buradadır."""
+    q = re.sub(r"[^\w\s]", " ", y["baslik"])[:200]
+    govde = al("https://search.trdizin.gov.tr/api/defaultSearch/publication/?order=relevance-DESC&page=1&limit=5&q=" +
+               urllib.parse.quote(q), deneme=2)
+    try:
+        sonuc = ((json.loads(govde or "{}").get("hits") or {}).get("hits")) or []
+    except ValueError:
+        return None
+    for h in sonuc:
+        r = h.get("_source") or {}
+        ozetler = r.get("abstracts") or []
+        basliklar = [a.get("title") or "" for a in ozetler] + [r.get("orderTitle") or ""]
+        yazarlar = [a.get("inPublicationName") or "" for a in r.get("authors") or []]
+        if not ayni(y, basliklar, str(r.get("publicationYear") or ""), yazarlar):
+            continue
+        kelimeler = []
+        for a in ozetler:
+            k = a.get("keywords")
+            if k and k != "None":
+                kelimeler += [x.strip() for x in re.split(r"[;,]", k) if x.strip()]
+        ozet = max((a.get("abstract") or "" for a in ozetler), key=len, default="")
+        tr = next((a.get("abstract") for a in ozetler if a.get("language") == "TUR" and a.get("abstract")), "")
+        return {"durum": "trdizin", "doi": doi_temiz(r.get("doi") or ""), "sayfa": f"https://search.trdizin.gov.tr/tr/yayin/detay/{r.get('id')}",
+                "kelimeler": list(dict.fromkeys(kelimeler)), "ozet": tr or ozet, "kaynak": "trdizin",
+                "dergi": (r.get("journal") or {}).get("name") or ""}
+    return None
+
+
 TANI = Counter()
 
 
 def main():
     kayit = json.loads(DOSYA.read_text(encoding="utf-8")).get("kayit", {}) if DOSYA.exists() else {}
-    liste = [y for y in adaylar() if y["kimlik"] not in kayit]
+    # Daha önce bulunamayan makaleler TR Dizin'de bir kez daha aranır
+    liste = [y for y in adaylar() if y["kimlik"] not in kayit or
+             (kayit[y["kimlik"]]["durum"] == "bulunamadi" and not kayit[y["kimlik"]].get("trdizin_bakildi"))]
     print(f"aranacak: {len(liste)}")
 
     def yaz():
         DOSYA.write_text(json.dumps({"tarih": date.today().isoformat(), "tani": dict(TANI), "kayit": kayit},
                                     ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     for i, y in enumerate(liste, 1):
-        e = {"durum": "bulunamadi", "baslik": y["baslik"], "sahip": y["sahip"]}
-        r = openalex_ara(y)
+        e = kayit.get(y["kimlik"]) or {"durum": "bulunamadi", "baslik": y["baslik"], "sahip": y["sahip"]}
+        r = openalex_ara(y) if y["kimlik"] not in kayit else None
         if r:
             doi = doi_temiz(r.get("doi") or "")
             sayfa = ((r.get("primary_location") or {}).get("landing_page_url")) or ""
@@ -124,6 +156,17 @@ def main():
                 e.update(durum="openalex", sayfa=sayfa, kelimeler=[x.get("display_name", "") for x in r.get("keywords") or []],
                          kaynak="openalex")
             TANI["openalex"] += 1
+        if e["durum"] == "bulunamadi":
+            time.sleep(1)
+            t = trdizin_ara(y)
+            e["trdizin_bakildi"] = True
+            if t:
+                if t["doi"]:  # TR Dizin kaydındaki DOI'nin anahtar kelimeleri DergiPark ya da OpenAlex'ten okunur
+                    k = doi_oku(t["doi"])
+                    t["kelimeler"] = t["kelimeler"] or k.get("kelimeler") or []
+                    t["ozet"] = t["ozet"] or k.get("ozet") or ""
+                e.update(t)
+                TANI["trdizin"] += 1
         kayit[y["kimlik"]] = e
         if i % 25 == 0:
             print(f"  {i}/{len(liste)} {dict(TANI)}")
