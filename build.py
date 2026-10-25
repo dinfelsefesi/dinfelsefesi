@@ -1356,7 +1356,7 @@ def eser_ogeleri() -> list:
         tur = DP_TUR_ESER[m["tur"]]
         konu = set(m["konular"] or m["ilgili"])
         etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
-        etiket += (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else "")
+        etiket += (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else KISISEL_ISARET if m.get("kaynak") == "kisisel" else "")
         konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
         html_ = (f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{etiket}'
@@ -1625,6 +1625,7 @@ def dp_kaydi(r, x, duzeltme, dps) -> dict:
 
 ORCID_ISARET = ' <span class="m-kaynak" title="ORCID kaydından">ORCID</span>'
 AVESIS_ISARET = ' <span class="m-kaynak" title="AVESİS sayfasından">AVESİS</span>'
+KISISEL_ISARET = ' <span class="m-kaynak" title="Yazarın kişisel sitesinden">Kişisel site</span>'
 
 
 def orcid_eserleri() -> list:
@@ -1701,6 +1702,17 @@ def avesis_kunye(kaynak: str, yil: str) -> str:
     return re.sub(r"\s+,", ",", k).strip(" ,")
 
 
+def kisisel_kunye(kaynak: str, yil: str) -> str:
+    """Kişisel sitedeki künye: yıl (ayrıca yazılır), baskı notları ve sondaki nokta çıkarılır."""
+    k = re.sub(r"\s*\(\s*\d+\.\s*bask[ıi]\s*\)", "", kaynak or "", flags=re.I)
+    k = re.sub(r"\s*\(Satış yerini.*?\)", "", k)
+    k = re.sub(r";\s*(19|20)\d\d\b", "", k)  # sonraki baskıların yılı
+    if yil:
+        k = re.sub(r",\s*" + re.escape(yil) + r"(?=[\s,.;)]|$)", "", k, count=1)
+        k = re.sub(r"\s+" + re.escape(yil) + r"\b", "", k, count=1)
+    return re.sub(r"\s+,", ",", k).strip(" .,;")
+
+
 def avesis_veri() -> dict:
     """AVESİS yayın listeleri (scripts/avesis_topla.py): kişinin adres kısaltması -> yayınlar.
     Elle başlığa bağlananlar (data/avesis/elle_tasnif.yaml, yayın kimliğine göre) 'konular' alanını taşır."""
@@ -1708,17 +1720,21 @@ def avesis_veri() -> dict:
     if _AVESIS is not None:
         return _AVESIS
     _AVESIS = {}
-    dosya = ROOT / "data/avesis/yayinlar.json"
-    if not dosya.exists():
-        return _AVESIS
     elle_d = ROOT / "data/avesis/elle_tasnif.yaml"
     elle = {str(k): v for k, v in ((yaml.safe_load(elle_d.read_text(encoding="utf-8")) or {}) if elle_d.exists() else {}).items()}
     import dergipark_siniflandir as dps
-    for ad_, x in json.loads(dosya.read_text(encoding="utf-8")).items():
+    kaynaklar = []
+    for yol, kaynak in (("data/avesis/yayinlar.json", "avesis"), ("data/kisisel/yayinlar.json", "kisisel")):
+        if (ROOT / yol).exists():
+            kaynaklar += [(ad_, x, kaynak) for ad_, x in json.loads((ROOT / yol).read_text(encoding="utf-8")).items()]
+    for ad_, x, kaynak in kaynaklar:
         soyad = ad_anahtari(ad_).split("-")[-1]
         ogeler = []
         for y in x["yayinlar"]:
-            kimlik = (re.findall(r"/yayin/([0-9a-f-]{36})", y["url"]) or [y["url"]])[0]
+            if kaynak == "avesis":
+                kimlik = (re.findall(r"/yayin/([0-9a-f-]{36})", y["url"]) or [y["url"]])[0]
+            else:  # kişisel sitedeki listeler: kimlik addan ve yıldan türetilir
+                kimlik = "kisisel-" + slugify(y["baslik"])[:60] + "-" + (y["yil"] or "")
             e_ = elle.get(kimlik) or {}
             if e_.get("karar") == "yanlis-kisi" or haric_mi(ad_, y["baslik"]):
                 continue
@@ -1730,10 +1746,11 @@ def avesis_veri() -> dict:
             konular = sorted(set(karar) | {dps.UST[b] for b in karar if b in dps.UST}) if isinstance(karar, list) else []
             baslik = e_.get("baslik") or buyuk_duzelt(baslik_temizle(y["baslik"], ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
-                           "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]),
+                           "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else kisisel_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else y["url"], "doi": bool(y.get("doi")),
-                           "konular": konular})
-        _AVESIS[slugify(ad_)] = {"profil": x["profil"], "yayinlar": ogeler}
+                           "konular": konular, "kaynak": kaynak})
+        v_ = _AVESIS.setdefault(slugify(ad_), {"profil": x["profil"], "yayinlar": []})
+        v_["yayinlar"] += ogeler
     return _AVESIS
 
 
@@ -1779,14 +1796,30 @@ def kelime_ortak(a: set, b_anahtar: str) -> bool:
 _KELIME = {}
 
 
-def baslik_esit(a: str, yil: str, kayitlar: list) -> bool:
+def soyadlar(yazarlar) -> set:
+    """Yazar listesindeki soyadları ('Soyad A.' ya da 'Ad Soyad' biçimleri)."""
+    out = set()
+    for a in yazarlar or []:
+        a = re.sub(r"\(.*?\)", "", a).strip()
+        p_ = ad_anahtari(a).split("-")
+        if not p_ or not p_[0]:
+            continue
+        out.add(p_[0] if re.search(r"\b[A-ZÇĞİÖŞÜ]\.$", a) else p_[-1])
+    return out
+
+
+def baslik_esit(a: str, yil: str, kayitlar: list, yazarlar=None) -> bool:
     """Aynı yayın mı: adlar (harf dışı işaretler gözetilmeden) aynıysa; biri ötekinin içinde geçiyorsa (kayıtlarda
     başlığın arkasına künye eklenmiş olabiliyor, 25 harften uzun adlar için); ya da yıl aynı ve adlardan biri ötekinin
     alt başlıksız biçimiyse (ör. 'Kemâl Yolculuğu' ile 'Kemâl Yolculuğu: Gazâlî Düşüncesinde Dinî Tecrübe')."""
     k = baslik_anahtari(a)
     a = kelimeler_(a)
-    for b, y in kayitlar:
+    soy = soyadlar(yazarlar) if yazarlar else set()
+    for b, y, *ek in kayitlar:
         if k == b:
+            # "Din Felsefesi" gibi kısa ve genel adlar farklı yıllarda ya da farklı yazarlarca yazılmış farklı eserlerdir
+            if len(k) < 25 and ((yil and y and str(yil) != str(y)) or (soy and ek and ek[0] and not soy & ek[0])):
+                continue
             return True
         kisa, uzun = sorted((k, b), key=len)
         if len(kisa) >= 20 and kisa in uzun:
@@ -1800,15 +1833,15 @@ def baslik_esit(a: str, yil: str, kayitlar: list) -> bool:
 
 def avesis_eserleri(onceki: list) -> list:
     """AVESİS'ten gelip elle bir başlığa bağlanan yayınlar; sitede zaten bulunanlar (DergiPark, ORCID, eser fişleri) alınmaz."""
-    kayitlar = [(baslik_anahtari(m["baslik"]), m["yil"]) for m in onceki] + \
+    kayitlar = [(baslik_anahtari(m["baslik"]), m["yil"], soyadlar(m["yazarlar"])) for m in onceki] + \
         [(baslik_anahtari(h["baslik"]), str(h.get("yil") or "")) for (t, k), h in FIS.items() if t == "eser"]
     out, eklenen = [], {}
     for v in avesis_veri().values():
         for y in v["yayinlar"]:
             if not y["konular"]:
                 continue
-            onceki_ = eklenen.get(baslik_anahtari(y["baslik"]))
-            if onceki_:  # aynı yayın ortak yazarın AVESİS listesinde de var: onun adı da tam yazılır
+            onceki_ = eklenen.get((baslik_anahtari(y["baslik"]), y["yil"]))
+            if onceki_ and soyadlar(onceki_["yazarlar"]) & soyadlar(y["yazarlar"]):  # aynı yayın ortak yazarın AVESİS listesinde de var: onun adı da tam yazılır
                 if y["sahip"] not in onceki_["yazarlar"]:
                     soy = ad_anahtari(y["sahip"]).split("-")[-1]
                     i_ = next((i_ for i_, a in enumerate(onceki_["yazarlar"]) if ad_anahtari(a).split("-")[0] == soy), None)
@@ -1817,16 +1850,16 @@ def avesis_eserleri(onceki: list) -> list:
                     else:
                         onceki_["yazarlar"][i_] = y["sahip"]
                 continue
-            if baslik_esit(y["baslik"], y["yil"], kayitlar):
+            if baslik_esit(y["baslik"], y["yil"], kayitlar, y["yazarlar"]):
                 continue
-            kayitlar.append((baslik_anahtari(y["baslik"]), y["yil"]))
+            kayitlar.append((baslik_anahtari(y["baslik"]), y["yil"], soyadlar(y["yazarlar"])))
             tur = y["tur"] if y["tur"] in DP_TUR_ESER else ""  # makale ve "diğer yayınlar" makale sayılır
             tanitim = tur in ("kitap-tanitimi", "ceviri")
             out.append({"id": "avesis-" + y["kimlik"], "baslik": y["baslik"], "yazarlar": list(y["yazarlar"]), "dergi": y["kunye"],
                         "cilt_sayi": "", "yil": y["yil"], "tarih": y["yil"], "baglanti": y["baglanti"], "doi": y["doi"],
                         "konular": [] if tanitim else y["konular"], "ilgili": y["konular"] if tanitim else [], "tur": tur,
-                        "kelimeler": [], "kaynak": "avesis"})
-            eklenen[baslik_anahtari(y["baslik"])] = out[-1]
+                        "kelimeler": [], "kaynak": y["kaynak"]})
+            eklenen[(baslik_anahtari(y["baslik"]), y["yil"])] = out[-1]
     return out
 
 
@@ -1873,7 +1906,7 @@ def baslik_makaleleri(k) -> str:
     def satir(m):
         yazar, dergi = dp_kunye(m)
         tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
-        tur += (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else "")
+        tur += (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else KISISEL_ISARET if m.get("kaynak") == "kisisel" else "")
         return (f'<li><a class="dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
                 f'<span class="m-dergi">{yazar} · {dergi}, {e(m["yil"])}</span></li>')
     out = '<section class="tr-makaleler"><h2>Türkiye akademisinden çalışmalar</h2>'
@@ -2146,7 +2179,7 @@ def render_akademisyen(s: str) -> str:
     for m in v["makaleler"]:
         yazar = ", ".join(akademisyen_bag(y) if slugify(y) != s else e(y) for y in m["yazarlar"])
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
-        isaret = (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else "")
+        isaret = (ORCID_ISARET if m.get("kaynak") == "orcid" else AVESIS_ISARET if m.get("kaynak") == "avesis" else KISISEL_ISARET if m.get("kaynak") == "kisisel" else "")
         konu = ", ".join(bag("baslik", b) for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
         ogeler.append({"grup": "df", "tur": DP_YAYIN_TUR.get(m["tur"], "makale"), "yil": m["yil"], "ad": m["baslik"],
                        "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{isaret}'
@@ -2305,7 +2338,7 @@ def ag_turkiye_akademisi() -> tuple[list, list]:
         if not kenar:
             continue
         tur = DP_TUR_ESER[m["tur"]]
-        dp_dugum.append({"id": mid, "ad": m["baslik"], "tur": "eser", "turAd": DP_TUR_AD.get(m["tur"], "Makale") + {"orcid": " (ORCID)", "avesis": " (AVESİS)"}.get(m.get("kaynak"), ""),
+        dp_dugum.append({"id": mid, "ad": m["baslik"], "tur": "eser", "turAd": DP_TUR_AD.get(m["tur"], "Makale") + {"orcid": " (ORCID)", "avesis": " (AVESİS)", "kisisel": " (kişisel site)"}.get(m.get("kaynak"), ""),
                          "url": m["baglanti"], "dis": True, "kucuk": True,
                          "aciklama": " · ".join(x for x in [", ".join(m["yazarlar"]), m["dergi"], m["yil"]] if x)})
         baglar += [[mid, x] for x in dict.fromkeys(kenar)]
