@@ -1,5 +1,5 @@
 name: YÖK DOI'siz makaleleri arama
-# YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleler adlarıyla OpenAlex'te ve DergiPark'ta aranır;
+# YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleler adlarıyla OpenAlex'te aranır;
 # bulunanların anahtar kelime ve özetleri kaydedilir. Ayda bir, DOI okumasından sonra çalışır.
 on:
   workflow_dispatch:

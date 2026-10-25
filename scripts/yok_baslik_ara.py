@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleleri adlarıyla OpenAlex'te ve DergiPark'ta arar.
+"""YÖK Akademik ve AVESİS listelerinde DOI'si olmayan makaleleri adlarıyla OpenAlex'te arar.
+
+DergiPark'ın arama sayfası otomatik isteklerde doğrulama (CAPTCHA) sayfasına yönlendirdiği için DergiPark'ta arama
+yapılmaz. DergiPark'taki makaleler zaten OAI-PMH hasadıyla (dergipark_hasat.py) yazar adına göre toplanmaktadır.
 
 Bulunan makalenin DOI'si, sayfası, anahtar kelimeleri ve özeti kaydedilir; build.py konuyu bu anahtar kelimelerden bulur.
 Aranacak makaleler build.py'nin kendi listesinden alınır: konusu belli olmayan, sitede başka bir kayıtla yer almayan
@@ -95,22 +98,6 @@ def openalex_ara(y: dict):
 TANI = Counter()
 
 
-def dergipark_ara(y: dict):
-    html = al("https://dergipark.org.tr/tr/search?section=articles&q=" + urllib.parse.quote(y["baslik"][:150]), deneme=2)
-    if html is None:
-        TANI["dp-hata"] += 1
-        return None
-    linkler = list(dict.fromkeys(re.findall(
-        r'href="(https://dergipark\.org\.tr/(?:tr|en)/pub/[^/"]+/(?:issue/\d+/\d+|article/\d+))"', html)))
-    TANI["dp-sonuclu" if linkler else "dp-sonucsuz"] += 1
-    for u in linkler[:3]:
-        time.sleep(1)
-        dp = dergipark_sayfasi(u)
-        if dp and ayni(y, dp.get("basliklar") or [dp.get("baslik")], dp.get("yil") or "", dp.get("yazarlar") or []):
-            return dp
-    return None
-
-
 def main():
     kayit = json.loads(DOSYA.read_text(encoding="utf-8")).get("kayit", {}) if DOSYA.exists() else {}
     liste = [y for y in adaylar() if y["kimlik"] not in kayit]
@@ -137,13 +124,6 @@ def main():
                 e.update(durum="openalex", sayfa=sayfa, kelimeler=[x.get("display_name", "") for x in r.get("keywords") or []],
                          kaynak="openalex")
             TANI["openalex"] += 1
-        else:
-            time.sleep(1)
-            dp = dergipark_ara(y)
-            if dp:
-                e.update(durum="dergipark", sayfa=dp["sayfa"], kelimeler=dp.get("kelimeler") or [], ozet=dp.get("ozet") or "",
-                         kaynak="dergipark")
-                TANI["dergipark"] += 1
         kayit[y["kimlik"]] = e
         if i % 25 == 0:
             print(f"  {i}/{len(liste)} {dict(TANI)}")
