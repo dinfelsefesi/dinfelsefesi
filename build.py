@@ -597,6 +597,8 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
 .ag-tuval:active{cursor:grabbing}
 .ag-tuval svg{display:block;width:100%;height:100%}
+.ag-tuval.ag-yukleniyor{background:repeating-linear-gradient(90deg,transparent 0 40%,rgba(0,0,0,.03) 50%,transparent 60% 100%);background-size:200% 100%;animation:ag-yuk 1.2s linear infinite}
+@keyframes ag-yuk{to{background-position:-200% 0}}
 .ag-baglar line{stroke:#c3c9d2;stroke-width:1.1px;transition:opacity .2s}
 .ag-baglar line.vurgu{stroke:#8a6a2c;stroke-width:1.8px}
 .ag-baglar line.soluk{opacity:.18}
@@ -2608,9 +2610,9 @@ def ag_alt_veri(v: dict, k: str, tur_: str = "baslik") -> dict:
     return {"turler": v["turler"], "dugumler": dugumler, "baglar": baglar, "alt": True}
 
 
-def ag_araci(v: dict) -> str:
+def ag_araci(v: dict, ek_say: dict | None = None) -> str:
     cogul = {"baslik": "Başlıklar", "terim": "Terimler", "kisi": "Kişiler", "eser": "Eserler", "makale": "Makale tanıtımları"}
-    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _ in AG_TURLER}
+    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) + (ek_say or {}).get(k, 0) for k, _, _ in AG_TURLER}
     dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta" style="--renk:{r}"></span>{e(cogul.get(k, a))} <span class="say">{say[k]}</span></button>'
                        for k, a, r in AG_TURLER if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
@@ -2640,9 +2642,18 @@ def baslik_ag_listesi(haric: str = "") -> str:
 
 
 def render_ag(items) -> str:
+    # makaleler (küçük noktalar) ayrı dosyaya yazılır ve "Eserler" düğmesiyle istenince yüklenir
+    v = ag_tam(items)
+    agir = {d["id"] for d in v["dugumler"] if d.get("kucuk")}
+    hafif = {"turler": v["turler"], "dugumler": [d for d in v["dugumler"] if d["id"] not in agir],
+             "baglar": [b for b in v["baglar"] if b[0] not in agir and b[1] not in agir], "ek": f"{SITE_URL}/ag/eserler.json"}
+    ek = {"dugumler": [d for d in v["dugumler"] if d["id"] in agir],
+          "baglar": [b for b in v["baglar"] if b[0] in agir or b[1] in agir]}
+    (OUT / "ag").mkdir(parents=True, exist_ok=True)
+    (OUT / "ag" / "eserler.json").write_text(json.dumps(ek, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları, AVESİS ve YÖK Akademik sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleriyle birlikte, eserleri üzerinden çalıştığı başlık ve terimler de görünür.</p>
-{ag_araci(ag_tam(items))}
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları, AVESİS ve YÖK Akademik sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleri üzerinden çalıştığı başlık ve terimler görünür. Sayfa hızlı açılsın diye eserler kapalı gelir. "Eserler" düğmesine basıldığında makaleler de yüklenir.</p>
+{ag_araci(hafif, {"eser": len(agir)})}
 {baslik_ag_listesi()}
 {terim_ag_listesi()}"""
     return page(f"İlişki ağı · {SITE_NAME}", body, "ag", canonical=f"{SITE_URL}/ag/")

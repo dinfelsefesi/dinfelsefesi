@@ -5,7 +5,20 @@
   var kap = document.getElementById("ag");
   var veriEl = document.getElementById("ag-veri");
   if (!kap || !veriEl || !window.d3) return;
-  var V = JSON.parse(veriEl.textContent);
+  var V0 = JSON.parse(veriEl.textContent);
+  var prm = new URLSearchParams(location.search);
+  // Genel ağda makaleler (küçük noktalar) ayrı dosyadadır; yalnızca istenince yüklenir. Sayfa böylece hızlı açılır.
+  var ekIste = V0.ek && (prm.get("eserler") === "1" || (prm.get("odak") || "").indexOf("dp/") === 0);
+  if (ekIste) {
+    kap.classList.add("ag-yukleniyor");
+    fetch(V0.ek).then(function (r) { return r.json(); }).then(function (ek) {
+      V0.dugumler = V0.dugumler.concat(ek.dugumler); V0.baglar = V0.baglar.concat(ek.baglar); V0.ekYuklu = true;
+    }).catch(function () {}).then(function () { kap.classList.remove("ag-yukleniyor"); baslat(V0); });
+  } else {
+    baslat(V0);
+  }
+
+  function baslat(V) {
   var TURLER = V.turler; // [{kod, ad, renk}]
   var RENK = {};
   var SIRA = {};  // panelde komşular türe göre (başlık, terim, kişi, eser) sonra ada göre dizilir
@@ -22,9 +35,11 @@
     var k = b.dolayli ? "dolayliK" : "dogrudan";
     byId[b.source][k].add(b.target); byId[b.target][k].add(b.source);
   });
+  // makaleler yüklenmeden açılan genel ağda kişiler konularına dolaylı bağlarla bağlıdır; yerleşimde bu bağlar da sayılır
+  var hafif = !!(V.ek && !V.ekYuklu);
   dugumler.forEach(function (d) {
     d.komsu = d.dogrudan;
-    d.derece = d.dogrudan.size;
+    d.derece = d.dogrudan.size + (hafif ? d.dolayliK.size : 0);
     d.r = d.kucuk ? 3 + 1.2 * Math.sqrt(d.derece) : 5 + 3.2 * Math.sqrt(d.derece);
   });
 
@@ -48,7 +63,7 @@
   var sim = d3.forceSimulation(dugumler)
     .force("bag", d3.forceLink(baglar).id(function (d) { return d.id; })
       .distance(function (l) { return (l.source.kucuk || l.target.kucuk ? 30 : 55) + 16 * Math.sqrt(Math.min(30, Math.max(l.source.derece || 1, l.target.derece || 1))); })
-      .strength(function (l) { return l.dolayli ? 0.08 : 0.45; }))
+      .strength(function (l) { return l.dolayli ? (hafif ? 0.25 : 0.08) : 0.45; }))
     .force("itme", d3.forceManyBody().strength(function (d) { return d.kucuk ? -40 : -260 - 34 * Math.min(d.derece, 30); }))
     .force("carpisma", d3.forceCollide(function (d) { return d.r + (d.kucuk ? 3 : 18); }))
     .force("x", d3.forceX(genislik / 2).strength(0.05))
@@ -61,7 +76,10 @@
     dugum.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
   // Yerleşim önceden hesaplanır, sayfa açıldığında ağ durgun görünür; sürükleyince yeniden canlanır.
-  for (var i = 0; i < 400; i++) sim.tick();
+  // çok düğümlü ağda (makaleler yüklenince) daha az adımla yetinilir; sürüklenince yerleşim yine canlanır
+  var adim = dugumler.length > 1000 ? 150 : 400;
+  if (adim < 400) sim.alphaDecay(1 - Math.pow(0.001, 1 / adim));
+  for (var i = 0; i < adim; i++) sim.tick();
   ciz();
   sim.on("tick", ciz);
 
@@ -131,7 +149,10 @@
   function sec(d, ortala) {
     secili = d; boya();
     // Seçili düğüm adrese yazılır; bir fişe gidip geri dönüldüğünde aynı düğüm yeniden seçili gelir.
-    try { history.replaceState(null, "", location.pathname + (d ? "?odak=" + encodeURIComponent(d.id) : "")); } catch (_) {}
+    try {
+      var q = []; if (V.ekYuklu) q.push("eserler=1"); if (d) q.push("odak=" + encodeURIComponent(d.id));
+      history.replaceState(null, "", location.pathname + (q.length ? "?" + q.join("&") : ""));
+    } catch (_) {}
     if (!d) { panel.hidden = true; document.body.classList.remove("ag-panel-acik"); return; }
     var komsular = Array.from(d.komsu).map(function (id) { return byId[id]; })
       .sort(function (a, b) { return (SIRA[a.tur] - SIRA[b.tur]) || a.ad.localeCompare(b.ad, "tr"); });
@@ -197,6 +218,11 @@
   document.querySelectorAll(".ag-tur button").forEach(function (b) {
     b.addEventListener("click", function () {
       var kod = b.dataset.tur, acik = b.getAttribute("aria-pressed") === "true";
+      if (kod === "eser" && !acik && V.ek && !V.ekYuklu) {
+        // makaleler henüz yüklenmedi: sayfa makalelerle birlikte yeniden açılır (seçili düğüm korunur)
+        location.search = "?eserler=1" + (secili ? "&odak=" + encodeURIComponent(secili.id) : "");
+        return;
+      }
       b.setAttribute("aria-pressed", acik ? "false" : "true");
       if (acik) gizliTurler.add(kod); else gizliTurler.delete(kod);
       komsulariKur();
@@ -249,6 +275,13 @@
     genislik = kap.clientWidth; yukseklik = kap.clientHeight;
     sim.force("x").x(genislik / 2); sim.force("y").y(yukseklik / 2);
   }).observe(kap);
+  if (V.ek && !V.ekYuklu) {
+    // makaleler yüklenmeden açılan genel ağda eserler pasif başlar; kişiler konularına dolaylı bağlarla bağlanır
+    gizliTurler.add("eser");
+    var eb = document.querySelector('.ag-tur button[data-tur="eser"]');
+    if (eb) eb.setAttribute("aria-pressed", "false");
+  }
   komsulariKur();
   boya();
+  }
 })();
