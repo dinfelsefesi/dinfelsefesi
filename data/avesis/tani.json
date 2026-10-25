@@ -3,17 +3,8 @@
   "Abdulhan Ünlüsoy": [
    "https://avesis.ogu.edu.tr"
   ],
-  "Abdurrahman Aliy": [
-   "https://avesis.istanbul.edu.tr"
-  ],
   "Ahmet Erkan": [
    "https://avesis.ankara.edu.tr"
-  ],
-  "Alber Erol Nahum": [
-   "https://avesis.gsu.edu.tr"
-  ],
-  "Atilla Akalın": [
-   "https://avesis.gelisim.edu.tr"
   ],
   "Aydın Topaloğlu": [
    "https://avesis.istanbul.edu.tr"
@@ -24,17 +15,8 @@
   "Chrysi Sidiropoulou": [
    "https://avesis.bogazici.edu.tr"
   ],
-  "Emine Göçer": [
-   "https://avesis.cu.edu.tr"
-  ],
-  "Engin Erdem": [
-   "https://avesis.ankara.edu.tr"
-  ],
   "Ferit Uslu": [
    "https://avesis.ogu.edu.tr"
-  ],
-  "Hakan Hemşinli": [
-   "https://avesis.yyu.edu.tr"
   ],
   "Mehmet Ata Az": [
    "https://avesis.aybu.edu.tr"
@@ -45,26 +27,11 @@
   "Merve Yavuz": [
    "https://avesis.uludag.edu.tr"
   ],
-  "Muhammed İkbal Hardal": [
-   "https://avesis.deu.edu.tr"
-  ],
-  "Muhammet Sait Duran": [
-   "https://avesis.erciyes.edu.tr"
-  ],
-  "Musa Kazım Arıcan": [
-   "https://avesis.aybu.edu.tr"
-  ],
   "Mustafa Emre Dorman": [
    "https://avesis.acibadem.edu.tr"
   ],
-  "Nur Betül Atakul": [
-   "https://avesis.aybu.edu.tr"
-  ],
   "Osman Caner Taslaman": [
    "https://avesis.yildiz.edu.tr"
-  ],
-  "Rahim Acar": [
-   "https://avesis.marmara.edu.tr"
   ],
   "Ramazan Ertürk": [
    "https://avesis.erciyes.edu.tr"
@@ -74,15 +41,6 @@
   ],
   "Recep Kılıç": [
    "https://avesis.ankara.edu.tr"
-  ],
-  "Ruhattin Yazoğlu": [
-   "https://avesis.atauni.edu.tr"
-  ],
-  "Serdar Atalay": [
-   "https://avesis.cu.edu.tr"
-  ],
-  "Tuncay İmamoğlu": [
-   "https://avesis.atauni.edu.tr"
   ],
   "Turan Koç": [
    "https://avesis.erciyes.edu.tr"
@@ -381,7 +339,7 @@
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 0
+   "profil": 2489
   },
   "https://avesis.uludag.edu.tr": {
    "parca": [
