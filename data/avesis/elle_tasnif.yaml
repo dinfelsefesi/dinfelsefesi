@@ -1,6 +1,7 @@
 # AVESİS yayınları için elle kararlar (yayın kimliği -> karar). karar: başlık listesi (eser listelerine ve ağa girer),
 # 'yanlis-kisi' (yayın çıkarılır). tur: yayın türünü düzeltir. Kararsız bırakılan yayınlar yalnızca kişinin sayfasında 'Diğer' sekmesinde yer alır.
 # 'not' alanı yalnızca okuyan içindir.
+# baslik: yayının adını düzeltir (AVESİS kaydında ada künye eklenmiş olabiliyor).
 003ca8b3-03de-4b34-bbfb-2c699c6ebe18:
   karar:
   - teizme-yonelik-itirazlar
@@ -112,6 +113,7 @@
   - tanrinin-varliginin-delilleri
   not: 'Fatih Özgökman: Spinoza''da Tanrı''nın Varlığının ve Tekliğinin Argümanları'
 0b910806-4d0a-4c56-9f4d-c5050251e83b:
+  baslik: İbn Sînâ Düşüncesinde İbadet ve Tanrı-Âlem İlişkisi Bakımından Değeri
   karar:
   - ibadet
   - tanri-alem-iliskisi
@@ -609,6 +611,7 @@
   - dini-tecrube
   not: 'Cafer Sadık Yaran: Religious Experience in Contemporary Turkey and Some Basic Comparisons with the Surwey in '
 40561523-a6a7-4948-bb29-05de8179653d:
+  baslik: Mevlânâ Düşüncesinde Din Dili ve Dinî Sembolizm
   karar:
   - din-dili
   not: 'Ayşe Sıdıka Oktay: Oktay A S 2007 Mevlana Düşüncesinde Din Dili ve Dini Sembolizm 2007 Unesco Mevlana Yılında'
@@ -891,10 +894,6 @@
   karar:
   - din-ve-bilim
   not: 'Yasin Ramazan Başaran: Din Bilim İlişkisinde Model Arayışları'
-5f668b1e-cc56-4f8f-abb6-30cb09e731b7:
-  karar:
-  - yapay-zeka-ve-teknoloji
-  not: 'Musa Kazım Arıcan: Metaverse ve Din Sempozyumu Açılış Konuşmaları'
 5f966a0e-66bf-484d-9566-ddf6b824e380:
   karar:
   - teizme-yonelik-itirazlar
@@ -1448,6 +1447,7 @@ aeba121a-2f3d-43aa-bb9b-3f0173c98745:
   - din-felsefesi-tanim-yontem-tarih
   not: 'Rahim Acar: Din Felsefesi Literatüründe Kuşbakışı Bir Gezinti'
 af11375d-04e3-4950-a415-06b260652435:
+  baslik: John Locke'da Akıl ve Vahiy İlişkisi
   karar:
   - din-epistemolojisi
   not: 'Ayşe Sıdıka Oktay: John Locke Da Akıl Ve Vahiy İlişkisi Süleyman Demirel Üniversitesi Sosyal Bilimler Enstitü'
@@ -1560,6 +1560,7 @@ bb1a66b8-c656-468f-8f2b-9a322136ff57:
   - dini-cesitlilik
   not: 'Ruhattin Yazoğlu: Dinî Çoğulculuk John Hick''in Düşünceleri Etrafında Tartışmalar'
 bb578311-b730-4f7d-8058-731b02ade97f:
+  baslik: Din Felsefesinde Vahiy ve Mucize Kavramları
   karar:
   - din-epistemolojisi
   - tanri-alem-iliskisi
@@ -1867,6 +1868,7 @@ de202202-bbd0-42fb-8ee8-353761af8447:
   - din-felsefesi-tanim-yontem-tarih
   not: 'Hakan Hemşinli: Dine Üç Farklı Yaklaşım: Teoloji, Kelâm ve Din Felsefesi İlişkisi'
 de479350-9436-4376-a3fa-8494d58b8dc2:
+  baslik: Kant'ın Ölümsüzlük Postulatı Bağlamında Ölümden Sonraki Hayatın Felsefi Dayanağı Olarak Ahlak
   karar:
   - olum-ve-otesi
   - din-ve-ahlak

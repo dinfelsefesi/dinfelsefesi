@@ -1720,7 +1720,7 @@ def avesis_veri() -> dict:
         for y in x["yayinlar"]:
             kimlik = (re.findall(r"/yayin/([0-9a-f-]{36})", y["url"]) or [y["url"]])[0]
             e_ = elle.get(kimlik) or {}
-            if e_.get("karar") == "yanlis-kisi":
+            if e_.get("karar") == "yanlis-kisi" or haric_mi(ad_, y["baslik"]):
                 continue
             # AVESİS yazarları "Soyad A." biçiminde yazar; sayfa sahibi listedeki tam adıyla yazılır
             yazarlar = [ad_ if ad_anahtari(a).split("-")[:1] == [soyad] else a for a in y["yazarlar"] if "(Editör)" not in a]
@@ -1728,7 +1728,7 @@ def avesis_veri() -> dict:
                 yazarlar.append(ad_)
             karar = e_.get("karar")
             konular = sorted(set(karar) | {dps.UST[b] for b in karar if b in dps.UST}) if isinstance(karar, list) else []
-            baslik = buyuk_duzelt(e_.get("baslik") or y["baslik"])
+            baslik = e_.get("baslik") or buyuk_duzelt(baslik_temizle(y["baslik"], ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else y["url"], "doi": bool(y.get("doi")),
@@ -1737,18 +1737,62 @@ def avesis_veri() -> dict:
     return _AVESIS
 
 
+_SAPKA = {"a": "â", "i": "î", "ı": "î", "u": "û", "A": "Â", "I": "Î", "İ": "Î", "U": "Û"}
+
+
+def baslik_temizle(t: str, sahip: str = "") -> str:
+    """Kayıtlardaki bozuk yazılışları düzeltir: ünsüze kaymış şapka (F̂ar̂ab̂ı -> Fârâbî), başa eklenmiş yazar adı ve yıl
+    ('Oktay A S 2008 ...', 'OKTAY Ayşe Sıdıka ...'), baştaki ve sondaki tırnaklar."""
+    t = unicodedata.normalize("NFD", (t or "").replace("İ", "I\u0307"))
+    t = re.sub(r"([b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z][\u0300-\u036f]*)\u0302([aiıuAIU]?)\u0302?",
+               lambda m: m.group(1) + (_SAPKA.get(m.group(2), m.group(2))), t)
+    t = re.sub(r"(?<=[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z])\u0302", "", t)
+    t = unicodedata.normalize("NFC", t).strip()
+    t = re.sub(r"(['’])xx", r"\1", t)
+    t = re.sub(r"(?<=\w)\s*[\"”]\s*,\s.*$", "", t)  # başlığın arkasına eklenmiş künye: '...Görüşleri", Son Dönem ...'
+
+    if sahip:
+        p_ = sahip.split()
+        soy, adlar = re.escape(p_[-1]), r"\s+".join(re.escape(x) for x in p_[:-1])
+        t = re.sub(rf"^(?i:{soy})[\s,]+(?:(?i:{adlar})|(?:[A-ZÇĞİÖŞÜ]\.?[\s,]+){{1,3}}|(?:[A-ZÇĞİÖŞÜ]\.){{1,3}}|[A-ZÇĞİÖŞÜ]{{1,3}}(?=[\s,.]))[\s,]*(?:(?:19|20)\d\d[\s,]+)?", "", t)
+    return t.strip(" \"'“”‘’,").strip()
+
+
 def baslik_anahtari(t: str) -> str:
-    return slugify(t).replace("-", "")
+    k = slugify(baslik_temizle(t)).replace("-", "")
+    _KELIME.setdefault(k, kelimeler_(t))
+    return k
+
+
+def kelimeler_(t: str) -> set:
+    return {w for w in slugify(baslik_temizle(t)).split("-") if len(w) >= 3}
+
+
+def kelime_ortak(a: set, b_anahtar: str) -> bool:
+    """Kelimelerin büyük çoğunluğu ortaksa aynı yayın sayılır (bildiri ve makale gibi aynı çalışmanın künyesi eklenmiş kopyaları)."""
+    b = _KELIME.get(b_anahtar)
+    if not b or len(a) < 5 or len(b) < 5:
+        return False
+    return len(a & b) / min(len(a), len(b)) >= 0.8
+
+
+_KELIME = {}
 
 
 def baslik_esit(a: str, yil: str, kayitlar: list) -> bool:
-    """Aynı yayın mı: adlar (harf dışı işaretler gözetilmeden) aynıysa, ya da yıl aynı ve adlardan biri ötekinin
+    """Aynı yayın mı: adlar (harf dışı işaretler gözetilmeden) aynıysa; biri ötekinin içinde geçiyorsa (kayıtlarda
+    başlığın arkasına künye eklenmiş olabiliyor, 25 harften uzun adlar için); ya da yıl aynı ve adlardan biri ötekinin
     alt başlıksız biçimiyse (ör. 'Kemâl Yolculuğu' ile 'Kemâl Yolculuğu: Gazâlî Düşüncesinde Dinî Tecrübe')."""
     k = baslik_anahtari(a)
+    a = kelimeler_(a)
     for b, y in kayitlar:
         if k == b:
             return True
         kisa, uzun = sorted((k, b), key=len)
+        if len(kisa) >= 20 and kisa in uzun:
+            return True
+        if kelime_ortak(a, b):
+            return True
         if yil and str(y) == str(yil) and len(kisa) >= 12 and uzun.startswith(kisa):
             return True
     return False
@@ -1953,38 +1997,51 @@ ORCID_TUR = {"journal-article": "Makale", "book": "Kitap", "book-chapter": "Kita
              "review": "Değerlendirme", "preprint": "Ön baskı", "other": "Diğer"}
 
 
+def haric_mi(ad_: str, baslik: str) -> bool:
+    """ORCID ya da AVESİS kaydına yanlışlıkla girmiş, kişiye ait olmayan eser mi (data/haric.yaml: kişi adı -> ad parçaları)."""
+    global _HARIC
+    if _HARIC is None:
+        d = ROOT / "data/haric.yaml"
+        _HARIC = (yaml.safe_load(d.read_text(encoding="utf-8")) or {}) if d.exists() else {}
+    return any(baslik_anahtari(x) in baslik_anahtari(baslik) for x in _HARIC.get(ad_, []))
+
+
+_HARIC = None
+
+
 def diger_yayin_ogeleri(v) -> list:
-    """Kişinin din felsefesi başlıklarına girmeyen yayınları: yazarı doğrulanmış öteki DergiPark makaleleri ve
-    ORCID kaydındaki eserler (din felsefesi listesinde ya da DergiPark'ta zaten bulunanlar DOI ve başlıkla ayıklanır)."""
+    """Kişinin din felsefesi başlıklarına girmeyen yayınları: yazarı doğrulanmış öteki DergiPark makaleleri, ORCID kaydındaki
+    ve AVESİS sayfasındaki eserler. Sitede zaten bulunanlar ve kaynaklar arasında tekrar edenler DOI ve adla ayıklanır."""
     doiler = {m["baglanti"].lower().removeprefix("https://doi.org/") for m in v["makaleler"] if m["doi"]}
-    basliklar = {slugify(m["baslik"]) for m in v["makaleler"]} | {slugify(FIS[("eser", k)]["baslik"]) for k in v["kitaplar"]}
+    kayitlar = [(baslik_anahtari(m["baslik"]), m["yil"]) for m in v["makaleler"]] + \
+        [(baslik_anahtari(FIS[("eser", k)]["baslik"]), str(FIS[("eser", k)].get("yil") or "")) for k in v["kitaplar"]]
+    sahip = v["p"]["ad"]
     ogeler = []
     for m in sorted(v["dp_diger"], key=lambda m: m["tarih"], reverse=True):
-        ad_ = slugify(m["baslik"])
         d = m["baglanti"].lower().removeprefix("https://doi.org/") if m["doi"] else ""
-        if ad_ in basliklar or (d and d in doiler):
+        if (d and d in doiler) or baslik_esit(m["baslik"], m["yil"], kayitlar):
             continue
-        basliklar.add(ad_)
+        kayitlar.append((baslik_anahtari(m["baslik"]), m["yil"]))
         if d:
             doiler.add(d)
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
         ogeler.append({"grup": "diger", "tur": "makale", "yil": m["yil"], "ad": m["baslik"],
                        "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
                                f'<span class="eser-bilgi">{dergi}, {e(m["yil"])}</span>'})
-    for w in sorted(v["orcid_eser"], key=lambda w: w["yil"] or "0", reverse=True):
-        ad_ = slugify(w["baslik"])
-        if (w["doi"] and w["doi"].lower() in doiler) or ad_ in basliklar:
+    # ORCID kayıtlarında künyesi eksiksiz olanlar önce gelsin (aynı eserin bozuk yazılmış kopyaları sonra ayıklanır)
+    for w in sorted(v["orcid_eser"], key=lambda w: (bool(w["doi"]), bool(w["yil"]), w["yil"] or "0"), reverse=True):
+        baslik = buyuk_duzelt(baslik_temizle(w["baslik"], sahip))
+        if haric_mi(sahip, baslik):
             continue
-        basliklar.add(ad_)
+        if (w["doi"] and w["doi"].lower() in doiler) or baslik_esit(baslik, w["yil"], kayitlar):
+            continue
+        kayitlar.append((baslik_anahtari(baslik), w["yil"]))
         hedef = f'https://doi.org/{w["doi"]}' if w["doi"] else w["url"]
-        bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(w["baslik"])}</a>' if hedef
-               else f'<span class="eser-ad">{e(w["baslik"])}</span>')
-        bilgi = ", ".join(x for x in [e(w["dergi"]), e(w["yil"])] if x)
-        ogeler.append({"grup": "diger", "tur": ORCID_YAYIN_TUR.get(w["tur"], "diger"), "yil": w["yil"] or "", "ad": w["baslik"],
+        bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(baslik)}</a>' if hedef
+               else f'<span class="eser-ad">{e(baslik)}</span>')
+        bilgi = ", ".join(x for x in [e(baslik_temizle(w["dergi"])), e(w["yil"])] if x)
+        ogeler.append({"grup": "diger", "tur": ORCID_YAYIN_TUR.get(w["tur"], "diger"), "yil": w["yil"] or "", "ad": baslik,
                        "html": f'{bas}<span class="eser-bilgi">{bilgi}</span>'})
-    kayitlar = [(baslik_anahtari(m["baslik"]), m["yil"]) for m in v["makaleler"]] + \
-        [(baslik_anahtari(FIS[("eser", k)]["baslik"]), str(FIS[("eser", k)].get("yil") or "")) for k in v["kitaplar"]] + \
-        [(baslik_anahtari(o["ad"]), o["yil"]) for o in ogeler]
     for y in sorted((avesis_veri().get(slugify(v["p"]["ad"])) or {}).get("yayinlar", []), key=lambda y: y["yil"] or "0", reverse=True):
         if y["konular"] or baslik_esit(y["baslik"], y["yil"], kayitlar):
             continue
