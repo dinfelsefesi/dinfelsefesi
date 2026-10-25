@@ -1,0 +1,2153 @@
+# AVESİS yayınları için elle kararlar (yayın kimliği -> karar). karar: başlık listesi (eser listelerine ve ağa girer),
+# 'yanlis-kisi' (yayın çıkarılır). tur: yayın türünü düzeltir. Kararsız bırakılan yayınlar yalnızca kişinin sayfasında 'Diğer' sekmesinde yer alır.
+# 'not' alanı yalnızca okuyan içindir.
+003ca8b3-03de-4b34-bbfb-2c699c6ebe18:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Saim Gündoğan: Objections to Sam Harris’ Critique of Religion'
+003cfd65-d63f-4a80-98c9-95df6378c2b9:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Paul Tillich Felsefesinde Din Ahlak İlişkisi'
+02610746-ee40-4dd1-8f43-cfe065cd2f61:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Yasa: Tanrı ve Kötülük'
+0294d094-ac86-411b-bbda-c61e36760d27:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Rıfat Atay: Rıza Tevfik’in Din-Felsefe İlişkisine Dair Bazı Görüşleri Üzerine'
+0401c6ee-cbe0-4d95-9761-636079a3359d:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Hıristiyanlığın Ötekine Bakışı: Dini Çoğulculuk'
+04d65f82-9270-49ac-ad82-f291c5cb1388:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Tuncay İmamoğlu: Gençliği Değer ve Aileden Koparan Çağdaş Bir Hurafe "Deizm"'
+05199e49-bfa0-4691-831a-e89b34ebafad:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Nur Betül Atakul: The Usage of the Physico-Theological Proof in Kant''s Pre-Critical Writings and Critical Ph'
+051eda9e-94f7-45da-873e-fe9704b79dc3:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Muslim Religious Experiences'
+0641a427-6350-408d-858a-3ddf06abcd7a:
+  karar:
+  - kotuluk-problemi
+  not: 'Rıfat Atay: Mevlâna Mesnevî’si Bağlamında Şeytan ve Kötülük Problemine Bakış'
+06bf2fe4-c33f-444c-8476-d604992bb053:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Eren: Dini Çoğulculuk'
+0726dd6d-a4f3-4dae-a0b1-34314ba58cfe:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Ölümsüzlük Düşüncesinin Gazâlî''ye Kadarki Seyri'
+07b01177-0f24-488f-aee3-87cb0bf717dd:
+  karar:
+  - din-ve-ahlak
+  not: 'Mehmet Türkeri: Etik Tarihindeki Temel Doğal Yasa Anlayışları ve Bu Anlayışlardaki Dini Unsurlar'
+0825cf40-63e9-4f26-aac3-a3def244362d:
+  karar:
+  - din-epistemolojisi
+  not: 'Rahim Acar: "Religion and Reason: Introduction”'
+082ce38f-237b-4f51-a577-d3c93e9b72e2:
+  karar:
+  - kotuluk-problemi
+  - teizme-yonelik-itirazlar
+  not: 'Hakan Hemşinli: Ateizmin Bir Gerekçesi Olarak Kötülük Sorununa Yeni Bir Yaklaşım : Mücadele Teodisesi'
+08407dd2-bfe6-4940-aeeb-529786b44d43:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: İslam Düşüncesinde Kötülük Sorunu ve Teodise III'
+08ae207e-6e7e-4047-aed3-4f28ba29eaf0:
+  karar:
+  - din-epistemolojisi
+  not: 'Cafer Sadık Yaran: Tanrı İnancının Aklikiği'
+08ce02a3-9c88-4899-9153-af906f5b9859:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Bayle''in Şüpheci Fideizmi'
+09217dcf-873e-4356-99e5-f91bb7d2ac63:
+  karar:
+  - din-ve-ahlak
+  not: 'Kayhan Özaykal: Al-Māturīdī’s Divine Ethics as Virtue Ethics'
+093c9237-2c67-4ec9-a85d-08cd319c031b:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: John Hick''in Din Felsefesinde Dinsel Çoğulculuk'
+09a39e1a-b071-47a5-9068-ad8aec5c5513:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-sanat
+  not: 'Cafer Sadık Yaran: Lale Delili: Estetikten Etiğe ve Metafiziğe'
+09ddce22-d922-48eb-95ff-581a1eb142f9:
+  karar:
+  - dini-cesitlilik
+  not: 'Rahim Acar: John Hick in Dinî Çoğulculuğunun Din Karşıtı Tazammunları'
+09fd2ed9-6c3b-4e19-a261-a918b2a3e524:
+  karar:
+  - din-epistemolojisi
+  not: 'Hüsnü Aydeniz: Fahreddin Râzî ye Göre Dinin Anlaşılmasında Aklın ve Aklî İlimlerin Rolü'
+0a6eb892-8efd-4c69-8102-746b43155cd6:
+  karar:
+  - din-dili
+  not: 'Ruhattin Yazoğlu: Tanrı Hakkında Konuşmak'
+0ad9485d-3628-45a9-b324-e180c66c33ee:
+  karar:
+  - kotuluk-problemi
+  not: 'Özcan Akdağ: Kötülük Problemi: İtirazlar ve Cevaplar'
+0aedf20e-327a-4d9f-acb3-80490b20809e:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Dinsel Kapsayıcılık (İnklusivizm)'
+0b74c744-5e53-480e-afa6-3c425865f24e:
+  karar:
+  - olum-ve-otesi
+  not: 'Mehmet Türkeri: Hayatın Anlamı ve Ölüm-süzlük'
+0b7b880e-0ce2-4327-95b0-24cb8513e47d:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Fatih Özgökman: Spinoza''da Tanrı''nın Varlığının ve Tekliğinin Argümanları'
+0b910806-4d0a-4c56-9f4d-c5050251e83b:
+  karar:
+  - ibadet
+  - tanri-alem-iliskisi
+  not: 'Ayşe Sıdıka Oktay: Oktay A S 2008 İbn Sina Düşüncesinde İbadet ve Tanrı Alem İlişkisi Bakımdan Değeri Uluslar'
+0ba9871b-c563-49a9-8f62-bf4a939ef3ea:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Özcan Akdağ: Thomas Aquinas’ın Vesilecilik Eleştirisi ve Temelleri'
+0c1445b5-facf-46cb-8e7f-a97533d22df1:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Fatih Özgökman: Spinoza ve Alfred North Whitehead''da Tanrı ve Evren İlişkisi'
+0c741a1a-a6ee-4d91-b22b-cf6a0eebcb63:
+  karar:
+  - dini-cesitlilik
+  not: 'Nur Betül Atakul: Kant''s Religion and Religious Pluralism'
+0c8d0ee4-ff26-416d-9ac7-884844b8a73d:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dini Çoğulculuk Yeni Bir Din Algısı mı Takdim Etmektedir?'
+0c9618b4-e3a2-4555-93ac-ed589378787b:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Gazali de Dini Çeşitlilik Problemi'
+0d4821d4-cd12-4ab1-9dda-e1336aab80b9:
+  karar:
+  - din-ve-ahlak
+  not: 'Cafer Sadık Yaran: Dindarlık-Ahlaklılık İlişkisini Yeniden Düşünmek'
+0d7ebc7e-e6e7-40d4-afb5-1e58ff750ce6:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Sanat Tarihi Metodları İslam Sanat Pratiklerine Uygulanabilir mi?'
+0d966880-8b77-44a6-8b0c-d10ca7ba0539:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Ölüm Korkusu İle İlgili Bazı Felsefî Tavırlar'
+0e100f80-0e43-43c9-a8c9-ea569bbf51fb:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: Islamic Thought on the Existence of God'
+0ebd8e7c-a3c9-413e-9bb1-bc73fed3d913:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: Metafiziksel Sonsuzluk ve Tanrı: İlahi Sonsuzluğun Mahiyetine Dair Bir İnceleme'
+0ef6db5a-9e15-4cf9-8a08-4be13c3f022b:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Tugay Taşçı: Should We give up Certainty in Theology? A Bayesian Probabilistic Case and the Personal Ex'
+0f44524f-c4d8-4d28-8249-97e017400fcb:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Tuncay İmamoğlu: Din Felsefesinin Tarihi'
+0f6de0f7-d218-4cc7-827c-106bbbea628c:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinde Hakikat Dinlerin Çokluğu ve Hakikatin Birliği Din Felsefesi İle İlgili Bir Deneme'
+0f8d4268-92c5-4e0c-be08-de009cac56cf:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Okan Bağcı: Kozmolojik Delillerde Tanrı-Zaman İlişkisi'
+1034a2b1-5503-4715-9ce2-02c50d382d92:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Halil İbrahim Köse: Agnostısızm Üzerıne Genel Bır Değerlendırme'
+108fcd33-e46b-4f6a-b195-cf6cb1d0241c:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Metin Pay: Yunus Emre''nin Tanrı Tasavvuru'
+10f526ee-2aa5-4870-a599-5a95b659dae5:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Türkeri: W. E. Hocking Felsefesinde Tanrı''nın Bilinmesi'
+110c637a-58dc-46eb-8176-b56711b7bd70:
+  karar:
+  - din-epistemolojisi
+  - kotuluk-problemi
+  not: 'Emine Göçer: Kötülük Problemi, İman ve Şüphe'
+1299e142-8695-422a-817b-f02d2a6886c1:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Tuncay İmamoğlu: Süreç Teolojisi'
+12efad24-f25e-4f88-adf8-527f3a8f290e:
+  karar:
+  - din-ve-ahlak
+  - teizme-yonelik-itirazlar
+  not: 'Alber Erol Nahum: Ahlaki Bir Sorun Olarak Ateizm: Bayle’in Spinoza Okuması'
+13ad33cd-458c-4b43-9f87-9bb2317fa7ce:
+  karar:
+  - din-epistemolojisi
+  not: 'Yasin Ramazan Başaran: The Idea of Subjective Faith in al-Maturidi’s Theology'
+1465a90b-1025-4c3c-95ff-db2615e9bb66:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Dinsel Çoğulculuk Açısından Farklı Mevlana Okumaları: Bir Çözümleme Denemesi'
+14f3ada7-ba90-4c1e-8cd7-40191a2e80c1:
+  karar:
+  - din-epistemolojisi
+  - kotuluk-problemi
+  not: 'Emine Göçer: Kötülük Problemi, İman ve Şüphe'
+152ffcee-4768-46b3-893d-27cee05500f1:
+  karar:
+  - ozgurluk
+  not: 'Rıfat Atay: Eş’ari Düşüncesindeki Özgür İradenin İmkanı'
+15546037-ee6d-4f8a-9f3b-70d434e6b5f0:
+  karar:
+  - din-ve-ahlak
+  not: 'Hasan Atsız: Tanrı yı Konumlandırma Problemi Olarak Çevre Ahlakı'
+15e9e150-99fe-4701-9231-eecf9226098f:
+  karar:
+  - din-dili
+  not: 'Tuncay İmamoğlu: Uluslararası Din ve Dil Sempozyumu'
+15f9495a-3b5b-475a-8f30-519d9ad90fbc:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Özcan Akdağ: İbn Rüşd, İbn Meymun ve Aquinas Bağlamında Alemin Ezeliliği Problemi'
+171e0254-2de8-45fb-b08c-a621490f3a13:
+  karar:
+  - din-epistemolojisi
+  not: 'Rahim Acar: Din ve Akıl'
+179f01f9-2411-4cd6-baae-571667b3edca:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Fatih Topaloğlu: Felsefî ve Teolojik Açıdan Mucize'
+17a58cd9-4d61-4c21-a653-b531e2b8d858:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinî Çoğulculuk Sorunu John Hick Üzerine Bir Araştırma'
+19164839-90c8-4786-a83c-0a2fbfcb5933:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Mesnevide Dinsel Çoğulculuk ve Kapsayıcılık Meselesi ve Barış İçinde Yaşama Öğütleri'
+19169fa1-8322-4a64-b3fb-d061fb9dce80:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Spiritüel Anlayışlarda Tanrı Tasavvurunun Dönüşümü Din Felsefesi Açısından Bir İnceleme'
+192f2dab-b029-4fcb-a9a9-d1e58b98d5cd:
+  karar:
+  - din-dili
+  not: 'Tuncay İmamoğlu: Kavramsal Çözümleme, Wıttgensteın ve Din Dili Problemi'
+19b95776-15a2-45ea-b7d2-338eef1e0672:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: Siyonizm ve Varlıkkırım (Ontocide): Kötülük Sorunu Açısından Bir Değerlendirme'
+1a1267e4-bc79-4ead-b28a-2b3f1af42249:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Transhümanizmde Tanrı'
+1a562b13-80de-4ff6-90a3-884c259702de:
+  karar:
+  - kotuluk-problemi
+  not: 'Engin Erdem: Kötülük Problemi'
+1a87fc1d-22c6-4ea6-b47c-1a87bc1bbb7b:
+  karar:
+  - kotuluk-problemi
+  - ozgurluk
+  - olum-ve-otesi
+  not: 'Ferhat Taşkın: The Free Will Defense and the Problem of Heavenly Freedom Özgür İrade Savunusu ve Cennet''t'
+1b65cc12-6367-4211-820b-e0955a5c7de0:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi'
+1bbc5927-934d-420f-b88b-147f67a290cd:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Yasa: Ömer Hayyam''ın Kötülük Sorununa Bakışı: Bir Şiirsel Anlatım'
+1be2d632-2583-4c52-879c-89752f42ff05:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Saim Gündoğan: Mevlana Düşüncesinde Tanrı-Evren İlişkisi'
+1c25e74e-1a12-448f-8981-a4d2a10b3fc7:
+  karar:
+  - din-epistemolojisi
+  not: 'Cafer Sadık Yaran: Richard Swinburne e Özel Bir Referansla Günümüz Din Felsefesinde Tanrı İnancının Akliliği'
+1c73be60-8e89-42c5-8650-22f0b1dd0a22:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Tuncay İmamoğlu: Nietzche ve Tolstoy''un Hristiyanlık Eleştirisi'
+1c778beb-36b3-49c9-a048-e6eef9b6f251:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Hüsnü Aydeniz: Fahreddin er Râzî Düşüncesinde İlâhî Adalet'
+1c9d7dc8-d97e-41d0-a6f1-6ea85f647766:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Din-Ahlak İlişkisine Genel Bir Bakış'
+1d4e0396-a3be-49bd-a23a-cd66b32dd1e7:
+  karar:
+  - din-ve-sanat
+  not: 'Hüsnü Aydeniz: Din Sanat İlişkisine Gelenekselci Bir Yaklaşım Seyyid Hüseyin Nasr Örneği'
+1d71b7e1-590b-4b93-8cdf-ed8cca2e1ca4:
+  karar:
+  - din-epistemolojisi
+  - dini-tecrube
+  not: 'Hakan Hemşinli: “Nübüvvetin Mistik Yöntem ve Bilgiyle İlişkisi” Adlı Bildirinin Müzakeresi'
+1da2da03-45a6-4beb-b45a-37d46fde392d:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Teistik Evrim'
+1e7a2bf4-fe76-4e80-b448-af04c739928e:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Engin Erdem: Davud el-Kayseri ve İlahi Zamansallık'
+1ee917b4-0738-49d3-9522-f004aeb766d3:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Fatih Özgökman: Antopomorfizm ve Tanrı'
+1fb91257-b940-4188-aa77-46980017f3cb:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Zikri Yavuz: Divine Foreknowledge and Human Freedom'
+1fdf672f-9101-4283-a037-a7dee012b2ad:
+  karar:
+  - kotuluk-problemi
+  not: 'Eyüp Aktürk: Metafiziksel Bir Sorun Olarak Kötülük'
+2054843a-906c-4bff-96af-534df40d14ec:
+  karar:
+  - dini-tecrube
+  not: 'Hakan Hemşinli: Öznellik ve Nesnellik Bağlamında Dini Tecrübe'
+205be76d-20f9-4d30-91d0-e47483a72896:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Religious Experience in Contemporary Turkey'
+224fe285-5474-47ea-a03f-95f973d7997a:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Engin Erdem: İbn Sînâ nın Metafizik Delili'
+22524f8f-b701-4fb4-ab48-ea1b34fac8b9:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dini Çoğulculuk Paradigmasının Ortaya Çıkardığı İnanç Problemleri'
+23903893-2f24-4df6-aa1d-3b5584e6b266:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Felsefî ve Teolojik Bir Problem Olarak Dinî Çeşitlilik'
+244109e0-af87-453d-bf3d-a0cd1d7983cd:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Rahim Acar: A Naturalistic Explanation of Miracles: The Case of Ibn Sina'
+24bf7e73-d0c0-48bc-b46c-274a44c2f5c0:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Bilal Bekalp: Fenomenolojik Perspektiften Yapay Zekâya Bakış: Yönelimsellik, Beden ve Çerçeve Problemi'
+255a3f3e-aac8-4090-a44d-5eb7712bc1d2:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Eleştirel Deneyimcilik Dini Tecrübede Swinburne ün Safdillik İlkesi ne Karşı Eleştirellik '
+25ae9370-7954-465f-bff6-1a0f7abfbcd1:
+  karar:
+  - din-ve-sanat
+  not: 'Rıfat Atay: Bilgi ve Eylem Arasında Mevlanada Estetik Değerler Eğitimi: Mesnevi Merkezli Bir Okuma Den'
+25e2080f-c0e8-4a60-9cfe-3782b59ebc3b:
+  karar:
+  - ozgurluk
+  not: 'Musa Kazım Arıcan: Spinoza nın Hürriyet Anlayışı'
+25e2c405-406c-4022-badc-a86571315043:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi Dersleri'
+260e8810-bb6f-45dd-83bf-8c6af1d9f92f:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Eren: John Hickt’xxte Dini Çoğulculuk'
+26271560-9488-4ef9-bf72-954d5470836e:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Engin Erdem: Din Felsefesi'
+26362fbe-cb12-40b6-9e69-1aff039af998:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Engin Erdem: İlahi Zamansallık Dâvud el Kayserî ve Isaac Newton'
+2716a4c0-9c57-41c6-af83-364e69f217fe:
+  karar:
+  - din-ve-ahlak
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Evrimsel Ahlak Tarihi ve Teorileri'
+2716d6bb-864f-4ccc-b126-267bd98320e3:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Bilal Bekalp: İslam Teolojisi Açısından Transhümanizme Bakmak: Felsefi Bir Değerlendirme'
+27366102-9f91-4da8-8ba2-41277f481c33:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Dinlerin Çeşitliliği Meselesine Yûnus Emre Üzerinden Bir Bakiş'
+278198a4-751e-4471-a141-5a00ec66fc4f:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi'
+27c44991-7722-4806-b7e2-062066178c83:
+  karar:
+  - ibadet
+  not: 'Rıfat Atay: Dar Zamanda Dua'
+2853298e-de6b-45a7-ac5b-13e9f801837e:
+  karar:
+  - dini-tecrube
+  - din-dili
+  not: 'Hakan Hemşinli: Dini Tecrübede Dilin Yetersizliği'
+28d3dfb6-6a0e-496d-a8b9-cb25622b1be2:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Rahim Acar: Creation: Avicenna''s Metaphysical Account'
+29407d4e-a53d-4f87-9adf-3fdb86028b14:
+  karar:
+  - din-dili
+  - tanri-alem-iliskisi
+  not: 'Rahim Acar: Talking About God and Talking About Creation'
+2981f36b-e1d6-4350-b1cc-47807193589d:
+  karar:
+  - kotuluk-problemi
+  - tanri-tasavvurlari
+  not: 'Zafer Çaylı: Tanzimat Döneminde Değişen Tanrı Tasavvuru ve Kötülük Problemi; Namık Kemal''in "İntibah" R'
+2a0316ea-82fb-4db7-88d8-dd36f2e7a6ed:
+  karar:
+  - dini-cesitlilik
+  not: 'Rahim Acar: Mutlak Hakikat in Tecellîsi Olarak Dinlerin Meşruiyeti Frithjof Schuon un Gelenekselci Mev'
+2af086ab-318f-4c2a-945d-793d004b4e9f:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Ruhattin Yazoğlu: Tanrı’nın Varlığının Delilleri'
+2afa63ce-72ca-4ab9-a72f-d2a8ebcecd37:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Hasan Atsız: Ben ve Öteki Diyalektiği Üzerinden Tanrı nın Ontoteolojik Bağlamı'
+2bb6aca4-1720-486e-b19e-7e062aff5d59:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Zikri Yavuz: Tanrı''nın Varlığı Hakkındaki İnce-Ayar Kanıtı''nı Yeniden Değerlendirme'
+2be6acb8-ef32-4c32-96d1-cb75c42c6897:
+  karar:
+  - din-epistemolojisi
+  not: 'Okan Bağcı: Rasyonalite-İrrasyonalite Kıskacında İman'
+2c97bb43-1168-423e-aa90-cc4a9b096db0:
+  karar:
+  - din-dili
+  - teizme-yonelik-itirazlar
+  not: 'Rahim Acar: Teolojik Dilin Husûsiyeti ve Ateist Argümanların Sınırı İstanbul 2013'
+2d07ea11-cf5e-4912-a778-fc6fe7994d1e:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Osman Karaağaç: Nedensellik Bağlamında Gazâli ve David Hume’da Mucize'
+2e8557ca-9b5f-4cb5-898b-ce40e6547ed8:
+  karar:
+  - din-ve-ahlak
+  not: 'Zafer Çaylı: Osmanlı’dan Cumhuriyet’e Din-Ahlak Tartışmaları: Celal Nuri İleri Örneği .'
+2eabbe4c-f4d4-4abb-bb71-85986a677768:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Bahailik’te Dini Çoğulculuğun İmkânı'
+2eb8ee32-3cbe-4312-ae77-6ad5b1775797:
+  karar:
+  - din-dili
+  not: 'Metin Yasa: İbn Arabi de Tanrı Merkezli Bütünü Anlamaya Yönelik Bir Metot Olarak Paradoksal Konuşmak'
+2f6e39e8-8551-4df9-a984-91f6f4bebcdd:
+  karar:
+  - kotuluk-problemi
+  not: 'Kevser Çelik: Kötülüğün Felsefesi Felsefi Tecrübede Kötülük Sorunu ve Kötülüğü Haklılaştırma Olarak Teod'
+2fa6f59e-25f4-41e9-8503-75ce0f058354:
+  karar:
+  - kotuluk-problemi
+  - din-ve-bilim
+  not: 'Atilla Akalın: Fawn as an Individual: Rethinking Gratuitous Evil and Evolutionary Theodicies'
+2fd04d1e-6896-472c-b8fb-500341be0237:
+  karar:
+  - olum-ve-otesi
+  not: 'Cafer Sadık Yaran: Life after Death in Contemporary Islamic Thought'
+3037186a-808b-46b6-b293-65368761ad71:
+  karar:
+  - dini-tecrube
+  not: 'Adem İrmak: Felsefî Teizm ve Dini Tecrübe'
+31bcb3f8-c14a-4825-9744-ef81a966e9ce:
+  karar:
+  - kotuluk-problemi
+  not: 'Özcan Akdağ: Kötülük Problemi: Mutezilî Düşüncenin Saadia Gaon’a Etkisi'
+31f676dc-77f1-4553-8bd7-6046a7b16828:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Musa Kazım Arıcan: Panteizm ve Panenteizm Tartışmaları Arasında Spinoza'
+321c56b0-4c5b-4092-a21f-91167fdec1a4:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Zafer Çaylı: Çağdaş Din Felsefesi Problemleri: Apateizm Örneği'
+32c24489-740a-4f95-b256-65369df062b1:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Cafer Sadık Yaran: Felsefe-Din İlişkisi: Din Felsefesi Yapmanın Dört Farklı Yolu'
+32e6caba-a622-4843-84ba-70dbd201586f:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Saim Gündoğan: "Bütüncül ve Eleştirel Din Felsefesi"'
+3386c04d-cc9b-46dc-ba16-4575bc1b0cb3:
+  karar:
+  - olum-ve-otesi
+  not: 'Saim Gündoğan: İslâm Düşüncesinde Eskatolojiye Yönelik Heterodoksal Bir Yorum: Kazanılan Ölümsüzlük'
+339b4a97-b589-41cb-8a5e-ec835ca142a2:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dini Çoğulculuk Paradigması ve Eleştirisi ( John Hick EksenliDini Çoğulculuğun Eleştirisi)'
+33e0d109-0e9f-4b3e-baad-cccd674083ad:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: Yeni Doğal Teoloji ve Doğu İslam Felsefesi Mirası'
+34434ad0-6cf8-4fdf-84c3-e20048a92cd8:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: God''s Knowledge: A Study on The Idea of Al-Ghazali And Maimonides'
+3469bac4-1cf5-487b-b1a3-445afdf690c3:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Zikri Yavuz: Zamandan Bağımsız Delile Dair Modern Tartışmalar'
+348977a5-adb4-47ed-a4bd-b09cc0996f5f:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Râbiatü''l-Adeviyye''nin İlahi Aşk Mistisizmi'
+3550cad7-7cf6-4f10-91fa-156d22bf5623:
+  karar:
+  - din-epistemolojisi
+  not: 'Cafer Sadık Yaran: Dini Epistemolojide Eleştirel Akılcılık ve Tahkiki İmancılık'
+3590a59f-b3b2-4dc8-b54d-44617fb820f8:
+  karar:
+  - tanri-alem-iliskisi
+  - din-ve-bilim
+  not: 'Rahim Acar: Metodolojik Tabiatçılık Tartışmaları Bağlamında Gazzâlî’nin Tabiî Nedensellik Eleştirisi'
+3637b269-50db-4655-92b2-e1ccda23318b:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Tanrısız Ahlakın İmkanı ve Sınırları'
+38263a85-47fd-4d55-a751-05bd8644e4e7:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Tuncay İmamoğlu: Türkiye’de İlahiyat Eğitiminde Din Felsefesinin Yeri ve Önemi'
+38857f8e-a5cf-410f-9c65-687a45bc3c39:
+  karar:
+  - din-epistemolojisi
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Cafer Sadık Yaran: Din Felsefesine Giriş Akıl Allah Ahlak'
+389bf82f-3b2f-4845-9c91-d5cd3ac4c714:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: Natural Theology in Christianity and Islam Is There a Common Core'
+3935947f-71b9-457e-ab20-752d2c9eadc5:
+  karar:
+  - din-ve-ahlak
+  not: 'Kayhan Özaykal: al-Maturidi as Via Media in Theological-Ethics'
+3982027c-55f9-4dee-bb80-e4e035cbec6b:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Hıristiyan Düşüncesinde Başvurulan ‘Faıth Seekıng Understandıng’ Tutumundaki Fideistik İma'
+3b67e82e-f026-487a-84c6-1ac9d3ef6b6e:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Erasmus''un Fideizmi Şüpheci Midir?'
+3bc970e3-9c0b-4e1b-8c6e-bc2b3862ecb9:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Atilla Akalın: Mümkün Olduğu Ölçüde İmkansız: İbn Rüşd ve Jean Buridan’ın Mantık ve Doğal Teoloji Hakkınd'
+3bf61ded-83bc-4b99-8745-61d2835ee4bf:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Moore Paradoksu Bağlamında Tanrı İnancı Üzerine Mantıksal Bir İnceleme'
+3c90bd9c-1e9c-4da5-bf20-c19846bd3555:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Engin Erdem: Tanrı’nın Varlığının Delilleri'
+3d02934b-499e-451d-bf14-aabc61a72f7c:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Paul Tillich''in Tanrı Anlayışı'
+3d22777e-6fc1-45f3-acf7-f9e7d8204a3f:
+  karar:
+  - ozgurluk
+  not: 'Bilal Bekalp: Vaoluşçu Teoloji ve İnsan Özgürlüğü'
+3d695faa-6a8e-44cb-9577-198b9c9746a9:
+  karar:
+  - din-dili
+  not: 'Ruhattin Yazoğlu: Tanrı Hakkında Konuşmak'
+3da80d24-b97b-4373-91cd-541368b1fab9:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Cafer Sadık Yaran: Din Felsefesi Araştırmalarında Karşılaşılan Bazı Problemler ve Çözüm Yolları'
+3e10d38d-7002-4ab1-a743-b903528939dc:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Yasa: Kötülük Sorunu'
+3e64e949-5776-4f4c-9f52-f88902b3a295:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Muslim Religious Experience Recent Researches in Turkey'
+3ea36a3a-ecc2-4d82-8f90-2744cd08a1c4:
+  karar:
+  - din-ve-bilim
+  not: 'Zikri Yavuz: Din ve Bilim İlişkisi'
+3f607da3-0a28-4261-bd09-02c03df940fe:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Religious Experience in Contemporary Turkey and Some Basic Comparisons with the Surwey in '
+40561523-a6a7-4948-bb29-05de8179653d:
+  karar:
+  - din-dili
+  not: 'Ayşe Sıdıka Oktay: Oktay A S 2007 Mevlana Düşüncesinde Din Dili ve Dini Sembolizm 2007 Unesco Mevlana Yılında'
+409c1ed0-3650-40ec-be53-3267d653a3c3:
+  karar:
+  - ozgurluk
+  - din-ve-bilim
+  not: 'Zikri Yavuz: Natüralizm, Faillik ve Özgür İrade'
+40e216c2-5568-4e27-9f11-f628a0fefccd:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Musa Kazım Arıcan: Spinoza nın Tanrı Anlayışının Din Felsefesi Açısından Değerlendirilmesi'
+4130a3ee-8b66-4963-b75b-3e80127e1f01:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefdeasi'
+413b2744-922a-424f-95c3-2912658dda16:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Özcan Akdağ: Alemin Hudusuna Dair Gersonşdes’xxin Yaklaşımı Üzerine'
+41a8df82-0ab0-4c39-8af3-a68da7246227:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Osman Karaağaç: Tanrı ve Evren'
+41da66e9-b17a-47ab-a371-ea26d8671be1:
+  karar:
+  - dini-cesitlilik
+  not: 'Rahim Acar: İnsanî Sınırlarımız İçinde Dini Çeşitliliği Yorumlamak'
+4204536b-08a5-476e-bd0b-24f8a6d9790c:
+  karar:
+  - olum-ve-otesi
+  not: 'Adem İrmak: Death and its beyond in early Judaism and medieval Jewish philosophy'
+425f35da-435e-43a8-89b3-65beb0ed6f23:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Zikri Yavuz: Tanrı nın Bilgisi ve İnsan Hürriyeti İlişkisi Bağlamında Frankfurtçu Liberalizmin Eleştiri'
+428411f3-fe8e-406f-b639-b2bc54d2c0fc:
+  karar:
+  - din-epistemolojisi
+  not: 'Yasin Ramazan Başaran: Dini İddialar Ne Kadar Rasyonel Olabilir?'
+441f257d-d6eb-4281-a928-dd8debf847b9:
+  karar:
+  - din-epistemolojisi
+  not: 'Engin Erdem: Hanefî-Mâtüridî Gelenekete Bilgi ve İman'
+4442165b-a9c0-4c7d-a556-aed30036c0ba:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Hüsnü Aydeniz: Dan Brown’ın Romanlarındaki Ateist Karakterlerin Dine Yönelik Eleştirileri Üzerine Birİnce'
+444a7ed7-5b28-447b-be5a-ba6839f33a12:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Adem İrmak: Hıristiyan Tanrı'
+45ba5eb5-5228-4e2e-86bc-d7e0d396b04c:
+  karar:
+  - din-ve-bilim
+  not: 'Rıfat Atay: Din-Bilim İlişkisini Yeniden Düşünmek: Antony Flew’un Fikir Değiştirmesi Üzerine'
+45bf8a20-b008-4961-99eb-1aa9850d7ca3:
+  karar:
+  - insan-tasavvurlari
+  not: 'Mustafa Eren: Ahmet Yesevi ve Muhammed İkbal’in İnsan Tasavvuru'
+46f7a611-5834-48b0-b27e-0d58b71e438c:
+  karar:
+  - tanri-alem-iliskisi
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Tanrı-Evren İlişkisi ve Çeşitli Tanrı Tasavvurları'
+471f89d9-894d-4ff0-aeff-1ba801a6b91f:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Şüpheci Fideizmi, Fideizmden Ayıran Felsefi Unsurlar Açısından Popkin’ci Bir Yaklaşımın An'
+472b9776-6f60-4d06-9a20-2eeabdef9ca7:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Engin Erdem: Ateizm ve Ateistik Kanıtlar'
+47f8d4d4-dfce-4aa0-bf53-5862c9666a9a:
+  karar:
+  - insan-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Bâbertî''nin Bütüncül İnsan Anlayışının Modern Dünyadaki Yeri ve Önemi'
+4813f7d9-c160-4879-9a77-9d85ac83cc1e:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Metin Yasa: Din Felsefesi Soru Sorgu Sonuç'
+492a76de-97b8-4918-9a71-0b2d32f6377b:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Bilal Bekalp: Yapay Zekaya Fenomenolojık Bır Açıdan Bakmak'
+49cb20ca-215f-4e2e-8c4f-f5c916658ab6:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-bilim
+  not: 'Rahim Acar: Büyük Patlama Teorisi Kelâm Kozmoloji Argümanını Destekler mi'
+4a0ac93f-3c20-493e-8c69-facf07ece822:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Fatih Topaloğlu: MODERN DÜŞÜNCEYİ JOHN DUNS SCOTUS MUBAŞLATTI Scotus un Tanrı Anlayışı Bağlamında Bir Değer'
+4a171eb2-a0e9-4b73-9e5b-866c841953bf:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Eshab ı Kehf ve Benzerleri Işığında Ölüm Diriliş İlişkisi Üzerine teolojik ve Varoluşsal B'
+4a4ab5cc-ffd4-4b36-9b88-4f0c22439977:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Tuncay İmamoğlu: Bir Tanrı Kanıtlaması Olarak Berkeley İdealizmi'
+4a9e4eaa-57d8-4b1e-a0f5-35a78e149e5d:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Topaloğlu: Din Bilim Okumaları'
+4b6a9154-604a-444d-9851-52dfce94a25b:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Metin Pay: Kozmolojik Delil'
+4c385d93-3786-45cf-8e93-b291f530cf7a:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Zikri Yavuz: İbn Sina Ezelilik ve Özgür İrade'
+4c5d5ec2-f090-40eb-8afe-0cf41bdf2222:
+  karar:
+  - din-dili
+  not: 'Fatih Topaloğlu: Ebu Zeyd E Göre Vahyin Metin Kültür İlişkisi Açısından İncelenmesinde Dilin Rolü'
+4d8c0e27-ce58-48b5-a2d6-0fa424d5c95f:
+  karar:
+  - tanri-alem-iliskisi
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Tanrı-Evren İlişkisi ve Çeşitli Tanrı Tasavvurları'
+4da780cf-0e96-4558-95d3-b2e7b6ff9a46:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Özcan Akdağ: Din Felsefesi'
+4e3a962f-0570-438e-aaab-ce7a1833e319:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Pay: İlahi Adalet Açısından Doğal Afetler'
+4e3b7ad5-4ac6-45b7-94fc-c93622e1c53a:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dinî Tekelcilik Din Felsefesi Açısından Bir Çözümleme'
+4ed50dd6-6caa-49b5-9811-330f472aab4b:
+  karar:
+  - din-dili
+  not: 'Fatih Topaloğlu: The Possibility of Talking About God in Nicholas of Cusa'
+4f8f860f-6593-4a13-8eaf-3da0c14745db:
+  karar:
+  - kotuluk-problemi
+  not: 'Hasan Atsız: Kötülük Problemi Bağlamında Şiddetin Diyalojik Karakteri'
+4fc5e2f6-ad71-42df-9776-ede4f7211975:
+  karar:
+  - din-ve-ahlak
+  not: 'Mustafa Eren: Seküler Ahlak’ın Imkanı ve Felsefi Temelleri'
+4fed69f1-6699-4ac9-af3b-86dea02180a6:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Are Immoral Law and Irreligious Morality Possible?: A Philosophical Approach'
+50a22994-a777-479d-9b06-a6f8c3b41347:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Tanrı ve Evrim'
+517df81d-7962-4af6-8133-226630e666ac:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Evrim Teorisi Tanrı İnancını Dışlar mı?'
+51ca4c04-efd0-430e-94e8-60d417d0d533:
+  karar:
+  - din-epistemolojisi
+  not: 'Cafer Sadık Yaran: Çağdaş Epistemolojik Dikotomiler ve Sofyalojik Bir Epistemoloji Önerisi'
+5215f7b3-77b0-438c-a833-be4706edc381:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Topaloğlu: Barbour''un Sınıflandırması ve İslam ve Bilim Hakkındaki Çağdaş Tartışma'
+5286d53e-0c8f-4894-b430-32962d3dcd16:
+  karar:
+  - din-epistemolojisi
+  not: 'Osman Karaağaç: Tanrı(inancı) ve Akıl'
+52da0423-3410-4fc0-9216-a73fbb178bd9:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Hüsnü Aydeniz: İbn Miskeveyh, "Hareket Delili"'
+53d3e560-ad2c-4976-afa5-96d72e71ae3a:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Erken Modern Felsefede Şüpheci Fideizmin Dinî Kurgusalcı Bir Söylem Olarak Yorumlanması'
+54415da6-5051-4bc4-84c4-c36711702b46:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Engin Erdem: Cumhuriyetin 100. Yılında Din Felsefesi'
+54482fa2-46a1-429b-a549-b203b60c7ef0:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Tuncay İmamoğlu: Din Felsefesinin Metodolojisi'
+5513a4d9-11a9-4630-b61d-fb3d66ef7c74:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Religious Pluralism and Islam'
+551cb6ee-093f-4983-9194-8b3ac99fb7b7:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Modern Batı Düşüncesinde Dini Çoğulculuk ve Eleştirisi'
+55e12412-0854-4fc6-8e52-3d0291cb4003:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Yasin Gökhan: Dinin Dijitalleşmesi ve Medya Dindarlığı'
+5644573c-0733-4df4-acdf-88fbec9d3a8d:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Özcan Akdağ: Ortaçağda "Fail" Kavramı ve Tanrı'
+56493de9-6882-428d-9d37-a3b1e87f7b92:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Tuncay İmamoğlu: Din Felsefesi'
+5650f3a8-f484-46d6-89bd-67b78226bdc9:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Ahlâk ve Ötesi'
+57438aad-7a7b-45b9-bb2a-0351ebaa4eb0:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Engin Erdem: İslamiyet te Din Felsefe İlşkisi İbn Rüşd e Özel Referansla'
+5793c7b3-9339-48bf-abbf-44333ae0dbd2:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Kevser Çelik: Din Felsefesi Yapma Biçimleri'
+57eac622-972f-408e-9cea-2f5a4cdac953:
+  karar:
+  - dini-tecrube
+  - din-epistemolojisi
+  not: 'Fatih Topaloğlu: Dini Tecrübe Dini İnancı Doğrular mı?'
+584f5bda-e1e2-4832-b030-8f652b97a2ce:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Metin Pay: Tasarim ve Tanri'
+59161c32-08ac-4564-9dab-d137bf7f0f4a:
+  karar:
+  - din-ve-ahlak
+  not: 'Mehmet Türkeri: Dini Algılamada Etik''in Ayırt Ediciliği'
+59bcc092-bfda-4fe7-b99c-290d63d6286c:
+  karar:
+  - din-ve-ahlak
+  not: 'Nur Betül Atakul: La Moralite, Dieu Et La Religion Dans La Philosophie Critique De Kant'
+5bb00819-787b-4d56-ae68-4763a18bcf24:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Engin Erdem: Tanrı’nın Hayatında İki Safha Mümkün mü?'
+5c1ea703-f920-46c2-bac4-1cc803aa522f:
+  karar:
+  - din-dili
+  not: 'Rıfat Atay: Din Dili Cercevesinde Suleyman Celebinin Mevlidinde Tanrı Kavramının Seruveni'
+5c5324fc-2c72-4395-ba05-3222eedf2eb5:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Hakan Hemşinli: Din Felsefesi'
+5cc46913-6582-42ea-893c-6d8be6f0dd7f:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Ruhattin Yazoğlu: Transhümanizm Bağlamında Biyoteknolojik Gelişmelerin Aile Kavramı ve Ahlâkî Değerler Üzeri'
+5cde2fd3-e915-4d98-8c63-fb757b91f458:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Religious Pluralism after Modernity: Towards a Non-Radical Version'
+5d63624c-de4f-44d0-a491-9d2356ad9402:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Fatih Özgökman: Modern Akıllı Tasarım Hipotezi Kuralları Yıkıyor'
+5d8a06ad-99f3-426e-abe3-87899a606b7e:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Mevlüt Albayrak: Felsefe ve Din: Din Felsefesine Giriş'
+5dec8adc-7071-4c88-8c02-798e403ff94e:
+  karar:
+  - kotuluk-problemi
+  not: 'Rıfat Atay: Peygamber Ailesinden Çözümler: Kötülük Problemi Bağlamında Felsefi Bir Değerlendirme'
+5e88dd06-1509-4192-8272-ce361bc886bb:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Okan Bağcı: Agnostisizm ve Dindarlık'
+5eaf0411-f6b0-44ba-854e-47ff70bcfa51:
+  karar:
+  - din-ve-bilim
+  not: 'Kevser Çelik: Çatışmalar Çağı Din Bilim İlişkisi'
+5f14b3e4-0488-4d90-b303-eae7f0d55d79:
+  karar:
+  - din-ve-bilim
+  not: 'Yasin Ramazan Başaran: Din Bilim İlişkisinde Model Arayışları'
+5f668b1e-cc56-4f8f-abb6-30cb09e731b7:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Musa Kazım Arıcan: Metaverse ve Din Sempozyumu Açılış Konuşmaları'
+5f966a0e-66bf-484d-9566-ddf6b824e380:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Hakan Hemşinli: Ateizm ve Eleştirisi'
+603bb4a5-8bed-46d0-8837-d62f3df0f20d:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Tugay Taşçı: Is Divine Simplicity Simply Impossible? An Avicennian Account of Divine Simplicity and the'
+6080d8f4-bd85-4c9d-9756-f690a12c4679:
+  karar:
+  - din-epistemolojisi
+  not: 'Tuncay İmamoğlu: Dinsel Bilgi Sorunu'
+60859c2e-d43d-4af8-9d09-b04079a92896:
+  karar:
+  - din-dili
+  not: 'Yasin Ramazan Başaran: Two methods of interpreting the sacred book'
+61f4ada6-e55e-43f4-9681-4167d5f8338f:
+  karar:
+  - din-ve-ahlak
+  not: 'Kevser Çelik: Türk ‘Filozof-Teolog’ Elmalılı Muhammed Hamdi Yazır’ın Din Felsefesinde Din-Ahlak İlişkisi'
+6264b326-9d8e-42ba-bba1-a2afc4d34e61:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Saim Gündoğan: Doğal Teoloji Nedir?'
+631a2f5a-f8dc-4552-a2a1-6e167eeed9f9:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-ahlak
+  not: 'Eyüp Aktürk: Ahlaktan Tanrı''ya: Ahlak Kanıtı Üzerine Bir İnceleme'
+63ecf651-378a-4d8a-a604-811270c5db68:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Tugay Taşçı: Is Theism Really Coherent? Theism as a Cumulative Hypothesis and the Evaluation of the Pro'
+6446f859-71d6-4623-8416-a5d947afb1c5:
+  karar:
+  - din-epistemolojisi
+  not: 'Özcan Akdağ: Gersonides’in Nübüvvet Anlayışı ve Temelleri'
+65ec8f61-5840-4b80-a238-0cd03b729cf7:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Engin Erdem: Ateizm ve Kanıtları'
+66a5149e-b184-43d4-90d7-4af08b03a6a9:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: İslamın Ötekine Bakışı: Tasavvuf Örneği'
+67519b69-a7b1-4f7a-a4c5-9ed7c6b71ce5:
+  karar:
+  - ozgurluk
+  not: 'Zafer Çaylı: FELSEFE ve KELAM AÇISINDAN KUR’AN’DA İNSAN HÜRRİYETİ'
+684be65e-db66-44f9-903a-78388e909b4f:
+  karar:
+  - din-epistemolojisi
+  not: 'Rahim Acar: Akıl ve İnanç Din Felsefesine Giriş'
+68a53548-23a6-4f71-a82f-8a1d3da6ccea:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Hüsnü Aydeniz: Geleneksel Değerler Üzerinden Bir Transhümanizm Eleştirisi'
+690486bf-daa4-4770-b184-f94bfac53e0e:
+  karar:
+  - din-dili
+  not: 'Metin Yasa: Tanrı Hakkında Paradoksal Konuşmak İbn Arabi ve Karl Barth Örneği'
+693e297e-6965-4bb6-be7a-7b45ddd6e403:
+  karar:
+  - din-ve-ahlak
+  not: 'Fatih Topaloğlu: Din Ahlak Okumaları'
+69d0bf12-cba2-4f3b-bdcc-33d22fb26487:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Non-Exclusivist Attitudes Towards the Other Religions in Recent Turkish Theology and Philo'
+6b844493-87c3-4997-87ee-a56f59ad4ccc:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Kuantum Fiziği Gözlem Problemi Gerçeklik ve Tanrı'
+6cdfe6e0-257f-4a15-849a-1cf8a8e42a9a:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Musa Kazım Arıcan: Spinoza nın Tanrı Alem İlişkisinde İçkinlik Aşkınlık Problemi'
+6d98094d-c61f-4427-8f43-021f34e8f7c2:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Seküler Ahlakın Çözümsüzlüğü Üzerine Bazı Düşünceler'
+6e4bb160-bc90-43fe-919d-f2b03500da00:
+  karar:
+  - din-epistemolojisi
+  not: 'Mustafa Eren: Epistemolojik Btünlük ve Din'
+6e8d54c3-617a-48f7-ad71-ca0a6ea8d03c:
+  karar:
+  - din-epistemolojisi
+  not: 'Fatih Topaloğlu: Bilinmeyen Bir Tanrıya İman Çev'
+6e923e58-88c2-4007-876f-e98b76653e08:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Engin Erdem: Ateizm ve Kanıtları'
+6f4763c7-3736-47e0-b603-256d0419013d:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Mehmet Türkeri: Mehmet S. Aydın ve Din Felsefesi Görüşleri: Bir Yaklaşımın Ayırt Edici Özellikleri'
+70bd018f-4eef-4349-b29b-cd6cc6f25534:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatih Topaloğlu: Varoluşsal Din Felsefesine Giriş'
+718f83be-0496-42e5-849f-d8b898d1d750:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: Tanrı''nın Yokluğunu Tasavvur Etmenin İmkansızlığı'
+71cb580f-1178-4a00-9208-a29b5dda42a4:
+  karar:
+  - dini-cesitlilik
+  not: 'Tugay Taşçı: A Reformed Disagreement: Critique of Plantinga’s Religious Exclusivism'
+72e26096-e4d2-49a9-99f6-86a2d45c68a3:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: İslam Düşüncesinde Kötülük Sorunu ve Teodise I'
+733d6da1-b8b4-49ca-9f2d-281bf57f1933:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Hakan Hemşinli: Dijital Dönüşüm ve İlahiyat Bilimleri II'
+734598e1-a3c3-4200-b76f-893e9e13295d:
+  karar:
+  - din-ve-ahlak
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Mehmet Türkeri: Din Felsefesi Tarihinde Etik Sorunu'
+7453330c-1983-4b44-9c19-ee6e8f9b3311:
+  karar:
+  - din-ve-bilim
+  not: 'Tugay Taşçı: Darwin’in Müslüman Öncüleri: Anakronik Bir Okumanın Felsefi Eleştirisi'
+74b38668-32f7-43fc-9d0d-5a541f87c4e9:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Hüsnü Aydeniz: Gelişen Teknolojiler ve Değerler'
+7556ba12-5aea-4682-af81-827fe47747e8:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Engin Erdem: Craig and His Concept of Eternity A Critique from the Standpoint of the Kalam'
+763e36a6-abba-4030-af6e-1c23ac81145c:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: MUHAMMED İKBAL’İN KÖTÜLÜK SORUNUNA YAKLAŞIMI ve İLÂHÎ ADALETİN TECELLİSİ OLARAK ACILARIN O'
+783690b0-feea-4a20-8070-f97edd91d9a4:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: John Hick’in Dinî Çoğulculuğunun Arka Planı'
+7850d7e0-3014-4380-b9df-c2c26995c127:
+  karar:
+  - dini-cesitlilik
+  not: 'Rahim Acar: Dini Çeşitlilik'
+799682e6-5601-4fec-ae5c-e27a10f41adf:
+  karar:
+  - din-dili
+  - din-epistemolojisi
+  not: 'Okan Bağcı: Anlamın Neliği ve İslam Vahyi'
+79d4835c-4693-4b74-9abe-c56d9c0451bc:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Ölümsüzlük İnancının Dayandığı Temeller'
+7bcac67d-1f9c-48ab-b513-14be35b3f4a6:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Adem İrmak: Tanrı Var: Felsefî Teizm ve Teleolojik Delil Bağlamında Bir Çözümleme'
+7bfc89a4-4319-46a1-bd2a-e90d21c7e076:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Seküler Ahlakın Çözümsüzlüğü Üzerine Bazı Düşünceler'
+7c1bedfd-2813-4efe-a47a-197272bdce68:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Mevlüt Albayrak: Tanrı ve Süerç'
+7db94030-9ce0-45db-924d-cffa26bbff3b:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Esma Aygün Yakın: Bireysel Sorumluluktan Kolektif Failliğe: Yapay Zekâ Etiğinde Dönüşen Etik Paradigmalar'
+7e558444-296d-4df7-99b7-76b6ac436b02:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: God’s Omnipotence and Impossibility in al-Ghazālī and Thomas Aquinas'
+7e596906-79a2-4c0f-b3e4-6b9d82d5d1c9:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - din-ve-ahlak
+  not: 'Saim Gündoğan: Dijital Ortamlardaki Etik Problemlere Dini ve Felsefi Bir Bakış'
+7f5ffff4-9027-4a84-8de9-ab203ce32987:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Anadolu Coğrafyası İslam Sanatında Form veİçeriğin İki Kaynağı: Miraç ve Aşk'
+7f7a4e17-7aa8-4953-a21a-4dcd7787269b:
+  karar:
+  - din-dili
+  not: 'Fatih Topaloğlu: Din Felsefesi Açısından Kutsal Anlatı'
+7f8cb5de-2691-4b0a-90a6-82038cac9f4c:
+  karar:
+  - din-ve-ahlak
+  not: 'Fatih Topaloğlu: Ahlâkın Temeli Üzerine Bir Tartışma Ahmet Hamdi Akseki Immanuel Kant'
+80442b9e-51c8-4a3c-97f5-a6d2bc77ab26:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Ölümsüzlük Düşüncesinin Gazâlî''ye Kadarki Seyri'
+808e6ac8-df39-4cd8-bb56-6d2f51695452:
+  karar:
+  - din-ve-bilim
+  - tanri-alem-iliskisi
+  not: 'Ruhattin Yazoğlu: Fazlurrahman Düşüncesinde İnsan ve Tabiatın Yaratılışı Bağlamında Evrim'
+80e4836b-fc18-4847-bab2-cce3ae18df0b:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Mevlânâ Düşüncesinde Bir Ölümsüzlük Tecrübesi Olarak İradî ve Doğal Ölüm'
+81589973-1c09-4135-9774-ed5f266bcfd2:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinde Hakikat Dinlerin Çokluğu ve Hakikatin Birliği Din Felsefesi İle İlgili Bir Deneme'
+8205c648-de3f-49e5-93e9-892a21400cb8:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Fatih Özgökman: Teleolojik Kanıtlar'
+82552831-6b63-4c0c-9286-044926099d8f:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Felsefi ve Deneysel Dayanaklarla Ölüm Sonrası Yaşam'
+83af1687-2f49-4426-af20-3664f24c46e1:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: İslam Düşüncesinde Kötülük Sorunu ve Tedise II'
+844e7675-61b4-43c9-b578-c79f30836ab4:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi'
+8601113a-c134-4b2d-808c-a23527eade5a:
+  karar:
+  - olum-ve-otesi
+  not: 'Hüsnü Aydeniz: Kitâbu’n-Nefs ve’r-Rûh ve Şerhu Kuvâhuma'
+8707ec5f-358e-49fb-9d4f-632b2054d215:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Paul Tillich’de Tanrı Kavramı'
+87c5b791-a320-4ca0-9ef7-2e041e38ca8d:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Rıfat Atay: Kutsal Metinlerin Görselleştirilmesi ve Dijitalleştirilmesini Tartışmak: Kitab-ı Mukaddes '
+87e1730a-9105-43ae-9422-e62e902997cf:
+  karar:
+  - din-dili
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Din Dili ve Sanat'
+882df06c-2adc-4967-978c-ba551cfd394c:
+  karar:
+  - dini-tecrube
+  not: 'Halil İbrahim Köse: Meister Eckhart Düşüncesinde Lütuf Tecrübesi ve Kutsal’a Dönüşüm'
+88984ed9-92fa-47f7-b44a-adb3692f00a7:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Eyüp Aktürk: Tanrı, Zorunlu Doğrular ve Mantıksal İmkan Sınırı'
+88ea3a8d-811f-4545-b324-45b752925eb2:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Nur Betül Atakul: Teleolojik Argüman Bağlamında Kant’ta Tanrı’nın Varlığının Bilinmesinden Düşünülmesine Del'
+892ef261-a9b9-46c5-bff8-d4fb7efb679b:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Rahim Acar: Yaratma: İbn Sînâ ve St. Thomas’ın Görüşlerinin Karşılaştırılması'
+8a336670-fdde-42ef-8475-6f73193daa5c:
+  karar:
+  - din-ve-ahlak
+  not: 'Nur Betül Atakul: The Morality, God and the Religion in Critical Philosophy of Kant'
+8a3c804c-6af5-4ba6-b3d8-4bfd30736163:
+  karar:
+  - kotuluk-problemi
+  not: 'Tuncay İmamoğlu: İlahi Dinlerdeki Kötülük Probleminin Felsefi Tahlili'
+8a8d7b35-9d5f-48a7-b8ea-8453ff22e34c:
+  karar:
+  - din-ve-ahlak
+  not: 'Adem İrmak: Kadı Abdulcebbar''ın Rasyonalist Ahlak Anlayışı'
+8a938052-8259-4b45-8b2d-7d3c4de7cb51:
+  karar:
+  - din-dili
+  not: 'Metin Yasa: Mevlânâ nın Mesnevi sine Özel Atıfla Muamma Kavramının Tanrı yı Anlamada Yüklendiği İşlevi'
+8c0a6533-932e-4a47-907b-e63386c89fa7:
+  karar:
+  - din-ve-bilim
+  - tanri-alem-iliskisi
+  not: 'Ruhattin Yazoğlu: Fazlurrahman Düşüncesinde İnsan ve Tabiatın Yaratılışı Bağlamında Evrim'
+8e30c9b4-de93-4c78-b4cb-9374452f9b73:
+  karar:
+  - kotuluk-problemi
+  - tanrinin-sifatlari
+  not: 'Eyüp Aktürk: Kötülük Sorunu ve ''Mutlak Kudret'' Çözümlemesi'
+8ee71956-a9be-4501-beb8-b5ff004ff25c:
+  karar:
+  - dini-cesitlilik
+  not: 'Rahim Acar: Dini Çoğulculuk: İdealler ve Gerçekler'
+8faa8022-24db-4078-8220-7ed7bf2a8174:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Cafer Sadık Yaran: Tarihsel ve Eleştirel Bir Yaklaşımla FELSEFE-DİN İLİŞKİSİ DİN FELSEFESİ YAPMANIN DÖRT FARK'
+8fd58f03-830c-4229-9a98-5ef1cecde483:
+  karar:
+  - kotuluk-problemi
+  not: 'Alber Erol Nahum: Kötülük Hiçbir Şeydir: Spinoza''da İyilik Kötülük Sorunu'
+8ff673fa-c7ec-4523-a11d-cf551f9f972a:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: Türkçede Kötülük Sorunu ve Teodiseye Dair Bibliyografya: Analitik Bir Değerlendirme'
+905c84fb-de43-4726-9c75-a99517e1466a:
+  karar:
+  - kotuluk-problemi
+  not: 'Tuncay İmamoğlu: Seneca ve Kötülük'
+9128f913-5d07-4d97-8b81-79f952b9e1f4:
+  karar:
+  - din-ve-bilim
+  not: 'Hüsnü Aydeniz: İlahiyat Fakültelerinde Din-Bilim İlişkisi'
+916a40bd-a84d-4f2d-a86c-cf84a614174c:
+  karar:
+  - olum-ve-otesi
+  not: 'Şahin Efil: Search for and Critique of Immortality in the History of Ideas and Modern Medicine'
+91bbbd59-5f0a-463d-85e5-b85bb549f00c:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Yasin Gökhan: Dijital Çağda Din ve Yapay Zekâ: Tekno-Teolojik Dönüşüm Üzerine Bir Değerlendirme'
+92539ad9-cdcc-4947-b017-23a817f85eba:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Ruhattin Yazoğlu: Yapay Zekâ ve İnsan Aklı: Felsefî Açıdan Bir Karşılaştırma'
+92cd9ba8-a1a0-4047-8d67-c388b2d736ef:
+  karar:
+  - din-epistemolojisi
+  - din-ve-ahlak
+  not: 'Hüsnü Aydeniz: Teist Varoluşçularda İman Ahlak İlişkisi'
+93ae4984-1768-4b60-b3d0-3bc7f1d5d455:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Engin Erdem: The Debate on the Necessity of the Necessary Existent in the Tradition of al-Tajrid: Al-Is'
+948eff78-c256-4bd9-9bb4-d8dfc3d223b4:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Bir Modern Klasik Olarak J. Hick’xxin An Interpretation of Religion Adlı Eseri'
+950cbfa0-418d-46ca-b759-46819f6a60dc:
+  karar:
+  - kotuluk-problemi
+  not: 'Eyüp Aktürk: Mantıksal Bir Sorun Olarak Kötülük'
+95de3a78-d3a2-4eca-a6c3-52f438b00449:
+  karar:
+  - din-epistemolojisi
+  not: 'Rıfat Atay: God Between Reason and Experience'
+960776fd-ef17-4d03-b190-c70d5bdc93b2:
+  karar:
+  - din-epistemolojisi
+  not: 'Eyüp Aktürk: “Akıl-Vahiy-Bilgi-İlişkisi: Maturidi Üzerine Bir İnceleme”,'
+962ab155-48cb-4b4d-b921-813b36c419a4:
+  karar:
+  - din-ve-ahlak
+  not: 'Mustafa Eren: HANS KÜNG ile KÜRESEL AHLAK ÜZERİNE'
+9700d258-7676-418b-a83f-5f103e2f3cfd:
+  karar:
+  - kotuluk-problemi
+  not: 'Atilla Akalın: Modern Sinemada Miasma, Arınma ve Kötülük Problemi Üzerine Bir İnceleme: Sürü (2022) Filmi'
+9872d633-a1f1-494a-8ba0-d7e791f7ba92:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: Tanrı''nın Varlığını İspat Etmek İçin Beş Yol'
+9977e3d5-744d-4c91-aafc-fa9c3ca1873b:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Engin Erdem: Doğal Yasa Teorisi ve İbn Sînâ''nın ''Sünnet(ullah'' Anlayışı'
+99cf6edd-87ba-4e80-b014-61c2b4c372fc:
+  karar:
+  - din-dili
+  not: 'Fatih Topaloğlu: Dinde Reform Mu? Din Dilinde Reform Mu? -Din DilininDeğişkenliği Üzerine Ontolojik Bir Değ'
+99ec63fd-0371-4539-b753-50672f4beb9e:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Özcan Akdağ: Din Felsefesi I'
+99f782fa-3d8b-4320-9353-93b4216d5940:
+  karar:
+  - kotuluk-problemi
+  not: 'Özcan Akdağ: Kötülük Sorunu ve Teodise'
+9a95e29d-642b-4733-930a-4f4af29e0b0c:
+  karar:
+  - tanri-alem-iliskisi
+  - tanrinin-sifatlari
+  not: 'Tuncay İmamoğlu: Tanrı''nın Doğası ve Mucizenin İmkanı'
+9af49255-89ad-468a-9b09-9564f2b3b052:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Din-Ahlâk İlişkisi'
+9b15cf7b-8554-47e2-95f8-2f93b348c883:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Augustine''de İman ve Bilgi'
+9bb8cbe5-3249-4e54-9d84-bff1d5be541f:
+  karar:
+  - din-ve-ahlak
+  not: 'Engin Erdem: Doğal Yasa Teorisi ve Matüridi Ahlakı'
+9bc55a12-f09e-4352-8dbb-092e5c43bdba:
+  karar:
+  - din-dili
+  not: 'Zikri Yavuz: Tanrı Hakkında Konuşma: Din Dili'
+9caa8f47-1a9d-4a48-8b60-a1ef1cc97e1d:
+  karar:
+  - din-epistemolojisi
+  - insan-tasavvurlari
+  not: 'Kayhan Özaykal: Human Nature and Knowledge of God: Abū Manṣūr al-Māturīdī'
+9cd4ab40-1cc3-441c-80bb-7f0e4f01cc30:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Doksastik Olmayan İman Modeli İnanç ve Şüphe'
+9de19048-7544-49fa-bec3-3b19cd3cc5af:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: İbn Rüşd’xxün Tanrı’xxnın Kudret ve İrade Sıfatına Yaklaşımı'
+9f780bf2-ac05-4901-9792-4917066d9bfb:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Rahim Acar: Tanrı ve Âlem'
+9fbc8970-66d4-4787-a696-d9223e69017f:
+  karar:
+  - din-ve-ahlak
+  not: 'Cafer Sadık Yaran: Din Felsefesi Bağlamında Değer'
+a0351a24-3b26-4011-803f-e8008a8f247e:
+  karar:
+  - din-ve-ahlak
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Evrimsel Ahlak ve Eleştirisi'
+a044769b-6b8e-4d2b-a0b3-96b3b7c4406c:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Adem İrmak: İbn Rüşd ve Teleolojik Delil'
+a1481a3f-3366-4266-86a5-45865de78619:
+  karar:
+  - din-ve-sanat
+  not: 'Rıfat Atay: Tevhid ve Vahdet Bilincinin Oluşmasında Estetik Tecrübenin Rolü Süleyman Çelebi ve Mevlid '
+a1a6bade-334a-4040-8bed-3a0b985659e6:
+  karar:
+  - din-ve-bilim
+  not: 'Mustafa Eren: Nurettin Topçu’xxnun İdeoloji Olarak Bilim Eleştrisi'
+a1b9a51b-cc4f-487d-aaee-32107033a5c7:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Darwinizmin ve Tasarımın Bağdaşabilirliği'
+a29f3705-488f-4921-840a-a2ba178ec5ec:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Eren: Religious Diversity in Mawlana Jalaluddin Rumi and John Hick Mevlana Celaleddin-i Rumi ve '
+a31e61e9-f0b6-412d-9984-17e156b0d428:
+  karar:
+  - din-epistemolojisi
+  not: 'Metin Yasa: Yunus Emre de Dinsel Epistemolojinin İçsel Bir Yönü'
+a38b7ec5-d3ed-49b4-98cb-5c4c2cef82d0:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Ölümsüzlük'
+a3d25c52-97b9-4fe2-864c-b7dfc08d470b:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Antropomorfizm ve Hıristiyanlık'
+a42b4c97-abcb-4e34-a64e-ff789dbbc99c:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Evrim Teorisi ve Nedensellik İlkesi'
+a44825e0-29d7-493f-ab7a-7ebda9e67d5c:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Cafer Sadık Yaran: The Ecological Value of the Teleological Argument'
+a486cd7b-93d2-4f3a-b54c-6dec8c131513:
+  karar:
+  - kotuluk-problemi
+  not: 'Rıfat Atay: Why Me Vs Why Not Me Reading the Problem of Evil as Soul Making Theodicy'
+a4c31249-9070-490b-8dda-2a82468833f6:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi'
+a5d28b16-2a68-4195-b385-40a3f00e18fc:
+  karar:
+  - din-epistemolojisi
+  not: 'Okan Bağcı: Tanrı’ya İman ve Pragmatik Argümanlar'
+a5e91747-1535-45c9-80d8-ebb27c07afbd:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Ruh, Ölüm ve Ötesi Gazâlî Üzerine Bir Araştırma'
+a62fccad-392c-473b-b0c0-eefc23350f52:
+  karar:
+  - dini-tecrube
+  not: 'Hakan Hemşinli: Öznellik ve Nesnellik Kıskacında Dinî Tecrübe'
+a69ae2fc-c960-4e66-86c2-9bbc4db42dd4:
+  karar:
+  - din-dili
+  not: 'Tuncay İmamoğlu: Bir Kavramsal Çözümleyici Olarak Wittgenstein''da Din'
+a6af6bd7-e376-43e3-8d16-b482453466fe:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Yasin Ramazan Başaran: İbn Sina Metafiziğinde Ontolojik Delilin Üçüncü Versiyonu'
+a6e7f05c-182c-4588-9d5c-ea3147f624b9:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: Bir Din Felsefesi Sorunu Olarak Kötülük'
+a749779b-65a7-451b-97f9-36b8f3ae7d15:
+  karar:
+  - kotuluk-problemi
+  not: 'Hakan Hemşinli: Kötülük Sorununun Tarihsel Arka Planı'
+a758d380-8350-4788-b572-611f909fe0ff:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Kendi Olmanın Olabilirliğine Ölümden Sonra Hayatın Somut Katkısı'
+a7e9118d-4e79-4ed1-9be2-11dd7c0d165c:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: İslam Sanatı ve “Henüz Düşünülmemiş Olan”'
+a8289c30-c979-4939-aecf-878f881e04c2:
+  karar:
+  - dini-cesitlilik
+  not: 'Eyüp Aktürk: Dini Çoğulculuğun Kantçı Temeli ve Epistemik Belirsizlik Sorunu'
+a94b0c7a-03ff-4280-a78c-b09d8f282cf6:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Tugay Taşçı: Roma''dan Bağdat''a: Galen ve Câhız Düşüncesinde Teleolojik Açıklama'
+a993a890-6242-4996-b1b7-e1dfce5c684f:
+  karar:
+  - din-ve-ahlak
+  not: 'Zafer Çaylı: Tanzimat Dönemi Din Felsefesi Ekseninde Namık Kemal’in Din, Ahlak, Hürriyet ve Adalet Tasa'
+aa6be071-68c4-438e-9331-37f7bc8c13e1:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinî Çoğulculuk John Hick''in Düşünceleri Etrafında Tartışmalar'
+ab2565fb-021b-4c54-8365-372edee03a89:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: İslam''da Ahlakın Kaynağı, Yaptırımı ve İnsanın Doğası'
+ab37efe6-b091-4463-bb6f-549dc1f3fae9:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Saim Gündoğan: Hicri İkinci Asırda Din Felsefesinin İzleri'
+ac1632fd-eb30-4b42-9a2c-9006ef30aa09:
+  karar:
+  - dini-tecrube
+  not: 'Hakan Hemşinli: Postmodern Birey ve Dinî Tecrübe: Yeni Kimlik Biçimlerinin İnşası'
+ad57c4dd-0e97-43e7-b6ad-26470d76e72b:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Pay: İlahi Adalet Açısından Doğal Afetler'
+ad7b920f-57a5-4565-bb01-73b02cc820b0:
+  karar:
+  - kotuluk-problemi
+  not: 'Cafer Sadık Yaran: Theodizee im Islam'
+adbd226d-edea-4ee9-8184-5a0960783ca3:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dini Dışlayıcılık Paradigması ve Eleştirisi'
+adc5e7f5-ef85-4ca2-ba42-928a9445d186:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi Dersleri'
+aeba121a-2f3d-43aa-bb9b-3f0173c98745:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Rahim Acar: Din Felsefesi Literatüründe Kuşbakışı Bir Gezinti'
+af11375d-04e3-4950-a415-06b260652435:
+  karar:
+  - din-epistemolojisi
+  not: 'Ayşe Sıdıka Oktay: John Locke Da Akıl Ve Vahiy İlişkisi Süleyman Demirel Üniversitesi Sosyal Bilimler Enstitü'
+af1bf6f3-86d2-42a8-a8ed-60124493e8a8:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Kayhan Özaykal: Possible Worlds and Divine Justice and Mercy'
+af42a51d-0284-4a9a-be67-fbcc69bc46db:
+  karar:
+  - din-epistemolojisi
+  not: 'Musa Kazım Arıcan: Akıl İman İlişkisine Spinoza nın Yaklaşımı'
+b01c0911-75a7-45e4-8ebf-0a5811e5efe1:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Richard Swinburne''de Dinî (ve Mistik) Tecrübe'
+b067df01-8664-42b2-8b3c-d80840e30bf3:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - din-dili
+  not: 'Zafer Çaylı: Dijitalleşmenin Teistik Dinlere Etkisi; İman, İbadet ve Din Dili Problemleri'
+b090d1d3-ca50-4038-82a6-df094c5d0c75:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Adem İrmak: Alemdeki Düzenlilik ve Amaçlılık veya Doğal Teoloji veya Uluhiyetin Varlığı ve Sıfatları L'
+b185ca25-46ce-44bd-8ca0-8145a7f8890d:
+  karar:
+  - din-dili
+  not: 'Hasan Atsız: Modern Şehir Ütopyası ve Din Dili'
+b19b944e-f6af-4c60-8f7d-b668df14919d:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatih Topaloğlu: Din Felsefesi'
+b1b8d5f1-1941-4eef-bb3b-71d7f4b3a294:
+  karar:
+  - kotuluk-problemi
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Süreç Teolojisinde Kötülük Sorunu'
+b230ff7d-d8e2-4679-a358-5b2279705e8a:
+  karar:
+  - din-ve-bilim
+  not: 'Adem İrmak: Hem Evrime Hem Tanrı’ya İnanılabilir mi?'
+b232461a-fca9-4414-a2cb-22f4163e9ea0:
+  karar:
+  - din-ve-bilim
+  not: 'Cafer Sadık Yaran: Din ve Bilim'
+b2bae12b-0593-47bf-9efb-b69f23cada3d:
+  karar:
+  - din-epistemolojisi
+  not: 'Engin Erdem: Hujwiri on Knowledge and Faith'
+b4602201-9a0c-4d69-b773-a94ce9cdd732:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Yasa: Eflatun''da Kötülük'
+b49595c3-3127-4f4d-9bdc-672ed2b26eb1:
+  karar:
+  - kotuluk-problemi
+  - ozgurluk
+  not: 'Osman Karaağaç: Tanrı, Özgürlük ve Kötülük'
+b572a9b9-f177-43c3-a5d3-63a1db2bee41:
+  karar:
+  - din-epistemolojisi
+  not: 'Eyüp Aktürk: Bahis Argümanı ve Pragmatik İman Anlayışı'
+b5e6d8a3-83ec-4afc-b7db-674d9b273e05:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Zikri Yavuz: Tanrı, Ezelilik ve Zaman'
+b5e6dc91-1ef8-4cd1-be4e-b510a356874a:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Engin Erdem: 10-13. Asır Horasan Maveraünnehir Düşüncesinde Temel din Felsefesi problemleri'
+b64f3e8f-dc12-46ac-9029-585f80f64a28:
+  karar:
+  - olum-ve-otesi
+  not: 'Eyüp Aktürk: Kişisel özdeşlik ile ölüm sonrası hayat arasında zorunlu bir ilişki var mıdır?'
+b7834669-3aea-4409-81cc-44dddd8ad46a:
+  karar:
+  - din-dili
+  - din-epistemolojisi
+  not: 'Okan Bağcı: Dil Felsefesi Ekseninde Vahiy ve Anlam'
+b85e7c1b-3a80-4249-a214-106c99fb6312:
+  karar:
+  - din-epistemolojisi
+  not: 'Emine Göçer: Montaigne''de Şüphecilik ve İman'
+b8c18dc6-a389-47f3-be5a-87169d2bdc49:
+  karar:
+  - din-epistemolojisi
+  not: 'Metin Yasa: Yunus Emre de Aşk Dininden Bilgi Dinine Uzanan Bir Düşüncenin Anlattıkları'
+b8e85641-36fa-44e9-b75b-2dfab3239f8e:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Ruhattin Yazoğlu: Tanrı’nın Varlığının Delilleri'
+b9b72f2a-1095-4a36-a0ee-88fac58f7437:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Rahim Acar: Yaratan Bilmezse Kim Bilir İbn Sînâ ya Göre Allah ın Cüzîleri Bilmesi'
+b9f11538-7b97-4b71-8715-7245c959cd66:
+  karar:
+  - dini-tecrube
+  not: 'Fatih Topaloğlu: Dini Tecrübeyi Yaşamayan Bilmez mi? Wayne Proudfoot''un Dinî Tecrübenin İncelenmesini Süjey'
+ba0a2f91-7e90-4034-8eb8-918986ee79d0:
+  karar:
+  - din-ve-ahlak
+  not: 'Musa Kazım Arıcan: Numan Sabit in Husn ve Kubh Risalesi'
+ba6d1d58-d1dd-4295-addc-f393987c4d76:
+  karar:
+  - kotuluk-problemi
+  not: 'Tuncay İmamoğlu: Seneca Felsefesinde Kötülük Problemi'
+bb1a66b8-c656-468f-8f2b-9a322136ff57:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinî Çoğulculuk John Hick''in Düşünceleri Etrafında Tartışmalar'
+bb578311-b730-4f7d-8058-731b02ade97f:
+  karar:
+  - din-epistemolojisi
+  - tanri-alem-iliskisi
+  not: 'Ayşe Sıdıka Oktay: Oktay A S Din Felsefesinde Vahiy ve Mucize Kavramları Nokta Digital Yayınları Isparta 2013'
+bb934dd0-a205-4a51-afe8-0680064c4375:
+  karar:
+  - din-ve-bilim
+  not: 'Tugay Taşçı: Naturalizme Karşı Evrimsel Argüman II: İçerik ve Doğal Seçilim'
+bbff272d-6d55-492b-b343-c764cbce7046:
+  karar:
+  - din-ve-bilim
+  not: 'Tugay Taşçı: Bergmann, Micheal. "Sağduyu Naturalizmi". çev. Tugay Taşçı. Din ve Felsefe Araştırmaları 7'
+bca65787-9162-499e-b60b-14809ff71bb7:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: A Non Radical Religious Pluralism for A Peaceful Diversity in Unity'
+bde6958b-eb5e-4934-95ef-09eabfadaa81:
+  karar:
+  - dini-tecrube
+  - dini-cesitlilik
+  not: 'Fatih Topaloğlu: John Hick In Dinî Tecrübe Anlayışı'
+be751048-cc37-46a7-bfc6-a50bb147fbc2:
+  karar:
+  - olum-ve-otesi
+  not: 'Tuncay İmamoğlu: Paul Tillich Felsefesinde Ölüm ve Ötesi'
+beb72888-1e60-4e84-856c-6d0b5cfbbaf0:
+  karar:
+  - olum-ve-otesi
+  not: 'Alber Erol Nahum: Ölümü Değil, Hayatı Düşünmek: Spinoza’nın Ölümü Kavrayışına İlişkin Bir Taslak'
+bee3059f-000c-46b8-95e2-c6ed10c6c970:
+  karar:
+  - insan-tasavvurlari
+  not: 'Yasin Ramazan Başaran: Avicenna on the Soul''s Power to Manipulate Material Objects'
+bf150693-eb16-4a53-befb-fc77903e970e:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Metin Yasa: Tanrı Kavramının Ateolojik Yorumu ve Ateistik Görerek İnan Savı Bir Paradoksun Aldatıcı Yö'
+bf4a9c18-0344-4148-a32d-c72d047ac0ea:
+  karar:
+  - dini-tecrube
+  not: 'Cafer Sadık Yaran: Dini Tecrübe ve Meunet Sıradan İnsanların Sıradışı Dini Deneyimleri'
+bffaf55a-be3d-498f-8b26-bcc5f644e4e2:
+  karar:
+  - din-epistemolojisi
+  not: 'Metin Yasa: Eflatuncu Mağara Alegorisini Yeniden Yorumlama Gereksinimi Dinsel Bilgiyi Anlama ve Gelişt'
+c0137ec0-6eb7-48a8-917e-0eebe034ede4:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Metin Pay: Mucizeler ve Tasarım'
+c0bf35f5-7197-4bfe-b170-9569f0b54080:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Leibniz’de Tanrı ve Ahlâk'
+c0f3ce3b-12e3-4b22-835a-2b8aa08fc165:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: Gazâlî Düşüncesinde Ruh ve Ölüm'
+c1a37f4a-0d37-440a-bce7-c6fc3e9edab0:
+  karar:
+  - din-ve-bilim
+  not: 'Zikri Yavuz: Din ve Bilim'
+c2b0ed7c-0772-410b-aa59-974cd591f26d:
+  karar:
+  - dini-cesitlilik
+  not: 'Tuncay İmamoğlu: Hatay ve Yöresindeki Dinsel Çeşitlilik ve Hoşgörü Ortamının Felsefî Bir Tahlili'
+c30b22be-68e5-4673-9501-0c8dc3ce787c:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Vahdettin Başcı: Aquino’xxlu Thomas’xxda Tanrı Anlayışı'
+c34af3d4-1000-4c9c-9f5b-9dac40ad8cb9:
+  karar:
+  - din-epistemolojisi
+  not: 'Engin Erdem: Kant da ve Swinburne de Vahiy Çeviri Makale'
+c3907016-addb-44e3-9e1f-17cc8b51605d:
+  karar:
+  - din-ve-bilim
+  not: 'Fatih Özgökman: Yaşamın Kökeni, Evrim ve Tanrı'
+c469e668-4738-4656-9802-568636bb06a9:
+  karar:
+  - insan-tasavvurlari
+  not: 'Mustafa Eren: Ahmed Yesevî ve Muhammed İkbal’in İnsan Tasavvuru'
+c5cf74b9-d1f3-42b6-9c09-d81548e6f07c:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Adem İrmak: F. R. Tennant’ın Felsefî Teolojisi: Geniş Kapsamlı Teleolojik Argüman'
+c5f08efd-cf7f-45e4-ae8b-cba0e8e0a8ca:
+  karar:
+  - din-ve-ahlak
+  - kotuluk-problemi
+  not: 'Engin Erdem: Kant Kötülük Ahlaki Toplum ve Tanrı nın Varlığı Meselesi'
+c6248296-bd06-4cd7-8ab2-6196e2a40bc7:
+  karar:
+  - din-ve-ahlak
+  not: 'Yasin Gökhan: Seküler Ahlakın Felsefî Olarak Temellendirilebilme Sorunsalı'
+c6925b54-a9c3-4722-b280-253b0f4f3ede:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: Tanrı ve Özgürlük: Gazâlî ve Thomas Aquinas Ekseninde Bir İnceleme'
+c6e562b6-fc40-4cf6-aa88-836e8403068f:
+  karar:
+  - din-dili
+  not: 'Hüsnü Aydeniz: Dinî Semboller Sembolün Anlam Kaybı ve Etkilerine Gelenekselci Bir Yaklaşım René Guénon Ör'
+c6e8c1e9-5788-4972-8b48-973a70723ae1:
+  karar:
+  - din-dili
+  not: 'Okan Bağcı: Din Felsefesinin Temel Problemlerinin Çözümünde Bir Perspektif Olarak Dil Felsefesi'
+c6f7dca5-3040-492e-8748-834a0ac56d76:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatih Topaloğlu: Din Felsefesi'
+c7cd463c-53a0-4937-af6c-e0a32c7b5cdf:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: John Hick''de Farklı Dinlerin Çatışan Hakikat İddialarının Dinî Çoğulculuk Hipotezi İle İli'
+c7eb0ac2-e1f7-4ef8-a913-9c33a489b30c:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Rıfat Atay: Yapay Zekâ ile Bırlıkte Varlığın Sanal Varlığa Dönüşmesı: İbn Arabı Örneğı'
+c8c3edd3-761c-43fa-8a66-3c51d936213b:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Yasin Ramazan Başaran: Metaphysics of Extraordinary Events'
+c9740979-6bf1-49c2-bed0-0916c23c49bc:
+  karar:
+  - kotuluk-problemi
+  - ozgurluk
+  not: 'Atilla Akalın: Metafizik, Kötülük, Özgürlük Peter van Inwagen’ın Felsefesi'
+ca3ec1bb-8842-483a-8df2-ba5ff2254c1b:
+  karar:
+  - olum-ve-otesi
+  not: 'Ruhattin Yazoğlu: "Ruh Konusu Üzerine Bir Makale", Ahmed Foad el-Ehwany Islamic Philosophy'
+ca3faad3-0914-47b3-8977-5a4013eaf03d:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Cafer Sadık Yaran: Din Felsefesine Giriş'
+ca7164f7-5cc9-4b73-8512-1b95e466274a:
+  karar:
+  - din-ve-bilim
+  - tanrinin-varliginin-delilleri
+  not: 'Fatih Özgökman: Dawkins’in Evrim Modelinde Unuttuğu Akıllı Tasarımcı'
+ca96da54-211f-441f-9a75-b7f045d7f44e:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: İslam Öncesi Felsefe ve İslam Felsefesinde Eskatolojiye Yönelik Bazı Temel Görüşler'
+caa7741a-5235-4efa-a214-ffe92405fe6c:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Engin Erdem: Al Ghazali Divine Timeless Knowledge On Tensed Facts'
+cb9c8560-de4e-4f36-abfc-1eac3bc8d4a1:
+  karar:
+  - din-ve-bilim
+  - tanrinin-varliginin-delilleri
+  not: 'Metin Pay: Bilimsel Kuram Olarak Evrim ve Akıllı Tasarım'
+cbd68e87-c5b8-44c8-8067-fe87ee33ce34:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Seküler Temelli ahlakın Çözümsüzlüğü Üzerine Bazı Düşünceler'
+cc3e3ee5-4458-4c91-a6bb-bfe6b4767492:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Okan Bağcı: Kindî ve Gazâlî''ye Göre Hudûs Delili ve Bilfiil Sonsuzluğun İmkânsızlığı'
+cc5e7f57-f827-48f6-9622-4c946a4d3925:
+  karar:
+  - din-epistemolojisi
+  - din-ve-bilim
+  not: 'Cafer Sadık Yaran: Scientific Obkectivity and Theistic Belief'
+cc9a9b44-8ab3-43f7-8bbf-860a80f97073:
+  karar:
+  - insan-tasavvurlari
+  not: 'Zafer Çaylı: Modern Batı Düşüncesi Bağlamında Ş. Teoman Duralı’nın İnsan Tasavvuru Anlayışına Eleştirel'
+cccd78b5-c399-4360-b546-9447e0577207:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Rıfat Atay: Din Felsefesi'
+cd8c4628-440d-476d-a894-54b9f1e1401e:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Fatih Topaloğlu: İslam Düşüncesinde "Tahsis" Kavramından Elde Edilen Deliller'
+cdb96b2d-01a9-4c0f-bc4b-61cdd06f8b1d:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Leibniz''in Tanrı Anlayışı'
+cf46cc90-2db0-4fe7-b2c2-8fd133e93d17:
+  karar:
+  - dini-tecrube
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Islam and Islamic Mysticism in Relation to Budhism A Contribution to Muslim Badhist Dialog'
+d09b5cd2-3c8f-4418-b1d7-4e45cc816115:
+  karar:
+  - ozgurluk
+  not: 'Zikri Yavuz: Leibniz ve Özgür İrade'
+d14dffcc-18a4-4bf2-984a-df4eb92b2c62:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Metin Pay: İslam Düşüncesinde Bazı Mucize Telakkileri'
+d1f5e23b-4c2e-48a5-a59c-e326497be76b:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Rahim Acar: Allah ın Cüz îleri Bilmesi Klasik İbn Sînâ Yorumunun Değerlendirilmesi'
+d2449a5e-207a-4796-b5d2-ddeb75d74c53:
+  karar:
+  - dini-tecrube
+  - tanrinin-varliginin-delilleri
+  not: 'Hakan Hemşinli: Religious Experience As An Argument For The Existence Of God: The Case of Experience of Se'
+d2e9888a-d860-411d-9b8e-16c40f88800b:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Kevser Çelik: Feuerbach ın Din Felsefesi'
+d2f6dab3-783a-41ea-b678-716e3f4417f6:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Din-Ahlak İlişkisine Genel Bir Bakış'
+d33c4ead-c41b-4d26-9f3d-10417eacefbd:
+  karar:
+  - din-ve-bilim
+  not: 'Cafer Sadık Yaran: Din ve Bilim: Mitolojik ve İdeolojik Girdilerin Ötesindeki Uyuşma'
+d343f367-d59f-4b9e-aa6e-076e4fed609e:
+  karar:
+  - din-dili
+  not: 'Zikri Yavuz: Din Dili'
+d372961e-65b3-4be0-a0ba-b05b4e7502b6:
+  karar:
+  - dini-tecrube
+  - tanrinin-varliginin-delilleri
+  not: 'Hakan Hemşinli: Tecrübeden Tanrı''ya -Dini Tecrübe Delili ve Eleştirisi'
+d3a5e834-8c4e-46cd-a41a-29e3bb97ba65:
+  karar:
+  - kotuluk-problemi
+  not: 'Atilla Akalın: Skeptik Teizm ve Kötülük: Peter van Inwagen’ın “Minimum-Yok İddiası”'
+d43ca3d3-d726-4e00-9e6b-211fd4b93967:
+  karar:
+  - olum-ve-otesi
+  not: 'Alber Erol Nahum: Spinoza ve Ölüm'
+d5f148b3-45a7-4533-8055-17777e005af7:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Sanat Hafıza İlişkisinde Zaman ve Mekân'
+d774d733-1b18-4505-af91-c9b58eb3587b:
+  karar:
+  - olum-ve-otesi
+  not: 'Engin Erdem: Ölüm Sonrası Hayat'
+d77c249c-ec43-4fcb-bc92-2b3b9aead431:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Gelenek-Sanat İlişkisini “Âdet, Örf ve An’ane Kelimeleriyle Düşünmek ( Mümkün müdür? )'
+d88fc849-cd89-4acb-b25a-7c112d4cdc2b:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatih Özgökman: Din Felsefesi'
+d8a9af43-9457-4519-8194-f5daf5d22a92:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Özcan Akdağ: Din Feslefesi II'
+d9222bab-8bc6-4c81-994a-2384b937783b:
+  karar:
+  - din-dili
+  not: 'Rahim Acar: Teolojik Dilin Mâhiyeti: Thomas Aquinas’ın Benzer Anlam Teorisi,'
+d9e9c3cf-035c-4e6b-bc26-b94a3ada62c5:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Abdullah Akgül: Din Felsefesi'
+da2e2ca1-ae01-4775-b332-d32602c7e000:
+  karar:
+  - olum-ve-otesi
+  not: 'Cafer Sadık Yaran: Death and Immortality in Islamic Thought'
+daed9782-c2f8-4a56-b28d-e087f4ff1617:
+  karar:
+  - din-ve-ahlak
+  not: 'Mehmet Türkeri: Dinin (İslam’ın) Yorumlanmasında / Anlaşılmasında Ahlakın İşlevi (Var mıdır)? -Etik Açıdan'
+db1deab6-d93f-47a2-8e38-62378a45a8ee:
+  karar:
+  - tanri-alem-iliskisi
+  - tanri-tasavvurlari
+  not: 'Fatih Topaloğlu: A Pantheistic Conception of God in Early Renaissance-The Relationship Between God and Univ'
+dbabdb5b-99fa-45ea-b88a-d24cb53be4ae:
+  karar:
+  - din-ve-bilim
+  not: 'Tugay Taşçı: Ali Ferruh Bey’in Teşhir-i Ebâtıl Eseri Bağlamında Din ve Bilim İlişkisi Açısından Çatışma'
+dc34005c-7992-4fba-a834-e9d763e947c0:
+  karar:
+  - kotuluk-problemi
+  not: 'Zafer Çaylı: Mehmet Şerafeddin Yaltkaya’da Kötülük Sorunu ve Teodise'
+dc6ae9fc-f16b-4fe8-9938-9a08bf958e0a:
+  karar:
+  - din-epistemolojisi
+  not: 'Cafer Sadık Yaran: Günümüz Din Felsefesinde Tanrı İnancının Akliliği'
+dcea5fca-26cc-416a-b4c6-138b55cf3c7d:
+  karar:
+  - kotuluk-problemi
+  not: 'Cafer Sadık Yaran: Kötülük ve Teodise'
+dd9f7c1e-e808-41f8-b8dc-2c2cb9904610:
+  karar:
+  - ibadet
+  not: 'Abdullah Akgül: İbn Kayyım el-Cevziyye''de İbadetin İki Kurucu Unsuru: Sevgi ve Boyun Eğişin Yapısal Birlik'
+dda1b4d0-a805-490e-bfce-3fe62510fac6:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dinî Tekelcilik Din Felsefesi Açısından Bir Çözümleme'
+ddcdc15c-6982-41d7-a070-73430ee1f5da:
+  karar:
+  - ibadet
+  not: 'Hakan Hemşinli: Kurban-Kutsal İlişkisi'
+de202202-bbd0-42fb-8ee8-353761af8447:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Hakan Hemşinli: Dine Üç Farklı Yaklaşım: Teoloji, Kelâm ve Din Felsefesi İlişkisi'
+de479350-9436-4376-a3fa-8494d58b8dc2:
+  karar:
+  - olum-ve-otesi
+  - din-ve-ahlak
+  not: 'Ayşe Sıdıka Oktay: OKTAY Ayşe Sıdıka Kant ın Ölümsüzlük Postulatı Bağlamında Ölümden Sonraki Hayatın Felsefi '
+df85dcbc-a848-4851-bf9b-11adef6ade54:
+  karar:
+  - olum-ve-otesi
+  not: 'Saim Gündoğan: Muhammed İkbal’de Ölümsüzlük Düşüncesi'
+e159c9c5-14da-4a01-bbb1-1b15523f292d:
+  karar:
+  - ozgurluk
+  not: 'Mehmet Türkeri: İrade Özgürlüğü Açısından Tefsir-i Kebir''deki Din Anlayışı'
+e197a169-1a66-4e1a-9219-87eadeb127f8:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay İmamoğlu: Dinsiz Ahlak, Ahlaksız Hukuk Mümkün müdür? Felsefi Bir Yaklaşım'
+e1d11136-8f23-48a4-9d91-8ed650a7e00d:
+  karar:
+  - kotuluk-problemi
+  not: 'Cafer Sadık Yaran: Kötülük ve Teodise Batı ve İslam Din Felsefesinde Kötülük Problemi ve Teodiseler'
+e258660b-a22e-4746-a005-41c3bbcc9bcf:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinî Çoğulculuk'
+e32eaf70-971e-47eb-9c8f-9cfedaf1c2a1:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Zikri Yavuz: Tanrı Tasavvurları'
+e356c0b4-426f-49da-af9b-080740032f62:
+  karar:
+  - din-dili
+  not: 'Tuncay İmamoğlu: Mantıkçı Pozitivizm Wittgenstein ve Din'
+e3c288bc-7059-47d0-9781-3948b24407da:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Antropomorfizm ve Hristiyanlık'
+e4482186-fa9a-4f9c-9a9c-32c9b8c9b0f1:
+  karar:
+  - din-dili
+  not: 'Fatih Topaloğlu: What Does Sacred Narrative “Narrate”? -An Evaluation on Sacred Narrite’s Existential Statu'
+e4dfed36-07b5-4d5b-bf36-88b464499a62:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Tuncay İmamoğlu: Türkiye’de İlahiyat Eğitiminde Din Felsefesinin Yeri ve Önemi'
+e55b7030-f148-4dea-9a99-69b2fb93d47f:
+  karar:
+  - dini-cesitlilik
+  not: 'Rıfat Atay: Relgious Pluralism and Islam'
+e5e5a5bd-e5f3-4675-b34d-02753d9728f9:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Guy Axtell,"Dinî Çoğulculuk ve Olumsuz Yönleri", çev. Ruhattin Yazoğlu, Hüsnü Aydeniz'
+e64ba7bd-f882-4e2f-85f7-65f42f78e87d:
+  karar:
+  - din-ve-ahlak
+  not: 'Zafer Çaylı: Seyyid Bey’in Hüsün Kubuh Anlayışı'
+e6888536-94b5-4489-815e-bf43c3434c4e:
+  karar:
+  - din-ve-ahlak
+  not: 'Ruhattin Yazoğlu: Dinî Ahlak ve Dinî Ahlaka Göre İslam Ahlak Esasları'
+e68ac0b9-2a8e-4e4a-85ce-19bbf110c2db:
+  karar:
+  - din-ve-bilim
+  - teizme-yonelik-itirazlar
+  not: 'Engin Erdem: Dawkins Karmaşası Natüralizm Saçmalığı Alvin Plantinga dan Çeviri'
+e6a7bd58-015c-4fc6-ae5e-4cd0460d70d5:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Sanat Felsefe İlişkisinde Güzelin Güncelliği'
+e6b83993-0951-46f3-807f-f4c71cb52095:
+  karar:
+  - din-epistemolojisi
+  not: 'Engin Erdem: Akıl Vahiy İlişkisi İbn Rüşd ve Kant'
+e74938bf-377e-4b89-ba3b-8a68feb78e86:
+  karar:
+  - din-ve-sanat
+  not: 'Zeynep Gemuhluoğlu: Sanat-Hafıza İlişkisinde Zaman ve Mekan: ”Deneyim” Merkezli Bir Okuma'
+e7aec67e-6ae9-446c-9d5c-31eda8b12381:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - tanrinin-sifatlari
+  not: 'Tugay Taşçı: Arguments for the Existence of God in Ibn Sīnā’s Metaphysics: An Evaluation of the Problem'
+e88f751e-eb16-48d4-8d4b-9223c731331e:
+  karar:
+  - dini-tecrube
+  not: 'Hakan Hemşinli: Mistisizm ve Temel Mistik Tecrübe Kuramları'
+e8a72244-514d-4d7c-b3b7-805250d98239:
+  karar:
+  - insan-tasavvurlari
+  not: 'Kayhan Özaykal: Intellect and Soul: From Aristotle to al-Maturidi and al-Farabi'
+e942389a-dc38-4f15-9a77-4d3f70e12e0c:
+  karar:
+  - kotuluk-problemi
+  not: 'Rahim Acar: The Limits of Evidential Argument from Evil'
+e943aa72-d016-496a-aed6-462a6abd9a2c:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Zikri Yavuz: Kozmolojik Kanıt ve İki İtiraz'
+e9955ed2-46c9-4d1a-87e8-ab405a6c7bc9:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Engin Erdem: Metafizik Delil İbn Sînâ nın İsbât ı Vâcib Yöntemi'
+e9a01046-5129-4bb3-8d27-1e5f3b911b6f:
+  karar:
+  - ibadet
+  not: 'Fatih Topaloğlu: Tanrı Duaya İcabet Eder mi?'
+ea629e88-e169-44a7-b9a3-495d8eb804bf:
+  karar:
+  - ozgurluk
+  not: 'Kayhan Özaykal: The Celebrated Transcendence: al-Maturidi''s Resolution of the Determinist-Libertarian Dich'
+ea89d104-5ea2-4696-9a82-3f45ae6714e8:
+  karar:
+  - din-dili
+  - dini-tecrube
+  not: 'Bilal Bekalp: Wittgensteinda Etik, Dinsel ve Mistik Ufuk Üzerine Bir Değerlendirme'
+eaa5b689-ca27-4a4a-98d1-ccf63190fdd7:
+  karar:
+  - din-epistemolojisi
+  not: 'Engin Erdem: İslam Felsefesinde Akıl-İman İlişkisi/Die Beziehung von Vernunft und Glauben in der islami'
+eb31e21a-eb24-482f-ba46-9725baa74d9c:
+  karar:
+  - ibadet
+  not: 'Hakan Hemşinli: Kurban-Kutsal İlişkisi'
+ec208ab0-1833-4fd1-af87-55a3cc0e3fad:
+  karar:
+  - dini-tecrube
+  not: 'Tuncay İmamoğlu: Seküler Çağda Mistik Bir Çığlık Simone Wel'
+ec9e06ca-673f-44ac-bf7f-67fc2a32a2ae:
+  karar:
+  - kotuluk-problemi
+  not: 'Cafer Sadık Yaran: Leibniz de Teodise ve Savunma'
+ef5c3ed0-a3a5-4701-a04d-be46f461c827:
+  karar:
+  - din-epistemolojisi
+  not: 'Zikri Yavuz: Felsefe ve Metafizik Açıdan Ehli Sünnet İnancının Makuliyeti ve Rasyonelliği'
+ef80fc2d-d2ec-4079-9417-958f6334765e:
+  karar:
+  - din-ve-ahlak
+  - din-epistemolojisi
+  not: 'Mehmet Türkeri: İnanç Ahlakı Gerektirir mi?'
+f00f6554-ff56-40cc-a97c-dd1feccefbae:
+  karar:
+  - dini-tecrube
+  - tanrinin-varliginin-delilleri
+  not: 'Tugay Taşçı: Philosophical Theism and the Argument from Religious Experience: A Case for a Complementar'
+f0835914-5d29-4ada-8eec-6ff69e2632eb:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Zafer Çaylı: Ferit Kam’ın Vahdet-i Vücûd Anlayışı'
+f0eea55a-b627-438a-97c9-0d0f8e1f6d20:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Zikri Yavuz: Kelam Kozmolojik Kanıtı'
+f15cafe8-84a7-4016-b7ce-829f2e3ace40:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Eyüp Aktürk: “Swinburne, Bilinç ve Tanrı”,'
+f2df3660-7691-4a73-82ff-579302ebb42e:
+  karar:
+  - din-ve-bilim
+  not: 'Serdar Atalay: John Charlton Polkinghorne''da Din-Bilim İlişkisi'
+f3c137bf-0a20-4c46-8f6d-33b641a399bb:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Özcan Akdağ: Akdağ, Özcan, Gazâlî ve Aquino’lu Thomas’a Göre Tanrı’nın Özgürlüğü'
+f3ced3dd-741c-4d95-a80d-638bc2f4105f:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Ruhattin Yazoğlu: Din Felsefesi Dersleri'
+f42b0ea3-88b5-4f64-8c8f-cad17f4fda01:
+  karar:
+  - din-dili
+  not: 'Zafer Çaylı: İbn Rüşd''ün Din Dili Anlayışı'
+f46abc74-698b-4bcb-b08b-8dfef1ace9bd:
+  karar:
+  - dini-cesitlilik
+  not: 'Musa Kazım Arıcan: Dini Çeşitlilik Problemi ve Gazzâlî'
+f4b4b306-2bd8-4421-be96-5e12a8e24779:
+  karar:
+  - kotuluk-problemi
+  not: 'Musa Kazım Arıcan: Kant ın Kötülük Anlayışı ve Teodise Eleştirisi'
+f4c63fe5-1827-4945-a706-603d45cdd91a:
+  karar:
+  - din-ve-ahlak
+  not: 'Özcan Akdağ: Francıs Herbert Bradley’de Din-Ahlâk İlişkisi'
+f4ec8ff8-206d-480c-baf7-f9bab4aea615:
+  karar:
+  - din-ve-ahlak
+  not: 'Kevser Çelik: Türk Düşünürü Mehmet Şemsettin Günaltay’ın Düşüncesinde Din-Ahlak İlişkisi: Din Ahlakî Erd'
+f54a8e34-0e38-4825-a771-02579797668a:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Ruhattin Yazoğlu: İlliyet Probleminin Doğuşu'
+f54e519e-c396-4645-8b61-8c83066d2ab5:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Dinî Çeşitlilik ve Bazı Temel Dinî Yaklaşımlar'
+f5dbb746-7825-44d1-b2cc-e58943cbb3b5:
+  karar:
+  - insan-tasavvurlari
+  not: 'Kayhan Özaykal: Ruh, Bilinç ve Zombiler: Metafizik Çıkmazlar ve Alternatif Yollar'
+f6173b51-081f-4fda-8ccc-d758ca5762ef:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Eyüp Aktürk: Vicdan-Tanrı İlişkisi Üzerine'
+f629b161-431e-44a4-9868-031208543d6a:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Fatih Özgökman: Tanrı nın Önbilgisi ve İrade Özgürlüğü Batı Düşüncesinde Fatalizm Problemi'
+f653f32d-c660-4b33-8f8c-a1c201543983:
+  karar:
+  - din-ve-sanat
+  not: 'Musa Kazım Arıcan: Hegel in Estetik Sanat Anlayışı ve Din ile İlişkisi Hegel in Güzel Sanat Felsefesinden Din'
+f686d07f-2975-4f10-b783-3cbaab63c573:
+  karar:
+  - kotuluk-problemi
+  not: 'Metin Yasa: Kötülük Sorunu'
+f6b0d66c-e3de-43e5-a8e0-8c9ce2eb34f8:
+  karar:
+  - insan-tasavvurlari
+  - yapay-zeka-ve-teknoloji
+  not: 'Mustafa Eren: Trans ve Post-Hümanist Tartışmaları Ekseninde İnsan Doğasının Geleceği The Future of Human'
+f7806f64-5e37-4fac-a9f6-9e16aa142c87:
+  karar:
+  - kotuluk-problemi
+  not: 'Hüsnü Aydeniz: Mahmoud M. Ayoub, "İslam Düşüncesinde Kötülük Sorunu"'
+f7baacd0-8346-4962-aedf-e72f1cfedad7:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Fatih Topaloğlu: DÜNYADAKİ TANRISAL FAALİYET Çev'
+f7d80d36-37eb-4888-8e52-9efa7fd95bfb:
+  karar:
+  - din-epistemolojisi
+  not: 'Eyüp Aktürk: Fideizm-Şiddet İlişkisi: Şiddetin Fideist Temeli'
+f7fb0ab0-3956-4c81-9f1d-93f715619a46:
+  karar:
+  - tanri-alem-iliskisi
+  - tanri-tasavvurlari
+  not: 'Musa Kazım Arıcan: Panteizm Panenteizm ve Ateizm Bağlamında Spinoza nın Tanrı Anlayışı'
+f82125c6-3907-4c29-b88a-9abc36614192:
+  karar:
+  - dini-tecrube
+  not: 'Halil İbrahim Köse: Meister Eckhart''ın Mistisizmi'
+f96683dc-3396-4ee2-9e50-4debcaacca57:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Zikri Yavuz: Ezeli Tanrı ve Geleceğin Statüsü'
+f9f611f9-4e1a-4aa2-a4d6-d53ba03ec341:
+  karar:
+  - insan-tasavvurlari
+  not: 'Ruhattin Yazoğlu: Renê Guênon’un Gelenekselci Düşüncesinde Bütüncül İnsan Anlayışının Modern Dünyadaki Yeri'
+f9f82fa1-2955-41df-ab24-3ee9d9198b26:
+  karar:
+  - din-epistemolojisi
+  not: 'Eyüp Aktürk: Pragmatik İman ve Ahlakî Sonuçları'
+faa32114-7e3d-4e87-acd7-4073ea7ffcf7:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Adem İrmak: Tanrı Var'
+faf58512-9f13-4f8b-8a99-7c5aee2886a1:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Reenkarnasyon Beşeri Ruhun Ölümsüzlük Arzusunu Tatmin Eder Mi'
+fb871bf3-e797-414e-803a-966e15b9b5e5:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Özcan Akdağ: Gazzali ve İbn Meymûn’da İlahi İnayet ve Alemin Nizamı'
+fc2e4836-349a-4a09-ab76-4ce43b91418b:
+  karar:
+  - dini-cesitlilik
+  not: 'Ruhattin Yazoğlu: Summer B. Twiss, "Çoğulculuk Felsefesi: John Hick ve Onu Eleştirenlerle İlgili Eleştirel B'
+fd5a6cc8-aed8-47e2-a866-d6f2477e8155:
+  karar:
+  - dini-cesitlilik
+  not: 'Cafer Sadık Yaran: Mevlana Öteki Dinler ve Dini Çoğulculuk'
+fda7dbb5-419e-423f-aa42-cb84d420caf9:
+  karar:
+  - kotuluk-problemi
+  not: 'Rıfat Atay: Peygamber Ailesinden Günümüze Aile Sorunlarına Çözümler: Kötülük Problemi Bağlamında Felse'
+fdb3736f-3240-46b1-be8c-e7d9dc5d65ed:
+  karar:
+  - olum-ve-otesi
+  not: 'Metin Yasa: Eshab-ı Kehf ve Ölümsüzlük Kanıtı'
