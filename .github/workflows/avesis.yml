@@ -1,0 +1,33 @@
+name: AVESİS toplama
+# Türkiye akademisi listesindeki kişilerin üniversitelerinin AVESİS sistemindeki yayın listeleri okunur.
+# Ayda bir, ORCID toplamasından sonra çalışır.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 9 3 * *"
+permissions:
+  contents: write
+concurrency:
+  group: orcid
+  cancel-in-progress: false
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pyyaml
+      - name: AVESİS profilleri ve yayın listeleri
+        run: python3 scripts/avesis_topla.py
+      - name: Sonucu kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/avesis/
+          git commit -m "AVESİS: yayın listeleri güncellendi" || exit 0
+          git pull --rebase -q && git push -q
