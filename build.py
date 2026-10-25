@@ -2652,7 +2652,7 @@ def render_ag(items) -> str:
     (OUT / "ag").mkdir(parents=True, exist_ok=True)
     (OUT / "ag" / "eserler.json").write_text(json.dumps(ek, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları, AVESİS ve YÖK Akademik sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleri üzerinden çalıştığı başlık ve terimler görünür. Sayfa hızlı açılsın diye eserler kapalı gelir. "Eserler" düğmesine basıldığında makaleler de yüklenir.</p>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları, AVESİS ve YÖK Akademik sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleri üzerinden çalıştığı başlık ve terimler görünür. Sayfa sade ve hızlı açılsın diye eserler ve terimler kapalı gelir. Düğmelerine basılarak açılırlar; "Eserler" açıldığında makaleler de yüklenir.</p>
 {ag_araci(hafif, {"eser": len(agir)})}
 {baslik_ag_listesi()}
 {terim_ag_listesi()}"""

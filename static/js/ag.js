@@ -276,10 +276,12 @@
     sim.force("x").x(genislik / 2); sim.force("y").y(yukseklik / 2);
   }).observe(kap);
   if (V.ek && !V.ekYuklu) {
-    // makaleler yüklenmeden açılan genel ağda eserler pasif başlar; kişiler konularına dolaylı bağlarla bağlanır
-    gizliTurler.add("eser");
-    var eb = document.querySelector('.ag-tur button[data-tur="eser"]');
-    if (eb) eb.setAttribute("aria-pressed", "false");
+    // makaleler yüklenmeden açılan genel ağda eserler ve terimler pasif başlar; kişiler konularına dolaylı bağlarla bağlanır
+    ["eser", "terim"].forEach(function (t) {
+      gizliTurler.add(t);
+      var eb = document.querySelector('.ag-tur button[data-tur="' + t + '"]');
+      if (eb) eb.setAttribute("aria-pressed", "false");
+    });
   }
   komsulariKur();
   boya();
