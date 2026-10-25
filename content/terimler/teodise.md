@@ -15,7 +15,7 @@ klasik_gelenekte:
     tartışmayı teodise başlığı altında incelemiştir. Mu'tezile'nin aslah görüşü
     de bu başlıkla karşılaştırılabilir. Klasik tartışmaların hareket noktası
     ilahi hikmet ve adalettir.
-ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi]
+ilgili_terimler: [ozgur-irade-savunmasi]
 ilgili_kisiler: [john-hick]
 ilgili_eserler: [hick-1966-evil-and-the-god-of-love, ormsby-1984-theodicy-in-islamic-thought, yaran-1997-kotuluk-ve-teodise]
 basliklar: [kotuluk-problemi]

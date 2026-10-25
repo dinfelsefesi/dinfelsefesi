@@ -10,7 +10,7 @@ kisa_tanim: >-
 klasik_gelenekte:
   basliklar: []
   not: ""
-ilgili_terimler: [kotuluk-problemi, ozgur-irade-savunmasi, delilci-kotuluk-problemi]
+ilgili_terimler: [ozgur-irade-savunmasi, delilci-kotuluk-problemi]
 ilgili_kisiler: [john-l-mackie, alvin-plantinga]
 ilgili_eserler: [mackie-1955-evil-and-omnipotence, plantinga-1974-god-freedom-and-evil]
 basliklar: [kotuluk-problemi]

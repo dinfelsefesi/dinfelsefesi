@@ -11,7 +11,7 @@ baglanti: https://doi.org/10.1057/9780230283961
 acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""
-ilgili_terimler: [teodise, kotuluk-problemi]
+ilgili_terimler: [teodise]
 basliklar: [kotuluk-problemi]
 imza: dinfelsefesi.com.tr
 durum: taslak

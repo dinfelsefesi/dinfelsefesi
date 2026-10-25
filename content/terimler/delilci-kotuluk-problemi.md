@@ -10,7 +10,7 @@ kisa_tanim: >-
 klasik_gelenekte:
   basliklar: []
   not: ""
-ilgili_terimler: [kotuluk-problemi, mantiksal-kotuluk-problemi, teodise]
+ilgili_terimler: [mantiksal-kotuluk-problemi, teodise]
 ilgili_kisiler: [william-l-rowe]
 ilgili_eserler: [rowe-1979-problem-of-evil, wykstra-1984-humean-obstacle]
 basliklar: [kotuluk-problemi]

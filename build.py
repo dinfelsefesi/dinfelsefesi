@@ -625,6 +625,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-kapat{position:absolute;top:.5rem;right:.6rem;font:inherit;font-size:1.5rem;line-height:1;background:none;border:0;color:var(--ink-soft);cursor:pointer;padding:.2rem .4rem}
 .ag-ipucu{position:absolute;left:1rem;bottom:.6rem;margin:0;font-style:italic;font-size:.85rem;color:var(--ink-soft);pointer-events:none}
 .ag-git{display:inline-block;margin-top:1rem;font-style:italic}
+.baslik-karsilik{margin:-.4rem 0 .8rem;font-family:var(--sans);font-size:.88rem;color:var(--ink-soft)}
 .ag-basliklar{margin:1.2rem 0 0;font-family:var(--sans);font-size:.84rem;line-height:1.9;color:var(--ink-soft)}
 .ag-basliklar span{font-weight:600;margin-right:.3rem}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
@@ -1026,6 +1027,7 @@ def render_baslik(k) -> str:
     body = f"""
 <p class="yol">{yol(k)}</p>
 <h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
+{f'<p class="baslik-karsilik">{" · ".join(x for x in [("İng. " + e(h["ingilizce"])) if h.get("ingilizce") else "", ("Diğer adı: " + ", ".join(e(str(a)) for a in liste(h.get("diger_adlari")))) if liste(h.get("diger_adlari")) else ""] if x)}</p>' if h.get("ingilizce") or h.get("diger_adlari") else ""}
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
@@ -2857,7 +2859,9 @@ def main() -> None:
     yaz("gunun-makalesi", render_makaleler(items))
     yaz("guncel", yonlendirme(f"{SITE_URL}/gunun-makalesi/"))
     # Eski WordPress adresleri yeni sayfalara yönlendirilir
-    for eski, yeni in {"kotuluk-problemi": "basliklar/kotuluk-problemi", "dini-tecrube": "basliklar/dini-tecrube",
+    for eski, yeni in {"terimler/kotuluk-problemi": "basliklar/kotuluk-problemi",  # terim fişi başlıkla birleştirildi (25.10.2026)
+                       "ag/terimler/kotuluk-problemi": "ag/kotuluk-problemi",
+                       "kotuluk-problemi": "basliklar/kotuluk-problemi", "dini-tecrube": "basliklar/dini-tecrube",
                        "tanrinin-varligi-problemi": "basliklar/tanrinin-varliginin-delilleri",
                        "category/din-felsefe-iliskisi": "basliklar"}.items():
         yaz(eski, yonlendirme(f"{SITE_URL}/{yeni}/"))

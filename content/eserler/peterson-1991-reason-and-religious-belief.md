@@ -10,7 +10,7 @@ doi: ""
 acik_erisim: hayır
 duzey: giris
 turkce_cevirisi: "Akıl ve İnanç: Din Felsefesine Giriş, çev. Rahim Acar, İstanbul: Küre, 2006"
-ilgili_terimler: [kotuluk-problemi, teodise]
+ilgili_terimler: [teodise]
 basliklar: [kotuluk-problemi]
 imza: dinfelsefesi.com.tr
 durum: taslak

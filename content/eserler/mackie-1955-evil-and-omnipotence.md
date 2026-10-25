@@ -10,7 +10,7 @@ doi: "10.1093/mind/lxiv.254.200"
 acik_erisim: hayır
 duzey: ileri
 turkce_cevirisi: ""
-ilgili_terimler: [mantiksal-kotuluk-problemi, kotuluk-problemi]
+ilgili_terimler: [mantiksal-kotuluk-problemi]
 basliklar: [kotuluk-problemi]
 imza: dinfelsefesi.com.tr
 durum: taslak

@@ -11,7 +11,7 @@ kisa_tanim: >-
 klasik_gelenekte:
   basliklar: []
   not: ""
-ilgili_terimler: [mantiksal-kotuluk-problemi, teodise, kotuluk-problemi]
+ilgili_terimler: [mantiksal-kotuluk-problemi, teodise]
 ilgili_kisiler: [alvin-plantinga, john-l-mackie]
 ilgili_eserler: [plantinga-1974-god-freedom-and-evil]
 basliklar: [kotuluk-problemi]

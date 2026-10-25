@@ -2,6 +2,8 @@
 tur: baslik
 kimlik: kotuluk-problemi
 ad: Kötülük Problemi
+ingilizce: Problem of evil
+diger_adlari: [Kötülük sorunu]
 sira: 7
 ust_baslik: ''
 kume: tanri
@@ -10,7 +12,7 @@ ozet: >-
   dünyadaki kötülük arasındaki ilişkiye dair tartışma. Başlık, problemin mantıksal
   ve delilci versiyonlarını, bunlara verilen başlıca cevapları ve klasik İslam
   düşüncesindeki şer tartışmalarıyla ilişkisini ele almaktadır.
-temel_terimler: [kotuluk-problemi, mantiksal-kotuluk-problemi, delilci-kotuluk-problemi, teodise, ozgur-irade-savunmasi]
+temel_terimler: [mantiksal-kotuluk-problemi, delilci-kotuluk-problemi, teodise, ozgur-irade-savunmasi]
 temel_kisiler: [john-l-mackie, alvin-plantinga, william-l-rowe, john-hick]
 okuma_listesi:
   giris: [peterson-1991-reason-and-religious-belief, yaran-1997-kotuluk-ve-teodise, plantinga-1974-god-freedom-and-evil]
