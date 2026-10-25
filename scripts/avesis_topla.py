@@ -118,12 +118,13 @@ def profil_dogrula(adres: str, ad: str) -> bool:
 
 
 def elle_dogrula(adres: str, ad: str) -> bool:
-    """Elle bildirilen profil: sayfa başlığında kişinin soyadı geçmeli (ikinci soyadı ya da unvan farkları serbest)."""
+    """Elle bildirilen profil: sayfa başlığında kişinin soyadı ve adlarından biri geçmeli (ikinci ad ya da unvan farkları serbest)."""
     html = al(adres.rstrip("/"), deneme=2) or ""
     time.sleep(0.7)
     m = re.search(r"<title>(.*?)</title>", html, re.S)
     bas = unescape(m.group(1)).split("|")[0] if m else ""
-    tamam = ad_anahtari(ad).split()[-1] in ad_anahtari(bas).split()
+    p_, b_ = ad_anahtari(ad).split(), ad_anahtari(bas).split()
+    tamam = p_[-1] in b_ and any(x in b_ for x in p_[:-1])  # soyadı ve adlardan en az biri
     TANI.setdefault("elle", {})[ad] = {"adres": adres, "sayfa_basligi": bas.strip(), "kabul": tamam}
     return tamam
 
