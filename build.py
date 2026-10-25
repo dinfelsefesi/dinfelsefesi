@@ -1665,8 +1665,12 @@ def orcid_eserleri() -> list:
 _AVESIS = None
 
 
-def avesis_tur(bolum: str) -> str:
+def avesis_tur(bolum: str, baslik: str = "", kaynak: str = "") -> str:
+    if re.match(r"\s*(kitap\s+(değerlendirme|tanıtım|inceleme|kritiği)|book\s+review)", tr_kucuk(baslik)):
+        return "kitap-tanitimi"
     b = tr_kucuk(bolum)
+    if b.startswith("kitap") and re.search(r"\bss?\.\s*\d+\s*[-–]\s*\d+", kaynak or ""):
+        return "kitap-bolumu"  # AVESİS'in Kitaplar bölümünde sayfa aralığı olanlar kitap bölümüdür
     for anahtar, tur in (("bildiri", "bildiri"), ("bölüm", "kitap-bolumu"), ("kitap", "kitap"), ("makale", "makale"), ("tez", "tez")):
         if anahtar in b:
             return tur
@@ -1715,7 +1719,7 @@ def avesis_veri() -> dict:
             if baslik.isupper():
                 baslik = harf_duzelt(baslik, "tr-TR" if re.search(r"[ÇĞİÖŞÜÂÎÛ]", baslik) else "en-US")
             ogeler.append({"kimlik": kimlik, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
-                           "tur": e_.get("tur") or avesis_tur(y["bolum"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]),
+                           "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else y["url"], "doi": bool(y.get("doi")),
                            "konular": konular})
         _AVESIS[slugify(ad_)] = {"profil": x["profil"], "yayinlar": ogeler}

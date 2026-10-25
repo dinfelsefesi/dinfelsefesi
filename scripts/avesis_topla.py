@@ -24,7 +24,9 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 VERI = ROOT / "data" / "avesis"
 sys.path.insert(0, str(ROOT / "scripts"))
-from orcid_topla import al  # noqa: E402
+import urllib.request  # noqa: E402
+
+from orcid_topla import UA, al  # noqa: E402
 
 UNVANLAR = r"(Prof\.|Doç\.|Dr\.|Öğr\.|Üyesi|Arş\.|Gör\.|Okt\.|Uzm\.)"
 
@@ -40,12 +42,28 @@ def adaylar(ad: str) -> list:
     return list(dict.fromkeys(x for x in out if x))
 
 
-def kurum_adresi(alanlar) -> str:
+TANI = {"kurum": {}, "site_haritasi": {}, "bulunamayan": {}}
+
+
+def dene(url: str):
+    """(gövde, hata) çifti; hata ayıklama için hatanın kendisi de döner."""
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
+            return r.read().decode("utf-8", "replace"), ""
+    except Exception as ex:  # noqa: BLE001
+        return "", f"{type(ex).__name__}: {ex}"[:200]
+
+
+def kurum_adresi(u: str, alanlar) -> str:
+    hatalar = []
     for a in alanlar:
-        govde = al(f"https://avesis.{a}/robots.txt", deneme=1)
-        time.sleep(0.5)
-        if govde and "User-agent" in govde:
-            return f"https://avesis.{a}"
+        for yol in ("/robots.txt", "/"):
+            govde, hata = dene(f"https://avesis.{a}{yol}")
+            time.sleep(0.5)
+            if govde and ("User-agent" in govde or "AVES" in govde):
+                return f"https://avesis.{a}"
+            hatalar.append(f"avesis.{a}{yol}: {hata or 'AVESİS sayfası değil'}")
+    TANI["kurum"][u] = hatalar
     return ""
 
 
@@ -72,6 +90,7 @@ def sitemap_kullanicilari(kok: str) -> set:
     if not alt:
         out |= {m.group(1) for u in haritalar for m in [re.match(re.escape(kok) + r"/([A-Za-z0-9._-]+)/?$", u)] if m}
     print(f"  {kok}: {len(out)} profil adresi")
+    TANI["site_haritasi"][kok] = {"parca": [h.rsplit("/", 1)[-1] for h in alt][:30], "profil": len(out)}
     _SITEMAP[kok] = out
     return out
 
@@ -103,6 +122,10 @@ def yayinlar(html: str, kok: str) -> list:
     """Yayın sayfasındaki bölümler (Makaleler, Bildiriler, Kitaplar...) ve her bölümdeki yayınlar."""
     olaylar = [(m.start(), "bolum", metin(m.group(1))) for m in re.finditer(r'<div class="item-head">\s*<span>([^<]+)</span>', html)]
     olaylar += [(m.start(), "yayin", m.start()) for m in re.finditer(r'<div class="pub-item', html)]
+    if not any(t == "yayin" for _, t, _ in olaylar):  # özgeçmiş biçimli tema: bölümler h2, yayınlar cv-item
+        olaylar = [(m.start(), "bolum", metin(m.group(1))) for m in
+                   re.finditer(r'<div class="cv-section-title">\s*<h2[^>]*>([^<]+)</h2>', html)]
+        olaylar += [(m.start(), "cv", m.start()) for m in re.finditer(r'<div class="cv-item"', html)]
     olaylar.sort()
     out, bolum = [], ""
     for i, (konum, tur, deger) in enumerate(olaylar):
@@ -111,6 +134,21 @@ def yayinlar(html: str, kok: str) -> list:
             continue
         son = olaylar[i + 1][0] if i + 1 < len(olaylar) else len(html)
         parca = html[konum:son]
+        if tur == "cv":
+            b = re.search(r'<a[^>]*href="(/yayin/[^"]+)"[^>]*>\s*<h3>.*?<strong>(.*?)</strong>', parca, re.S)
+            if not b:
+                continue
+            h4 = re.search(r"<h4>(.*?)</h4>", parca, re.S)
+            yazarlar = [metin(a) for a in re.findall(r"<a class='authorsRichText'[^>]*>(.*?)</a>", h4.group(1) if h4 else "", re.S)]
+            h5 = re.search(r"<h5>(.*?)</h5>", parca, re.S)
+            ic = re.sub(r'<span style="margin-left:5px">.*?</a>\s*</span>', " ", h5.group(1) if h5 else "", flags=re.S)
+            kaynak = re.sub(r"\s+,", ",", metin(ic))
+            donem = re.search(r'<p class="period">\s*(\d{4})', parca)
+            yil = donem.group(1) if donem else (re.findall(r"\b(19[5-9]\d|20[0-4]\d)\b", kaynak) or [""])[-1]
+            doi = (re.findall(r'href="https?://(?:dx\.)?doi\.org/([^"]+)"', parca) or [""])[0]
+            out.append({"bolum": bolum, "baslik": metin(b.group(2)), "yazarlar": yazarlar, "kaynak": kaynak, "yil": yil,
+                        "url": kok + b.group(1), "doi": unescape(doi)})
+            continue
         b = re.search(r'<h3 class="title">\s*<a[^>]*href="([^"]+)"[^>]*>.*?<strong>(.*?)</strong>', parca, re.S)
         if not b:
             continue
@@ -134,8 +172,8 @@ def main():
     onceki = json.loads(cikti_d.read_text(encoding="utf-8")) if cikti_d.exists() else {}
 
     for u in sorted({p.get("universite", "") for p in kisiler} - {""}):
-        if u not in durum:
-            durum[u] = kurum_adresi(kurumlar.get(u) or [])
+        if not durum.get(u):  # bulunamayanlar her çalıştırmada yeniden denenir
+            durum[u] = kurum_adresi(u, kurumlar.get(u) or [])
             print(f"{u}: {durum[u] or 'AVESİS yok'}")
     durum_d.write_text(json.dumps(durum, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
@@ -161,6 +199,8 @@ def main():
                 if profil:
                     break
         if not profil:
+            if any(kurumlar_):
+                TANI["bulunamayan"][ad] = [x for x in kurumlar_ if x]
             continue
         html = al(profil.rstrip("/") + "/yayinlar", deneme=2)
         time.sleep(1)
@@ -173,6 +213,7 @@ def main():
         bulunan += 1
         print(f"  {ad}: {profil} ({len(sonuc[ad]['yayinlar'])} yayın)")
     cikti_d.write_text(json.dumps(sonuc, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+    (VERI / "tani.json").write_text(json.dumps(TANI, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     print(f"AVESİS profili bulunan kişi: {bulunan} / {len(kisiler)}")
 
 
