@@ -115,8 +115,9 @@ def trdizin_ara(y: dict):
         kelimeler = []
         for a in ozetler:
             k = a.get("keywords")
-            if k and k != "None":
-                kelimeler += [x.strip() for x in re.split(r"[;,]", k) if x.strip()]
+            for k_ in (k if isinstance(k, list) else [k]):  # alan kimi kayıtta metin, kimisinde liste
+                if isinstance(k_, str) and k_ and k_ != "None":
+                    kelimeler += [x.strip() for x in re.split(r"[;,]", k_) if x.strip()]
         ozet = max((a.get("abstract") or "" for a in ozetler), key=len, default="")
         tr = next((a.get("abstract") for a in ozetler if a.get("language") == "TUR" and a.get("abstract")), "")
         return {"durum": "trdizin", "doi": doi_temiz(r.get("doi") or ""), "sayfa": f"https://search.trdizin.gov.tr/tr/yayin/detay/{r.get('id')}",

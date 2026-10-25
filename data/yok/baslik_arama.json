@@ -1,15 +1,5 @@
 {
- "hatalar": [
-  "Değerlerin Küreselleşmesi ve Küreselleşmenin Değerleri: TypeError: expected string or bytes-like object, got 'list'",
-  "Spinoza Felsefesinde İnsan: TypeError: expected string or bytes-like object, got 'list'",
-  "Modern ve Postmodern Düşüncelerde Bilim: TypeError: expected string or bytes-like object, got 'list'",
-  "Gadamer’in Felsefi Hermeneutiğinde Ön Yargı Kavramı ve Düşün: TypeError: expected string or bytes-like object, got 'list'",
-  "Language Metaphor and Its Implications in George Berkeley s : TypeError: expected string or bytes-like object, got 'list'",
-  "Küreselleşme ve Değer İlişkisinde Dinin Yeri: TypeError: expected string or bytes-like object, got 'list'",
-  "Mehmet Akif Ersoy: Tanrı, İnsan ve Eylem; Yazar Ali Yıldırım: TypeError: expected string or bytes-like object, got 'list'",
-  "Batılıların Ortadoğu'ya Demokrasi Getirme İddialarının Ahlak: TypeError: expected string or bytes-like object, got 'list'",
-  "Sanata Ödül Verilebilir mi: TypeError: expected string or bytes-like object, got 'list'"
- ],
+ "hatalar": [],
  "kayit": {
   "0535855d-9c30-4572-83ba-6ff8defefe8c": {
    "baslik": "Habermas’ın Söylem Etiğinde Ahlak ve Hukuk",
@@ -769,8 +759,7 @@
   "98e37095-0058-44fb-bee8-109af554c428": {
    "baslik": "Language Metaphor and Its Implications in George Berkeley s Philosophy",
    "durum": "bulunamadi",
-   "sahip": "İsmail Çetin",
-   "trdizin_bakildi": true
+   "sahip": "İsmail Çetin"
   },
   "9c64efe8-7e41-4fdf-be0d-eade809ce183": {
    "baslik": "Fârâbî’nin Felsefesinde Erdemli Medeniyet Teorisi",
@@ -917,8 +906,7 @@
   "c277819a-3495-4e4f-82e9-e71a19f945fe": {
    "baslik": "Modern ve Postmodern Düşüncelerde Bilim",
    "durum": "bulunamadi",
-   "sahip": "Ramazan Ertürk",
-   "trdizin_bakildi": true
+   "sahip": "Ramazan Ertürk"
   },
   "c37d557c-b029-48de-8d5c-0b1312bb2dad": {
    "baslik": "Hadia Dajani Shakeel XII. Asır Arap Şiirinde Haçlı Seferlerine Karşı Cihat",
@@ -953,8 +941,7 @@
   "c6fde00a-1e98-43e3-92b8-0994ffe96a39": {
    "baslik": "Değerlerin Küreselleşmesi ve Küreselleşmenin Değerleri",
    "durum": "bulunamadi",
-   "sahip": "Mehmet Sait Reçber",
-   "trdizin_bakildi": true
+   "sahip": "Mehmet Sait Reçber"
   },
   "c9d121d5-de2e-43c9-9052-1c256576e9b4": {
    "baslik": "Tamara Sonn,\"Fazlur Rahman'ın İslâm Metodolojisi\",çev. Ruhattin Yazoğlu",
@@ -983,8 +970,7 @@
   "ce55c669-17a1-46e2-89cc-56eff27dee05": {
    "baslik": "Gadamer’in Felsefi Hermeneutiğinde Ön Yargı Kavramı ve Düşündürdükleri",
    "durum": "bulunamadi",
-   "sahip": "Ramazan Ertürk",
-   "trdizin_bakildi": true
+   "sahip": "Ramazan Ertürk"
   },
   "cfda8a99-45cf-4c77-8f5b-13b0bbad7b15": {
    "baslik": "Flow cytometric DNA analysis, and immunohistochemical p53, PCNA and histopathologic study in primary achalasia: Preliminary results",
@@ -1111,8 +1097,7 @@
   "e0f95e27-49d9-451f-94bf-a1712ab0eb78": {
    "baslik": "Spinoza Felsefesinde İnsan",
    "durum": "bulunamadi",
-   "sahip": "Musa Kazım Arıcan",
-   "trdizin_bakildi": true
+   "sahip": "Musa Kazım Arıcan"
   },
   "e23d2b11-a311-4d43-b165-41b979be4403": {
    "baslik": "Derrida and Islamic Mysticism: An Undecidable Relationship",
@@ -1470,8 +1455,7 @@
   "kisisel-kuresellesme-ve-deger-iliskisinde-dinin-yeri-2005": {
    "baslik": "Küreselleşme ve Değer İlişkisinde Dinin Yeri",
    "durum": "bulunamadi",
-   "sahip": "Recep Kılıç",
-   "trdizin_bakildi": true
+   "sahip": "Recep Kılıç"
   },
   "kisisel-kuresellesme-ve-din-uzerine-2004": {
    "baslik": "Küreselleşme ve Din Üzerine",
@@ -4088,8 +4072,7 @@
   "yok-mI1FnHganB-s3iq17DfDIQ": {
    "baslik": "Sanata Ödül Verilebilir mi",
    "durum": "bulunamadi",
-   "sahip": "Bülent Sönmez",
-   "trdizin_bakildi": true
+   "sahip": "Bülent Sönmez"
   },
   "yok-mdhn9XBF37ic2Z9E-NzNxQ": {
    "baslik": "Immanuel Kant’ın Ölümsüzlük Anlayışı",
@@ -4429,8 +4412,7 @@
   "yok-uJrG48--tbVm5w6te4wRZA": {
    "baslik": "Batılıların Ortadoğu'ya Demokrasi Getirme İddialarının Ahlakî Açıdan Değerlendirilmesi",
    "durum": "bulunamadi",
-   "sahip": "Sait Polat",
-   "trdizin_bakildi": true
+   "sahip": "Sait Polat"
   },
   "yok-uQZaxi_z4Ab2ZME3OUMxgQ": {
    "baslik": "Felsefenin Bir Kimliği Var mı? Felsefenin Kimliği, Kimliğin Felsefesine Dair Bazı Düşünceler",
