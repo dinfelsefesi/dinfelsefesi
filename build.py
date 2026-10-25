@@ -1791,6 +1791,11 @@ def avesis_veri() -> dict:
             kaynaklar += [(ad_, x, kaynak) for ad_, x in json.loads((ROOT / yol).read_text(encoding="utf-8")).items()]
     # YÖK Akademik listesi herkes için okunur: kişinin yayın listesinin esası odur. Aynı yayın AVESİS'te ya da başka bir
     # kaynakta da varsa sitede onun kaydı gösterilir (bağlantı, bölüm adı, anahtar kelime); YÖK'te olup olmadığı ayrıca tutulur.
+    # DOI'si olmayan makaleler adlarıyla OpenAlex'te ve DergiPark'ta aranır (scripts/yok_baslik_ara.py); bulunanın DOI'si
+    # ya da sayfası bağlantı olur, anahtar kelimeleri konuyu bulmakta kullanılır
+    ap_ = ROOT / "data/yok/baslik_arama.json"
+    arama = {k: v for k, v in (json.loads(ap_.read_text(encoding="utf-8")).get("kayit", {}) if ap_.exists() else {}).items()
+             if v.get("durum") != "bulunamadi"}
     hd = ROOT / "data/yok/hatali_doi.yaml"
     hatali = (yaml.safe_load(hd.read_text(encoding="utf-8")) or {}) if hd.exists() else {}
     for ad_, x, kaynak in kaynaklar:
@@ -1823,7 +1828,11 @@ def avesis_veri() -> dict:
             konular = sorted(set(karar) | {dps.UST[b] for b in karar if b in dps.UST}) if isinstance(karar, list) else []
             # DOI'si olan yayınlarda konu, yazarın verdiği anahtar kelimelerden (DergiPark ya da OpenAlex) sözlükle bulunur;
             # anahtar kelimeler bir başlığa uymazsa adına bakılarak verilen elle karar geçerli kalır
-            kelimeler = (kunye.get((y.get("doi") or "").lower()) or {}).get("kelimeler") or []
+            bulunan = arama.get(kimlik) if not y.get("doi") else None
+            if bulunan and bulunan.get("doi"):
+                y = dict(y, doi=bulunan["doi"])
+            kelimeler = (kunye.get((y.get("doi") or "").lower()) or {}).get("kelimeler") or \
+                ((bulunan or {}).get("kelimeler") or [])
             # Sözlük DergiPark'taki din felsefesi makaleleri için kurulmuştur; YÖK ve AVESİS listelerinde genel felsefe
             # yayınları da bulunduğundan ("etik", "epistemoloji", "dil" gibi kelimeler tek başına yetmez) anahtar kelimeyle
             # yerleştirme yalnızca adında ya da anahtar kelimelerinde dinle ilgili açık bir işaret olan yayında yapılır (özetler
@@ -1836,13 +1845,20 @@ def avesis_veri() -> dict:
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
                            yok_kunye(y["kaynak"], y["yil"], y["bolum"]) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
-                           "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else y["url"], "doi": bool(y.get("doi")),
+                           "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else
+                           (bulunan or {}).get("sayfa") or (yok_baglanti(x["profil"]) if kaynak == "yok" else y["url"]), "doi": bool(y.get("doi")),
                            "konular": konular, "kaynak": kaynak, "kelimeler": kelimeler})
         v_ = _AVESIS.setdefault(slugify(ad_), {"profil": x["profil"], "yayinlar": [], "yok_var": False})
         v_["yayinlar"] += ogeler
         if kaynak == "yok":
             v_["yok_var"] = True
     return _AVESIS
+
+
+def yok_baglanti(profil: str) -> str:
+    """YÖK Akademik'te yayın ayrıntı adresleri (yayinDetay.jsp) oturuma bağlıdır, dışarıdan açılınca boş döner. DOI'si
+    olmayan YÖK yayınları bu yüzden hocanın YÖK Akademik sayfasına bağlanır; o adres (islem=direct) her zaman açılır."""
+    return profil if "islem=direct" in profil else ""
 
 
 _DIN_ISARET = re.compile(

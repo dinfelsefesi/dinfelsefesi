@@ -78,6 +78,7 @@ def dergipark_sayfasi(url: str) -> dict:
     return {
         "ozet": ozet,
         "baslik": (meta.get("citation_title") or [""])[0],
+        "basliklar": list(dict.fromkeys(meta.get("citation_title", []) + meta.get("DC.Title", []))),
         "yazarlar": meta.get("citation_author", []),
         "dergi": (meta.get("citation_journal_title") or [""])[0],
         "yil": ((meta.get("citation_publication_date") or meta.get("citation_date") or [""])[0])[:4],
