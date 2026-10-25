@@ -1,25 +1,10 @@
 {
  "bulunamayan": {
-  "Abdulhan Ünlüsoy": [
-   "https://avesis.ogu.edu.tr"
-  ],
-  "Betül Akdemir Süleyman": [
-   "https://avesis.marmara.edu.tr"
-  ],
   "Chrysi Sidiropoulou": [
    "https://avesis.bogazici.edu.tr"
   ],
   "Ferit Uslu": [
    "https://avesis.ogu.edu.tr"
-  ],
-  "Merve Yavuz": [
-   "https://avesis.uludag.edu.tr"
-  ],
-  "Osman Caner Taslaman": [
-   "https://avesis.yildiz.edu.tr"
-  ],
-  "Ramazan Ertürk": [
-   "https://avesis.erciyes.edu.tr"
   ],
   "Recep Kılıç": [
    "https://avesis.ankara.edu.tr"
@@ -29,13 +14,79 @@
   ],
   "Zeki Özcan": [
    "https://avesis.uludag.edu.tr"
-  ],
-  "Zeynep Baktemur Kayaduman": [
-   "https://avesis.marmara.edu.tr"
-  ],
-  "İsmail Çetin": [
-   "https://avesis.uludag.edu.tr"
   ]
+ },
+ "elle": {
+  "Abdulhan Ünlüsoy": {
+   "adres": "https://avesis.inonu.edu.tr/abdulhan.unlusoy",
+   "kabul": true,
+   "sayfa_basligi": "Doç. Dr. ABDULHAN ÜNLÜSOY"
+  },
+  "Ahmet Erkan": {
+   "adres": "https://avesis.ankara.edu.tr/erkan",
+   "kabul": true,
+   "sayfa_basligi": "Arş. Gör. AHMET ERKAN"
+  },
+  "Aydın Topaloğlu": {
+   "adres": "https://avesis.istanbul.edu.tr/aydin.t",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. AYDIN TOPALOĞLU"
+  },
+  "Betül Akdemir Süleyman": {
+   "adres": "https://avesis.marmara.edu.tr/15730",
+   "kabul": true,
+   "sayfa_basligi": "Doç. Dr. BETÜL AKDEMİR SÜLEYMAN"
+  },
+  "Mehmet Ata Az": {
+   "adres": "https://avesis.aybu.edu.tr/ata",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. MEHMET ATA AZ"
+  },
+  "Mehmet Sait Reçber": {
+   "adres": "https://avesis.ankara.edu.tr/recber",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. MEHMET SAİT REÇBER"
+  },
+  "Merve Yavuz": {
+   "adres": "https://avesis.uludag.edu.tr/yavuzm",
+   "kabul": true,
+   "sayfa_basligi": "Arş. Gör. Dr. MERVE YAVUZ"
+  },
+  "Mustafa Emre Dorman": {
+   "adres": "https://avesis.acibadem.edu.tr/emre.dorman",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. EMRE DORMAN"
+  },
+  "Osman Caner Taslaman": {
+   "adres": "https://avesis.yildiz.edu.tr/caner",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. Osman Caner TASLAMAN"
+  },
+  "Ramazan Ertürk": {
+   "adres": "https://avesis.erciyes.edu.tr/erturkr",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. RAMAZAN ERTÜRK"
+  },
+  "Recep Alpyağıl": {
+   "adres": "https://avesis.istanbul.edu.tr/recepalp",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. RECEP ALPYAĞIL"
+  },
+  "Zeynep Baktemur Kayaduman": {
+   "adres": "https://avesis.marmara.edu.tr/zeynep.baktemur",
+   "kabul": true,
+   "sayfa_basligi": "Dr. Öğr. Üyesi ZEYNEP BAKTEMUR KAYADUMAN"
+  },
+  "İsmail Çetin": {
+   "adres": "https://avesis.uludag.edu.tr/ismcet",
+   "kabul": true,
+   "sayfa_basligi": "Prof. Dr. İSMAİL ÇETİN"
+  },
+  "Şeyma Yazıcı Elsebahy": {
+   "adres": "https://avesis.aybu.edu.tr/syazici",
+   "kabul": true,
+   "sayfa_basligi": "Dr. Öğr. Üyesi ŞEYMA YAZICI ELSEBAHY"
+  }
  },
  "kurum": {
   "Adıyaman Üniversitesi": [
@@ -233,11 +284,11 @@
    "avesis.izu.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
   ],
   "İzmir Katip Çelebi Üniversitesi": [
-   "avesis.ikcu.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
-   "avesis.ikcu.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+   "avesis.ikcu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ikcu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Şırnak Üniversitesi": [
-   "avesis.sirnak.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.sirnak.edu.tr/robots.txt: URLError: <urlopen error [Errno -5] No address associated with hostname>",
    "avesis.sirnak.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
   ]
  },
@@ -260,12 +311,6 @@
    ],
    "profil": 2989
   },
-  "https://avesis.marmara.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 3373
-  },
   "https://avesis.ogu.edu.tr": {
    "parca": [
     "cvpages.xml"
@@ -277,12 +322,6 @@
     "cvpages.xml"
    ],
    "profil": 2949
-  },
-  "https://avesis.yildiz.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 1835
   }
  }
 }
