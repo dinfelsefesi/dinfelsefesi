@@ -2,6 +2,7 @@
 # 'yanlis-kisi' (yayın çıkarılır). tur: yayın türünü düzeltir. Kararsız bırakılan yayınlar yalnızca kişinin sayfasında 'Diğer' sekmesinde yer alır.
 # 'not' alanı yalnızca okuyan içindir.
 # baslik: yayının adını düzeltir (AVESİS kaydında ada künye eklenmiş olabiliyor).
+# YÖK Akademik kayıtları "yok-<kimlik>" anahtarıyla yazılır.
 003ca8b3-03de-4b34-bbfb-2c699c6ebe18:
   karar:
   - teizme-yonelik-itirazlar
@@ -2826,3 +2827,2019 @@ kisisel-vahiy-ve-mucize-2014:
   - din-epistemolojisi
   - tanri-alem-iliskisi
   not: 'Recep Kılıç (kişisel site): Vahiy ve Mucize'
+yok--6-EHv6kE8BvreRqIED5dg:
+  karar:
+  - din-ve-ahlak
+  not: 'Hande Nur Bozbuğa (YÖK): Kelâm’da Etik Değer Tartışmalarına Yeni Bir Yaklaşım: Ayman Shihadeh Örneği'
+yok--DO1bARGagzWjdgGyWwJJQ:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-bilim
+  not: 'Süleyman Altın (YÖK): Varlıktan Tanrı''ya Güncel Kozmolojik Delil Tartışmaları'
+yok--GRX7jeqgAS3U_g_KXXzOA:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Hasan Tanrıverdi (YÖK): Gümüşhanevi de Tanrı nın Varlığının Bilinmesi Meselesi'
+yok--VLnuaUwr2XipzBbVlSfRw:
+  karar:
+  - din-epistemolojisi
+  not: 'Osman Murat Deniz (YÖK): Akıl İman İlişkisi Açısından Fideizm'
+yok--YSdtiDA7RN80koazbixNQ:
+  karar:
+  - insan-tasavvurlari
+  not: 'Nusret Taş (YÖK): İhvân-ı Safâ Felsefesinde Ruh ile Nefs Ayrımı'
+yok--rOKs5En-dwIY7gBi_0BcA:
+  karar:
+  - din-ve-ahlak
+  not: 'Celal Büyük (YÖK): Tanrısız Ahlak -Eleştirel Bir Bakış-'
+yok-01NtERAWnBF7Pjr-mFxdQg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Süleyman Altın (YÖK): Daha Zayıf Bir İlke ile Tanrı’nın Varlığını Temellendirme'
+yok-06t0jSACm1KbbRnZIBGVlQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Yaşar Türkben (YÖK): David Hume''un Agnostisizmi'
+yok-09ABlvaUabjKWwnBD79H7Q:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Mustafa Ateş (YÖK): Tanrı''ya Sıfat Atfetme Problemine Yaklaşımları Bakımından Herbert Spencer ve Borden Parker'
+yok-0JX6j4AF0zzpbcWooeZdUQ:
+  karar:
+  - olum-ve-otesi
+  not: 'Nusret Taş (YÖK): Din Felsefesi Açısından Yeniden Diriliş Şekline Dair Teoriler: İhvân-ı Safâ Örneği'
+yok-0LKj1F9egZc7LvxKpGKVWw:
+  karar:
+  - din-ve-sanat
+  not: 'Tuncay Akgün (YÖK): Güzellik ve Tanrı: Estetik Tecrübenin Teistik Yorumu'
+yok-0QUt0WKVBSv0-E7R7pqNoQ:
+  karar:
+  - olum-ve-otesi
+  not: 'Aliye Çınar Köysüren (YÖK): Yunus Emre Düşüncesinde Hayat ve Ölüm Teması'
+yok-0bMthmwC6xWtgMnftpGF0A:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ferit Uslu (YÖK): Agnostisizm'
+yok-0p1UINKPq5dBfEESoT9xBA:
+  karar:
+  - din-ve-sanat
+  not: 'Latif Tokat (YÖK): Sanat Kutsalın İfşası mıdır?'
+yok-0uSNJtC-_hJvTa5bEEdWYg:
+  karar:
+  - din-dili
+  not: 'Hasan Er (YÖK): Gündelik Dil Felsefesi Açısından Kuran Dili'
+yok-0wu0lpjsnS0zlY9e2bFxaA:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Türkiyede İlahiyat Fakültelerinde Din Felsefesi'
+yok-1KPIXoaH7_uyc2uKnIIh0Q:
+  karar:
+  - din-ve-sanat
+  - tanrinin-varliginin-delilleri
+  not: 'Naim Şahin (YÖK): Gazali''de Estetik ve Estetik Delil'
+yok-1LFkk9iR_Tl0ljPKFS0-PQ:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Latif Tokat (YÖK): Varoluşsal Din Felsefesi Nedir?'
+yok-1NhNWDBC5D-KzNVP4lo-ow:
+  karar:
+  - din-epistemolojisi
+  not: 'Ergin Ögcem (YÖK): Bir Tutum veya Tavır Olması Bağlamında İman'
+yok-1hfcL6m-JPX0LeWbiWGmig:
+  karar:
+  - olum-ve-otesi
+  not: 'Mustafa Çakmak (YÖK): Epikür ve Lukretius’un Ölüm ve Yokluk Algılarına Dair Bir Değerlendirme'
+yok-1tz1SGicgQ4Bb97HTBYRBw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Yaşar Türkben (YÖK): Gazali ve Nedensellik'
+yok-2SIYBqJxTgvuWCthgRQ5AA:
+  karar:
+  - kotuluk-problemi
+  - teizme-yonelik-itirazlar
+  not: 'Semra Tüfenkci (YÖK): Is William L. Rowe''s Friendly Atheism Friendly to Theism?'
+yok-2WTIIBbw33pwbPfvnX_9iA:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - olum-ve-otesi
+  not: 'İsmail Yalçıntaş (YÖK): Homo Deus” Anlatısı Bağlamında Ölümsüzlük Arzusu ve Dijital Tanrılaşma: İnsan ile Tanrı Ar'
+yok-2yTk1oQvd6fWo_7koMPiQA:
+  karar:
+  - din-epistemolojisi
+  - tanri-tasavvurlari
+  not: 'Latif Tokat (YÖK): Tanrı İnancının Varoluşsal Boyutu ve Deizm'
+yok-3PQY_MKkhxFUs04MvBOs8A:
+  karar:
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Is the theory of evolution compatible with Islam?'
+yok-3RQvboxSaCE_rvM2GmnZaA:
+  karar:
+  - din-ve-bilim
+  - tanri-alem-iliskisi
+  not: 'Enis Doko (YÖK): Din ve Bilim Açısından Yaratılış'
+yok-3Xpor04gcAvYMpO2wHe4sA:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - tanri-tasavvurlari
+  not: 'Fatımanur Güçlüer (YÖK): God of Transhumanism'
+yok-3zeq0w_vqlyu_wY6dbDi-w:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Ferhat Yöney (YÖK): Is God of Quran Absolutely Good?'
+yok-4H2hdRk78Y8JexcyTHHHMQ:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Mehmet Şükrü Özkan (YÖK): Transhümanizm Felsefesi: Tekilliğe Giden Yollar'
+yok-4Hpd-QC5pitNB-CI4N2dMw:
+  karar:
+  - din-ve-ahlak
+  not: 'Ferhat Yöney (YÖK): Normative Consequentialism, Theism, and Islam'
+yok-4Htm3FgkoDVUVnNKtchU4g:
+  karar:
+  - olum-ve-otesi
+  not: 'Yaşar Türkben (YÖK): E. M .Hamdi Yazır''ın Ölümsüzlüğe Dair Düşünceleri'
+yok-4Kfz-KZhUKnqLowjqLQ5Dg:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - din-ve-ahlak
+  not: 'Fatımanur Güçlüer (YÖK): Transhümanizmde Din ve Ahlak'
+yok-4OlYzsgPHXEYntg5RGIw6A:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Tuncay Akgün (YÖK): Gazali ve İbn Rüşd e Göre Yaratma'
+yok-4StE_uLQxUU3uduTo9GnwQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İsmail Yalçıntaş (YÖK): Tanrı ve Kötülük Problemi: Ebû Mansûr el-Mâtürîdî Bağlamında Bir Değerlendirme'
+yok-4cQT08nNEoBGAaD2wmeCYg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Mustafa Ateş (YÖK): Borden Parker Bowne’un Tanrı Anlayışı'
+yok-4edE5puwJrH_mHbS-ML89w:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Hasan Ocak (YÖK): Yapay Zekâ Bağlamında Ahlak Felsefesi'
+yok-4ghRBXjRwGmv1magAp6OlQ:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Zeyneb Betül Taşkın (YÖK): İmkân Kanıtı ve Yeter Neden İlkesi'
+yok-51Rbi-TXDLIHzIoHxbz-Wg:
+  karar:
+  - din-dili
+  not: 'Mehmet Ulukütük (YÖK): Politik Teolojide Din Dilinin Stratejik Ağırlığı-Din Dilinin Politik İşlevleri Üzerine Bir'
+yok-5AI0q78jdEIDBpze9aDQeQ:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Celal Büyük (YÖK): Wilfred Cantwell Smith de Aşkın Tanrı Problemi'
+yok-5FDXdsmPcFxa1LhaJCyuvA:
+  karar:
+  - din-ve-ahlak
+  not: 'Ahmet Kavlak (YÖK): Kant Felsefesinde Tanrı ve Ahlak İlişkisi'
+yok-5XKB555Zx1L8uSHxs3pN4Q:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ali Yıldırım (YÖK): Deizm Yanılgısı'
+yok-5XZsgYqaDfBjohv_FBP7zw:
+  karar:
+  - olum-ve-otesi
+  not: 'Halis Çavuşoğlu (YÖK): Ölümün Felsefesi ve Varoluşu'
+yok-5dSpiA3epBPYrHKbY0Vqfg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Daru’l-fünûn İlahiyat Fakültesi’nde Din Felsefesi'
+yok-5f2Xo1Izezqi9EFApcI9wQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Naim Şahin (YÖK): Hegel bir Ateist midir'
+yok-5hwApJhH5n5vZJesEBJIdA:
+  karar:
+  - din-dili
+  not: 'Ali Yıldırım (YÖK): Ortak Bir Din Dilinin İnşasının İmkanı'
+yok-5qV7wUfFihGOfwEjAzCBDQ:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Zeki Özcan (YÖK): Din Felsefesi'
+yok-5riAYCIRUijQ-Yf2R27FFg:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): Redemptive Suffering in Islamic Faith in Comparison to Christianity'
+yok-6OsotW01psMWuMY2wGEvRg:
+  karar:
+  - ozgurluk
+  not: 'Latif Tokat (YÖK): Teist Varoluşçulukta Hürriyet Problemi'
+yok-6Sl6spRDU3GB8h8ijAWcjw:
+  karar:
+  - din-ve-ahlak
+  not: 'Mehmet Akif Altunışık (YÖK): Aliya İzzetbegoviç’in Dindışı Ahlâk Teorilerini Eleştirisi Üzerine Bir Değerlendirme & An '
+yok-6VFB39L2L2aCvdhaFOPafA:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Bayram Dalkılıç (YÖK): Yirminci Yüzyılda Bir Ateist Düşünür Bertrand Russell'
+yok-6jpH-hr0OIe6CGp0GmvR0A:
+  karar:
+  - dini-tecrube
+  not: 'Mehmet Fatih Kalın (YÖK): Rudolf Otto''da Dini Tecrübe ve Mistisizm'
+yok-6lez3Wm758-8eMwV-szflA:
+  karar:
+  - din-dili
+  not: 'İsmail Hakkı Kumbasar (YÖK): Wıttgensteın’ın Din Anlayışı'
+yok-6uW6k1BnZ7eKDnOXvUHXSg:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Teistik Tanrı İnancına Bir Eleştiri Olarak Delilci Kötülük Argümanları'
+yok-7H1wgjtsEoABjooGUijawg:
+  karar:
+  - dini-tecrube
+  not: 'Fatma Yüce (YÖK): THE NATURE, OBJECTIVITY AND EXPRESSION OF MYSTICAL EXPERIENCE: With a Special Reference to'
+yok-7K0YnDumpsbnewYmJI5QBA:
+  karar:
+  - insan-tasavvurlari
+  not: 'Semra Tüfenkci (YÖK): Din Felsefesi Açısından İnsan Doğası'
+yok-7Q5iEdfN5ITR-NpWZDu3_g:
+  karar:
+  - din-ve-ahlak
+  not: 'Münteha Beki (YÖK): Tanrı ve Ahlaki Müeyyide'
+yok-7SU6_PXEZMDBbOD-zMJ4Uw:
+  karar:
+  - olum-ve-otesi
+  not: 'Sait Kar (YÖK): A Religious and Philosophical Evaluation of the Concept of Immortality'
+yok-7_W16YhkrSR0PJKyCEgc3Q:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ferhat Yöney (YÖK): Open Theism and Prophecy'
+yok-7qi4w5d_m3Pe9N_6psWDbg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Rafız Manafov (YÖK): Teo-Felsefi Tartışmalar: Doğa Bilgi ve Ahlak Üzerine Din Felsefesi Yapmanın İmkanı'
+yok-7tYNmB2gXxiHHMzlGlLSfA:
+  karar:
+  - kotuluk-problemi
+  not: 'Halis Çavuşoğlu (YÖK): Kötülük Problemi ve Teodise'
+yok-7yIdLl-Tmisaq0swPVfWoQ:
+  karar:
+  - dini-tecrube
+  not: 'Fatma Yüce (YÖK): Büyük Mistikler ve Mistisizm Kuramcıları II'
+yok-84X_dKmEVOGHswV5fBOPLg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ferhat Yöney (YÖK): Prophesied to be a prophet: A special problem for Open Theism'
+yok-8G1vsFU4ULO5-zrIFHGOoA:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Din Felsefesi ne Giriş'
+yok-8JXl_3AvBvwhmBqmQ6M_TA:
+  karar:
+  - din-epistemolojisi
+  not: 'Kasım Müminoğlu (YÖK): A Parallel Between the “Second Dimension of Reason'' in Lev Shestov''s Philosophy and the Co'
+yok-8Re4tlx1YH271QHqJflHtw:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): Paul F Knitter in Tanrı Merkezli Dini Çoğulculuk Modeli ve Hıristiyanlık Yorumu'
+yok-8_p5OHuYN3ZrSaLU_V4cmA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Mustafa Ateş (YÖK): Borden Parker Bowne’da Tanrının Kişiliği Problemi'
+yok-8bOgpyDa6ZSNnzx6o6JPrQ:
+  karar:
+  - olum-ve-otesi
+  not: 'Yaşar Türkben (YÖK): Elmalılı M Hamdi Yazır ın Ölümsüzlüğe DairDüşüncelerinin Din Felsefesi AçısındanDeğerlendi'
+yok-8ekFjkeIH7KNDHFx5NIGEw:
+  karar:
+  - tanri-tasavvurlari
+  not: 'İsmail Yalçıntaş (YÖK): İbn Sînâ''nın Tanrı Anlayışı'
+yok-8rLFHeYyr9IClQxqjAPvQw:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Ahmet Uğurlu (YÖK): Zorunlu nedensellik bağlamında David Hume’da kozmolojik delil eleştirisi'
+yok-9GfftJWIQ2iHNbt-9pkQqQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Fatımatüzzehra Yaşar (YÖK): İletişim Felsefesi Bağlamında Dinî Bilgi'
+yok-9PqfPHgO4kS6qG0s2QqKYQ:
+  karar:
+  - olum-ve-otesi
+  not: 'Abdullah Pakoğlu (YÖK): Fahreddin Râzî’de Ölüm ve Ötesi'
+yok-9Z_GPcLeGvbHEJv-MzPr0A:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): The Soul Making Theodicy in a Religiously Plural World'
+yok-9_5dFfgD-5JDYvxzd6c1Ew:
+  karar:
+  - din-epistemolojisi
+  not: 'Ahmet Bayındır (YÖK): Bir İman Şövalyesi KIERKEGAARD'
+yok-9iOCrI4MoSV7wwAM9_TOqA:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-sanat
+  not: 'Naim Şahin (YÖK): Gazali ye Göre Allah ın Varlığının Delilleri ve Estetik Delil'
+yok-9u478yK5I-sJK5hyxnvokQ:
+  karar:
+  - din-dili
+  not: 'Aliye Çınar Köysüren (YÖK): Dini Sembol ve Ritüel'
+yok-AE_2HVYOWAE13D02hEnKUw:
+  karar:
+  - olum-ve-otesi
+  not: 'Habib Şener (YÖK): John Locke’da Ruhun Ölümsüzlüğü ve Ahiret Hayatı'
+yok-AH-h48GJyWT-3FAtwXu5eQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Theory of Iwad as an Explanation for Gratuitous and Pointless Evils'
+yok-AHhlzwX7VDR0L3vUfXbXDg:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): Paul F. Knitter’in Dini Çoğulculuk Serüveninde Dinler Arasıdiyaloğun Farklı Boyutları'
+yok-AZ-P1rRyPavuDXhq6r-3Kw:
+  karar:
+  - olum-ve-otesi
+  not: 'Mehmet Demirtaş (YÖK): Ölümsüzlük Düşüncesi'
+yok-AljGVko8zjG3xsRG2GIhDw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Ahmet Bayındır (YÖK): Âşık Seyrânî Şiirlerinde Vahdet-i Vücud Düşüncesinin İzleri'
+yok-ApjmwTWG4j-kh8TnRrCvWg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Mehmet Alperen Saz (YÖK): Öz Bilinçten Tanrı’ya'
+yok-AsPlft_JGBzh2_lI38TfUA:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Habib Şener (YÖK): Jean Meslier Düşüncesinde Ateizmin Temel Dayanakları ve Eleştirisi'
+yok-AwXGfvqj51SQijPwJNyR8g:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Enis Doko (YÖK): Criticism of the Non-Theistic Explanations of Fine-Tuning'
+yok-B6XRpUI1gq7WQFvGFQ_S4w:
+  karar:
+  - din-ve-sanat
+  not: 'Hasan Ocak (YÖK): Felsefe, Din ve Sanatta Çirkin'
+yok-BBzU2z72DREjJDqjHzKasQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): İlahiyat Alanında Dini Çeşitliliğe Farklı Yaklaşımlar'
+yok-BExlE_1vXvzfG0CkhWAoVw:
+  karar:
+  - din-ve-bilim
+  not: 'Kelly James Clark (YÖK): The Blackwell Companion to Naturalism.'
+yok-BHsm5UL2vHuqsiauSrC3lg:
+  karar:
+  - din-epistemolojisi
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): John Hick’in Delilsiz Rasyonel İnanç Düşüncesinin Dini Epistemolojide Yeri'
+yok-BL19UVq1Flsm1GRIG89jBw:
+  karar:
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Islam and Evolution: A Defense'
+yok-BQlfwUh0KD7fZSn8r8lVLQ:
+  karar:
+  - kotuluk-problemi
+  not: 'Naim Şahin (YÖK): Hegel Felsefesinde Kötülük Problemi'
+yok-BY1gXXM88aJYKp2AuxsEvw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Tuncay Akgün (YÖK): Gazali ye Göre Yaratma'
+yok-B_abLMCc-do93La37QYi5g:
+  karar:
+  - din-dili
+  - din-epistemolojisi
+  not: 'Hasan Er (YÖK): Wıttgensteın ve İnancın Dili - Fideizm ve Din Dili Oyunu Üzerine'
+yok-Bk8PlZNHQinNYJNBBaXl4g:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Naim Şahin (YÖK): Hegel in Tanrısı'
+yok-BlHLwhuaOc4F1fj-xtRoJQ:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Aliye Çınar Köysüren (YÖK): Aşkın Teoloji ve Deizm'
+yok-BylpIxjdCBrzFLNQ7MGR9g:
+  karar:
+  - olum-ve-otesi
+  not: 'Melih Taştan (YÖK): Din Felsefesi Açısından Ölüme Yakın Tecrübe'
+yok-C3O3HMtEHFYTibaDJWIU0Q:
+  karar:
+  - din-ve-ahlak
+  not: 'Muhsin Akbaş (YÖK): Britanya Din Felsefesi Derneği 2009 Konferansı Tanrı ve Ahlâk'
+yok-C73n-9a9DHhU-LtatVYv2Q:
+  karar:
+  - kotuluk-problemi
+  not: 'Mehmet Fatih Kalın (YÖK): John Hick’s Theodicy of Moral and Spiritual Development and a Critical Examination of Theo'
+yok-Ca8e-7fkA51Im60bTjuKAA:
+  karar:
+  - din-epistemolojisi
+  not: 'Celal Büyük (YÖK): Tanrı İnancının Rasyonelliği ve Kanıt İhtiyacı'
+yok-CdHHjGP340-Ew0t3HX4eIQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Kemal Batak (YÖK): Ateizm, Türkiye ve Diyanet İşleri Başkanlığına Bazı Tavsiyeler'
+yok-CgrtCaKaP0jT8twXPrnDIw:
+  karar:
+  - din-ve-ahlak
+  not: 'Ali Yıldırım (YÖK): İslam Düşüncesinde Din Ahlak Ayrılmazlığı'
+yok-CmSqLZAxg5Ur0uKNdpMliw:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Ulukütük (YÖK): Hac ı Bektâşî Velî Mâkâlât ında Akıl İman İlişkisinin Din Felsefesi Açısından Analizi'
+yok-D2gUPoeQUb4XFt7LeIuF7A:
+  karar:
+  - tanri-alem-iliskisi
+  - din-epistemolojisi
+  not: 'Mehmet Demirtaş (YÖK): Tanrı-Âlem İlişkisi Açısından Vahye Bakış(frederıck Robert Tennant Örneği)'
+yok-D8XjHFiPWs7BHacfiIG3zg:
+  karar:
+  - din-dili
+  not: 'Aliye Çınar Köysüren (YÖK): Varoluşçu Teolojide Din ve sembol'
+yok-DBITlS-azshIQP29Mk3bog:
+  karar:
+  - dini-tecrube
+  not: 'Ömer Faruk Erdem (YÖK): William James in Gifford Konferansları ve The Varieties of Religious Experience İsimli Ese'
+yok-DBe4WWtQFZvFtcyzsvsgBg:
+  karar:
+  - din-ve-bilim
+  not: 'Osman Zahid Çifçi (YÖK): Spandrel or Fitrah? An Essay on the Relationship between Cognitive Science of Religion and'
+yok-DBoHLLRgFwJlfB8It-N9Dg:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): W C Smith ve J Hick in Dini Çoğulculuk Hipotezlerinin Değerlendirilmesi'
+yok-DGov0sle-gRXoPoZTmneKw:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Türkiye de Din Felsefesi'
+yok-DK6KBex_ugIcQc6OTbhgQA:
+  karar:
+  - din-epistemolojisi
+  not: 'İsmail Şimşek (YÖK): Fideizmden Rasyonelizme Eş’ari’nin İman Anlayışı'
+yok-DUkyida1j7msHwOYubkoIw:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Münteha Beki (YÖK): Tanrı ve Sonsuzluk: Kavramsal Bir Çözümleme'
+yok-DYd2renBp0Dg68KGV4t8JA:
+  karar:
+  - ibadet
+  not: 'Emine Gören Bayam (YÖK): İbn Sînâ’nın Dua Anlayışı'
+yok-Dg7P8qduzr6AeeSUmRo1nw:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Aliye Çınar Köysüren (YÖK): Tanrı Yanılgısı üzerine'
+yok-DwxbVsUgcSlYVRM8VYJfPA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Halis Çavuşoğlu (YÖK): Diyalektik Teizm veya Pananteizm'
+yok-E-I3Uy5X35ICNCStijCeEA:
+  karar:
+  - olum-ve-otesi
+  not: 'Yaşar Türkben (YÖK): Ahmet Yesevi ve Yunus Emre’de Ölümsüzlük Düşüncesi'
+yok-E6tdReDmZSzerM5xJWqLeg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Sulhan (YÖK): Yeni Ateizm -Çağdaş Ateist Varsayımlar Tanrı Yanılgısı Örneği-'
+yok-EIwQtPHhsdsCjWFuqCbZpg:
+  karar:
+  - din-ve-bilim
+  not: 'Hasan Tanrıverdi (YÖK): Bilimsel Gelişmeler ve Teolojik Yansımaları'
+yok-ELi9RKbCHG6dk3rOvMOq_w:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Halis Çavuşoğlu (YÖK): Varoluş Felsefesi Çerçevesinde Yaratılış Anlayışına Bilimsel ve Dinsel Bir Yaklaşım'
+yok-EONt8Tj23nyItLk1SuMrgQ:
+  karar:
+  - ozgurluk
+  not: 'Bayram Dalkılıç (YÖK): Halîl Şükrü Boyâbâdînin Kaza-Kader Üzerine Görüşleri ve Yorumları'
+yok-EStaX6a4TB991yuKJ7RDfA:
+  karar:
+  - kotuluk-problemi
+  not: 'Mehmet Fatih Kalın (YÖK): Friedrich Schleiermacher in Düşüncesinde Kötülük Problemi'
+yok-EZw9udtbPr08FZ_bz7FvGg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Sümeyra Turan (YÖK): Din Felsefesi / İlâhiyât'
+yok-EbxRzYmbe-dlhPHV2SIRtg:
+  karar:
+  - teizme-yonelik-itirazlar
+  - din-ve-bilim
+  not: 'Mehmet Şükrü Özkan (YÖK): Yeni Ateizmin Dini: Bilimcilik, Bilimci Natüralist Dünya Görüşünün Eleştirisi'
+yok-EcRNMMd5MhMc_f74-k3dzg:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Hande Nur Bozbuğa (YÖK): Dijital Çağda İlahiyatın Dönüşümü: Mark C. Taylor Perspektifinde Radikal İlişkisellik ve D'
+yok-EcxyiOOyN6QXeKLTbnt2Cw:
+  karar:
+  - din-epistemolojisi
+  not: 'Tuncay Akgün (YÖK): Anlamayı Arayan İman Anselmus’un Din Felsefesi'
+yok-EdG3LIDrM8P9IRjty414uQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Osman Murat Deniz (YÖK): Understandings of Theological Conversion in the Interreligious Dialogue'
+yok-EmYDRkkoOmNak9BMW6Bb9w:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Naim Şahin (YÖK): Sadrettin Konevi de Yaratma Sevgi İlişkisi'
+yok-EwHHv-yQfxLfxyuI0di3Gg:
+  karar:
+  - din-epistemolojisi
+  not: 'Celal Büyük (YÖK): Wilfred Cantwell Smith in Vahiy Anlayışı'
+yok-F53RhFo2gLy230sgX1yNEA:
+  karar:
+  - ozgurluk
+  not: 'Ergin Ögcem (YÖK): Tanrı''nın Fiilleri ve İnsanın Özgürlüğü Problemi'
+yok-FCIuy3PmNZVeCh1QrmZeaQ:
+  karar:
+  - ozgurluk
+  not: 'Sait Kar (YÖK): John Toland’da Özgürlük, Determinizm ve Ahlaki Sorumluluk'
+yok-FoDZUjr5zcZ87qiqF3xaDQ:
+  karar:
+  - ozgurluk
+  not: 'İsmail Şimşek (YÖK): Nurettin Topçu Felsefesinde Özgürlük Düşüncesi'
+yok-G-OIn-0OZyc1WzumYIRltA:
+  karar:
+  - din-epistemolojisi
+  - din-dili
+  not: 'Muharrem Şahiner (YÖK): İbn Sînâ’ya Göre Peygamberin Gerekliliği ve Din Dili'
+yok-GFbymfCpnJYfAIjNFcq62Q:
+  karar:
+  - kotuluk-problemi
+  not: 'Yaşar Türkben (YÖK): Kötülük Problemi: Gazâlî Swinburne Mukayesesi'
+yok-GGqSWtAMFX6sb8DSlkAelw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Muammer İskenderoğlu (YÖK): İslam ve Hıristiyan Düşüncesinde Âlemin Ezeliliği Tartışmaları Üzerine'
+yok-GHyJR93UZixzUpyfaFH2dg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ergin Ögcem (YÖK): Antony Flew Bağlamında Ateizmin İmkânına Dair Bir Tartışma'
+yok-GV7fpf7PCHJQ-wtCrhS2eQ:
+  karar:
+  - din-ve-bilim
+  - tanrinin-varliginin-delilleri
+  not: 'Ferit Uslu (YÖK): Tanrı ve Fizik Büyük Patlama ve Öncesi'
+yok-GWu9M9VRMRO4dFp0IWotog:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Draper Tarzı Kötülük Argümanları'
+yok-GiJ5Wba4Yx8w-KYgOBOSWw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Semra Tüfenkci (YÖK): Kindîde Tanrı-Âlem İlişkisinin Madde, Hareket ve Zaman Kavramları Bağlamında Yorumlanması'
+yok-GjdJ1KnS8t7EG8I3jtYcNA:
+  karar:
+  - din-epistemolojisi
+  not: 'Gülşen Yaylı (YÖK): İnanç Ahlakı ve İmkânı'
+yok-GpVff5nhg9Q31NnTKPDp5Q:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Aliye Çınar Köysüren (YÖK): Deizmin Kısa Tarihi'
+yok-GpvFxGDv0hbkHepp-lqwRQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): Başarısız Bir Hipotez Dini Çoğulculuk'
+yok-H3VL8l99Du6mTkKrxot2Mg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Latif Tokat (YÖK): Din Felsefesi İlahiyata Ne Katar?'
+yok-H8HDsoi0tdKLQWFL4ypu2w:
+  karar:
+  - din-epistemolojisi
+  not: 'İbrahim Bor (YÖK): Vahiy Kültür İlişkisi'
+yok-H8yB6aXjV-N_RxWB7Ew_8g:
+  karar:
+  - tanrinin-sifatlari
+  - ozgurluk
+  not: 'İsmail Şimşek (YÖK): Tanrı’nın Mükemmelliği ve Özgürlük Problemi'
+yok-HHeDUYHANSz4Y7pGkE-hSg:
+  karar:
+  - kotuluk-problemi
+  not: 'Fatma Yüce (YÖK): Din Felsefesinde Kötülük Problemi ve Teodise: Algısal Kötülük Kavramıyla Yeni Bir Perspekt'
+yok-HlaN8THjuHGGiC47x5B2nA:
+  karar:
+  - din-ve-bilim
+  - olum-ve-otesi
+  not: 'Osman Murat Deniz (YÖK): Nörobilim, Ruh ve Ölümsüzlük'
+yok-HwDwnRXBiLbWxNgFwyFJjA:
+  karar:
+  - teizme-yonelik-itirazlar
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Modern Fizik Açısından Ateizmin Eleştirisi'
+yok-HwXq6OPkJfPolNgdgh4N2w:
+  karar:
+  - din-ve-bilim
+  - teizme-yonelik-itirazlar
+  not: 'Fatma Nur Ağca (YÖK): Natüralizm: Eleştirel Bir Analiz'
+yok-IBz9bM7aNO5VzIOtq4ykTA:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Çakmak (YÖK): Foundations of Religious Inclusiveness in Muslim Thought'
+yok-IDyzCo_ouionVAAu8YjqMA:
+  karar:
+  - din-epistemolojisi
+  not: 'Celal Büyük (YÖK): Wilfred Cantwell Smith''de Vahyin Neliği Sorunu'
+yok-IJ8gWgkmsLDJYOBuinTvAg:
+  karar:
+  - din-epistemolojisi
+  not: 'Gülşen Yaylı (YÖK): Wıllıam Kıngdon Clıfford ve Wıllıam James Bağlamında Dini İnancın Rasyonelliği'
+yok-IOIfKQigXxAEq86_oMCs7g:
+  karar:
+  - din-ve-bilim
+  not: 'Ömer Faruk Erdem (YÖK): Spandrel or Fitrah? An Essay on the Relationship Between Cognitive Science of Religion and'
+yok-ISEdTdjg0c61E1dzWG940w:
+  karar:
+  - din-ve-bilim
+  not: 'Asım Kaya (YÖK): Evrimin Üç Sütunu Yıkıldı - Darwin Neden Yanıldı (Çev. Ed. Umut Çavuş)'
+yok-IYk3KqgsOKLGxXdP_c1ftA:
+  karar:
+  - dini-cesitlilik
+  not: 'İbrahim Yıldız (YÖK): Evaluating Religious Pluralism in an Islamic Context: The case of Abdulaziz Sachedina'
+yok-IYmBOm9yYLKVAIMqorrTeg:
+  karar:
+  - dini-tecrube
+  not: 'Asım Kaya (YÖK): The Presumptive Foundations of Criticisms of Religious Experience in The Case of J. L. Mac'
+yok-I_h8wKJsHROiMU_sgsTaCw:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - kotuluk-problemi
+  not: 'Gülsüm Turhan (YÖK): Yapay Zekâ, Bilinç ve Kötülük Problemi Ahlaki Sorumluluğun Teolojik Sınırları'
+yok-J0szD949VDYshRYNGBOwRg:
+  karar:
+  - kotuluk-problemi
+  not: 'Halis Çavuşoğlu (YÖK): Kelam Ekollerinin Kötülük Problemlerine ve Teodiselere Bakış Açısı'
+yok-J0zmTk85pHaAkCsfbR198g:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Mustafa Ateş (YÖK): Albert Cornelius Knudson''da Tanrı''nın Kişiliği Problemi'
+yok-J12r7f4VhPT4nBeksjia-A:
+  karar:
+  - kotuluk-problemi
+  - teizme-yonelik-itirazlar
+  not: 'Özkan Yıldız (YÖK): Davıd Hume’da Kötülük Sorunu Bir Ateizm Yolu Mudur?'
+yok-J2SNNj0miznSiNtehYBVRA:
+  karar:
+  - kotuluk-problemi
+  not: 'Hande Nur Bozbuğa (YÖK): A Response to James Sterba’s Problem of Evil through al-Qāḍī ʿAbd al-Jabbār’s Understandin'
+yok-J7FkOrPipJaRB4t-YNwlXQ:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Hüsamettin Yıldırım (YÖK): Tehâfütlerde İlahi Hürriyet Probleminin Ele Alınışı'
+yok-JdFTQE00uVBZ-YLWb5cCbQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İsmail Şimşek (YÖK): God is Not the Creator of Evil'
+yok-JiXcmJCrF8lMkSW6RXY9mA:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Yaşar Türkben (YÖK): İlahi Gizlilik'
+yok-JkuDs-fnWVL6lSIAoGndGg:
+  karar:
+  - din-ve-bilim
+  - teizme-yonelik-itirazlar
+  not: 'Abdullah Kartal (YÖK): Evrim Teorisinin Ateizm ve Deizm ile İlişkisine Dair Bir Değerlendirme'
+yok-JnWo-fNcEZoTVRP7ruT7zw:
+  karar:
+  - olum-ve-otesi
+  not: 'Şeyma Demirtaş (YÖK): Plotinus''ta Ruh ve Ölümsüzlük Düşüncesi'
+yok-JyBh0JA9JI62KZ6KnmmorQ:
+  karar:
+  - din-ve-bilim
+  not: 'Abdullah Kartal (YÖK): Gazali Örneğinde Felsefe-Din-Bilim İlişkilerindeki Bazı Yanlış Anlamalar'
+yok-KAE8RGynd_RQeZ_OHZsBqw:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Halis Çavuşoğlu (YÖK): Din Felsefesi Alanındaki Hareketlerden Brahma Kumaris Akımı’nın Tanrı Anlayışı'
+yok-KP_St2RwuAffoB_pw45P-g:
+  karar:
+  - dini-tecrube
+  not: 'Fatma Yüce (YÖK): Dini ve Mistik Tecrübede Evrensel Öz'
+yok-KRSpLA0ubtey65leu6kAXA:
+  karar:
+  - din-epistemolojisi
+  not: 'Ahmet Bayındır (YÖK): Bir İmancı Hareket Olarak Ockhamcılık'
+yok-KRqJpMDrTCDyDY7_moMzEg:
+  karar:
+  - kotuluk-problemi
+  - ozgurluk
+  not: 'Hüsamettin Yıldırım (YÖK): HÜR İRADE SAVUNMASI - Alvin PLANTİNGA (THE FREE WILL DEFENSE GOD FREEDOM AND EVIL) - Çev. '
+yok-KWVWibJd34PORK6z2K3rmQ:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Kasım Müminoğlu (YÖK): Socio-Philosophical and Aesthetic Issues of Artificial Intelligence in the Transhumanist A'
+yok-KZqmfkS13mkgn3fjJekjUA:
+  karar:
+  - din-ve-sanat
+  not: 'Mehmet Fatih Kalın (YÖK): Aydınlanma Dönemi Sonrasında Değişen "Kutsal" Düşüncesinin Sanat Anlayışına Etkisi'
+yok-Kj5ncOMsJ7xazoBQfDb1qg:
+  karar:
+  - din-ve-sanat
+  not: 'Latif Tokat (YÖK): Kutsal ve Sanat'
+yok-Kpw1XcUwI7rIElmt8SNBtA:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Enis Doko (YÖK): İsbât-ı Vâcib Tartışmaları: Celâleddîn Devvânî Yorumu, Kaynakları ve Günümüze Yansımaları'
+yok-LJ0TxJ-IxMSjE_L5s34OXw:
+  karar:
+  - din-epistemolojisi
+  not: 'Ferit Uslu (YÖK): İbn Teymiyye’nin Kelamcıların Geleneksel İman Tanımına Eleştirisi'
+yok-LPFsfPlgIHXDvDTbZn32_Q:
+  karar:
+  - din-ve-sanat
+  not: 'Naim Şahin (YÖK): Gazali de Bir Değer Olarak Estetik Güzellik'
+yok-LShZTvWGdndmN0JeIbyyIg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Abdullah Arif Adalar (YÖK): What is The Future of The Philosophy of Rreligion?'
+yok-La-8O8ocMyTKYbSX3PPPMw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Zeyneb Betül Taşkın (YÖK): Occasionalism, Theism, and Causality'
+yok-Ll0LWRyfrCDiDtUlrm8n8A:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatih Taştan (YÖK): An Introduction to the Philosophy of Religion Din Felefesine Giriş'
+yok-LmYmpcuKY6280czeZ9IL7Q:
+  karar:
+  - tanrinin-sifatlari
+  not: 'İsmail Şimşek (YÖK): Tanrı Kendi Doğasının Nedeni Olabilir mi?'
+yok-LpibruobNq8dkhXjcPztdw:
+  karar:
+  - kotuluk-problemi
+  not: 'Fatma Nur Ağca (YÖK): Mantıksal Kötülük Problemi: Mackie ve Flew Bağlamında Bir Değerlendirme'
+yok-LzTXz8iz2Ij9yEH-Mo2prw:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Ulukütük (YÖK): İslam Düşüncesinde Din ve Akıl'
+yok-M2-HRUbr_c7t8GP3yzRCWA:
+  karar:
+  - din-ve-ahlak
+  - teizme-yonelik-itirazlar
+  not: 'Ferhat Yöney (YÖK): The Evolutionary Origins of Morality Don’t Lend Support to Theism over Atheism'
+yok-MKlyFmJ75CdmIh1GbVF3CA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'İbrahim Bor (YÖK): Ibrahim’in Tanrısı ve Aristoteles’in Tanrısı: Teizm’in ve Dezm’in Tanrı Tasavvurları Hakkı'
+yok-MQVf3URxMamqevYj2dSKDg:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Enis Doko (YÖK): Teknoloji, Etik ve Din'
+yok-MfCDe8ne4-U0_ZfHYUVWKw:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ahmet Kavlak (YÖK): ateist felsefe ve hayat'
+yok-Mo2VPnLtN7QJtv2JaxZIKg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Şükrü Özkan (YÖK): Rasyonel Teoloji Yeni Ateizm ve Tanrı'
+yok-MqMETTLGgqdxbYARapfmIw:
+  karar:
+  - tanrinin-sifatlari
+  not: 'İsmail Şimşek (YÖK): Düşünce Tarihinde Tanrı’nın ÖZGÜRLÜĞÜ Sorunu'
+yok-Mtqo-zsMpswKk8XxIbspHw:
+  karar:
+  - din-dili
+  not: 'Mustafa Çakmak (YÖK): Dini Önermeleri Ahlâkî Sonuçları Bağlamında Yorumlamak: Braithwaite Örneği'
+yok-N0eDC1Y0ro0LngE2fc8ZbA:
+  karar:
+  - din-ve-bilim
+  not: 'Asım Kaya (YÖK): Darwin''in Müslüman Öncüleri -Anakronik Bir Okumanın Felsefi Eleştirisi-'
+yok-N49hWUXEY7YAHa5Wst8-zQ:
+  karar:
+  - dini-tecrube
+  not: 'Mehmet Ulukütük (YÖK): Nurettin Topçu’da Mistik Felsefe ve Estetik Kaygı'
+yok-N7-E5U-KjoFjsb6gCKrMdg:
+  karar:
+  - din-ve-bilim
+  not: 'Sümeyra Turan (YÖK): A Critique of Alvin Plantinga’s Speech: ”Science and Religion: Where the Conflict Really L'
+yok-N8giWikmnu3KHG4Z_BhMag:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ergin Ögcem (YÖK): Antony Flew ün Tanrı yı İnkarı ve Gerekçeleri'
+yok-NCOjf1GwaoozAdHKZARGwQ:
+  karar:
+  - tanrinin-sifatlari
+  - tanrinin-varliginin-delilleri
+  not: 'Tuncay Akgün (YÖK): Boethius Ta Tanrı Sıfatları ve Teleolojik Delil'
+yok-NE6gI7acNmvy1anyNwo7rA:
+  karar:
+  - din-dili
+  - din-ve-ahlak
+  not: 'Ali Yıldırım (YÖK): Din Dilinin Ahlaki Yorumu'
+yok-NER_LibtWMhmLsaoetnpSg:
+  karar:
+  - din-ve-ahlak
+  not: 'Celal Büyük (YÖK): Tanrısız Bir Dünyada Değerleri İnşa Sorunu: Jean-Paul Sartre Perspektifli Bir Bakış'
+yok-NLQ3RHYw-zTC2MePhN1iKA:
+  karar:
+  - din-dili
+  not: 'İsmail Hakkı Kumbasar (YÖK): Tanrı’nın Varlığı “Bir İhtimal” Olabilir Mi? Wittgenstein’da Kesinlik; veya Aynı Sözlerin '
+yok-NV2lMJaC0vHs8coNinvotg:
+  karar:
+  - dini-tecrube
+  not: 'Fatma Yüce (YÖK): Dini ve Mistik Tecrübelerin Güvenilirliği Açısından Analojiler: Duyu Tecrübesi Analojisind'
+yok-NXSP47NkRlCblxVv2g4Jeg:
+  karar:
+  - kotuluk-problemi
+  not: 'Abdullah Pakoğlu (YÖK): Some Considerations on Mistakes in Understanding the Problem of Evil'
+yok-Ng1n2CenSAP-kX7X4fi2YA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ali Yıldırım (YÖK): Mehmet Akif Ersoy’un Tanrı Anlayışının Felsefi Açıdan Değerlendirilmesi'
+yok-NsfVbdFEgKhQgWq11VjYxg:
+  karar:
+  - dini-tecrube
+  - teizme-yonelik-itirazlar
+  not: 'Sümeyra Turan (YÖK): New Atheist Approach to Religious Experience'
+yok-OBIhYk_xv1LyJnun7dbT2w:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ergin Ögcem (YÖK): Ateizm-Deizm Sarkacında Bir Filozof: Antony Flew'
+yok-OIn80AnHxTKrVx_bsAXf9A:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Ergin Ögcem (YÖK): Ateizmden Aklın Tanrı’sına Geçiş (Antony Flew Örneği)'
+yok-OW0VYco2c_iBZp5fyQY9HQ:
+  karar:
+  - dini-tecrube
+  not: 'Mehmet Şükrü Özkan (YÖK): Dınî Tecrübeden Rasyonel İnançlara Ulaşmabağlamında W. P. Alston’un Analojı Temellıteorısı'
+yok-OclNA0prNZEDaGwzYc0EbQ:
+  karar:
+  - din-ve-bilim
+  not: 'İsmail Şimşek (YÖK): Din-Bilim İlişkisi Bağlamında Düşünce Tarihinde Ortaya Çıkan Paradigmalar Üzeride Mülahaza'
+yok-OiD26wEc0VmKSgtAOFxGqA:
+  karar:
+  - dini-pratik
+  not: 'Ali Yıldırım (YÖK): Dini Ritüel Ahlaki Kural İlişkisine Bir Bakış'
+yok-OlLfZTf8N8fV7Lue441VPQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Tuncay Akgün (YÖK): Anthony Kenny’e Göre Tanrı İnancının Rasyonelliği'
+yok-OoGLgI2Jzh9AOEt_NuN3Ew:
+  karar:
+  - olum-ve-otesi
+  not: 'Haydar Dölek (YÖK): Ölümsüzlük Problemi Açısından Tehâfütler'
+yok-OpwzNsylGzb-6bwB86Cgkw:
+  karar:
+  - din-dili
+  not: 'Zeki Özcan (YÖK): Teolojik Hermenötik'
+yok-OtZkmlWClC3CoCg6GjRZ-A:
+  karar:
+  - din-ve-ahlak
+  not: 'İsmail Şimşek (YÖK): Tanrısız Ahlak Ahlaksız Tanrı Mümkün mü?'
+yok-P09Wm0_U2AXd9delDk_r-A:
+  karar:
+  - tanri-tasavvurlari
+  - teizme-yonelik-itirazlar
+  not: 'Aliye Çınar Köysüren (YÖK): Deizm ve Ateizm Üzerine'
+yok-PIYiCAlfdiskPoCmPtpOFg:
+  karar:
+  - insan-tasavvurlari
+  not: 'Yaşar Türkben (YÖK): Platon ve Abdülkerim Amasî’de Ruh Anlayışı'
+yok-PJ84idnx_PqPf_2UTPJpfA:
+  karar:
+  - kotuluk-problemi
+  not: 'Latif Tokat (YÖK): Kötülük Problemi ''Problem'' midir?'
+yok-Pg3tCREVTbYCqMGyKxyQ0A:
+  karar:
+  - kotuluk-problemi
+  not: 'Nusret Taş (YÖK): İhvân-ı Safâ Gözüyle Kötülük Problemi'
+yok-Pmgfo1voVV_Ylh9sYATNSQ:
+  karar:
+  - din-dili
+  not: 'Zeki Özcan (YÖK): Din Dilinin Anlamı'
+yok-Q0TRSfm971vO-pcdt4bqbw:
+  karar:
+  - din-dili
+  not: 'İbrahim Bor (YÖK): Gazali''de Niyetsel Anlam Tasavvuru ve Teolojik Uyarlanışı'
+yok-Q9KbbWV2PlleXbEqv3pHqg:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Demirtaş (YÖK): Wılfred Cantwell Smıth’e Göre İman ve İnancın Mahiyeti'
+yok-QAzstya7ToRU-_mDwYG7gg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'İbrahim Bor (YÖK): Feminen Characterization of The God'
+yok-QFr52GySW6RReqr85CkIaA:
+  karar:
+  - kotuluk-problemi
+  not: 'Hande Nur Bozbuğa (YÖK): Bir Osmanlı Düşünürü Olarak İzmirli İsmail Hakkı ve Kötülük Problemine Karşı Teodise Anlay'
+yok-QPFnNYggGhT2fQwkGxvo6A:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Kemal Batak (YÖK): Doğal Teoloji ve Teistik Argümanların Gücü'
+yok-QltSYWNRSuDyXkk6FMjLeQ:
+  karar:
+  - din-ve-sanat
+  not: 'Latif Tokat (YÖK): Varoluşun Estetik Boyutu ve Din'
+yok-QoE4TwiF_mp_hjJ0G0Xkkw:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Münteha Beki (YÖK): El-Farabi’de Tanrı ve Nihailik'
+yok-QxpXSh7eSnFwP1XA0iodag:
+  karar:
+  - din-ve-bilim
+  not: 'Muhsin Akbaş (YÖK): Pozitivizm: İdeolojik Bilimcilik'
+yok-R4tO2jDdhmZEANEDQbM8Jg:
+  karar:
+  - din-ve-ahlak
+  not: 'Muammer İskenderoğlu (YÖK): Meryem Attar. İslam Ahlakı: İslam Düşüncesinde İlahi Emir Teorisi'
+yok-R6a8jHb8TycU_Ni06iP8GA:
+  karar:
+  - olum-ve-otesi
+  not: 'Muharrem Şahiner (YÖK): İbn Sînâ’ya Göre Ölümsüzlük Ve Âhirette Var Olmanın Mâhiyeti'
+yok-R8bPg1GSUh85XGfQc8fyKw:
+  karar:
+  - dini-cesitlilik
+  - din-epistemolojisi
+  not: 'Mustafa Çakmak (YÖK): Dini Çeşitliliğin Epistemolojisi'
+yok-RBoe2DEVEg1TUIhnO-J1Xg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Sümeyra Turan (YÖK): Fatma Aliye Hanım’ın Tedkîk-i Ecsâm Adlı Eserinde Doğal Teoloji Anlayışı'
+yok-RCp1oFq6K1T5BOmBRLhlgQ:
+  karar:
+  - din-ve-bilim
+  not: 'Sait Kar (YÖK): Bilimsel Gelişmeler ve Teolojik Yansımaları'
+yok-RFUaQh1_ZT70_yPhn65nKg:
+  karar:
+  - olum-ve-otesi
+  not: 'Fatımanur Güçlüer (YÖK): Ölüm Kaygısından Ölümsüzlük Arayışına: Din ve Ahlak Üzerinden Bir Değerlendirme'
+yok-RRItMszmRQj8Ng6-b9UgpQ:
+  karar:
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Islam and Modern Cosmology'
+yok-RSsKYF_q_tJxjORMytUkog:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Münteha Beki (YÖK): Mükemmellik ve Ontolojik Kanıt'
+yok-R_OKFep0OXMm6Jxga2ttCQ:
+  karar:
+  - ozgurluk
+  not: 'Hasan Ocak (YÖK): Tanrı İnsan İlişkisi Bağlamında İnsanın Hürriyeti'
+yok-Rj0bxd2IisP_b-0B0_F2Kw:
+  karar:
+  - insan-tasavvurlari
+  not: 'Muammer İskenderoğlu (YÖK): Fakhr al-Din al-Razi on the Immateriality of the Human Soul'
+yok-RpWamyLOMNn3Bw6bAYTcmQ:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ferhat Yöney (YÖK): The Semantic Case Against Open Theism and Experimental Philosophy'
+yok-RvzgnerwMxZX1rHSYW3Egg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Abdullah Pakoğlu (YÖK): Gâye ve Nizam Delili Işığında Şemseddin Sivâsî nin Gülşen Âbâd İsimli Eseri'
+yok-S93HgGmRFMXEexJkhtu9Vw:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Mümkün En İyi Dünya ve Kötülük'
+yok-SZp5HrA6cHg0mZI10uRVAg:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'İsmail Yalçıntaş (YÖK): Yapay Zekâ, Bilinç ve Özgür İrade Arasındaki İlişkinin Epistemolojik ve Ontolojik Analizi'
+yok-SeojuwK5JNtymHYZJ3ikIQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Delilci Kötülük Problemi'
+yok-Shi4KEfpf1MV_B0-fdy_Cg:
+  karar:
+  - din-ve-ahlak
+  not: 'Elif Nur Erkan Balcı (YÖK): God and Morality: Reconceiving MacIntyre’s Position'
+yok-SpfehU6SqmpV4TwLxbyZSQ:
+  karar:
+  - din-ve-bilim
+  not: 'Mehmet Fatih Kalın (YÖK): Son Dönem İngiliz Filozoflarından Hywel D. Lewıs’e Göre Felsefe, Din ve Bilim'
+yok-SpnCSouCETI2qj6L2HmkNQ:
+  karar:
+  - ozgurluk
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Özel Görelilik, Blok Evren ve Özgür İrade'
+yok-SsYn4CENj0iZVkuardQaQA:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Sümeyra Turan (YÖK): Yeni Ateizm -Christopher Hitchens Bağlamında Bir İnceleme-'
+yok-SxR15sBujh76V672ExfCpA:
+  karar:
+  - insan-tasavvurlari
+  not: 'Ömer Faruk Erdem (YÖK): Mesnevi’de İnsan-ı Kamil Sembolleri'
+yok-TATEWwD_xbOXCS0dPd1RGQ:
+  karar:
+  - din-ve-sanat
+  not: 'Naim Şahin (YÖK): Gazali de Etik Estetik İlişkisi'
+yok-TUeFmIhaKj_KwEfUZ9z8rg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Erol Çetin (YÖK): Deizm Eleştirisi ve Yapılması Gerekenler'
+yok-TWsFfozXx5Z_pKdlZI0YiQ:
+  karar:
+  - dini-tecrube
+  not: 'Mehmet Fatih Kalın (YÖK): Rudolf Otto’da Din Kutsallık ve Mistik Tecrübe'
+yok-TXA_PLO3JO_uGJfdum-dcA:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Hasan Tanrıverdi (YÖK): Vahdet i Vücûd Panteizm Karşılaştırması'
+yok-TZlMq6cg0HvRzHprGZt9CA:
+  karar:
+  - din-epistemolojisi
+  not: 'Naim Şahin (YÖK): Bir Bilgi Kaynağı Olarak Kur an da Akıl'
+yok-TfoHoK-am3TqvvlHqGtsUw:
+  karar:
+  - kotuluk-problemi
+  not: 'Gülsüm Turhan (YÖK): Kötülük Sorunu'
+yok-TmO0ZYzHSj-AWdT38mtJDQ:
+  karar:
+  - kotuluk-problemi
+  not: 'Hikmet Çamcı (YÖK): Peygamber Ailesinden Günümüz Aile Sorunlarına Çözümler: Kötülük Problemi Bağlamında Felsef'
+yok-U93-s44kMHel1lKIC5Je0w:
+  karar:
+  - ozgurluk
+  not: 'İsmail Şimşek (YÖK): Tanrı, Özgürlük ve İnsan Edimi'
+yok-UDMvYC1P99EpcNx4lAhaJQ:
+  karar:
+  - tanrinin-sifatlari
+  - tanri-tasavvurlari
+  not: 'Emine Gören Bayam (YÖK): Açık Teizme Göre Tanrı nın Her Şeyi Bilmesi Meselesi'
+yok-UGIxd8SCPl3dyvVYGNH0FQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Hasan Tanrıverdi (YÖK): Modern Truva Atı: Dinsel Çoğulculuk -Eleştirel Bir Yaklaşım-'
+yok-URfPKzEiLQ9tV_IRC4cFUA:
+  karar:
+  - ozgurluk
+  not: 'Mehmet Ulukütük (YÖK): Çağdaş Dönemde Kaderciliği Savunmak Mümkün müdür'
+yok-UZmee-En6_YGAcVLIjeM6A:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Kelly James Clark (YÖK): Atheism and Inferential Bias'
+yok-Ukd7G3FQEThfmZw5bvUqnA:
+  karar:
+  - din-epistemolojisi
+  not: 'İsmail Şimşek (YÖK): Fideizmden Rasyonalizme İmam-ı Azam Ebu Hanife''inin İman Anlayışı'
+yok-V6d08LM13q4JME9Rk0et5g:
+  karar:
+  - tanri-tasavvurlari
+  - teizme-yonelik-itirazlar
+  not: 'İsmail Yalçıntaş (YÖK): Türkiye''de Gençlerin Deizm ve Ateizme İlgi ve Merak Duyma Sebepleri'
+yok-VAxELGYIHI5oPPKtRYpyvw:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): Rumi on Evil and Suffering'
+yok-VRgUvMZ1iqJflpONVWpJNg:
+  karar:
+  - din-epistemolojisi
+  not: 'Hasan Tanrıverdi (YÖK): İbn Haldun un Vahiy Anlayışı'
+yok-V_wG8-Qp0tD3O2F7yercuQ:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Nurullah Aydın (YÖK): Zaman ve Zamansızlık: Tanrı''nın Varlığı Özelinde Bir İnceleme'
+yok-VacL41plco1krXjPc7wIjA:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  - din-ve-bilim
+  not: 'Gülsüm Turhan (YÖK): Din, Bilim ve Yapay Zekâ (Aşkın İnançlar ile Yapay Zekânın Felsefi ve Teolojik Sınırları)'
+yok-VbPLAnTTkUnHS3CNR9CIOA:
+  karar:
+  - din-ve-sanat
+  - olum-ve-otesi
+  not: 'İsmail Şimşek (YÖK): Dinin Estetik Boyutu (Tanrı, Ruh ve Ölüm/Felsefi Bir İnceleme)'
+yok-Ve_MsSosODnDLsdcb_ikEg:
+  karar:
+  - din-dili
+  not: 'İbrahim Bor (YÖK): İlahî Kelam ın İmkân ve Tabiatı'
+yok-VwW1lDWER80e4Mye-twcLg:
+  karar:
+  - din-ve-ahlak
+  not: 'Ferhat Yöney (YÖK): Theism and Consequentialist Ethics'
+yok-WBadnqwm2LvyoArmtMnjKg:
+  karar:
+  - din-epistemolojisi
+  not: 'Aliye Çınar Köysüren (YÖK): Leibniz’de İman-Akıl İlişkisi'
+yok-WNjyRgiCU3CmnBDlm2U1Ig:
+  karar:
+  - olum-ve-otesi
+  not: 'Gülsüm Turhan (YÖK): Biyolojik Ölümsüzlük ve Etik Sorunlar: Ölümsüz Aile Romanı Üzerinden Bir Analiz'
+yok-WWglFrzk4h7G_8z7CjV2AA:
+  karar:
+  - ozgurluk
+  not: 'Sait Polat (YÖK): Felsefe Kelam Açısından Kur''an''da İnsan Hürriyeti'
+yok-Wy2S1sJCeTwITjyRsKsQzA:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Akif Altunışık (YÖK): Dinî Agnostisizm Üzerine Bir Değerlendirme & An Evaluation on Religious Agnosticism'
+yok-XL5HZh8JSmXpGaExPNPUXA:
+  karar:
+  - kotuluk-problemi
+  not: 'İsmail Şimşek (YÖK): Kötülük Probleminin İmtihan Olgusu Bağlamında Araçsallaştırılması'
+yok-XM03ZrLAP9K5DGY3cqli6w:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Mehmet Fatih Kalın (YÖK): Ebu’l-Hasan el-Harakânî’de Varlık-Allah İlişkisi'
+yok-XNJdU1MPDnoBdhxY6UEBAg:
+  karar:
+  - din-epistemolojisi
+  not: 'Bülent Sönmez (YÖK): Peygamber ve Filozof'
+yok-XQNWHzxhLwa6QgNESj7gdA:
+  karar:
+  - olum-ve-otesi
+  not: 'Muhsin Akbaş (YÖK): Yahudi ve Hıristiyan Düşüncesinde Ölüm Sonrası Hayat ve Diriliş İnancının Dini ve Teolojik'
+yok-Xp3McmpMpGbqM81sqTXuSQ:
+  karar:
+  - din-ve-ahlak
+  not: 'Gülsüm Turhan (YÖK): Paul Tıllıch''te Temel Dini-Ahlaki Kavramların Çözümlemesi ve Din Ahlak İlişkisi'
+yok-XpaOI1gHxkiu3ZOXUer2pA:
+  karar:
+  - din-epistemolojisi
+  not: 'Yaşar Türkben (YÖK): Richard Swinburne''ün Vahiy Anlayışı'
+yok-Xq9s6FUTkB-Zc9fb2vumOA:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Muharrem Şahiner (YÖK): Plotinusçu Taşma Teorisinin İslam Geleneğine Entegrasyonu Bağlamında İbn Sînâ’da İnâyet Ka'
+yok-XsdQLR09sAC4-lIhNnjC4Q:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Süleyman Altın (YÖK): Kozmolojik Argüman ve Yeter-Sebep İlkesinin Mahiyeti'
+yok-XuerYL2GPBazcTjKfT33Hw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'İsmail Şimşek (YÖK): Âşık Paşa nın Garib Nâme sinde Tanrı-Evren-İnsan İlişkisi'
+yok-Y27bqfbQCCnWvgTegNsfrg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Chrysi Sidiropoulou (YÖK): St Anselm s Ontological Argument Riddle or Game'
+yok-YAJfVhyp4vyeIr_s1TCroQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Gülşen Yaylı (YÖK): İnanma İradesi'
+yok-YErUvsUNnE4n_QI4lxNWJw:
+  karar:
+  - insan-tasavvurlari
+  not: 'Chrysi Sidiropoulou (YÖK): A Soul in Space and Time What Kind of Unique Self'
+yok-YTBkRynworE0ODG5Ae1NEQ:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Halis Çavuşoğlu (YÖK): Din ve İnsan Bağlamında Deizm'
+yok-YX39IgStNHR1AKajcqHz5w:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-sanat
+  not: 'İsmail Şimşek (YÖK): Tanrı’nın Varlığının Delili Olarak Güzellik Kanıtı'
+yok-Yf6JsRnt1kAZsqn86tWWRg:
+  karar:
+  - ozgurluk
+  not: 'Yaşar Türkben (YÖK): Spinoza ya Göre Tanrı ve İrade Özgürlüğü'
+yok-YtrY6c4WRavz7okTlJ7jig:
+  karar:
+  - tanrinin-sifatlari
+  not: 'İsmail Yalçıntaş (YÖK): İbn Sînâ Gerçekten Tanrı’nın Tikelleri Bilmediğini mi Savunmaktadır? Dezenformasyon Bağlam'
+yok-Yxq5Uzb58XGws5m9qN2kog:
+  karar:
+  - insan-tasavvurlari
+  not: 'Ömer Faruk Erdem (YÖK): Sadreddin Konevi’de İnsan-ı Kâmil Anlayışı ve Medeniyete Etkileri'
+yok-Z004w5HALJei6TfLyHvHuw:
+  karar:
+  - din-epistemolojisi
+  not: 'Ergin Ögcem (YÖK): Theoretical and Practical Reasons for Distancing from Faith (I)'
+yok-ZEZOdSH2y1uNaqUT1KLvWQ:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Emine Gören Bayam (YÖK): Sürekli Yaratma: Kelâm Atomcuları ile Kartezyen Filozoflar Arasında Bir Karşılaştırma'
+yok-ZHhcqK_cz4Vk7E2JoTja_g:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Tuncay Akgün (YÖK): İbn Rüşd e Göre Yaratma'
+yok-ZKeC2H3-V7fTjG07FPe2Dw:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatma Yüce (YÖK): Din Felsefesi Literatüründe Kuşbakışı Bir Gezinti'
+yok-ZUqMOwy-0BpDjyc14UJVKA:
+  karar:
+  - ozgurluk
+  not: 'Hasan Ocak (YÖK): Hürriyet Problemi Bağlamında İnsan Fiillerindeki Temel Dinamiklerin Farabi Felsefesindeki '
+yok-Zp2w9WhxjYTYVIFqMY9pjA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Hasan Ocak (YÖK): Deizme Yönelimin Bir Sebebi Olarak Modern Dünyada Geleneksel İslam: Bir Özeleştiri Denemes'
+yok-_-3YTaGDLFnRyr7iO8cLkg:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'İsmail Şimşek (YÖK): Düşünce Tarihinde Varoluşa Dair Yaratma Teorileri'
+yok-_6_mRHdkXtyz-oH6BTxrtw:
+  karar:
+  - din-epistemolojisi
+  not: 'Osman Murat Deniz (YÖK): Fideizm Nedir? Teolojik ve Felsefi bir Değerlendirme'
+yok-_KYkgnoqpLBqVe1DQxOdeg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Enis Doko (YÖK): Classical Theism: New Essays on the Metaphysics of God'
+yok-_NOyEanNv10SrT_FLuU7hA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Münteha Beki (YÖK): Tanrı ve Mükemmellik'
+yok-_fapNcwD3iFgikDSZC_LEA:
+  karar:
+  - din-dili
+  not: 'Mehmet Ulukütük (YÖK): Dilin Kutsallığından “Kutsal Dilin Yıkımı”na: İslam Düşüncesinde Anlam Problemi'
+yok-_jmGeGQWLMq5bZitb-SSJg:
+  karar:
+  - din-epistemolojisi
+  - tanri-tasavvurlari
+  not: 'Mehmet Akif Altunışık (YÖK): Deizmin Meydan Okumalarına Karşı İslam Düşüncesinin Sorun Çözme Kabiliyeti: Yeni Bir Nübüv'
+yok-_nFO16KNJkoZsow7PAQ7yg:
+  karar:
+  - teizme-yonelik-itirazlar
+  - din-epistemolojisi
+  not: 'Fatma Nur Ağca (YÖK): Ateizm ve Delilcilik'
+yok-_wOO3lKXszJlo5E0N9mTww:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Fatma Yüce (YÖK): Freud''un Din Yanılsaması'
+yok-a1TDLcE0K3N52gT2zNWwrQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Yıldız (YÖK): Teizm, Natüralizm ve Kötülük: Draper’in Kötülük Argümanları'
+yok-a7gnOVDf4u0HDoe8K6wAKA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Emine Gören Bayam (YÖK): Açık Teizmin Geleneksel Tanrı Tasavvuru ve Süreç Teizmi ile İlişkisi'
+yok-a8mb9elh0rUzBVhPYN7h0A:
+  karar:
+  - din-dili
+  not: 'Ergin Ögcem (YÖK): Din Dilinin Mantıki Statüsü Üzerine Bir Değerlendirme'
+yok-aE2RIenGgb67y7LtAugGjQ:
+  karar:
+  - din-dili
+  not: 'Ergin Ögcem (YÖK): Mantıkçı Pozitivizm ve Din Dili'
+yok-aEDfp_-AHON8sdMcw_4rVQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Şükrü Özkan (YÖK): Yeni Ateizmde Din Eleştirisi'
+yok-aMTd-gxRDRhZlFq_mmF0yA:
+  karar:
+  - kotuluk-problemi
+  not: 'Ahmet Bayındır (YÖK): Koronavirüs (Covid-19) Süreci Bağlamında Kötülük Problemine “Holistik Bakış” ve “‘Sözde Pr'
+yok-aOkvudwcWKujxANFS8OxyA:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Abdullah Pakoğlu (YÖK): Yükselen Çevre Bilinci ve Klasik Delillerin Yeniden Tasnifi'
+yok-aRe-l4sUmZeiwtOPnMaNyA:
+  karar:
+  - din-ve-ahlak
+  not: 'Ahmet Bayındır (YÖK): Ahlakın Sekülerizm İle Sınavı'
+yok-agU8b8qf5eosTFbsvMVFvA:
+  karar:
+  - din-epistemolojisi
+  not: 'Bülent Sönmez (YÖK): İnanç Ve Dogma'
+yok-azn47uUXgkDnt8GNFyuXxQ:
+  karar:
+  - insan-tasavvurlari
+  not: 'Chrysi Sidiropoulou (YÖK): Platonik dualizm ve ruh bir yaklaşım denemesi'
+yok-b5J591ky-Meyo0sPWFHdIg:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): Yahudi Düşüncesinde Holocaust ve Tanrı'
+yok-bdLdgSi1SrDUkmrDHbXHZQ:
+  karar:
+  - olum-ve-otesi
+  not: 'Muhsin Akbaş (YÖK): Kişisel Kimlik ve Ölüm Sonrası Hayat'
+yok-bdetQrLogvyPemj-4jZrdA:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Celal Büyük (YÖK): Ebu Hanife’nin İlahi Sıfatlar Problemine Yaklaşımı'
+yok-bmrRz0Y5yzCH7tKzCQR0TA:
+  karar:
+  - din-epistemolojisi
+  not: 'Hasan Tanrıverdi (YÖK): Immanuel Kant ın İman Anlayışı'
+yok-buZ2TT4fbqC17D7wpOluJg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Türkiye’de Din Felsefesi'
+yok-cDFc_Vc7nwn4bAg81tFOwQ:
+  karar:
+  - din-ve-ahlak
+  not: 'Semra Tüfenkci (YÖK): İslam Ahlakı İslam Düşüncesinde İlahi Emir Teorisi'
+yok-cDp-of5ufOeTrAeMSHbV-A:
+  karar:
+  - din-ve-ahlak
+  not: 'İsmail Şimşek (YÖK): Teolojik Ahlakın İmkânı'
+yok-cOICl7NrmLzlz21EgXSQFQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Necmettin Tan (YÖK): Kömürcünün imanı'
+yok-cWllxljEl5rF6HgvQicgRg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Emine Gören Bayam (YÖK): Türkiye’de İlahiyat Fakültelerinde Din Felsefesi Dersi ve Analitik Din Felsefesi Geleneği'
+yok-cf5IkVRM91YFltpkd0w4qw:
+  karar:
+  - din-ve-ahlak
+  not: 'Enis Doko (YÖK): Allahsız Ahlak Mümkün mü?'
+yok-cgj1t2RW_3q56YHaVU3Gyw:
+  karar:
+  - tanri-tasavvurlari
+  - tanrinin-sifatlari
+  not: 'Münteha Beki (YÖK): Klasik ve Neoklasik Teizmde İlahi Mükemmellik'
+yok-cgoJd9Ev5n10xVF1k96ZYw:
+  karar:
+  - kotuluk-problemi
+  - tanrinin-sifatlari
+  not: 'Hatice Kübra Ömeroğlu (YÖK): Çağdaş Filozofların Teodiselerinde Tanrı''nın Kudreti Meselesi'
+yok-ckHmLGdFTGLYXQ_MiH8HHg:
+  karar:
+  - din-epistemolojisi
+  not: 'Ferit Uslu (YÖK): Hegel’de Din-Akıl İlişkisi'
+yok-coVTF7NRcAIlJ8gSofD9jw:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): Kötülük Problemi Yeniden Kimin İçin Nasıl Bir Problem'
+yok-cxqIYNaWsrNHFH8lZZswWA:
+  karar:
+  - kotuluk-problemi
+  - teizme-yonelik-itirazlar
+  not: 'Ergin Ögcem (YÖK): Kötülük Problemi Ateizmin Meşruiyeti İçin Bir Gerekçe Oluşturabilir mi?'
+yok-d0_tJNwHfiLdRTAt3Rogpw:
+  karar:
+  - din-ve-bilim
+  not: 'Süleyman Altın (YÖK): Theism versus Naturalism in Terms of the Explanation of History'
+yok-d55cm_QFvslKari7qCCKWA:
+  karar:
+  - ibadet
+  - yapay-zeka-ve-teknoloji
+  not: 'Hikmet Çamcı (YÖK): Dijital Çağda İbadetin Ritüele Dönüşmesi Sorunsalına Din Felsefesi Bağlamında Eleştirel Bi'
+yok-d5WOnSil_RquWHO2pf-WCg:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Çakmak (YÖK): (Çeviri) Tek Bir Gerçek Din mi Vardır? Evrensel Kriteri Tespit Etme Konusunda Bir Değerlen'
+yok-d9xXWFKsHvT8Oyg5Kbn4OA:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Fatımanur Güçlüer (YÖK): Transhümanizm Bağlamında Biyoteknolojik Gelişmelerin Aile Kavramı ve Ahlâkî Değerler Üzeri'
+yok-dOf9EWLh-3MUm9f6j6GTHg:
+  karar:
+  - din-ve-ahlak
+  not: 'Ferhat Yöney (YÖK): Theism and Consequentialist Ethics'
+yok-dVkfJ4CMLC6xfT6wn77cYA:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'İsmail Şimşek (YÖK): Din Felsefesi'
+yok-dYn4uBNTTC0ntDS_Xm2xXQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Hasan Ocak (YÖK): Apateizm/Dini İlgisizlik Bağlamında Gençlik ve Din: Felsefi Bir Soruşurma'
+yok-dlb7pCPqGQ2mZcITY3wgfQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'İsmail Şimşek (YÖK): Ataizmden ATEİZME Tanrı ve Yanılgılar'
+yok-dm-SbvwrvOifEfjnR7g-Mw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Muharrem Şahiner (YÖK): Malebranche’da Bilimsel Bilginin Temeli: Yaratmada Birşekillilik'
+yok-dpLQ559uZFAh2reTtvzw5A:
+  karar:
+  - ozgurluk
+  not: 'Ergin Ögcem (YÖK): Nihai Gerçeklik Tasavvurları Bağlmında Özgürlük Problemi'
+yok-dsSzxbB6oW317cKYdh1w6w:
+  karar:
+  - din-dili
+  not: 'Ergin Ögcem (YÖK): Bir İletişim Sorunu Olarak Din Dili (Dinin Aktarımında Kullanılan Dil ve Sorunlar)'
+yok-dxB1ya99AkaJWUZo5uq2NA:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Mehmet Demirtaş (YÖK): Tanrı-Âlem İlişkisi'
+yok-eJ6DnE2qv53Iw-OnKmmP_g:
+  karar:
+  - din-dili
+  not: 'Ali Yıldırım (YÖK): İlahi Dil: Tanrı''nın Konuşması'
+yok-eMaR8r2GKrYUvUIhRR1CNg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Fatma Yüce (YÖK): Deizmden Teizme: Tanrı-Din-İnsan'
+yok-eOW0QiJzpNpaF9xpBpsGfw:
+  karar:
+  - din-epistemolojisi
+  not: 'Ömer Faruk Erdem (YÖK): William James''te İnancın Rasyonelliği'
+yok-eWJK30tqC-uIwR4FgPxGuQ:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Hasan Ocak (YÖK): Farabi Felsefesinde Bazı İlahi Sıfatların Hürriyet Problemi Açısından Analizi'
+yok-eYk_nDDruoLVvNXzoZTn7Q:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatma Yüce (YÖK): Klasik ve Çağdaş Konularla Din Felsefesi I'
+yok-ee_wU22S5EVoLVoM0dt6Tg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Celal Büyük (YÖK): Hayatın Anlamı Bağlamında Teizm ve Ateizm'
+yok-egWK2P3G54l6JVUlobUh9Q:
+  karar:
+  - dini-tecrube
+  not: 'Fatımanur Güçlüer (YÖK): Aynı Tanrı, Farklı Tecrübeler: Dinî Tecrübenin Öznelliği ve Epistemik Değeri Üzerine Bir İ'
+yok-eq0zO41ZaWtBVEeZuPFaKg:
+  karar:
+  - din-ve-ahlak
+  not: 'Ergin Ögcem (YÖK): İslam Tasavvurunda Ahlakın Kaynağına Dair Bir Soruşturma'
+yok-et4-hkhv1jpCkVcHe5KLWg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - tanri-tasavvurlari
+  not: 'Enis Doko (YÖK): Multiverse and Theism'
+yok-f46LINsjJv22M-z4qKGjXA:
+  karar:
+  - din-epistemolojisi
+  not: 'Aliye Çınar Köysüren (YÖK): İbn Rüşd Düşüncesinde Rasyonel Teoloji ve Akıl'
+yok-fTgQKDBdwrcaBP88-do4Hg:
+  karar:
+  - din-ve-ahlak
+  not: 'Aliye Çınar Köysüren (YÖK): Din, Ahlak ve Gelenek'
+yok-fVM1isOVLWSuZYb8aVnhRg:
+  karar:
+  - kotuluk-problemi
+  not: 'Hasan Ocak (YÖK): Hadislerde Geçen Hayır Ve Şer Kavramlarının İslâm Düşüncesindeki Yansımaları'
+yok-fVOHEslEIG9eAamIXFInnQ:
+  karar:
+  - insan-tasavvurlari
+  not: 'Emine Gören Bayam (YÖK): Çağdaş Zihin Felsefesinde Materyalizmin Ruha Bakışı: Paul Churchland’ın Zihin Görüşü Üzeri'
+yok-fXv5RCBKwrmex-NN55mEHA:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Mehmet Ulukütük (YÖK): Yapay Zekânın Hermeneutik Teşrihi/Eleştirisi Yapılabilir mi?'
+yok-fnq_BfQO-oiO6eHPyzaVXQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Tuncay Akgün (YÖK): Karl Jaspers de İmanın Felsefi Temelleri'
+yok-fpm51Z5c1GScR6SpVwVMkg:
+  karar:
+  - kotuluk-problemi
+  not: 'İbrahim Bor (YÖK): Kötülük Sorunu ve Kantçı Negatif Teodise'
+yok-gB7AZZLVS_l1xKMHsVC94A:
+  karar:
+  - din-epistemolojisi
+  not: 'Naim Şahin (YÖK): Kur an ı Kerim de Akıl ve Aklın Değeri Meselesi'
+yok-gWubSOb5_sUuAUG279uCFg:
+  karar:
+  - din-epistemolojisi
+  not: 'Sait Kar (YÖK): John Toland’da Aklın Vahiy Üzerindeki Hakimiyeti'
+yok-giigtEx6MB__nu6ygFj5Wg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Latif Tokat (YÖK): The Analysis and Critique of Modern Western Worldview from the Concept of God and Human'
+yok-h34kZNrQeJI6rs5TNN1p-g:
+  karar:
+  - din-ve-bilim
+  - tanrinin-varliginin-delilleri
+  not: 'Mehmet Demirtaş (YÖK): Fizik Bilimin Işığında Tanrı’nın Varlığı'
+yok-hCGtbllCXx4g88R4ATOsLQ:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ergin Ögcem (YÖK): Tanrı’ya Dair Tasavvurlardan Birisi Olarak Deizm ve Eleştirisi'
+yok-hjZJzRS8O8aATv6bsFLQWQ:
+  karar:
+  - din-dili
+  - tanri-tasavvurlari
+  not: 'Asım Kaya (YÖK): Çağdaş Din Felsefesi Açısından Zemahşeri''de Din Dili ve Tenzîhî Tanrı Tasavvuru'
+yok-hlWWur3wAQSsYIqKBL20rw:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Habib Şener (YÖK): John Locke’un Mucize Anlayışı'
+yok-hyT3wxV3zxeKMpivR0GvJQ:
+  karar:
+  - din-ve-bilim
+  - tanri-tasavvurlari
+  not: 'Süleyman Altın (YÖK): Bilimdeki İlk Neden ile Teistik Tanrı Tasavvuru Arasındaki Boşluk Üzerine Bir İnceleme'
+yok-i2Ud4DeTI66jWpo20B8KSg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Ferit Uslu (YÖK): Düzen ve Gaye Delili Üzerine Bir Analiz'
+yok-i2oe4f0tPd0HYNm77f87fw:
+  karar:
+  - tanrinin-varliginin-delilleri
+  - din-ve-bilim
+  not: 'Aykut Alper Yılmaz (YÖK): Kelam Kozmolojik Argümanın Felsefe-Kelam ve Bilim İlişkisi Bağlamında Bir İncelemesi'
+yok-iW2Pm2ezYdhCU7CrQchRXg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Erol Çetin (YÖK): Günümüz Dünyasında Din Felsefesinin Yeri ve Önemi'
+yok-ieOHG2escI86VGxRyeskFg:
+  karar:
+  - insan-tasavvurlari
+  not: 'Sevcan Öztürk (YÖK): Felsefi Teolojide Antroposentrik Dönüş: Teolojik Antropolojiye Bir Giriş'
+yok-it58-ICXHr-6m6SvsaFQeQ:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  not: 'Hasan Tanrıverdi (YÖK): İlahî İlim İnsan Hürriyeti İlişkisi'
+yok-jCM9IHA-eOQjKXVus1NKhw:
+  karar:
+  - din-dili
+  not: 'Hanifi Laçin (YÖK): Gadamer Hermenutiğinde Fark Kavramının Kurucu Rolü ve Teolojik Hermeneutik Açısından Değer'
+yok-jTeQYBcRMPqDG_qwFkOf0A:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Ali Yıldırım (YÖK): Divine Omnipresence and Incorporeality of God'
+yok-jiLLkykeVfwNfgOHtjp5Ww:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Fatma Nur Ağca (YÖK): Modern Ateizmin Oluşumunda Hristiyan Teolojisinin Etkisi'
+yok-jviai1Z-qdYDjPZsl9sVWg:
+  karar:
+  - kotuluk-problemi
+  not: 'Ergin Ögcem (YÖK): Kötülük Bağlamında Geliştirilen Teodiselerin Gücüne Dair Bir Tartışma'
+yok-jxBhurWofjZuTGFCIWYq2Q:
+  karar:
+  - insan-tasavvurlari
+  not: 'Aykut Alper Yılmaz (YÖK): Günümüzde Ruh-Beden Düalizmine Yöneltilen Eleştiriler ve Alternatif Bir Düalizm Olarak Zuh'
+yok-k2BmQYvDx8_gUQ9BFiussg:
+  karar:
+  - din-epistemolojisi
+  not: 'Osman Murat Deniz (YÖK): John Calvin''in İman Anlayışı'
+yok-k7yeZOrxy0NouD9eArd8sA:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Habib Şener (YÖK): Dâvûd-i Karsî’nin “Risâle fî Beyâni Sıfâtillahi Teâlâ” Adlı Risâlesi Bağlamında Düşünce Ta'
+yok-kAVUWHUx3LJBQHAMxirX7A:
+  karar:
+  - din-epistemolojisi
+  not: 'Hasan Tanrıverdi (YÖK): İnancın Rasyonelliği Sorunu'
+yok-kHMwA6ur1SGTSeH2thc-Rw:
+  karar:
+  - tanrinin-sifatlari
+  - tanri-tasavvurlari
+  not: 'Ali Yıldırım (YÖK): Mehmet Akif Ersoy’un Tanrı Anlayışında Allah’ın İsim ve Sıfatları'
+yok-kaZICVF6bvH0QQZlA8X1Eg:
+  karar:
+  - din-ve-bilim
+  not: 'Osman Zahid Çifçi (YÖK): Çocuklar ‘Sezgisel Tanrıcı’mıdır? Doğada Amaç ve Tasarım Hakkında Akıl Yürütme'
+yok-kfrXguBxf0_FluFno0TGJQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Mehmet Şükrü Özkan (YÖK): Dini Çeşitlilik Karşısında Hıristiyan Düşünürlerin Cevapları ve Tipoloji Problemi'
+yok-kpstPO4yK0uGbN_LxDweEQ:
+  karar:
+  - din-ve-bilim
+  - tanri-alem-iliskisi
+  not: 'Enis Doko (YÖK): Modern Bilim ve Felsefe Açısından Evreni Yoktan Yaratma'
+yok-ktJenQHCUBIPTK0LDzmN-w:
+  karar:
+  - insan-tasavvurlari
+  not: 'Aykut Alper Yılmaz (YÖK): Günümüzde Ruh-Beden Düalizmine Yöneltilen Eleştiriler ve Alternatif Bir Düalizm Olarak Zuh'
+yok-kwNWQ41J4KFgRw3Inmb-zw:
+  karar:
+  - din-ve-ahlak
+  - tanrinin-varliginin-delilleri
+  not: 'Enis Doko (YÖK): Ahlak Argümanı, Ahlaki Anlaşmazlıklar ve Evrim Teorisi'
+yok-l8G68gV2FPZa7iYYUhzc2g:
+  karar:
+  - tanri-tasavvurlari
+  - tanrinin-sifatlari
+  not: 'Ergin Ögcem (YÖK): Tanrının Bazı Sıfatları Bağlamında Deizmin İmkanına Dair Bir Analiz'
+yok-lWabBra-XacD724K7LpjoA:
+  karar:
+  - kotuluk-problemi
+  not: 'Yaşar Türkben (YÖK): İbn Sina ve Thomas Aquinas ta Kötülük Problemi'
+yok-lXE1qgdcuHMMpzBYUXFe2g:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Hüsamettin Yıldırım (YÖK): Tanrı Anlamlı Hür Müdür'
+yok-lY7iGRjFUcpj0qoJySVz_g:
+  karar:
+  - din-epistemolojisi
+  not: 'Hasan Tanrıverdi (YÖK): Mâtürîdî, Kâdî Abdülcebbâr ve İbn Rüşd''de Akıl-Vahiy İlişkisi'
+yok-lb5FCfMNpaZfmfeK6AeVTw:
+  karar:
+  - dini-cesitlilik
+  not: 'Sait Kar (YÖK): Günümüz Gençlerinin Dine Bakışı: Dışlayıcılık ve Çoğulculuk Bağlamında Tecrübi Bir Araştır'
+yok-lh6EewdfUxAqxB26m_a3zQ:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Tuncay Akgün (YÖK): Felsefi Düşüncede Yaratma Problemi'
+yok-lo4M0Np2lwaRLPkMxoJ55Q:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Dinde Sembolizm'
+yok-mBrWJ_b-lhCWdYJBOuFFrw:
+  karar:
+  - dini-cesitlilik
+  not: 'Sait Kar (YÖK): Dini Çoğulculuk ve Dinler Arası Diyalog Fikrinin İslam a Hegemonyası'
+yok-mCnA2souKDrzDHcfx_hgdg:
+  karar:
+  - din-epistemolojisi
+  not: 'Hatice Kübra Ömeroğlu (YÖK): İnanma Üzerine Felsefi Bir Karşılaştırma: Clifford''ın İnanma Ahlakı ve James''in İnanma İra'
+yok-mDeShtawyiHae-wYW9Dl4A:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Abdullah Kartal (YÖK): Mucizelere İnanmanın Rasyonelliği Üzerine'
+yok-mFpPFtv6-Vfpo3ab6S6goQ:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Hüsamettin Yıldırım (YÖK): Batı Düşüncesinde İlahi Hürriyet Problemi'
+yok-mM1eLViImP8W9RBifim1Hg:
+  karar:
+  - kotuluk-problemi
+  not: 'İsmail Şimşek (YÖK): Mutahhari Düşüncesinde Kötülük Sorunu'
+yok-mSlsv5BelV_PHK9_3iTkQw:
+  karar:
+  - din-ve-ahlak
+  not: 'Elif Nur Erkan Balcı (YÖK): Robert M. Adams’ın “Düzeltilmiş” İlahi Emir Teorisinin Maturidi İzleri'
+yok-mdwHjQpA_wxs-yEOSc4-xg:
+  karar:
+  - din-ve-bilim
+  - teizme-yonelik-itirazlar
+  not: 'Kemal Batak (YÖK): Naturalizm Çıkmazı Dennett ten Dawkins e Yeni Ateizm in Felsefî Temelleri ve Teistik Eleşt'
+yok-mirhvN-4dKCbULAAOBMfbQ:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Yaşar Türkben (YÖK): Esirüddin Ebheri’ye Göre Tanrı’nın Sıfatları'
+yok-mzJCylrPOnyUXTwR0Boagg:
+  karar:
+  - kotuluk-problemi
+  not: 'Aliye Çınar Köysüren (YÖK): Leibniz''de Kötülük Problemi ve Teodise'
+yok-nD1rK3cyXzPJbKovhBEBog:
+  karar:
+  - ozgurluk
+  not: 'Hasan Ocak (YÖK): Yaratılış Kavramı Çerçevesinde İnsan ve İnsanın Özgürlüğü'
+yok-nLTVkvEPCVpxuDEU8rLu1A:
+  karar:
+  - ibadet
+  not: 'Sait Kar (YÖK): Truth claims and worship: An analysis from the perspective of the philosophy of religion'
+yok-nkNFZYzKMzfhxQl_UPyWHw:
+  karar:
+  - din-epistemolojisi
+  not: 'Haydar Dölek (YÖK): İhvân-ı Safâ Risâlelerinde İman Kavramı'
+yok-nmjZTcwlizaO95mjk-H2MA:
+  karar:
+  - din-ve-bilim
+  not: 'Zeki Özcan (YÖK): Din Bilim Yazıları I'
+yok-nnIRzrJz8HY_EmWqbsLE0g:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'İsmail Şimşek (YÖK): Din Felsefesi Kavramlar Sözlüğü'
+yok-nw5F5FslP-Uud8Avua7q7w:
+  karar:
+  - din-dili
+  - din-ve-ahlak
+  not: 'Ali Yıldırım (YÖK): Din Dilinin Ahlaki Yorumu'
+yok-nytsPL4HazLtVh5M7XX4GQ:
+  karar:
+  - dini-cesitlilik
+  not: 'İbrahim Yıldız (YÖK): Religious Pluralism and Islam: A Critical Thought on Pluralistic Views in Islam'
+yok-o-guqLis3IKLBofX57p0uw:
+  karar:
+  - kotuluk-problemi
+  not: 'Muhsin Akbaş (YÖK): Modern Islamic Theodicy'
+yok-o2jqdQMb5-kvlNW6VgeDMw:
+  karar:
+  - dini-tecrube
+  not: 'Erol Çetin (YÖK): Dini Tecrübenin İnsan Hayatını Yönlendirmedeki Rolü ve Önemi'
+yok-o9Jtkn6wPSsBykjDFrxfVw:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'İsmail Şimşek (YÖK): Yeni Başlayanlar İçin Din Felsefesi'
+yok-oC_gnZ7n7NFmWB429wFq4A:
+  karar:
+  - insan-tasavvurlari
+  not: 'İsmail Şimşek (YÖK): İbn Kayyim el-Cezviyye Düşüncesinde Ruh Beden Dualizmi ve İnsan'
+yok-oGtIiHiZrXgK-78DDyWJBQ:
+  karar:
+  - dini-tecrube
+  not: 'Fatma Yüce (YÖK): Is it possible to equate Sufism with Islamic mysticism? A Conceptual and Theoretical Evalu'
+yok-oYDMCeXhx_HyDYRhRIhORw:
+  karar:
+  - din-ve-ahlak
+  not: 'Tuncay Akgün (YÖK): Bertrand Russell ve Nurettin Topçu da Ahlâkın Ontolojik Kaynağı ve Epistemolojik Değeri Ba'
+yok-ofYSCUquRMHCvFlXkyKOAQ:
+  karar:
+  - tanrinin-sifatlari
+  not: 'İbrahim Bor (YÖK): Tanrı''nın Mahiyeti ve Basitlik Sorunu'
+yok-p-V0Zd8bzwVE3wbTZ8T6BQ:
+  karar:
+  - ibadet
+  not: 'Emine Gören Bayam (YÖK): Platon''un Diyaloglarında Dua Anlayışı'
+yok-p0AdDJFaLGsj8Gwb-i__Ig:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Enis Doko (YÖK): Does Fine-Tuning Need an Explanation?'
+yok-p0c35TES4cBviqGqDj6nqw:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Aykut Alper Yılmaz (YÖK): Simulation Hypothesis and Theism: An Assessment in the Context of Multiverse'
+yok-pbpVeMwuK_a2G5CK3vdydg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Hasan Ocak (YÖK): Yaratılış Gerçeği ve Ateizm: Temel İddialar ve Yanıtlar'
+yok-q32muptHhhmNA-24iAbS3w:
+  karar:
+  - yapay-zeka-ve-teknoloji
+  not: 'Mehmet Şükrü Özkan (YÖK): Transhümanizm Felsefesi: Dinin ve Metafiziğin Dönüşümü'
+yok-q6ulpa8F4x7ikJjOXaryew:
+  karar:
+  - tanri-tasavvurlari
+  - teizme-yonelik-itirazlar
+  not: 'Ömer Faruk Erdem (YÖK): Bir Müslüman Deizm ve Ateizm’e Nasıl Bakmalı?'
+yok-qC8X0rGZpK6EkbvzkK2lOg:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Çakmak (YÖK): Kant’ın Numen Fenomen Ayrımının John Hick in Din Felsefesine Etkileri'
+yok-qDQkAhAht7H35klEWGqkIQ:
+  karar:
+  - din-ve-ahlak
+  not: 'Fatma Nur Ağca (YÖK): İyilik Vicdandan Bağımsız mıdır? Gayri Bilişselcilik ve Ahlaki Realizm Bağlamında Bir Değe'
+yok-qhLXAv6hfg89Bk53qZeAbQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Muhsin Akbaş (YÖK): The Problem of the Plurality of Religions and Interfaith Dialogue'
+yok-qjNRXMSJPK8mKGYn2E3DBQ:
+  karar:
+  - kotuluk-problemi
+  not: 'İsmail Şimşek (YÖK): Wıllıam L. Rowe ve “Kötülüğün Anlamsızlığı'
+yok-qtfElvrRVP8AuHUvfIKH1Q:
+  karar:
+  - dini-tecrube
+  not: 'Süleyman Altın (YÖK): Pearce’ın Dini Tecrübe Argümanının Açıklayıcı Gücü'
+yok-qu2TGpgpCmZMwrtOBiDBNg:
+  karar:
+  - teizme-yonelik-itirazlar
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Ateistlerin Din ile Bilimin Çatıştığı İddialarının Değerlendirilmesi'
+yok-r7Su7PoFuUII0gDgIyv7Ig:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Felsefi Açıdan Din Dili ve Sembolizm'
+yok-rHRB_o1RO953Kl9FkW0DCg:
+  karar:
+  - dini-tecrube
+  - tanri-alem-iliskisi
+  not: 'Ömer Faruk Erdem (YÖK): Mevlânâ''da Allah-Âlem İlişkisi ve Dinî Tecrübe Çeşitleri'
+yok-rLbQGHEop0NxG_k_7Na2vQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Bayram Dalkılıç (YÖK): Hz. Muhammedin Peygamberliği Aleyhinde İleri Sürülen Gerekçelerin Özel’likleri Üzerine'
+yok-rRqxiuOePmcylbCLIbZ-sA:
+  karar:
+  - tanri-alem-iliskisi
+  - tanrinin-sifatlari
+  not: 'Mehmet Demirtaş (YÖK): Frederick Robert Tennant''ta Tanrı''nın Yaratma Sıfatı'
+yok-rYIt1InFt8rLpiR32vKUQQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Ergin Ögcem (YÖK): İman Objesi Olarak Tanrının İfadesi'
+yok-rdkFdfEKXiPgyjK30yO7ng:
+  karar:
+  - din-ve-bilim
+  not: 'Osman Murat Deniz (YÖK): When Naturalism and Creationism Clash: Can a Person Believe in Both God and Evolution?'
+yok-rirfOW9Lf4VmM_dQ95qrDw:
+  karar:
+  - din-epistemolojisi
+  not: 'Kemal Batak (YÖK): Tanrıyı Bilmek Alvin Plantinganın Din Felsefesinde Tanrı ve Epistemoloji'
+yok-rvB-s_5oEx5w-S_d5xTcVg:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Dil Düşünce ve Kültür İlişkisi Açısından Din Dili'
+yok-rzuQ8msoItIltsTKPPuHpg:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Din Dili Bağlamında Müteşabihat Kavramı, Müzakereci'
+yok-s2_GRD_1nYs2eobD2AGlog:
+  karar:
+  - tanrinin-sifatlari
+  not: 'Hasan Tanrıverdi (YÖK): MEŞŞÂÎ FELSEFEDE TANRI NIN BİLGİSİ MESELESİDin Felsefesi Açısından Bir Değerlendirme'
+yok-s30_BV-h_5-Tx765lIjGnw:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Din Felsefesine Giriş'
+yok-sEs1NbQAZArozJ1ZFXKh6w:
+  karar:
+  - kotuluk-problemi
+  not: 'Celal Büyük (YÖK): Kader ve Kötülük Sarkacında Engellilik'
+yok-sKbgDTkGMs0uk0Vh5vsXVQ:
+  karar:
+  - din-ve-ahlak
+  not: 'Ali Yıldırım (YÖK): Ahlak ve Din'
+yok-sL777G28zspupnI_JI5Szg:
+  karar:
+  - insan-tasavvurlari
+  not: 'İsmail Şimşek (YÖK): Felsefeden Tasavvufa Ruh Anlayışı'
+yok-s_E2gE_zvtSe6woem7zoDQ:
+  karar:
+  - din-ve-ahlak
+  not: 'Mustafa Çakmak (YÖK): Ahlâk, Tanrı ve Yasa'
+yok-sb8IHidL_6jmmOhEhQyIyQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Fatih Taştan (YÖK): Pagan Antik Çağ''da Ateizm'
+yok-scHCVM73wyLf7nDXYBeCyA:
+  karar:
+  - dini-cesitlilik
+  not: 'Muhsin Akbaş (YÖK): The Problem of the Plurality of Religions and Interfaith Dialogue'
+yok-sfowYDmKFRiIWRDg00KLjA:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Habib Şener (YÖK): David Hume’un Tanrı Anlayışı ve Antropomorfizm Eleştirisi'
+yok-sg6RTgZhRVPxmS2ybaziBw:
+  karar:
+  - olum-ve-otesi
+  not: 'Ahmet Uğurlu (YÖK): Kant’ın Ruhun Öümsüzlüğüne ilişkin Görüşlere Yönelik Eleştirileri ve Phaidon Diyaloğundan '
+yok-shPbTK7FAD4Z4VuoYz8zPg:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Din Felsefesine Giriş'
+yok-tEO5ItEAV2w92C_ZoYKYaw:
+  karar:
+  - din-dili
+  not: 'Aliye Çınar Köysüren (YÖK): Paul Tillich''de Din ve Sembol'
+yok-tIQqBaAXpcjep6KgrWf3nQ:
+  karar:
+  - din-epistemolojisi
+  not: 'Ferit Uslu (YÖK): Felsefi Açıdan İmanı Temellendirme'
+yok-tQUn2BH-zddRCTgSB4nTvg:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Muammer İskenderoğlu (YÖK): Fakhr-al-Dīn al-Rāzī and Thomas Aquinas on the Question of the Eternity of the World'
+yok-tUQEg02olOcrOeYyyRsHcg:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'İsmail Şimşek (YÖK): Spinoza Düşüncesinde Mucize Anlayışı'
+yok-tWaFDCUqxP-sNDR5m_BzBw:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Hüseyin Taha Topaloğlu (YÖK): Leibniz''in Din Tasavvuru'
+yok-tckSV9G56IX8GEPyI0Opag:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Demirtaş (YÖK): Wılfred Cantwell Smıth’de İman-Dini Gelenek İlişkisi'
+yok-trDR8qRM5ZRqo28ge5qRKw:
+  karar:
+  - din-dili
+  not: 'Ergin Ögcem (YÖK): Felsefi Bir Yaklaşımla Yükseköğretimde Din Dili Problemi'
+yok-u1ceAaEKnaGiaVhVx54oEA:
+  karar:
+  - din-ve-bilim
+  not: 'Kelly James Clark (YÖK): God and the Brain:'
+yok-u9dfqsu163MyQZMpHZIphg:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Aykut Alper Yılmaz (YÖK): Bilinç Kanıtı'
+yok-uDPeZRYr69hiTZOKBATFAg:
+  karar:
+  - dini-cesitlilik
+  not: 'Mustafa Çakmak (YÖK): Çağdaş Batı ve İslam Düşüncesinde Dinsel Kapsayıcılık'
+yok-uPWkDoPNWpXt6pIBFTVwhQ:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Şükrü Özkan (YÖK): Varoluş-Öz İlişkisi Bağlamında Tanrı’nın Varlığı Problemi: “Sartre Örneği'
+yok-uTCXEhZh6lMR_i14b4ZaAQ:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Halis Çavuşoğlu (YÖK): Batı ve İslam Düşüncesi Bağlamında Panteizm Anlayışı'
+yok-uitFXbkgPCETTQUnYVIYig:
+  karar:
+  - dini-cesitlilik
+  not: 'Sait Polat (YÖK): Dini Çoğulculuk ve Mutlak Hakikat Sorunu: Postmodern Bir Perspektif'
+yok-uw-VRyfGqG1ATASnvHJ0oQ:
+  karar:
+  - dini-tecrube
+  - tanrinin-varliginin-delilleri
+  not: 'Halis Çavuşoğlu (YÖK): Dini Tecrübe Delilinin Doğası(nature of Relıgıous Experıence Evıdence)'
+yok-v-ShdaZ2RVKHb9y-KkrroQ:
+  karar:
+  - dini-cesitlilik
+  not: 'Celal Büyük (YÖK): Dini Çoğulculuktan Küreselbir Teolojiye: Wılfred Cantwell Smıth'
+yok-v1ybEUx0oJLtWzXCTDMt-Q:
+  karar:
+  - din-ve-ahlak
+  not: 'Ferhat Yöney (YÖK): Ahlak Felsefesinde Teolojik İradecilik ve Bazı Eleştiriler'
+yok-vH44oS0hnqQvE5xANJTq2Q:
+  karar:
+  - ozgurluk
+  not: 'Yaşar Türkben (YÖK): Nurettin Topçu ya göre Spinoza nın Hürriyet Anlayışı'
+yok-vHNanCeLgUTe1glNECe5eA:
+  karar:
+  - din-epistemolojisi
+  not: 'Ömer Faruk Erdem (YÖK): Blaise Pascal’ın İmanın Rasyonelliğine Dair Düşünceleri Üzerine Bir Analiz'
+yok-vI_aMQUx5aK9OXY8ZqyWJA:
+  karar:
+  - din-ve-sanat
+  not: 'Mehmet Ulukütük (YÖK): İslam Estetik Geleneğinde Hüsn-i Hatt Kitsch Olarak Görülebilir mi?'
+yok-vZUFEHn7WjTtX6_zLRC6Rw:
+  karar:
+  - din-epistemolojisi
+  not: 'İbrahim Bor (YÖK): John Locke Epistemolojisinde Bilgi ve İman'
+yok-w07mVAwrmm4hXyUFAfdK8Q:
+  karar:
+  - din-ve-ahlak
+  not: 'Ahmet Bayındır (YÖK): Dini Ahlakın Otonomluğundan Bahsedebilir miyiz?'
+yok-wALfXnXKll4bjkftByAPQA:
+  karar:
+  - din-ve-bilim
+  not: 'Enis Doko (YÖK): Fizikteki güzellik ve anlamı dirac ilkesi: Fiziğin gizli silahı olarak güzellik'
+yok-wRzpeXKoeblfK5dAMcXLww:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Dinin Sembolik Dili'
+yok-x3AhEz7IFOOWLqX9XCdWVQ:
+  karar:
+  - kotuluk-problemi
+  not: 'Özkan Yıldız (YÖK): Felsefi Bir Problem Olarak Kötülük ve Hume''da Kötülük Problemi'
+yok-xDfONNBDUohGW29lU7K6AA:
+  karar:
+  - olum-ve-otesi
+  not: 'Yaşar Türkben (YÖK): Necip Fazıl''da Ölüm ve Ötesi'
+yok-xGeKithqnRJih_bJ1ksf7Q:
+  karar:
+  - din-ve-ahlak
+  not: 'Ergin Ögcem (YÖK): Teolojik Ahlak Tasavvuru ve Evrenselliği Üzerine Bazı Mülahazalar'
+yok-xS3nnikxrOGK69aBOqUjcg:
+  karar:
+  - din-dili
+  not: 'Latif Tokat (YÖK): Din Eğitiminin Din Dili Ne Olabilir?'
+yok-xTnOwB1GGM5zoAXTPe5ejQ:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Osman Zahid Çifçi (YÖK): Geçmişten Günümüze Panteizm, Toplumsal Yansımaları ve Eleştirisi'
+yok-xefoOOx_PuNHhMMoPsTutQ:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Münteha Beki (YÖK): Hartshorne ve Ontolojik Kanıtın Neo-Klasik Yorumu'
+yok-xgBR4nNBfo9R43n1leINAg:
+  karar:
+  - tanri-tasavvurlari
+  not: 'Ferhat Yöney (YÖK): Open Theism and Prophecy'
+yok-xk6G_tDoHaj877rvla8tmg:
+  karar:
+  - din-ve-ahlak
+  not: 'Ali Yıldırım (YÖK): İlahi Buyruk Teorisi'
+yok-xnBp-VLkmAQ19jHJmAlKUg:
+  karar:
+  - ozgurluk
+  not: 'Aykut Alper Yılmaz (YÖK): Çağdaş Özgür İrade Tartışmaları Bağlamında Matüridi Düşünce'
+yok-xue4BKV7738pbznlycc8PQ:
+  karar:
+  - din-epistemolojisi
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Akif Altunışık (YÖK): Kai Nielsen''a Atıfla DİN FELSEFESİNDE ŞÜPHECİLİK'
+yok-xyL6TqSvB9ntG_lzSETlow:
+  karar:
+  - din-epistemolojisi
+  not: 'Muharrem Şahiner (YÖK): Kierkegaard’da Varoluş ve Bir Paradoks Olarak İman'
+yok-xyjaBwRA3uEcEZ2p3tEoRw:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Aliye Çınar Köysüren (YÖK): Din Felsefesi Üzerinden Felsefeye Giriş'
+yok-y-v8sA2AcR5xyAY7CFvAzA:
+  karar:
+  - din-epistemolojisi
+  - teizme-yonelik-itirazlar
+  not: 'Mehmet Şükrü Özkan (YÖK): Epistemolojik Açıdan Agnostisizme Yer Açmak Mümkün mü?'
+yok-y18ht6E8koLqdol9TVNHIQ:
+  karar:
+  - din-ve-sanat
+  not: 'Haydar Dölek (YÖK): Tanrı ve Estetik'
+yok-yDtr3xKwndKjFAPc7TWhKg:
+  karar:
+  - din-epistemolojisi
+  - tanrinin-varliginin-delilleri
+  not: 'Mahmut Buyankara (YÖK): Tanrı''nın Varlığını Bilmek: Mâtürîdî''de İman, Delil ve Sorumluluk'
+yok-yGRxvcD5-oMh-SDTFCcHPA:
+  karar:
+  - dini-cesitlilik
+  not: 'Hasan Tanrıverdi (YÖK): Dini Çoğulculukta Din Tasavvuru W Cantwell Smith ve John Hick in Görüşleri Bağlamında'
+yok-yVG_dlxlUFXjxY-JfKK0IA:
+  karar:
+  - din-epistemolojisi
+  not: 'Ferit Uslu (YÖK): Knowledge and volition in Early AsHlhringari Doctrine of Faith'
+yok-y_rUTZ3L8PfV5I_6XfF02A:
+  karar:
+  - insan-tasavvurlari
+  not: 'Aykut Alper Yılmaz (YÖK): Düşünüyorum! Öyleyse Bir Ruhum Var: Çağdaş Felsefede Zihin-Beden Düalizmi'
+yok-yiGDi98r1Eb-tljiSH84Lg:
+  karar:
+  - din-epistemolojisi
+  not: 'Mehmet Demirtaş (YÖK): Son Dönem İslam Tarihinde İman Tasdik in Anlamı'
+yok-yuzJ8YgVh7T1C9D-PVOSXA:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Hüsamettin Yıldırım (YÖK): Whitehead da Tanrı Nın Yaratıcılığı Problemi'
+yok-zD74RCYqbkARhFcgXfLKeQ:
+  karar:
+  - tanrinin-varliginin-delilleri
+  not: 'Ergin Ögcem (YÖK): Tanrı Lehinde Kullanılan Delillerin Yetkinliğine Dair Bir Soruşturma'
+yok-zGEsEvAgIbhmh1qBGAXEzg:
+  karar:
+  - teizme-yonelik-itirazlar
+  not: 'Mahmut Buyankara (YÖK): Schellenberg’in İlahi Gizlilik Argümanının, Tanrı’nın Ontolojik Statüsü ve İnsanın Özgürlü'
+yok-zJBPdws5EdnVlahzD_YiAA:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Fatma Yüce (YÖK): Din Felsefesi Literatüründe Kuşbakışı Bir Gezinti'
+yok-zbaSI817ZYpy5uCV2xZs_Q:
+  karar:
+  - din-felsefesi-tanim-yontem-tarih
+  not: 'Bayram Dalkılıç (YÖK): Din Felsefesine Giriş'
+yok-zoIBs_1nChgZnA8fwIeRng:
+  karar:
+  - tanri-alem-iliskisi
+  not: 'Zeki Özcan (YÖK): Augustinus ta Tanrı ve Yaratma'
+yok-zpwgkaFAYWhGD4z4YQGvTw:
+  karar:
+  - kotuluk-problemi
+  not: 'Ergin Ögcem (YÖK): Saınt Augustınus Bağlamında Kötülük Problemi'
+yok-zr02thbi6OE2zF_9umItcg:
+  karar:
+  - ozgurluk
+  - tanrinin-sifatlari
+  - tanri-tasavvurlari
+  not: 'Emine Gören Bayam (YÖK): Açık Teizm Bağlamında Tanrı''nın Önbilgisi ve İnsan Hürriyeti'
+yok-zvNjpStGT7k5SvbuJDPaAw:
+  karar:
+  - tanrinin-sifatlari
+  not: 'İbrahim Yıldız (YÖK): Taş Paradoksu Teması Özelinde Gazzâlî’ye göre “İlahi Kudret'
