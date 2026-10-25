@@ -1,0 +1,405 @@
+{
+ "bulunamayan": {
+  "Abdulhan Ünlüsoy": [
+   "https://avesis.ogu.edu.tr"
+  ],
+  "Abdurrahman Aliy": [
+   "https://avesis.istanbul.edu.tr"
+  ],
+  "Ahmet Erkan": [
+   "https://avesis.ankara.edu.tr"
+  ],
+  "Alber Erol Nahum": [
+   "https://avesis.gsu.edu.tr"
+  ],
+  "Atilla Akalın": [
+   "https://avesis.gelisim.edu.tr"
+  ],
+  "Aydın Topaloğlu": [
+   "https://avesis.istanbul.edu.tr"
+  ],
+  "Betül Akdemir Süleyman": [
+   "https://avesis.marmara.edu.tr"
+  ],
+  "Chrysi Sidiropoulou": [
+   "https://avesis.bogazici.edu.tr"
+  ],
+  "Emine Göçer": [
+   "https://avesis.cu.edu.tr"
+  ],
+  "Engin Erdem": [
+   "https://avesis.ankara.edu.tr"
+  ],
+  "Ferit Uslu": [
+   "https://avesis.ogu.edu.tr"
+  ],
+  "Hakan Hemşinli": [
+   "https://avesis.yyu.edu.tr"
+  ],
+  "Mehmet Ata Az": [
+   "https://avesis.aybu.edu.tr"
+  ],
+  "Mehmet Sait Reçber": [
+   "https://avesis.ankara.edu.tr"
+  ],
+  "Merve Yavuz": [
+   "https://avesis.uludag.edu.tr"
+  ],
+  "Muhammed İkbal Hardal": [
+   "https://avesis.deu.edu.tr"
+  ],
+  "Muhammet Sait Duran": [
+   "https://avesis.erciyes.edu.tr"
+  ],
+  "Musa Kazım Arıcan": [
+   "https://avesis.aybu.edu.tr"
+  ],
+  "Mustafa Emre Dorman": [
+   "https://avesis.acibadem.edu.tr"
+  ],
+  "Nur Betül Atakul": [
+   "https://avesis.aybu.edu.tr"
+  ],
+  "Osman Caner Taslaman": [
+   "https://avesis.yildiz.edu.tr"
+  ],
+  "Rahim Acar": [
+   "https://avesis.marmara.edu.tr"
+  ],
+  "Ramazan Ertürk": [
+   "https://avesis.erciyes.edu.tr"
+  ],
+  "Recep Alpyağıl": [
+   "https://avesis.istanbul.edu.tr"
+  ],
+  "Recep Kılıç": [
+   "https://avesis.ankara.edu.tr"
+  ],
+  "Ruhattin Yazoğlu": [
+   "https://avesis.atauni.edu.tr"
+  ],
+  "Serdar Atalay": [
+   "https://avesis.cu.edu.tr"
+  ],
+  "Tuncay İmamoğlu": [
+   "https://avesis.atauni.edu.tr"
+  ],
+  "Turan Koç": [
+   "https://avesis.erciyes.edu.tr"
+  ],
+  "Zeki Özcan": [
+   "https://avesis.uludag.edu.tr"
+  ],
+  "Zeynep Baktemur Kayaduman": [
+   "https://avesis.marmara.edu.tr"
+  ],
+  "İsmail Çetin": [
+   "https://avesis.uludag.edu.tr"
+  ],
+  "Şeyma Yazıcı Elsebahy": [
+   "https://avesis.aybu.edu.tr"
+  ]
+ },
+ "kurum": {
+  "Adıyaman Üniversitesi": [
+   "avesis.adiyaman.edu.tr/robots.txt: URLError: <urlopen error timed out>",
+   "avesis.adiyaman.edu.tr/: URLError: <urlopen error timed out>"
+  ],
+  "Amasya Üniversitesi": [
+   "avesis.amasya.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.amasya.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Ankara Hacı Bayram Veli Üniversitesi": [
+   "avesis.hbv.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.hbv.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Ankara Sosyal Bilimler Üniversitesi": [
+   "avesis.asbu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.asbu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Ardahan Üniversitesi": [
+   "avesis.ardahan.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ardahan.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Aydın Adnan Menderes Üniversitesi": [
+   "avesis.adu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.adu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Ağrı İbrahim Çeçen Üniversitesi": [
+   "avesis.agri.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.agri.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Balıkesir Üniversitesi": [
+   "avesis.balikesir.edu.tr/robots.txt: HTTPError: HTTP Error 404: Not Found",
+   "avesis.balikesir.edu.tr/: AVESİS sayfası değil"
+  ],
+  "Bandırma Onyedi Eylül Üniversitesi": [
+   "avesis.bandirma.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.bandirma.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Bayburt Üniversitesi": [
+   "avesis.bayburt.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.bayburt.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Bingöl Üniversitesi": [
+   "avesis.bingol.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.bingol.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Bolu Abant İzzet Baysal Üniversitesi": [
+   "avesis.ibu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ibu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Bursa Teknik Üniversitesi": [
+   "avesis.btu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.btu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Dicle Üniversitesi": [
+   "avesis.dicle.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.dicle.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Erzurum Teknik Üniversitesi": [
+   "avesis.erzurum.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.erzurum.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Fırat Üniversitesi": [
+   "avesis.firat.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.firat.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Gaziantep Üniversitesi": [
+   "avesis.gantep.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gantep.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Gaziantep İslam Bilim ve Teknoloji Üniversitesi": [
+   "avesis.gibtu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gibtu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Giresun Üniversitesi": [
+   "avesis.giresun.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.giresun.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Gümüşhane Üniversitesi": [
+   "avesis.gumushane.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gumushane.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Harran Üniversitesi": [
+   "avesis.harran.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.harran.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Hitit Üniversitesi": [
+   "avesis.hitit.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.hitit.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Iğdır Üniversitesi": [
+   "avesis.igdir.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.igdir.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kafkas Üniversitesi": [
+   "avesis.kafkas.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.kafkas.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kahramanmaraş Sütçü İmam Üniversitesi": [
+   "avesis.ksu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ksu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Karabük Üniversitesi": [
+   "avesis.karabuk.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.karabuk.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Karamanoğlu Mehmetbey Üniversitesi": [
+   "avesis.kmu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.kmu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kastamonu Üniversitesi": [
+   "avesis.kastamonu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.kastamonu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kilis 7 Aralık Üniversitesi": [
+   "avesis.kilis.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.kilis.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kütahya Dumlupınar Üniversitesi": [
+   "avesis.dpu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.dpu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Kırıkkale Üniversitesi": [
+   "avesis.kku.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.kku.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Muş Alparslan Üniversitesi": [
+   "avesis.alparslan.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.alparslan.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Necmettin Erbakan Üniversitesi": [
+   "avesis.erbakan.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.erbakan.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Ordu Üniversitesi": [
+   "avesis.odu.edu.tr/robots.txt: URLError: <urlopen error timed out>",
+   "avesis.odu.edu.tr/: URLError: <urlopen error timed out>"
+  ],
+  "Pamukkale Üniversitesi": [
+   "avesis.pau.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.pau.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Sakarya Üniversitesi": [
+   "avesis.sakarya.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.sakarya.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Samsun Üniversitesi": [
+   "avesis.samsun.edu.tr/robots.txt: HTTPError: HTTP Error 403: Forbidden",
+   "avesis.samsun.edu.tr/: HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "Selçuk Üniversitesi": [
+   "avesis.selcuk.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.selcuk.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Siirt Üniversitesi": [
+   "avesis.siirt.edu.tr/robots.txt: AVESİS sayfası değil",
+   "avesis.siirt.edu.tr/: AVESİS sayfası değil"
+  ],
+  "Sivas Cumhuriyet Üniversitesi": [
+   "avesis.cumhuriyet.edu.tr/robots.txt: URLError: <urlopen error timed out>",
+   "avesis.cumhuriyet.edu.tr/: URLError: <urlopen error timed out>"
+  ],
+  "Tekirdağ Namık Kemal Üniversitesi": [
+   "avesis.nku.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.nku.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Tokat Gaziosmanpaşa Üniversitesi": [
+   "avesis.gop.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gop.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.gaziosmanpasa.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.gaziosmanpasa.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+  ],
+  "Trabzon Üniversitesi": [
+   "avesis.trabzon.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.trabzon.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Yalova Üniversitesi": [
+   "avesis.yalova.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.yalova.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Zonguldak Bülent Ecevit Üniversitesi": [
+   "avesis.beun.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.beun.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "İbn Haldun Üniversitesi": [
+   "avesis.ihu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ihu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "İstanbul Medeniyet Üniversitesi": [
+   "avesis.medeniyet.edu.tr/robots.txt: HTTPError: HTTP Error 404: Not Found",
+   "avesis.medeniyet.edu.tr/: HTTPError: HTTP Error 404: Not Found"
+  ],
+  "İstanbul Sabahattin Zaim Üniversitesi": [
+   "avesis.izu.edu.tr/robots.txt: URLError: <urlopen error [Errno -5] No address associated with hostname>",
+   "avesis.izu.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
+  ],
+  "İzmir Katip Çelebi Üniversitesi": [
+   "avesis.ikcu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ikcu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+  ],
+  "Şırnak Üniversitesi": [
+   "avesis.sirnak.edu.tr/robots.txt: URLError: <urlopen error [Errno -5] No address associated with hostname>",
+   "avesis.sirnak.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
+  ]
+ },
+ "site_haritasi": {
+  "https://avesis.acibadem.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 726
+  },
+  "https://avesis.ankara.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 3876
+  },
+  "https://avesis.atauni.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 2839
+  },
+  "https://avesis.aybu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 1695
+  },
+  "https://avesis.bogazici.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 1054
+  },
+  "https://avesis.cu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 2448
+  },
+  "https://avesis.deu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 3710
+  },
+  "https://avesis.erciyes.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 2989
+  },
+  "https://avesis.gelisim.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 794
+  },
+  "https://avesis.gsu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 322
+  },
+  "https://avesis.istanbul.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 6055
+  },
+  "https://avesis.marmara.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 3373
+  },
+  "https://avesis.ogu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 0
+  },
+  "https://avesis.uludag.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 2949
+  },
+  "https://avesis.yildiz.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 1835
+  },
+  "https://avesis.yyu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 1835
+  }
+ }
+}
