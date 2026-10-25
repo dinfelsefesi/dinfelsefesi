@@ -171,13 +171,14 @@
     var a = document.createElement("a"); a.href = d.url; a.className = "ag-ac";
     if (d.dis) { a.target = "_blank"; a.rel = "noopener"; }
     a.textContent = d.tanitim ? "Tanıtımı okuyun →" : d.suz === "kisi-tr" ? "Akademisyen sayfasını açın →" : d.dis ? "Makaleyi açın ↗" : "Fişi açın →";
-    panel.appendChild(a);
+    if (d.url) panel.appendChild(a);  // eserin kendisine ulaşılamayan kayıtlarda bağlantı verilmez
     if (d.makaleler && d.makaleler.length) {
       var mh = document.createElement("h3"); mh.textContent = "Din felsefesi çalışmaları (" + d.makaleler.length + ")"; panel.appendChild(mh);
       var ol = document.createElement("ol"); ol.className = "ag-makaleler";
       d.makaleler.slice(0, 8).forEach(function (m) {
-        var li = document.createElement("li"), ma = document.createElement("a");
-        ma.href = m.u; ma.target = "_blank"; ma.rel = "noopener"; ma.textContent = m.b;
+        var li = document.createElement("li"), ma = document.createElement(m.u ? "a" : "span");
+        if (m.u) { ma.href = m.u; ma.target = "_blank"; ma.rel = "noopener"; }
+        ma.textContent = m.b;
         var y = document.createElement("span"); y.textContent = " · " + m.y;
         li.appendChild(ma); li.appendChild(y); ol.appendChild(li);
       });

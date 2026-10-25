@@ -1386,7 +1386,7 @@ def eser_ogeleri() -> list:
         etiket += kaynak_isareti(m)
         konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
-        html_ = (f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{etiket}'
+        html_ = (eser_adi(m["baglanti"], m["baslik"]) + f'{etiket}'
                  f'<span class="eser-bilgi">{yazar + " · " if yazar else ""}{dergi}, {e(m["yil"])}'
                  + (f'<span class="eser-konu"> · {e(konu_ad)}</span>' if konu_ad else "") + '</span>')
         ogeler.append({"html": html_, "tur": tur, "konu": konu,
@@ -1860,7 +1860,7 @@ def avesis_veri() -> dict:
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
                            yok_kunye(y["kaynak"], y["yil"], y["bolum"]) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else
-                           (bulunan or {}).get("sayfa") or (yok_baglanti(x["profil"]) if kaynak == "yok" else y["url"]), "doi": bool(y.get("doi")),
+                           (bulunan or {}).get("sayfa") or (y["url"] if kaynak == "avesis" else ""), "doi": bool(y.get("doi")),
                            "konular": konular, "kaynak": kaynak, "kelimeler": kelimeler})
         v_ = _AVESIS.setdefault(slugify(ad_), {"profil": x["profil"], "yayinlar": [], "yok_var": False})
         v_["yayinlar"] += ogeler
@@ -1869,10 +1869,14 @@ def avesis_veri() -> dict:
     return _AVESIS
 
 
-def yok_baglanti(profil: str) -> str:
-    """YÖK Akademik'te yayın ayrıntı adresleri (yayinDetay.jsp) oturuma bağlıdır, dışarıdan açılınca boş döner. DOI'si
-    olmayan YÖK yayınları bu yüzden hocanın YÖK Akademik sayfasına bağlanır; o adres (islem=direct) her zaman açılır."""
-    return profil if "islem=direct" in profil else ""
+def eser_adi(baglanti: str, baslik: str, sinif: str = "eser-ad") -> str:
+    """Eserin adı; eserin kendisine ya da kendi sayfasına giden bir adres varsa bağlantılı. YÖK Akademik'in yayın
+    ayrıntı adresleri oturuma bağlı olduğu ve kişisel sitelerdeki adresler yalnızca liste sayfası olduğu için bu
+    kayıtlarda bağlantı verilmez (hocanın sayfasına götüren bir bağlantı esere ulaştırmaz)."""
+    c = f' class="{sinif} dis"' if sinif else ' class="dis"'
+    if baglanti:
+        return f'<a{c} href="{e(baglanti)}" rel="noopener" target="_blank">{e(baslik)}</a>'
+    return f'<span class="{sinif or "eser-ad"}">{e(baslik)}</span>'
 
 
 _DIN_ISARET = re.compile(
@@ -2099,7 +2103,7 @@ def baslik_makaleleri(k) -> str:
         yazar, dergi = dp_kunye(m)
         tur = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
         tur += kaynak_isareti(m)
-        return (f'<li><a class="dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>{tur}'
+        return ("<li>" + eser_adi(m["baglanti"], m["baslik"], "") + f'{tur}'
                 f'<span class="m-dergi">{yazar} · {dergi}, {e(m["yil"])}</span></li>')
     out = '<section class="tr-makaleler"><h2>Türkiye akademisinden çalışmalar</h2>'
     if ms:
@@ -2256,7 +2260,7 @@ def diger_yayin_ogeleri(v) -> list:
             doiler.add(d)
         dergi = e(m["dergi"]) + (f", {e(m['cilt_sayi'])}" if m["cilt_sayi"] else "")
         ogeler.append({"grup": "diger", "tur": "makale", "yil": m["yil"], "ad": m["baslik"], "kaynak": "dergipark", "kunye": m["dergi"],
-                       "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
+                       "html": eser_adi(m["baglanti"], m["baslik"]) +
                                f'<span class="eser-bilgi">{dergi}, {e(m["yil"])}</span>'})
     # ORCID kayıtlarında künyesi eksiksiz olanlar önce gelsin (aynı eserin bozuk yazılmış kopyaları sonra ayıklanır)
     for w in sorted(v["orcid_eser"], key=lambda w: (bool(w["doi"]), bool(w["yil"]), w["yil"] or "0"), reverse=True):
@@ -2286,7 +2290,7 @@ def diger_yayin_ogeleri(v) -> list:
         bilgi = ", ".join(x for x in [e(y["kunye"]), e(y["yil"])] if x)
         ogeler.append({"grup": "diger", "tur": y["tur"] if y["tur"] in YAYIN_TUR_AD else "diger", "yil": y["yil"], "ad": y["baslik"],
                        "kaynak": y["kaynak"], "kunye": y["kunye"],
-                       "html": f'<a class="eser-ad dis" href="{e(y["baglanti"])}" rel="noopener" target="_blank">{e(y["baslik"])}</a>'
+                       "html": eser_adi(y["baglanti"], y["baslik"]) +
                                f'<span class="eser-bilgi">{bilgi}</span>'})
     return ogeler
 
@@ -2348,8 +2352,8 @@ def yayin_paneli(ogeler, slug: str = "") -> str:
     if yok_var:
         disarida = sum(1 for o in ogeler if o["sira"] > 0)
         notlar = (f'<p class="aciklama-kisa yp-kaynak-not">Liste hocanın YÖK Akademik kaydına dayanır (YÖK taraması {tr_date(yok_tarihi())}). '
-                  + (f'YÖK\'te bulunmayan {disarida} yayın listenin sonunda, geldiği kaynağın adıyla işaretlenmiştir.' if disarida else '')
-                  + '</p>' + notlar)
+                  + (f'YÖK\'te bulunmayan {disarida} yayın listenin sonunda, geldiği kaynağın adıyla işaretlenmiştir. ' if disarida else '')
+                  + 'Yayının kendisine ya da kendi sayfasına ulaşılabildiğinde adı bağlantılıdır.</p>' + notlar)
     return (f'<section class="yayin-panel"><div class="yp-bas"><h2>Yayınları <span class="say">{len(ogeler)}</span></h2>{siralama}</div>'
             f'<div class="tur-secici yp-sekme" role="group" aria-label="Yayın grubu">{sekmeler}</div>{notlar}'
             f'<ol class="yayin-liste">{satirlar}</ol></section>' + YAYIN_JS)
@@ -2420,7 +2424,7 @@ def render_akademisyen(s: str) -> str:
         ogeler.append({"grup": "df", "tur": DP_YAYIN_TUR.get(m["tur"], "makale"), "yil": m["yil"], "ad": m["baslik"],
                        "kaynak": {None: "dergipark", "dergipark-akademisyen": "dergipark"}.get(m.get("kaynak"), m.get("kaynak")),
                        "kunye": m["dergi"],
-                       "html": f'<a class="eser-ad dis" href="{e(m["baglanti"])}" rel="noopener" target="_blank">{e(m["baslik"])}</a>'
+                       "html": eser_adi(m["baglanti"], m["baslik"]) +
                                f'<span class="eser-bilgi">{yazar} · {dergi}, {e(m["yil"])}'
                                + (f'<span class="eser-konu"> · {konu}</span>' if konu else "") + '</span>'})
     ogeler += diger_yayin_ogeleri(v)
