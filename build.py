@@ -22,6 +22,7 @@ import os
 import re
 import shutil
 import unicodedata
+from collections import Counter
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -1790,10 +1791,18 @@ def avesis_veri() -> dict:
             kaynaklar += [(ad_, x, kaynak) for ad_, x in json.loads((ROOT / yol).read_text(encoding="utf-8")).items()]
     # YÖK Akademik listesi herkes için okunur: kişinin yayın listesinin esası odur. Aynı yayın AVESİS'te ya da başka bir
     # kaynakta da varsa sitede onun kaydı gösterilir (bağlantı, bölüm adı, anahtar kelime); YÖK'te olup olmadığı ayrıca tutulur.
+    hd = ROOT / "data/yok/hatali_doi.yaml"
+    hatali = (yaml.safe_load(hd.read_text(encoding="utf-8")) or {}) if hd.exists() else {}
     for ad_, x, kaynak in kaynaklar:
         soyad = ad_anahtari(ad_).split("-")[-1]
         ogeler = []
+        # Aynı DOI kişinin birden çok yayınına verilmişse DOI yalnızca adı DOI kaydının adıyla örtüşen yayında kalır
+        doi_say = Counter((y.get("doi") or "").lower() for y in x["yayinlar"] if y.get("doi"))
         for y in x["yayinlar"]:
+            d_ = (y.get("doi") or "").lower()
+            if d_ and (any(baslik_anahtari(h) in baslik_anahtari(y["baslik"]) for h in hatali.get(ad_, [])) or
+                       doi_say[d_] > 1 and baslik_anahtari((kunye.get(d_) or {}).get("baslik") or "") != baslik_anahtari(y["baslik"])):
+                y = dict(y, doi="")
             if kaynak == "avesis":
                 kimlik = (re.findall(r"/yayin/([0-9a-f-]{36})", y["url"]) or [y["url"]])[0]
             elif kaynak == "yok":
@@ -1815,7 +1824,11 @@ def avesis_veri() -> dict:
             # DOI'si olan yayınlarda konu, yazarın verdiği anahtar kelimelerden (DergiPark ya da OpenAlex) sözlükle bulunur;
             # anahtar kelimeler bir başlığa uymazsa adına bakılarak verilen elle karar geçerli kalır
             kelimeler = (kunye.get((y.get("doi") or "").lower()) or {}).get("kelimeler") or []
-            if kelimeler and not e_.get("kesin"):
+            # Sözlük DergiPark'taki din felsefesi makaleleri için kurulmuştur; YÖK ve AVESİS listelerinde genel felsefe
+            # yayınları da bulunduğundan ("etik", "epistemoloji", "dil" gibi kelimeler tek başına yetmez) anahtar kelimeyle
+            # yerleştirme yalnızca adında ya da anahtar kelimelerinde dinle ilgili açık bir işaret olan yayında yapılır (özetler
+            # dine geçerken değinebildiği için işaret sayılmaz)
+            if kelimeler and not e_.get("kesin") and din_isareti(y["baslik"], kelimeler):
                 bul, _ = kelime_basliklari(kelimeler, kurallar, genel)
                 if bul:
                     konular = sorted(bul)
@@ -1830,6 +1843,21 @@ def avesis_veri() -> dict:
         if kaynak == "yok":
             v_["yok_var"] = True
     return _AVESIS
+
+
+_DIN_ISARET = re.compile(
+    r"\b(din|dinî|dini|dinin|dine|dinde|dinden|dinler\w*|dinsel\w*|dindar\w*|religio\w*|tanrı\w*|allah\w*|god|god's|gods|"
+    r"divine|divinity|ilah\w*|ilâh\w*|ulûhiyy\w*|uluhiyy\w*|theolog\w*|teoloj\w*|theis\w*|teiz\w*|teist\w*|deiz\w*|deis\w*|"
+    r"ateiz\w*|ateist\w*|atheis\w*|agnosti\w*|iman\w*|îman\w*|faith|kutsal\w*|sacred|numinous|vahiy\w*|vahy\w*|revelation|"
+    r"peygamber\w*|prophet\w*|nübüvv\w*|kelam\w*|kelâm\w*|kalam|tasavvuf\w*|sufi\w*|mistisizm\w*|mystic\w*|ahiret\w*|"
+    r"afterlife|eskatoloj\w*|eschatolog\w*|ölümsüzlük\w*|immortality|resurrection|teodise\w*|theodic\w*|ibadet\w*|worship|"
+    r"ritüel\w*|ritual\w*|yaratılış\w*|creation|fıtrat\w*|fitra\w*|sensus|mucize\w*|miracle\w*|kurtuluş|salvation)\b")
+
+
+def din_isareti(*metinler) -> bool:
+    """Yayının adında, anahtar kelimelerinde ya da özetinde dinle ilgili açık bir kelime var mı."""
+    m = " ".join(" ".join(x) if isinstance(x, list) else (x or "") for x in metinler)
+    return bool(_DIN_ISARET.search(m.replace("İ", "i").replace("I", "ı").lower()))
 
 
 _SAPKA = {"a": "â", "i": "î", "ı": "î", "u": "û", "A": "Â", "I": "Î", "İ": "Î", "U": "Û"}

@@ -1,0 +1,12 @@
+# YÖK Akademik kayıtlarında başka bir yayına ait DOI ile girilmiş yayınlar (kişi adı -> yayın adından parçalar).
+# Bu yayınlarda DOI kullanılmaz: bağlantı YÖK kaydına gider, anahtar kelime ve özet okunmaz.
+# Aynı DOI bir kişinin birden çok yayınına verilmişse ayrıca yazmaya gerek yoktur; DOI yalnızca adı DOI kaydıyla
+# örtüşen yayında tutulur.
+Asım Kaya:
+  - "Mehmet Akif Ersoy: Tanrı, İnsan ve Eylem"   # DOI "İslam Öncesi Türkler ve Türklerin İslamlaşma Süreci" makalesine ait
+Sevcan Öztürk:
+  - "Karl Rahner"                                # DOI tasavvuf felsefesi ve tevhid üzerine bir makaleye ait
+İsmail Şimşek:
+  - "Nurettin Topçu Felsefesinde Özgürlük"       # DOI William L. Rowe ve kötülüğün anlamsızlığı makalesine ait
+Hasan Er:
+  - "Analitik Teolojide Plantinga Etkisi"        # DOI Zeynüddin el-Melîbârî üzerine bir bildiriye ait
