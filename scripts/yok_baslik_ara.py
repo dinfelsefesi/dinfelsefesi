@@ -126,6 +126,7 @@ def trdizin_ara(y: dict):
 
 
 TANI = Counter()
+HATALAR = []
 
 
 def main():
@@ -136,11 +137,16 @@ def main():
     print(f"aranacak: {len(liste)}")
 
     def yaz():
-        DOSYA.write_text(json.dumps({"tarih": date.today().isoformat(), "tani": dict(TANI), "kayit": kayit},
+        DOSYA.write_text(json.dumps({"tarih": date.today().isoformat(), "tani": dict(TANI), "hatalar": HATALAR[:20], "kayit": kayit},
                                     ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     for i, y in enumerate(liste, 1):
         e = kayit.get(y["kimlik"]) or {"durum": "bulunamadi", "baslik": y["baslik"], "sahip": y["sahip"]}
-        r = openalex_ara(y) if y["kimlik"] not in kayit else None
+        try:
+            r = openalex_ara(y) if y["kimlik"] not in kayit else None
+        except Exception as ex:  # noqa: BLE001
+            TANI["openalex-hata"] += 1
+            HATALAR.append(f"{y['baslik'][:60]}: {type(ex).__name__}: {ex}"[:300])
+            r = None
         if r:
             doi = doi_temiz(r.get("doi") or "")
             sayfa = ((r.get("primary_location") or {}).get("landing_page_url")) or ""
@@ -158,11 +164,19 @@ def main():
             TANI["openalex"] += 1
         if e["durum"] == "bulunamadi":
             time.sleep(1)
-            t = trdizin_ara(y)
+            try:
+                t = trdizin_ara(y)
+            except Exception as ex:  # noqa: BLE001  tek bir kayıttaki beklenmedik veri bütün işi durdurmasın
+                TANI["trdizin-hata"] += 1
+                HATALAR.append(f"{y['baslik'][:60]}: {type(ex).__name__}: {ex}"[:300])
+                t = None
             e["trdizin_bakildi"] = True
             if t:
                 if t["doi"]:  # TR Dizin kaydındaki DOI'nin anahtar kelimeleri DergiPark ya da OpenAlex'ten okunur
-                    k = doi_oku(t["doi"])
+                    try:
+                        k = doi_oku(t["doi"])
+                    except Exception:  # noqa: BLE001
+                        k = {}
                     t["kelimeler"] = t["kelimeler"] or k.get("kelimeler") or []
                     t["ozet"] = t["ozet"] or k.get("ozet") or ""
                 e.update(t)

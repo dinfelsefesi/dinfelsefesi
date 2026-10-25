@@ -739,8 +739,22 @@ def ld_yayinci() -> dict:
             "logo": SITE_URL + "/static/img/logo-512.png"}
 
 
+# Bazı dergilerin DOI'leri artık çalışmayan eski adreslere yönleniyor. Beytulhikme DergiPark'tan ayrılıp yayıncı
+# değiştirince eski makaleler archived.beytulhikme.org adresine taşındı; 10.18491/beytulhikme.N DOI'si ise hâlâ
+# kapanmış www.beytulhikme.org sayfasına gidiyor. Sayfalardaki bağlantı bu yüzden arşivdeki adrese çevrilir.
+_OLU_DOI = [(re.compile(r'https://doi\.org/10\.18491/beytulhikme\.(\d+)\b', re.I),
+             r'https://archived.beytulhikme.org/DergiTamDetay.aspx?ID=\1')]
+
+
+def doi_baglanti_duzelt(h: str) -> str:
+    for desen, yerine in _OLU_DOI:
+        h = desen.sub(yerine, h)
+    return h
+
+
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "",
          gorsel: str = "", og_tur: str = "website", jsonld: dict | None = None, dizinleme: bool = True) -> str:
+    body = doi_baglanti_duzelt(body)
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
     if jsonld:
         canon += ld(jsonld)
@@ -1805,7 +1819,7 @@ def avesis_veri() -> dict:
         doi_say = Counter((y.get("doi") or "").lower() for y in x["yayinlar"] if y.get("doi"))
         for y in x["yayinlar"]:
             d_ = (y.get("doi") or "").lower()
-            if d_ and (any(baslik_anahtari(h) in baslik_anahtari(y["baslik"]) for h in hatali.get(ad_, [])) or
+            if d_ and ("xxx" in d_ or any(baslik_anahtari(h) in baslik_anahtari(y["baslik"]) for h in hatali.get(ad_, [])) or
                        doi_say[d_] > 1 and baslik_anahtari((kunye.get(d_) or {}).get("baslik") or "") != baslik_anahtari(y["baslik"])):
                 y = dict(y, doi="")
             if kaynak == "avesis":
