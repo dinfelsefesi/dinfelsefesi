@@ -129,7 +129,27 @@ kisiler:
   universite: Dokuz Eylül Üniversitesi
   fakulte: İlahiyat Fakültesi
   durum: emekli
-  kurum_kaynagi: Din Felsefesi Derneği'nin hoca sayfasına
+  kurum_kaynagi: Din Felsefesi Derneği'nin hoca sayfasına (dfd.org.tr) ve Kültür ve Turizm Bakanlığı'nın yazar sayfasına (ktb.gov.tr)
+  tanitim: >-
+    1943'te Elazığ'da doğdu. 1966'da Ankara Üniversitesi İlahiyat Fakültesi'ni bitirdi, Milli Eğitim Bakanlığı
+    tarafından felsefe doktorası için İngiltere'ye gönderildi ve 1972'de Edinburgh Üniversitesi'nde doktorasını
+    tamamladı. Atatürk Üniversitesi İslami İlimler Fakültesi'nde felsefe asistanı olarak başladığı akademik
+    hayatını askerlik görevinin ardından Ankara Üniversitesi İlahiyat Fakültesi'nde sürdürdü, 1978'de Sistematik
+    Felsefe ve Mantık alanında doçent oldu. Ankara Üniversitesi Dil ve Tarih-Coğrafya Fakültesi ile ODTÜ Felsefe
+    Bölümü'nde de ders verdi. 1984'te Dokuz Eylül Üniversitesi İlahiyat Fakültesi'ne profesör olarak atandı ve
+    1996-1999 yıllarında fakültenin dekanlığını yürüttü. 2002 genel seçimlerinde İzmir milletvekili seçildi,
+    Abdullah Gül ve Recep Tayyip Erdoğan hükümetlerinde devlet bakanı olarak görev yaptı.
+
+
+    İlk baskısı 1987'de Dokuz Eylül Üniversitesi Yayınları arasında çıkan *Din Felsefesi* kitabı, sonraki
+    yıllarda İzmir İlahiyat Fakültesi Vakfı Yayınları tarafından defalarca basılmıştır. Türkiye'de din
+    felsefesinin gelişimi 2015'te onun onuruna İstanbul'da düzenlenen bir sempozyumda ele alınmış, bildiriler
+    2019'da *Türkiye'de Din Felsefesi: Mehmet S. Aydın Onuruna* adıyla kitap olarak yayımlanmıştır.
+  hakkinda:
+    - kunye: "Rahim Acar, Nesrin Bağcı Erciyas (ed.), *Türkiye'de Din Felsefesi: Mehmet S. Aydın Onuruna*, Ankara: Elis Yayınları, 2019."
+    - kunye: "Mehmet Türkeri, \"Mehmet S. Aydın'ın Din Felsefesi ile İlgili Bazı Görüşleri\", *Felsefe Dünyası*, sy. 65 (2017), s. 44-74."
+      baglanti: https://dergipark.org.tr/tr/pub/felsefedunyasi/article/852207
+    - kunye: "Abdüllatif Tüzer, \"Mehmet S. Aydın'ın Hayali: Aşırı Rasyonel Din Felsefesi Tavrının Eleştirisi\", *Beytulhikme An International Journal of Philosophy*, c. 6, sy. 2 (2016), s. 273-293."
   elle: true   # YÖK Akademik taramasında çıkmadığı için listede yoktu; alanın kurucu hocalarından olduğu için elle eklendi (25 Ekim 2026). Bilgiler dfd.org.tr/tr/hocalarimiz/mehmet-s-aydin sayfasından.
 - ad: Muzaffer Ayvaz
   unvan: Dr. Öğr. Üyesi

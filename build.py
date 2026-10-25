@@ -2425,6 +2425,12 @@ def render_akademisyen(s: str) -> str:
         yan.append(f'<a class="ag-git" href="{ag_adresi(*kid.split("/", 1))}">Bu kişinin ağı →</a>')
     tarih = dp_tarama_tarihi()
     metin = yayin_paneli(ogeler, s) or '<p class="giris">DergiPark taramasında, ORCID kaydında, AVESİS\'te ve YÖK Akademik\'te bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
+    # Listeye elle eklenen kişilerde kısa tanıtım ve hakkında yazılanlar listeden gelir (yalnızca kamuya açık bilgiler)
+    tanitim = "".join(f"<p>{satir_ici(x.strip())}</p>" for x in (p.get("tanitim") or "").split("\n\n") if x.strip())
+    tanitim = f'<div class="akademi-tanitim">{tanitim}</div>' if tanitim else ""
+    hakkinda = "".join(f'<li>{satir_ici(x["kunye"])}' + (f' <a class="dis" href="{e(x["baglanti"])}" rel="noopener" target="_blank">↗</a>'
+                                                           if x.get("baglanti") else "") + "</li>" for x in p.get("hakkinda") or [])
+    hakkinda = f'<section class="akademi-hakkinda"><h2>Hakkında yazılanlar</h2><ul>{hakkinda}</ul></section>' if hakkinda else ""
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <section class="kartvizit" aria-label="Künye">
@@ -2438,8 +2444,8 @@ def render_akademisyen(s: str) -> str:
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
 </section>
 <div class="fis-duzen">
-  <div class="metin akademi-metin">{metin}
-    <p class="aciklama-kisa akademi-not">{"Listeye elle eklenmiştir. Unvan ve kurum bilgisi " + e(p.get("kurum_kaynagi") or "kamuya açık kaynaklara") + " göre, makaleler ve başlıklar" if p.get("elle") else "Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar"} DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""}, ORCID kaydındaki DOI'li yayınlara ve AVESİS ya da YÖK Akademik sayfasına göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır; AVESİS ve YÖK'ten gelen yayınlardan anahtar kelimesine ulaşılamayanlarınki adlarına bakılarak elle verilmiştir.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] and not p.get("elle") else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
+  <div class="metin akademi-metin">{tanitim}{metin}{hakkinda}
+    <p class="aciklama-kisa akademi-not">{"Listeye elle eklenmiştir. " + ("Tanıtım, unvan" if p.get("tanitim") else "Unvan") + " ve kurum bilgisi " + e(p.get("kurum_kaynagi") or "kamuya açık kaynaklara") + " göre, makaleler ve başlıklar" if p.get("elle") else "Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar"} DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""}, ORCID kaydındaki DOI'li yayınlara ve AVESİS ya da YÖK Akademik sayfasına göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır; AVESİS ve YÖK'ten gelen yayınlardan anahtar kelimesine ulaşılamayanlarınki adlarına bakılarak elle verilmiştir.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] and not p.get("elle") else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>"""
