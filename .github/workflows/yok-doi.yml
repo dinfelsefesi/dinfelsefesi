@@ -1,0 +1,32 @@
+name: YÖK ve AVESİS DOI künyeleri
+# YÖK Akademik ve AVESİS listelerindeki DOI'lerin anahtar kelime ve özetleri OpenAlex ve DergiPark'tan okunur.
+# Ayda bir, AVESİS toplamasından sonra çalışır.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 12 3 * *"
+permissions:
+  contents: write
+concurrency:
+  group: orcid
+  cancel-in-progress: false
+jobs:
+  oku:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pyyaml
+      - run: python3 scripts/yok_doi.py
+      - name: Sonucu kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/orcid/doi_kunye.json
+          git commit -m "YÖK/AVESİS DOI künyeleri güncellendi" || exit 0
+          git pull --rebase -q && git push -q
