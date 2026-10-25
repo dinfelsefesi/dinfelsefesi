@@ -124,6 +124,13 @@ kisiler:
   yok: 42BBCE805120EBB5
   orcid: '0000-0002-3777-8305'
   yok_alan: Din Felsefesi
+- ad: Mehmet S. Aydın
+  unvan: Prof. Dr.
+  universite: Dokuz Eylül Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  durum: emekli
+  kurum_kaynagi: Din Felsefesi Derneği'nin hoca sayfasına
+  elle: true   # YÖK Akademik taramasında çıkmadığı için listede yoktu; alanın kurucu hocalarından olduğu için elle eklendi (25 Ekim 2026). Bilgiler dfd.org.tr/tr/hocalarimiz/mehmet-s-aydin sayfasından.
 - ad: Muzaffer Ayvaz
   unvan: Dr. Öğr. Üyesi
   universite: Trabzon Üniversitesi
