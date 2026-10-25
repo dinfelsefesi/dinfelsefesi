@@ -98,7 +98,10 @@ def sitemap_kullanicilari(kok: str) -> set:
 def sitemap_adaylari(kok: str, ad: str) -> list:
     p = ad_anahtari(ad).split()
     ilk, son = p[0], p[-1]
-    return [u for u in sorted(sitemap_kullanicilari(kok)) if ilk in u.lower() and son in u.lower()]
+    # kullanıcı adında soyadı geçmeli; ad ya tam ya da baş harfiyle (ör. racar, msrecber) yer almalı
+    tam = [u for u in sorted(sitemap_kullanicilari(kok)) if son in u.lower() and any(x in u.lower() for x in p[:-1])]
+    bas = [u for u in sorted(sitemap_kullanicilari(kok)) if son in u.lower() and u.lower()[:1] == ilk[:1] and u not in tam]
+    return tam + bas
 
 
 def profil_dogrula(adres: str, ad: str) -> bool:
@@ -192,7 +195,7 @@ def main():
                 if profil:
                     break
             for k in [x for x in kurumlar_ if x and not profil]:
-                for a in sitemap_adaylari(k, ad)[:6]:
+                for a in sitemap_adaylari(k, ad)[:8]:
                     if a not in adaylar(ad) and profil_dogrula(f"{k}/{a}", ad):
                         profil = f"{k}/{a}"
                         break
