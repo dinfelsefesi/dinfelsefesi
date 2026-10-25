@@ -507,6 +507,23 @@
   "profil": "https://avesis.kocaeli.edu.tr/afra.konyali",
   "yayinlar": []
  },
+ "Ahmet Erkan": {
+  "profil": "https://avesis.ankara.edu.tr/erkan",
+  "yayinlar": [
+   {
+    "baslik": "Şüphenin Tarihi ve Şüphecilik",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslam Düşüncesinde Şüphe, Fatih Kanca, Kenan Oral, Editör, İlahiyat, Ankara, ss.13-45, 2023",
+    "url": "https://avesis.ankara.edu.tr/yayin/688ea561-2a9e-4346-8a0c-c36d07005816/suphenin-tarihi-ve-suphecilik",
+    "yazarlar": [
+     "ERDEM E.",
+     "ERKAN A."
+    ],
+    "yil": "2023"
+   }
+  ]
+ },
  "Alber Erol Nahum": {
   "profil": "https://avesis.gsu.edu.tr/aenahum",
   "yayinlar": [
@@ -1171,6 +1188,1069 @@
      "AKALIN A."
     ],
     "yil": "2019"
+   }
+  ]
+ },
+ "Aydın Topaloğlu": {
+  "profil": "https://avesis.istanbul.edu.tr/aydin.t",
+  "yayinlar": [
+   {
+    "baslik": "Mystical Contemplation or Rational Reflection? The Double Meaning of Tafakkur in Shabistarī’s Rose Garden of Mystery",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Journal of Islam and the Contemporary World, cilt.1, sa.1, ss.9-30, 2023 (Hakemli Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/25fb4fe1-0667-4ccb-a797-43566c7d45db/mystical-contemplation-or-rational-reflection-the-double-meaning-of-tafakkur-in-shabistaris-rose-garden-of-mystery",
+    "yazarlar": [
+     "Ghazani R. R.",
+     "TOPALOĞLU A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "İslam Uygarlığının Ortaya Çıkışı Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Teori, cilt.38, sa.377, ss.21-24, 2021 (Hakemsiz Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/f13ed051-b5c4-4c63-9bf1-a9f2e78091ee/islam-uygarliginin-ortaya-cikisi-uzerine",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Kötülük Üzerine Felsefi Mülahazalar",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Feyz Dergisi, sa.349, ss.14-21, 2020 (Hakemsiz Dergi) \")\">",
+    "url": "https://avesis.istanbul.edu.tr/yayin/5e8e376c-1999-4783-b3db-e62cbd87ea58/kotuluk-uzerine-felsefi-mulahazalar",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Tablonun Gizemi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Türk Edebiyatı Dergisi, 2018 (Hakemsiz Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6ebd7c33-8a8d-45a1-beb1-53b14f0651b8/tablonun-gizemi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İnanç Sapmaları Ve Deizm",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Fezy Dergisi, sa.316, ss.15-21, 2017 (Hakemsiz Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/a7d3ca64-f6fe-4f87-9083-1d4663b8c373/inanc-sapmalari-ve-deizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "İNSAN ZİHNİNİN TANRI’xxYA GİDİŞİ",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Diyanet Dergi, 2017 (Hakemsiz Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/0709671b-8c33-4e7d-bc22-1debcc02540d/insan-zihninin-tanrixxya-gidisi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "KÖTÜ NÜN DOĞASI ÜZERİNE",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Türk Edebiyatı Dergisi, 2016 (Hakemsiz Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1cd5a926-c02c-416f-9adb-031d94df70a3/kotu-nun-dogasi-uzerine",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Klasik Materyalizmin Mahiyeti ve Son Dönem Osmanlı Düşünürleri Arasında Yayılışı",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Dünyası, cilt.45, ss.130-146, 2007 (TRDizin)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/348b5009-7376-4a33-b633-209bb026a44d/klasik-materyalizmin-mahiyeti-ve-son-donem-osmanli-dusunurleri-arasinda-yayilisi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2007"
+   },
+   {
+    "baslik": "Tümeller Sorunu, Nominalizm ve Din",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Felsefe Tartışmaları, sa.34, ss.53-66, 2005 (Hakemli Dergi)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/53fe47a3-bf34-4f45-b50e-bb1aa8e35ad6/tumeller-sorunu-nominalizm-ve-din",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2005"
+   },
+   {
+    "baslik": "Suhreverdi on Mystical experience",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "International Conference on Shaikh al-Ishraq and the Modern World, Zencan, İran, 13 Mayıs 2023, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/7c5c5e46-10d2-441e-80bb-a4b8a17086ec/suhreverdi-on-mystical-experience",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Erigena and Ibn Arabi on Mystical Experience",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "The 11th International Conference of Contemporary Philosophy of Religion, Sari, İran, 09 Mayıs 2023, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/a213ec74-a546-4a7d-abcb-b6e78b26f4d2/erigena-and-ibn-arabi-on-mystical-experience",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Din Üzerine İlk Soruşturmalar: Euthyphro İkilemi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Klaros Felsefe Sanat ve Kehanet Festivali, İzmir, Türkiye, 16 Haziran 2022, (Özet Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6dd29c88-a84c-4be4-b219-a6eb2981b3fd/din-uzerine-ilk-sorusturmalar-euthyphro-ikilemi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Günümüz Dünyasında Tanrı'yı, Dini, İslam'ı Konuşmak (Ahmet Arslan'ın Bir Ömür Düşünmek Adlı Kitabı Üzerine)",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Ahmet Arslan'ın Bir Ömür Düşünmek Adlı Kitabı Üzerine, İstanbul, Türkiye, 11 Aralık 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/88532490-882f-4b83-8bbd-c41ca4b4d7c8/gunumuz-dunyasinda-tanriyi-dini-islami-konusmak-ahmet-arslanin-bir-omur-dusunmek-adli-kitabi-uzerine",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Müzakere (Kötülüğün İlahi Adalet ve Rahmetle İlişkisi: Dolaylılık, Değerlilik ve Ölümsüzlük, Cafer S. Yaran)",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Kötülük Problemi İstişare Toplantısı - Diyanet İşleri Başkanlığı, Ankara, Türkiye, 6 - 07 Aralık 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/3083b81d-303b-4a2e-8950-8d3b8a1d547c/muzakere-kotulugun-ilahi-adalet-ve-rahmetle-iliskisi-dolaylilik-degerlilik-ve-olumsuzluk-cafer-s-yaran",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Ateizm Problemi ve Günümüzdeki Durumu",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "NİÇİN ALLAH’A İNANIYORUM, Ankara, Türkiye, 29 Kasım 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2e94e4da-3ce4-42b4-917f-4fc0caddb238/ateizm-problemi-ve-gunumuzdeki-durumu",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "On the Nature and Emergence of Islamic Civilization: Some Philosophical Implications",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Humanities and Islamic Hikmah (wisdom), Tehran, İran, 09 Kasım 2021, (Yayınlanmadı) \")\">",
+    "url": "https://avesis.istanbul.edu.tr/yayin/b862f5c0-a0cd-4a7a-9d92-bd392de67363/on-the-nature-and-emergence-of-islamic-civilization-some-philosophical-implications",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İslam Felsefesi Lisansüstü Çalışmalar Sempozyumu . (Oturum Başkanlığı )",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam Felsefesi Lisansüstü Çalışmalar Sempozyumu, İstanbul, Türkiye, 30 Ekim 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/dffd21f8-9647-4374-9519-b80867166269/islam-felsefesi-lisansustu-calismalar-sempozyumu-oturum-baskanligi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İslam Uygarlığına Bilimsel ve Tarihsel Bakış",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam Uygarlığına Bilimsel ve Tarihsel Bakış, İstanbul, Türkiye, 04 Temmuz 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/66a8c6fb-6a5c-496f-8fe9-f9a4fb7df3e2/islam-uygarligina-bilimsel-ve-tarihsel-bakis",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "FELSEFİ VE TEOLOJİK AÇIDAN KUANTUM FİZİĞİ ( Moderatür-Müzakere)",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "GÜNCEL KELAM: DİN-FELSEFE-BİLİM ÜZERİNE KONUŞMALAR, İstanbul, Türkiye, 4 Haziran - 04 Temmuz 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/7c18e331-13b5-470e-8a64-ca7499767aa0/felsefi-ve-teolojik-acidan-kuantum-fizigi-moderatur-muzakere",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Romanlarda Kötülük Problemi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "T.C. Milli Eğitim Bakanlığı Üsküdar Öğretmen Mesleki Gelişim Mayıs Seminerleri, 13 Mayıs 2020, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/f6d2c211-28bb-4b88-8bf3-15731810aa4c/romanlarda-kotuluk-problemi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Deizmin Mahiyeti, İddiaları ve Tarihçesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Deizmin Mahiyeti, İddiaları ve Tarihçesi, Gaziantep, Türkiye, 10 Nisan 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2138fe16-f0b1-4460-991d-9a8e4d81d672/deizmin-mahiyeti-iddialari-ve-tarihcesi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Felsefe, Bilim ve Ahlaki Düşüncenin Gelişim Süreci Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İlahiyat Buluşmaları 3, Malatya, Türkiye, 25 Mart 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/dfa74ea9-f5cf-4d6d-a9cd-59ecaf5a3837/felsefe-bilim-ve-ahlaki-dusuncenin-gelisim-sureci-uzerine",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Teist ve Ateist Perspektifin Arkaplanı Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "GÜNCEL KELAM: DİN-FELSEFE-BİLİM ÜZERİNE KONUŞMALAR, İstanbul, Türkiye, 13 Ağustos 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/ce882bca-fcb4-4fb3-9b2a-23f545cea509/teist-ve-ateist-perspektifin-arkaplani-uzerine",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İslam Uygarlığına Tarihsel Bakış",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam Uygarlığına Tarihsel Bakış Çalıştayı, İstanbul, Türkiye, 13 Mart 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/a4872252-a046-4027-8ec7-dfd199a69c9c/islam-uygarligina-tarihsel-bakis",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Düşünce Tarihinde İnanç",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "T.C. Milli Eğitim Bakanlığı, Üsküdar Öğretmen Destek Eğitim Programı, İstanbul, Türkiye, 23 Şubat 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/d3014b68-fc88-48dd-ba90-6ffd438401a5/dusunce-tarihinde-inanc",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İslam Uygarlığı ve Aydınlanma",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam Uygarlığı ve Aydınlanma, İstanbul, Türkiye, 07 Ocak 2021, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1556d595-db44-4761-95c6-775c1926d39f/islam-uygarligi-ve-aydinlanma",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İSLAM UYGARLIĞI, BİLİM VE FELSEFE",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İSLAM UYGARLIĞI, BİLİM VE FELSEFE, İstanbul, Türkiye, 27 Kasım 2020, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/c6c739c1-c7de-49dd-91f9-9185a9858cd0/islam-uygarligi-bilim-ve-felsefe",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İyilik ve Kötülük Kavramları",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İyilik ve Kötülük Kavramları: Gençlerle Dinden Konuşalım, İstanbul, Türkiye, 02 Nisan 2020, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/34fb93d9-d66e-47fb-9003-22c17ec24a4d/iyilik-ve-kotuluk-kavramlari",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Bir Yazar Bir Kitap: \"Ateizm Çıkmazı\" Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Bir Yazar Bir Kitap, Ankara, Türkiye, 24 Şubat 2020, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4b12d1bc-7859-4e8a-8845-ddd4c7cb2f2d/bir-yazar-bir-kitap-ateizm-cikmazi-uzerine",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Felsefede Kötülük Kavramı",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Edebiyatın Felsefe Bağlamında İncelenişi, İstanbul, Türkiye, 05 Kasım 2019, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/18f122e8-0a37-4ebe-948d-f1d1ce5b2468/felsefede-kotuluk-kavrami",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Mehmet S. Aydın ve ”Tanrı Hakkında Konuşmak: Felsefi Bir Tahlil” Başlıklı Makalesi Üzerine Düşünceler",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Türkiye’xxde Din Felsefesi. Mehmet S Aydın, Ankara, Türkiye, 06 Haziran 2019, ss.75-83, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/17700d73-8fb6-433e-b36d-dab59ced4a2e/mehmet-s-aydin-ve-tanri-hakkinda-konusmak-felsefi-bir-tahlil-baslikli-makalesi-uzerine-dusunceler",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Düşünce ve İnanç İlişkisi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Kırklareli Üniversitesi Felsefe Bölüm Seminerleri, Kırklareli, Türkiye, 18 Nisan 2019, (Yayınlanmadı)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/e330dfef-3347-4722-ba0d-37e17b34d4ab/dusunce-ve-inanc-iliskisi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Deizm ve Ateizm Kıskacında İslam",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İstanbul Öğretmen akademileri: Türk İslam Düşüncesi ve Bilim Enstitüsü Etkinliği, İstanbul, Türkiye, 02 Ocak 2019, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6016e73d-2c9b-4766-97cc-da19c9cfb287/deizm-ve-ateizm-kiskacinda-islam",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Periphyseon’da Tanrı, İnsan ve Hiçlik Kavramları: Erigena Metafiziğinde Öz Sorunu",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Felsefe Kongresi İstanbul, İstanbul, Türkiye, 04 Mayıs 2018, cilt.3, ss.113-126, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/d1c641c4-d321-485a-8146-66da0446a44a/periphyseonda-tanri-insan-ve-hiclik-kavramlari-erigena-metafiziginde-oz-sorunu",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İslam ve Modernizm II",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İstanbul Öğretmen Akademileri:Türk İslam düşüncesi ve Bilimi Enstitüsü, İstanbul, Türkiye, 12 Aralık 2018, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4050bf4f-4f22-44fe-b5fe-7a9b6908e8b3/islam-ve-modernizm-ii",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İslam ve Modernizm",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İstanbul Öğretmen Akademileri:Türk İslam Düşüncesi ve Bilimi Enstitüsü Etkinliği, İstanbul, Türkiye, 11 Aralık 2018, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6fab22c7-d169-4fe6-87a3-67f1df396329/islam-ve-modernizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Tanrının Varlığıyla İlgili Kavramsal Eleştiriler",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "İslam düşüncesinde Ateizm Problemi, İstanbul, Türkiye, 21 - 23 Eylül 2018, (Özet Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/d8211a9c-3926-48b9-8efa-9b9c6c29c581/tanrinin-varligiyla-ilgili-kavramsal-elestiriler",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Bilim ve İnancın Doğası",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Felsefe Kongresi Muş, Muş, Türkiye, 17 Nisan 2018, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/767e0fb4-9e89-482b-b68d-ed09070020d2/bilim-ve-inancin-dogasi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Deizm Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, İstanbul, Türkiye, 04 Nisan 2018, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/a8ed19a8-cb37-4fcc-89f6-a33924db819e/deizm-uzerine",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Hayata Felsefe Aracılığıyla Bakmak",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, Yalova, Türkiye, 28 Aralık 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/cd0ba969-493f-4569-8725-2c3daf3ab48c/hayata-felsefe-araciligiyla-bakmak",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Ateizm ve Teizm Üzerine",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, Eskişehir, Türkiye, 27 Aralık 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/156b1ece-8ed1-4fce-ba02-ae3ac4e37f12/ateizm-ve-teizm-uzerine",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Deist ve Ateist Düşünce Karşısında Dini İnanç",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, Gaziantep, Türkiye, 16 Aralık 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/a4ae9400-440f-4901-b23c-68fdb5dfe52f/deist-ve-ateist-dusunce-karsisinda-dini-inanc",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "İnanmak ya da İnanmamak",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, Erzurum, Türkiye, 22 Kasım 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/439991b7-297b-4895-9533-b70d4b3b7566/inanmak-ya-da-inanmamak",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "İnanç ve inançsızlık Üzerine-İSEDER Konferansları",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Seminer, İstanbul, Türkiye, 02 Kasım 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/7cda15ed-3d87-4fd0-abe1-dd2fa43aaf79/inanc-ve-inancsizlik-uzerine-iseder-konferanslari",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Eğitimde Eleştirel Düşüncenin Önemi ve Erdem Öğretisi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, İstanbul, Türkiye, 27 Ekim 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/73c859c9-baab-4b3e-a31e-b9681d0eb6bd/egitimde-elestirel-dusuncenin-onemi-ve-erdem-ogretisi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Yurtdışında Yabancı Kalmamak",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Konferans, İstanbul, Türkiye, 05 Temmuz 2017",
+    "url": "https://avesis.istanbul.edu.tr/yayin/11e75475-aec8-4bc8-a490-d608500ab61d/yurtdisinda-yabanci-kalmamak",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Prof Dr Mehmet S Aydın ve Tanrı hakkında konuşmak Felsefi Bir Tahlil Başlıklı Makalesi Üzerine Düşünceler",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Mehmet S. Aydın Onuruna: Türkiye’De Din Felsefesinin Gelişimi, İstanbul, Türkiye, 14 - 16 Kasım 2015, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2dbde4e4-99ff-43ed-af08-f1f720331ecc/prof-dr-mehmet-s-aydin-ve-tanri-hakkinda-konusmak-felsefi-bir-tahlil-baslikli-makalesi-uzerine-dusunceler",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Metafizik Kötülük ve Sanat",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Sanat Kötülük Dizisi-Sanat Araştırmaları Merkezi/Bilim ve Sanat Vakfı, Türkiye, 25 - 27 Nisan 2015, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/c9014184-0a98-46d2-baf0-e57fbb24f9f6/metafizik-kotuluk-ve-sanat",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Bulgaristan Türklerinde Kültür Eğitim ve Felsefe",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Türkiye Balkanlar: Güncel Sorunlar Sempozyumu, İstanbul, Türkiye, 06 Aralık 2013, (Tam Metin Bildiri)",
+    "url": "https://avesis.istanbul.edu.tr/yayin/91f49024-4147-41e7-af2e-058e5fbfd3dd/bulgaristan-turklerinde-kultur-egitim-ve-felsefe",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "İyi ve Kötü arasında İnsanın Erdem Savaşı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İyiliğe Bilimsel Bakış, ÇETİN NURAN, Editör, Sivas Cumhuriyet Üniversitesi yayınları, Sivas, ss.72-99, 2025",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6637bf18-4726-4bbd-91e3-a00943a2f1d8/iyi-ve-kotu-arasinda-insanin-erdem-savasi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "Hristiyan Bir Mistik Düşünür: John Scotus Erigena",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İz Yayıncılık, İstanbul, 2023",
+    "url": "https://avesis.istanbul.edu.tr/yayin/6c455570-07aa-4f43-9850-141b47c7c2ab/hristiyan-bir-mistik-dusunur-john-scotus-erigena",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Ahmet Arslan",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Cumhuriyetimizin 100. Yılında 100 Felsefecimiz Cilt 1-2, Nihat Durmaz, Editör, Nobel Yayın Dağıtım, Ankara, ss.155-168, 2023",
+    "url": "https://avesis.istanbul.edu.tr/yayin/100972c4-9078-4eb4-95f3-fca7db426024/ahmet-arslan",
+    "yazarlar": [
+     "TOPALOĞLU A.",
+     "Bozbuğa H. N."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Muhammed Arüçi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "XIX. Yüzyıldan Günümüze İslam Düşünürleri (Cilt 1), Kemal Sözen Sabri Yılmaz,Ali Kürşat Yılmaz, Editör, DA Yayıncılık, İstanbul, ss.649-656, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1c0e8019-e765-4bfc-832f-50ea9d114a90/muhammed-aruci",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Tanrı'nın Varlığının Kanıtlanması",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Klasik ve Çağdaş Konularla Din Felsefesi -I-, Abdüllatif Tüzer - Fatma Yüce, Editör, Ankara Okulu Yayınları, Ankara, ss.93-120, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/47078285-95f0-4561-bae8-0ece0c22fd74/tanrinin-varliginin-kanitlanmasi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Avrasya'da Din: İslam Uygarlığı ve Etkileri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Uluslararası Politik Ekonomide Avrasya, Arzu Al - Hayri Kaya, Editör, Nobel Yayın Dağıtım, Ankara, ss.171-181, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1c7ca51b-6049-461e-90a1-5120d540abdf/avrasyada-din-islam-uygarligi-ve-etkileri",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "ATEİST TANRI",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "BİR DÜNYA TANRI, Mustafa Tekin, Editör, Ragbet Yayınları, İstanbul, ss.577-599, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/5255d3c7-ff75-40bb-8952-981216aa38e5/ateist-tanri",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Tanrı'nın Varlığının Kanıtlanması",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Klasik ve Çağdaş Konularla Din Felsefesi -I-,, Abdüllatif Tüzer - Fatma Yüce, Editör, Ankara Okulu Yayınları, Ankara, ss.93-120, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/9142bd6e-76e6-4592-9d82-ea2e37c621df/tanrinin-varliginin-kanitlanmasi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "ATEİST TANRI",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "BİR DÜNYA TANRI,, Mustafa Tekin, Editör, Rağbet Kitap, İstanbul, ss.577-599, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/030c095a-5991-45ab-8aec-7201b209e6e6/ateist-tanri",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Günümüzde Ateist ve Deist Düşüncenin Doğası ve Felsefi Kökenleri Üzerine",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "21. Yüzyılda Gençliğin İnanç Eğilimleri, İsmail Şimşek, Editör, Mak Grup, Medya, İlahiyat Yayın, İstanbul, ss.12-13, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1b4958e8-4951-41c7-8a2c-d5630bb1535a/gunumuzde-ateist-ve-deist-dusuncenin-dogasi-ve-felsefi-kokenleri-uzerine",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Muhammed Aruçi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "XIX. Yüzyıldan Günümüze İslam Düşünürleri (Cilt 1), Kemal Sözen, Sabri Yılmaz, Ali Kürşat Yılmaz,, Editör, Divan Kitap, İstanbul, ss.649-656, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/09ad765e-5f85-4d62-ad77-fc2bb2d4d267/muhammed-aruci",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Avrasya'da Din: İslam Uygarlığı ve Etkileri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Uluslararası Politik Ekonomide Avrasya, Arzu Al - Hayri Kaya, Editör, Nobel Yayın Dağıtım, Ankara, ss.171-181, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/5bdce72c-466d-45dc-a30d-a36c22b78eeb/avrasyada-din-islam-uygarligi-ve-etkileri",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Filozofların Tanrısı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İz yayıncılık, İstanbul, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1c30f077-64f2-4d91-bc13-082b1788b08f/filozoflarin-tanrisi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Teizm & Ateizm Tanrıtanımazlığın Felsefi Boyutları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İz Yayıncılık, İstanbul, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/fe9d66d9-35ab-4d5f-9c2f-08d1edf173ec/teizm-ateizm-tanritanimazligin-felsefi-boyutlari",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Teizm & Ateizm: Tanrıtanımazlığın Felsefi Boyutları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İz Yayıncılık, İstanbul, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/795a3358-fff4-4d72-97a0-06705a6719bf/teizm-amp-ateizm-tanritanimazligin-felsefi-boyutlari",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Materyalizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Temel İslam Ansiklopedisi, Tuncay Başoğlu, Editör, Türkiye Diyanet Vakfı Yayınları, İstanbul, ss.370-375, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/e648238d-a077-4788-88dd-c47d11edf9d7/materyalizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Agnostisizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Temel İslam Ansiklopedisi, Tuncay Başoğlu, Editör, Türkiye diyanet Vakfı Yayınları, İstanbul, ss.129-131, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/9e7e8ea3-dc0c-4106-8df4-6b3b0ec5124e/agnostisizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Deizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Temel İslam ansiklopedisi, Tuncay Başoğlu, Editör, Türkiye diyanet Vakfı Yayınları, İstanbul, ss.187-191, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/91d7f1e2-3953-485b-bb6b-dcc300f9636a/deizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Ateizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Temel İslam Ansiklopedisi, Tuncay Başoğlu, Editör, Türkiye diyanet Vakfı Yayınları, İstanbul, ss.348-355, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/99a1666f-c639-4aed-b350-f0b400cdeff9/ateizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Ateizm Çıkmazı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Diyanet İşleri Başkanlığı Yayınları, Ankara, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/c2782c5d-8da9-428b-bc32-fc839c791d23/ateizm-cikmazi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İnsan Zihninin Tanrı’ya Gidişi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İnsanın Anlam Arayışı, Fatih Kurt, Editör, Diyanet İşleri Başkanlığı Yayınları, Ankara, ss.38-48, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/e6d1b14a-b48f-4b05-a8fe-8e1665fe3e69/insan-zihninin-tanriya-gidisi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Tanrı İnancına Yöneltilen Kavramsal Eleştiriler",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslâm Düşüncesinde Ateizm Eleştirisi, Cemalettin ERDEMCİ-Fadıl AYGAN-Seyithan CAN-Mustafa SANCAR, Editör, Ankara Okulu Yayınları, Ankara, ss.9-20, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2c563b8f-1ef8-4c09-b881-d77c64bae033/tanri-inancina-yoneltilen-kavramsal-elestiriler",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Mehmet S. Aydın ve ”Tanrı Hakkında Konuşmak: Felsefi Bir Tahlil” Başlıklı makalesi üzerine Düşünceler",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Türkiye’de Din Felsefesi: Mehmet S. Aydın Onuruna, Rahim Acar Nesrin Bağcı Erciyes, Editör, Ankara Okulu Yayınları, Ankara, ss.75-83, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/63c7905c-a87f-4836-b1e5-e9124e4a5662/mehmet-s-aydin-ve-tanri-hakkinda-konusmak-felsefi-bir-tahlil-baslikli-makalesi-uzerine-dusunceler",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İnsan Zihninin Tanrı’ya Gidişi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İnsanın Anlam Arayışı, Fatih Kurt, Editör, Diyanet İşleri Başkanlığı, İstanbul, ss.17-23, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4605f43d-88e8-492e-9b64-468105cc046f/insan-zihninin-tanriya-gidisi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Tanrı Kavramının Kavramsal Eleştirileri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslâm Düşüncesinde Ateizm Eleştirisi, Cemalettin ERDEMCİ-Fadıl AYĞAN-Seyithan CAN-Mustafa SANCAR, Editör, Elis Yayınları, Ankara, ss.9-20, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/48038a58-4f54-4cb1-92ef-797c014c64c8/tanri-kavraminin-kavramsal-elestirileri",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Ölüm ve Ölümsüzlük İnancı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, TOKAT LATİF, Editör, Bilay Yayıncılık, Ankara, ss.271-290, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/8a3b341e-6f10-4f2f-b49f-6cd72f845978/olum-ve-olumsuzluk-inanci",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Mehmet S. Aydın ve ”Tanrı Hakkında Konuşmak: Felsefi Bir Tahlil” Başlıklı makalesi üzerine Düşünceler",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Türkiye’de Din Felsefesi, Rahim Acar Nesrin Bağcı Erciyes, Editör, Elis Yayınları, Ankara, ss.75-83, 2019",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4e16221f-a30e-4a4d-85d9-dcb168a49940/mehmet-s-aydin-ve-tanri-hakkinda-konusmak-felsefi-bir-tahlil-baslikli-makalesi-uzerine-dusunceler",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Akıl ve İnanç",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Fecr Yayınevi, Ankara, ss.39-61, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/d8c72e4d-cab7-4ccf-a4c7-faab940a7f21/akil-ve-inanc",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Ateizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Fecr Yayınevi, Ankara, ss.139-166, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2873f132-1190-4ddb-b418-2383b8937bf4/ateizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Kötülük Problemi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Fecr Yayınevi, Ankara, ss.230-249, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/880b07a6-3432-46f2-b58f-986db3539cd5/kotuluk-problemi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Ölüm ve Ölümsüzlük",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Fecr Yayınevi, Ankara, ss.271-293, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/e59f3c3c-fe53-417e-a439-d78d8b8d3708/olum-ve-olumsuzluk",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Ateizm",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilim Araştırma Yayınları (Fecr Yayın), Ankara, ss.139-166, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/f6765828-29a0-42ca-a061-1c5a58bf8899/ateizm",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Akıl ve İnanç",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif tokat, Editör, Bilimsel Araştırma Yayınları (FCR yayın), Ankara, ss.39-61, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/148c5d5a-13f5-48ee-a61a-d8b9ba8b6137/akil-ve-inanc",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Kötülük Problemi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilimsel araştırma Yayınları (FCR Yayın), Ankara, ss.231-249, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4c102c1c-f39d-4bb9-8e87-fcd4848980c0/kotuluk-problemi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Ölüm ve Ölümsüzlük",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilimsel araştırma Yayınları (FCR Yayın), Ankara, ss.271-293, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/018e25f5-a10d-43f8-98bf-c6f658054299/olum-ve-olumsuzluk",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "John Scotus Erigena Metafiziği",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Akis Kitab, İstanbul, 2014",
+    "url": "https://avesis.istanbul.edu.tr/yayin/f05e3a68-6f04-469e-88e7-2e948f34dba9/john-scotus-erigena-metafizigi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Ateizm ve Eleştirisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "DİB, 2004",
+    "url": "https://avesis.istanbul.edu.tr/yayin/79c033b8-79c7-405e-a5a9-5683d5359868/ateizm-ve-elestirisi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2004"
+   },
+   {
+    "baslik": "İslâm Ve Modernleşme",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tdv, İstanbul, 1997",
+    "url": "https://avesis.istanbul.edu.tr/yayin/30e355de-3a20-4875-93db-9f4b982f6e58/islam-ve-modernlesme",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "1997"
+   },
+   {
+    "baslik": "Husn Kubuh",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "TÜBITAK Yayınları, ss.180-183, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/08e7291e-e6b2-44eb-83ac-503fa54fa847/husn-kubuh",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Ateizm",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "TÜBITAK Yayınları, ss.90-91, 2022",
+    "url": "https://avesis.istanbul.edu.tr/yayin/2b0d4137-8a2c-4171-8084-f22f2106c083/ateizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Agnostisizm",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye diyanet Vakfı Yayınları, ss.129-131, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/44d6177f-faf7-4243-af19-d6ecf38129d9/agnostisizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Ateizm",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye Diyanet Vakfı Yayınları, ss.348-355, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/4960b99c-af8e-4392-9e77-67aed6600aef/ateizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Materyalizm",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye Diyanet Vakfı Yayınları, ss.370-375, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/ccb04181-7ce7-4fa2-b24c-592e93b0a364/materyalizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Deizm",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye diyanet Vakfı Yayınları, ss.187-191, 2020",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1e5f1edb-d168-4450-9681-5be48d795dda/deizm",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "DİA İslâm Ansiklopedisi",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye Diyanet Vakfı, ss.332-334, 2018",
+    "url": "https://avesis.istanbul.edu.tr/yayin/c2f88bee-2d7b-4e39-921d-6e94d7c5efbd/dia-islam-ansiklopedisi",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İslâm Ansiklopedisi, DİA",
+    "bolum": "Ansiklopedide Bölümler",
+    "doi": "",
+    "kaynak": "Türkiye Diyanet Vakfı, ss.137-140, 2003",
+    "url": "https://avesis.istanbul.edu.tr/yayin/1e3af537-6b24-4703-81b5-4cc6fb821264/islam-ansiklopedisi-dia",
+    "yazarlar": [
+     "TOPALOĞLU A."
+    ],
+    "yil": "2003"
+   },
+   {
+    "baslik": "Kötülük Üzerine Felsefi Mülahazalar - Philosophical Considerations on Evil during Pandemi",
+    "bolum": "Diğer Yayınlar",
+    "doi": "",
+    "kaynak": "Diğer, ss.14-21, 2020 \")\">",
+    "url": "https://avesis.istanbul.edu.tr/yayin/3d2d344b-eeb8-40ff-bfa7-1f200931b110/kotuluk-uzerine-felsefi-mulahazalar-philosophical-considerations-on-evil-during-pandemi",
+    "yazarlar": [
+     "Topaloğlu A."
+    ],
+    "yil": "2020"
    }
   ]
  },
@@ -7263,6 +8343,824 @@
    }
   ]
  },
+ "Mehmet Ata Az": {
+  "profil": "https://avesis.aybu.edu.tr/ata",
+  "yayinlar": [
+   {
+    "baslik": "Biyolojik Doğalcılık Bağlamında John Searle'ün Özgürlük Açıklaması",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Tetkik (Online), sa.7, ss.119-144, 2025 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/dc4ffb27-fb3d-4cf6-9793-69d703b4210f/biyolojik-dogalcilik-baglaminda-john-searleun-ozgurluk-aciklamasi",
+    "yazarlar": [
+     "AKICI Ş. R.",
+     "Az M. A."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "The Self-Consciousness of the Soul in the Context of Avicenna’s Flying Man Theory",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ESKIYENI, cilt.55, ss.1665-1696, 2024 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/8a9e2beb-36a5-4951-b68b-de07ac47c15e/the-self-consciousness-of-the-soul-in-the-context-of-avicennas-flying-man-theory",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "İbn Sînâ’nın Uçan Adam Nazariyesi Bağlamında Nefsin Benlik Bilinci",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ESKIYENI, sa.51, ss.1045-1073, 2023 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/5b7c1340-1d33-4e81-a6d2-6d4ead095fad/ibn-sinanin-ucan-adam-nazariyesi-baglaminda-nefsin-benlik-bilinci",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "Orta Çağ Batı Yahudi Felsefî Düşüncesinde İbn Sînâ’nın Etkisi ve İbn Sînâcılık",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "CUMHURIYET THEOLOGY JOURNAL, cilt.26, sa.3, ss.1091-1109, 2022 (ESCI, Scopus, TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/373c45e4-1012-47df-8850-116bf2519996/orta-cag-bati-yahudi-felsefi-dusuncesinde-ibn-sinanin-etkisi-ve-ibn-sinacilik",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Ibn Sînâ'nınn Eserlerinin Latince'ye Tercüme Süreci ve Latin İbn Sînâcılığı (Avicennaism)",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, cilt.2, sa.74, ss.27-57, 2021 (Hakemli Dergi)",
+    "url": "https://avesis.aybu.edu.tr/yayin/500c584b-db0e-424e-bfc4-752dbcf4115e/ibn-sinaninn-eserlerinin-latinceye-tercume-sureci-ve-latin-ibn-sinaciligi-avicennaism",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Fârâbî'nin Eserlerinin Latinceye Tercüme Süreci ve Latin Düşüncesine Etkisi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "HITIT THEOLOGY JOURNAL, cilt.19, sa.2, ss.547-581, 2020 (ESCI, TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/a5ac0e81-3de8-4fcf-8041-5e14c1f7eaff/farabinin-eserlerinin-latinceye-tercume-sureci-ve-latin-dusuncesine-etkisi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "A Heated Controversy in the Second/Eighth Century: Khalq al-Qurʾān (The Createdness of Qurʾān)",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ULUM, cilt.3, sa.1, ss.69-92, 2020 (Hakemli Dergi) \")\">",
+    "url": "https://avesis.aybu.edu.tr/yayin/8e8691fe-ebc4-4699-a101-bcc4b44a843f/a-heated-controversy-in-the-second-eighth-century-khalq-al-quran-the-createdness-of-quran",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "Thomas Aquinas'ın De Aeterniate Mundi (Âlemin Ezeliliğine Dair) Risalesinin Değerlendirmesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "BILIMNAME: DUSUNCE PLATFORMU, cilt.39, sa.3, ss.285-320, 2019 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/e327086e-07cd-4afa-87ca-511a19d24ef8/thomas-aquinasin-de-aeterniate-mundi-alemin-ezeliligine-dair-risalesinin-degerlendirmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İbn Rüşd’ün Heyûlânî Aklın Faal Akıl ile İttisali veÖzdeşliği Görüşünün Aquinas’ın Eleştirileri BağlamındaDeğerlendirilmesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "BIJOB BEYTULHIKME INTERNATIONAL JOURNAL OF PHILOSOPHY, cilt.9, sa.1, ss.13-38, 2019 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/0b60f418-cdea-45bb-ac99-2417c7e5fc43/ibn-rusdun-heyulani-aklin-faal-akil-ile-ittisali-veozdesligi-gorusunun-aquinasin-elestirileri-baglamindadegerlendirilmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "The Evaluation of Averroes' Doctrine of Conjunction of Material Intellect with Agent Intellect and Their Identity in the Context of Thomas Aquinas' Criticisim",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "BEYTULHIKME-AN INTERNATIONAL JOURNAL OF PHILOSOPHY, cilt.9, sa.1, ss.13-38, 2019 (ESCI, TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/bebf8ee9-00e9-402c-bd12-53bbfbef086c/the-evaluation-of-averroes-doctrine-of-conjunction-of-material-intellect-with-agent-intellect-and-their-identity-in-the-context-of-thomas-aquinas-criticisim",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Fârâbî de Ruhun Ölümsüzlüğü Meselesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "JOURNAL OF TURKISH STUDIES, cilt.12, sa.20, ss.85-100, 2017 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/a5534317-26ab-4abd-948b-29a8c60dfd3b/farabi-de-ruhun-olumsuzlugu-meselesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Gazzâlî ve Thomas Aquinas ın Nedensellik Görüşlerinin Karşılaştırılması",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "JOURNAL OF TURKISH STUDIES, cilt.11, sa.7, ss.85, 2016 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/c5271207-22a6-45d1-a20c-26a7708563df/gazzali-ve-thomas-aquinas-in-nedensellik-goruslerinin-karsilastirilmasi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Aquinas’ın Eleştirileri Bağlamında İbn Sīnā’nın Sudûr Nazariyesinin Değerlendirilmesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Ankara Universitesi Ilahiyat Fakultesi Dergisi, cilt.56, sa.2, ss.77-101, 2015 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/e5dbca80-179c-4b48-bf8a-0c6846e20e43/aquinasin-elestirileri-baglaminda-ibn-sinanin-sudur-nazariyesinin-degerlendirilmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "İbn Sina 'nın Varlık Mahiyet Ayrımının Ayniliğinin Aquinas'ın Eleştirileri Bağlamında Değerlendirilmesi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ESKIYENI, sa.29, ss.72-102, 2014 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/dca7fba7-1885-4878-a1c2-d24999110980/ibn-sina-nin-varlik-mahiyet-ayriminin-ayniliginin-aquinasin-elestirileri-baglaminda-degerlendirilmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Avicenna and Thomas Aquinas on the Possibility of Talking about God",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ILAHIYAT STUDIES: A JOURNAL ON ISLAMIC AND RELIGIOUS STUDIES, cilt.4, sa.2, ss.149-181, 2013 (ESCI, Scopus, TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/b28c6988-2d96-4175-bd9d-bb0b7182cd1a/avicenna-and-thomas-aquinas-on-the-possibility-of-talking-about-god",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Descates’ta Tanrı Kudret ve Ezeli Doğrular",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "ŞIRNAK UNIVERSITY JOURNAL OF DIVINITY FACULTY, cilt.2, sa.2, ss.69-90, 2011 (TRDizin)",
+    "url": "https://avesis.aybu.edu.tr/yayin/90b6cb0e-423b-4a09-b646-1b9e95a94d1a/descatesta-tanri-kudret-ve-ezeli-dogrular",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "A Common Word Text and Reflections A Resource for Parishes and Mosques",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "JOURNAL OF ECUMENICAL STUDIES, cilt.46, sa.3, ss.90-91, 2011 (Scopus)",
+    "url": "https://avesis.aybu.edu.tr/yayin/622af840-1ce5-4a2d-97e2-6c1e5973b33d/a-common-word-text-and-reflections-a-resource-for-parishes-and-mosques",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "An Evaluation of al-Fārābī and Avicenna’s Views on the Self-Consciousness of the Nafs",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "A Matter of Resonance: Exploring the Philosophy of Mind in Islamic and Hindu Traditions, Cambridge, İngiltere, 2 - 03 Ekim 2024, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/6d15eb45-7011-4b87-892a-c86cb1a4e070/an-evaluation-of-al-farabi-and-avicennas-views-on-the-self-consciousness-of-the-nafs",
+    "yazarlar": [
+     "Az M. A.",
+     "Akbay Y. E."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Aquinas' Critique of Averroes: Is the Material Intellect a Faculty of the Soul or a Separate Intellect?",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Early Career and Postgraduate Conference: Catholic Studies - Theology and Religion: The Global and the Local, Durham, İngiltere, 15 Temmuz 2024, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/bb471cdf-a69a-4f65-b527-9070a7bb96c8/aquinas-critique-of-averroes-is-the-material-intellect-a-faculty-of-the-soul-or-a-separate-intellect",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Toledo as a Place of Interaction Between Islam and Western Thought: Coexistence, Translation and Scholarship",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "The 3rd International Symposium on The Practice of Coexistence in Islamic Culture, Yogyakarta, Endonezya, 28 - 30 Mayıs 2024, (Tam Metin Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/8d360b9e-4e41-426f-989d-023cc41063ba/toledo-as-a-place-of-interaction-between-islam-and-western-thought-coexistence-translation-and-scholarship",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Does Evil Actually Exist? An Evaluation of the Views of Avicenna and Thomas Aquinas",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "The 12th International Conference of Contemporary Philosophy of Religion (CPR2024) The Problem of Evil in Modern and Islamic Thought, Tehran, İran, 14 - 15 Mayıs 2024, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/2c6d9b7c-7c27-422d-a719-b6ba8146378f/does-evil-actually-exist-an-evaluation-of-the-views-of-avicenna-and-thomas-aquinas",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "İslam Düşünce Mirasının Batı Dünyasına Aktarılmasında Tercüme Okulları ve Tercümenin Rolü",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "III. Dil, Düşünce ve Din Bilimleri Kongresi, Mardin, Türkiye, 25 - 27 Mayıs 2022, cilt.1, ss.107-108, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/f6cb00af-f951-4b68-9400-1c1c64e6895d/islam-dusunce-mirasinin-bati-dunyasina-aktarilmasinda-tercume-okullari-ve-tercumenin-rolu",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "Yahudi Düşüncesinde İbn Sînâ’nın Felsefi Düşüncesinin Etkileri ve İbn Sînâcılık",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Yahudi Düşüncesinde İbn Sînâ’nın Felsefi Düşüncesinin Etkileri ve İbn Sînâcılık, Konya, Türkiye, 8 - 10 Aralık 2021, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/5356fb29-fbfc-4502-896c-6d28503c0fc2/yahudi-dusuncesinde-ibn-sinanin-felsefi-dusuncesinin-etkileri-ve-ibn-sinacilik",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İBN SÎNÂ VE ALBERTUS MAGNUS’UN NEFS ANLAYIŞLARININ KARŞILAŞTIRILMASI",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "5. Uluslararası Dini Araştırmalar ve Küresel Barış Sempozyumu Toplum-Birey İkilemnde Ortak Değerler ve Farklılıklar, Konya, Türkiye, 6 - 07 Kasım 2019, cilt.2, ss.285-295, (Tam Metin Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/46b9a59b-8345-4e54-b22e-c3ca807bb2b0/ibn-sina-ve-albertus-magnusun-nefs-anlayislarinin-karsilastirilmasi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İbn Rüşd’ün Eleştirileri Bağlamında İskender’in Heyûlânî Akıl Anlayışının Değerlendirilmesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Dil, Düşünce ve Din Bilimleri Kongresi, Mardin, Türkiye, 8 - 10 Kasım 2018, cilt.3, ss.111-122, (Tam Metin Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/c6e82f29-b68c-425d-b7fd-0b3c8961c7fc/ibn-rusdun-elestirileri-baglaminda-iskenderin-heyulani-akil-anlayisinin-degerlendirilmesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "The Issue of the Createdness of Qur’ān",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "1st INTERNATIONAL CONGRESS ON SOCIAL SCIENCES, Malaga, İspanya, 18 - 24 Eylül 2017, ss.123-124, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/4db115f1-31ee-409f-8473-bedb8667459d/the-issue-of-the-createdness-of-quran",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Seyfeddin Amidi nin Tanrı Kanıtlamasının Değerlendirilmesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Diyarbakır Sempozyumu, Diyarbakır, Türkiye, 2 - 05 Kasım 2016, (Tam Metin Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/3c493d31-0db6-4c89-9d5f-27bf5291f09b/seyfeddin-amidi-nin-tanri-kanitlamasinin-degerlendirilmesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Farabi’de Ruhun Ölümsüzlüğü Meselesi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Al Farabi I. Uluslararası Sosyal Bilimler Kongresi, Gaziantep, Türkiye, 11 - 14 Mayıs 2017, ss.413, (Özet Bildiri)",
+    "url": "https://avesis.aybu.edu.tr/yayin/bf062f23-8b89-4ca9-bb66-07dc6df189b5/farabide-ruhun-olumsuzlugu-meselesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "İslam Düşüncesinin Orta Çağ Latin Dünyasına İntikali ve Etkileri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslam Felsefesi Tarih ve Problemler, Cuneyt Kaya, Editör, Klasik Yayınevi, İstanbul, ss.231-276, 2025",
+    "url": "https://avesis.aybu.edu.tr/yayin/b1600a49-0aa5-4d5d-aaec-f84f79dba5e1/islam-dusuncesinin-orta-cag-latin-dunyasina-intikali-ve-etkileri",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "Arapçadan Latinceye Felsefe / Latin Dünyasında İslam Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslam Felsefesi Tarihi, Veysel Kaya, Editör, İstanbul Üniversitesi Yayınları, İstanbul, ss.20-53, 2024",
+    "url": "https://avesis.aybu.edu.tr/yayin/d9e4bb97-a2f4-48be-b74c-e6f1a8d57cab/arapcadan-latinceye-felsefe-latin-dunyasinda-islam-felsefesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "İman ve Akıl İlişkisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Osman Bilen, Haydar Dölek, Editör, Lisans Yayınları, İstanbul, ss.31-52, 2023",
+    "url": "https://avesis.aybu.edu.tr/yayin/12d1f7bc-9555-4eee-817c-48a66efebb7d/iman-ve-akil-iliskisi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2023"
+   },
+   {
+    "baslik": "İbn Rüşd ve Thomas Aquinasta Akılların Birliği",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Klasik Yayınları, İstanbul, 2021",
+    "url": "https://avesis.aybu.edu.tr/yayin/21da72c7-404a-457c-ac10-2f8c5c1c2afd/ibn-rusd-ve-thomas-aquinasta-akillarin-birligi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Mutlak Kudret ve Taş Paradoksu",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İksad, Ankara, 2021",
+    "url": "https://avesis.aybu.edu.tr/yayin/14eac67f-2c3d-4acf-9068-1effd867517c/mutlak-kudret-ve-tas-paradoksu",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Din Felsefesi Denen Şey Nedir?What is This Thing Called Philosophy of Religion?",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Episteme, Ankara, 2021",
+    "url": "https://avesis.aybu.edu.tr/yayin/14b30dd6-ab28-402f-8cda-e96d929a5966/din-felsefesi-denen-sey-nedirwhat-is-this-thing-called-philosophy-of-religion",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Mâtürîdî ve Nesefî'nin Atomculuk ve Tabiat Anlayışı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Dakîku'l-Kelâm, Ramazan Altıntaş Ahmet Mekin Kandemir, Editör, Kitap arası, İstanbul, ss.273-286, 2021",
+    "url": "https://avesis.aybu.edu.tr/yayin/08b20706-c5a7-4b41-96e2-eb8a19463e3b/maturidi-ve-nesefinin-atomculuk-ve-tabiat-anlayisi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "İlahi Sıfatların Mahiyeti ve Gerçekliği Meselesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Klasik ve Modern Metinlerde Din Felsefesi Dersleri, Recep Alpyağıl, Editör, İz yayıncılık, İstanbul, ss.267-304, 2021",
+    "url": "https://avesis.aybu.edu.tr/yayin/35d056e5-10bc-470b-9aa7-2f7fd082c831/ilahi-sifatlarin-mahiyeti-ve-gercekligi-meselesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Kavram Atlası Felsefe II",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Gazi Kitabevi, Ankara, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/64b5a897-95ce-4478-ae8c-89486f6b00d0/kavram-atlasi-felsefe-ii",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "TÂVÛS B. KEYSÂN (Ö. 106/725)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar, ÖZDEMİR Mehmet, ERŞAHİN Seyfettin, DEMİRCİ Mustafa, BAŞ Eyüp, ERKOÇOĞLU Fatih, YAZAR Nurullah, BARIŞ Mustafa Necati, FİDAN Mehmet Akif, Editör, Otto, Ankara, ss.358-361, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/fd247c27-0ebb-4bb2-9aad-7e57982eec14/tavus-b-keysan-o-106-725",
+    "yazarlar": [
+     "ACAR C.",
+     "ACAR Ö.",
+     "AZ M. A.",
+     "ADAK A.",
+     "AZİMLİ M.",
+     "ADEMİ R."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İBNÜ’L-CEZZÂR, EBÛ CAFER (Ö. 368/979)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar C.2, Seyfettin Erşahin, Editör, Otto, Ankara, ss.696-698, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/0c270fad-9cca-49d4-be39-f75e415cee45/ibnul-cezzar-ebu-cafer-o-368-979",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İSHAK B. İMRAN (Ö. 290/903)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar 2. Cilt, Seyfettin Erşahin, Editör, Otto, Ankara, ss.686-687, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/1d1819ed-475d-4baa-ab8e-d61bd2df4a89/ishak-b-imran-o-290-903",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İBN CÜLCÜL (Ö. 384/994)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar C.2, Seyfettin Erşahin, Editör, Otto, Ankara, ss.704-702, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/3311bf1b-0f83-4b43-bc69-438b7659a2c1/ibn-culcul-o-384-994",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "SAİD B. MÜSEYYEB (Ö. 94/713)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar, ÖZDEMİR Mehmet, ERŞAHİN Seyfettin, DEMİRCİ Mustafa, BAŞ Eyüp, ERKOÇOĞLU Fatih, YAZAR Nurullah, BARIŞ Mustafa Necati, FİDAN Mehmet Akif, Editör, Otto, Ankara, ss.352-355, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/b9b34002-89ba-4b62-994b-710363d6b153/said-b-museyyeb-o-94-713",
+    "yazarlar": [
+     "BAŞ E.",
+     "ADIGÜZEL A.",
+     "BARIŞ M. N.",
+     "ADEMİ R.",
+     "AZİMLİ M.",
+     "ADAK A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İBNU’D-DÂYE (Ö. 340/951 [?])",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tarihte Müslümanlar C.2, Seyfettin Erşahin, Editör, Otto, Ankara, ss.691-693, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/c747c275-338f-43ed-bdc1-66bed14d1332/ibnud-daye-o-340-951",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "European Values and Islam",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "The Ideas and Values of Europe from Antigone to the Charter of Fundemental Rights, Angelo Santagostino, Editör, Cambridge ScholarsPublishing, Newcastle, ss.41-63, 2020",
+    "url": "https://avesis.aybu.edu.tr/yayin/ed3183b4-f292-4562-8132-1ed7887c41a8/european-values-and-islam",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "İbn Rüşd ve Thomas Aquinas’ta Aklın Birliği",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Fecr Yayınevi, Ankara, 2019",
+    "url": "https://avesis.aybu.edu.tr/yayin/84d5b293-6f90-48de-a2b1-2dd286d8eadc/ibn-rusd-ve-thomas-aquinasta-aklin-birligi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İbn Sina’xxnın Tanrı’xxnın Varlığını Zorunlu Varlık Olarak Kanıtlaması",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi Açısından Meşşai Gelen-Ek-i Klasik ve Çağdaş Metinler Seçkisi, Recep Alpyağıl, Editör, İz, İstanbul, ss.296-312, 2019",
+    "url": "https://avesis.aybu.edu.tr/yayin/d6bc72cb-6d8c-461a-9aab-d1353357e6ab/ibn-sinaxxnin-tanrixxnin-varligini-zorunlu-varlik-olarak-kanitlamasi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Sonsuzluğu Mümkün Olmayanın Mahiyeti ve Sonsuz Olanın Ne Olduğu Üzerine",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi Açısından Meşşai Gelen-Ek-i, Recep Alpyağıl, Editör, İz Yayınları, İstanbul, ss.211-213, 2019",
+    "url": "https://avesis.aybu.edu.tr/yayin/c9b70fd6-60e3-4c22-a043-dfac4a431166/sonsuzlugu-mumkun-olmayanin-mahiyeti-ve-sonsuz-olanin-ne-oldugu-uzerine",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Alemin Varlığının Sonluluğu",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi Açısından Meşşai Gelen-Ek-i, Recep Alpyağıl, Editör, İz Yayıncılığı, İstanbul, ss.207-210, 2019",
+    "url": "https://avesis.aybu.edu.tr/yayin/58e47964-9b57-461d-b21a-396805927d96/alemin-varliginin-sonlulugu",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Tanrı’nın Sıfatları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilay, Ankara, ss.125-143, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/9a2b0891-fec8-4b2a-91ed-b63cf43bd312/tanrinin-sifatlari",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Tanrı'nın Sıfatları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilay, Ankara, ss.121-138, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/1cc5cd20-3733-4dbc-a59f-b3edd8d32366/tanrinin-sifatlari",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Tanrı ve Niahi Gerçeklik Tasavvurları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Prof. Dr. Latif Tokat, Editör, Bilay, Ankara, ss.63-86, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/2a3b5545-3ac6-418a-b846-f21aaaecc2ad/tanri-ve-niahi-gerceklik-tasavvurlari",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Bilimsel Bilgi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Oxford Epistemoloji, Hasan Yücel Başdemir, Nebi Mehdiyev, Editör, Adres, Ankara, ss.351-369, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/e9809921-597f-4d70-9948-59c0e84edbfc/bilimsel-bilgi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Bilgiye İlişkin Formel Problemler",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Oxford Epistemoloji, Hasan Yücel Başdemir, Mehdi Nebiyev, Editör, Adres, Ankara, ss.513-538, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/6edf7e32-ff39-4ace-bd8a-0305149f5d84/bilgiye-iliskin-formel-problemler",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Tanrı ve Nihai Gerçeklik Tasavvurları",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Latif Tokat, Editör, Bilay, Ankara, ss.67-91, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/54b4cc44-cf8d-4c59-aa1d-b3edc6ce1dd6/tanri-ve-nihai-gerceklik-tasavvurlari",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İbn Rüşd’ün Eleştirileri Bağlamında İskender’in Heyûlânî Akıl AnlayışınınDeğerlendirilmesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Düşünce Bilimleri Klasik Sorunlar Güncel Tartışmalar, Nesim Doru-Ömer Bözkurt, Editör, Mardin Artuklu Üniversitesi Yayınları, Mardin, ss.111-122, 2018",
+    "url": "https://avesis.aybu.edu.tr/yayin/3e742b14-1a13-419e-a920-a8c9bda7d389/ibn-rusdun-elestirileri-baglaminda-iskenderin-heyulani-akil-anlayisinindegerlendirilmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İlahi Basitlik Bağlamında Tanrı nın Bilinebilirliği",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "OTTO, Ankara, 2017",
+    "url": "https://avesis.aybu.edu.tr/yayin/b3599bd1-3e73-4bdb-bfd9-fe4289ea324d/ilahi-basitlik-baglaminda-tanri-nin-bilinebilirligi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "İslam’da Nübüvvet",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Adres, Ankara, 2017",
+    "url": "https://avesis.aybu.edu.tr/yayin/a25ba411-1a06-45c7-9035-7c90d3e679ca/islamda-nubuvvet",
+    "yazarlar": [
+     "AZ M. A.",
+     "YILDIRIM Ö. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "SEYFEDDİN EL-ÂMIDI’NİN TANRI KANITLAMASININ DEĞERLENDİRİLMESİ",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Uluslararası Diyarbakır Sempozyumu Bildiri Kitabı, Yard. Doç. Dr. Ufuk BİRCAN, Yard. Doç. Dr. Aytaç COŞKUN, Mustafa TEMEL, Pınar GÜRHAN KILIÇ, Editör, Diyarbakır Valiliği Kültür Sanat Yayınları, Diyarbakır, ss.1273-1285, 2017",
+    "url": "https://avesis.aybu.edu.tr/yayin/c143a9a3-b2a0-4d23-9c41-17ddd20b5592/seyfeddin-el-amidinin-tanri-kanitlamasinin-degerlendirilmesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Din Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Kültürü ve Ahlak Bilgisi Öğretmenliği Soru Bankası, Özcan Güngör, Editör, Akçağ, Ankara, ss.277-299, 2016",
+    "url": "https://avesis.aybu.edu.tr/yayin/09abc552-ed8c-4b6b-8ab5-b97dbf8a70e5/din-felsefesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Mâturîdî ile Nesefî’nin AtomculukAnlayışı ve “Tabâî” Kavramı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi Açısından Mâtürîdî Gelen Ek i Klasik ve Çağdaş Metinler Seçkisi III, Recep Alpyağıl, Editör, İz, Ankara, ss.604-615, 2016",
+    "url": "https://avesis.aybu.edu.tr/yayin/a59956ed-ed64-42c5-a559-aae515b13933/maturidi-ile-nesefinin-atomculukanlayisi-ve-tabai-kavrami",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "İslam Ahlakı, Estetiği veFelsefesi- Türk İslam Edebiyatı",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Kültürü ve Ahlak Bilgisi Öğretmenliği Soru Bankası, Özcan Güngör, Editör, Akçağ, Ankara, ss.171-188, 2016",
+    "url": "https://avesis.aybu.edu.tr/yayin/c3076215-7453-486b-8c72-b6089a30a0ee/islam-ahlaki-estetigi-vefelsefesi-turk-islam-edebiyati",
+    "yazarlar": [
+     "Güngör Ö.",
+     "Yıldırım A.",
+     "Yapıcı A.",
+     "Kılıç C.",
+     "Bulut H. İ.",
+     "Ünal M."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "İslam Felsefesi ve Problemleri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "OTTO, Ankara, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/75334612-47dc-4603-bf75-90e695dafbb9/islam-felsefesi-ve-problemleri",
+    "yazarlar": [
+     "Az M. A.",
+     "Yıldırım Ö. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Din Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Kültürü ve Ahlak Bilgisi Öğretmenliği, Özcan Güngör, Editör, Akçağ Yayınları, Ankara, ss.741-792, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/c6e3367b-f9d4-4fff-9668-8d7f6a540577/din-felsefesi",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "İbn Sinâ’nın Varlık-Māhiyet Aynılığı/Ayırımının Aquinas’ın Eleştirileri Bağlamında Değerlendirilmesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "eş-Şeyhu’r-Reis İbn Sina,, Editör, Diyanet İşleri Başkanlığı Yayınları, Ankara, ss.377-413, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/684082bf-6ba9-4fa3-8677-0db316df81ac/ibn-sinanin-varlik-mahiyet-ayniligi-ayiriminin-aquinasin-elestirileri-baglaminda-degerlendirilmesi",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Thomas Aquinas’ın Tanrı Tasavvuru",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Doğudan Batıya Düşüncenin Serüveni, Bayram Ali Çetinkaya, Ali Osman Kurt, Editör, İnsan Yayınları, İstanbul, ss.855-888, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/76551d59-df55-47a8-9a36-dcf1ff2f01b9/thomas-aquinasin-tanri-tasavvuru",
+    "yazarlar": [
+     "Az M. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Fazlur Rahman ve İslam Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslam Felsefesi ve Problemleri,, Editör, Otto, Ankara, ss.17-49, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/cf7435be-4629-436b-8c0f-afd06691df8f/fazlur-rahman-ve-islam-felsefesi",
+    "yazarlar": [
+     "YILDIRIM Ö. A.",
+     "AZ M. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Fazlur Rahman ve İslam Felsefesi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İslam Felsefesi ve Problemleri, Mehmet Ata Az, Ömer Ali Yıldırım, Editör, Otto, Ankara, ss.17-49, 2015",
+    "url": "https://avesis.aybu.edu.tr/yayin/d5dcfd13-8f26-40fc-99b7-e853b3a1fd36/fazlur-rahman-ve-islam-felsefesi",
+    "yazarlar": [
+     "AZ M. A.",
+     "YILDIRIM Ö. A."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Taş Paradoksu",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesine Dair Okumalar, Recep Alpyağıl, Editör, İz, İstanbul, ss.635-641, 2014",
+    "url": "https://avesis.aybu.edu.tr/yayin/dfb9e0db-aa10-403a-9534-c42e11e9a818/tas-paradoksu",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Tanrı Niçin Kadiri Mutlak Olarak Düşünülür",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesine Dair Okumalar I, Recep Alpyağıl, Editör, İz, İstanbul, ss.621-630, 2014",
+    "url": "https://avesis.aybu.edu.tr/yayin/8714af65-4f97-4ac1-8831-07618bd82ae0/tanri-nicin-kadiri-mutlak-olarak-dusunulur",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Mutlak Kudrete İlişkin Bazı Zorluklar",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesine Dair Okumalar I, Recep Alpyağıl, Editör, İz, İstanbul, ss.631-634, 2014",
+    "url": "https://avesis.aybu.edu.tr/yayin/500c080c-c99c-4104-ade1-a4cdd6bf3d79/mutlak-kudrete-iliskin-bazi-zorluklar",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Evrim ve Geleneksel Türlerin Değişmezliği Fikri",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Evrim ve Tasarım: Gelen-eksel Çağdaş Metinler Seçkisi, Recep Alpyağıl, Editör, İz, İstanbul, ss.715-726, 2013",
+    "url": "https://avesis.aybu.edu.tr/yayin/ccf40bb3-7c70-49f1-b19f-996b8213ae81/evrim-ve-geleneksel-turlerin-degismezligi-fikri",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Öznelliğin Gizeminden Taşan Sonuçlar",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Evrim ve Tasarım: Gelen-eksel ve Çağdaş Metinler Seçkisi, Recep Alpyağıl, Editör, İz, İstanbul, ss.893-898, 2013",
+    "url": "https://avesis.aybu.edu.tr/yayin/1e940d1b-4d06-419d-b02b-6519f6e88193/oznelligin-gizeminden-tasan-sonuclar",
+    "yazarlar": [
+     "AZ M. A."
+    ],
+    "yil": "2013"
+   }
+  ]
+ },
  "Mehmet Sait Reçber": {
   "profil": "https://avesis.ankara.edu.tr/recber",
   "yayinlar": [
@@ -11079,6 +12977,451 @@
      "ARICAN M. K."
     ],
     "yil": "2009"
+   }
+  ]
+ },
+ "Mustafa Emre Dorman": {
+  "profil": "https://avesis.acibadem.edu.tr/emre.dorman",
+  "yayinlar": [
+   {
+    "baslik": "Popüler Kültürün Popüler Deizmi: Riskler ve Öneriler",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "DOĞU BATI, sa.94, ss.155-194, 2020 (Hakemli Dergi)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/994082bf-6252-4dc8-88bd-8259229db548/populer-kulturun-populer-deizmi-riskler-ve-oneriler",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2020"
+   },
+   {
+    "baslik": "“Bilimsel Ateizm”e Ateist Düşünürler Tarafından Getirilen Eleştiriler",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "KAYGI Uludağ Üniversitesi Fen-Edebiyat Fakültesi Felsefe Dergisi, cilt.18, sa.2, ss.480-497, 2019 (TRDizin)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/e87ea9d8-5c04-4b3d-8fc7-3e029bb09a8c/bilimsel-ateizme-ateist-dusunurler-tarafindan-getirilen-elestiriler",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İslam, Kapitalizm ve Piyasa",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "KUTADGUBİLİG FELSEFE-BİLİM ARAŞTIRMALARI, cilt.1, sa.39, ss.111-128, 2019 (TRDizin)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/ff7422bd-8df2-498b-a66b-57dd24f73015/islam-kapitalizm-ve-piyasa",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Felsefi Bir Araç Olarak İslamofobya",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "BÜLENT ECEVİT ÜNİVERSİTESİ İlahiyat Fakültesi Dergisi, cilt.2, sa.5, ss.313-329, 2018 (TRDizin)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/557c49d8-026a-4d91-ab86-d440efb701cc/felsefi-bir-arac-olarak-islamofobya",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Modern Çağda Deizmin Popülerleşmesi ve Sebepleri",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Diyanet Aylık Dergi (Deizm, Ateizm, Nihilizm Kıskacında İnsanlık), sa.320, ss.14-18, 2017 (Hakemsiz Dergi)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/d122cd06-c123-4e2f-8a38-8034c425b28e/modern-cagda-deizmin-populerlesmesi-ve-sebepleri",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Thomas Aquinas ve Haklı Savaş Teorisi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, cilt.2, sa.64, ss.135-158, 2016 (TRDizin)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/74bfd44e-d4c2-454f-ac63-58f968f73eb2/thomas-aquinas-ve-hakli-savas-teorisi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Din Bilim İlişkisi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Yeni Türkiye Bilim ve Teknoloji Özel Sayısı, cilt.1, sa.88, ss.491-507, 2016 (Hakemsiz Dergi)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/1fb137fc-3bde-4b00-a34e-4fba35ff3840/din-bilim-iliskisi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Kanıtın Götürdüğü Yeri Takip Eden Bir Filozof: Antony Flew’un Ateizm’den Vazgeçişi Üzerine",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "FELSEFE DÜNYASI, cilt.2, sa.60, ss.157-178, 2014 (TRDizin)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/8de7eaf2-6b2e-4a9f-b1ca-8473445bd6f5/kanitin-goturdugu-yeri-takip-eden-bir-filozof-antony-flewun-ateizmden-vazgecisi-uzerine",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2014"
+   },
+   {
+    "baslik": "Allah Olmadan Objektif Bir Ahlak Mümkün mü?",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası ”İslam Düşüncesinde Ateizm Eleştirisi” Sempozyumu, Siirt, Türkiye, 21 - 23 Eylül 2018, ss.393-436, (Tam Metin Bildiri)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/ad3ae485-2a45-4bab-8b57-4b21e2153ea6/allah-olmadan-objektif-bir-ahlak-mumkun-mu",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "İslamofobi ve İslam’ı Doğru Anlamak",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "II. Avrupa İslamofobi Zirvesi, İstanbul, Türkiye, 20 - 21 Nisan 2018",
+    "url": "https://avesis.acibadem.edu.tr/yayin/e82ee70b-9249-4e48-a654-c43ea08cbc5d/islamofobi-ve-islami-dogru-anlamak",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Tarihsel ve Teolojik Açıdan Deizm ve Eleştirisi",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Uluslararası Din Karşıtı Çağdaş Akımlar ve Deizm Sempozyumu, Van, Türkiye, 12 - 14 Mayıs 2017, ss.217-242, (Tam Metin Bildiri)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/4ff7656a-6162-40b3-90bc-9ff0233a5a76/tarihsel-ve-teolojik-acidan-deizm-ve-elestirisi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Din Felsefesi Açısından Büyük Patlama Kuramı",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Marmara Üniversitesi İlahiyat Fakültesi Güncel Kelam Tartışmaları, İstanbul, Türkiye, 30 Mart 2012, ss.247-262, (Tam Metin Bildiri)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/e0d4de80-ac8f-4bb4-a113-82973c6ff1ed/din-felsefesi-acisindan-buyuk-patlama-kurami",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2012"
+   },
+   {
+    "baslik": "Palyetif Bakımda Manevi Destek",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Medipol Üniversitesi 1.Palyatif Bakım Sempozyumu, İstanbul, Türkiye, 25 Mayıs 2017",
+    "url": "https://avesis.acibadem.edu.tr/yayin/730fbacd-0002-4443-82d0-6fce1007aeac/palyetif-bakimda-manevi-destek",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Din Bilim İlişkisi: Hangi Din? Hangi Bilim?",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "Artuklu Akademi Günleri Bilim Tarihi ve Felsefesi Sempozyumu, Mardin, Türkiye, 27 - 29 Kasım 2015, ss.211-251, (Tam Metin Bildiri)",
+    "url": "https://avesis.acibadem.edu.tr/yayin/cd321766-2229-4040-8871-4071da79c50f/din-bilim-iliskisi-hangi-din-hangi-bilim",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Hoca Ahmet Yesevi’xxde İnsan Olma ve Farkındalık Bilinci",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "UNESCO 2016 Yesevi Yılı Programı, İstanbul, Türkiye, 14 Aralık 2016",
+    "url": "https://avesis.acibadem.edu.tr/yayin/799bf47d-c140-4dfe-a64c-ca7968bfe951/hoca-ahmet-yesevixxde-insan-olma-ve-farkindalik-bilinci",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Din-Bilim İlişkisi: Evrim Teorisi Örneği",
+    "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
+    "doi": "",
+    "kaynak": "4. Uluslararası Evrim Sorgulanıyor Kongresi, İstanbul, Türkiye, 04 Mayıs 2016",
+    "url": "https://avesis.acibadem.edu.tr/yayin/94187a36-c679-40bc-9e45-fa4146d89d8a/din-bilim-iliskisi-evrim-teorisi-ornegi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Teolojik ve Felsefi Açıdan Tanrı Anlam İlişkisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2026",
+    "url": "https://avesis.acibadem.edu.tr/yayin/4a228203-2abb-4680-b3e6-093140ef4c83/teolojik-ve-felsefi-acidan-tanri-anlam-iliskisi",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2026"
+   },
+   {
+    "baslik": "Islam göttliche Wegweisung für die Menschheit",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Verlag und Druck Tredition GmbH, Hamburg, 2026",
+    "url": "https://avesis.acibadem.edu.tr/yayin/53edf494-0c7c-4294-82c6-9ba4170a500b/islam-gottliche-wegweisung-fur-die-menschheit",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2026"
+   },
+   {
+    "baslik": "101 Fragen an der Koran: Die am Haufigsten gestellten Fragen",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Tredition Gmbh, Augsburg, 2025",
+    "url": "https://avesis.acibadem.edu.tr/yayin/7a28174c-d187-4c28-b241-717f60aade9f/101-fragen-an-der-koran-die-am-haufigsten-gestellten-fragen",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "İnsanlık Dini İslam ve Medeni Dindarlık Yolunda İnsan",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2025",
+    "url": "https://avesis.acibadem.edu.tr/yayin/784dc100-41db-46c3-9f67-71e020e49e02/insanlik-dini-islam-ve-medeni-dindarlik-yolunda-insan",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2025"
+   },
+   {
+    "baslik": "Die Stimme des Gewissens",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Verlag und Druck Tredition GmbH, Hamburg, 2024",
+    "url": "https://avesis.acibadem.edu.tr/yayin/f742a317-9871-4d13-9478-98a0b5bd9247/die-stimme-des-gewissens",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Die moderne Wissenschaft: \"Gott existiert\"",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Verlag und Druck Tredition GmbH, Hamburg, 2024",
+    "url": "https://avesis.acibadem.edu.tr/yayin/85b3c95c-665a-447e-81d5-609a5be130a5/die-moderne-wissenschaft-gott-existiert",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Der Koran spricht für sich",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Der Koran im Spannungsfeld der Moderne: Ein Zugang zum edlen Buch des Islam, Ecevit Polat, Editör, Verlag und Druck Tredition GmbH, Hamburg, ss.26-38, 2024",
+    "url": "https://avesis.acibadem.edu.tr/yayin/bc9a9efe-617b-43bd-aff1-f182b8058915/der-koran-spricht-fur-sich",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2024"
+   },
+   {
+    "baslik": "Peygamberler hep Ortadoğu’ya mı gönderilmiştir? Hz. Muhammed neden Mekke’den seçilmiştir?Kadın peygamber gelmiş midir? Gelmişse delili, gelmemişse nedeni nedir?",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "DİNİ CEVAPLAR, YASİN KARA, Editör, İstanbul Yayınevi, İstanbul, ss.273-291, 2022",
+    "url": "https://avesis.acibadem.edu.tr/yayin/c9df824c-14ea-438d-95b9-e48ae02bcdc2/peygamberler-hep-ortadoguya-mi-gonderilmistir-hz-muhammed-neden-mekkeden-secilmistirkadin-peygamber-gelmis-midir-gelmisse-delili-gelmemisse-nedeni-nedir",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "101 Soruda Kur'an: Dini Konularda En Çok Merak Edilen Sorular",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2021",
+    "url": "https://avesis.acibadem.edu.tr/yayin/46c81200-5546-47f9-a55e-3b70c6e0babb/101-soruda-kuran-dini-konularda-en-cok-merak-edilen-sorular",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "DEİZM VE ELEŞTİRİSİ",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "GÜNCEL KELAM TARTIŞMALARI 2, MEHMET BÜLGEN, Editör, M.Ü İlahiyat Fakültesi Yayınları, İstanbul, ss.133-183, 2021",
+    "url": "https://avesis.acibadem.edu.tr/yayin/2d8ae53f-9ae5-4c62-acfd-d1db10472ec0/deizm-ve-elestirisi",
+    "yazarlar": [
+     "Dorman M. E."
+    ],
+    "yil": "2021"
+   },
+   {
+    "baslik": "Ayetler ve Dualar ile Allah’ın Rahmeti",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Destek Yayınları, İstanbul, 2019",
+    "url": "https://avesis.acibadem.edu.tr/yayin/e2ae6e8d-64e4-4299-9482-ce62ce5b6f8e/ayetler-ve-dualar-ile-allahin-rahmeti",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Teolojik ve Felsefi Açıdan Din Bilim İlişkisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2019",
+    "url": "https://avesis.acibadem.edu.tr/yayin/b19111c8-3bc3-4052-9f07-7043da768e24/teolojik-ve-felsefi-acidan-din-bilim-iliskisi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "Teolojik ve Felsefi Açıdan Din Ahlâk İlişkisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2019",
+    "url": "https://avesis.acibadem.edu.tr/yayin/3fb594f8-0a7f-4963-807a-a25d24460212/teolojik-ve-felsefi-acidan-din-ahlak-iliskisi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2019"
+   },
+   {
+    "baslik": "İslam Ne Değildir",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2018",
+    "url": "https://avesis.acibadem.edu.tr/yayin/28895ed1-e2d0-4dff-b0ac-0e030cc44f38/islam-ne-degildir",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2018"
+   },
+   {
+    "baslik": "Kendini Kınayan Nefis",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Destek Yayınları, İstanbul, 2017",
+    "url": "https://avesis.acibadem.edu.tr/yayin/db12e655-d70f-4f77-b698-74b0bf4c69cf/kendini-kinayan-nefis",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2017"
+   },
+   {
+    "baslik": "Allah’ın Parmak İzi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Destek Yayınları, İstanbul, 2016",
+    "url": "https://avesis.acibadem.edu.tr/yayin/f1b475fa-6704-4531-82f2-12fff1664591/allahin-parmak-izi",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Allah’a Öğretilen Din",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2016",
+    "url": "https://avesis.acibadem.edu.tr/yayin/23339ae4-5205-48d2-a4f0-d86c0daa9ae7/allaha-ogretilen-din",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2016"
+   },
+   {
+    "baslik": "Din Neden Gereklidir",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2015",
+    "url": "https://avesis.acibadem.edu.tr/yayin/1e8c4696-2a0c-4dcd-aa4c-6d6c2da98493/din-neden-gereklidir",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "Duanız Olmasa Ne Öneminiz Var",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2013",
+    "url": "https://avesis.acibadem.edu.tr/yayin/2d7ef1a5-cef3-48c7-b1b9-1512ec50a68b/duaniz-olmasa-ne-oneminiz-var",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "Dini Konularda Kendini Kandırmanın 40 Yolu",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2013",
+    "url": "https://avesis.acibadem.edu.tr/yayin/029a948a-c44d-41d4-b4d9-e65785e61fe0/dini-konularda-kendini-kandirmanin-40-yolu",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2013"
+   },
+   {
+    "baslik": "People Are Asleep The Wake Up When They Die",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2012",
+    "url": "https://avesis.acibadem.edu.tr/yayin/d9b094dc-362f-4ed6-b2e1-85c93c83d882/people-are-asleep-the-wake-up-when-they-die",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2012"
+   },
+   {
+    "baslik": "Kur an ı Kerim deki Temel Emirler ve Yasaklar",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2011",
+    "url": "https://avesis.acibadem.edu.tr/yayin/8661ac12-00a8-42e1-a28d-790f522587e3/kur-an-i-kerim-deki-temel-emirler-ve-yasaklar",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "Modern Bilim Tanrı Var",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2011",
+    "url": "https://avesis.acibadem.edu.tr/yayin/794219a1-ed7e-4fac-9be2-07381a0c10f5/modern-bilim-tanri-var",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "İnsanlar Uyurlar Ölünce Uyanırlar",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İstanbul Yayınevi, İstanbul, 2011",
+    "url": "https://avesis.acibadem.edu.tr/yayin/192045dd-3af1-4a1b-a3df-4f98824b88eb/insanlar-uyurlar-olunce-uyanirlar",
+    "yazarlar": [
+     "DORMAN M. E."
+    ],
+    "yil": "2011"
    }
   ]
  },
@@ -19015,6 +21358,56 @@
      "EFİL Ş."
     ],
     "yil": "2016"
+   }
+  ]
+ },
+ "Şeyma Yazıcı Elsebahy": {
+  "profil": "https://avesis.aybu.edu.tr/syazici",
+  "yayinlar": [
+   {
+    "baslik": "Islamic Bioethical Reflections on Organ Bioprinting: Promises and Challenges",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Bioethics, cilt.40, sa.1, ss.124-137, 2026 (SCI-Expanded, SSCI, Scopus)",
+    "url": "https://avesis.aybu.edu.tr/yayin/1d29a257-7024-4ce1-94c5-7e8093d796c3/islamic-bioethical-reflections-on-organ-bioprinting-promises-and-challenges",
+    "yazarlar": [
+     "YAZICI ELSEBAHY Ş.",
+     "Rashad A."
+    ],
+    "yil": "2026"
+   },
+   {
+    "baslik": "Philosophizing About “Religion” by Doing Social Ontology: The Islamic Philosophical Theology Tradition",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Topoi, 2026 (AHCI, Scopus)",
+    "url": "https://avesis.aybu.edu.tr/yayin/ec88faf2-2cf6-448f-85cf-53b9ca52e0ab/philosophizing-about-religion-by-doing-social-ontology-the-islamic-philosophical-theology-tradition",
+    "yazarlar": [
+     "YAZICI ELSEBAHY Ş."
+    ],
+    "yil": "2026"
+   },
+   {
+    "baslik": "IS GOD PERFECTLY GOOD IN ISLAM?",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "European Journal of Analytic Philosophy, cilt.18, sa.2, 2022 (Scopus)",
+    "url": "https://avesis.aybu.edu.tr/yayin/371a5a72-2e82-49e0-b1fc-b4332c1c8545/is-god-perfectly-good-in-islam",
+    "yazarlar": [
+     "Yazici Ş."
+    ],
+    "yil": "2022"
+   },
+   {
+    "baslik": "CAN AL-GHAZÂ¯A LÂ¯I 'S CONCEPTION of MODALITY PROPOSE A SOLUTION to ROWE'S ARGUMENT against DIVINE FREEDOM?",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Res Philosophica, cilt.98, sa.2, ss.331-351, 2021 (AHCI, Scopus)",
+    "url": "https://avesis.aybu.edu.tr/yayin/5dc60a67-b390-4af5-bb7c-2b3c020b835d/can-al-ghazaa-lai-s-conception-of-modality-propose-a-solution-to-rowes-argument-against-divine-freedom",
+    "yazarlar": [
+     "Yazıcı Ş."
+    ],
+    "yil": "2021"
    }
   ]
  }

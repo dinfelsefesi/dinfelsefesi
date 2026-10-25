@@ -3,12 +3,6 @@
   "Abdulhan Ünlüsoy": [
    "https://avesis.ogu.edu.tr"
   ],
-  "Ahmet Erkan": [
-   "https://avesis.ankara.edu.tr"
-  ],
-  "Aydın Topaloğlu": [
-   "https://avesis.istanbul.edu.tr"
-  ],
   "Betül Akdemir Süleyman": [
    "https://avesis.marmara.edu.tr"
   ],
@@ -18,14 +12,8 @@
   "Ferit Uslu": [
    "https://avesis.ogu.edu.tr"
   ],
-  "Mehmet Ata Az": [
-   "https://avesis.aybu.edu.tr"
-  ],
   "Merve Yavuz": [
    "https://avesis.uludag.edu.tr"
-  ],
-  "Mustafa Emre Dorman": [
-   "https://avesis.acibadem.edu.tr"
   ],
   "Osman Caner Taslaman": [
    "https://avesis.yildiz.edu.tr"
@@ -47,9 +35,6 @@
   ],
   "İsmail Çetin": [
    "https://avesis.uludag.edu.tr"
-  ],
-  "Şeyma Yazıcı Elsebahy": [
-   "https://avesis.aybu.edu.tr"
   ]
  },
  "kurum": {
@@ -95,10 +80,10 @@
   ],
   "Bingöl Üniversitesi": [
    "avesis.bingol.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
-   "avesis.bingol.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+   "avesis.bingol.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Bolu Abant İzzet Baysal Üniversitesi": [
-   "avesis.ibu.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.ibu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
    "avesis.ibu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Bursa Teknik Üniversitesi": [
@@ -248,32 +233,20 @@
    "avesis.izu.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
   ],
   "İzmir Katip Çelebi Üniversitesi": [
-   "avesis.ikcu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
-   "avesis.ikcu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+   "avesis.ikcu.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.ikcu.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   ],
   "Şırnak Üniversitesi": [
-   "avesis.sirnak.edu.tr/robots.txt: URLError: <urlopen error [Errno -5] No address associated with hostname>",
+   "avesis.sirnak.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "avesis.sirnak.edu.tr/: URLError: <urlopen error [Errno -5] No address associated with hostname>"
   ]
  },
  "site_haritasi": {
-  "https://avesis.acibadem.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 726
-  },
   "https://avesis.ankara.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
    "profil": 3876
-  },
-  "https://avesis.aybu.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 1695
   },
   "https://avesis.bogazici.edu.tr": {
    "parca": [
@@ -286,12 +259,6 @@
     "cvpages.xml"
    ],
    "profil": 2989
-  },
-  "https://avesis.istanbul.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 6055
   },
   "https://avesis.marmara.edu.tr": {
    "parca": [
@@ -306,8 +273,10 @@
    "profil": 2489
   },
   "https://avesis.uludag.edu.tr": {
-   "parca": [],
-   "profil": 0
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 2949
   },
   "https://avesis.yildiz.edu.tr": {
    "parca": [
