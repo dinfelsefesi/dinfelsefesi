@@ -603,6 +603,8 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-dugum{cursor:pointer;transition:opacity .2s}
 .ag-dugum circle{stroke:var(--card);stroke-width:2px}
 .ag-dugum.secili circle{stroke:var(--ink);stroke-width:2.5px}
+.ag-dugum.merkez circle{stroke:var(--accent);stroke-width:3px}
+.ag-dugum.merkez text{font-weight:700}
 .ag-dugum:focus,.ag-dugum:focus-visible{outline:none}
 .ag-dugum:focus-visible circle{stroke:var(--accent);stroke-width:3px}
 .ag-dugum text{font-family:var(--serif);fill:var(--ink);text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:4px;stroke-linejoin:round;pointer-events:none;opacity:0;transition:opacity .2s}
@@ -621,6 +623,8 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-kapat{position:absolute;top:.5rem;right:.6rem;font:inherit;font-size:1.5rem;line-height:1;background:none;border:0;color:var(--ink-soft);cursor:pointer;padding:.2rem .4rem}
 .ag-ipucu{position:absolute;left:1rem;bottom:.6rem;margin:0;font-style:italic;font-size:.85rem;color:var(--ink-soft);pointer-events:none}
 .ag-git{display:inline-block;margin-top:1rem;font-style:italic}
+.ag-basliklar{margin:1.2rem 0 0;font-family:var(--sans);font-size:.84rem;line-height:1.9;color:var(--ink-soft)}
+.ag-basliklar span{font-weight:600;margin-right:.3rem}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
 .karsilama h1{font-size:2.55rem;margin-bottom:.8rem}
@@ -1023,7 +1027,7 @@ def render_baslik(k) -> str:
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
-  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}{ag_baglantisi("baslik", k)}</aside>
+  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}<a class="ag-git" href="{SITE_URL}/ag/{k}/">Bu başlığın ağı →</a></aside>
 </div>"""
     gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
     jl = {"@type": "Article" if h.get("_govde") else "WebPage", "headline": h["ad"], "name": h["ad"],
@@ -2400,17 +2404,54 @@ def onizleme_verisi(items) -> dict:
     return v
 
 
-def render_ag(items) -> str:
-    v = ag_verisi(items)
+_AG = None
+
+
+def ag_tam(items) -> dict:
+    global _AG
+    if _AG is None:
+        _AG = ag_verisi(items)
+    return _AG
+
+
+def ag_alt_veri(v: dict, k: str) -> dict:
+    """Bir başlığın ağı: başlık ve alt başlıkları, bunlara doğrudan bağlı fişler ve eserler (makaleler dahil),
+    bu eserleri yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür, onlardan öteye geçilmez."""
+    merkez = {f"baslik/{k}"}
+    bekleyen = [k]
+    while bekleyen:
+        for a in liste(FIS[("baslik", bekleyen.pop())].get("alt_basliklar")):
+            if ("baslik", a) in FIS and f"baslik/{a}" not in merkez:
+                merkez.add(f"baslik/{a}")
+                bekleyen.append(a)
+    komsu = {}
+    for b in v["baglar"]:
+        if len(b) > 3:  # dolaylı bağlar seçimde kullanılmaz
+            continue
+        komsu.setdefault(b[0], set()).add(b[1])
+        komsu.setdefault(b[1], set()).add(b[0])
+    tur = {d["id"]: d for d in v["dugumler"]}
+    secili = set(merkez)
+    for m in merkez:
+        secili |= komsu.get(m, set())
+    # eserlerin yazarları (Türkiye akademisi) ve fişi olan düşünürler de ağa girer
+    for x in list(secili):
+        if tur.get(x, {}).get("tur") == "eser":
+            secili |= {y for y in komsu.get(x, set()) if tur.get(y, {}).get("tur") == "kisi"}
+    dugumler = [dict(tur[x], merkez=True) if x in merkez else tur[x] for x in secili if x in tur]
+    baglar = [b for b in v["baglar"] if b[0] in secili and b[1] in secili
+              and not (b[0] not in merkez and b[1] not in merkez and tur.get(b[0], {}).get("tur") == "baslik"
+                       and tur.get(b[1], {}).get("tur") == "baslik")]
+    return {"turler": v["turler"], "dugumler": dugumler, "baglar": baglar, "alt": True}
+
+
+def ag_araci(v: dict) -> str:
     cogul = {"baslik": "Başlıklar", "terim": "Terimler", "kisi": "Kişiler", "eser": "Eserler", "makale": "Makale tanıtımları"}
-    suzgec = [(k, cogul.get(k, a), r, "") for k, a, r in AG_TURLER]
-    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _, _ in suzgec}
-    dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta{sinif}" style="--renk:{r}"></span>{e(a)} <span class="say">{say[k]}</span></button>'
-                       for k, a, r, sinif in suzgec if say[k])
+    say = {k: sum(1 for d in v["dugumler"] if d["tur"] == k) for k, _, _ in AG_TURLER}
+    dugmeler = "".join(f'<button type="button" data-tur="{k}" aria-pressed="true"><span class="nokta" style="--renk:{r}"></span>{e(cogul.get(k, a))} <span class="say">{say[k]}</span></button>'
+                       for k, a, r in AG_TURLER if say[k])
     veri = json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
-    body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
-<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları ve AVESİS sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleriyle birlikte, eserleri üzerinden çalıştığı başlık ve terimler de görünür.</p>
-<div class="ag-arac">
+    return f"""<div class="ag-arac">
   <div class="tur-secici ag-tur" role="group" aria-label="Gösterilecek türler">{dugmeler}</div>
   <label class="k-ara"><span>Ara</span><input type="search" id="ag-ara" placeholder="Bir ad yazın" autocomplete="off"></label>
   <button type="button" class="ag-sifirla" id="ag-sifirla">Görünümü sıfırla</button>
@@ -2423,7 +2464,36 @@ def render_ag(items) -> str:
 <script id="ag-veri" type="application/json">{veri}</script>
 <script src="{SITE_URL}/static/js/d3-7.9.0.min.js"></script>
 <script src="{SITE_URL}/static/js/ag.js?v={surum('static/js/ag.js')}"></script>"""
+
+
+def baslik_ag_listesi(haric: str = "") -> str:
+    ogeler = []
+    for kad, ks in kumeli_basliklar():
+        for k in ks:
+            for x in [k] + sorted(COCUK.get(k, []), key=lambda c: FIS[("baslik", c)].get("sira", 99)):
+                if x != haric:
+                    ogeler.append(f'<a href="{SITE_URL}/ag/{x}/">{e(FIS[("baslik", x)]["ad"])}</a>')
+    return '<p class="ag-basliklar"><span>Başlıkların ağları:</span> ' + " · ".join(ogeler) + "</p>"
+
+
+def render_ag(items) -> str:
+    body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
+<p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları ve AVESİS sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleriyle birlikte, eserleri üzerinden çalıştığı başlık ve terimler de görünür.</p>
+{ag_araci(ag_tam(items))}
+{baslik_ag_listesi()}"""
     return page(f"İlişki ağı · {SITE_NAME}", body, "ag", canonical=f"{SITE_URL}/ag/")
+
+
+def render_baslik_ag(items, k) -> str:
+    h = FIS[("baslik", k)]
+    v = ag_alt_veri(ag_tam(items), k)
+    body = f"""<p class="yol"><a href="{SITE_URL}/ag/">İlişki ağı</a> › <a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></p>
+<h1>{e(h['ad'])} · İlişki ağı</h1>
+<p class="aciklama-kisa">Bu başlığa{" ve alt başlıklarına" if liste(h.get("alt_basliklar")) else ""} bağlı terimler, kişiler, eserler ve makaleler ile bu çalışmaları yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür. Bütün alanın ağı için <a href="{SITE_URL}/ag/?odak=baslik/{k}">genel ağa</a> bakılabilir.</p>
+{ag_araci(v)}
+{baslik_ag_listesi(k)}"""
+    return page(f"{h['ad']} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{h['ad']} başlığına bağlı kavram, kişi ve eserlerin ağı.",
+                canonical=f"{SITE_URL}/ag/{k}/")
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
@@ -2596,6 +2666,9 @@ def main() -> None:
     for s_ in akademi_verisi():
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
     yaz("ag", render_ag(items))
+    for (t, k) in list(FIS):
+        if t == "baslik":
+            yaz(f"ag/{k}", render_baslik_ag(items, k))
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()

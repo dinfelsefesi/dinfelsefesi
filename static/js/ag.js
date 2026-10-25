@@ -34,7 +34,7 @@
   var cizgi = g.append("g").attr("class", "ag-baglar").selectAll("line").data(baglar).join("line")
     .style("stroke-width", function (b) { return b.w > 1 ? (1.1 + 0.9 * Math.log2(b.w)) + "px" : null; });
   var dugum = g.append("g").attr("class", "ag-dugumler").selectAll("g").data(dugumler).join("g")
-    .attr("class", function (d) { return "ag-dugum tur-" + d.tur; })
+    .attr("class", function (d) { return "ag-dugum tur-" + d.tur + (d.merkez ? " merkez" : ""); })
     .attr("tabindex", 0).attr("role", "button")
     .attr("aria-label", function (d) { return d.ad + " (" + d.turAd + ")"; });
   dugum.append("circle").attr("r", function (d) { return d.r; })
@@ -115,7 +115,8 @@
     etiket.classed("goster", function (d) {
       if (k) return k.has(d.id);
       if (aramaEslesen) return aramaEslesen.has(d.id);
-      if (d.tur === "eser" || d.tur === "makale" || d.suz === "kisi-tr") return olcek > 1.8;
+      // başlık ağlarında (V.alt) kişilerin ve fişi olan eserlerin adları daha erken görünür
+      if (d.tur === "eser" || d.tur === "makale" || d.suz === "kisi-tr") return olcek > (V.alt && !d.kucuk ? 0.9 : 1.8);
       return d.derece >= 3 || d.tur === "baslik" || olcek > 1.3;
     });
   }
