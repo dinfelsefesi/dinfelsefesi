@@ -11,11 +11,14 @@ permissions:
 jobs:
   indir:
     runs-on: ubuntu-latest
+    env:
+      ADRES: ${{ github.event.inputs.adres }}
     steps:
       - run: |
           mkdir out && cd out && git init -q && git checkout -q -b hata-ayiklama
-          curl -sL -A "dinfelsefesi.com.tr (dinfelsefesi@gmail.com)" "${{ github.event.inputs.adres }}" -o sayfa.html
+          curl -sSL --max-time 90 -A "dinfelsefesi.com.tr (dinfelsefesi@gmail.com)" -w "\nHTTP %{http_code} %{url_effective}\n" "$ADRES" -o sayfa.html > durum.txt 2>&1 || echo "curl hata kodu $?" >> durum.txt
+          touch sayfa.html; cat durum.txt
           ls -la
           git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sayfa.html && git commit -q -m "sayfa"
+          git add sayfa.html durum.txt && git commit -q -m "sayfa"
           git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" hata-ayiklama
