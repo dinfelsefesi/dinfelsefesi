@@ -1777,6 +1777,10 @@ def avesis_veri() -> dict:
     elle_d = ROOT / "data/avesis/elle_tasnif.yaml"
     elle = {str(k): v for k, v in ((yaml.safe_load(elle_d.read_text(encoding="utf-8")) or {}) if elle_d.exists() else {}).items()}
     import dergipark_siniflandir as dps
+    from orcid_siniflandir import kelime_basliklari
+    _, kurallar, genel = dps.yukle()
+    kd = ROOT / "data/orcid/doi_kunye.json"
+    kunye = json.loads(kd.read_text(encoding="utf-8")).get("kunye", {}) if kd.exists() else {}
     kaynaklar = []
     for yol, kaynak in (("data/avesis/yayinlar.json", "avesis"), ("data/kisisel/yayinlar.json", "kisisel"),
                         ("data/yok/yayinlar.json", "yok")):
@@ -1806,12 +1810,19 @@ def avesis_veri() -> dict:
                 yazarlar.append(ad_)
             karar = e_.get("karar")
             konular = sorted(set(karar) | {dps.UST[b] for b in karar if b in dps.UST}) if isinstance(karar, list) else []
+            # DOI'si olan yayınlarda konu, yazarın verdiği anahtar kelimelerden (DergiPark ya da OpenAlex) sözlükle bulunur;
+            # anahtar kelimeler bir başlığa uymazsa adına bakılarak verilen elle karar geçerli kalır
+            kelimeler = (kunye.get((y.get("doi") or "").lower()) or {}).get("kelimeler") or []
+            if kelimeler and not e_.get("kesin"):
+                bul, _ = kelime_basliklari(kelimeler, kurallar, genel)
+                if bul:
+                    konular = sorted(bul)
             baslik = e_.get("baslik") or buyuk_duzelt(baslik_temizle(y["baslik"], ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
                            yok_kunye(y["kaynak"], y["yil"], y["bolum"]) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else y["url"], "doi": bool(y.get("doi")),
-                           "konular": konular, "kaynak": kaynak})
+                           "konular": konular, "kaynak": kaynak, "kelimeler": kelimeler})
         v_ = _AVESIS.setdefault(slugify(ad_), {"profil": x["profil"], "yayinlar": [], "yok_var": False})
         v_["yayinlar"] += ogeler
         if kaynak == "yok":
@@ -1979,7 +1990,7 @@ def avesis_eserleri(onceki: list) -> list:
             out.append({"id": "avesis-" + y["kimlik"], "baslik": y["baslik"], "yazarlar": list(y["yazarlar"]), "dergi": y["kunye"],
                         "cilt_sayi": "", "yil": y["yil"], "tarih": y["yil"], "baglanti": y["baglanti"], "doi": y["doi"],
                         "konular": [] if tanitim else y["konular"], "ilgili": y["konular"] if tanitim else [], "tur": tur,
-                        "kelimeler": [], "kaynak": y["kaynak"]})
+                        "kelimeler": y.get("kelimeler") or [], "kaynak": y["kaynak"]})
             eklenen[(baslik_anahtari(y["baslik"]), y["yil"])] = out[-1]
     return out
 
