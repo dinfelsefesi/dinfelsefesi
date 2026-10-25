@@ -1073,6 +1073,8 @@ ATIF_JS = """<script>
 def ag_baglantisi(tur, k) -> str:
     if tur == "terim":
         return f'<a class="ag-git" href="{ag_adresi(tur, k)}">Bu terimin ağı →</a>'
+    if tur == "kisi":
+        return f'<a class="ag-git" href="{ag_adresi(tur, k)}">Bu kişinin ağı →</a>'
     return f'<a class="ag-git" href="{SITE_URL}/ag/?odak={tur}/{k}">İlişki ağında göster →</a>'
 
 
@@ -2203,7 +2205,8 @@ def render_akademisyen(s: str) -> str:
                    "".join(f'<li><a href="{akademi_url(o)}">{e(akademi_verisi()[o]["p"]["ad"])}</a></li>'
                            for o in sorted(v["ortak"], key=lambda o: tr_anahtar(akademi_verisi()[o]["p"]["ad"]))) + '</ul>')
     if v["makaleler"] or v["kitaplar"]:
-        yan.append(f'<a class="ag-git" href="{SITE_URL}/ag/?odak={ag_kisi_kimligi(p)}">İlişki ağında göster →</a>')
+        kid = ag_kisi_kimligi(p)
+        yan.append(f'<a class="ag-git" href="{ag_adresi(*kid.split("/", 1))}">Bu kişinin ağı →</a>')
     tarih = dp_tarama_tarihi()
     metin = yayin_paneli(ogeler) or '<p class="giris">DergiPark taramasında, ORCID kaydında ve AVESİS\'te bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
     body = f"""
@@ -2436,10 +2439,11 @@ def ag_alt_veri(v: dict, k: str, tur_: str = "baslik") -> dict:
     secili = set(merkez)
     for m in merkez:
         secili |= komsu.get(m, set())
-    # eserlerin yazarları (Türkiye akademisi) ve fişi olan düşünürler de ağa girer
+    # eserlerin yazarları (Türkiye akademisi) ve fişi olan düşünürler de ağa girer; kişi ağında eserlerin
+    # bağlı olduğu başlık, terim ve ortak yazarlar da alınır (kişinin çalışma haritası)
     for x in list(secili):
         if tur.get(x, {}).get("tur") == "eser":
-            secili |= {y for y in komsu.get(x, set()) if tur.get(y, {}).get("tur") == "kisi"}
+            secili |= {y for y in komsu.get(x, set()) if tur_ in ("kisi", "kisi-tr") or tur.get(y, {}).get("tur") == "kisi"}
     dugumler = [dict(tur[x], merkez=True) if x in merkez else tur[x] for x in secili if x in tur]
     baglar = [b for b in v["baglar"] if b[0] in secili and b[1] in secili
               and not (b[0] not in merkez and b[1] not in merkez and tur.get(b[0], {}).get("tur") == "baslik"
@@ -2494,27 +2498,41 @@ def terim_ag_listesi(haric: str = "") -> str:
 
 
 def ag_adresi(tur_, k) -> str:
-    return f"{SITE_URL}/ag/{k}/" if tur_ == "baslik" else f"{SITE_URL}/ag/{KLASOR[tur_]}/{k}/"
+    if tur_ == "baslik":
+        return f"{SITE_URL}/ag/{k}/"
+    if tur_ == "kisi-tr":
+        return f"{SITE_URL}/ag/kisiler/akademi/{k}/"
+    return f"{SITE_URL}/ag/{KLASOR[tur_]}/{k}/"
 
 
 def render_alt_ag(items, tur_, k) -> str:
-    h = FIS[(tur_, k)]
-    ad_ = ad(tur_, h)
+    if tur_ == "kisi-tr":
+        ad_, url_ = akademi_verisi()[k]["p"]["ad"], akademi_url(k)
+    else:
+        h = FIS[(tur_, k)]
+        ad_, url_ = ad(tur_, h), fis_url(tur_, k)
     v = ag_alt_veri(ag_tam(items), k, tur_)
+    liste_ = ""
     if tur_ == "baslik":
         aciklama = (f'Bu başlığa{" ve alt başlıklarına" if liste(h.get("alt_basliklar")) else ""} bağlı terimler, kişiler, eserler ve makaleler '
                     'ile bu çalışmaları yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür.')
-        liste_ = baslik_ag_listesi(k)
-    else:
+        liste_, tanim = baslik_ag_listesi(k), "başlığına"
+    elif tur_ == "terim":
         aciklama = ('Bu terimin geçtiği başlıklar, ilgili terimler, kişiler ve eserler ile adında ya da anahtar kelimelerinde '
                     'terim geçen makaleler ve bunları yazan Türkiye akademisyenleri.')
-        liste_ = terim_ag_listesi(k)
-    body = f"""<p class="yol"><a href="{SITE_URL}/ag/">İlişki ağı</a> › <a href="{fis_url(tur_, k)}">{e(ad_)}</a></p>
+        liste_, tanim = terim_ag_listesi(k), "terimine"
+    else:
+        aciklama = ('Kişinin sitedeki eserleri ve makaleleri, bunların bağlı olduğu başlık ve terimler, başlıklarında adı geçen düşünürler '
+                    've ortak yazarlar.')
+        tanim = "kişisine"
+    odak = f"kisi-tr/{k}" if tur_ == "kisi-tr" else f"{tur_}/{k}"
+    body = f"""<p class="yol"><a href="{SITE_URL}/ag/">İlişki ağı</a> › <a href="{url_}">{e(ad_)}</a></p>
 <h1>{e(ad_)} · İlişki ağı</h1>
-<p class="aciklama-kisa">{aciklama} Bütün alanın ağı için <a href="{SITE_URL}/ag/?odak={tur_}/{k}">genel ağa</a> bakılabilir.</p>
+<p class="aciklama-kisa">{aciklama} Bütün alanın ağı için <a href="{SITE_URL}/ag/?odak={odak}">genel ağa</a> bakılabilir.</p>
 {ag_araci(v)}
 {liste_}"""
-    return page(f"{ad_} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{ad_} {'başlığına' if tur_ == 'baslik' else 'terimine'} bağlı kavram, kişi ve eserlerin ağı.", canonical=ag_adresi(tur_, k))
+    return page(f"{ad_} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{ad_} {tanim} bağlı kavram, kişi ve eserlerin ağı.",
+                canonical=ag_adresi(tur_, k), dizinleme=tur_ != "kisi-tr")
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
@@ -2687,9 +2705,13 @@ def main() -> None:
     for s_ in akademi_verisi():
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
     yaz("ag", render_ag(items))
+    ag_kimlikleri = {d["id"] for d in ag_tam(items)["dugumler"]}
     for (t, k) in list(FIS):
-        if t in ("baslik", "terim"):
+        if t in ("baslik", "terim", "kisi") and f"{t}/{k}" in ag_kimlikleri:
             yaz(ag_adresi(t, k).removeprefix(SITE_URL + "/").strip("/"), render_alt_ag(items, t, k))
+    for s_ in akademi_verisi():
+        if f"kisi-tr/{s_}" in ag_kimlikleri:
+            yaz(ag_adresi("kisi-tr", s_).removeprefix(SITE_URL + "/").strip("/"), render_alt_ag(items, "kisi-tr", s_))
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
@@ -2703,7 +2725,7 @@ def main() -> None:
     # Site haritası ve robots.txt. Deneme yayınında (NOINDEX) sayfalar yine taranabilir ama "noindex" etiketi
     # yüzünden dizine eklenmez; yayına geçildiğinde yalnızca NOINDEX kapatılır.
     harita = "".join(f"<url><loc>{e(SITE_URL + '/' + (y + '/' if y else ''))}</loc></url>" for y in SAYFALAR
-                     if not y.startswith("kisiler/akademi/"))
+                     if not y.startswith(("kisiler/akademi/", "ag/kisiler/akademi/")))
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{harita}</urlset>\n', encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
