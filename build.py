@@ -1027,7 +1027,7 @@ def render_baslik(k) -> str:
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
-  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}<a class="ag-git" href="{SITE_URL}/ag/{k}/">Bu başlığın ağı →</a></aside>
+  <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}<a class="ag-git" href="{ag_adresi('baslik', k)}">Bu başlığın ağı →</a></aside>
 </div>"""
     gorsel = paylasim_gorseli(f"baslik-{k}", "Başlık", h["ad"], "")
     jl = {"@type": "Article" if h.get("_govde") else "WebPage", "headline": h["ad"], "name": h["ad"],
@@ -1071,6 +1071,8 @@ ATIF_JS = """<script>
 
 
 def ag_baglantisi(tur, k) -> str:
+    if tur == "terim":
+        return f'<a class="ag-git" href="{ag_adresi(tur, k)}">Bu terimin ağı →</a>'
     return f'<a class="ag-git" href="{SITE_URL}/ag/?odak={tur}/{k}">İlişki ağında göster →</a>'
 
 
@@ -2414,11 +2416,11 @@ def ag_tam(items) -> dict:
     return _AG
 
 
-def ag_alt_veri(v: dict, k: str) -> dict:
-    """Bir başlığın ağı: başlık ve alt başlıkları, bunlara doğrudan bağlı fişler ve eserler (makaleler dahil),
-    bu eserleri yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür, onlardan öteye geçilmez."""
-    merkez = {f"baslik/{k}"}
-    bekleyen = [k]
+def ag_alt_veri(v: dict, k: str, tur_: str = "baslik") -> dict:
+    """Bir başlığın ya da terimin ağı: kendisi (başlıkta alt başlıklarıyla), ona doğrudan bağlı fişler ve eserler
+    (makaleler dahil), bu eserleri yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür, onlardan öteye geçilmez."""
+    merkez = {f"{tur_}/{k}"}
+    bekleyen = [k] if tur_ == "baslik" else []
     while bekleyen:
         for a in liste(FIS[("baslik", bekleyen.pop())].get("alt_basliklar")):
             if ("baslik", a) in FIS and f"baslik/{a}" not in merkez:
@@ -2480,20 +2482,39 @@ def render_ag(items) -> str:
     body = f"""<p class="ust-etiket">Ağ</p><h1>İlişki ağı</h1>
 <p class="giris">Başlıklar, terimler, kişiler, eserler ve güncel makaleler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir. Üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. DergiPark'taki makaleler, hocaların ORCID kayıtlarındaki DOI'li çalışmaları ve AVESİS sayfalarındaki yayınları (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Bir kişi seçildiğinde eserleriyle birlikte, eserleri üzerinden çalıştığı başlık ve terimler de görünür.</p>
 {ag_araci(ag_tam(items))}
-{baslik_ag_listesi()}"""
+{baslik_ag_listesi()}
+{terim_ag_listesi()}"""
     return page(f"İlişki ağı · {SITE_NAME}", body, "ag", canonical=f"{SITE_URL}/ag/")
 
 
-def render_baslik_ag(items, k) -> str:
-    h = FIS[("baslik", k)]
-    v = ag_alt_veri(ag_tam(items), k)
-    body = f"""<p class="yol"><a href="{SITE_URL}/ag/">İlişki ağı</a> › <a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></p>
-<h1>{e(h['ad'])} · İlişki ağı</h1>
-<p class="aciklama-kisa">Bu başlığa{" ve alt başlıklarına" if liste(h.get("alt_basliklar")) else ""} bağlı terimler, kişiler, eserler ve makaleler ile bu çalışmaları yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür. Bütün alanın ağı için <a href="{SITE_URL}/ag/?odak=baslik/{k}">genel ağa</a> bakılabilir.</p>
+def terim_ag_listesi(haric: str = "") -> str:
+    ogeler = [f'<a href="{SITE_URL}/ag/{KLASOR["terim"]}/{k}/">{e(ad("terim", h))}</a>'
+              for (t, k), h in sorted(FIS.items(), key=lambda x: tr_anahtar(ad(x[0][0], x[1]))) if t == "terim" and k != haric]
+    return '<p class="ag-basliklar"><span>Terimlerin ağları:</span> ' + " · ".join(ogeler) + "</p>" if ogeler else ""
+
+
+def ag_adresi(tur_, k) -> str:
+    return f"{SITE_URL}/ag/{k}/" if tur_ == "baslik" else f"{SITE_URL}/ag/{KLASOR[tur_]}/{k}/"
+
+
+def render_alt_ag(items, tur_, k) -> str:
+    h = FIS[(tur_, k)]
+    ad_ = ad(tur_, h)
+    v = ag_alt_veri(ag_tam(items), k, tur_)
+    if tur_ == "baslik":
+        aciklama = (f'Bu başlığa{" ve alt başlıklarına" if liste(h.get("alt_basliklar")) else ""} bağlı terimler, kişiler, eserler ve makaleler '
+                    'ile bu çalışmaları yazan Türkiye akademisyenleri. Komşu başlıklar kenarda görünür.')
+        liste_ = baslik_ag_listesi(k)
+    else:
+        aciklama = ('Bu terimin geçtiği başlıklar, ilgili terimler, kişiler ve eserler ile adında ya da anahtar kelimelerinde '
+                    'terim geçen makaleler ve bunları yazan Türkiye akademisyenleri.')
+        liste_ = terim_ag_listesi(k)
+    body = f"""<p class="yol"><a href="{SITE_URL}/ag/">İlişki ağı</a> › <a href="{fis_url(tur_, k)}">{e(ad_)}</a></p>
+<h1>{e(ad_)} · İlişki ağı</h1>
+<p class="aciklama-kisa">{aciklama} Bütün alanın ağı için <a href="{SITE_URL}/ag/?odak={tur_}/{k}">genel ağa</a> bakılabilir.</p>
 {ag_araci(v)}
-{baslik_ag_listesi(k)}"""
-    return page(f"{h['ad']} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{h['ad']} başlığına bağlı kavram, kişi ve eserlerin ağı.",
-                canonical=f"{SITE_URL}/ag/{k}/")
+{liste_}"""
+    return page(f"{ad_} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{ad_} {'başlığına' if tur_ == 'baslik' else 'terimine'} bağlı kavram, kişi ve eserlerin ağı.", canonical=ag_adresi(tur_, k))
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
@@ -2667,8 +2688,8 @@ def main() -> None:
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
     yaz("ag", render_ag(items))
     for (t, k) in list(FIS):
-        if t == "baslik":
-            yaz(f"ag/{k}", render_baslik_ag(items, k))
+        if t in ("baslik", "terim"):
+            yaz(ag_adresi(t, k).removeprefix(SITE_URL + "/").strip("/"), render_alt_ag(items, t, k))
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
