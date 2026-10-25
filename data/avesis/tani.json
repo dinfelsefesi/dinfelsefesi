@@ -33,9 +33,6 @@
   "Ramazan Ertürk": [
    "https://avesis.erciyes.edu.tr"
   ],
-  "Recep Alpyağıl": [
-   "https://avesis.istanbul.edu.tr"
-  ],
   "Recep Kılıç": [
    "https://avesis.ankara.edu.tr"
   ],
@@ -98,10 +95,10 @@
   ],
   "Bingöl Üniversitesi": [
    "avesis.bingol.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
-   "avesis.bingol.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+   "avesis.bingol.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   ],
   "Bolu Abant İzzet Baysal Üniversitesi": [
-   "avesis.ibu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.ibu.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "avesis.ibu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Bursa Teknik Üniversitesi": [
@@ -221,7 +218,7 @@
    "avesis.nku.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Tokat Gaziosmanpaşa Üniversitesi": [
-   "avesis.gop.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.gop.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
    "avesis.gop.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>",
    "avesis.gaziosmanpasa.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
    "avesis.gaziosmanpasa.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
@@ -309,10 +306,8 @@
    "profil": 2489
   },
   "https://avesis.uludag.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
-   "profil": 2949
+   "parca": [],
+   "profil": 0
   },
   "https://avesis.yildiz.edu.tr": {
    "parca": [
