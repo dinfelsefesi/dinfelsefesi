@@ -1492,6 +1492,7 @@ DP_DIZIN = ROOT / "data" / "dergipark"
 DP_TUR_AD = {"kitap-tanitimi": "Kitap tanıtımı", "ceviri": "Çeviri", "ceviri-degerlendirmesi": "Çeviri değerlendirmesi",
              "soylesi": "Söyleşi", "kitap": "Kitap", "kitap-bolumu": "Kitap bölümü", "bildiri": "Bildiri", "tez": "Tez"}
 _DP = None
+_DP_LISTE_DIGER = []
 KUCUK_KELIME = {"ve", "ile", "veya", "ya", "da", "de", "ki", "mi", "mı", "mu", "mü", "a", "an", "the", "of", "and", "or",
                 "in", "on", "at", "to", "for", "from", "by", "with", "as", "der", "die", "das"}
 
@@ -1551,9 +1552,33 @@ def dp_veri() -> list:
     duzeltme = yaml.safe_load((DP_DIZIN / "baslik_duzeltme.yaml").read_text(encoding="utf-8")) or {} \
         if (DP_DIZIN / "baslik_duzeltme.yaml").exists() else {}
     sinif = {x["id"]: x for x in sonuc}
+    global _DP_LISTE_DIGER
+    _DP_LISTE_DIGER = []
+    liste_ = akademisyen_dizini()
+    elle_d = DP_DIZIN / "akademisyen_elle.yaml"
+    elle = {str(k): v for k, v in ((yaml.safe_load(elle_d.read_text(encoding="utf-8")) or {}) if elle_d.exists() else {}).items()}
+    from orcid_siniflandir import kelime_basliklari
+    _, kurallar, genel = dps.yukle()
     for r in makaleler:
         x = sinif.get(r["id"]) or {}
-        if x.get("durum") in ("kapsam-disi", "anahtar-kelime-yok"):
+        if x.get("durum") == "kapsam-disi":
+            continue
+        if x.get("durum") == "anahtar-kelime-yok":
+            # Konu alanı Din Felsefesi olup anahtar kelimesinde din felsefesi geçmeyen makaleler listeye girmez.
+            # Yazarı Türkiye akademisi listesindeyse kişinin makalesi sayılır ve öteki makaleleri gibi sınıflandırılır.
+            if not any(ad_anahtari(y) in liste_ for y in dp_kaydi(r, {}, duzeltme, dps)["yazarlar"]):
+                continue
+            e_ = elle.get(str(r["id"])) or {}
+            if e_.get("karar") == "yanlis-kisi":
+                continue
+            basliklar, _e = kelime_basliklari(dps.anahtar_kelimeler(r), kurallar, genel)
+            if isinstance(e_.get("karar"), list):
+                basliklar = set(e_["karar"]) | {dps.UST[b] for b in e_["karar"] if b in dps.UST}
+            if basliklar and e_.get("karar") != "kapsam-disi":
+                _DP.append(dp_kaydi(r, {"basliklar": sorted(basliklar), "ilgili_basliklar": [], "yayin_turu": e_.get("tur") or ""},
+                                    duzeltme, dps) | {"kaynak": "dergipark-akademisyen"})
+            else:
+                _DP_LISTE_DIGER.append(dp_kaydi(r, {}, duzeltme, dps))
             continue
         _DP.append(dp_kaydi(r, x, duzeltme, dps))
     # Türkiye akademisi listesindeki kişilerin öteki DergiPark makaleleri: yazarı doğrulanmış ve konusu belli olanlar
@@ -1989,6 +2014,11 @@ def akademi_verisi() -> dict:
             for ad_ in x["akademisyenler"]:
                 if slugify(ad_) in _AKADEMI:
                     _AKADEMI[slugify(ad_)]["dp_diger"].append(m)
+    # din felsefesi taramasında anahtar kelimesi bir başlığa uymayan, yazarı listede olan makaleler
+    for m in _DP_LISTE_DIGER:
+        for y in m["yazarlar"]:
+            if ad_anahtari(y) in anahtar:
+                _AKADEMI[anahtar[ad_anahtari(y)]]["dp_diger"].append(m)
     for m in veri:
         uyeler = list(dict.fromkeys(anahtar[ad_anahtari(y)] for y in m["yazarlar"] if ad_anahtari(y) in anahtar))
         for s in uyeler:
