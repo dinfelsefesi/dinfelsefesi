@@ -117,6 +117,17 @@ def profil_dogrula(adres: str, ad: str) -> bool:
     return ad_anahtari(bas) == ad_anahtari(ad)
 
 
+def elle_dogrula(adres: str, ad: str) -> bool:
+    """Elle bildirilen profil: sayfa başlığında kişinin soyadı geçmeli (ikinci soyadı ya da unvan farkları serbest)."""
+    html = al(adres.rstrip("/"), deneme=2) or ""
+    time.sleep(0.7)
+    m = re.search(r"<title>(.*?)</title>", html, re.S)
+    bas = unescape(m.group(1)).split("|")[0] if m else ""
+    tamam = ad_anahtari(ad).split()[-1] in ad_anahtari(bas).split()
+    TANI.setdefault("elle", {})[ad] = {"adres": adres, "sayfa_basligi": bas.strip(), "kabul": tamam}
+    return tamam
+
+
 def metin(s: str) -> str:
     return re.sub(r"\s+", " ", unescape(re.sub(r"<[^>]+>", " ", s))).strip()
 
@@ -184,6 +195,8 @@ def main():
     for p in kisiler:
         ad = p["ad"]
         profil = elle.get(ad) or (onceki.get(ad) or {}).get("profil") or ""
+        if elle.get(ad) and not elle_dogrula(profil, ad):
+            profil = ""
         kurum = durum.get(p.get("universite", ""), "")
         kurumlar_ = [kurum] + [durum.get(u, "") for u in p.get("onceki_kurumlar") or []]
         if not profil:
