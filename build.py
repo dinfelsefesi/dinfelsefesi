@@ -304,7 +304,7 @@ nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-
 nav.ana a:hover{color:var(--ink)}
 nav.ana a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
 /* telefonda menü tek satır: "Ana sayfa" gizlenir (logo ve site adı zaten ana sayfaya götürür) */
-@media (max-width:760px){nav.ana{flex-wrap:nowrap;gap:.3rem 1.05rem;overflow-x:auto;scrollbar-width:none}nav.ana::-webkit-scrollbar{display:none}
+@media (max-width:760px){nav.ana{flex-wrap:nowrap;gap:.3rem 1.05rem;overflow-x:auto;scrollbar-width:none;width:100%;justify-content:safe center}nav.ana::-webkit-scrollbar{display:none}
   nav.ana a.m-ana{display:none}nav.ana a{white-space:nowrap}}
 @media (max-width:400px){nav.ana{gap:.3rem .8rem;font-size:.97rem}}
 nav.ana a:hover{border-bottom-color:color-mix(in srgb,var(--gold-logo) 45%,transparent)}
