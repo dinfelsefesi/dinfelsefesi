@@ -303,6 +303,10 @@ nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);
 nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
 nav.ana a:hover{color:var(--ink)}
 nav.ana a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
+/* telefonda menü tek satır: "Ana sayfa" gizlenir (logo ve site adı zaten ana sayfaya götürür) */
+@media (max-width:760px){nav.ana{flex-wrap:nowrap;gap:.3rem 1.05rem;overflow-x:auto;scrollbar-width:none}nav.ana::-webkit-scrollbar{display:none}
+  nav.ana a.m-ana{display:none}nav.ana a{white-space:nowrap}}
+@media (max-width:400px){nav.ana{gap:.3rem .8rem;font-size:.97rem}}
 nav.ana a:hover{border-bottom-color:color-mix(in srgb,var(--gold-logo) 45%,transparent)}
 .deneme{background:var(--gold-soft);font-style:italic;font-size:.88rem;color:var(--ink-soft)}
 .deneme .wrap{padding-block:.45rem}
@@ -805,7 +809,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
     robots = ('<meta name="robots" content="noindex,nofollow">' if NOINDEX
               else '<meta name="robots" content="noindex,follow">' if not dizinleme else "")
     menu = "".join(
-        f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
+        f'<a href="{SITE_URL}/{k + "/" if k else ""}"{" class=\"m-ana\"" if not k else ""}{" aria-current=\"page\"" if k == aktif else ""}>{a}</a>' for k, a in MENU)
     if NOINDEX:
         deneme = ('<div class="deneme"><div class="wrap">Deneme sürümü. İçerikler taslak hâlindedir ve '
                   'henüz yayımlanmamıştır.</div></div>')
