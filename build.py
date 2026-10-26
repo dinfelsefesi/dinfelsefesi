@@ -408,7 +408,10 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .eser-bolum h3 a{color:var(--accent-ink)}
 .aciklama-kisa{font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem;max-width:52rem}
 /* açıklama notları gövde metninden ayrılsın: farklı yazı ailesi, küçük punto ve başta bilgi işareti */
-.aciklama-kisa::before{content:"ℹ️";margin-right:.35em;font-size:.95em}
+/* not işareti: logonun renklerinde (lâcivert zemin, altın ünlem) küçük bir yuvarlak */
+.aciklama-kisa::before{content:"!";display:inline-block;width:1.25em;height:1.25em;line-height:1.25em;margin-right:.45em;
+  border-radius:50%;background:var(--accent);color:var(--gold-logo);font-family:var(--display);font-weight:700;font-style:normal;
+  font-size:.92em;text-align:center;vertical-align:.08em}
 .sekmeler{margin-top:.4rem}
 .sekmeler button{font-size:1rem;padding:.45rem 1.1rem}
 .sekme-bolum{margin-top:1rem}
@@ -465,7 +468,10 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .gn-konu{color:var(--gold)}
 .gn-tur{display:inline-block;font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-right:.5rem}
 .gn-bos{font-style:italic;color:var(--ink-soft);margin:.2rem 0 .6rem}
-.gn-not{font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);margin:.6rem 0 0}
+.gn-not{margin:.8rem 0 0}
+.gn-tebrik-soz{font-family:var(--display);font-style:italic;font-size:1.08rem;line-height:1.4;color:var(--gold);text-align:center;
+  margin:.1rem 0 .9rem;padding:.55rem .6rem;border-top:1px solid var(--gold-logo);border-bottom:1px solid var(--gold-logo)}
+.gn-tebrik-soz span{font-style:normal}
 .gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:.6rem 0 0}
 .gn-yollar{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:center;font-family:var(--display);font-size:1.15rem;margin:2.2rem 0 1rem}
 @media (max-width:900px){.gn-izgara{grid-template-columns:1fr}}
@@ -2939,11 +2945,13 @@ def akademide_bu_ay_html() -> str:
             (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
              f'<span class="gn-alt">{e(x["p"].get("universite") or "")}</span></li>')
             for x in tb[:10])
-        tebrik = (f'<ul class="gn-liste">{satir}</ul><p class="gn-not">{bugun_.year} yılında yeni unvan alan ve doktorasını tamamlayan '
-                  f'hocalarımızı tebrik ederiz. Bilgiler YÖK Akademik ve AVESİS kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>')
+        tebrik = (f'<p class="gn-tebrik-soz"><span aria-hidden="true">🎓</span> {bugun_.year} yılında yeni unvan alan ve '
+                  f'doktorasını tamamlayan hocalarımızı tebrik ederiz <span aria-hidden="true">🎉</span></p>'
+                  f'<ul class="gn-liste">{satir}</ul><p class="aciklama-kisa gn-not">Bilgiler YÖK Akademik ve AVESİS '
+                  f'kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>')
     else:
         tebrik = ('<p class="gn-bos">Bu dönemde kayda geçen bir unvan değişikliği yok.</p>'
-                  '<p class="gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
+                  '<p class="aciklama-kisa gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
                   'Doktorasını tamamlayan, doçent ve profesör olan hocalar burada tebrik edilir.</p>')
     # Son yayımlanan çalışmalar: yayım günü bilinen, bir başlığa bağlı çalışmalar
     yayin = [m for m in dp_veri() if len(str(m.get("tarih") or "")) >= 10 and (m["konular"] or m["ilgili"])]
