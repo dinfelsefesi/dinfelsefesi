@@ -2,11 +2,11 @@
 """Türkiye akademisi listesindeki kişilerin unvan değişikliklerini izler.
 
 Girdi: content/turkiye_akademisi.yaml (YÖK Akademik'teki unvan), data/avesis/yayinlar.json (AVESİS'teki güncel unvan)
-Çıktı: data/akademi/unvan_gecmisi.json  kişi adı -> {unvan, kaynak, tarih, degisiklikler: [{tarih, onceki, yeni, kaynak}]}
+Çıktı: data/akademi/unvan_gecmisi.json  kişi adı -> {unvan, kaynaklar: {kaynak: unvan}, degisiklikler: [{tarih, onceki, yeni, kaynak}]}
 
-Bir kişinin bilinen unvanından daha yüksek bir unvan görüldüğünde değişiklik o günün tarihiyle kaydedilir (tarih,
-değişikliğin sitede fark edildiği gündür; unvanın alındığı gün değildir). Kaynaklar arasındaki gecikme yüzünden
-unvanın gerilemesi kaydedilmez. İlk çalıştırmada her kişinin o günkü unvanı başlangıç olarak yazılır.
+Her kaynağın (YÖK, AVESİS) son gördüğü unvan ayrı tutulur. Bir kaynakta unvan yükseldiğinde değişiklik o günün tarihiyle
+kaydedilir (tarih, değişikliğin sitede fark edildiği gündür; unvanın alındığı gün değildir). Bir kaynağın ilk kaydı
+başlangıçtır. Unvanın gerilemesi kaydedilmez.
 AVESİS toplamasından sonra çalışır; YÖK listesi elle güncellendiğinde de çalıştırılmalıdır.
 """
 import json
@@ -30,18 +30,22 @@ def main():
     yeni = 0
     for p in kisiler:
         ad = p["ad"]
-        adaylar = [(p.get("unvan") or "", "YÖK Akademik"), ((avesis.get(ad) or {}).get("unvan") or "", "AVESİS")]
-        unvan, kaynak = max(adaylar, key=lambda x: SIRA.get(x[0], 0))
-        if not unvan:
-            continue
-        g = gecmis.get(ad)
-        if not g:
-            gecmis[ad] = {"unvan": unvan, "kaynak": kaynak, "tarih": bugun, "degisiklikler": []}
-        elif SIRA.get(unvan, 0) > SIRA.get(g["unvan"], 0):
-            g["degisiklikler"].append({"tarih": bugun, "onceki": g["unvan"], "yeni": unvan, "kaynak": kaynak})
-            g.update(unvan=unvan, kaynak=kaynak, tarih=bugun)
-            yeni += 1
-            print(f"  {ad}: {g['degisiklikler'][-1]['onceki']} -> {unvan} ({kaynak})")
+        g = gecmis.setdefault(ad, {"kaynaklar": {}, "degisiklikler": []})
+        g.setdefault("kaynaklar", {})
+        for kaynak, unvan in (("YÖK Akademik", p.get("unvan") or ""), ("AVESİS", (avesis.get(ad) or {}).get("unvan") or "")):
+            if not unvan:
+                continue
+            onceki = g["kaynaklar"].get(kaynak)
+            # Kaynaklar unvanı farklı biçimlerde yazabildiği (ör. YÖK'te "Arş. Gör.", AVESİS'te "Arş. Gör. Dr.") ve farklı
+            # hızlarda güncellendiği için değişiklik yalnızca aynı kaynağın önceki kaydıyla karşılaştırılarak aranır.
+            # Bir kaynağın ilk kaydı başlangıçtır, değişiklik sayılmaz.
+            if onceki and SIRA.get(unvan, 0) > SIRA.get(onceki, 0) and not any(
+                    d["yeni"] == unvan for d in g["degisiklikler"]):
+                g["degisiklikler"].append({"tarih": bugun, "onceki": onceki, "yeni": unvan, "kaynak": kaynak})
+                yeni += 1
+                print(f"  {ad}: {onceki} -> {unvan} ({kaynak})")
+            g["kaynaklar"][kaynak] = unvan
+        g["unvan"] = max(g["kaynaklar"].values(), key=lambda u: SIRA.get(u, 0), default="")
     DOSYA.parent.mkdir(parents=True, exist_ok=True)
     DOSYA.write_text(json.dumps(gecmis, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     print(f"{len(gecmis)} kişi, yeni unvan değişikliği: {yeni}")

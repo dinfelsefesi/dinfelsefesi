@@ -2899,6 +2899,9 @@ def tebrikler() -> list:
     avesis = json.loads(av_d.read_text(encoding="utf-8")) if av_d.exists() else {}
     for ad_, v in avesis.items():
         d = next((x for x in v.get("deneyim") or [] if not x.get("bitis")), None)
+        if d:  # Deneyim kutusunda unvan uzun da yazılabiliyor
+            d = d | {"unvan": {"Araştırma Görevlisi Dr.": "Arş. Gör. Dr.", "Öğretim Görevlisi Dr.": "Öğr. Gör. Dr.",
+                               "Doktor Öğretim Üyesi": "Dr. Öğr. Üyesi", "Doçent": "Doç. Dr.", "Profesör": "Prof. Dr."}.get(d["unvan"], d["unvan"])}
         if (ad_ in liste_ and d and d["baslangic"] == str(bugun_.year) and d["unvan"] in UNVAN_ADI
                 and (ad_, d["unvan"]) not in gor and d["unvan"] == v.get("unvan")):
             out.append({"ad": ad_, "unvan": d["unvan"], "zaman": d["baslangic"], "sira": d["baslangic"] + "-00", "kaynak": "AVESİS"})
