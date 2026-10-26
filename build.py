@@ -436,18 +436,18 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .m-hepsi{margin:.3rem 0 0;font-size:.95rem}
 .m-yil-tel{display:none}
 /* Akademisyen sayfasının künyesi: kartvizit */
-.kartvizit{position:relative;display:flex;gap:1.4rem;align-items:flex-start;max-width:40rem;margin:.6rem 0 2.2rem;
+.kartvizit{position:relative;display:flex;gap:1.4rem;align-items:flex-start;width:fit-content;max-width:100%;margin:.6rem 0 2.2rem;
   padding:1.5rem 1.7rem 1.3rem;background:#fff;border:1px solid var(--accent);border-radius:14px;
   box-shadow:6px 6px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent),0 18px 34px -24px rgba(20,30,50,.45)}
 .kv-monogram{flex:none;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--gold-logo);
   display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.6rem;letter-spacing:.04em}
 .kv-govde{min-width:0}
 .kv-unvan{margin:0;font-style:italic;font-size:.92rem;color:var(--gold)}
-.kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15}
+.kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15;padding-right:2.6rem}  /* uzun adlar logonun altına girmesin */
 .kv-kurum{margin:0;font-size:.98rem;color:var(--ink-soft);line-height:1.5}
 .kv-bag{margin:.9rem 0 0;padding-top:.7rem;border-top:1px solid var(--gold-logo);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-style:italic;font-size:.92rem}
 .kv-bag a{white-space:nowrap}
-.kv-logo{position:absolute;top:1rem;right:1rem;width:34px;height:34px;border-radius:8px;opacity:.9}
+.kv-logo{position:absolute;top:1rem;right:1.7rem;width:34px;height:34px;border-radius:8px;opacity:.9}  /* sağ kenarı içerikle (ORCID satırı) aynı hizada */
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
@@ -476,7 +476,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .onceki-gunler .og-yazar{grid-column:2;font-size:.85rem;color:var(--ink-soft)}
 .og-hepsi{margin:.6rem 0 0;font-style:italic}
 @media (max-width:560px){.onceki-gunler li{grid-template-columns:1fr}.onceki-gunler .og-yazar{grid-column:1}}
-.akademi-metin{max-width:40rem}  /* yayın paneli kartvizitle aynı genişlikte */
+.akademi-metin{max-width:none}  /* yayın paneli yan sütuna kadar uzanır */
 /* kişi sayfası yayın paneli: kartvizitten daha sakin bir kart */
 .yayin-panel{background:var(--card);border:1px solid color-mix(in srgb,var(--gold-logo) 35%,var(--rule));border-radius:10px;
   box-shadow:0 2px 10px rgba(35,68,110,.06);padding:1rem 1.2rem 1.1rem;margin-top:1.4rem}
