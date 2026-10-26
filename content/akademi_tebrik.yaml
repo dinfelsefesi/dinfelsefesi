@@ -4,12 +4,13 @@
 #   ad: Türkiye akademisi listesindeki ad, yil: tezin yılı, tez: tezin adı, universite: tezin yapıldığı üniversite,
 #   tez_no: YÖK Tez Merkezi'ndeki tez numarası (isteğe bağlı)
 # unvan: bu yıl Dr. Öğretim Üyesi, doçent ya da profesör olanlar. Kaynak kişinin YÖK Akademik sayfasındaki "Akademik Görevler"
-#   bölümüdür (unvanın başladığı yıl). ad, yil, unvan (Dr. Öğr. Üyesi | Doç. Dr. | Prof. Dr.), kaynak.
+#   bölümüdür (unvanın başladığı yıl). ad, yil, unvan (Öğr. Gör. | Dr. Öğr. Üyesi | Doç. Dr. | Prof. Dr.), kaynak.
 # AVESİS ve YÖK listesinin aylık karşılaştırmasından gelen yükselmeler de kendiliğinden eklenir (scripts/unvan_izle.py).
 unvan:
   - {ad: Ergin Ögcem, yil: 2026, unvan: Prof. Dr., kaynak: "YÖK Akademik görevler (2021-2026 Doçent, 2026 Profesör), 26 Ekim 2026"}
   - {ad: Atilla Akalın, yil: 2026, unvan: Doç. Dr., kaynak: "YÖK Akademik görevler (2016 Öğretim Görevlisi, 2026 Doçent), 26 Ekim 2026"}
   - {ad: Emine Göçer, yil: 2026, unvan: Dr. Öğr. Üyesi, kaynak: "YÖK Akademik görevler (2018-2026 Araştırma Görevlisi, 2026 Dr. Öğretim Üyesi), 26 Ekim 2026"}
+  - {ad: Muhammed Enes Dağ, yil: 2026, unvan: Öğr. Gör., kaynak: "YÖK Akademik görevler (2026 Öğretim Görevlisi, Atatürk Üniversitesi), 26 Ekim 2026"}
   - {ad: Fatma Nur Ağca, yil: 2026, unvan: Dr. Öğr. Üyesi, kaynak: "YÖK Akademik görevler (2026 Dr. Öğretim Üyesi), 26 Ekim 2026"}
 doktora:
   - ad: Afra Konyalı

@@ -452,7 +452,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
-.gn-izgara{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:start}
 .gn-kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem}
 .gn-kart.gn-tebrik{border-top-color:var(--gold-logo)}
 .gn-kart h3{font-family:var(--display);font-weight:500;font-size:1.25rem;margin:0 0 .6rem}
@@ -2877,7 +2877,8 @@ def onceki_gunler_html(items) -> str:
 
 # Doktora tamamlama unvandan çıkarılmaz (kaynaklar "Arş. Gör." ile "Arş. Gör. Dr." ayrımını tutarlı yazmıyor);
 # YÖK Tez Merkezi'nden doğrulanıp content/akademi_tebrik.yaml dosyasına elle yazılır.
-UNVAN_ADI = {"Dr. Öğr. Üyesi": "Dr. Öğretim Üyesi oldu", "Doç. Dr.": "doçent oldu", "Prof. Dr.": "profesör oldu"}
+UNVAN_ADI = {"Öğr. Gör.": "öğretim görevlisi oldu", "Dr. Öğr. Üyesi": "Dr. Öğretim Üyesi oldu", "Doç. Dr.": "doçent oldu",
+             "Prof. Dr.": "profesör oldu"}
 
 
 def tebrikler() -> list:
@@ -2919,7 +2920,7 @@ def tebrikler() -> list:
             out.append({"ad": d["ad"], "unvan": "doktora", "zaman": str(d["yil"]), "sira": str(d["yil"]) + "-00",
                         "kaynak": "YÖK Tez Merkezi", "tez": d.get("tez", ""), "tez_univ": d.get("universite", "")})
     # Önce yıla, sonra unvanın büyüklüğüne göre (profesör, doçent, Dr. Öğretim Üyesi, doktora), aynı düzeyde ada göre
-    duzey = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "doktora": 3}
+    duzey = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "Öğr. Gör.": 3, "doktora": 4}
     out.sort(key=lambda x: (-int(x["sira"][:4]), duzey.get(x["unvan"], 9), tr_anahtar(x["ad"])))
     return [x | {"p": liste_[x["ad"]]} for x in out]
 
@@ -2955,17 +2956,11 @@ def akademide_bu_ay_html() -> str:
                   f'{e(tr_date(m["tarih"][:10]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
     yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
                  if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
-    # Sitede yeni: son eklenen ya da güncellenen fişler
-    fisler = sorted(((str(h.get("guncelleme") or ""), t, k) for (t, k), h in FIS.items() if h.get("guncelleme")), reverse=True)[:6]
-    satir = "".join(f'<li><span class="gn-tur">{e(TUR_AD[t])}</span>{bag(t, k)}'
-                    f'<span class="gn-alt">{e(tr_date(g[:10]))}</span></li>' for g, t, k in fisler)
-    yeni = f'<ul class="gn-liste">{satir}</ul>' if satir else '<p class="gn-bos">Henüz kayıt yok.</p>'
     return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademide bu ay'
             f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
             f'<div class="gn-izgara">'
             f'<section class="gn-kart gn-tebrik"><h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3>{tebrik}</section>'
             f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar</h3>{yayinlar_}</section>'
-            f'<section class="gn-kart"><h3>Sitede yeni</h3>{yeni}</section>'
             f'</div></section>')
 
 
