@@ -264,7 +264,7 @@ CSS = """
    daha koyu bir altın tonu (--gold) kullanılır. Tek tema (açık). */
 :root{
   --ink:#22262c;--ink-soft:#5c6370;--rule:#dcdfe5;--paper:#f3f4f6;--panel:#e9ecf0;--card:#fbfbfc;
-  --accent:#23446e;--accent-ink:#1d3a5f;--accent-soft:#e6ebf2;--gold:#86641e;--gold-logo:#c9a14a;--gold-soft:#efe9dc;
+  --accent:#23446e;--accent-ink:#1d3a5f;--accent-soft:#e6ebf2;--gold:#86641e;--gold-logo:#c9a14a;--gold-soft:#e8ebf0;
   --display:"EB Garamond","Garamond","Georgia",serif;
   --serif:"Literata",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3","Segoe UI",system-ui,sans-serif;
@@ -451,6 +451,23 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 @media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
+.guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
+.gn-izgara{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.gn-kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem}
+.gn-kart.gn-tebrik{border-top-color:var(--gold-logo)}
+.gn-kart h3{font-family:var(--display);font-weight:500;font-size:1.25rem;margin:0 0 .6rem}
+.gn-liste{list-style:none;margin:0;padding:0}
+.gn-liste li{padding:.5rem 0;border-top:1px solid var(--rule);line-height:1.35}
+.gn-liste li:first-child{border-top:0;padding-top:0}
+.gn-liste a{font-family:var(--display);font-size:1.05rem}
+.gn-alt,.gn-konu{display:block;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);margin-top:.15rem}
+.gn-konu{color:var(--gold)}
+.gn-tur{display:inline-block;font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-right:.5rem}
+.gn-bos{font-style:italic;color:var(--ink-soft);margin:.2rem 0 .6rem}
+.gn-not{font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);margin:.6rem 0 0}
+.gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:.6rem 0 0}
+.gn-yollar{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:center;font-family:var(--display);font-size:1.15rem;margin:2.2rem 0 1rem}
+@media (max-width:900px){.gn-izgara{grid-template-columns:1fr}}
 .onceki-gunler{list-style:none;margin:.4rem 0 0;padding:0;max-width:52rem}
 .onceki-gunler li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);column-gap:1rem;padding:.55rem 0;border-top:1px solid var(--rule)}
 .onceki-gunler li:first-child{border-top:0}
@@ -2858,6 +2875,77 @@ def onceki_gunler_html(items) -> str:
             f'<p class="og-hepsi"><a href="{SITE_URL}/gunun-makalesi/">Bütün günlerin makaleleri ({len(items) - 1}) →</a></p>')
 
 
+UNVAN_ADI = {"Arş. Gör. Dr.": "doktorasını tamamladı", "Öğr. Gör. Dr.": "doktorasını tamamladı", "Dr.": "doktorasını tamamladı",
+             "Dr. Öğr. Üyesi": "Dr. Öğretim Üyesi oldu", "Doç. Dr.": "doçent oldu", "Prof. Dr.": "profesör oldu"}
+
+
+def tebrikler() -> list:
+    """Akademide son unvan değişiklikleri. İki kaynaktan gelir: (1) unvan_gecmisi.json'da son 90 günde fark edilen
+    yükselmeler (scripts/unvan_izle.py), (2) AVESİS 'Deneyim' kutusunda güncel unvanının başlangıç yılı bu yıl olanlar."""
+    from datetime import date, timedelta
+    bugun_ = date.fromisoformat(bugun())
+    liste_ = {p["ad"]: p for p in (yaml.safe_load((CONTENT / "turkiye_akademisi.yaml").read_text(encoding="utf-8")) or {}).get("kisiler") or []}
+    out, gor = [], set()
+    gd = ROOT / "data/akademi/unvan_gecmisi.json"
+    gecmis = json.loads(gd.read_text(encoding="utf-8")) if gd.exists() else {}
+    for ad_, g in gecmis.items():
+        for d in g.get("degisiklikler") or []:
+            if ad_ in liste_ and date.fromisoformat(d["tarih"]) >= bugun_ - timedelta(days=90) and d["yeni"] in UNVAN_ADI:
+                t = date.fromisoformat(d["tarih"])
+                out.append({"ad": ad_, "unvan": d["yeni"], "zaman": f"{AYLAR[t.month - 1]} {t.year}", "sira": d["tarih"],
+                            "kaynak": d["kaynak"]})
+                gor.add((ad_, d["yeni"]))
+    av_d = ROOT / "data/avesis/yayinlar.json"
+    avesis = json.loads(av_d.read_text(encoding="utf-8")) if av_d.exists() else {}
+    for ad_, v in avesis.items():
+        d = next((x for x in v.get("deneyim") or [] if not x.get("bitis")), None)
+        if (ad_ in liste_ and d and d["baslangic"] == str(bugun_.year) and d["unvan"] in UNVAN_ADI
+                and (ad_, d["unvan"]) not in gor and d["unvan"] == v.get("unvan")):
+            out.append({"ad": ad_, "unvan": d["unvan"], "zaman": d["baslangic"], "sira": d["baslangic"] + "-00", "kaynak": "AVESİS"})
+    out.sort(key=lambda x: x["sira"], reverse=True)
+    return [x | {"p": liste_[x["ad"]]} for x in out]
+
+
+def akademide_bu_ay_html() -> str:
+    from datetime import date
+    bugun_ = date.fromisoformat(bugun())
+    # Tebrikler
+    tb = tebrikler()
+    if tb:
+        satir = "".join(f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
+                        f'<span class="gn-alt">{e(x["unvan"])} · {e(x["p"].get("universite") or "")} · {e(x["zaman"])}</span></li>'
+                        for x in tb[:8])
+        tebrik = f'<ul class="gn-liste">{satir}</ul><p class="gn-not">Tebrik ederiz. Unvanlar AVESİS ve YÖK Akademik kayıtlarından izlenir.</p>'
+    else:
+        tebrik = ('<p class="gn-bos">Bu dönemde kayda geçen bir unvan değişikliği yok.</p>'
+                  '<p class="gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından izlenir. Doktorasını tamamlayan, '
+                  'doçent ve profesör olan hocalar burada tebrik edilir.</p>')
+    # Son yayımlanan çalışmalar: yayım günü bilinen, bir başlığa bağlı çalışmalar
+    yayin = [m for m in dp_veri() if len(str(m.get("tarih") or "")) >= 10 and (m["konular"] or m["ilgili"])]
+    yayin.sort(key=lambda m: m["tarih"], reverse=True)
+    satir = ""
+    for m in yayin[:6]:
+        yazar, dergi = dp_kunye(m)
+        konu = ", ".join(FIS[("baslik", b)]["ad"] for b in (m["konular"] or m["ilgili"])
+                         if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))[:80]
+        satir += (f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi} · '
+                  f'{e(tr_date(m["tarih"][:10]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
+    yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
+                 if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
+    # Sitede yeni: son eklenen ya da güncellenen fişler
+    fisler = sorted(((str(h.get("guncelleme") or ""), t, k) for (t, k), h in FIS.items() if h.get("guncelleme")), reverse=True)[:6]
+    satir = "".join(f'<li><span class="gn-tur">{e(TUR_AD[t])}</span>{bag(t, k)}'
+                    f'<span class="gn-alt">{e(tr_date(g[:10]))}</span></li>' for g, t, k in fisler)
+    yeni = f'<ul class="gn-liste">{satir}</ul>' if satir else '<p class="gn-bos">Henüz kayıt yok.</p>'
+    return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademide bu ay'
+            f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
+            f'<div class="gn-izgara">'
+            f'<section class="gn-kart gn-tebrik"><h3>Tebrikler</h3>{tebrik}</section>'
+            f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar</h3>{yayinlar_}</section>'
+            f'<section class="gn-kart"><h3>Sitede yeni</h3>{yeni}</section>'
+            f'</div></section>')
+
+
 def render_ana(items) -> str:
     say = {t: sum(1 for (x, _) in FIS if x == t) for t in KLASOR}
     tr_dosya = CONTENT / "turkiye_akademisi.yaml"
@@ -2875,10 +2963,8 @@ def render_ana(items) -> str:
   {gunun_makalesi_html(items)}
 </section>
 <div class="susleme" aria-hidden="true"><span>❦</span></div>
-<div class="bolum-baslik"><h2>Başlıklar</h2><a href="{SITE_URL}/basliklar/">Başlık haritası</a></div>
-{icindekiler_html()}
-<div class="susleme" aria-hidden="true"><span>❦</span></div>
-{onceki_gunler_html(items)}
+{akademide_bu_ay_html()}
+<nav class="gn-yollar" aria-label="Sitede gezinme"><a href="{SITE_URL}/basliklar/">Başlıklar</a><a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri</a><a href="{SITE_URL}/kisiler/">Türkiye akademisi</a><a href="{SITE_URL}/ag/">İlişki ağı</a></nav>
 """
     # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
     gorsel = f"{SITE_URL}/paylas/site.png"

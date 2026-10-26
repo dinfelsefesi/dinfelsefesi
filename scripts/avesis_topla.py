@@ -177,6 +177,28 @@ def yayinlar(html: str, kok: str) -> list:
     return out
 
 
+UNVANLAR = ("Prof. Dr.", "Doç. Dr.", "Dr. Öğr. Üyesi", "Öğr. Gör. Dr.", "Arş. Gör. Dr.", "Öğr. Gör.", "Arş. Gör.", "Dr.")
+
+
+def unvan_bilgisi(html: str) -> dict:
+    """Profil başlığındaki güncel unvan ve 'Deneyim' kutusundaki unvan geçmişi (unvan, başlangıç ve bitiş yılı, kurum)."""
+    from html import unescape
+    out = {"unvan": "", "deneyim": []}
+    m = re.search(r"<title>\s*([^<|]*)", html or "")
+    if m:
+        bas = unescape(m.group(1)).strip()
+        out["unvan"] = next((u for u in UNVANLAR if bas.startswith(u)), "")
+    m = re.search(r'<a title="Deneyim"[^>]*data-content="([^"]*)"', html or "")
+    if m:
+        for satir in unescape(unescape(m.group(1))).split("<br>"):
+            satir = re.sub(r"\s+", " ", satir.replace("\xa0", " ")).strip()
+            d = re.match(r"(.+?) (\d{4}) - (\d{4}|Devam Ediyor) (.+)$", satir)
+            if d:
+                out["deneyim"].append({"unvan": d.group(1).strip(), "baslangic": d.group(2),
+                                       "bitis": "" if d.group(3) == "Devam Ediyor" else d.group(3), "kurum": d.group(4).strip()})
+    return out
+
+
 def main():
     VERI.mkdir(parents=True, exist_ok=True)
     kisiler = yaml.safe_load((ROOT / "content/turkiye_akademisi.yaml").read_text(encoding="utf-8"))["kisiler"]
@@ -226,7 +248,7 @@ def main():
                 sonuc[ad] = onceki[ad]
             continue
         kok = re.match(r"https?://[^/]+", profil).group(0)
-        sonuc[ad] = {"profil": profil, "yayinlar": yayinlar(html, kok)}
+        sonuc[ad] = {"profil": profil, "yayinlar": yayinlar(html, kok), **unvan_bilgisi(html)}
         bulunan += 1
         print(f"  {ad}: {profil} ({len(sonuc[ad]['yayinlar'])} yayın)")
     cikti_d.write_text(json.dumps(sonuc, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
