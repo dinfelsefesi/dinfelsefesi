@@ -1,6 +1,12 @@
 # Ana sayfadaki "Tebrikler" kartı için elle doğrulanan haberler.
-# doktora: bu yıl doktorasını tamamlayanlar. Kaynak YÖK Ulusal Tez Merkezi'dir; tez kaydı görülmeden kişi eklenmez.
+# doktora: bu yıl doktorasını tamamlayanlar. Kaynak kişinin YÖK Akademik öğrenim bilgisi ya da YÖK Ulusal Tez Merkezi'dir;
+# doktora bitiş yılı ve tez adı görülmeden kişi eklenmez.
 #   ad: Türkiye akademisi listesindeki ad, yil: tezin yılı, tez: tezin adı, universite: tezin yapıldığı üniversite,
 #   tez_no: YÖK Tez Merkezi'ndeki tez numarası (isteğe bağlı)
 # Unvan yükselmeleri (Dr. Öğretim Üyesi, doçent, profesör) AVESİS ve YÖK kayıtlarından kendiliğinden gelir.
-doktora: []
+doktora:
+  - ad: Afra Konyalı
+    yil: 2026
+    tez: Tanrı, Mükemmellik ve Zaman
+    universite: Ankara Üniversitesi Sosyal Bilimler Enstitüsü
+    kaynak: YÖK Akademik öğrenim bilgisi (Doktora 2019-2026), 26 Ekim 2026'da bakıldı

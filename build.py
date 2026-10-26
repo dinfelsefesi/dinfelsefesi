@@ -2928,10 +2928,10 @@ def akademide_bu_ay_html() -> str:
             (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
              f'<span class="gn-alt">{e(x["unvan"])} · {e(x["p"].get("universite") or "")} · {e(x["zaman"])}</span></li>')
             for x in tb[:10])
-        tebrik = f'<ul class="gn-liste">{satir}</ul><p class="gn-not">Tebrik ederiz. Unvanlar AVESİS ve YÖK Akademik kayıtlarından, doktoralar YÖK Tez Merkezi\'nden izlenir.</p>'
+        tebrik = f'<ul class="gn-liste">{satir}</ul><p class="gn-not">Tebrik ederiz. Unvanlar AVESİS ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir.</p>'
     else:
         tebrik = ('<p class="gn-bos">Bu dönemde kayda geçen bir unvan değişikliği yok.</p>'
-                  '<p class="gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK Tez Merkezi\'nden izlenir. '
+                  '<p class="gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
                   'Doktorasını tamamlayan, doçent ve profesör olan hocalar burada tebrik edilir.</p>')
     # Son yayımlanan çalışmalar: yayım günü bilinen, bir başlığa bağlı çalışmalar
     yayin = [m for m in dp_veri() if len(str(m.get("tarih") or "")) >= 10 and (m["konular"] or m["ilgili"])]
