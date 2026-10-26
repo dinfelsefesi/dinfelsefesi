@@ -1,6 +1,8 @@
 {
  "Abdulhan Ünlüsoy": {
+  "deneyim": [],
   "profil": "https://avesis.inonu.edu.tr/abdulhan.unlusoy",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Deleuzecü Dil Anlayışının Söz Edimleri Kuramı Açısından Değerlendirilmesi",
@@ -181,7 +183,9 @@
   ]
  },
  "Abdullah Akgül": {
+  "deneyim": [],
   "profil": "https://avesis.erciyes.edu.tr/abdullahakgul",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Ahlaki Öznenin İnşasında İbadet Disiplini: Akseki’nin Kant’la Diyaloğu Üzerinden Bir Çözümleme",
@@ -323,7 +327,9 @@
   ]
  },
  "Abdurrahman Aliy": {
+  "deneyim": [],
   "profil": "https://avesis.istanbul.edu.tr/aliy",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Uluslararası İstanbul Felsefe Kongresi Bildiri Özetleri",
@@ -344,7 +350,16 @@
   ]
  },
  "Adem İrmak": {
+  "deneyim": [
+   {
+    "baslangic": "2011",
+    "bitis": "",
+    "kurum": "İstanbul Üniversitesi",
+    "unvan": "Araştırma Görevlisi"
+   }
+  ],
   "profil": "https://avesis.istanbul.edu.tr/ademirmak",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Antik Doğal Teoloji Üzerine Bir İnceleme: Miletliler",
@@ -685,11 +700,15 @@
   ]
  },
  "Afra Konyalı": {
+  "deneyim": [],
   "profil": "https://avesis.kocaeli.edu.tr/afra.konyali",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": []
  },
  "Ahmet Erkan": {
+  "deneyim": [],
   "profil": "https://avesis.ankara.edu.tr/erkan",
+  "unvan": "Arş. Gör.",
   "yayinlar": [
    {
     "baslik": "Şüphenin Tarihi ve Şüphecilik",
@@ -706,7 +725,9 @@
   ]
  },
  "Alber Erol Nahum": {
+  "deneyim": [],
   "profil": "https://avesis.gsu.edu.tr/aenahum",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": [
    {
     "baslik": "From Biblical Truth to the Truth About the Bible: Spinoza and the End of Scriptural Philosophy",
@@ -995,7 +1016,9 @@
   ]
  },
  "Atilla Akalın": {
+  "deneyim": [],
   "profil": "https://avesis.gelisim.edu.tr/aakalin",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Beyond Atomism and Nihilism: The Metaphysical Challenge of Gunk Ontology",
@@ -1373,7 +1396,16 @@
   ]
  },
  "Aydın Topaloğlu": {
+  "deneyim": [
+   {
+    "baslangic": "2014",
+    "bitis": "",
+    "kurum": "İstanbul Üniversitesi",
+    "unvan": "Prof. Dr."
+   }
+  ],
   "profil": "https://avesis.istanbul.edu.tr/aydin.t",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Mystical Contemplation or Rational Reflection? The Double Meaning of Tafakkur in Shabistarī’s Rose Garden of Mystery",
@@ -2436,7 +2468,9 @@
   ]
  },
  "Ayşe Sıdıka Oktay": {
+  "deneyim": [],
   "profil": "https://avesis.sdu.edu.tr/ayseoktay",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "DİN DİLİ VE ANTONY FLEW’UN İNANÇ DEĞİŞİKLİĞİNİN DİN DİLİNE YANSIMASI",
@@ -3043,7 +3077,9 @@
   ]
  },
  "Betül Akdemir Süleyman": {
+  "deneyim": [],
   "profil": "https://avesis.marmara.edu.tr/15730",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Hangi Dine İnanmaya Hakkım Var? İnanma İradesi Üzerine Bir Sorgulama",
@@ -3235,7 +3271,9 @@
   ]
  },
  "Beyza Nur Çavuş": {
+  "deneyim": [],
   "profil": "https://avesis.omu.edu.tr/beyzanur.cavus",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": [
    {
     "baslik": "A Pluralist Approach to Merleau-Pontian Cognitive Science",
@@ -3318,7 +3356,9 @@
   ]
  },
  "Bilal Bekalp": {
+  "deneyim": [],
   "profil": "https://avesis.inonu.edu.tr/bilal.bekalp",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Paul K. Moser’in Dinsel Epistemolojisi: Delil, İrade ve İlahi Gizlilik Problemi",
@@ -3588,7 +3628,9 @@
   ]
  },
  "Cafer Sadık Yaran": {
+  "deneyim": [],
   "profil": "https://avesis.omu.edu.tr/cafer.yaran",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "“İstanbul (Bey)Efendisi”: Kayboluşuna Üzülünen İstanbul Beyefendileri ve Hanımefendilerinin Özlenen Özellikleri",
@@ -3701,22 +3743,22 @@
     "yil": "2010"
    },
    {
-    "baslik": "Lale Delili: Estetikten Etiğe ve Metafiziğe",
+    "baslik": "Din Felsefesi Bağlamında Değer",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "JOURNAL OF ACADEMIC RESEARCHES IN RELIGIOUS SCIENCES, cilt.9, sa.2, ss.23-36, 2009 (Hakemli Dergi)",
-    "url": "https://avesis.omu.edu.tr/yayin/09a39e1a-b071-47a5-9068-ad8aec5c5513/lale-delili-estetikten-etige-ve-metafizige",
+    "kaynak": "Din ve Hayat, sa.1, 2009 (Hakemsiz Dergi)",
+    "url": "https://avesis.omu.edu.tr/yayin/9fbc8970-66d4-4787-a696-d9223e69017f/din-felsefesi-baglaminda-deger",
     "yazarlar": [
      "YARAN C. S."
     ],
     "yil": "2009"
    },
    {
-    "baslik": "Din Felsefesi Bağlamında Değer",
+    "baslik": "Lale Delili: Estetikten Etiğe ve Metafiziğe",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "Din ve Hayat, sa.1, 2009 (Hakemsiz Dergi)",
-    "url": "https://avesis.omu.edu.tr/yayin/9fbc8970-66d4-4787-a696-d9223e69017f/din-felsefesi-baglaminda-deger",
+    "kaynak": "JOURNAL OF ACADEMIC RESEARCHES IN RELIGIOUS SCIENCES, cilt.9, sa.2, ss.23-36, 2009 (Hakemli Dergi)",
+    "url": "https://avesis.omu.edu.tr/yayin/09a39e1a-b071-47a5-9068-ad8aec5c5513/lale-delili-estetikten-etige-ve-metafizige",
     "yazarlar": [
      "YARAN C. S."
     ],
@@ -3800,22 +3842,22 @@
     "yil": "2004"
    },
    {
-    "baslik": "Yeni Doğal Teoloji ve Doğu İslam Felsefesi Mirası",
+    "baslik": "İslam Felsefesinin Karakteristik Yapısı Özgün Eklektisizm",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "Tezkire, sa.31-32, 2003 (Hakemsiz Dergi)",
-    "url": "https://avesis.omu.edu.tr/yayin/33e0d109-0e9f-4b3e-baad-cccd674083ad/yeni-dogal-teoloji-ve-dogu-islam-felsefesi-mirasi",
+    "kaynak": "EKEV Akademi Dergisi, sa.17, 2003 (Hakemli Dergi)",
+    "url": "https://avesis.omu.edu.tr/yayin/2e26804a-4815-4965-9001-2ac69b5b8eb7/islam-felsefesinin-karakteristik-yapisi-ozgun-eklektisizm",
     "yazarlar": [
      "YARAN C. S."
     ],
     "yil": "2003"
    },
    {
-    "baslik": "İslam Felsefesinin Karakteristik Yapısı Özgün Eklektisizm",
+    "baslik": "Yeni Doğal Teoloji ve Doğu İslam Felsefesi Mirası",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "EKEV Akademi Dergisi, sa.17, 2003 (Hakemli Dergi)",
-    "url": "https://avesis.omu.edu.tr/yayin/2e26804a-4815-4965-9001-2ac69b5b8eb7/islam-felsefesinin-karakteristik-yapisi-ozgun-eklektisizm",
+    "kaynak": "Tezkire, sa.31-32, 2003 (Hakemsiz Dergi)",
+    "url": "https://avesis.omu.edu.tr/yayin/33e0d109-0e9f-4b3e-baad-cccd674083ad/yeni-dogal-teoloji-ve-dogu-islam-felsefesi-mirasi",
     "yazarlar": [
      "YARAN C. S."
     ],
@@ -3844,17 +3886,6 @@
     "yil": "2001"
    },
    {
-    "baslik": "İnsan Evren İlişkisi ve İnsancı Kozmolojik İlke",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "OMÜ İlahiyat Fakültesi Dergisi, sa.11, 1999 (Hakemli Dergi)",
-    "url": "https://avesis.omu.edu.tr/yayin/9f774f81-6bc7-4616-beae-b50eb4024fb5/insan-evren-iliskisi-ve-insanci-kozmolojik-ilke",
-    "yazarlar": [
-     "YARAN C. S."
-    ],
-    "yil": "1999"
-   },
-   {
     "baslik": "Leibniz de Teodise ve Savunma",
     "bolum": "Makaleler",
     "doi": "",
@@ -3871,6 +3902,17 @@
     "doi": "",
     "kaynak": "OMÜ İlahiyat Fakültesi Dergisi, sa.11, 1999 (Hakemli Dergi)",
     "url": "https://avesis.omu.edu.tr/yayin/389bf82f-3b2f-4845-9c91-d5cd3ac4c714/natural-theology-in-christianity-and-islam-is-there-a-common-core",
+    "yazarlar": [
+     "YARAN C. S."
+    ],
+    "yil": "1999"
+   },
+   {
+    "baslik": "İnsan Evren İlişkisi ve İnsancı Kozmolojik İlke",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "OMÜ İlahiyat Fakültesi Dergisi, sa.11, 1999 (Hakemli Dergi)",
+    "url": "https://avesis.omu.edu.tr/yayin/9f774f81-6bc7-4616-beae-b50eb4024fb5/insan-evren-iliskisi-ve-insanci-kozmolojik-ilke",
     "yazarlar": [
      "YARAN C. S."
     ],
@@ -3954,22 +3996,22 @@
     "yil": "2021"
    },
    {
-    "baslik": "Ali Fuad Başgil’xxin Ahlak Felsefesi ve Ahlak Eksenli Toplumsal Analizleri",
+    "baslik": "İnformel Mantık: Konular, Yaklaşımlar ve Katkılar",
     "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
     "doi": "",
-    "kaynak": "Ali Fuad Başgil ve Siyasi Mücadeleleri Uluslararası Sempozyumu, Samsun, Türkiye, 13 - 14 Ekim 2017, (Tam Metin Bildiri)",
-    "url": "https://avesis.omu.edu.tr/yayin/2c45f61d-7349-4eb8-9a2b-4b0b4eb2bfa1/ali-fuad-basgilxxin-ahlak-felsefesi-ve-ahlak-eksenli-toplumsal-analizleri",
+    "kaynak": "VII. Mantık Çalıştayı, İstanbul, Türkiye, 29 - 30 Temmuz 2017, (Tam Metin Bildiri)",
+    "url": "https://avesis.omu.edu.tr/yayin/c3bcb811-1ee5-48d5-85d8-3ec9c2b65f1a/informel-mantik-konular-yaklasimlar-ve-katkilar",
     "yazarlar": [
      "YARAN C. S."
     ],
     "yil": "2017"
    },
    {
-    "baslik": "İnformel Mantık: Konular, Yaklaşımlar ve Katkılar",
+    "baslik": "Ali Fuad Başgil’xxin Ahlak Felsefesi ve Ahlak Eksenli Toplumsal Analizleri",
     "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
     "doi": "",
-    "kaynak": "VII. Mantık Çalıştayı, İstanbul, Türkiye, 29 - 30 Temmuz 2017, (Tam Metin Bildiri)",
-    "url": "https://avesis.omu.edu.tr/yayin/c3bcb811-1ee5-48d5-85d8-3ec9c2b65f1a/informel-mantik-konular-yaklasimlar-ve-katkilar",
+    "kaynak": "Ali Fuad Başgil ve Siyasi Mücadeleleri Uluslararası Sempozyumu, Samsun, Türkiye, 13 - 14 Ekim 2017, (Tam Metin Bildiri)",
+    "url": "https://avesis.omu.edu.tr/yayin/2c45f61d-7349-4eb8-9a2b-4b0b4eb2bfa1/ali-fuad-basgilxxin-ahlak-felsefesi-ve-ahlak-eksenli-toplumsal-analizleri",
     "yazarlar": [
      "YARAN C. S."
     ],
@@ -4881,7 +4923,9 @@
   ]
  },
  "Emine Göçer": {
+  "deneyim": [],
   "profil": "https://avesis.cu.edu.tr/egocer",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Erken Modern Felsefede Şüpheci Fideizmin Dinî Kurgusalcı Bir Söylem Olarak Yorumlanması",
@@ -5087,7 +5131,9 @@
   ]
  },
  "Engin Erdem": {
+  "deneyim": [],
   "profil": "https://avesis.ankara.edu.tr/eerdem",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Związki między metafizyką a Kalam: Awicenna a Siradż al-Din al-Urmałi",
@@ -5786,7 +5832,9 @@
   ]
  },
  "Esma Aygün Yakın": {
+  "deneyim": [],
   "profil": "https://avesis.bozok.edu.tr/esma.yakin",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": [
    {
     "baslik": "Üç Boyutlu Özgürlükten Adil Fırsata: T. H. Green ve David O. Brink",
@@ -5835,7 +5883,9 @@
   ]
  },
  "Eyüp Aktürk": {
+  "deneyim": [],
   "profil": "https://avesis.yyu.edu.tr/eyupakturk",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Okul Ethosu ve Etik Karar Verme",
@@ -6248,7 +6298,9 @@
   ]
  },
  "Fatih Topaloğlu": {
+  "deneyim": [],
   "profil": "https://avesis.atauni.edu.tr/fatihtopaloglu",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "A Pantheistic Conception of God in Early Renaissance-The Relationship Between God and Universe in Nicholas of Cusa",
@@ -6665,7 +6717,9 @@
   ]
  },
  "Fatih Özgökman": {
+  "deneyim": [],
   "profil": "https://avesis.comu.edu.tr/fatihozgokman",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Kant Descartes'a Karşı: Tözsellik Mantıksal Yanlış Çıkarımı",
@@ -7067,7 +7121,9 @@
   ]
  },
  "Ferhat Taşkın": {
+  "deneyim": [],
   "profil": "https://avesis.bogazici.edu.tr/ferhat.taskin",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Could Avicenna’s god remain within himself?: A reply to the Naṣīrian interpretation",
@@ -7116,7 +7172,22 @@
   ]
  },
  "Hakan Hemşinli": {
+  "deneyim": [
+   {
+    "baslangic": "2018",
+    "bitis": "",
+    "kurum": "Van Yüzüncü Yıl Üniversitesi",
+    "unvan": "Dr. Öğr. Üyesi"
+   },
+   {
+    "baslangic": "2016",
+    "bitis": "2018",
+    "kurum": "Van Yüzüncü Yıl Üniversitesi",
+    "unvan": "Yrd. Doç. Dr."
+   }
+  ],
   "profil": "https://avesis.yyu.edu.tr/hhemsinli",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Muhammed İkbâl’in Mücadele Teodisesi ile Kötülüğü Aşma Denemesi",
@@ -7622,7 +7693,9 @@
   ]
  },
  "Halil İbrahim Köse": {
+  "deneyim": [],
   "profil": "https://avesis.erdogan.edu.tr/halilibrahim.kose",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Meister Eckhart Düşüncesinde Lütuf Tecrübesi ve Kutsal’a Dönüşüm",
@@ -7705,7 +7778,9 @@
   ]
  },
  "Hanifi Özcan": {
+  "deneyim": [],
   "profil": "https://avesis.deu.edu.tr/hanifi.ozcan",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Ünite 1: Sosyal Bilimler ve İslam Bilimleri",
@@ -7742,7 +7817,9 @@
   ]
  },
  "Hasan Atsız": {
+  "deneyim": [],
   "profil": "https://avesis.omu.edu.tr/hasan.atsiz",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Toplumsal Cinsiyet Rollerinin Mekân Bağlamında Analizi: Feminist Yaklaşımlar ve Özen Etiği Perspektifi",
@@ -7897,7 +7974,34 @@
   ]
  },
  "Hüsnü Aydeniz": {
+  "deneyim": [
+   {
+    "baslangic": "2022",
+    "bitis": "",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "2019",
+    "bitis": "2022",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "2017",
+    "bitis": "2019",
+    "kurum": "Erzincan Binali Yıldırım Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "2011",
+    "bitis": "2017",
+    "kurum": "Erzincan Binali Yıldırım Üniversitesi",
+    "unvan": "Yrd. Doç. Dr."
+   }
+  ],
   "profil": "https://avesis.atauni.edu.tr/husnuaydeniz",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Dan Brown’ın Romanlarındaki Ateist Karakterlerin Dine Yönelik Eleştirileri Üzerine Birİnceleme",
@@ -8239,7 +8343,9 @@
   ]
  },
  "Kayhan Özaykal": {
+  "deneyim": [],
   "profil": "https://avesis.istanbul.edu.tr/kayhan.ozaykal",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "İlahi Mahiyet ve Metafizik Zorunluluk Savunusu: Kripke’nin Referans Teorisi Bağlamında İlahiyatın İmkânı",
@@ -8475,7 +8581,9 @@
   ]
  },
  "Kevser Çelik": {
+  "deneyim": [],
   "profil": "https://avesis.sdu.edu.tr/kevsercelik",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Muhammed İkbal in Din Felsefesinde İnsan Olma Kavrayışı ve Dinî Tecrübe",
@@ -8717,7 +8825,52 @@
   ]
  },
  "Mehmet Ata Az": {
+  "deneyim": [
+   {
+    "baslangic": "2023",
+    "bitis": "",
+    "kurum": "University of Cambridge",
+    "unvan": "Araştırmacı"
+   },
+   {
+    "baslangic": "2019",
+    "bitis": "",
+    "kurum": "Ankara Yıldırım Beyazıt Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "2018",
+    "bitis": "2019",
+    "kurum": "University of Notre Dame",
+    "unvan": "Araştırmacı"
+   },
+   {
+    "baslangic": "2012",
+    "bitis": "2013",
+    "kurum": "University of Pennsylvania",
+    "unvan": "Araştırmacı"
+   },
+   {
+    "baslangic": "2009",
+    "bitis": "2013",
+    "kurum": "Şırnak Üniversitesi",
+    "unvan": "Araştırma Görevlisi"
+   },
+   {
+    "baslangic": "2010",
+    "bitis": "2011",
+    "kurum": "Yale University",
+    "unvan": "Araştırmacı"
+   },
+   {
+    "baslangic": "2009",
+    "bitis": "2010",
+    "kurum": "University of Hartford",
+    "unvan": "Araştırmacı"
+   }
+  ],
   "profil": "https://avesis.aybu.edu.tr/ata",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Biyolojik Doğalcılık Bağlamında John Searle'ün Özgürlük Açıklaması",
@@ -9535,7 +9688,9 @@
   ]
  },
  "Mehmet Sait Reçber": {
+  "deneyim": [],
   "profil": "https://avesis.ankara.edu.tr/recber",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Kant, Analitik Felsefe ve Metafizik",
@@ -10312,7 +10467,9 @@
   ]
  },
  "Mehmet Türkeri": {
+  "deneyim": [],
   "profil": "https://avesis.deu.edu.tr/mehmet.turkeri",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Can Business Ethics and Political Ethics Close/Narrow the Gap Between Morality and Economic Development-Power?",
@@ -10991,7 +11148,22 @@
   ]
  },
  "Merve Yavuz": {
+  "deneyim": [
+   {
+    "baslangic": "2025",
+    "bitis": "",
+    "kurum": "Bursa Uludağ Üniversitesi",
+    "unvan": "Araştırma Görevlisi Dr."
+   },
+   {
+    "baslangic": "2014",
+    "bitis": "2025",
+    "kurum": "Bursa Uludağ Üniversitesi",
+    "unvan": "Araştırma Görevlisi"
+   }
+  ],
   "profil": "https://avesis.uludag.edu.tr/yavuzm",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": [
    {
     "baslik": "Din Dilinde Gönderim Problemi",
@@ -11040,7 +11212,9 @@
   ]
  },
  "Metin Pay": {
+  "deneyim": [],
   "profil": "https://avesis.kocaeli.edu.tr/metin.pay",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Kozmolojik Delil",
@@ -11155,7 +11329,9 @@
   ]
  },
  "Metin Yasa": {
+  "deneyim": [],
   "profil": "https://avesis.omu.edu.tr/metin.yasa",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Mevlana’nın Alanlararası Genişleme Üzerinden Erdem Çözümlemesi",
@@ -11781,7 +11957,9 @@
   ]
  },
  "Mevlüt Albayrak": {
+  "deneyim": [],
   "profil": "https://avesis.sdu.edu.tr/mevlutalbayrak",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Din evde mi? Nereye gitmişti? Dönerse Sorabilir miyiz?",
@@ -11961,7 +12139,9 @@
   ]
  },
  "Muhammed Enes Dağ": {
+  "deneyim": [],
   "profil": "https://avesis.atauni.edu.tr/muhammed.dag",
+  "unvan": "Öğr. Gör.",
   "yayinlar": [
    {
     "baslik": "İnsani Değerlerin Kur’anî Temelleri: Din, Ahlak ve İnsan İlişkisi",
@@ -11999,11 +12179,15 @@
   ]
  },
  "Muhammed İkbal Hardal": {
+  "deneyim": [],
   "profil": "https://avesis.deu.edu.tr/ikbal.hardal",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": []
  },
  "Muhammet Sait Duran": {
+  "deneyim": [],
   "profil": "https://avesis.erciyes.edu.tr/saitduran",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "FELSEFİ VE MİTOLOJİK İNSAN ANLAYIŞININ KÖKENLERİ ÜZERİNE: HOMEROS VE ARİSTOTELESİN MEDENİ İNSAN ANLAYIŞININ “KENDİNİ TANI” İLKESİ IŞIĞINDA DEĞERLENDİRİLMESİ",
@@ -12151,7 +12335,9 @@
   ]
  },
  "Musa Kazım Arıcan": {
+  "deneyim": [],
   "profil": "https://avesis.aybu.edu.tr/mkarican",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "İslam’ın İdeal Bireyi, Nefsini Müslümanlaştırmış Kâmil İnsan",
@@ -13403,7 +13589,9 @@
   ]
  },
  "Mustafa Emre Dorman": {
+  "deneyim": [],
   "profil": "https://avesis.acibadem.edu.tr/emre.dorman",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Popüler Kültürün Popüler Deizmi: Riskler ve Öneriler",
@@ -13848,7 +14036,9 @@
   ]
  },
  "Mustafa Eren": {
+  "deneyim": [],
   "profil": "https://avesis.kocaeli.edu.tr/mustafa.eren",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Trans ve Post-Hümanist Tartışmaları Ekseninde İnsan Doğasının Geleceği The Future of Human Nature in the Context of Transhumanist and Post-Humanist Debates",
@@ -14128,11 +14318,15 @@
   ]
  },
  "Münteha Beki": {
+  "deneyim": [],
   "profil": "https://avesis.bozok.edu.tr/munteha.beki",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": []
  },
  "Nur Betül Atakul": {
+  "deneyim": [],
   "profil": "https://avesis.aybu.edu.tr/nbatakul",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Levinas'a Karşı Levinas",
@@ -14291,7 +14485,9 @@
   ]
  },
  "Okan Bağcı": {
+  "deneyim": [],
   "profil": "https://avesis.atauni.edu.tr/okanbagci",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Bir Manipülasyon Aracı Olarak Adlar ve Sıfatlar",
@@ -14461,7 +14657,9 @@
   ]
  },
  "Osman Caner Taslaman": {
+  "deneyim": [],
   "profil": "https://avesis.yildiz.edu.tr/caner",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "ARGUMENT ON THE ONTOLOGY REQUIRED BY NATURAL DESIRES: FINDING THE WATER OF LIFE WHERE OTHERS DROWN",
@@ -14577,7 +14775,9 @@
   ]
  },
  "Osman Karaağaç": {
+  "deneyim": [],
   "profil": "https://avesis.ebyu.edu.tr/osman.karaagac",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Richard Swinburne’de Teleolojik Delil ve Tazammunu",
@@ -14725,15 +14925,34 @@
   ]
  },
  "Osman Murat Deniz": {
+  "deneyim": [],
   "profil": "https://avesis.comu.edu.tr/osmandeniz",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": []
  },
  "Ozan Aşkan": {
+  "deneyim": [],
   "profil": "https://avesis.hakkari.edu.tr/ozanaskan",
+  "unvan": "Arş. Gör.",
   "yayinlar": []
  },
  "Rahim Acar": {
+  "deneyim": [
+   {
+    "baslangic": "2013",
+    "bitis": "",
+    "kurum": "Marmara Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "2008",
+    "bitis": "2013",
+    "kurum": "Marmara Üniversitesi",
+    "unvan": "Doç. Dr."
+   }
+  ],
   "profil": "https://avesis.marmara.edu.tr/racar",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "METODOLOJİK TABİATÇILIK TARTIŞMALARI BAĞLAMINDA GAZZÂLÎ’NİN TABİÎ NEDENSELLİK ELEŞTİRİSİ",
@@ -15129,7 +15348,9 @@
   ]
  },
  "Ramazan Ertürk": {
+  "deneyim": [],
   "profil": "https://avesis.erciyes.edu.tr/erturkr",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Thomas Aquinas on Knowledge of Other Minds",
@@ -15266,7 +15487,9 @@
   ]
  },
  "Recep Alpyağıl": {
+  "deneyim": [],
   "profil": "https://avesis.istanbul.edu.tr/recepalp",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Mystical Theology and Continental Philosophy: Interchange in the Wake of God",
@@ -15880,7 +16103,40 @@
   ]
  },
  "Ruhattin Yazoğlu": {
+  "deneyim": [
+   {
+    "baslangic": "2016",
+    "bitis": "",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "2011",
+    "bitis": "2016",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "2006",
+    "bitis": "2011",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "1998",
+    "bitis": "2006",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Yrd. Doç. Dr."
+   },
+   {
+    "baslangic": "1991",
+    "bitis": "1998",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Araştırma Görevlisi"
+   }
+  ],
   "profil": "https://avesis.atauni.edu.tr/ryazoglu",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Yapay Zekâ ve İnsan Aklı: Felsefî Açıdan Bir Karşılaştırma",
@@ -15895,13 +16151,13 @@
     "yil": "2026"
    },
    {
-    "baslik": "TRANSHÜMANİZM BAĞLAMINDA BİYOTEKNOLOJİK GELİŞMELERİN AİLE KAVRAMI VE AHLÂKÎ DEĞERLER ÜZERİNDEKİ DÖNÜŞTÜRÜCÜ ETKİSİ",
+    "baslik": "İnsan Hürriyeti, Bağlanma ve Sadakat Üzerine: Gabriel Marcel’in Felsefesinin Ahlâkî Boyutları",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi, cilt.12, sa.3, ss.263-278, 2025 (TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/5cc46913-6582-42ea-893c-6d8be6f0dd7f/transhumanizm-baglaminda-biyoteknolojik-gelismelerin-aile-kavrami-ve-ahlaki-degerler-uzerindeki-donusturucu-etkisi",
+    "kaynak": "İslami Araştırmalar Dergisi, cilt.36, sa.3, ss.419-428, 2025 (TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/b29b1ac6-b49f-489e-89a6-67a490cee884/insan-hurriyeti-baglanma-ve-sadakat-uzerine-gabriel-marcelin-felsefesinin-ahlaki-boyutlari",
     "yazarlar": [
-     "Güçlüer F.",
+     "Karadağ F.",
      "Yazoğlu R."
     ],
     "yil": "2025"
@@ -15919,13 +16175,13 @@
     "yil": "2025"
    },
    {
-    "baslik": "İnsan Hürriyeti, Bağlanma ve Sadakat Üzerine: Gabriel Marcel’in Felsefesinin Ahlâkî Boyutları",
+    "baslik": "TRANSHÜMANİZM BAĞLAMINDA BİYOTEKNOLOJİK GELİŞMELERİN AİLE KAVRAMI VE AHLÂKÎ DEĞERLER ÜZERİNDEKİ DÖNÜŞTÜRÜCÜ ETKİSİ",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "İslami Araştırmalar Dergisi, cilt.36, sa.3, ss.419-428, 2025 (TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/b29b1ac6-b49f-489e-89a6-67a490cee884/insan-hurriyeti-baglanma-ve-sadakat-uzerine-gabriel-marcelin-felsefesinin-ahlaki-boyutlari",
+    "kaynak": "Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi, cilt.12, sa.3, ss.263-278, 2025 (TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/5cc46913-6582-42ea-893c-6d8be6f0dd7f/transhumanizm-baglaminda-biyoteknolojik-gelismelerin-aile-kavrami-ve-ahlaki-degerler-uzerindeki-donusturucu-etkisi",
     "yazarlar": [
-     "Karadağ F.",
+     "Güçlüer F.",
      "Yazoğlu R."
     ],
     "yil": "2025"
@@ -15991,6 +16247,18 @@
     "yil": "2025"
    },
    {
+    "baslik": "Martin Buber ve Gustav Jung Düşüncesinde Kolektif Bilinç dışı ve Gnostik Yaklaşım Bağlamında Tanrı",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "TABULA RASA : FELSEFE VE TEOLOJI, sa.42, ss.14-23, 2024 (Hakemli Dergi)",
+    "url": "https://avesis.atauni.edu.tr/yayin/5b57285a-f445-496b-aa68-2f874f1deaa7/martin-buber-ve-gustav-jung-dusuncesinde-kolektif-bilinc-disi-ve-gnostik-yaklasim-baglaminda-tanri",
+    "yazarlar": [
+     "Karadağ F.",
+     "Yazoğlu R."
+    ],
+    "yil": "2024"
+   },
+   {
     "baslik": "Roger Garaudy Düşüncesinde İslâm İktisadının Kapitalizm ve Sosyalizm Sistemleriyle Mukayesesi",
     "bolum": "Makaleler",
     "doi": "",
@@ -16003,13 +16271,13 @@
     "yil": "2024"
    },
    {
-    "baslik": "Martin Buber ve Gustav Jung Düşüncesinde Kolektif Bilinç dışı ve Gnostik Yaklaşım Bağlamında Tanrı",
+    "baslik": "Transhümanizmde Tanrı",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "TABULA RASA : FELSEFE VE TEOLOJI, sa.42, ss.14-23, 2024 (Hakemli Dergi)",
-    "url": "https://avesis.atauni.edu.tr/yayin/5b57285a-f445-496b-aa68-2f874f1deaa7/martin-buber-ve-gustav-jung-dusuncesinde-kolektif-bilinc-disi-ve-gnostik-yaklasim-baglaminda-tanri",
+    "kaynak": "Turkish Studies- Comparative Religious Studies, cilt.19, sa.2, ss.247-268, 2024 (TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/1a1267e4-bc79-4ead-b28a-2b3f1af42249/transhumanizmde-tanri",
     "yazarlar": [
-     "Karadağ F.",
+     "Güçlüer F.",
      "Yazoğlu R."
     ],
     "yil": "2024"
@@ -16023,18 +16291,6 @@
     "yazarlar": [
      "Güçlüer F.",
      "YAZOĞLU R."
-    ],
-    "yil": "2024"
-   },
-   {
-    "baslik": "Transhümanizmde Tanrı",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "Turkish Studies- Comparative Religious Studies, cilt.19, sa.2, ss.247-268, 2024 (TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/1a1267e4-bc79-4ead-b28a-2b3f1af42249/transhumanizmde-tanri",
-    "yazarlar": [
-     "Güçlüer F.",
-     "Yazoğlu R."
     ],
     "yil": "2024"
    },
@@ -16156,17 +16412,6 @@
     "yil": "2007"
    },
    {
-    "baslik": "Paul Tillich Teolojisinde Değişen Dünya Etik ve Etik Çözümler",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "EKEV AKADEMİ DERGİSİ, cilt.2, ss.99-106, 2006 (TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/8f43fcb0-b931-4e60-8421-121bf369dbf2/paul-tillich-teolojisinde-degisen-dunya-etik-ve-etik-cozumler",
-    "yazarlar": [
-     "Yazoğlu R."
-    ],
-    "yil": "2006"
-   },
-   {
     "baslik": "Süreç Teolojisinde Kötülük Sorunu",
     "bolum": "Makaleler",
     "doi": "",
@@ -16183,6 +16428,17 @@
     "doi": "",
     "kaynak": "TABULA RASA : FELSEFE VE TEOLOJI, cilt.6, ss.61-70, 2006 (Hakemli Dergi)",
     "url": "https://avesis.atauni.edu.tr/yayin/4408adfb-757b-44d0-8ef0-501223486cad/r-m-hare-ve-j-j-c-smartin-din-anlayislari",
+    "yazarlar": [
+     "Yazoğlu R."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Paul Tillich Teolojisinde Değişen Dünya Etik ve Etik Çözümler",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "EKEV AKADEMİ DERGİSİ, cilt.2, ss.99-106, 2006 (TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/8f43fcb0-b931-4e60-8421-121bf369dbf2/paul-tillich-teolojisinde-degisen-dunya-etik-ve-etik-cozumler",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -16244,6 +16500,17 @@
     "yil": "2004"
    },
    {
+    "baslik": "John Hick'in Dinî Çoğulculuğunun Arka Planı",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Teologiya Fakültetinin İlimiy Jurnalı-İlahiyat Fakültesi İlmî Dergisi, cilt.2, ss.53-63, 2004 (Hakemli Dergi)",
+    "url": "https://avesis.atauni.edu.tr/yayin/92ba18f5-1c16-4ccf-a8d1-5e5ecfa41878/john-hickin-dini-cogulculugunun-arka-plani",
+    "yazarlar": [
+     "Yazoğlu R."
+    ],
+    "yil": "2004"
+   },
+   {
     "baslik": "Paul Tillich'in Tanrı Anlayışı",
     "bolum": "Makaleler",
     "doi": "",
@@ -16260,17 +16527,6 @@
     "doi": "",
     "kaynak": "Marife Dergisi, cilt.1, ss.289-294, 2004 (Hakemli Dergi)",
     "url": "https://avesis.atauni.edu.tr/yayin/79d4835c-4693-4b74-9abe-c56d9c0451bc/olumsuzluk-inancinin-dayandigi-temeller",
-    "yazarlar": [
-     "Yazoğlu R."
-    ],
-    "yil": "2004"
-   },
-   {
-    "baslik": "John Hick'in Dinî Çoğulculuğunun Arka Planı",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "Teologiya Fakültetinin İlimiy Jurnalı-İlahiyat Fakültesi İlmî Dergisi, cilt.2, ss.53-63, 2004 (Hakemli Dergi)",
-    "url": "https://avesis.atauni.edu.tr/yayin/92ba18f5-1c16-4ccf-a8d1-5e5ecfa41878/john-hickin-dini-cogulculugunun-arka-plani",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -16310,17 +16566,6 @@
     "yil": "2002"
    },
    {
-    "baslik": "Paul Tillich’de Tanrı Kavramı",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "JOURNAL OF ACADEMIC RESEARCHES IN RELIGIOUS SCIENCES, cilt.2, ss.113-130, 2002 (ESCI, TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/8707ec5f-358e-49fb-9d4f-632b2054d215/paul-tillichde-tanri-kavrami",
-    "yazarlar": [
-     "Yazoğlu R."
-    ],
-    "yil": "2002"
-   },
-   {
     "baslik": "Hümanizm ve Mevlânâ",
     "bolum": "Makaleler",
     "doi": "",
@@ -16332,15 +16577,15 @@
     "yil": "2002"
    },
    {
-    "baslik": "Martin Luther ve Thomas Hobbes'ta Din Devlet İlişkisi",
+    "baslik": "Paul Tillich’de Tanrı Kavramı",
     "bolum": "Makaleler",
     "doi": "",
-    "kaynak": "EKEV AKADEMİ DERGİSİ, cilt.3, ss.221-235, 2001 (TRDizin)",
-    "url": "https://avesis.atauni.edu.tr/yayin/85793872-4c1a-40b9-9036-07e1d5528490/martin-luther-ve-thomas-hobbesta-din-devlet-iliskisi",
+    "kaynak": "JOURNAL OF ACADEMIC RESEARCHES IN RELIGIOUS SCIENCES, cilt.2, ss.113-130, 2002 (ESCI, TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/8707ec5f-358e-49fb-9d4f-632b2054d215/paul-tillichde-tanri-kavrami",
     "yazarlar": [
      "Yazoğlu R."
     ],
-    "yil": "2001"
+    "yil": "2002"
    },
    {
     "baslik": "Müslüman Bir Aydın Olarak Fazlur Rahman",
@@ -16348,6 +16593,17 @@
     "doi": "",
     "kaynak": "Atatürk Üniversitesi İlahiyat Fakültesi Dergisi, cilt.1, ss.307-341, 2001 (Hakemsiz Dergi)",
     "url": "https://avesis.atauni.edu.tr/yayin/95824c16-00d3-4e30-ae24-d2afe55b2baa/musluman-bir-aydin-olarak-fazlur-rahman",
+    "yazarlar": [
+     "Yazoğlu R."
+    ],
+    "yil": "2001"
+   },
+   {
+    "baslik": "Martin Luther ve Thomas Hobbes'ta Din Devlet İlişkisi",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "EKEV AKADEMİ DERGİSİ, cilt.3, ss.221-235, 2001 (TRDizin)",
+    "url": "https://avesis.atauni.edu.tr/yayin/85793872-4c1a-40b9-9036-07e1d5528490/martin-luther-ve-thomas-hobbesta-din-devlet-iliskisi",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -16365,17 +16621,6 @@
     "yil": "2000"
    },
    {
-    "baslik": "İlliyet Probleminin Doğuşu",
-    "bolum": "Makaleler",
-    "doi": "",
-    "kaynak": "Atatürk Üniversitesi İlahiyat Fakültesi Dergisi, cilt.2, ss.463-467, 1997 (Hakemsiz Dergi)",
-    "url": "https://avesis.atauni.edu.tr/yayin/f54a8e34-0e38-4825-a771-02579797668a/illiyet-probleminin-dogusu",
-    "yazarlar": [
-     "Yazoğlu R."
-    ],
-    "yil": "1997"
-   },
-   {
     "baslik": "Hadia Dajani Shakeel XII. Asır Arap Şiirinde Haçlı Seferlerine Karşı Cihat",
     "bolum": "Makaleler",
     "doi": "",
@@ -16383,6 +16628,17 @@
     "url": "https://avesis.atauni.edu.tr/yayin/c37d557c-b029-48de-8d5c-0b1312bb2dad/hadia-dajani-shakeel-xii-asir-arap-siirinde-hacli-seferlerine-karsi-cihat",
     "yazarlar": [
      "Yılmaz İ.",
+     "Yazoğlu R."
+    ],
+    "yil": "1997"
+   },
+   {
+    "baslik": "İlliyet Probleminin Doğuşu",
+    "bolum": "Makaleler",
+    "doi": "",
+    "kaynak": "Atatürk Üniversitesi İlahiyat Fakültesi Dergisi, cilt.2, ss.463-467, 1997 (Hakemsiz Dergi)",
+    "url": "https://avesis.atauni.edu.tr/yayin/f54a8e34-0e38-4825-a771-02579797668a/illiyet-probleminin-dogusu",
+    "yazarlar": [
      "Yazoğlu R."
     ],
     "yil": "1997"
@@ -16667,22 +16923,22 @@
     "yil": "2013"
    },
    {
-    "baslik": "Hz. Peygamber Din ve Samimiyet",
+    "baslik": "Din ve Samimiyet",
     "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
     "doi": "",
     "kaynak": "Panel, Kars, Türkiye, 14 Nisan 2014, (Tam Metin Bildiri)",
-    "url": "https://avesis.atauni.edu.tr/yayin/8a1e4933-a964-49cf-a957-bc3b3e1040f8/hz-peygamber-din-ve-samimiyet",
+    "url": "https://avesis.atauni.edu.tr/yayin/3142bde0-7c36-4faf-869a-a4a23de3cdbc/din-ve-samimiyet",
     "yazarlar": [
      "Yazoğlu R."
     ],
     "yil": "2014"
    },
    {
-    "baslik": "Din ve Samimiyet",
+    "baslik": "Hz. Peygamber Din ve Samimiyet",
     "bolum": "Hakemli Bilimsel Toplantılarda Yayımlanmış Bildiriler",
     "doi": "",
     "kaynak": "Panel, Kars, Türkiye, 14 Nisan 2014, (Tam Metin Bildiri)",
-    "url": "https://avesis.atauni.edu.tr/yayin/3142bde0-7c36-4faf-869a-a4a23de3cdbc/din-ve-samimiyet",
+    "url": "https://avesis.atauni.edu.tr/yayin/8a1e4933-a964-49cf-a957-bc3b3e1040f8/hz-peygamber-din-ve-samimiyet",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -16958,6 +17214,17 @@
     "yil": "2019"
    },
    {
+    "baslik": "Bileşik Kıyaslar, Kıyasın Değeri, Endüksiyon (Tümevarım)",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-13, 2019",
+    "url": "https://avesis.atauni.edu.tr/yayin/493b5be0-9856-434e-81b8-630d767e848a/bilesik-kiyaslar-kiyasin-degeri-enduksiyon-tumevarim",
+    "yazarlar": [
+     "YAZOĞLU R."
+    ],
+    "yil": "2019"
+   },
+   {
     "baslik": "Analoji, Mantıkî Kıyas ile Fıkhî Kıyasın Karşılaştırılması",
     "bolum": "Kitaplar",
     "doi": "",
@@ -16985,17 +17252,6 @@
     "yil": "2019"
    },
    {
-    "baslik": "Bileşik Kıyaslar, Kıyasın Değeri, Endüksiyon (Tümevarım)",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-13, 2019",
-    "url": "https://avesis.atauni.edu.tr/yayin/493b5be0-9856-434e-81b8-630d767e848a/bilesik-kiyaslar-kiyasin-degeri-enduksiyon-tumevarim",
-    "yazarlar": [
-     "YAZOĞLU R."
-    ],
-    "yil": "2019"
-   },
-   {
     "baslik": "İslam'da Ahlakın Kaynağı, Yaptırımı ve İnsanın Doğası",
     "bolum": "Kitaplar",
     "doi": "",
@@ -17019,18 +17275,6 @@
     "yil": "2017"
    },
    {
-    "baslik": "Mantık",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Eser Yayıncılık, Erzurum, 2016",
-    "url": "https://avesis.atauni.edu.tr/yayin/0c7acaba-3b74-40ff-a951-d5e69558c638/mantik",
-    "yazarlar": [
-     "YAZOĞLU R.",
-     "İMAMOĞLU T."
-    ],
-    "yil": "2016"
-   },
-   {
     "baslik": "Din Felsefesi",
     "bolum": "Kitaplar",
     "doi": "",
@@ -17044,30 +17288,16 @@
     "yil": "2016"
    },
    {
-    "baslik": "DİN FELSEFESİ DERSLERİ",
+    "baslik": "Mantık",
     "bolum": "Kitaplar",
     "doi": "",
-    "kaynak": "ESER BASIN YAYIN BASIM MATBAACILIK, Erzurum, 2015",
-    "url": "https://avesis.atauni.edu.tr/yayin/adc5e7f5-ef85-4ca2-ba42-928a9445d186/din-felsefesi-dersleri",
+    "kaynak": "Eser Yayıncılık, Erzurum, 2016",
+    "url": "https://avesis.atauni.edu.tr/yayin/0c7acaba-3b74-40ff-a951-d5e69558c638/mantik",
     "yazarlar": [
-     "BAŞCI V.",
      "YAZOĞLU R.",
      "İMAMOĞLU T."
     ],
-    "yil": "2015"
-   },
-   {
-    "baslik": "DİN FELSEFESİ DERSLERİ",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "ESER BASIN YAYIN MATBAACILIK, Erzurum, 2015",
-    "url": "https://avesis.atauni.edu.tr/yayin/f3ced3dd-741c-4d95-a80d-638bc2f4105f/din-felsefesi-dersleri",
-    "yazarlar": [
-     "Başcı V.",
-     "Yazoğlu R.",
-     "İmamoğlu T."
-    ],
-    "yil": "2015"
+    "yil": "2016"
    },
    {
     "baslik": "Din Felsefesi Dersleri",
@@ -17083,12 +17313,38 @@
     "yil": "2015"
    },
    {
+    "baslik": "DİN FELSEFESİ DERSLERİ",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "ESER BASIN YAYIN BASIM MATBAACILIK, Erzurum, 2015",
+    "url": "https://avesis.atauni.edu.tr/yayin/adc5e7f5-ef85-4ca2-ba42-928a9445d186/din-felsefesi-dersleri",
+    "yazarlar": [
+     "BAŞCI V.",
+     "YAZOĞLU R.",
+     "İMAMOĞLU T."
+    ],
+    "yil": "2015"
+   },
+   {
     "baslik": "KLASİK MANTIK",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "ESER BASIN YAYIN BASIM MATBAACILIK, Erzurum, 2015",
     "url": "https://avesis.atauni.edu.tr/yayin/d8c9bf8e-dd35-4e74-b725-5456878ba362/klasik-mantik",
     "yazarlar": [
+     "Yazoğlu R.",
+     "İmamoğlu T."
+    ],
+    "yil": "2015"
+   },
+   {
+    "baslik": "DİN FELSEFESİ DERSLERİ",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "ESER BASIN YAYIN MATBAACILIK, Erzurum, 2015",
+    "url": "https://avesis.atauni.edu.tr/yayin/f3ced3dd-741c-4d95-a80d-638bc2f4105f/din-felsefesi-dersleri",
+    "yazarlar": [
+     "Başcı V.",
      "Yazoğlu R.",
      "İmamoğlu T."
     ],
@@ -17120,8 +17376,8 @@
     "baslik": "Dinde Hakikat Dinlerin Çokluğu ve Hakikatin Birliği Din Felsefesi İle İlgili Bir Deneme",
     "bolum": "Kitaplar",
     "doi": "",
-    "kaynak": "Rağbet Yayınları, İstanbul, 2014",
-    "url": "https://avesis.atauni.edu.tr/yayin/81589973-1c09-4135-9774-ed5f266bcfd2/dinde-hakikat-dinlerin-coklugu-ve-hakikatin-birligi-din-felsefesi-ile-ilgili-bir-deneme",
+    "kaynak": "Ragbet Yayınları, İstanbul, 2014",
+    "url": "https://avesis.atauni.edu.tr/yayin/0f6de0f7-d218-4cc7-827c-106bbbea628c/dinde-hakikat-dinlerin-coklugu-ve-hakikatin-birligi-din-felsefesi-ile-ilgili-bir-deneme",
     "yazarlar": [
      "Yazoğlu R.",
      "Aydeniz H."
@@ -17132,8 +17388,8 @@
     "baslik": "Dinde Hakikat Dinlerin Çokluğu ve Hakikatin Birliği Din Felsefesi İle İlgili Bir Deneme",
     "bolum": "Kitaplar",
     "doi": "",
-    "kaynak": "Ragbet Yayınları, İstanbul, 2014",
-    "url": "https://avesis.atauni.edu.tr/yayin/0f6de0f7-d218-4cc7-827c-106bbbea628c/dinde-hakikat-dinlerin-coklugu-ve-hakikatin-birligi-din-felsefesi-ile-ilgili-bir-deneme",
+    "kaynak": "Rağbet Yayınları, İstanbul, 2014",
+    "url": "https://avesis.atauni.edu.tr/yayin/81589973-1c09-4135-9774-ed5f266bcfd2/dinde-hakikat-dinlerin-coklugu-ve-hakikatin-birligi-din-felsefesi-ile-ilgili-bir-deneme",
     "yazarlar": [
      "Yazoğlu R.",
      "Aydeniz H."
@@ -17141,33 +17397,11 @@
     "yil": "2014"
    },
    {
-    "baslik": "Dinî Çeşitlilik ve Bazı Temel Dinî Yaklaşımlar",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, ATAUZEM, Erzurum, ss.1-20, 2011",
-    "url": "https://avesis.atauni.edu.tr/yayin/f54e519e-c396-4645-8b61-8c83066d2ab5/dini-cesitlilik-ve-bazi-temel-dini-yaklasimlar",
-    "yazarlar": [
-     "Yazoğlu R."
-    ],
-    "yil": "2011"
-   },
-   {
-    "baslik": "Tanrı Hakkında Konuşmak",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, ATAUZEM, Erzurum, ss.1-20, 2011",
-    "url": "https://avesis.atauni.edu.tr/yayin/0a6eb892-8efd-4c69-8102-746b43155cd6/tanri-hakkinda-konusmak",
-    "yazarlar": [
-     "YAZOĞLU R."
-    ],
-    "yil": "2011"
-   },
-   {
-    "baslik": "Tanrı’nın Varlığının Delilleri",
+    "baslik": "Tanrı-Evren İlişkisi ve Çeşitli Tanrı Tasavvurları",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, Atauzem, Erzurum, ss.1-20, 2011",
-    "url": "https://avesis.atauni.edu.tr/yayin/2af086ab-318f-4c2a-945d-793d004b4e9f/tanrinin-varliginin-delilleri",
+    "url": "https://avesis.atauni.edu.tr/yayin/46f7a611-5834-48b0-b27e-0d58b71e438c/tanri-evren-iliskisi-ve-cesitli-tanri-tasavvurlari",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -17185,11 +17419,11 @@
     "yil": "2011"
    },
    {
-    "baslik": "Tanrı-Evren İlişkisi ve Çeşitli Tanrı Tasavvurları",
+    "baslik": "Tanrı’nın Varlığının Delilleri",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, Atauzem, Erzurum, ss.1-20, 2011",
-    "url": "https://avesis.atauni.edu.tr/yayin/46f7a611-5834-48b0-b27e-0d58b71e438c/tanri-evren-iliskisi-ve-cesitli-tanri-tasavvurlari",
+    "url": "https://avesis.atauni.edu.tr/yayin/2af086ab-318f-4c2a-945d-793d004b4e9f/tanrinin-varliginin-delilleri",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -17201,6 +17435,17 @@
     "doi": "",
     "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, ATAUZEM, Erzurum, ss.1-20, 2011",
     "url": "https://avesis.atauni.edu.tr/yayin/4d8c0e27-ce58-48b5-a2d6-0fa424d5c95f/tanri-evren-iliskisi-ve-cesitli-tanri-tasavvurlari",
+    "yazarlar": [
+     "YAZOĞLU R."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "Tanrı Hakkında Konuşmak",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, ATAUZEM, Erzurum, ss.1-20, 2011",
+    "url": "https://avesis.atauni.edu.tr/yayin/0a6eb892-8efd-4c69-8102-746b43155cd6/tanri-hakkinda-konusmak",
     "yazarlar": [
      "YAZOĞLU R."
     ],
@@ -17225,6 +17470,17 @@
     "url": "https://avesis.atauni.edu.tr/yayin/b8e85641-36fa-44e9-b75b-2dfab3239f8e/tanrinin-varliginin-delilleri",
     "yazarlar": [
      "YAZOĞLU R."
+    ],
+    "yil": "2011"
+   },
+   {
+    "baslik": "Dinî Çeşitlilik ve Bazı Temel Dinî Yaklaşımlar",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Din Felsefesi, Vahdettin BAŞCI, Editör, ATAUZEM, Erzurum, ss.1-20, 2011",
+    "url": "https://avesis.atauni.edu.tr/yayin/f54e519e-c396-4645-8b61-8c83066d2ab5/dini-cesitlilik-ve-bazi-temel-dini-yaklasimlar",
+    "yazarlar": [
+     "Yazoğlu R."
     ],
     "yil": "2011"
    },
@@ -17285,33 +17541,11 @@
     "yil": "2010"
    },
    {
-    "baslik": "Beş Tümel, Kategoriler ve Kavram Tartışması",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-20, 2010",
-    "url": "https://avesis.atauni.edu.tr/yayin/0069436a-3dfd-44e8-a917-87386f625500/bes-tumel-kategoriler-ve-kavram-tartismasi",
-    "yazarlar": [
-     "YAZOĞLU R."
-    ],
-    "yil": "2010"
-   },
-   {
     "baslik": "Kavramlar",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-20, 2010",
     "url": "https://avesis.atauni.edu.tr/yayin/f29a2b6e-2d1a-4004-80fa-20cb7913bc89/kavramlar",
-    "yazarlar": [
-     "YAZOĞLU R."
-    ],
-    "yil": "2010"
-   },
-   {
-    "baslik": "Tanım, Bölme ve Sınıflandırma",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-20, 2010",
-    "url": "https://avesis.atauni.edu.tr/yayin/d5dd2832-252e-4fc5-8a5b-b4e3cb984bd1/tanim-bolme-ve-siniflandirma",
     "yazarlar": [
      "YAZOĞLU R."
     ],
@@ -17329,6 +17563,17 @@
     "yil": "2010"
    },
    {
+    "baslik": "Tanım, Bölme ve Sınıflandırma",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-20, 2010",
+    "url": "https://avesis.atauni.edu.tr/yayin/d5dd2832-252e-4fc5-8a5b-b4e3cb984bd1/tanim-bolme-ve-siniflandirma",
+    "yazarlar": [
+     "YAZOĞLU R."
+    ],
+    "yil": "2010"
+   },
+   {
     "baslik": "Önermeler",
     "bolum": "Kitaplar",
     "doi": "",
@@ -17336,6 +17581,17 @@
     "url": "https://avesis.atauni.edu.tr/yayin/569ad45b-9f67-4b49-8d6d-1a34d12e83d1/onermeler",
     "yazarlar": [
      "Yazoğlu R."
+    ],
+    "yil": "2010"
+   },
+   {
+    "baslik": "Beş Tümel, Kategoriler ve Kavram Tartışması",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "Mantık, Ruhattin YAZOĞLU, Editör, ATAUZEM, Erzurum, ss.1-20, 2010",
+    "url": "https://avesis.atauni.edu.tr/yayin/0069436a-3dfd-44e8-a917-87386f625500/bes-tumel-kategoriler-ve-kavram-tartismasi",
+    "yazarlar": [
+     "YAZOĞLU R."
     ],
     "yil": "2010"
    },
@@ -17362,18 +17618,6 @@
     "yil": "2007"
    },
    {
-    "baslik": "Süreç Teolojisi",
-    "bolum": "Kitaplar",
-    "doi": "",
-    "kaynak": "İz Yayıncılık, İstanbul, 2006",
-    "url": "https://avesis.atauni.edu.tr/yayin/1299e142-8695-422a-817b-f02d2a6886c1/surec-teolojisi",
-    "yazarlar": [
-     "İmamoğlu T.",
-     "Yazoğlu R."
-    ],
-    "yil": "2006"
-   },
-   {
     "baslik": "Ahlâk ve Ötesi",
     "bolum": "Kitaplar",
     "doi": "",
@@ -17390,7 +17634,7 @@
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "İz Yayıncılık, İstanbul, 2006",
-    "url": "https://avesis.atauni.edu.tr/yayin/aa6be071-68c4-438e-9331-37f7bc8c13e1/dini-cogulculuk-john-hickin-dusunceleri-etrafinda-tartismalar",
+    "url": "https://avesis.atauni.edu.tr/yayin/bb1a66b8-c656-468f-8f2b-9a322136ff57/dini-cogulculuk-john-hickin-dusunceleri-etrafinda-tartismalar",
     "yazarlar": [
      "Yazoğlu R.",
      "Aydeniz H."
@@ -17402,10 +17646,22 @@
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "İz Yayıncılık, İstanbul, 2006",
-    "url": "https://avesis.atauni.edu.tr/yayin/bb1a66b8-c656-468f-8f2b-9a322136ff57/dini-cogulculuk-john-hickin-dusunceleri-etrafinda-tartismalar",
+    "url": "https://avesis.atauni.edu.tr/yayin/aa6be071-68c4-438e-9331-37f7bc8c13e1/dini-cogulculuk-john-hickin-dusunceleri-etrafinda-tartismalar",
     "yazarlar": [
      "Yazoğlu R.",
      "Aydeniz H."
+    ],
+    "yil": "2006"
+   },
+   {
+    "baslik": "Süreç Teolojisi",
+    "bolum": "Kitaplar",
+    "doi": "",
+    "kaynak": "İz Yayıncılık, İstanbul, 2006",
+    "url": "https://avesis.atauni.edu.tr/yayin/1299e142-8695-422a-817b-f02d2a6886c1/surec-teolojisi",
+    "yazarlar": [
+     "İmamoğlu T.",
+     "Yazoğlu R."
     ],
     "yil": "2006"
    },
@@ -17422,22 +17678,22 @@
     "yil": "2006"
    },
    {
-    "baslik": "Leibniz’de Tanrı ve Ahlâk",
+    "baslik": "Din ve Felsefe Üzerine Yazılar",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "Yeni Zamanlar, İstanbul, 2005",
-    "url": "https://avesis.atauni.edu.tr/yayin/c0bf35f5-7197-4bfe-b170-9569f0b54080/leibnizde-tanri-ve-ahlak",
+    "url": "https://avesis.atauni.edu.tr/yayin/41fa4971-c57d-444e-a05c-7249d8a7acef/din-ve-felsefe-uzerine-yazilar",
     "yazarlar": [
      "Yazoğlu R."
     ],
     "yil": "2005"
    },
    {
-    "baslik": "Din ve Felsefe Üzerine Yazılar",
+    "baslik": "Leibniz’de Tanrı ve Ahlâk",
     "bolum": "Kitaplar",
     "doi": "",
     "kaynak": "Yeni Zamanlar, İstanbul, 2005",
-    "url": "https://avesis.atauni.edu.tr/yayin/41fa4971-c57d-444e-a05c-7249d8a7acef/din-ve-felsefe-uzerine-yazilar",
+    "url": "https://avesis.atauni.edu.tr/yayin/c0bf35f5-7197-4bfe-b170-9569f0b54080/leibnizde-tanri-ve-ahlak",
     "yazarlar": [
      "Yazoğlu R."
     ],
@@ -17469,7 +17725,9 @@
   ]
  },
  "Rıfat Atay": {
+  "deneyim": [],
   "profil": "https://avesis.akdeniz.edu.tr/rifatay",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "İlyas Salman’ın Ateistliği Üzerine",
@@ -18559,7 +18817,9 @@
   ]
  },
  "Saim Gündoğan": {
+  "deneyim": [],
   "profil": "https://avesis.hakkari.edu.tr/saimgundogan",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Some Approaches to the Concepts of War and Peace in Terms of Philosophy of Religion",
@@ -18896,7 +19156,9 @@
   ]
  },
  "Serdar Atalay": {
+  "deneyim": [],
   "profil": "https://avesis.cu.edu.tr/satalay",
+  "unvan": "Arş. Gör. Dr.",
   "yayinlar": [
    {
     "baslik": "John C. Polkinghorne’da Kaos Teorisi Bağlamında İlahi Fiil ve İnayet Problemi",
@@ -18945,7 +19207,9 @@
   ]
  },
  "Tugay Taşçı": {
+  "deneyim": [],
   "profil": "https://avesis.istanbul.edu.tr/tugaytasci",
+  "unvan": "Arş. Gör.",
   "yayinlar": [
    {
     "baslik": "Arguments for the Existence of God in Ibn Sīnā’s Metaphysics: An Evaluation of the Problems of Divine Simplicity and Modal Collapse",
@@ -19174,7 +19438,9 @@
   ]
  },
  "Tuncay İmamoğlu": {
+  "deneyim": [],
   "profil": "https://avesis.atauni.edu.tr/t.imamoglu",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "An Üzerine Felsefi ve Teolojik Bir değerlendirme",
@@ -20032,7 +20298,40 @@
   ]
  },
  "Vahdettin Başcı": {
+  "deneyim": [
+   {
+    "baslangic": "2019",
+    "bitis": "",
+    "kurum": "Erzincan Binali Yıldırım Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "2002",
+    "bitis": "2019",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Prof. Dr."
+   },
+   {
+    "baslangic": "1997",
+    "bitis": "2002",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "1989",
+    "bitis": "1997",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Yrd. Doç. Dr."
+   },
+   {
+    "baslangic": "1984",
+    "bitis": "1989",
+    "kurum": "Atatürk Üniversitesi",
+    "unvan": "Araştırma Görevlisi"
+   }
+  ],
   "profil": "https://avesis.ebyu.edu.tr/vahdettin.basci",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Aquino’xxlu Thomas’xxda Tanrı Anlayışı",
@@ -20081,7 +20380,9 @@
   ]
  },
  "Vedat Tezcan": {
+  "deneyim": [],
   "profil": "https://avesis.sdu.edu.tr/vedattezcan",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "SANATSAL EYLEMDE GERÇEKLİK ALGISI VENEOKLASİSİZM SONRASI KÜSKÜN DUYGU",
@@ -20142,7 +20443,9 @@
   ]
  },
  "Yasin Gökhan": {
+  "deneyim": [],
   "profil": "https://avesis.bozok.edu.tr/yasin.gokhan",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "İyilik Ekonomisi: Vakıf Medeniyeti Ruhunun Felsefî Arka Planı",
@@ -20357,7 +20660,9 @@
   ]
  },
  "Yasin Ramazan Başaran": {
+  "deneyim": [],
   "profil": "https://avesis.bogazici.edu.tr/yasin.basaran",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Doğanın Metafizik Bütünlüğü Hakkında İçkin Zorunluluk Savunusu",
@@ -20566,7 +20871,9 @@
   ]
  },
  "Zafer Çaylı": {
+  "deneyim": [],
   "profil": "https://avesis.mku.edu.tr/zafer.cayli",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Vahiyden Bağımsız Ahlakın İmkânı: Deistik Ahlakın Ontolojik ve Epistemik Temelleri Üzerine Eleştirel Bir İnceleme",
@@ -20795,7 +21102,9 @@
   ]
  },
  "Zeynep Baktemur Kayaduman": {
+  "deneyim": [],
   "profil": "https://avesis.marmara.edu.tr/zeynep.baktemur",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Kierkegaard'da Ahlakın Öznelliği Problemi",
@@ -20933,7 +21242,22 @@
   ]
  },
  "Zeynep Gemuhluoğlu": {
+  "deneyim": [
+   {
+    "baslangic": "2015",
+    "bitis": "",
+    "kurum": "Marmara Üniversitesi",
+    "unvan": "Doç. Dr."
+   },
+   {
+    "baslangic": "2010",
+    "bitis": "",
+    "kurum": "Marmara Üniversitesi",
+    "unvan": "Yrd. Doç. Dr."
+   }
+  ],
   "profil": "https://avesis.marmara.edu.tr/zeynep.gemuhluoglu",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "“Varlık Dağını Delmek”: İbnü’l-Arabî’nin Eserleri Esâsında Varlık, Tecrübe ve Ahlâk Açısından Aşk",
@@ -21190,7 +21514,9 @@
   ]
  },
  "Zikri Yavuz": {
+  "deneyim": [],
   "profil": "https://avesis.uludag.edu.tr/zikriyavuz",
+  "unvan": "Doç. Dr.",
   "yayinlar": [
    {
     "baslik": "Zagadnienie zła a teodycea w myśli muzułmańskiej",
@@ -21552,7 +21878,9 @@
   ]
  },
  "Özcan Akdağ": {
+  "deneyim": [],
   "profil": "https://avesis.erciyes.edu.tr/ozcanakdag",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "METAFİZİKSEL SONSUZLUK VE TANRI: İLAHİ SONSUZLUĞUN MAHİYETİNE DAİR BİR İNCELEME",
@@ -22122,11 +22450,15 @@
   ]
  },
  "İbrahim Bor": {
+  "deneyim": [],
   "profil": "https://avesis.hakkari.edu.tr/ibrahimbor",
+  "unvan": "Prof. Dr.",
   "yayinlar": []
  },
  "İsmail Çetin": {
+  "deneyim": [],
   "profil": "https://avesis.uludag.edu.tr/ismcet",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "Kur’ân-ı Kerîm’deki Metaforların Kavramsal Çözümlemesinde Kognitif Metafor Teorisinin Uygulanabilirliği: İman/Küfür Metaforları Örneği",
@@ -22275,7 +22607,9 @@
   ]
  },
  "Şahin Efil": {
+  "deneyim": [],
   "profil": "https://avesis.inonu.edu.tr/sahin.efil",
+  "unvan": "Prof. Dr.",
   "yayinlar": [
    {
     "baslik": "An Investigation on Literature of Prophetic Medicine",
@@ -22324,7 +22658,9 @@
   ]
  },
  "Şeyma Yazıcı Elsebahy": {
+  "deneyim": [],
   "profil": "https://avesis.aybu.edu.tr/syazici",
+  "unvan": "Dr. Öğr. Üyesi",
   "yayinlar": [
    {
     "baslik": "Islamic Bioethical Reflections on Organ Bioprinting: Promises and Challenges",

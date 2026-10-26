@@ -6,6 +6,9 @@
   "Ferit Uslu": [
    "https://avesis.ogu.edu.tr"
   ],
+  "Mehmet S. Aydın": [
+   "https://avesis.deu.edu.tr"
+  ],
   "Recep Kılıç": [
    "https://avesis.ankara.edu.tr"
   ],
@@ -90,8 +93,8 @@
  },
  "kurum": {
   "Adıyaman Üniversitesi": [
-   "avesis.adiyaman.edu.tr/robots.txt: URLError: <urlopen error timed out>",
-   "avesis.adiyaman.edu.tr/: URLError: <urlopen error timed out>"
+   "avesis.adiyaman.edu.tr/robots.txt: AVESİS sayfası değil",
+   "avesis.adiyaman.edu.tr/: AVESİS sayfası değil"
   ],
   "Amasya Üniversitesi": [
    "avesis.amasya.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
@@ -268,8 +271,8 @@
    "avesis.yalova.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Zonguldak Bülent Ecevit Üniversitesi": [
-   "avesis.beun.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
-   "avesis.beun.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+   "avesis.beun.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "avesis.beun.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   ],
   "İbn Haldun Üniversitesi": [
    "avesis.ihu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
@@ -304,6 +307,12 @@
     "cvpages.xml"
    ],
    "profil": 1054
+  },
+  "https://avesis.deu.edu.tr": {
+   "parca": [
+    "cvpages.xml"
+   ],
+   "profil": 3710
   },
   "https://avesis.erciyes.edu.tr": {
    "parca": [
