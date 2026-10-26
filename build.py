@@ -2907,11 +2907,20 @@ def tebrikler() -> list:
                 and (ad_, d["unvan"]) not in gor and d["unvan"] == v.get("unvan")):
             out.append({"ad": ad_, "unvan": d["unvan"], "zaman": d["baslangic"], "sira": d["baslangic"] + "-00", "kaynak": "AVESİS"})
     td = CONTENT / "akademi_tebrik.yaml"
-    for d in ((yaml.safe_load(td.read_text(encoding="utf-8")) or {}).get("doktora") or []) if td.exists() else []:
+    tv = (yaml.safe_load(td.read_text(encoding="utf-8")) or {}) if td.exists() else {}
+    for d in tv.get("unvan") or []:  # YÖK Akademik görevlerinden elle doğrulanan yükselmeler
+        if d.get("ad") in liste_ and str(d.get("yil")) == str(bugun_.year) and d.get("unvan") in UNVAN_ADI \
+                and (d["ad"], d["unvan"]) not in gor:
+            out.append({"ad": d["ad"], "unvan": d["unvan"], "zaman": str(d["yil"]), "sira": str(d["yil"]) + "-00",
+                        "kaynak": "YÖK Akademik"})
+            gor.add((d["ad"], d["unvan"]))
+    for d in tv.get("doktora") or []:
         if d.get("ad") in liste_ and str(d.get("yil")) == str(bugun_.year):
             out.append({"ad": d["ad"], "unvan": "doktora", "zaman": str(d["yil"]), "sira": str(d["yil"]) + "-00",
                         "kaynak": "YÖK Tez Merkezi", "tez": d.get("tez", ""), "tez_univ": d.get("universite", "")})
-    out.sort(key=lambda x: x["sira"], reverse=True)
+    # Önce yıla, sonra unvanın büyüklüğüne göre (profesör, doçent, Dr. Öğretim Üyesi, doktora), aynı düzeyde ada göre
+    duzey = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "doktora": 3}
+    out.sort(key=lambda x: (-int(x["sira"][:4]), duzey.get(x["unvan"], 9), tr_anahtar(x["ad"])))
     return [x | {"p": liste_[x["ad"]]} for x in out]
 
 
@@ -2923,12 +2932,13 @@ def akademide_bu_ay_html() -> str:
     if tb:
         satir = "".join(
             (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> doktorasını tamamladı'
-             f'<span class="gn-alt"><i>{e(x["tez"])}</i> · {e(x["tez_univ"])}, {e(x["zaman"])}</span></li>')
+             f'<span class="gn-alt"><i>{e(x["tez"])}</i> · {e(x["tez_univ"])}</span></li>')
             if x["unvan"] == "doktora" else
             (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
-             f'<span class="gn-alt">{e(x["unvan"])} · {e(x["p"].get("universite") or "")} · {e(x["zaman"])}</span></li>')
+             f'<span class="gn-alt">{e(x["p"].get("universite") or "")}</span></li>')
             for x in tb[:10])
-        tebrik = f'<ul class="gn-liste">{satir}</ul><p class="gn-not">Tebrik ederiz. Unvanlar AVESİS ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir.</p>'
+        tebrik = (f'<ul class="gn-liste">{satir}</ul><p class="gn-not">{bugun_.year} yılında yeni unvan alan ve doktorasını tamamlayan '
+                  f'hocalarımızı tebrik ederiz. Bilgiler YÖK Akademik ve AVESİS kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>')
     else:
         tebrik = ('<p class="gn-bos">Bu dönemde kayda geçen bir unvan değişikliği yok.</p>'
                   '<p class="gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
@@ -2953,7 +2963,7 @@ def akademide_bu_ay_html() -> str:
     return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademide bu ay'
             f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
             f'<div class="gn-izgara">'
-            f'<section class="gn-kart gn-tebrik"><h3>Tebrikler</h3>{tebrik}</section>'
+            f'<section class="gn-kart gn-tebrik"><h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3>{tebrik}</section>'
             f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar</h3>{yayinlar_}</section>'
             f'<section class="gn-kart"><h3>Sitede yeni</h3>{yeni}</section>'
             f'</div></section>')
