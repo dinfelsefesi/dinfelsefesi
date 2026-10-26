@@ -1,0 +1,6 @@
+# Ana sayfadaki "Tebrikler" kartı için elle doğrulanan haberler.
+# doktora: bu yıl doktorasını tamamlayanlar. Kaynak YÖK Ulusal Tez Merkezi'dir; tez kaydı görülmeden kişi eklenmez.
+#   ad: Türkiye akademisi listesindeki ad, yil: tezin yılı, tez: tezin adı, universite: tezin yapıldığı üniversite,
+#   tez_no: YÖK Tez Merkezi'ndeki tez numarası (isteğe bağlı)
+# Unvan yükselmeleri (Dr. Öğretim Üyesi, doçent, profesör) AVESİS ve YÖK kayıtlarından kendiliğinden gelir.
+doktora: []
