@@ -1263,7 +1263,7 @@ KAPSAM = [("turkiye", "Türkiye akademisi"), ("uluslararasi", "Uluslararası aka
 YOK_PROFIL = "https://akademik.yok.gov.tr/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId="
 
 
-UNVAN_SIRA = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "Öğr. Gör.": 3, "Arş. Gör.": 4}
+UNVAN_SIRA = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "Öğr. Gör. Dr.": 3, "Öğr. Gör.": 4, "Arş. Gör. Dr.": 5, "Arş. Gör.": 6}
 
 
 def turkiye_listesi() -> tuple[str, int]:
