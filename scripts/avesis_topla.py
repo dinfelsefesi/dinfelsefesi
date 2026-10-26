@@ -177,7 +177,7 @@ def yayinlar(html: str, kok: str) -> list:
     return out
 
 
-UNVANLAR = ("Prof. Dr.", "Doç. Dr.", "Dr. Öğr. Üyesi", "Öğr. Gör. Dr.", "Arş. Gör. Dr.", "Öğr. Gör.", "Arş. Gör.", "Dr.")
+UNVAN_SIRASI = ("Prof. Dr.", "Doç. Dr.", "Dr. Öğr. Üyesi", "Öğr. Gör. Dr.", "Arş. Gör. Dr.", "Öğr. Gör.", "Arş. Gör.", "Dr.")
 
 
 def unvan_bilgisi(html: str) -> dict:
@@ -187,7 +187,7 @@ def unvan_bilgisi(html: str) -> dict:
     m = re.search(r"<title>\s*([^<|]*)", html or "")
     if m:
         bas = unescape(m.group(1)).strip()
-        out["unvan"] = next((u for u in UNVANLAR if bas.startswith(u)), "")
+        out["unvan"] = next((u for u in UNVAN_SIRASI if bas.startswith(u)), "")
     m = re.search(r'<a title="Deneyim"[^>]*data-content="([^"]*)"', html or "")
     if m:
         for satir in unescape(unescape(m.group(1))).split("<br>"):
