@@ -461,6 +461,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .gn-liste li:first-child{border-top:0;padding-top:0}
 .gn-liste a{font-family:var(--display);font-size:1.05rem}
 .gn-alt,.gn-konu{display:block;font-family:var(--sans);font-size:.8rem;color:var(--ink-soft);margin-top:.15rem}
+.gn-alt a{font-family:inherit;font-size:inherit}  /* künyedeki yazar bağlantıları başlık boyutunda olmasın */
 .gn-konu{color:var(--gold)}
 .gn-tur{display:inline-block;font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-right:.5rem}
 .gn-bos{font-style:italic;color:var(--ink-soft);margin:.2rem 0 .6rem}
