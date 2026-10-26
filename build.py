@@ -2991,7 +2991,7 @@ def render_ana(items) -> str:
 </section>
 <div class="susleme" aria-hidden="true"><span>❦</span></div>
 {akademide_bu_ay_html()}
-<nav class="gn-yollar" aria-label="Sitede gezinme"><a href="{SITE_URL}/basliklar/">Başlıklar</a><a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri</a><a href="{SITE_URL}/kisiler/">Türkiye akademisi</a><a href="{SITE_URL}/ag/">İlişki ağı</a></nav>
+
 """
     # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
     gorsel = f"{SITE_URL}/paylas/site.png"
