@@ -496,6 +496,13 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .yp-sekme{margin:.7rem 0 .3rem}
 .yp-sekme button{font-size:.88rem;padding:.2rem .75rem}
 .yayin-liste{list-style:none;margin:.4rem 0 0;padding:0;counter-reset:yayin}
+/* Geniş ekranda yayın paneli ekranın altına kadar uzanır (yüksekliği yayin JS'i verir); liste uzunsa çerçevenin içinde kayar.
+   Yayını az olanla çok olanın paneli böylece aynı boyda olur. Dar ekranda sayfa olağan biçimde akar. */
+@media (min-width:761px){
+  .yayin-panel.boylu{display:flex;flex-direction:column}
+  .yayin-panel.boylu .yayin-liste{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;
+    scrollbar-color:color-mix(in srgb,var(--gold-logo) 60%,transparent) transparent;padding-right:.4rem;border-top:1px solid var(--rule)}
+}
 .yayin-liste li{counter-increment:yayin;position:relative;padding:.6rem 0 .6rem 2.1rem;border-top:1px solid var(--rule)}
 .yayin-liste li:first-child{border-top:0}
 .yayin-liste li::before{content:counter(yayin) ".";position:absolute;left:0;top:.62rem;width:1.6rem;text-align:right;
@@ -2405,6 +2412,10 @@ function sirala(a){
     return r});
   lis.forEach(function(li){ol.appendChild(li)})}
 p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){grup(b.dataset.grup)})});
+function boy(){if(window.innerWidth<=760){p.classList.remove('boylu');p.style.height='';return}
+  p.classList.add('boylu');var ust=p.getBoundingClientRect().top+window.scrollY;
+  p.style.height=Math.max(Math.round(window.innerHeight*.75),window.innerHeight-ust-20)+'px';ol.scrollTop=0}
+boy();window.addEventListener('resize',boy);
 p.querySelectorAll('.yp-sirala button').forEach(function(b){b.addEventListener('click',function(){sirala(b.dataset.alan)})});
 })();
 </script>"""
