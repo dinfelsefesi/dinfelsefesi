@@ -439,7 +439,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .m-hepsi{margin:.3rem 0 0;font-size:.95rem}
 .m-yil-tel{display:none}
 /* Akademisyen sayfasının künyesi: kartvizit */
-.kartvizit{position:relative;display:flex;gap:1.4rem;align-items:flex-start;width:fit-content;max-width:100%;margin:.6rem 0 2.2rem;
+.kartvizit{position:relative;display:flex;gap:1.4rem;align-items:flex-start;width:fit-content;max-width:100%;margin:.4rem 0 1.3rem;
   padding:1.5rem 1.7rem 1.3rem;background:#fff;border:1px solid var(--accent);border-radius:14px;
   box-shadow:6px 6px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent),0 18px 34px -24px rgba(20,30,50,.45)}
 .kv-monogram{flex:none;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--gold-logo);
@@ -484,6 +484,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .og-hepsi{margin:.6rem 0 0;font-style:italic}
 @media (max-width:560px){.onceki-gunler li{grid-template-columns:1fr}.onceki-gunler .og-yazar{grid-column:1}}
 .akademi-metin{max-width:none}  /* yayın paneli yan sütuna kadar uzanır */
+.akademi-metin .yayin-panel{margin-top:0}
 /* kişi sayfası yayın paneli: kartvizitten daha sakin bir kart */
 .yayin-panel{background:var(--card);border:1px solid color-mix(in srgb,var(--gold-logo) 35%,var(--rule));border-radius:10px;
   box-shadow:0 2px 10px rgba(35,68,110,.06);padding:1rem 1.2rem 1.1rem;margin-top:1.4rem}
@@ -496,7 +497,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .yp-sekme{margin:.7rem 0 .3rem}
 .yp-sekme button{font-size:.88rem;padding:.2rem .75rem}
 .yayin-liste{list-style:none;margin:.4rem 0 0;padding:0;counter-reset:yayin}
-/* Geniş ekranda yayın paneli ekranın altına kadar uzanır (yüksekliği yayin JS'i verir); liste uzunsa çerçevenin içinde kayar.
+/* Geniş ekranda yayın panelinin alt kenarı ekranın alt kenarında biter (yüksekliği yayın JS'i verir); liste uzunsa çerçevenin içinde kayar.
    Yayını az olanla çok olanın paneli böylece aynı boyda olur. Dar ekranda sayfa olağan biçimde akar. */
 @media (min-width:761px){
   .yayin-panel.boylu{display:flex;flex-direction:column}
@@ -2414,7 +2415,7 @@ function sirala(a){
 p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){grup(b.dataset.grup)})});
 function boy(){if(window.innerWidth<=760){p.classList.remove('boylu');p.style.height='';return}
   p.classList.add('boylu');var ust=p.getBoundingClientRect().top+window.scrollY;
-  p.style.height=Math.max(Math.round(window.innerHeight*.75),window.innerHeight-ust-20)+'px';ol.scrollTop=0}
+  p.style.height=Math.max(320,window.innerHeight-ust-16)+'px';ol.scrollTop=0}
 boy();window.addEventListener('resize',boy);
 p.querySelectorAll('.yp-sirala button').forEach(function(b){b.addEventListener('click',function(){sirala(b.dataset.alan)})});
 })();
