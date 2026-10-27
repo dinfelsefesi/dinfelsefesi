@@ -476,6 +476,13 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .gn-tebrik-soz{font-family:var(--display);font-style:italic;font-size:1.08rem;line-height:1.4;color:var(--gold);text-align:center;
   margin:.1rem 0 .9rem;padding:.55rem .6rem;border-top:1px solid var(--gold-logo);border-bottom:1px solid var(--gold-logo)}
 .gn-tebrik-soz span{font-style:normal}
+.gn-liste li.gn-tb{display:flex;align-items:center;justify-content:space-between;gap:.7rem}
+.kutla{flex:none;display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans);font-size:.78rem;line-height:1;
+  padding:.32rem .6rem;border:1px solid var(--gold-logo);border-radius:999px;background:transparent;color:var(--accent-ink);cursor:pointer}
+.kutla:hover{background:color-mix(in srgb,var(--gold-logo) 14%,transparent)}
+.kutla .k-sayi{font-weight:700}
+.kutla.kutlandi{background:var(--accent);border-color:var(--accent);color:#fff;cursor:default}
+.kutla.kutlandi .k-sayi{color:var(--gold-logo)}
 .gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:.6rem 0 0}
 .gn-yollar{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:center;font-family:var(--display);font-size:1.15rem;margin:2.2rem 0 1rem}
 @media (max-width:900px){.gn-izgara{grid-template-columns:1fr}}
@@ -2905,6 +2912,71 @@ UNVAN_ADI = {"Öğr. Gör.": "öğretim görevlisi oldu", "Dr. Öğr. Üyesi": "
              "Prof. Dr.": "profesör oldu"}
 
 
+# "Kutla" düğmesi: sayılar hosting'deki küçük bir PHP dosyasında tutulur (api/kutla.php). Aynı tarayıcı bir kişiyi bir kez
+# kutlar (tarayıcıda işaretlenir), sunucu da aynı adresten gelen ikinci kutlamayı saymaz (adres yalnızca özetlenmiş hâliyle
+# tutulur). PHP çalışmayan bir sunucuda (GitHub Pages) düğmeler hiç görünmez.
+KUTLA_JS = """<script>
+(function(){var d=[].slice.call(document.querySelectorAll('.kutla'));if(!d.length)return;var u='/api/kutla.php';
+function oku(k){try{return localStorage.getItem('kutla:'+k)}catch(e){return null}}
+function yaz(k){try{localStorage.setItem('kutla:'+k,'1')}catch(e){}}
+function goster(b,n){var s=b.querySelector('.k-sayi');if(n>0){s.textContent=n;s.hidden=false}
+  if(oku(b.dataset.id)){b.classList.add('kutlandi');b.setAttribute('aria-pressed','true');b.querySelector('.k-yazi').textContent='Kutladınız'}}
+fetch(u+'?ids='+d.map(function(b){return b.dataset.id}).join(','),{cache:'no-store'}).then(function(r){
+  if(!r.ok||(r.headers.get('content-type')||'').indexOf('json')<0)throw 0;return r.json()}).then(function(j){
+  d.forEach(function(b){b.hidden=false;goster(b,(j.sayilar||{})[b.dataset.id]||0);
+    b.addEventListener('click',function(){if(oku(b.dataset.id))return;yaz(b.dataset.id);
+      var s=b.querySelector('.k-sayi');goster(b,(parseInt(s.textContent,10)||0)+1);
+      fetch(u+'?id='+encodeURIComponent(b.dataset.id),{method:'POST'}).then(function(r){return r.json()}).then(function(k){
+        if(k&&k.sayi)goster(b,k.sayi)}).catch(function(){})})})}).catch(function(){});
+})();
+</script>"""
+
+KUTLA_PHP = r"""<?php
+// Ana sayfadaki "Kutla" düğmelerinin sayaçları. GET ?ids=a,b,c sayıları verir; POST ?id=a bir kutlama ekler.
+// Aynı adresten aynı kişiye ikinci kutlama sayılmaz; adres yalnızca tuzlu özet olarak, kişi başına en çok 2000 kayıt tutulur.
+header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store');
+$kimlik = function ($s) { return preg_match('/^[a-z0-9-]{1,100}$/', $s) ? $s : null; };
+$klasor = dirname(__DIR__, 2) . '/kutla-veri';          // public_html'in dışında: site yüklemesi silmez
+if (!is_dir($klasor)) { @mkdir($klasor, 0755, true); }
+if (!is_dir($klasor) || !is_writable($klasor)) {
+    $klasor = dirname(__DIR__) . '/.kutla';              // olmazsa site içinde, web'e kapalı bir klasör
+    if (!is_dir($klasor)) { @mkdir($klasor, 0755, true); }
+    @file_put_contents($klasor . '/.htaccess', "Require all denied\nDeny from all\n");
+}
+$dosya = $klasor . '/sayilar.json';
+$fp = @fopen($dosya, 'c+');
+if (!$fp) { http_response_code(500); echo '{"hata":"kayit"}'; exit; }
+flock($fp, LOCK_EX);
+$veri = json_decode(stream_get_contents($fp), true);
+if (!is_array($veri)) { $veri = ['sayilar' => [], 'izler' => []]; }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $kimlik($_GET['id'] ?? '');
+    if ($id === null) { flock($fp, LOCK_UN); http_response_code(400); echo '{}'; exit; }
+    $iz = substr(hash('sha256', ($_SERVER['REMOTE_ADDR'] ?? '') . '|' . $id . '|dinfelsefesi-kutla'), 0, 16);
+    $izler = $veri['izler'][$id] ?? [];
+    if (!in_array($iz, $izler, true)) {
+        $veri['sayilar'][$id] = ($veri['sayilar'][$id] ?? 0) + 1;
+        $izler[] = $iz;
+        $veri['izler'][$id] = array_slice($izler, -2000);
+        ftruncate($fp, 0); rewind($fp);
+        fwrite($fp, json_encode($veri));
+        fflush($fp);
+    }
+    flock($fp, LOCK_UN);
+    echo json_encode(['id' => $id, 'sayi' => $veri['sayilar'][$id] ?? 0]);
+    exit;
+}
+flock($fp, LOCK_UN);
+$cikti = [];
+foreach (explode(',', $_GET['ids'] ?? '') as $s) {
+    $id = $kimlik($s);
+    if ($id !== null) { $cikti[$id] = $veri['sayilar'][$id] ?? 0; }
+}
+echo json_encode(['sayilar' => $cikti]);
+"""
+
+
 def tebrikler() -> list:
     """Akademide son unvan değişiklikleri. İki kaynaktan gelir: (1) unvan_gecmisi.json'da son 90 günde fark edilen
     yükselmeler (scripts/unvan_izle.py), (2) AVESİS 'Deneyim' kutusunda güncel unvanının başlangıç yılı bu yıl olanlar."""
@@ -2955,17 +3027,24 @@ def akademide_bu_ay_html() -> str:
     # Tebrikler
     tb = tebrikler()
     if tb:
+        def kutla_kimligi(x):
+            return slugify(f'{x["ad"]}-{"doktora" if x["unvan"] == "doktora" else x["unvan"]}-{x["zaman"][:4]}')
+
+        def kutla_dugmesi(x):
+            return (f'<button type="button" class="kutla" data-id="{kutla_kimligi(x)}" hidden '
+                    f'aria-label="{e(x["ad"])} için kutla"><span aria-hidden="true">👏</span> <span class="k-yazi">Kutla</span>'
+                    f'<b class="k-sayi" hidden></b></button>')
         satir = "".join(
-            (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> doktorasını tamamladı'
-             f'<span class="gn-alt"><i>{e(x["tez"])}</i> · {e(x["tez_univ"])}</span></li>')
+            (f'<li class="gn-tb"><div><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> doktorasını tamamladı'
+             f'<span class="gn-alt"><i>{e(x["tez"])}</i> · {e(x["tez_univ"])}</span></div>{kutla_dugmesi(x)}</li>')
             if x["unvan"] == "doktora" else
-            (f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
-             f'<span class="gn-alt">{e(x["p"].get("universite") or "")}</span></li>')
+            (f'<li class="gn-tb"><div><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
+             f'<span class="gn-alt">{e(x["p"].get("universite") or "")}</span></div>{kutla_dugmesi(x)}</li>')
             for x in tb[:10])
         tebrik = (f'<p class="gn-tebrik-soz"><span aria-hidden="true">🎓</span> {bugun_.year} yılında yeni unvan alan ve '
                   f'doktorasını tamamlayan hocalarımızı tebrik ederiz <span aria-hidden="true">🎉</span></p>'
                   f'<ul class="gn-liste">{satir}</ul><p class="aciklama-kisa gn-not">Bilgiler YÖK Akademik ve AVESİS '
-                  f'kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>')
+                  f'kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>' + KUTLA_JS)
     else:
         tebrik = ('<p class="gn-bos">Bu dönemde kayda geçen bir unvan değişikliği yok.</p>'
                   '<p class="aciklama-kisa gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
@@ -2982,7 +3061,7 @@ def akademide_bu_ay_html() -> str:
                   f'{e(tr_date(m["tarih"][:10]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
     yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
                  if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
-    return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademide bu ay'
+    return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademi Güncel'
             f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
             f'<div class="gn-izgara">'
             f'<section class="gn-kart gn-tebrik"><h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3>{tebrik}</section>'
@@ -3096,6 +3175,7 @@ def main() -> None:
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
+    (OUT / "api" / "kutla.php").write_text(KUTLA_PHP, encoding="utf-8")
     (OUT / "api" / "makaleler.json").write_text(
         json.dumps([{**m, "url": entry_url(m)} for m in items], ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "api" / "onizleme.json").write_text(json.dumps(onizleme_verisi(items), ensure_ascii=False), encoding="utf-8")

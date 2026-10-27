@@ -103,7 +103,7 @@ jobs:
             if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/wp-config.php; bye" 2>/dev/null | grep -q wp-config; then
               echo "::error::public_html içinde WordPress (wp-config.php) duruyor. Yedek alıp WordPress dosyalarını sildikten sonra tekrar çalıştırın."; exit 1
             fi
-            HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/"
+            HARIC="--exclude-glob yeni/ --exclude-glob .well-known/ --exclude-glob cgi-bin/ --exclude-glob .kutla/"
           fi
           echo "::warning::Yükleme klasörü: $HEDEF"
           # Yalnızca içeriği değişen dosyalar yüklensin: sunucudaki bir önceki yüklemenin özet listesi indirilir,
