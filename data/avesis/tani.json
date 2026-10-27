@@ -3,8 +3,14 @@
   "Chrysi Sidiropoulou": [
    "https://avesis.bogazici.edu.tr"
   ],
+  "Enis Doko": [
+   "https://avesis.ihu.edu.tr"
+  ],
   "Ferit Uslu": [
    "https://avesis.ogu.edu.tr"
+  ],
+  "Kelly James Clark": [
+   "https://avesis.ihu.edu.tr"
   ],
   "Mehmet S. Aydın": [
    "https://avesis.deu.edu.tr"
@@ -271,12 +277,8 @@
    "avesis.yalova.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "Zonguldak Bülent Ecevit Üniversitesi": [
-   "avesis.beun.edu.tr/robots.txt: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
-   "avesis.beun.edu.tr/: URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
-  ],
-  "İbn Haldun Üniversitesi": [
-   "avesis.ihu.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
-   "avesis.ihu.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
+   "avesis.beun.edu.tr/robots.txt: URLError: <urlopen error [Errno -2] Name or service not known>",
+   "avesis.beun.edu.tr/: URLError: <urlopen error [Errno -2] Name or service not known>"
   ],
   "İstanbul Medeniyet Üniversitesi": [
    "avesis.medeniyet.edu.tr/robots.txt: HTTPError: HTTP Error 404: Not Found",
@@ -300,7 +302,7 @@
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 3876
+   "profil": 3880
   },
   "https://avesis.bogazici.edu.tr": {
    "parca": [
@@ -318,19 +320,23 @@
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 2989
+   "profil": 2990
+  },
+  "https://avesis.ihu.edu.tr": {
+   "parca": [],
+   "profil": 0
   },
   "https://avesis.ogu.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 2489
+   "profil": 0
   },
   "https://avesis.uludag.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 2949
+   "profil": 2948
   }
  }
 }
