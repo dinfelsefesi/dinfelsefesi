@@ -24,7 +24,7 @@
     } catch (_) { return null; }
   }
   function uygunMu(a) {
-    if (a.closest("header.site, footer.site, nav, .ag-panel, .ag-tuval, .tur-secici, .yol")) return false;
+    if (a.closest("header.site, footer.site, nav, .ag-panel, .ag-tuval, .tur-secici, .yol, .harita, ul.liste, table.kisiler")) return false;
     var k = anahtar(a);
     return k && k !== location.pathname.replace(/index\.html$/, "") ? k : null;
   }
