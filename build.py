@@ -352,6 +352,11 @@ h2{font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25;
 .anakart h3 a:hover{color:var(--accent)}
 .anakart.bos h3{font-weight:500}
 .anakart p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+/* Kart süsü: üstte altın çizgi, sağ altta logodaki kemerin silik izi; üzerine gelince hafifçe kalkar */
+.anakart{border-top:3px solid var(--gold-logo);background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='12 10 40 44'%3E%3Cpath d='M20.5 50V31A19 19 0 0 1 32 13.5 19 19 0 0 1 43.5 31V50M15.5 50h33' fill='none' stroke='%23c9a14a' stroke-opacity='.22' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31.4 23.5c2.4 4.4 6.6 7.4 6.6 13.4a6 6 0 0 1-12 0c0-3.6 1.9-6 3.9-8.1.2 2.1 1 3.5 2.3 4 .9-3 .3-6.4-.8-9.3z' fill='%23c9a14a' fill-opacity='.14'/%3E%3C/svg%3E") no-repeat right .9rem bottom .8rem/2.6rem auto;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.anakart:hover{transform:translateY(-2px);border-top-color:var(--accent);box-shadow:0 16px 30px -22px rgba(20,30,50,.5)}
+.anakart .ilgili{padding-right:2.8rem}
+@media (prefers-reduced-motion:reduce){.anakart{transition:none}.anakart:hover{transform:none}}
 .olcu{height:4px;background:var(--panel)}
 .olcu span{display:block;height:100%;background:var(--accent)}
 .altlar{list-style:none;padding:0;margin:.15rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem}
