@@ -11859,6 +11859,38 @@
    ],
    "yil": "2026"
   },
+  "10.33415/daad.1913286": {
+   "baslik": "Karl Jaspers'te Din, Bilim ve Hakikat Sorunu: Felsefi İnanç Kavramı Üzerine Bir Değerlendirme",
+   "dergi": "Dinbilimleri Akademik Araştırma Dergisi",
+   "dil": "tr",
+   "kaynak": "dergipark",
+   "kelimeler": [
+    "Jaspers",
+    "Felsefî İnanç",
+    "Perenniyal Felsefe",
+    "Aşkınlık",
+    "Felsefe-Din İlişkisi",
+    "Felsefe-Bilim İlişkisi"
+   ],
+   "konu_adlari": [
+    "Study and Philosophy of Religion",
+    "Phenomenology and Existential Philosophy",
+    "Epistemology, Ethics, and Metaphysics",
+    "Philosophy",
+    "Humanities"
+   ],
+   "oa_tur": "article",
+   "ozet": "Bu çalışma, Karl Jaspers’in felsefi inanç kavramını, din-felsefe ve bilim-felsefe ilişkileri bağlamında incelemektedir. Jaspers’in düşüncesi, inancı ne dinsel dogma ile özdeşleştirmekte ne de bilimsel bilginin sınırları içine hapsetmektedir. Bu bağlamda çalışma, felsefi inancın dinin alternatifi mi yoksa din ve bilimi eleştirel bir zeminde yeniden yorumlayan bir imkân mı olduğu sorusunu tartışmaya açmaktadır. Araştırmada, akıl-iman ve bilgi-inanç karşıtlıklarının Jaspers tarafından nasıl dönüştürüldüğü ele alınmakta; özellikle aşkınlığın nesneleştirilemezliği ve “kuşatan” kavramı üzerinden felsefi inancın varoluşsal bir yönelim biçimi olduğu gösterilmektedir. Ayrıca Jaspers’in pozitivizm eleştirisi çerçevesinde bilimin mutlaklaştırılmasına karşı geliştirdiği yaklaşım analiz edilmektedir. Yöntem olarak kavramsal çözümleme ve metin yorumlamaya dayanan bu çalışma, Jaspers’in felsefi inanç kavramının doktriner bir yapıdan ziyade, anlamı açık tutan ve insan varoluşunu aşkınlık ufkunda konumlandıran eleştirel bir imkân olarak okunabileceğini ileri sürmektedir. Çalışmada felsefi inanç kavramının dinin alternatifi olan yeni bir inanç biçimi değil, din ile bilimi kendi sınırları içinde eleştirel olarak yeniden konumlandıran ve felsefi düşünmenin sınır bilinci içinde gerçekleşen varoluşsal bir düşünme imkânı olduğu görülmüştür. Bununla birlikte, aşkınlığın insan varoluşuna içkin mi yoksa aşkın bir referans alanı mı olduğu sorusu, Jaspers’in düşüncesinin hâlâ tartışmaya açık yönlerinden biridir.",
+   "sayfa": "https://dergipark.org.tr/tr/pub/daad/article/1913286",
+   "tur_ipucu": [
+    "Araştırma Makalesi"
+   ],
+   "yazarlar": [
+    "Yasemin Yeşiltaş",
+    "Hasan Atsız"
+   ],
+   "yil": "2026"
+  },
   "10.33415/daad.581849": {
    "baslik": "İLK DEİSTLERE GÖRE DEİZMİN TEMEL İNANÇLARI",
    "dergi": "Dinbilimleri Akademik Araştırma Dergisi",
@@ -19214,5 +19246,5 @@
    "yil": "2017"
   }
  },
- "tarih": "2026-10-25"
+ "tarih": "2026-10-27"
 }

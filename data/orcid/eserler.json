@@ -1,5 +1,5 @@
 {
- "tarih": "2026-10-23",
+ "tarih": "2026-10-27",
  "eserler": {
   "0000-0001-6585-9340": [
    {
@@ -189,7 +189,7 @@
     "url": "https://doi.org/10.17859/paudiv.1980761"
    },
    {
-    "baslik": "Kemâl Yolculuğu",
+    "baslik": "Kemâl Yolculuğu: Gazâlî Düşüncesinde Dinî Tecrübe",
     "tur": "book",
     "dergi": "İlahiyat Yayınları",
     "yil": "2025",
@@ -2669,7 +2669,16 @@
     "url": ""
    }
   ],
-  "0000-0002-5932-1314": [],
+  "0000-0002-5932-1314": [
+   {
+    "baslik": "Karl Jaspers'te Din, Bilim ve Hakikat Sorunu: Felsefi İnanç Kavramı Üzerine Bir Değerlendirme",
+    "tur": "journal-article",
+    "dergi": "Dinbilimleri Akademik Araştırma Dergisi",
+    "yil": "2026",
+    "doi": "10.33415/daad.1913286",
+    "url": "https://doi.org/10.33415/daad.1913286"
+   }
+  ],
   "0000-0001-7412-7635": [],
   "0000-0003-2895-8176": [
    {
