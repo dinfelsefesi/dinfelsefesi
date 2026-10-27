@@ -1132,3 +1132,8 @@ kisiler:
   onceki_kurumlar: [Erciyes Üniversitesi]
   kurum_kaynagi: İSAM'ın kişi sayfasına (2024)
   elle: true   # YÖK'teki alan ölçütüne uymadığı için listeye girmiyordu; alanın öncülerinden olduğu için elle eklendi (23 Ekim 2026). Kurum bilgisi İSAM kişi sayfasından (2024).
+- ad: Seher Yılmaz
+  unvan: Arş. Gör.
+  universite: Süleyman Demirel Üniversitesi
+  fakulte: İlahiyat Fakültesi
+  yok_alan: Din Felsefesi   # YÖK Akademik: SDÜ İlahiyat, Felsefe ve Din Bilimleri Bölümü, Din Felsefesi ABD (araştırmacı no 400692). Abdullah Akgül'ün bildirmesiyle eklendi (27 Ekim 2026); YÖK authorId henüz yazılmadı.

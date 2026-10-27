@@ -548,6 +548,7 @@ aside.yan ul.calisan-liste.dikey{flex-direction:column;align-items:flex-start;ga
 .k-ara{display:flex;align-items:center;gap:.6rem;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin:.8rem 0 .9rem}
 .k-ara input{font:inherit;font-style:normal;font-size:.98rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.4rem .9rem;width:min(100%,22rem)}
 .k-ara input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.anakart[hidden],.harita[hidden],h2.kume-ad[hidden]{display:none}
 .tablo-kap{overflow-x:auto}
 table.kisiler{width:100%;border-collapse:collapse;font-size:.95rem}
 button.sirala{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
@@ -1055,7 +1056,9 @@ def harita_kartlari(anas, en_cok) -> str:
             f"<li class='{'dolu' if alt_dolu(a) else 'plan'}'>{bag('baslik', a)}</li>"
             for a in liste(h.get("alt_basliklar")))
         ilg = bag_listesi("ilgili_basliklar", h)
-        kartlar.append(f"""<article class="anakart{' bos' if not b else ''}">
+        ara = " ".join([h["ad"], re.sub(r"<[^>]+>", "", satir_ici(h.get("ozet"))), *liste(h.get("alt_basliklar")),
+                        *(FIS[("baslik", a)]["ad"] for a in liste(h.get("alt_basliklar")) if ("baslik", a) in FIS)])
+        kartlar.append(f"""<article class="anakart{' bos' if not b else ''}" data-ara="{e(ara)}">
   <h3><a href="{fis_url('baslik', k)}">{e(h['ad'])}</a></h3>
   <p>{satir_ici(h.get('ozet'))}</p>
   <div class="olcu" role="img" aria-label="{len(b)} fiş"><span style="width:{round(100 * len(b) / en_cok)}%"></span></div>
@@ -1114,11 +1117,33 @@ def render_baslik(k) -> str:
                 canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article", jsonld=jl)
 
 
+BASLIK_ARA_JS = """<script>
+(function(){var g=document.getElementById('baslik-ara');if(!g)return;
+function n(t){return (t||'').toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9çğıöşü ]+/g,' ')}
+var k=[].slice.call(document.querySelectorAll('.anakart')).map(function(a){return [a,n(a.dataset.ara)]});
+var bos=document.querySelector('.b-bos');
+function suz(){var q=n(g.value).split(' ').filter(Boolean),say=0;
+  k.forEach(function(x){var ok=q.every(function(w){return x[1].indexOf(w)>=0});x[0].hidden=!ok;if(ok)say++});
+  [].slice.call(document.querySelectorAll('h2.kume-ad')).forEach(function(h){var d=h.nextElementSibling;
+    var gor=d&&[].some.call(d.querySelectorAll('.anakart'),function(a){return !a.hidden});h.hidden=d.hidden=!gor});
+  bos.hidden=say>0}
+g.addEventListener('input',suz);
+g.addEventListener('keydown',function(ev){if(ev.key!=='Enter')return;var a=k.filter(function(x){return !x[0].hidden});
+  if(a.length===1){var l=a[0][0].querySelector('h3 a');if(l)location.href=l.href}});
+})();
+</script>"""
+
+
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
             '<p class="giris">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir.</p>'
-            + harita_html())
+            '<label class="k-ara"><span>Başlık ara</span><input type="search" id="baslik-ara" '
+            'placeholder="Ör. kötülük, iman, din dili" autocomplete="off"></label>'
+            + harita_html() +
+            '<p class="giris b-bos" hidden>Aramaya uyan başlık bulunamadı. Terim, kişi ve eserler için '
+            f'<a href="{SITE_URL}/terimler/">Terimler</a>, <a href="{SITE_URL}/kisiler/">Kişiler</a> ve '
+            f'<a href="{SITE_URL}/eserler/">Eserler</a> sayfalarına bakabilirsiniz.</p>' + BASLIK_ARA_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
 
 
