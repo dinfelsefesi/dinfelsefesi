@@ -34,6 +34,9 @@ ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 OUT = ROOT / "site"
 SITE_URL = os.environ.get("SITE_URL", "https://dinfelsefesi.com.tr").rstrip("/")
+# Ziyaret sayacı (GoatCounter): çerez kullanmaz, kişisel veri tutmaz. Yalnızca asıl adres için derlenen sitede çalışır.
+SAYAC = ('\n<script data-goatcounter="https://dinfelsefesi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>'
+         if SITE_URL == "https://dinfelsefesi.com.tr" else "")
 NOINDEX = os.environ.get("NOINDEX") == "1"
 TASLAK_GOSTER = os.environ.get("TASLAK_GOSTER") == "1"
 SITE_NAME = "Din Felsefesi"
@@ -845,7 +848,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
-<script src="{SITE_URL}/static/js/onizleme.js?v={surum('static/js/onizleme.js')}" data-veri="{SITE_URL}/api/onizleme.json" defer></script>
+<script src="{SITE_URL}/static/js/onizleme.js?v={surum('static/js/onizleme.js')}" data-veri="{SITE_URL}/api/onizleme.json" defer></script>{SAYAC}
 </head>
 <body>
 <header class="site"><div class="wrap">
