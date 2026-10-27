@@ -1973,6 +1973,7 @@ def baslik_temizle(t: str, sahip: str = "") -> str:
 def baslik_anahtari(t: str) -> str:
     k = slugify(baslik_temizle(t)).replace("-", "")
     _KELIME.setdefault(k, kelimeler_(t))
+    _CILTLER.setdefault(k, {w for w in slugify(baslik_temizle(t)).split("-") if _CILT.match(w)})
     return k
 
 
@@ -1982,6 +1983,29 @@ BAGLAC = {"and", "the", "for", "with", "from", "into", "ile", "icin", "bir", "ve
 
 def kelimeler_(t: str) -> set:
     return {w for w in slugify(baslik_temizle(t)).split("-") if len(w) >= 3 and w not in BAGLAC}
+
+
+_CILT = re.compile(r"^(?:i{1,3}|iv|vi{0,3}|ix|x|[1-9])$")
+_CILTLER = {}
+
+
+def cilt_no(anahtar: str) -> set:
+    """Adın içindeki cilt numaraları (I, II, III ya da 1, 2, 3): 'Okumalar I' ile 'Okumalar II' ayrı eserlerdir."""
+    return _CILTLER.get(anahtar, set())
+
+
+def cilt_farkli(a: str, b: str) -> bool:
+    """İki adda da cilt numarası var ve numaralar farklıysa ayrı eserdir; numarası olmayan kopya aynı eser sayılabilir."""
+    ca, cb = cilt_no(a), cilt_no(b)
+    return bool(ca and cb and ca != cb)
+
+
+def yil_uzak(a, b) -> bool:
+    """İki yıl arasında beşten fazla yıl varsa adları benzese de ayrı eserdir (ör. 2018'deki makale ile 2025'teki kitap)."""
+    try:
+        return abs(int(str(a)[:4]) - int(str(b)[:4])) > 5
+    except (TypeError, ValueError):
+        return False
 
 
 def kelime_ortak(a: set, b_anahtar: str) -> bool:
@@ -2023,7 +2047,7 @@ def baslik_esit(a: str, yil: str, kayitlar: list, yazarlar=None) -> bool:
         kisa, uzun = sorted((k, b), key=len)
         if len(kisa) >= 20 and kisa in uzun:
             return True
-        if kelime_ortak(a, b):
+        if kelime_ortak(a, b) and not yil_uzak(yil, y) and not cilt_farkli(k, b):
             return True
         if yil and str(y) == str(yil) and len(kisa) >= 12 and uzun.startswith(kisa):
             return True
