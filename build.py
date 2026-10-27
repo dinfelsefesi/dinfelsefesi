@@ -277,6 +277,9 @@ CSS = """
 *{box-sizing:border-box}
 html{font-size:16px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;-webkit-font-smoothing:antialiased}
+/* Kısa sayfalarda alt bilgi ekranın altına yaslanır */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto}
 a{color:var(--accent-ink);text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,var(--gold-logo) 70%,transparent);text-underline-offset:3px}
 a:hover{text-decoration-color:currentColor}
 a:hover{color:var(--accent)}
