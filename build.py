@@ -2919,6 +2919,8 @@ KUTLA_JS = """<script>
 (function(){var d=[].slice.call(document.querySelectorAll('.kutla'));if(!d.length)return;var u='/api/kutla.php';
 function oku(k){try{return localStorage.getItem('kutla:'+k)}catch(e){return null}}
 function yaz(k){try{localStorage.setItem('kutla:'+k,'1')}catch(e){}}
+var jt;try{jt=localStorage.getItem('kutla-jeton')}catch(e){}
+if(!jt||!/^[a-f0-9]{32}$/.test(jt)){jt='';for(var i=0;i<32;i++)jt+='0123456789abcdef'[Math.floor(Math.random()*16)];try{localStorage.setItem('kutla-jeton',jt)}catch(e){}}
 function goster(b,n){var s=b.querySelector('.k-sayi');if(n>0){s.textContent=n;s.hidden=false}
   if(oku(b.dataset.id)){b.classList.add('kutlandi');b.setAttribute('aria-pressed','true');b.querySelector('.k-yazi').textContent='Kutladınız'}}
 fetch(u+'?ids='+d.map(function(b){return b.dataset.id}).join(','),{cache:'no-store'}).then(function(r){
@@ -2926,14 +2928,16 @@ fetch(u+'?ids='+d.map(function(b){return b.dataset.id}).join(','),{cache:'no-sto
   d.forEach(function(b){b.hidden=false;goster(b,(j.sayilar||{})[b.dataset.id]||0);
     b.addEventListener('click',function(){if(oku(b.dataset.id))return;yaz(b.dataset.id);
       var s=b.querySelector('.k-sayi');goster(b,(parseInt(s.textContent,10)||0)+1);
-      fetch(u+'?id='+encodeURIComponent(b.dataset.id),{method:'POST'}).then(function(r){return r.json()}).then(function(k){
+      fetch(u+'?id='+encodeURIComponent(b.dataset.id)+'&j='+jt,{method:'POST'}).then(function(r){return r.json()}).then(function(k){
         if(k&&k.sayi)goster(b,k.sayi)}).catch(function(){})})})}).catch(function(){});
 })();
 </script>"""
 
 KUTLA_PHP = r"""<?php
 // Ana sayfadaki "Kutla" düğmelerinin sayaçları. GET ?ids=a,b,c sayıları verir; POST ?id=a bir kutlama ekler.
-// Aynı adresten aynı kişiye ikinci kutlama sayılmaz; adres yalnızca tuzlu özet olarak, kişi başına en çok 2000 kayıt tutulur.
+// Her tarayıcı rastgele bir jeton taşır; aynı jetonla aynı kişiye ikinci kutlama sayılmaz. Kötüye kullanıma karşı
+// aynı internet adresinden bir kişiye en çok 30 kutlama sayılır (kampüs ve mobil ağlarda çok kişi tek adresi paylaşır).
+// Jeton ve adres yalnızca geri çevrilemeyen özet olarak tutulur.
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 $kimlik = function ($s) { return preg_match('/^[a-z0-9-]{1,100}$/', $s) ? $s : null; };
@@ -2949,16 +2953,22 @@ $fp = @fopen($dosya, 'c+');
 if (!$fp) { http_response_code(500); echo '{"hata":"kayit"}'; exit; }
 flock($fp, LOCK_EX);
 $veri = json_decode(stream_get_contents($fp), true);
-if (!is_array($veri)) { $veri = ['sayilar' => [], 'izler' => []]; }
+if (!is_array($veri)) { $veri = ['sayilar' => []]; }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $kimlik($_GET['id'] ?? '');
     if ($id === null) { flock($fp, LOCK_UN); http_response_code(400); echo '{}'; exit; }
-    $iz = substr(hash('sha256', ($_SERVER['REMOTE_ADDR'] ?? '') . '|' . $id . '|dinfelsefesi-kutla'), 0, 16);
-    $izler = $veri['izler'][$id] ?? [];
-    if (!in_array($iz, $izler, true)) {
+    $jeton = preg_match('/^[a-f0-9]{32}$/', $_GET['j'] ?? '') ? $_GET['j'] : '';
+    $iz = substr(hash('sha256', 'j|' . $jeton . '|' . $id . '|dinfelsefesi-kutla'), 0, 16);
+    $ip = substr(hash('sha256', 'a|' . ($_SERVER['REMOTE_ADDR'] ?? '') . '|' . $id . '|dinfelsefesi-kutla'), 0, 16);
+    $izler = $veri['jetonlar'][$id] ?? [];
+    $ipler = $veri['adresler'][$id] ?? [];
+    if ($jeton !== '' && !in_array($iz, $izler, true) && ($ipler[$ip] ?? 0) < 30) {
         $veri['sayilar'][$id] = ($veri['sayilar'][$id] ?? 0) + 1;
         $izler[] = $iz;
-        $veri['izler'][$id] = array_slice($izler, -2000);
+        $veri['jetonlar'][$id] = array_slice($izler, -5000);
+        $ipler[$ip] = ($ipler[$ip] ?? 0) + 1;
+        $veri['adresler'][$id] = array_slice($ipler, -5000, null, true);
+        unset($veri['izler']);
         ftruncate($fp, 0); rewind($fp);
         fwrite($fp, json_encode($veri));
         fflush($fp);
