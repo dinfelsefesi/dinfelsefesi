@@ -1136,4 +1136,5 @@ kisiler:
   unvan: Arş. Gör.
   universite: Süleyman Demirel Üniversitesi
   fakulte: İlahiyat Fakültesi
-  yok_alan: Din Felsefesi   # YÖK Akademik: SDÜ İlahiyat, Felsefe ve Din Bilimleri Bölümü, Din Felsefesi ABD (araştırmacı no 400692). Abdullah Akgül'ün bildirmesiyle eklendi (27 Ekim 2026); YÖK authorId henüz yazılmadı.
+  yok: B74EABC8EA773B14
+  yok_alan: Din Felsefesi   # YÖK Akademik: SDÜ İlahiyat, Felsefe ve Din Bilimleri Bölümü, Din Felsefesi ABD (araştırmacı no 400692). Abdullah Akgül'ün bildirmesiyle eklendi (27 Ekim 2026).
