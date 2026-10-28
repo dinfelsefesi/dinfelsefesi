@@ -23,7 +23,7 @@ import re
 import shutil
 import unicodedata
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
 
@@ -38,6 +38,10 @@ SITE_URL = os.environ.get("SITE_URL", "https://dinfelsefesi.com.tr").rstrip("/")
 SAYAC = ('\n<script data-goatcounter="https://dinfelsefesi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>'
          if SITE_URL == "https://dinfelsefesi.com.tr" else "")
 NOINDEX = os.environ.get("NOINDEX") == "1"
+# Akademisyen sayfaları (ve ağ sayfaları) bu tarihten itibaren arama motorlarına açılır ve site haritasına girer.
+# Günlük derleme o günün akşamı yeni hâli yayımlar.
+AKADEMI_DIZIN_TARIHI = date(2026, 11, 1)
+AKADEMI_ACIK = datetime.now(timezone(timedelta(hours=3))).date() >= AKADEMI_DIZIN_TARIHI
 TASLAK_GOSTER = os.environ.get("TASLAK_GOSTER") == "1"
 SITE_NAME = "Din Felsefesi"
 SITE_TAGLINE = "Din felsefesinin başlıkları, terimleri, kişileri ve eserleri; Türkçe ve uluslararası literatürden seçilmiş tanıtımlar"
@@ -2590,7 +2594,7 @@ def render_akademisyen(s: str) -> str:
     jl = {"@type": "ProfilePage", "url": akademi_url(s), "inLanguage": "tr", "mainEntity": kisi}
     # Akademisyen sayfaları arama motorlarına kapalıdır: genel aramalarda sitenin yerine tek tek kişilerin sayfaları
     # çıkmasın, yaşayan kişiler hakkında otomatik derlenmiş sayfalar aramalarda öne geçmesin. Sayfalar site içinde açıktır.
-    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s), jsonld=jl, dizinleme=False)
+    return page(f'{p["ad"]} · {SITE_NAME}', body, "kisiler", desc=desc, canonical=akademi_url(s), jsonld=jl, dizinleme=AKADEMI_ACIK)
 
 
 # ---------------------------------------------------------------- ilişki ağı
@@ -2889,7 +2893,7 @@ def render_alt_ag(items, tur_, k) -> str:
 {ag_araci(v)}
 {liste_}"""
     return page(f"{ad_} · İlişki ağı · {SITE_NAME}", body, "ag", desc=f"{ad_} {tanim} bağlı kavram, kişi ve eserlerin ağı.",
-                canonical=ag_adresi(tur_, k), dizinleme=tur_ != "kisi-tr")
+                canonical=ag_adresi(tur_, k), dizinleme=AKADEMI_ACIK or tur_ != "kisi-tr")
 
 
 # ---------------------------------------------------------------- ana sayfa ve hakkında
@@ -3256,7 +3260,7 @@ def main() -> None:
     # Site haritası ve robots.txt. Deneme yayınında (NOINDEX) sayfalar yine taranabilir ama "noindex" etiketi
     # yüzünden dizine eklenmez; yayına geçildiğinde yalnızca NOINDEX kapatılır.
     harita = "".join(f"<url><loc>{e(SITE_URL + '/' + (y + '/' if y else ''))}</loc></url>" for y in SAYFALAR
-                     if not y.startswith(("kisiler/akademi/", "ag/kisiler/akademi/")))
+                     if AKADEMI_ACIK or not y.startswith(("kisiler/akademi/", "ag/kisiler/akademi/")))
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{harita}</urlset>\n', encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
