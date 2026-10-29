@@ -188,5 +188,26 @@
    "ilahi bilgi"
   ],
   "gun": "2026-10-29"
+ },
+ {
+  "date": "2026-07-21",
+  "title_tr": "Donald Davidson'ın Dil ve Doğruluk Kuramının Dinî Dil Tartışmaları Açısından İmkânı ve Sınırları",
+  "title_en": "Donald Davidson's Theory of Language and Truth: Possibilities and Limits in Religious Language Debates",
+  "authors": "Elçin Esin Kaygın",
+  "journal": "Din ve Felsefe Araştırmaları",
+  "year": "2026",
+  "doi": "",
+  "url": "https://dergipark.org.tr/tr/pub/udfad/article/2000425",
+  "open_access": "evet",
+  "lead": "Kaygın, Davidson'ın doğruluğa dayanan anlam kuramının dinî önermelerin anlamlılığı tartışmasına neler kazandırdığını ve nerede yetersiz kaldığını inceliyor.",
+  "summary_tr": "Yirminci yüzyıl din felsefesinde dinî dilin anlamlılığı tartışması, mantıksal pozitivizmin doğrulanabilirlik ölçütüyle dinî önermeleri anlamsız ilan etmesiyle başlamıştı. Antony Flew'ün yanlışlanabilirlik itirazına verilen cevaplar da bir dinî cümlenin anlamının doğruluk koşullarıyla mı yoksa bir yaşam biçimi içindeki kullanımıyla mı belirlendiği sorusu etrafında şekillendi. Kaygın, Donald Davidson'ın doğruluk kavramını merkeze alan anlam kuramının bu tartışmaya ne ölçüde katkı sağlayabileceğini sorgulamaktadır.\n\nYazar önce kuramı kavramsal olarak yeniden kurar. Davidson anlamı tek tek sözcüklerden çok cümlenin bileşimsel yapısında arar, Tarski'nin doğruluk tanımını bir anlam kuramına dönüştürür ve çeviri yerine T-cümlelerinin doğruluğunu ölçüt alır. Makale, T-cümlelerinin karşılaştığı müphemlik ve anlamsal paradoks sorunlarını Türkçe örneklerle gösterdikten sonra radikal yorum tasarısını ve konuşanı büyük ölçüde tutarlı ve doğru kabul etmeyi şart koşan hayırseverlik ilkesini çözümler.\n\nKuramın dinî dile uygulanışı iki yönlü değerlendirilir. Davidson'a göre bir cümlenin anlamlı sayılması için fiilen doğrulanması gerekmez, doğruluk koşullarının belirlenebilmesi yeterlidir. Yazar, bu yaklaşımın doğrulamacılığın dinî ifadelere yönelttiği eleştiriyi etkisiz kıldığını ve dinî önermelere bilişsel değer tanıyan, fideist yaklaşımlara da seçenek oluşturan bir zemin sunduğunu belirtir. Buna karşılık kuramın kaplamsal (extensional) karakteri, kutsalın idraki, iman ve yönelim gibi ancak içlemsel terimlerle kavranabilen unsurları dışarıda bırakır. Hayırseverlik ilkesi de kökten farklı bir metafizikle konuşan bir dinî geleneği yorumlarken ya içeriği sekülerleştirir ya da işlevini yitirir. Makale, doğruluğa dayanan bir semantiğin dinî anlamı açıklayabilmesi için zihinsel temsili hesaba katan bir çerçeveyle birlikte kullanılması gerektiği sonucuna varıyor.",
+  "why_tr": "Makale, çoğu zaman ayrı yürütülen dil felsefesi ile din felsefesini dinî dilin anlamlılığı sorunu etrafında buluşturuyor. Davidson'ın teknik kuramını Türkçe örneklerle açması, analitik dil felsefesine uzak okurlar için de iyi bir giriş imkânı sunar. Doğrulamacılık ile fideizm arasında üçüncü bir yol arayan okur, kuramın imkânlarını ve sınırlarını bir arada gösteren bu değerlendirmeden yararlanabilir.",
+  "tags": [
+   "dinî dil",
+   "Donald Davidson",
+   "doğruluk",
+   "anlam kuramı"
+  ],
+  "gun": "2026-10-30"
  }
 ]
