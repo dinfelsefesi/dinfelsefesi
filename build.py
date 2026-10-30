@@ -3104,8 +3104,8 @@ def render_dergiler() -> str:
                           f'<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
                 + "</div>")
-    body = (f'<p class="ust-etiket">Dergiler</p><h1>Din felsefesi dergileri</h1>'
-            f'<p class="giris">Türkiye\'de din felsefesi makalesi yayımlayan dergiler. Her derginin dizinleri, yayın ayları, '
+    body = (f'<p class="ust-etiket">Dergiler</p><h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
+            f'<p class="giris">Her derginin dizinleri, yayın ayları, '
             f'makale gönderim durumu ve DergiPark\'ta anahtar kelimelerinde din felsefesi geçen makaleleri bir arada gösterilir.</p>'
             f'<p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
             f'{" (son okuma " + tr_date(tarama) + ")" if tarama else ""}. Dizin bilgisi derginin kendi beyanıdır. '
@@ -3122,7 +3122,7 @@ def render_dergiler() -> str:
             f'<label class="d-sec">Yayın ayı <select id="dergi-ay">{aylar}</select></label></div>'
             f'<div class="eser-ust" style="max-width:60rem"><p class="eser-sayi"><span id="dergi-say"></span></p>{siralama}</div>'
             f'<ul class="d-liste">{satirlar}</ul><p class="giris d-bos" hidden>Seçime uyan dergi bulunamadı. Bir süzgeci kaldırmayı deneyin.</p>')
-    gorsel = paylasim_gorseli("dergiler", "dinfelsefesi.com.tr", "Din felsefesi dergileri",
+    gorsel = paylasim_gorseli("dergiler", "dinfelsefesi.com.tr", "Türkiye'de din felsefesi makalesi yayımlayan dergiler",
                               "Dizinler, yayın ayları, gönderim durumu ve makaleler")
     return page(f"Dergiler · {SITE_NAME}", body + DERGI_JS, "dergiler", canonical=f"{SITE_URL}/dergiler/",
                 desc="Türkiye'de din felsefesi makalesi yayımlayan dergiler: dizinler, yayın ayları, gönderim durumu ve yayımlanan makaleler.",
