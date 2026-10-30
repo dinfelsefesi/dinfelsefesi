@@ -40,7 +40,7 @@ SAYAC = ('\n<script data-goatcounter="https://dinfelsefesi.goatcounter.com/count
 NOINDEX = os.environ.get("NOINDEX") == "1"
 # Akademisyen sayfaları (ve ağ sayfaları) bu tarihten itibaren arama motorlarına açılır ve site haritasına girer.
 # Günlük derleme o günün akşamı yeni hâli yayımlar.
-AKADEMI_DIZIN_TARIHI = date(2026, 11, 1)
+AKADEMI_DIZIN_TARIHI = date(2026, 10, 31)
 AKADEMI_ACIK = datetime.now(timezone(timedelta(hours=3))).date() >= AKADEMI_DIZIN_TARIHI
 TASLAK_GOSTER = os.environ.get("TASLAK_GOSTER") == "1"
 SITE_NAME = "Din Felsefesi"
@@ -251,7 +251,8 @@ def sayim_metni(fisler) -> str:
 
 
 def taslak_etiketi(h) -> str:
-    return '<span class="taslak">Taslak</span>' if h.get("durum") != "yayinda" else ""
+    # "Taslak" etiketi yalnızca deneme yayınında görünür; asıl sitede gösterilmez (31.10.2026)
+    return '<span class="taslak">Taslak</span>' if NOINDEX and h.get("durum") != "yayinda" else ""
 
 
 def yol(k) -> str:
@@ -836,10 +837,7 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
     if NOINDEX:
         deneme = ('<div class="deneme"><div class="wrap">Deneme sürümü. İçerikler taslak hâlindedir ve '
                   'henüz yayımlanmamıştır.</div></div>')
-    elif TASLAK_GOSTER:
-        deneme = (f'<div class="deneme"><div class="wrap">Site geliştirme aşamasındadır. Düzeltme ve önerileriniz için: '
-                  f'<a href="mailto:{ILETISIM}">{ILETISIM}</a></div></div>')
-    else:
+    else:  # yayındaki sitede şerit yok (31.10.2026); iletişim adresi alt bilgide ve Hakkında sayfasında
         deneme = ""
     return f"""<!doctype html>
 <html lang="tr">
