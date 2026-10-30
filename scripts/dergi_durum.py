@@ -55,7 +55,8 @@ def temiz(s: str) -> str:
 
 def ana_sayfa_oku(sayfa: str) -> dict:
     """Derginin ana sayfasından durum bilgilerini çıkarır. Dergi başlığı bulunamazsa ValueError."""
-    m = re.search(r'<h1 class="journal-title">(.*?)</h1>', sayfa, re.S)
+    # DergiPark dergilere farklı sayfa şablonları sunuyor; başlık her birinde derginin kendi adresine bağlı bir h1 içinde
+    m = re.search(r'<h1[^>]*>\s*<a href="https://dergipark\.org\.tr/\w+/pub/[^"]+"[^>]*>(.*?)</a>\s*</h1>', sayfa, re.S)
     if not m:
         raise ValueError("dergi başlığı bulunamadı (sayfa düzeni değişmiş ya da dergi DergiPark'tan ayrılmış olabilir)")
     s = {"baslik": temiz(m.group(1))}

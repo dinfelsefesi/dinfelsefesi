@@ -8,6 +8,7 @@
 #                  dizin_elle: true olan dergilerde buradaki değerler geçerlidir.
 #   yayin_modeli   Taramada okunamazsa bu değer gösterilir.
 #   kabul_donemi   Elle tutulur. Dergiler bunu serbest metinle yazdığı için tarama değiştirmez.
+#   ad_elle        true ise dergi adı DergiPark'tan okunan adla değiştirilmez.
 #   onceki_kodlar  Adı değişen derginin eski DergiPark kodları; eski makaleleri bu dergiye sayılır.
 #   dergipark_disi DergiPark'tan ayrılmış dergi; gece taraması bu dergiye bakmaz.
 # Makale sayıları burada tutulmaz, derlemede data/dergipark/din_felsefesi.jsonl dosyasından hesaplanır.
@@ -975,18 +976,6 @@
     scopus: false
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   listeye_giris: tarama
-- kod: bider
-  ad: Bitlis İslamiyat Dergisi
-  sahip: Bitlis Eren Üniversitesi
-  link: https://dergipark.org.tr/tr/pub/bider
-  dizin:
-    trdizin: false
-    doaj: false
-    esci: false
-    scopus: false
-  yayin_modeli: Süreli Yayın (Haziran - Aralık)
-  kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 31 Ekim
-  listeye_giris: tarama
 - kod: burdurilahiyat
   ad: Burdur İlahiyat Dergisi
   sahip: Burdur Mehmet Akif Ersoy Üniversitesi
@@ -1341,7 +1330,7 @@
   - Bayburt Üniversitesi İlahiyat Fakültesi Dergisi
   listeye_giris: ilk-liste
 - kod: bitlisilahiyatdergisi
-  ad: Bitlis İlahiyat Dergisi
+  ad: Bitlis İslamiyat Dergisi
   sahip: Bitlis Eren Üniversitesi İslami İlimler Fakültesi
   link: https://dergipark.org.tr/tr/pub/bitlisilahiyatdergisi
   dizin:
@@ -1352,6 +1341,9 @@
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 31 Ekim
   listeye_giris: ilk-liste
+  ad_elle: true
+  onceki_kodlar:
+  - bider
 - kod: divan
   ad: Dîvân
   sahip: Bilim ve Sanat Vakfı

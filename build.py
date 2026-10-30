@@ -3015,7 +3015,7 @@ def dergi_verisi() -> tuple[list, dict]:
 def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
     du = d["_durum"]
     # Derginin güncel adı DergiPark sayfasından okunur
-    if du.get("baslik") and not du.get("yonlendi"):
+    if du.get("baslik") and not du.get("yonlendi") and not d.get("ad_elle"):
         d = d | {"ad": du["baslik"], "onceki_adlar": [x for x in d.get("onceki_adlar") or []
                                                       if tr_kucuk(x) != tr_kucuk(du["baslik"])]}
     dizin = dict(d.get("dizin") or {})
