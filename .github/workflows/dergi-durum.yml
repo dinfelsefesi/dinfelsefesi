@@ -1,0 +1,49 @@
+name: Dergi durumu
+
+# Dergiler sayfası için her akşam 18.57'de (İstanbul) dergilerin DergiPark ana sayfalarını okur:
+# gönderim durumu, açılacak tarih, yayın modeli, ortalama süreler. Pazartesileri dizin sayfaları da okunur.
+# Sonuç data/dergiler/durum.json dosyasına yazılır; site 19.47'deki derlemede bunu kullanır.
+on:
+  schedule:
+    - cron: "57 15 * * *"
+  workflow_dispatch:
+    inputs:
+      dizin:
+        description: "Dizin sayfalarını da oku (evet/hayır)"
+        default: "hayır"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dergi-durum
+  cancel-in-progress: false
+
+jobs:
+  tara:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pyyaml
+      - name: Dergi sayfalarını oku
+        run: |
+          if [ "${{ github.event.inputs.dizin }}" = "evet" ] || [ "$(TZ=Europe/Istanbul date +%u)" = "1" ]; then
+            python3 scripts/dergi_durum.py --dizin
+          else
+            python3 scripts/dergi_durum.py
+          fi
+      - name: Sonuçları kaydet
+        if: always()
+        run: |
+          git config user.name "dergi-durum"
+          git config user.email "dinfelsefesi@gmail.com"
+          git add data/dergiler/durum.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Dergi durumu ($(TZ=Europe/Istanbul date +%Y-%m-%d))"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done

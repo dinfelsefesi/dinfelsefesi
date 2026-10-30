@@ -1,0 +1,1524 @@
+# Dergiler sayfasının kalıcı bilgileri (dinfelsefesi.com.tr/dergiler/)
+#
+# İlk sürüm Abdullah Akgül'ün DERGİLER.xlsx listesinden ve 30.10.2026 taramasından üretildi.
+# Alanlar:
+#   kod            DergiPark adresindeki kısa ad (dergipark.org.tr/tr/pub/KOD)
+#   dizin          TR Dizin, DOAJ, ESCI, Scopus. null: bilinmiyor. Gece taraması (scripts/dergi_durum.py)
+#                  DergiPark'taki Dizinler sayfasını okur ve bu değerlerin yerine onu kullanır;
+#                  dizin_elle: true olan dergilerde buradaki değerler geçerlidir.
+#   yayin_modeli   Taramada okunamazsa bu değer gösterilir.
+#   kabul_donemi   Elle tutulur. Dergiler bunu serbest metinle yazdığı için tarama değiştirmez.
+#   onceki_kodlar  Adı değişen derginin eski DergiPark kodları; eski makaleleri bu dergiye sayılır.
+#   dergipark_disi DergiPark'tan ayrılmış dergi; gece taraması bu dergiye bakmaz.
+# Makale sayıları burada tutulmaz, derlemede data/dergipark/din_felsefesi.jsonl dosyasından hesaplanır.
+- kod: cuid
+  ad: Cumhuriyet İlahiyat Dergisi
+  sahip: Sivas Cumhuriyet Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/cuid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: true
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 15 Ocak ve 15 Temmuz'da açılıyor, birkaç gün içinde kapanıyor (son iki dönemde 1 gün)
+  onceki_kodlar:
+  - cuifd
+  onceki_adlar:
+  - Cumhuriyet Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: bilimname
+  ad: Bilimname
+  sahip: Erciyes Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/bilimname
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  kabul_donemi: Mayıs ve Kasım aylarında; 100 başvuruda kapanıyor (son dönemlerde 3-14 gün)
+  listeye_giris: ilk-liste
+- kod: eskiyeni
+  ad: Eskiyeni
+  sahip: Anadolu İlahiyat Akademisi
+  link: https://dergipark.org.tr/tr/pub/eskiyeni
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  kabul_donemi: Mart ve Haziran sayıları için 12 Ekim, Eylül ve Aralık sayıları için 12 Nisan; 60 başvuruda kapanıyor (genellikle aynı gün)
+  listeye_giris: ilk-liste
+- kod: felsefedunyasi
+  ad: Felsefe Dünyası
+  sahip: Türk Felsefe Derneği
+  link: https://dergipark.org.tr/tr/pub/felsefedunyasi
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Temmuz - Aralık)
+  not: açık
+  kabul_donemi: Ocak civarı ve Haziran-Temmuz; süre değişken
+  listeye_giris: ilk-liste
+- kod: udfad
+  ad: Din ve Felsefe Araştırmaları Dergisi
+  sahip: Din Felsefesi Derneği
+  link: https://dergipark.org.tr/tr/pub/udfad
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  kabul_donemi: Ocak 2026'dan beri sürekli yayın
+  listeye_giris: ilk-liste
+- kod: hid
+  ad: Hitit Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Hitit Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/hid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: true
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 5 Ocak, Aralık sayısı için 5 Temmuz'da açılıyor; kota dolunca kapanıyor
+  onceki_kodlar:
+  - hititilahiyat
+  onceki_adlar:
+  - Hitit Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: k7auifd
+  ad: Kilis 7 Aralık Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Kilis 7 Aralık Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/k7auifd
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için son 1 Nisan, Aralık sayısı için son 15 Eylül; pratikte Ocak-Şubat ve Temmuz ortası
+  listeye_giris: ilk-liste
+- kod: ksuifd
+  ad: Kahramanmaraş Sütçü İmam Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Kahramanmaraş Sütçü İmam Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/ksuifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 1 Ocak - 1 Nisan ve 1 Temmuz - 1 Ekim; erken kapanabilir
+  listeye_giris: ilk-liste
+- kod: takrir
+  ad: Takrir - Muş Alparslan Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Muş Alparslan Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/takrir
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 31 Ekim (erken kapanabilir)
+  onceki_kodlar:
+  - dinbil
+  onceki_adlar:
+  - Din ve Bilim - Muş Alparslan Üniversitesi İslami İlimler Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: daad
+  ad: Dinbilimleri Akademik Araştırma Dergisi
+  sahip: Yavuz ÜNAL
+  link: https://dergipark.org.tr/tr/pub/daad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  kabul_donemi: Mart sayısı için 1-31 Aralık; Haziran için 1-31 Mart; Eylül için 1-30 Haziran; Aralık için 1-30 Eylül
+  listeye_giris: tarama
+- kod: kaderdergi
+  ad: Kader
+  sahip: Mehmet BULĞEN
+  link: https://dergipark.org.tr/tr/pub/kaderdergi
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Şubat ve Ağustos civarında açılıyor
+  onceki_kodlar:
+  - kader
+  onceki_adlar:
+  - KADER Kelam Araştırmaları Dergisi
+  listeye_giris: tarama
+- kod: tasavvur
+  ad: Tasavvur / Tekirdağ İlahiyat Dergisi
+  sahip: Tekirdağ Namık Kemal Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/tasavvur
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1-28 Şubat; Aralık sayısı için 1-31 Ağustos
+  listeye_giris: tarama
+- kod: ilted
+  ad: İlahiyat Tetkikleri Dergisi
+  sahip: Atatürk Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/ilted
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ağustos - Aralık)
+  not: sürekli açık
+  listeye_giris: ilk-liste
+- kod: sirnakifd
+  ad: Şırnak Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Şırnak Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/sirnakifd
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Mart; Aralık sayısı için 1 Temmuz - 1 Eylül (son dönemlerde 1-4 gün)
+  listeye_giris: ilk-liste
+- kod: auifd
+  ad: Ankara Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Ankara Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/auifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  kabul_donemi: Nisan ve Haziran ortasında birkaç gün ile birkaç hafta
+  listeye_giris: ilk-liste
+- kod: marifetname
+  ad: Marifetname
+  sahip: Siirt Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/marifetname
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 15 Mayıs; Aralık sayısı için 1 Temmuz - 15 Kasım; sayı başına 20 makale (pratikte birkaç gün)
+  onceki_kodlar:
+  - siirtilahiyat
+  onceki_adlar:
+  - Siirt Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: amailad
+  ad: Amasya İlahiyat Dergisi
+  sahip: Amasya Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/amailad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 15 Ocak - 15 Nisan; Aralık sayısı için 15 Temmuz - 15 Ekim (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: dergiabant
+  ad: Dergiabant
+  sahip: Bolu Abant İzzet Baysal Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/dergiabant
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  kabul_donemi: Mayıs sayısı için 1 Aralık - 1 Ocak; Kasım sayısı için 1 Haziran - 1 Temmuz (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: flsf
+  ad: FLSF Felsefe ve Sosyal Bilimler Dergisi
+  sahip: Hamdi Bravo
+  link: https://dergipark.org.tr/tr/pub/flsf
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Aralık)
+  listeye_giris: ilk-liste
+- kod: kalemname
+  ad: Kalemname
+  sahip: Kırıkkale Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/kalemname
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için Şubat başı - Nisan ortası; Aralık sayısı için Ağustos başı - Ekim ortası (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: maruifd
+  ad: Marmara Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Marmara Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/maruifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak sonu - Şubat başı ve Temmuz ortası; birkaç hafta ile iki ay
+  listeye_giris: ilk-liste
+- kod: omuifd
+  ad: Ondokuz Mayıs Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Ondokuz Mayıs Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/omuifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 15 Ocak - 15 Şubat; Aralık sayısı için 15 Temmuz - 15 Ağustos (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: paudiv
+  ad: Pamukkale Divinity
+  sahip: Pamukkale Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/paudiv
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  onceki_kodlar:
+  - pauifd
+  onceki_adlar:
+  - Pamukkale Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: rid
+  ad: Rize İlahiyat Dergisi
+  sahip: Recep Tayyip Erdoğan Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/rid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  kabul_donemi: Nisan sayısı için 1-31 Aralık; Ekim sayısı için 15 Mayıs - 15 Haziran (erken kapanabilir)
+  onceki_kodlar:
+  - rteuifd
+  onceki_adlar:
+  - Recep Tayyip Erdoğan Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: ihya
+  ad: İhya Uluslararası İslam Araştırmaları Dergisi
+  sahip: Mehmet Ayhan
+  link: https://dergipark.org.tr/tr/pub/ihya
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ocak - Temmuz)
+  kabul_donemi: Ocak sonu ve Temmuz ortası/Ağustos başı; birkaç gün ile birkaç hafta
+  listeye_giris: ilk-liste
+- kod: did
+  ad: Diyanet İlmi Dergi
+  sahip: Diyanet İşleri Başkanlığı
+  link: https://dergipark.org.tr/tr/pub/did
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  kabul_donemi: 2027 için 15-25 Ocak 2027
+  listeye_giris: tarama
+- kod: marife
+  ad: Marife Dini Araştırmalar Dergisi
+  sahip: Yediveren Kitap
+  link: https://marife.org/tr/
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  not: DergiPark'tan ayrılıp kendi sitesine taşınmış
+  kabul_donemi: Haziran sayısı için 15 Ocak - 1 Nisan; Aralık sayısı için 15 Temmuz - 15 Ekim
+  listeye_giris: tarama
+  dizin_elle: true
+  dergipark_disi: true
+- kod: da
+  ad: Dini Araştırmalar
+  sahip: Motif Yayıncılık
+  link: https://dergipark.org.tr/tr/pub/da
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  not: 3 ağustosta açılacak
+  kabul_donemi: Şubat başı ve Ağustos başı/ortası; birkaç hafta
+  listeye_giris: ilk-liste
+- kod: hij
+  ad: Harran Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Harran Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/hij
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak'tan, Aralık sayısı için 1 Temmuz'dan itibaren; yeterli makalede kapanıyor
+  listeye_giris: ilk-liste
+- kod: mutefekkir
+  ad: Mütefekkir
+  sahip: Aksaray Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/mutefekkir
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+  dergipark_disi: true
+- kod: sakaifd
+  ad: Sakarya Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Sakarya Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/sakaifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  not: sürekli açık
+  kabul_donemi: Şubat ve Ağustos aylarının 1-20'si
+  listeye_giris: ilk-liste
+- kod: tetkik
+  ad: Tetkik
+  sahip: Oku Okut Derneği
+  link: https://dergipark.org.tr/tr/pub/tetkik
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  kabul_donemi: Mart sayısı için 20 Ekim - 20 Aralık; Eylül sayısı için 20 Nisan - 20 Haziran
+  listeye_giris: ilk-liste
+- kod: ilmiyat
+  ad: Tokat İlmiyat Dergisi
+  sahip: Tokat Gaziosmanpaşa Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ilmiyat
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz ortasında 2-6 hafta
+  onceki_kodlar:
+  - guifd
+  onceki_adlar:
+  - Gaziosmanpaşa Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: tiad
+  ad: Türkiye İlahiyat Araştırmaları Dergisi
+  sahip: Yasemin Özcan
+  link: https://dergipark.org.tr/tr/pub/tiad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  not: paralı
+  kabul_donemi: Yıl boyu açık; Aralık sonunda birkaç gün kapanıyor
+  listeye_giris: ilk-liste
+- kod: ulum
+  ad: ULUM
+  sahip: Ankara Yıldırım Beyazıt Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ulum
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Temmuz - Aralık)
+  listeye_giris: ilk-liste
+- kod: islamiilimler
+  ad: İslami İlimler Dergisi
+  sahip: Çorum Çağrı Eğitim Vakfı
+  link: https://dergipark.org.tr/tr/pub/islamiilimler
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Kasım)
+  kabul_donemi: Mart sayısı için 1 Aralık - 15 Ocak; Kasım sayısı için 1 Nisan - 15 Eylül (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: beuifd
+  ad: BEÜ İlahiyat Fakültesi Dergisi
+  sahip: Zonguldak Bülent Ecevit Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/beuifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 15 Şubat; Aralık sayısı için 15 Ağustos
+  listeye_giris: tarama
+- kod: tabula
+  ad: 'Tabula Rasa: Felsefe ve Teoloji'
+  sahip: Mevlüt ALBAYRAK
+  link: https://dergipark.org.tr/tr/pub/tabula
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  not: Yalnızca Philosopher's Index beyan ediyor
+  listeye_giris: tarama
+- kod: uskudarsbd
+  ad: Üsküdar Üniversitesi Sosyal Bilimler Dergisi
+  sahip: Uskudar University
+  link: https://dergipark.org.tr/tr/pub/uskudarsbd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  kabul_donemi: Genelde Ocak ve Temmuz başında açılıyor
+  listeye_giris: tarama
+- kod: akif
+  ad: Akif
+  sahip: Necmettin Erbakan Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/neuifd
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 15 Ocak - 15 Nisan; Aralık sayısı için 15 Temmuz - 15 Ekim (erken kapanabilir)
+  onceki_kodlar:
+  - neuifd
+  onceki_adlar:
+  - Necmettin Erbakan Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: uluid
+  ad: Bursa Uludağ Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Bursa Uludağ Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/uluid
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Mart; Aralık sayısı için 1 Temmuz - 1 Eylül
+  onceki_kodlar:
+  - uluifd
+  onceki_adlar:
+  - Uludağ Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: darulfunun
+  ad: Darulfünun İlahiyat Dergisi
+  sahip: İstanbul Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/darulfunun
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Nisan - Ağustos - Aralık)
+  not: sürekli açık
+  listeye_giris: ilk-liste
+- kod: esoguifd
+  ad: Eskişehir Osmangazi Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Eskişehir Osmangazi Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/esoguifd
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  kabul_donemi: Mart sayısı için 1 Ekim - 1 Kasım; Eylül sayısı için 1 Nisan - 1 Mayıs (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: iufad
+  ad: Felsefe Arkivi
+  sahip: İstanbul Üniversitesi Edebiyat Fakültesi Felsefe Bölümü
+  link: https://dergipark.org.tr/tr/pub/iufad
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: firatilahiyat
+  ad: Fırat Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Fırat Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/firatilahiyat
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında birkaç gün ile iki hafta
+  listeye_giris: ilk-liste
+- kod: is
+  ad: Ilahiyat Studies
+  sahip: Bursa İlahiyat Vakfı
+  link: https://dergipark.org.tr/tr/pub/is
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: true
+    scopus: true
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Genelde Ocak/Şubat ve Temmuz başında açılıyor
+  listeye_giris: ilk-liste
+- kod: kiid
+  ad: Kocatepe İslami İlimler Dergisi
+  sahip: Afyon Kocatepe Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/kiid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Şubat; Aralık sayısı için 1 Temmuz - 1 Ağustos (erken kapanabilir)
+  onceki_kodlar:
+  - akid
+  onceki_adlar:
+  - Afyon Kocatepe Üniversitesi İslami İlimler Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: odusobiad
+  ad: Sosyal Bilimler Araştırmaları Dergisi
+  sahip: Ordu Üniversitesi Sosyal Bilimler Enstitüsü
+  link: https://dergipark.org.tr/tr/pub/odusobiad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  kabul_donemi: Çoğunlukla her ayın son haftası açılıyor
+  listeye_giris: ilk-liste
+- kod: tid
+  ad: Trabzon İlahiyat Dergisi
+  sahip: Trabzon Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/tid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  not: 1 ağustosta açılıyor
+  kabul_donemi: Haziran sayısı için 1-28 Şubat; Aralık sayısı için 1-31 Ağustos
+  listeye_giris: ilk-liste
+- kod: cuilah
+  ad: Çukurova Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Çukurova Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/cuilah
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Şubat ve Ağustos başında birkaç gün
+  listeye_giris: ilk-liste
+- kod: ilak
+  ad: İlahiyat Akademi
+  sahip: Gaziantep Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/ilak
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 15 Şubat - 30 Mart ve 15 Ağustos - 30 Eylül (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: artukluakademi
+  ad: Artuklu Akademi
+  sahip: Mardin Artuklu Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/artukluakademi
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  listeye_giris: tarama
+- kod: jss
+  ad: Gaziantep Üniversitesi Sosyal Bilimler Dergisi
+  sahip: Gaziantep Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/jss
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ocak - Nisan - Temmuz - Ekim)
+  listeye_giris: tarama
+- kod: gifad
+  ad: Gümüşhane Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Gümüşhane Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/gifad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ocak - Temmuz)
+  listeye_giris: tarama
+- kod: sefad
+  ad: Selçuk Üniversitesi Edebiyat Fakültesi Dergisi
+  sahip: Selcuk University
+  link: https://dergipark.org.tr/tr/pub/sefad
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: tarr
+  ad: Turkish Academic Research Review
+  sahip: Mehmet ŞAHİN
+  link: https://dergipark.org.tr/tr/pub/tarr
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  kabul_donemi: Mart sayısı için 1 Kasım - 31 Aralık; Haziran için 1 Şubat - 31 Mart; Eylül için 1 Mayıs - 30 Haziran; Aralık için 1 Ağustos - 30 Eylül
+  listeye_giris: tarama
+- kod: ydoguilaf
+  ad: Yakın Doğu Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Yakın Doğu Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ydoguilaf
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında yaklaşık iki hafta
+  listeye_giris: tarama
+- kod: adid
+  ad: Adıyaman İlahiyat Dergisi
+  sahip: Adıyaman Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/adid
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz ortasında bir-iki hafta
+  onceki_kodlar:
+  - iiad
+  onceki_adlar:
+  - İslami İlimler Araştırmaları Dergisi
+  listeye_giris: ilk-liste
+- kod: baid
+  ad: Balıkesir İlahiyat Dergisi
+  sahip: Balıkesir Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/baid
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Şubat ve Ağustos başında açılıp yaklaşık iki ay açık kalıyor
+  listeye_giris: ilk-liste
+- kod: buifd
+  ad: Bingöl Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Bingöl Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/buifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 10 Ocak - 10 Mart; Aralık sayısı için 20 Temmuz - 10 Ekim (uygulamada birkaç gün içinde kapanıyor)
+  listeye_giris: ilk-liste
+- kod: bozifder
+  ad: Bozok Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Yozgat Bozok Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/bozifder
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 15 Şubat ve 15 Ağustos civarında birkaç gün
+  listeye_giris: ilk-liste
+- kod: dicd
+  ad: Dicle İlahiyat Dergisi
+  sahip: Dicle Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/dicd
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 1 Ocak - Nisan başı ve 1 Temmuz - Ekim başı
+  listeye_giris: ilk-liste
+- kod: deuifd
+  ad: Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Dokuz Eylül Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/deuifd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 1 Ocak - 15 Şubat ve 1 Temmuz - 15 Ağustos (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: duid
+  ad: Düzce İlahiyat Dergisi
+  sahip: Düzce Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/duid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında 2-4 hafta
+  onceki_kodlar:
+  - duifad
+  onceki_adlar:
+  - Düzce Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: kilikya
+  ad: Kilikya Felsefe Dergisi
+  sahip: Mersin Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/kilikya
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  kabul_donemi: Nisan sayısı için 1 Şubat'a kadar; Ekim sayısı için 1 Haziran'a kadar
+  listeye_giris: ilk-liste
+- kod: sduifd
+  ad: Makale
+  sahip: Süleyman Demirel Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/sduifd
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: mesned
+  ad: Mesned İlahiyat Araştırmaları Dergisi
+  sahip: İnönü Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/mesned
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  kabul_donemi: Sürekli yayına geçti, dönem belirtilmemiş
+  onceki_kodlar:
+  - ifd
+  onceki_adlar:
+  - İnönü Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: yaduitmed
+  ad: Yakın Doğu Üniversitesi İslam Tetkikleri Merkezi Dergisi
+  sahip: Yakın Doğu Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/yaduitmed
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ortası - Şubat/Mart ve Temmuz ortası - Ağustos/Eylül
+  listeye_giris: ilk-liste
+- kod: imad
+  ad: İslam Medeniyeti Araştırmları Dergisi
+  sahip: Kütahya Dumlupınar Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/imad
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  kabul_donemi: Sürekli yayın; her zaman gönderilebilir
+  listeye_giris: ilk-liste
+- kod: iuislamtd
+  ad: İslam Tetkikleri Dergisi
+  sahip: İstabul Üniversitesi İslam Tetkikleri Enstitüsü
+  link: https://dergipark.org.tr/tr/pub/iuislamtd
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  kabul_donemi: Mart sayısı için 15 Ekim - 30 Kasım; Eylül sayısı için 15 Nisan - 30 Mayıs (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: itkan
+  ad: İtkan Akademik Araştırmalar Dergisi
+  sahip: Kahramanmaraş İstiklal Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/itkan
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 1 Ocak - 1 Nisan ve 1 Temmuz - Ekim/Kasım başı
+  listeye_giris: ilk-liste
+- kod: atebe
+  ad: ATEBE
+  sahip: Ankara Sosyal Bilimler Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/atebe
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 30 Ekim
+  listeye_giris: tarama
+- kod: atdd
+  ad: Akademik Tarih ve Düşünce Dergisi
+  sahip: Hakan YILMAZ
+  link: https://dergipark.org.tr/tr/pub/atdd
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  listeye_giris: tarama
+- kod: akademikus
+  ad: Akademik-Us
+  sahip: Artvin Çoruh Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/akademikus
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  kabul_donemi: Mayıs sayısı için son başvuru 15 Nisan; Kasım sayısı için son başvuru 15 Ekim
+  listeye_giris: tarama
+- kod: ausbd
+  ad: Anadolu Üniversitesi Sosyal Bilimler Dergisi
+  sahip: Anadolu Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ausbd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: agiid
+  ad: Ağrı İslami İlimler Dergisi
+  sahip: Ağrı İbrahim Çeçen University
+  link: https://dergipark.org.tr/tr/pub/agiid
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: bider
+  ad: Bitlis İslamiyat Dergisi
+  sahip: Bitlis Eren Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/bider
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 31 Ekim
+  listeye_giris: tarama
+- kod: burdurilahiyat
+  ad: Burdur İlahiyat Dergisi
+  sahip: Burdur Mehmet Akif Ersoy Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/burdurilahiyat
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 10 Ocak - 30 Nisan; Aralık sayısı için 10 Temmuz - 31 Ekim
+  listeye_giris: tarama
+- kod: disar
+  ad: Din Sosyolojisi Araştırmaları
+  sahip: null
+  link: https://dergipark.org.tr/tr/pub/disar
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  kabul_donemi: Nisan sayısı için 20 Kasım - 20 Mart; Ekim sayısı için 20 Mayıs - 20 Eylül
+  listeye_giris: tarama
+- kod: dinveinsan
+  ad: Din ve İnsan Dergisi
+  sahip: Ankara Hacı Bayram Veli Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/dinveinsan
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 15 Mayıs; Aralık sayısı için 1 Temmuz - 15 Kasım
+  listeye_giris: tarama
+- kod: deusosbil
+  ad: Dokuz Eylül Üniversitesi Sosyal Bilimler Enstitüsü Dergisi
+  sahip: Dokuz Eylül Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/deusosbil
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: sosekev
+  ad: EKEV Akademi Dergisi
+  sahip: null
+  link: https://dergipark.org.tr/tr/pub/sosekev
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: eren
+  ad: EREN
+  sahip: Bitlis Eren Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/eren
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: ogusbd
+  ad: Eskişehir Osmangazi Üniversitesi Sosyal Bilimler Dergisi
+  sahip: Eskişehir Osmangazi Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ogusbd
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Temmuz - Kasım)
+  listeye_giris: tarama
+  dizin_elle: true
+- kod: gemder
+  ad: Genç Mütefekkirler Dergisi
+  sahip: Nihat DEMİRKOL
+  link: https://dergipark.org.tr/tr/pub/gemder
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  listeye_giris: tarama
+- kod: kausbed
+  ad: Kafkas Üniversitesi Sosyal Bilimler Enstitüsü Dergisi
+  sahip: Kafkas Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/kausbed
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Şubat; Aralık sayısı için 1 Haziran - 1 Temmuz
+  listeye_giris: tarama
+- kod: kafkasilahiyat
+  ad: Kafkas Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Kafkas Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/kafkasilahiyat
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ocak - Temmuz)
+  kabul_donemi: Temmuz sayısı için 31 Mayıs'a kadar; Ocak sayısı için 31 Ekim'e kadar
+  listeye_giris: tarama
+- kod: katre
+  ad: Katre Uluslararası İnsan Araştırmaları Dergisi
+  sahip: İstanbul İlim ve Kültür Vakfı
+  link: https://dergipark.org.tr/tr/pub/katre
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: kider
+  ad: Kocaeli İlahiyat Dergisi
+  sahip: Kocaeli Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/kider
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Mayıs; Aralık sayısı için 1 Temmuz - 1 Kasım
+  listeye_giris: tarama
+- kod: cbayarsos
+  ad: Manisa Celal Bayar Üniversitesi Sosyal Bilimler Dergisi
+  sahip: Manisa Celal Bayar University
+  link: https://dergipark.org.tr/tr/pub/cbayarsos
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: mecmua
+  ad: Mecmua
+  sahip: İbrahim Halil TUĞLUK
+  link: https://dergipark.org.tr/tr/pub/mecmua
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  listeye_giris: tarama
+- kod: mid
+  ad: Mersin İlahiyat Dergisi
+  sahip: Mersin University
+  link: https://dergipark.org.tr/tr/pub/mid
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  not: Yeni dergi
+  listeye_giris: tarama
+- kod: mevzu
+  ad: Mevzu – Sosyal Bilimler Dergisi
+  sahip: Ali SEVER
+  link: https://dergipark.org.tr/tr/pub/mevzu
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: null
+  not: DergiPark üzerinden yeni başvuru kabul etmiyor; yayın modeli belirtilmemiş
+  listeye_giris: tarama
+- kod: milel
+  ad: Milel ve Nihal
+  sahip: 'Milel ve Nihal: Eğitim, Kültür ve Düşünce Platformu Derneği'
+  link: https://dergipark.org.tr/tr/pub/milel
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: nevsosbilen
+  ad: Nevşehir Hacı Bektaş Veli Üniversitesi SBE Dergisi
+  sahip: Nevsehir Haci Bektas Veli University
+  link: https://dergipark.org.tr/tr/pub/nevsosbilen
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: oad
+  ad: Ortaçağ Araştırmaları Dergisi
+  sahip: Murat SERDAR
+  link: https://dergipark.org.tr/tr/pub/oad
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında kısa süre açılıyor
+  listeye_giris: tarama
+- kod: rumeli
+  ad: Rumeli İslam Araştırmaları Dergisi
+  sahip: Trakya Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/rumeli
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  listeye_giris: tarama
+- kod: suitder
+  ad: Süleyman Demirel Üniversitesi İnsan ve Toplum Bilimleri Dergisi (SUİTDER)
+  sahip: Süleyman Demirel University
+  link: https://dergipark.org.tr/tr/pub/suitder
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: 1-31 Temmuz ve 1-31 Ocak
+  onceki_kodlar:
+  - sufesosbil
+  onceki_adlar:
+  - Süleyman Demirel Üniversitesi Fen-Edebiyat Fakültesi Sosyal Bilimler Dergisi
+  listeye_giris: tarama
+- kod: tevilat
+  ad: Tevilat
+  sahip: Selcuk University
+  link: https://dergipark.org.tr/tr/pub/tevilat
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: tarama
+- kod: tkhcbva
+  ad: Türk Kültürü ve Hacı Bektaş Veli Araştırma Dergisi
+  sahip: Ankara Hacı Bayram Veli Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/tkhcbva
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: talid
+  ad: Türkiye Araştırmaları Literatür Dergisi
+  sahip: Bilim ve Sanat Vakfı
+  link: https://dergipark.org.tr/tr/pub/talid
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Sürekli Yayın
+  listeye_giris: tarama
+- kod: vanid
+  ad: Van İlahiyat Dergisi
+  sahip: Van Yüzüncü Yıl Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/vanid
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında kısa süre açılıyor
+  listeye_giris: tarama
+- kod: asar
+  ad: ÂSÂR Akademik Dinî Araştırmalar Dergisi
+  sahip: Erzincan Binali Yıldırım Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/asar
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ekim)
+  kabul_donemi: Ekim sayısı için son gönderim 31 Ağustos
+  listeye_giris: tarama
+- kod: jiss
+  ad: Çankırı Karatekin Üniversitesi Sosyal Bilimler Enstitüsü Dergisi
+  sahip: Cankiri Karatekin University
+  link: https://dergipark.org.tr/tr/pub/jiss
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Nisan - Kasım)
+  listeye_giris: tarama
+- kod: itobiad
+  ad: İnsan ve Toplum Bilimleri Araştırmaları Dergisi
+  sahip: Mustafa Süleyman ÖZCAN
+  link: https://dergipark.org.tr/tr/pub/itobiad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Haziran - Eylül - Aralık)
+  listeye_giris: tarama
+- kod: sarkiat
+  ad: Şarkiyat
+  sahip: Şarkiyat Araştırmaları Derneği
+  link: https://dergipark.org.tr/tr/pub/sarkiat
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak ve Temmuz başında yaklaşık 10 gün
+  listeye_giris: tarama
+- kod: babertidergisi
+  ad: Baberti
+  sahip: Bayburt Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/babertidergisi
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Ocak/Şubat - Mayıs ortası ve Temmuz - 15 Kasım
+  onceki_kodlar:
+  - bayburt-ilahiyat
+  onceki_adlar:
+  - Bayburt Üniversitesi İlahiyat Fakültesi Dergisi
+  listeye_giris: ilk-liste
+- kod: bitlisilahiyatdergisi
+  ad: Bitlis İlahiyat Dergisi
+  sahip: Bitlis Eren Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/bitlisilahiyatdergisi
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 30 Nisan; Aralık sayısı için 1 Temmuz - 31 Ekim
+  listeye_giris: ilk-liste
+- kod: divan
+  ad: Dîvân
+  sahip: Bilim ve Sanat Vakfı
+  link: https://dergipark.org.tr/tr/pub/divan
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Ocak - Temmuz)
+  kabul_donemi: Şubat ve Ağustos başında açılıp 1-2 ay açık kalıyor
+  listeye_giris: ilk-liste
+- kod: gibtuislamad
+  ad: GİBTÜ İslami Araştırmalar Dergisi
+  sahip: Gaziantep İslam Bilim ve Teknoloji Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/gibtuislamad
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: kuifd
+  ad: Kastamonu Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Kastamonu Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/kuifd
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  listeye_giris: ilk-liste
+- kod: kilitbahir
+  ad: Kilitbahir
+  sahip: Çanakkale Onsekiz Mart Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/kilitbahir
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  listeye_giris: ilk-liste
+- kod: mizan
+  ad: 'Mizanü''l-Hak: İslami İlimler Dergisi'
+  sahip: İzmir Kâtip Çelebi Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/mizan
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 10 Şubat'ta, Aralık sayısı için 10 Ağustos'ta açılır; 60 başvuruya ulaşınca kapanır
+  listeye_giris: ilk-liste
+- kod: mutalaa
+  ad: Mutalaa
+  sahip: Karabük Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/mutalaa
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: nazariyat
+  ad: Nazariyat İslam Felsefe ve Bilim Tarihi Araştırmaları Dergisi
+  sahip: İstabul Medeniyet Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/nazariyat
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: true
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  listeye_giris: ilk-liste
+- kod: nisar
+  ad: Nisar
+  sahip: Niğde Ömer Halisdemir Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/nisar
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mayıs - Kasım)
+  listeye_giris: ilk-liste
+- kod: oi
+  ad: Ordu İlahiyat
+  sahip: Ordu Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/oi
+  dizin:
+    trdizin: false
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Mart - Eylül)
+  kabul_donemi: Mart sayısı için 1 Ekim - 31 Aralık; Eylül sayısı için 1 Nisan - 30 Haziran
+  listeye_giris: ilk-liste
+- kod: rusuhder
+  ad: RUSUH Uşak Üniversitesi İslami İlimler Fakültesi Dergisi
+  sahip: Uşak Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/rusuhder
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: temasa
+  ad: Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi
+  sahip: Arslan Topakkaya
+  link: https://dergipark.org.tr/tr/pub/temasa
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: umde
+  ad: Umde Dini Tetkikler Dergisi
+  sahip: Nevşehir Hacı Bektaş Veli Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/umde
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Temmuz - Aralık)
+  kabul_donemi: Temmuz sayısı için 1-31 Mart; Aralık sayısı için 1-30 Eylül (kontenjan dolarsa erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: usul
+  ad: Usul İslam Araştırmaları
+  sahip: İstanbul Sabahattin Zaim Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/usul
+  dizin:
+    trdizin: true
+    doaj: true
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  kabul_donemi: Haziran sayısı için 1 Ocak - 1 Mayıs; Aralık sayısı için 1 Temmuz - 1 Kasım (erken kapanabilir)
+  listeye_giris: ilk-liste
+- kod: ilahiyatname
+  ad: İlahiyatname
+  sahip: Bartın Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/ilahiyatname
+  dizin:
+    trdizin: false
+    doaj: false
+    esci: false
+    scopus: false
+  yayin_modeli: Süreli Yayın (Haziran - Aralık)
+  listeye_giris: ilk-liste
+- kod: isad
+  ad: İslam Araştırmaları Dergisi
+  sahip: Türkiye Diyanet Vakfı İslam Araştırmaları Merkezi
+  link: https://dergipark.org.tr/tr/pub/isad
+  dizin:
+    trdizin: true
+    doaj: false
+    esci: false
+    scopus: true
+  yayin_modeli: Süreli Yayın (Ocak - Temmuz)
+  listeye_giris: ilk-liste

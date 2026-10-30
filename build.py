@@ -768,7 +768,7 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
 """
 
 MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
-        ("eserler", "Eserler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
+        ("eserler", "Eserler"), ("dergiler", "Dergiler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
 
 
 GORSELLER = []   # (dosya yolu, üst yazı, başlık, alt yazı): derleme sonunda üretilir
@@ -2894,6 +2894,298 @@ def render_alt_ag(items, tur_, k) -> str:
                 canonical=ag_adresi(tur_, k), dizinleme=AKADEMI_ACIK or tur_ != "kisi-tr")
 
 
+# ---------------------------------------------------------------- dergiler
+
+DERGI_DIZIN = ROOT / "data" / "dergiler"
+DIZIN_ADLARI = [("trdizin", "TR Dizin"), ("doaj", "DOAJ"), ("esci", "ESCI"), ("scopus", "Scopus")]
+AY_KISA = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"]
+
+DERGI_CSS = """
+/* Dergiler sayfası */
+.d-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;margin:0 0 .4rem}
+.d-arac .tur-secici,.d-arac .k-ara{margin:0}
+.d-arac .tur-secici button{font-family:var(--sans);font-size:.84rem;padding:.25rem .75rem;border-radius:6px}
+.d-arac select{font:inherit;font-family:var(--sans);font-size:.88rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:.3rem .6rem}
+.d-arac label.d-sec{display:flex;align-items:center;gap:.5rem;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
+ul.d-liste{list-style:none;margin:0;padding:0;max-width:60rem}
+ul.d-liste>li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem;gap:.35rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--rule)}
+ul.d-liste>li[hidden]{display:none}
+.d-ad{font-family:var(--display);font-size:1.22rem;font-weight:500;line-height:1.25;color:var(--ink);text-decoration:none}
+.d-ad:hover{color:var(--accent)}
+.d-ad-satir{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .1rem}
+.d-ad-satir .rozet{margin-left:.3rem}
+.rozet.d-var{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent}
+.rozet.d-bilinmez{border-style:dashed}
+.d-sahip{font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);margin:.1rem 0 0}
+.d-bilgi{display:grid;grid-template-columns:6.2rem minmax(0,1fr);gap:.3rem 1rem;margin:.55rem 0 0;font-family:var(--sans);font-size:.86rem;align-items:baseline}
+.d-bilgi dt{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.d-bilgi dd{margin:0;min-width:0;color:var(--ink)}
+.d-aylar{display:inline-grid;grid-template-columns:repeat(12,2.15rem);gap:2px;vertical-align:middle;margin-right:.6rem}
+.d-aylar span{font-size:.62rem;text-align:center;padding:.08rem 0;background:var(--panel);color:var(--ink-soft);border-radius:2px}
+.d-aylar span.on{background:var(--accent);color:#fff;font-weight:600}
+.d-aylar.surekli span{background:var(--accent-soft);color:var(--accent-ink)}
+.d-durum{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.03em;padding:.02rem .5rem;border-radius:999px;margin-right:.45rem}
+.d-durum.acik{background:#dfeee4;color:#2f6b4a}
+.d-durum.kapali{background:var(--gold-soft);color:var(--gold)}
+.d-not{color:var(--ink-soft);font-style:italic}
+.d-sayi{text-align:right;font-family:var(--sans)}
+.d-sayi b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;line-height:1;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.d-sayi small{display:block;font-size:.72rem;line-height:1.3;color:var(--ink-soft);margin-top:.2rem}
+.d-sayi.sifir b{color:var(--rule)}
+details.d-makaleler{grid-column:1/-1;font-family:var(--sans);font-size:.86rem}
+details.d-makaleler summary{cursor:pointer;color:var(--accent-ink);width:max-content;max-width:100%}
+details.d-makaleler ol{list-style:none;margin:.4rem 0 0;padding:0 0 0 .9rem;border-left:2px solid var(--gold-soft);display:grid;gap:.35rem}
+details.d-makaleler li{font-family:var(--serif);font-size:.92rem;line-height:1.4}
+details.d-makaleler li .yil{font-family:var(--sans);font-size:.78rem;color:var(--gold);margin-right:.4rem;font-variant-numeric:tabular-nums}
+details.d-makaleler li a{color:var(--ink);text-decoration:none}
+details.d-makaleler li a:hover{color:var(--accent);text-decoration:underline}
+details.d-makaleler li .yazar{display:block;font-size:.82rem;font-style:italic;color:var(--ink-soft)}
+.d-konular{margin:.35rem 0 0;font-style:italic;color:var(--ink-soft)}
+.d-sirala{flex-wrap:wrap;gap:.2rem 1rem}
+.d-sirala button{white-space:nowrap}
+@media (max-width:640px){
+  ul.d-liste>li{grid-template-columns:minmax(0,1fr)}
+  .d-sayi{text-align:left;display:flex;align-items:baseline;gap:.6rem;order:-1}
+  .d-sayi b{font-size:1.5rem}
+  .d-sayi small{margin:0}
+  .d-bilgi{grid-template-columns:minmax(0,1fr)}
+  .d-bilgi dt{margin-top:.25rem}
+  .d-aylar{grid-template-columns:repeat(12,minmax(0,1fr));display:grid;margin:0 0 .2rem}
+}
+"""
+CSS += DERGI_CSS
+
+
+def tr_gun(s: str) -> str:
+    """'01.02.2027' biçimindeki tarihi '1 Şubat 2027' yapar."""
+    m = re.fullmatch(r"(\d\d)\.(\d\d)\.(\d{4})", s or "")
+    return f"{int(m.group(1))} {AYLAR[int(m.group(2)) - 1]} {m.group(3)}" if m else (s or "")
+
+
+def yayin_aylari(model: str) -> tuple[list, bool]:
+    surekli = "sürekli" in tr_kucuk(model or "")
+    m = re.search(r"\(([^)]*)\)", model or "")
+    aylar = []
+    if m:
+        for p in m.group(1).split("-"):
+            p = tr_kucuk(p.strip())
+            for i, a in enumerate(AYLAR):
+                if tr_kucuk(a) == p:
+                    aylar.append(i)
+    return aylar, surekli
+
+
+def dergi_verisi() -> tuple[list, dict]:
+    liste_d = DERGI_DIZIN / "dergiler.yaml"
+    if not liste_d.exists():
+        return [], {}
+    dergiler = yaml.safe_load(liste_d.read_text(encoding="utf-8")) or []
+    durum_d = DERGI_DIZIN / "durum.json"
+    durum = json.loads(durum_d.read_text(encoding="utf-8")) if durum_d.exists() else {}
+    # DergiPark makaleleri: derginin kodu makale adresinden okunur, eski kodlar güncel dergiye bağlanır
+    kod_eslesme = {}
+    for d in dergiler:
+        kod_eslesme[d["kod"]] = d["kod"]
+        for o in d.get("onceki_kodlar") or []:
+            kod_eslesme[o] = d["kod"]
+    id_kod = {}
+    jl = DP_DIZIN / "din_felsefesi.jsonl"
+    if jl.exists():
+        for satir_ in jl.read_text(encoding="utf-8").splitlines():
+            try:
+                r = json.loads(satir_)
+            except ValueError:
+                continue
+            for b in r.get("baglanti") or []:
+                m = re.search(r"dergipark\.org\.tr/\w+/pub/([^/]+)/", b)
+                if m:
+                    id_kod[r["id"]] = m.group(1)
+                    break
+    makale = {}
+    for m in dp_veri():
+        if "kaynak" in m or m.get("tur"):
+            continue  # yalnızca anahtar kelimesinde din felsefesi geçen araştırma makaleleri
+        kod = kod_eslesme.get(id_kod.get(m["id"], ""))
+        if kod:
+            makale.setdefault(kod, []).append(m)
+    return [d | {"_makaleler": makale.get(d["kod"], []), "_durum": (durum.get("dergiler") or {}).get(d["kod"], {})}
+            for d in dergiler], durum
+
+
+def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
+    du = d["_durum"]
+    # Derginin güncel adı DergiPark sayfasından okunur
+    if du.get("baslik") and not du.get("yonlendi"):
+        d = d | {"ad": du["baslik"], "onceki_adlar": [x for x in d.get("onceki_adlar") or []
+                                                      if tr_kucuk(x) != tr_kucuk(du["baslik"])]}
+    dizin = dict(d.get("dizin") or {})
+    if du.get("dizin") and not d.get("dizin_elle"):
+        dizin = {k: du["dizin"].get(k, False) for k, _ in DIZIN_ADLARI}
+    rozet_ = "".join(
+        f'<span class="rozet{" d-var" if dizin.get(k) else " d-bilinmez" if dizin.get(k) is None else ""}"'
+        f'{" title=\"Bilgi alınamadı\"" if dizin.get(k) is None else ""}>{a}{" ?" if dizin.get(k) is None else ""}</span>'
+        for k, a in DIZIN_ADLARI if dizin.get(k) is not False)
+    model = du.get("yayin_modeli") or d.get("yayin_modeli") or ""
+    aylar, surekli = yayin_aylari(model)
+    if surekli:
+        serit = '<span class="d-aylar surekli" aria-hidden="true">' + "".join(f"<span>{a}</span>" for a in AY_KISA) + "</span>"
+    elif aylar:
+        serit = '<span class="d-aylar" aria-hidden="true">' + "".join(
+            f'<span{" class=\"on\"" if i in aylar else ""}>{a}</span>' for i, a in enumerate(AY_KISA)) + "</span>"
+    else:
+        serit = ""
+    bilgi = []
+    if model:
+        bilgi.append(("Yayın", f'{serit}<span>{e(model)}</span>'))
+    gd = du.get("gonderim") if not d.get("dergipark_disi") else ""
+    if gd == "acik":
+        bilgi.append(("Gönderim", '<span class="d-durum acik">Açık</span>'
+                      + (f'{e(tr_gun(du["gonderim_tarih"]))} tarihinde açıldı' if du.get("gonderim_tarih") else "")))
+    elif gd == "kapali":
+        ek = (f'{e(tr_gun(du["acilis"]))} tarihinde açılacak' if du.get("acilis")
+              else f'{e(tr_gun(du["gonderim_tarih"]))} tarihinde kapandı' if du.get("gonderim_tarih") else "")
+        bilgi.append(("Gönderim", f'<span class="d-durum kapali">Kapalı</span>{ek}'))
+    if d.get("kabul_donemi"):
+        bilgi.append(("Kabul", e(d["kabul_donemi"])))
+    s = du.get("sureler") or {}
+    if s.get("degerlendirme") or s.get("yayim"):
+        parca = [f"değerlendirme {s['degerlendirme']} gün" if s.get("degerlendirme") else "",
+                 f"kabulden yayıma {s['yayim']} gün" if s.get("yayim") else ""]
+        bilgi.append(("Süre", "Ortalama " + ", ".join(p for p in parca if p)))
+    if d.get("ucret"):
+        bilgi.append(("Ücret", e(d["ucret"])))
+    if d.get("dergipark_disi"):
+        bilgi.append(("Not", '<span class="d-not">Dergi DergiPark\'tan ayrılıp kendi sitesine taşınmıştır.</span>'))
+    if d.get("onceki_adlar"):
+        bilgi.append(("Önceki adı", '<span class="d-not">' + e("; ".join(d["onceki_adlar"])) + "</span>"))
+    mk = sorted(d["_makaleler"], key=lambda m: (m["tarih"], m["id"]), reverse=True)
+    son5 = sum(1 for m in mk if m["yil"].isdigit() and int(m["yil"]) >= esik)
+    konu_say = {}
+    for m in mk:
+        for k in m.get("konular") or []:
+            if k in ana_ad:
+                konu_say[k] = konu_say.get(k, 0) + 1
+    konular = sorted(konu_say.items(), key=lambda x: (-x[1], tr_anahtar(ana_ad[x[0]])))[:4]
+    makaleler = ""
+    if mk:
+        satirlar = "".join(
+            f'<li><span class="yil">{e(m["yil"])}</span><a href="{e(m["baglanti"])}" rel="noopener">{e(m["baslik"])}</a>'
+            f'<span class="yazar">{e(", ".join(m["yazarlar"]))}</span></li>' for m in mk)
+        konu_html = ('<p class="d-konular">En çok: ' + ", ".join(
+            f'<a href="{SITE_URL}/basliklar/{k}/">{e(ana_ad[k])}</a> ({n})' for k, n in konular) + "</p>") if konular else ""
+        makaleler = (f'<details class="d-makaleler"><summary>Din felsefesi makaleleri ({len(mk)})</summary>'
+                     f'{konu_html}<ol>{satirlar}</ol></details>')
+    ara = tr_kucuk(" ".join([d["ad"], d.get("sahip") or "", d["kod"], " ".join(d.get("onceki_adlar") or [])]))
+    ad_html = (f'<a class="d-ad" href="{e(d["link"])}" rel="noopener">{e(d["ad"])}</a>' if d.get("link") else f'<span class="d-ad">{e(d["ad"])}</span>')
+    data = (f'data-ara="{e(ara)}" data-ad="{e(d["ad"])}" data-df="{len(mk)}" data-son5="{son5}" '
+            f'data-dizin=" {" ".join(k for k, _ in DIZIN_ADLARI if dizin.get(k))} " data-gonderim="{gd or ""}" '
+            f'data-aylar=" {" ".join(str(i) for i in aylar)}{" surekli" if surekli else ""} " '
+            f'data-sure="{s.get("degerlendirme") or ""}"')
+    return (f'<li {data}><div><div class="d-ad-satir">{ad_html}{rozet_}</div>'
+            + (f'<p class="d-sahip">{e(d["sahip"])}</p>' if d.get("sahip") else "")
+            + ('<dl class="d-bilgi">' + "".join(f"<dt>{a}</dt><dd>{v}</dd>" for a, v in bilgi) + "</dl>" if bilgi else "")
+            + f'</div><div class="d-sayi{" sifir" if not mk else ""}"><b>{len(mk)}</b><small>din felsefesi makalesi</small>'
+            + (f"<small>son beş yılda {son5}</small>" if mk else "") + f"</div>{makaleler}</li>")
+
+
+def render_dergiler() -> str:
+    dergiler, durum = dergi_verisi()
+    esik = YIL - 4
+    ana_ad = {k: FIS[("baslik", k)]["ad"] for k in ana_basliklar()}
+    satirlar = "".join(dergi_satiri(d, ana_ad, esik) for d in
+                       sorted(dergiler, key=lambda d: (-len(d["_makaleler"]), tr_anahtar(d["ad"]))))
+    toplam = sum(len(d["_makaleler"]) for d in dergiler)
+    tarama = (durum.get("tarama") or "")[:10]
+    dizinler = "".join(f'<button type="button" data-dizin="{k}" aria-pressed="false">{a}</button>' for k, a in DIZIN_ADLARI)
+    aylar = '<option value="">Fark etmez</option>' + "".join(
+        f'<option value="{i}">{a} sayısı olanlar</option>' for i, a in enumerate(AYLAR)) + '<option value="surekli">Sürekli yayın</option>'
+    siralama = ('<div class="eser-sirala d-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
+                + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="{"descending" if k == "df" else "none"}">{a}'
+                          f'<span class="ok" aria-hidden="true"></span></button>'
+                          for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
+                + "</div>")
+    body = (f'<p class="ust-etiket">Dergiler</p><h1>Din felsefesi dergileri</h1>'
+            f'<p class="giris">Türkiye\'de din felsefesi makalesi yayımlayan dergiler. Her derginin dizinleri, yayın ayları, '
+            f'makale gönderim durumu ve DergiPark\'ta anahtar kelimelerinde din felsefesi geçen makaleleri bir arada gösterilir.</p>'
+            f'<p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
+            f'{" (son okuma " + tr_date(tarama) + ")" if tarama else ""}. Dizin bilgisi derginin kendi beyanıdır. '
+            f'Kabul dönemleri dergilerin duyurularından elle derlenmiştir; başvurudan önce derginin sayfasına bakınız. '
+            f'Makale sayıları {len(dergiler)} dergide toplam {toplam} araştırma makalesini kapsar; kitap tanıtımı ve çeviriler sayılmaz. '
+            f'Düzeltme ve dergi önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            f'<p class="secim-etiket">Ara ve süz</p>'
+            f'<div class="d-arac"><label class="k-ara"><span>Ara</span><input type="search" id="dergi-ara" placeholder="Dergi, kurum ya da eski ad" autocomplete="off"></label>'
+            f'<div class="tur-secici d-dizin-sec" role="group" aria-label="Dizin">{dizinler}</div></div>'
+            f'<div class="d-arac"><div class="tur-secici d-gonderim-sec" role="group" aria-label="Gönderim">'
+            f'<button type="button" data-gonderim="" aria-pressed="true">Bütün dergiler</button>'
+            f'<button type="button" data-gonderim="acik" aria-pressed="false">Gönderime açık</button>'
+            f'<button type="button" data-gonderim="kapali" aria-pressed="false">Gönderime kapalı</button></div>'
+            f'<label class="d-sec">Yayın ayı <select id="dergi-ay">{aylar}</select></label></div>'
+            f'<div class="eser-ust" style="max-width:60rem"><p class="eser-sayi"><span id="dergi-say"></span></p>{siralama}</div>'
+            f'<ul class="d-liste">{satirlar}</ul><p class="giris d-bos" hidden>Seçime uyan dergi bulunamadı. Bir süzgeci kaldırmayı deneyin.</p>')
+    gorsel = paylasim_gorseli("dergiler", "dinfelsefesi.com.tr", "Din felsefesi dergileri",
+                              "Dizinler, yayın ayları, gönderim durumu ve makaleler")
+    return page(f"Dergiler · {SITE_NAME}", body + DERGI_JS, "dergiler", canonical=f"{SITE_URL}/dergiler/",
+                desc="Türkiye'de din felsefesi makalesi yayımlayan dergiler: dizinler, yayın ayları, gönderim durumu ve yayımlanan makaleler.",
+                gorsel=gorsel)
+
+
+DERGI_JS = """<script>
+(function(){
+  var ul=document.querySelector('ul.d-liste'), lis=[].slice.call(ul.children);
+  var g=document.getElementById('dergi-ara'), ay=document.getElementById('dergi-ay');
+  var db=document.querySelectorAll('.d-dizin-sec button'), gb=document.querySelectorAll('.d-gonderim-sec button');
+  var sb=document.querySelectorAll('.eser-sirala button');
+  var dizin=[], gonderim='', alan='df', yon=-1;
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
+  function uygula(yaz){
+    var q=kucuk(g.value.trim()).split(/\\s+/).filter(Boolean), a=ay.value, n=0;
+    lis.forEach(function(li){
+      var v=q.every(function(p){return li.dataset.ara.indexOf(p)>-1;})
+        && dizin.every(function(k){return li.dataset.dizin.indexOf(' '+k+' ')>-1;})
+        && (!gonderim||li.dataset.gonderim===gonderim)
+        && (!a||li.dataset.aylar.indexOf(' '+a+' ')>-1);
+      li.hidden=!v; if(v)n++;
+    });
+    db.forEach(function(b){b.setAttribute('aria-pressed', dizin.indexOf(b.dataset.dizin)>-1?'true':'false');});
+    gb.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.gonderim===gonderim?'true':'false');});
+    document.getElementById('dergi-say').textContent=n+' dergi';
+    document.querySelector('.d-bos').hidden=n>0;
+    if(yaz){
+      var p=new URLSearchParams(); if(g.value.trim())p.set('ara',g.value.trim()); if(dizin.length)p.set('dizin',dizin.join(','));
+      if(gonderim)p.set('gonderim',gonderim); if(a)p.set('ay',a);
+      if(alan!=='df'||yon>0){p.set('sirala',alan); if(yon<0)p.set('yon','azalan');}
+      try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}
+    }
+  }
+  function sirala(){
+    var r=lis.slice();
+    r.sort(function(x,y){
+      if(alan==='ad') return kar(x.dataset.ad,y.dataset.ad)*yon;
+      var bx=x.dataset[alan]==='', by=y.dataset[alan]==='';
+      if(bx!==by) return bx?1:-1;  // bilgisi olmayanlar her iki yönde de sona
+      return ((+x.dataset[alan]||0)-(+y.dataset[alan]||0))*yon || ((+y.dataset.df)-(+x.dataset.df)) || kar(x.dataset.ad,y.dataset.ad);
+    });
+    r.forEach(function(x){ul.appendChild(x);});
+    sb.forEach(function(b){b.setAttribute('aria-sort', b.dataset.alan===alan ? (yon>0?'ascending':'descending') : 'none');});
+  }
+  db.forEach(function(b){b.addEventListener('click',function(){
+    var i=dizin.indexOf(b.dataset.dizin); if(i>-1)dizin.splice(i,1); else dizin.push(b.dataset.dizin); uygula(true);});});
+  gb.forEach(function(b){b.addEventListener('click',function(){gonderim=b.dataset.gonderim; uygula(true);});});
+  sb.forEach(function(b){b.addEventListener('click',function(){
+    if(alan===b.dataset.alan){yon=-yon;} else {alan=b.dataset.alan; yon=(alan==='ad'||alan==='sure')?1:-1;}
+    sirala(); uygula(true);
+  });});
+  g.addEventListener('input',function(){uygula(true);});
+  ay.addEventListener('change',function(){uygula(true);});
+  var p=new URLSearchParams(location.search);
+  g.value=p.get('ara')||''; dizin=(p.get('dizin')||'').split(',').filter(Boolean); gonderim=p.get('gonderim')||''; ay.value=p.get('ay')||'';
+  if(p.get('sirala')){alan=p.get('sirala'); yon=p.get('yon')==='azalan'?-1:1; sirala();}
+  uygula(false);
+})();
+</script>"""
+
+
 # ---------------------------------------------------------------- ana sayfa ve hakkında
 
 def ilk_paragraf(md: str) -> str:
@@ -3234,6 +3526,7 @@ def main() -> None:
     for t in ("terim", "kisi"):
         yaz(KLASOR[t], render_dizin(t))
     yaz("eserler", render_eserler())
+    yaz("dergiler", render_dergiler())
     for s_ in akademi_verisi():
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
     yaz("ag", render_ag(items))
