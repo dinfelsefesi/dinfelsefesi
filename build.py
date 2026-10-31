@@ -2932,6 +2932,7 @@ ul.d-liste>li[hidden]{display:none}
 .d-sayi b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;line-height:1;color:var(--accent-ink);font-variant-numeric:tabular-nums}
 .d-sayi small{display:block;font-size:.72rem;line-height:1.3;color:var(--ink-soft);margin-top:.2rem}
 .d-sayi.sifir b{color:var(--rule)}
+.d-sayi small.d-hoca{color:var(--gold);margin-top:.25rem}
 details.d-makaleler{grid-column:1/-1;font-family:var(--sans);font-size:.86rem}
 details.d-makaleler summary{cursor:pointer;color:var(--accent-ink);width:max-content;max-width:100%}
 details.d-makaleler ol{list-style:none;margin:.4rem 0 0;padding:0 0 0 .9rem;border-left:2px solid var(--gold-soft);display:grid;gap:.35rem}
@@ -2989,8 +2990,9 @@ def dergi_verisi() -> tuple[list, dict]:
         for o in d.get("onceki_kodlar") or []:
             kod_eslesme[o] = d["kod"]
     id_kod = {}
-    jl = DP_DIZIN / "din_felsefesi.jsonl"
-    if jl.exists():
+    for jl in (DP_DIZIN / "din_felsefesi.jsonl", DP_DIZIN / "akademisyen_makaleleri.jsonl"):
+        if not jl.exists():
+            continue
         for satir_ in jl.read_text(encoding="utf-8").splitlines():
             try:
                 r = json.loads(satir_)
@@ -3001,14 +3003,17 @@ def dergi_verisi() -> tuple[list, dict]:
                 if m:
                     id_kod[r["id"]] = m.group(1)
                     break
-    makale = {}
+    # İki ayrı sayım: anahtar kelimesinde din felsefesi geçen araştırma makaleleri ve Türkiye akademisindeki
+    # din felsefesi öğretim elemanlarının, konusu bir din felsefesi başlığına giren öteki DergiPark makaleleri
+    makale, hoca = {}, {}
     for m in dp_veri():
-        if "kaynak" in m or m.get("tur"):
-            continue  # yalnızca anahtar kelimesinde din felsefesi geçen araştırma makaleleri
+        if m.get("tur") or m.get("kaynak") not in (None, "dergipark-akademisyen"):
+            continue
         kod = kod_eslesme.get(id_kod.get(m["id"], ""))
         if kod:
-            makale.setdefault(kod, []).append(m)
-    return [d | {"_makaleler": makale.get(d["kod"], []), "_durum": (durum.get("dergiler") or {}).get(d["kod"], {})}
+            (makale if "kaynak" not in m else hoca).setdefault(kod, []).append(m)
+    return [d | {"_makaleler": makale.get(d["kod"], []), "_hoca": hoca.get(d["kod"], []),
+                 "_durum": (durum.get("dergiler") or {}).get(d["kod"], {})}
             for d in dergiler], durum
 
 
@@ -3065,19 +3070,32 @@ def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
         for k in m.get("konular") or []:
             if k in ana_ad:
                 konu_say[k] = konu_say.get(k, 0) + 1
+    hk = sorted(d["_hoca"], key=lambda m: (m["tarih"], m["id"]), reverse=True)
+    for m in hk:
+        for k in m.get("konular") or []:
+            if k in ana_ad:
+                konu_say[k] = konu_say.get(k, 0) + 1
     konular = sorted(konu_say.items(), key=lambda x: (-x[1], tr_anahtar(ana_ad[x[0]])))[:4]
+
+    def mak_li(m):
+        return (f'<li><span class="yil">{e(m["yil"])}</span><a href="{e(m["baglanti"])}" rel="noopener">{e(m["baslik"])}</a>'
+                f'<span class="yazar">{e(", ".join(m["yazarlar"]))}</span></li>')
     makaleler = ""
+    if hk:
+        makaleler += (f'<details class="d-makaleler"><summary>Din felsefesi öğretim elemanlarının öteki makaleleri ({len(hk)})</summary>'
+                      f'<ol>{"".join(mak_li(m) for m in hk)}</ol></details>')
     if mk:
-        satirlar = "".join(
-            f'<li><span class="yil">{e(m["yil"])}</span><a href="{e(m["baglanti"])}" rel="noopener">{e(m["baslik"])}</a>'
-            f'<span class="yazar">{e(", ".join(m["yazarlar"]))}</span></li>' for m in mk)
+        satirlar = "".join(mak_li(m) for m in mk)
         konu_html = ('<p class="d-konular">En çok: ' + ", ".join(
             f'<a href="{SITE_URL}/basliklar/{k}/">{e(ana_ad[k])}</a> ({n})' for k, n in konular) + "</p>") if konular else ""
         makaleler = (f'<details class="d-makaleler"><summary>Din felsefesi makaleleri ({len(mk)})</summary>'
-                     f'{konu_html}<ol>{satirlar}</ol></details>')
+                     f'{konu_html}<ol>{satirlar}</ol></details>') + makaleler
+    elif konular:
+        makaleler = ('<p class="d-konular" style="grid-column:1/-1;font-family:var(--sans);font-size:.86rem">En çok: ' + ", ".join(
+            f'<a href="{SITE_URL}/basliklar/{k}/">{e(ana_ad[k])}</a> ({n})' for k, n in konular) + "</p>") + makaleler
     ara = tr_kucuk(" ".join([d["ad"], d.get("sahip") or "", d["kod"], " ".join(d.get("onceki_adlar") or [])]))
     ad_html = (f'<a class="d-ad" href="{e(d["link"])}" rel="noopener">{e(d["ad"])}</a>' if d.get("link") else f'<span class="d-ad">{e(d["ad"])}</span>')
-    data = (f'data-ara="{e(ara)}" data-ad="{e(d["ad"])}" data-df="{len(mk)}" data-son5="{son5}" '
+    data = (f'data-ara="{e(ara)}" data-ad="{e(d["ad"])}" data-df="{len(mk)}" data-son5="{son5}" data-hoca="{len(hk)}" '
             f'data-dizin=" {" ".join(k for k, _ in DIZIN_ADLARI if dizin.get(k))} " data-gonderim="{gd or ""}" '
             f'data-aylar=" {" ".join(str(i) for i in aylar)}{" surekli" if surekli else ""} " '
             f'data-sure="{s.get("degerlendirme") or ""}"')
@@ -3085,7 +3103,8 @@ def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
             + (f'<p class="d-sahip">{e(d["sahip"])}</p>' if d.get("sahip") else "")
             + ('<dl class="d-bilgi">' + "".join(f"<dt>{a}</dt><dd>{v}</dd>" for a, v in bilgi) + "</dl>" if bilgi else "")
             + f'</div><div class="d-sayi{" sifir" if not mk else ""}"><b>{len(mk)}</b><small>din felsefesi makalesi</small>'
-            + (f"<small>son beş yılda {son5}</small>" if mk else "") + f"</div>{makaleler}</li>")
+            + (f"<small>son beş yılda {son5}</small>" if mk else "")
+            + (f'<small class="d-hoca">+{len(hk)} öğretim elemanı makalesi</small>' if hk else "") + f"</div>{makaleler}</li>")
 
 
 def render_dergiler() -> str:
@@ -3093,8 +3112,9 @@ def render_dergiler() -> str:
     esik = YIL - 4
     ana_ad = {k: FIS[("baslik", k)]["ad"] for k in ana_basliklar()}
     satirlar = "".join(dergi_satiri(d, ana_ad, esik) for d in
-                       sorted(dergiler, key=lambda d: (-len(d["_makaleler"]), tr_anahtar(d["ad"]))))
+                       sorted(dergiler, key=lambda d: (-len(d["_makaleler"]), -len(d["_hoca"]), tr_anahtar(d["ad"]))))
     toplam = sum(len(d["_makaleler"]) for d in dergiler)
+    toplam_h = sum(len(d["_hoca"]) for d in dergiler)
     tarama = (durum.get("tarama") or "")[:10]
     dizinler = "".join(f'<button type="button" data-dizin="{k}" aria-pressed="false">{a}</button>' for k, a in DIZIN_ADLARI)
     aylar = '<option value="">Fark etmez</option>' + "".join(
@@ -3102,7 +3122,7 @@ def render_dergiler() -> str:
     siralama = ('<div class="eser-sirala d-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
                 + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="{"descending" if k == "df" else "none"}">{a}'
                           f'<span class="ok" aria-hidden="true"></span></button>'
-                          for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
+                          for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("hoca", "Öğretim elemanları"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
                 + "</div>")
     body = (f'<p class="ust-etiket">Dergiler</p><h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
             f'<p class="giris">Her derginin dizinleri, yayın ayları, '
@@ -3110,7 +3130,9 @@ def render_dergiler() -> str:
             f'<p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
             f'{" (son okuma " + tr_date(tarama) + ")" if tarama else ""}. Dizin bilgisi derginin kendi beyanıdır. '
             f'Kabul dönemleri dergilerin duyurularından elle derlenmiştir; başvurudan önce derginin sayfasına bakınız. '
-            f'Makale sayıları {len(dergiler)} dergide toplam {toplam} araştırma makalesini kapsar; kitap tanıtımı ve çeviriler sayılmaz. '
+            f'Büyük rakam, derginin DergiPark\'ta anahtar kelimelerinde din felsefesi geçen araştırma makalelerini gösterir ({len(dergiler)} dergide toplam {toplam}). '
+            f'Altındaki "öğretim elemanı makalesi" sayısı, Türkiye\'deki din felsefesi öğretim elemanlarının aynı dergide yayımladığı, anahtar kelimesinde din felsefesi geçmeyen '
+            f'ama konusu sitedeki bir başlığa giren öteki makaleleridir (toplam {toplam_h}). Kitap tanıtımı ve çeviriler sayılmaz. '
             f'Düzeltme ve dergi önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             f'<p class="secim-etiket">Ara ve süz</p>'
             f'<div class="d-arac"><label class="k-ara"><span>Ara</span><input type="search" id="dergi-ara" placeholder="Dergi, kurum ya da eski ad" autocomplete="off"></label>'
