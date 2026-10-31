@@ -92,7 +92,9 @@ DIZIN_DESEN = {
 
 def dizin_sayfasi_oku(sayfa: str) -> dict | None:
     """Dizinler sayfasındaki tablolarda adı geçen dizinleri okur. Tablo yoksa None (bilinmiyor) döner."""
-    adlar = re.findall(r'<td class="p-3 align-middle">\s*<a[^>]*>\s*(.*?)\s*</a>', sayfa, re.S)
+    # Dizin adları tablo hücrelerindeki bağlantı yazılarıdır; hücre sınıfları sayfa şablonuna göre değişir
+    m = re.search(r"<main\b.*?</main>", sayfa, re.S)
+    adlar = re.findall(r'<td[^>]*>\s*<a[^>]*>\s*([^<]+?)\s*</a>', m.group(0) if m else sayfa)
     adlar = [temiz(a) for a in adlar if temiz(a)]
     if not adlar:
         # Dizin tablosu yoksa: sayfanın ana bölümünde dışarıya giden hiçbir bağlantı yoksa dergi hiçbir dizin
