@@ -1,5 +1,5 @@
 {
- "tarama": "2026-10-31T11:58+03:00",
+ "tarama": "2026-10-31T12:12+03:00",
  "dergiler": {
   "adid": {
    "baslik": "Adıyaman İlahiyat Dergisi",
@@ -25,6 +25,7 @@
   },
   "aduilahiyatdergisi": {
    "baslik": "ADÜ İlahiyat Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Sürekli Yayın",
    "gonderim": "acik",
    "gonderim_tarih": "12.02.2026",
@@ -33,7 +34,14 @@
     "degerlendirme": 65,
     "yayim": 51
    },
-   "okundu": "2026-10-31"
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   }
   },
   "agiid": {
    "baslik": "Ağrı İslami İlimler Dergisi",
@@ -59,15 +67,6 @@
   },
   "ahiilahiyat": {
    "baslik": "Ahi İlahiyat Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "05.10.2026",
-   "acilis": "01.02.2027",
-   "sureler": {
-    "on_kontrol": 10,
-    "degerlendirme": 107,
-    "yayim": 23
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -84,6 +83,15 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "05.10.2026",
+   "acilis": "01.02.2027",
+   "sureler": {
+    "on_kontrol": 10,
+    "degerlendirme": 107,
+    "yayim": 23
    }
   },
   "akademikus": {
@@ -120,14 +128,6 @@
   },
   "akdenizilahiyatdergisi": {
    "baslik": "Akdeniz İlahiyat Dergisi",
-   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
-   "gonderim": "acik",
-   "gonderim_tarih": "01.10.2026",
-   "sureler": {
-    "on_kontrol": 10,
-    "degerlendirme": 62,
-    "yayim": 70
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -138,6 +138,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
+   "gonderim": "acik",
+   "gonderim_tarih": "01.10.2026",
+   "sureler": {
+    "on_kontrol": 10,
+    "degerlendirme": 62,
+    "yayim": 70
    }
   },
   "akif": {
@@ -199,13 +207,6 @@
   },
   "antakiyat": {
    "baslik": "Antakiyat",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "acik",
-   "sureler": {
-    "on_kontrol": 22,
-    "degerlendirme": 82,
-    "yayim": 54
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -223,6 +224,13 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "acik",
+   "sureler": {
+    "on_kontrol": 22,
+    "degerlendirme": 82,
+    "yayim": 54
    }
   },
   "artukluakademi": {
@@ -257,14 +265,6 @@
   },
   "aruiad": {
    "baslik": "ARÜ İlahiyat Araştırmaları Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "acik",
-   "gonderim_tarih": "01.01.2026",
-   "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 108,
-    "yayim": 16
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -278,6 +278,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "acik",
+   "gonderim_tarih": "01.01.2026",
+   "sureler": {
+    "on_kontrol": 9,
+    "degerlendirme": 108,
+    "yayim": 16
    }
   },
   "asar": {
@@ -490,14 +498,6 @@
   },
   "balagh": {
    "baslik": "BALAGH - Journal of Islamic and Humanities Studies",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "31.10.2026",
-   "sureler": {
-    "on_kontrol": 5,
-    "degerlendirme": 91,
-    "yayim": 58
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -509,6 +509,41 @@
     ],
     "trdizin": false,
     "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "31.10.2026",
+   "sureler": {
+    "on_kontrol": 5,
+    "degerlendirme": 91,
+    "yayim": 58
+   }
+  },
+  "batmanakademi": {
+   "baslik": "Batman Akademi Dergisi",
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "23.10.2026",
+   "sureler": {
+    "on_kontrol": 16,
+    "degerlendirme": 81,
+    "yayim": 54
+   },
+   "okundu": "2026-10-31",
+   "dizin": {
+    "liste": [
+     "EBSCO",
+     "İdealonline",
+     "Asos İndex",
+     "Google Scholar",
+     "İSAM",
+     "(DRJI) Araştırma Dergileri Dizini İndeksleme"
+    ],
+    "trdizin": false,
+    "doaj": false,
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
@@ -812,6 +847,7 @@
   },
   "darulhadisdergisi": {
    "baslik": "Darulhadis İslami Araştırmalar Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "gonderim_tarih": "10.05.2024",
@@ -819,8 +855,7 @@
     "on_kontrol": 16,
     "degerlendirme": 118,
     "yayim": 57
-   },
-   "okundu": "2026-10-31"
+   }
   },
   "dergiabant": {
    "baslik": "Dergiabant",
@@ -1051,6 +1086,7 @@
   },
   "eid": {
    "baslik": "Edebali İlahiyat Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "gonderim_tarih": "30.06.2026",
@@ -1058,7 +1094,14 @@
     "on_kontrol": 3,
     "degerlendirme": 34
    },
-   "okundu": "2026-10-31"
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   }
   },
   "eren": {
    "baslik": "EREN",
@@ -1270,15 +1313,6 @@
   },
   "haid": {
    "baslik": "Hakkari İlahiyat Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "02.10.2026",
-   "acilis": "01.01.2027",
-   "sureler": {
-    "on_kontrol": 12,
-    "degerlendirme": 106,
-    "yayim": 51
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -1291,6 +1325,15 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "02.10.2026",
+   "acilis": "01.01.2027",
+   "sureler": {
+    "on_kontrol": 12,
+    "degerlendirme": 106,
+    "yayim": 51
    }
   },
   "hid": {
@@ -1351,14 +1394,6 @@
   },
   "hikem": {
    "baslik": "HİKEM",
-   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
-   "gonderim": "acik",
-   "gonderim_tarih": "10.04.2026",
-   "sureler": {
-    "on_kontrol": 19,
-    "degerlendirme": 38,
-    "yayim": 43
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -1370,19 +1405,18 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
+   "gonderim": "acik",
+   "gonderim_tarih": "10.04.2026",
+   "sureler": {
+    "on_kontrol": 19,
+    "degerlendirme": 38,
+    "yayim": 43
    }
   },
   "idrak": {
    "baslik": "İdrak Dini Araştırmalar Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "02.10.2026",
-   "acilis": "15.01.2027",
-   "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 109,
-    "yayim": 52
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -1405,18 +1439,19 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "02.10.2026",
+   "acilis": "15.01.2027",
+   "sureler": {
+    "on_kontrol": 9,
+    "degerlendirme": 109,
+    "yayim": 52
    }
   },
   "ifder": {
    "baslik": "Iğdır Üniversitesi İlahiyat Fakültesi Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "acik",
-   "gonderim_tarih": "01.07.2026",
-   "sureler": {
-    "on_kontrol": 136,
-    "degerlendirme": 68,
-    "yayim": 24
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -1428,6 +1463,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "acik",
+   "gonderim_tarih": "01.07.2026",
+   "sureler": {
+    "on_kontrol": 136,
+    "degerlendirme": 68,
+    "yayim": 24
    }
   },
   "ihya": {
@@ -2047,6 +2090,7 @@
   },
   "kitabiyatilahiyat": {
    "baslik": "Kitabiyat İlahiyat Araştırmaları İnceleme-Eleştiri Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "gonderim_tarih": "08.03.2024",
@@ -2055,7 +2099,14 @@
     "degerlendirme": 72,
     "yayim": 40
    },
-   "okundu": "2026-10-31"
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   }
   },
   "ksuifd": {
    "baslik": "Kahramanmaraş Sütçü İmam Üniversitesi İlahiyat Fakültesi Dergisi",
@@ -2094,6 +2145,7 @@
   },
   "maide": {
    "baslik": "Manisa İlahiyat Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
    "gonderim": "kapali",
    "gonderim_tarih": "14.09.2026",
@@ -2102,7 +2154,14 @@
     "on_kontrol": 2,
     "degerlendirme": 5
    },
-   "okundu": "2026-10-31"
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   }
   },
   "marifetname": {
    "baslik": "Marifetname",
@@ -2161,6 +2220,7 @@
   },
   "mecelle": {
    "baslik": "MECELLE İslâmî Araştırmalar Dergisi",
+   "okundu": "2026-10-31",
    "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
    "gonderim": "acik",
    "gonderim_tarih": "05.08.2026",
@@ -2168,7 +2228,14 @@
     "on_kontrol": 22,
     "degerlendirme": 97
    },
-   "okundu": "2026-10-31"
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
+   }
   },
   "mecmua": {
    "baslik": "Mecmua",
@@ -2584,6 +2651,14 @@
     "on_kontrol": 42,
     "degerlendirme": 171,
     "yayim": 102
+   },
+   "dizin": {
+    "liste": [],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "rusuhder": {
@@ -2715,14 +2790,6 @@
   },
   "sinopid": {
    "baslik": "Sinop İlahiyat Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "15.09.2026",
-   "sureler": {
-    "on_kontrol": 8,
-    "degerlendirme": 91,
-    "yayim": 54
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -2735,6 +2802,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "15.09.2026",
+   "sureler": {
+    "on_kontrol": 8,
+    "degerlendirme": 91,
+    "yayim": 54
    }
   },
   "sirnakifd": {
@@ -3345,5 +3420,5 @@
    }
   }
  },
- "dizin_tarama": "2026-10-31T11:58+03:00"
+ "dizin_tarama": "2026-10-31T12:12+03:00"
 }
