@@ -1646,16 +1646,20 @@
     scopus: null
   yayin_modeli: null
   listeye_giris: ilahiyat-fakulteleri
-- kod: buiif
-  ad: Batman Üniversitesi İslami İlimler Hakemli Dergisi
+- kod: batmanakademi
+  ad: Batman Akademi Dergisi
   sahip: Batman Üniversitesi İslami İlimler Fakültesi
-  link: https://dergipark.org.tr/tr/pub/buiif
+  link: https://dergipark.org.tr/tr/pub/batmanakademi
   dizin:
     trdizin: null
     doaj: null
     esci: null
     scopus: null
   yayin_modeli: null
+  onceki_kodlar:
+  - buiif
+  onceki_adlar:
+  - Batman Üniversitesi İslami İlimler Hakemli Dergisi
   listeye_giris: ilahiyat-fakulteleri
 - kod: hikem
   ad: HİKEM

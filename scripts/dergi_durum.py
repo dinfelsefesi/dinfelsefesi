@@ -95,6 +95,11 @@ def dizin_sayfasi_oku(sayfa: str) -> dict | None:
     adlar = re.findall(r'<td class="p-3 align-middle">\s*<a[^>]*>\s*(.*?)\s*</a>', sayfa, re.S)
     adlar = [temiz(a) for a in adlar if temiz(a)]
     if not adlar:
+        # Dizin tablosu yoksa: sayfanın ana bölümünde dışarıya giden hiçbir bağlantı yoksa dergi hiçbir dizin
+        # beyan etmemiştir. Bağlantı varsa sayfa tanımadığımız bir düzendedir; bilgi "bilinmiyor" kalır.
+        m = re.search(r"<main\b.*?</main>", sayfa, re.S)
+        if m and "Dizinler" in m.group(0) and not re.search(r'<a[^>]+href="https?://(?!dergipark\.org\.tr)', m.group(0)):
+            return {"liste": [], **{k: False for k in DIZIN_DESEN}}
         return None
     return {"liste": adlar, **{k: any(d.search(a) for a in adlar) for k, d in DIZIN_DESEN.items()}}
 
