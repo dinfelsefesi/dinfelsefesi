@@ -88,11 +88,20 @@ jobs:
           CN_IP=$(getent hosts "$CN" | awk '{print $1}' | head -1)
           echo "::warning::Sertifika adı: ${CN:-okunamadı}; aynı sunucu: $([ -n "$CN" ] && [ "$CN_IP" = "$IP" ] && echo evet || echo hayır)"
           if [ -n "$CN" ] && [ "$CN_IP" = "$IP" ]; then FTP_SUNUCU="$CN"; fi
-          AYAR="set ftp:ssl-allow true; set net:max-retries 3"
+          AYAR="set ftp:ssl-allow true; set net:max-retries 3; set net:timeout 30; set net:reconnect-interval-base 15"
           # Hesap alan adının klasörünü görüyor (/domains/dinfelsefesi.com.tr). Site yalnızca public_html/yeni
           # içine yüklenir. Silme işlemi de yalnızca bu klasörün içinde yapılır. public_html bulunamazsa
           # hiçbir şey yüklenmez, böylece başka bir klasöre yanlışlıkla dokunulmaz.
-          if ! lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye" > kontrol.log 2>&1; then
+          # Sunucu akşam saatlerinde zaman zaman kısa süre cevap vermiyor: bağlantı 5 kez, aralarda 3 dakika beklenerek denenir.
+          BAGLANDI=0
+          for DENEME in 1 2 3 4 5; do
+            if lftp -u "$FTP_KULLANICI","$FTP_SIFRE" "$FTP_SUNUCU" -e "$AYAR; cls -1 public_html/ >/dev/null; bye" > kontrol.log 2>&1; then
+              BAGLANDI=1; break
+            fi
+            echo "::warning::FTP bağlantısı kurulamadı ($DENEME. deneme), 3 dakika sonra yeniden denenecek."
+            sleep 180
+          done
+          if [ "$BAGLANDI" != 1 ]; then
             echo "::error::public_html klasörü bulunamadı ya da bağlanılamadı: $(grep -v -i pass kontrol.log | tail -3 | tr '\n' ' ' | cut -c1-400)"; exit 1
           fi
           HEDEF="${HOSTING_HEDEF:-public_html}"
