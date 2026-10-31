@@ -30,7 +30,9 @@ from orcid_topla import kisalt  # noqa: E402
 TANITIM_IPUCU = {"Kitap Tanıtımı", "Kitap İncelemesi", "Kitap Değerlendirmesi", "Kitap Kritiği", "Book Review"}
 CEVIRI_IPUCU = {"Çeviri", "Tercüme", "Translation"}
 TANITIM_BASLIK = re.compile(r"^\s*(book\s+review|review\s+of|kitap\s+(tan[ıi]t[ıi]m[ıi]|de[ğg]erlendirme(si)?|incelemesi))\b"
-                            r"|,\s*(19|20)\d\d\s*,?\s*\d+\s*(s|ss|sy|pp|p|sayfa|pages)\b\.?|,\s*(written|edited)\s+by\b", re.I)
+                            r"|,\s*(19|20)\d\d\s*,?\s*\d+\s*(s|ss|sy|pp|p|sayfa|pages)\b\.?|,\s*(written|edited)\s+by\b"
+                            # "Yazar: ..." ya da sonda "(Şehir: Yayınevi, Yıl)" künyesi (31.10.2026, Ricoeur tanıtımı)
+                            r"|\b(yazar(lar)?|author)\s*:|\(\s*[^():]{2,40}:\s*[^()]{2,80},\s*(19|20)\d\d\s*\)\s*\.?\s*$", re.I)
 
 
 def kelime_basliklari(kelimeler, kurallar, genel):

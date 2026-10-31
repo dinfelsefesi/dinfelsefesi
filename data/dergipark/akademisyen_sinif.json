@@ -9477,19 +9477,19 @@
    "Selin Olur"
   ],
   "baslik": "Sevgi ve Adalet Yazar: Paul Ricoeur (İstanbul: Sel Yayınları, 2016)",
-  "basliklar": [
-   "din-dili"
-  ],
+  "basliklar": [],
   "durum": "konulu",
-  "elle": false,
+  "elle": true,
   "eslesen": [
    "din dili → din-dili"
   ],
-  "ilgili": [],
+  "ilgili": [
+   "din-dili"
+  ],
   "kanit": {
    "Selin Olur": "profil-listesi"
   },
-  "tur": ""
+  "tur": "kitap-tanitimi"
  },
  "964858": {
   "akademisyenler": [
