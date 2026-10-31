@@ -1,0 +1,30 @@
+name: DergiPark dergi listesi
+
+# Elle çalıştırılır: DergiPark'taki bütün dergilerin kısa adlarını ve adlarını
+# data/dergiler/dergipark_dergileri.json dosyasına yazar.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  liste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/dergipark_dergi_listesi.py
+      - name: Kaydet
+        run: |
+          git config user.name "dergi-durum"
+          git config user.email "dinfelsefesi@gmail.com"
+          git add data/dergiler/dergipark_dergileri.json
+          git diff --cached --quiet && exit 0
+          git commit -m "DergiPark dergi listesi ($(TZ=Europe/Istanbul date +%Y-%m-%d))"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
