@@ -1506,8 +1506,12 @@ def eser_ogeleri() -> list:
     fisler = sorted([k for (t, k) in FIS if t == "eser"],
                     key=lambda k: (TUR_SIRA.get(FIS[("eser", k)].get("eser_turu"), 9), str(FIS[("eser", k)].get("yil", "")),
                                    tr_anahtar(FIS[("eser", k)]["baslik"])))
+    akademi_adlari = {tr_kucuk(p["ad"]) for p in (yaml.safe_load((CONTENT / "turkiye_akademisi.yaml").read_text(encoding="utf-8")) or {}).get("kisiler") or []}
     for k in fisler:
         h = FIS[("eser", k)]
+        yazarlar_ = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
+        if not any(tr_kucuk(y) in akademi_adlari for y in yazarlar_):
+            continue  # yabancı klasikler eserler listesine girmez; fişleri başlık sayfalarından ve kendi adreslerinden okunur
         konu = set()
         for b in liste(h.get("basliklar")):
             konu |= atalar(b)
@@ -1577,7 +1581,9 @@ def render_eserler() -> str:
                           for k, a in [("yil", "Yıl"), ("yazar", "Yazar"), ("ad", "Eser adı")]) + '</div>')
     tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
-            f'<p class="aciklama-kisa">Din felsefesinin temel eserleri, DergiPark\'ta yayımlanan ve anahtar kelimelerinde din felsefesi geçen makaleler , Türkiye akademisindeki hocaların ORCID kayıtlarında yer alan DOI\'li çalışmalar ve AVESİS ya da YÖK Akademik sayfalarında yer alıp konusu açıkça bir başlığa giren yayınlar. '
+            f'<p class="aciklama-kisa">Türkiye akademisindeki din felsefecilerinin eserleri ile Türkiye\'de yayımlanan din felsefesi çalışmaları. '
+            f'Liste, sitede fişi bulunan eserlerden, DergiPark\'ta anahtar kelimelerinde din felsefesi geçen makalelerden, hocaların ORCID kayıtlarındaki DOI\'li çalışmalardan '
+            f've AVESİS ya da YÖK Akademik sayfalarında yer alıp konusu açıkça bir başlığa giren yayınlardan oluşur. '
             f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
@@ -1587,9 +1593,7 @@ def render_eserler() -> str:
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div>'
             '<label class="k-ara"><span>Ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
-            f'<h2 class="eser-grup">Temel eserler <span class="eser-grup-say"></span></h2>'
-            f'<p class="eser-grup-not">Din felsefesinin klasikleri. Her birinin sitede fişi vardır.</p><ul class="eser-liste">{temel}</ul>'
-            f'<h2 class="eser-grup">Türkiye\'de yayımlanan çalışmalar <span class="eser-grup-say"></span></h2><ul class="eser-liste">{turkce}</ul>'
+            f'<ul class="eser-liste">{temel}{turkce}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
     return page(f"Eserler · {SITE_NAME}", body + ESER_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
