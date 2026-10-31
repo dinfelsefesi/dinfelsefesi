@@ -593,6 +593,13 @@ ul.calisan-liste li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(
 ul.calisan-liste li a{text-decoration:none;color:var(--ink)}
 ul.calisan-liste li a:hover{color:var(--accent)}
 aside.yan ul.calisan-liste.dikey{flex-direction:column;align-items:flex-start;gap:.3rem}
+.calisan-devam{margin-top:.55rem;max-width:var(--measure)}
+.calisan-devam summary{cursor:pointer;font-family:var(--sans);font-size:.88rem;color:var(--accent);list-style:none;display:inline-block;border-bottom:1px solid var(--gold-logo)}
+.calisan-devam summary::-webkit-details-marker{display:none}
+.calisan-devam summary::after{content:" ↓"}
+.calisan-devam[open] summary::after{content:" ↑"}
+.calisan-devam[open] summary{margin-bottom:.2rem}
+@media (max-width:520px){ul.calisan-liste{gap:.3rem .35rem}ul.calisan-liste li{font-size:.84rem;padding:.06rem .5rem}}
 .k-ara{display:flex;align-items:center;gap:.6rem;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin:.8rem 0 .9rem}
 .k-ara input{font:inherit;font-style:normal;font-size:.98rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.4rem .9rem;width:min(100%,22rem)}
 .k-ara input:focus{outline:2px solid var(--accent);outline-offset:1px}
@@ -2368,10 +2375,15 @@ def baslik_calisanlari(k) -> str:
     if not say:
         return ""
     say.sort(key=lambda x: (-x[0], tr_anahtar(x[2]["p"]["ad"])))
-    ogeler = "".join(f'<li><a href="{akademi_url(s)}">{e(v["p"]["ad"])}</a> <span class="say">{n}</span></li>' for n, s, v in say)
+    def oge(n, s, v):
+        return f'<li><a href="{akademi_url(s)}">{e(v["p"]["ad"])}</a> <span class="say">{n}</span></li>'
+    ILK = 12  # ilk 12 kişi görünür, kalanlar "Diğer N kişi" açılır kutusundadır
+    ust = "".join(oge(*x) for x in say[:ILK])
+    devam = (f'<details class="calisan-devam"><summary>Diğer {len(say) - ILK} kişiyi göster</summary>'
+             f'<ul class="calisan-liste">{"".join(oge(*x) for x in say[ILK:])}</ul></details>') if len(say) > ILK else ""
     return (f'<section class="calisanlar"><h2>Türkiye\'de bu konuda çalışanlar</h2>'
             f'<p class="aciklama-kisa">Türkiye akademisi listesindeki akademisyenler, bu başlığa giren çalışmalarının sayısıyla (DergiPark taraması, ORCID kaydındaki DOI\'li yayınlar, AVESİS ve YÖK Akademik sayfaları).</p>'
-            f'<ul class="calisan-liste">{ogeler}</ul></section>')
+            f'<ul class="calisan-liste">{ust}</ul>{devam}</section>')
 
 
 ORCID_TUR = {"journal-article": "Makale", "book": "Kitap", "book-chapter": "Kitap bölümü", "conference-paper": "Bildiri",
