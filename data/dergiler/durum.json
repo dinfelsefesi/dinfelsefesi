@@ -1,5 +1,5 @@
 {
- "tarama": "2026-10-31T12:12+03:00",
+ "tarama": "2026-10-31T12:30+03:00",
  "dergiler": {
   "adid": {
    "baslik": "Adıyaman İlahiyat Dergisi",
@@ -26,14 +26,6 @@
   "aduilahiyatdergisi": {
    "baslik": "ADÜ İlahiyat Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Sürekli Yayın",
-   "gonderim": "acik",
-   "gonderim_tarih": "12.02.2026",
-   "sureler": {
-    "on_kontrol": 3,
-    "degerlendirme": 65,
-    "yayim": 51
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -41,6 +33,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Sürekli Yayın",
+   "gonderim": "acik",
+   "gonderim_tarih": "12.02.2026",
+   "sureler": {
+    "on_kontrol": 3,
+    "degerlendirme": 65,
+    "yayim": 51
    }
   },
   "agiid": {
@@ -298,6 +298,19 @@
     "on_kontrol": 7,
     "degerlendirme": 77,
     "yayim": 26
+   },
+   "dizin": {
+    "liste": [
+     "ERIH PLUS (▶ 31.03.2025)",
+     "BASE",
+     "Aperta",
+     "İSAM"
+    ],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "atdd": {
@@ -524,14 +537,6 @@
   },
   "batmanakademi": {
    "baslik": "Batman Akademi Dergisi",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "23.10.2026",
-   "sureler": {
-    "on_kontrol": 16,
-    "degerlendirme": 81,
-    "yayim": 54
-   },
    "okundu": "2026-10-31",
    "dizin": {
     "liste": [
@@ -547,6 +552,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "23.10.2026",
+   "sureler": {
+    "on_kontrol": 16,
+    "degerlendirme": 81,
+    "yayim": 54
    }
   },
   "beuifd": {
@@ -660,6 +673,21 @@
     "on_kontrol": 17,
     "degerlendirme": 92,
     "yayim": 34
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "TR Dizin",
+     "DOAJ",
+     "ERIH PLUS",
+     "EBSCO Central & Eastern European Academic Source",
+     "Sobiad"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "buifd": {
@@ -707,6 +735,23 @@
     "on_kontrol": 4,
     "degerlendirme": 85,
     "yayim": 28
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "MLA",
+     "EBSCO - Central & Eastern European Academic Source (CEEAS)",
+     "DOAJ: Directory of Open Access Journals",
+     "ERIH PLUS",
+     "EBSCO - Humanities International Index",
+     "EBSCO - Arab World Research Source: Al Masdar",
+     "SOBİAD"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "cbayarsos": {
@@ -719,6 +764,21 @@
     "on_kontrol": 17,
     "degerlendirme": 134,
     "yayim": 130
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "Google Scholar",
+     "Academindex",
+     "EBSCO",
+     "MLA",
+     "ASCI Database"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "cuid": {
@@ -758,6 +818,17 @@
     "on_kontrol": 24,
     "degerlendirme": 132,
     "yayim": 15
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "Ebsco"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "da": {
@@ -855,6 +926,23 @@
     "on_kontrol": 16,
     "degerlendirme": 118,
     "yayim": 57
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "ERIH PLUS (Kabul Tarihi / Accepted Date: 07.12.2023)",
+     "DOAJ: Directory of Open Access Journals (Kabul Tarihi / Accepted Date: 11.11.2022)",
+     "ProQuest | Ulrich’s Periodicals Directory (Kabul Tarihi / Accepted Date: 04.08.2022)",
+     "EBSCO - Central & Eastern European Academic Source (CEEAS) (Kabul Tarihi / Accepted Date: 12.01.2022)",
+     "ESBCO - Academic Search Ultimate (Kabul Tarihi / Accepted Date: 12.01.2022)",
+     "EBSCO - Academic Search Premier (Kabul Tarihi / Accepted Date: 12.01.2022)",
+     "EBSCO - Academic Search Elite (Kabul Tarihi / Accepted Date: 12.01.2022)"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "dergiabant": {
@@ -894,6 +982,22 @@
     "on_kontrol": 14,
     "degerlendirme": 103,
     "yayim": 56
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "TR Dizin",
+     "DOAJ: Directory of Open Access Journals | Kabul Tarihi 10.04.2026",
+     "ERIH PLUS (European Reference Index for the Humanities) | Kabul Tarihi 05.12.2024",
+     "EBSCO Database | Kabul Tarihi 21.01.2025",
+     "Ulrich’s Periodicals Directory | Kabul Tarihi 28.07.2025",
+     "MIAR"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "deusosbil": {
@@ -1087,13 +1191,6 @@
   "eid": {
    "baslik": "Edebali İlahiyat Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "acik",
-   "gonderim_tarih": "30.06.2026",
-   "sureler": {
-    "on_kontrol": 3,
-    "degerlendirme": 34
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -1101,6 +1198,13 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "acik",
+   "gonderim_tarih": "30.06.2026",
+   "sureler": {
+    "on_kontrol": 3,
+    "degerlendirme": 34
    }
   },
   "eren": {
@@ -1112,6 +1216,18 @@
     "on_kontrol": 2,
     "degerlendirme": 63,
     "yayim": 59
+   },
+   "dizin": {
+    "liste": [
+     "ERIH PLUS",
+     "Linguistic Bibliography",
+     "Ulrich’s Periodicals Directory"
+    ],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "eskiyeni": {
@@ -1125,6 +1241,26 @@
     "on_kontrol": 4,
     "degerlendirme": 180,
     "yayim": 17
+   },
+   "dizin": {
+    "liste": [
+     "Emerging Sources Citation Index (ESCI)",
+     "DOAJ",
+     "TR Dizin",
+     "Web of Science Emerging Sources Citation Index (Kabul: 21.12.2023 | Başlangıç: 43. Sayı (2021)",
+     "MLA International Bibliography (Kabul: 16/06/2020 | Başlangıç: 41. Sayı)",
+     "TR Dizin/Turkish National Database (Kabul: 24.10.2019 | Başlangıç: 36. Sayı)",
+     "DOAJ (Kabul: 20.07.2023 | Tamamı)",
+     "EBSCO - Central & Eastern European Academic Source (Kabul: 08.02.2021 | Başlangıç: 43. Sayı)",
+     "CEEOL: Central and EasternEuropean Online Library (Kabul: 01.01.2013 | Başlangıç: 26. Sayı)",
+     "ERIH PLUS",
+     "The Open Ukrainian Citation Index (OUCI)"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": true,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "esoguifd": {
@@ -1283,6 +1419,19 @@
     "on_kontrol": 10,
     "degerlendirme": 83,
     "yayim": 52
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "DOAJ",
+     "EBSCO",
+     "ERIH PLUS"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "gifad": {
@@ -1763,6 +1912,27 @@
     "on_kontrol": 21,
     "degerlendirme": 166,
     "yayim": 32
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "TR DİZİN",
+     "Ebsco (Sociology Source Ultimate)",
+     "Index Islamicus",
+     "MLA International Bibliography",
+     "Education Full Text (H. W. Wilson) Database Coverage List",
+     "CNKI: China National Knowledge Infrastructure",
+     "Erih Plus",
+     "The Belt and Road Initiative Reference Source",
+     "RILM Abstracts of Music Literature | EBSCO",
+     "EBSCO - SocINDEX",
+     "Ulrichs Web (Digital Platform)"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "iufad": {
@@ -1880,6 +2050,21 @@
     "on_kontrol": 20,
     "degerlendirme": 153,
     "yayim": 34
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "TR Dizin",
+     "ERIHPlus (Norwegian Directorate for Higher Education and Skills)",
+     "INDEX ISLAMICUS",
+     "DOAJ (Directory of Open Access Journals)",
+     "Arab World Research Source : Al Masdar (EBSCO)"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "kaderdergi": {
@@ -1893,6 +2078,27 @@
     "on_kontrol": 11,
     "degerlendirme": 81,
     "yayim": 56
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "TR Dizin",
+     "TrDizin",
+     "EBSCO Academic Search Complete",
+     "EBSCO The Belt and Road Initiative Reference Source",
+     "EBSCO Central & Eastern European Academic Source Database",
+     "EBSCO Religion & Philosophy Collection",
+     "DOAJ (Directory of Open Access Journals)",
+     "Atla Religion Database (Atla RDB)",
+     "EBSCO Arab World Research Source: Al Masdar",
+     "PhilPapers",
+     "ERIH PLUS"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "kafkasilahiyat": {
@@ -1935,6 +2141,23 @@
     "on_kontrol": 9,
     "degerlendirme": 41,
     "yayim": 22
+   },
+   "dizin": {
+    "liste": [
+     "Index Copernicus",
+     "EBSCOhost",
+     "SOBIAD",
+     "ISAM",
+     "ACARINDEX",
+     "Scientific Indexing Services",
+     "ResearchBib",
+     "ERIH PLUS (European Reference Index for The Humanities and Social Sciences)"
+    ],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "katre": {
@@ -2029,6 +2252,22 @@
     "on_kontrol": 17,
     "degerlendirme": 145,
     "yayim": 19
+   },
+   "dizin": {
+    "liste": [
+     "Emerging Sources Citation Index (ESCI)",
+     "DOAJ",
+     "TR Dizin",
+     "TR Dizin / Turkish National Database (Başlangıç/Start: 2020- Cİlt/Volume 3, Sayı/Issue: 1)",
+     "Web of Science Emerging Sources Citation Index (Kabul: 10.05.2024 Başlangıç: 5/1 (2022)",
+     "ERIH PLUS (European Reference Index for The Humanities and Social Sciences)",
+     "DOAJ (29.03.2023)"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": true,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "kilikya": {
@@ -2091,14 +2330,6 @@
   "kitabiyatilahiyat": {
    "baslik": "Kitabiyat İlahiyat Araştırmaları İnceleme-Eleştiri Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
-   "gonderim": "acik",
-   "gonderim_tarih": "08.03.2024",
-   "sureler": {
-    "on_kontrol": 17,
-    "degerlendirme": 72,
-    "yayim": 40
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2106,6 +2337,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
+   "gonderim": "acik",
+   "gonderim_tarih": "08.03.2024",
+   "sureler": {
+    "on_kontrol": 17,
+    "degerlendirme": 72,
+    "yayim": 40
    }
   },
   "ksuifd": {
@@ -2141,19 +2380,27 @@
     "on_kontrol": 33,
     "degerlendirme": 154,
     "yayim": 54
+   },
+   "dizin": {
+    "liste": [
+     "The Erih Plus European Reference Index for Humanities (indexing start: 16.11.2023)",
+     "İdealonline Veri Tabanı",
+     "ASCI (Asian Science Citation Index)",
+     "ASOS İndeks",
+     "BASE (Base Bielefeld Academic Search)",
+     "ROAD",
+     "İSAM: İlahiyat Makaleleri Veri Tabani / ISAM Articles on Theology Database"
+    ],
+    "trdizin": false,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "maide": {
    "baslik": "Manisa İlahiyat Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "14.09.2026",
-   "acilis": "20.11.2026",
-   "sureler": {
-    "on_kontrol": 2,
-    "degerlendirme": 5
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2161,6 +2408,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
+   "gonderim": "kapali",
+   "gonderim_tarih": "14.09.2026",
+   "acilis": "20.11.2026",
+   "sureler": {
+    "on_kontrol": 2,
+    "degerlendirme": 5
    }
   },
   "marifetname": {
@@ -2221,13 +2476,6 @@
   "mecelle": {
    "baslik": "MECELLE İslâmî Araştırmalar Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
-   "gonderim": "acik",
-   "gonderim_tarih": "05.08.2026",
-   "sureler": {
-    "on_kontrol": 22,
-    "degerlendirme": 97
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2235,6 +2483,13 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Mart - Eylül)",
+   "gonderim": "acik",
+   "gonderim_tarih": "05.08.2026",
+   "sureler": {
+    "on_kontrol": 22,
+    "degerlendirme": 97
    }
   },
   "mecmua": {
@@ -2275,6 +2530,26 @@
     "on_kontrol": 13,
     "degerlendirme": 86,
     "yayim": 33
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "DOAJ (Kabul Tarihi: 21. 11. 2023)",
+     "ERIH PLUS (Kabul Tarihi: 25.01.2024)",
+     "EBSCO - Central & Eastern European Academic Source (CEEAS) (Kabul Tarihi: 09. 01. 2022)",
+     "EBSCO - Academic Search Elite (Kabul Tarihi: 09.01.2022)",
+     "EBSCO - Academic Search Complete (Kabul Tarihi: 09.01.2022)",
+     "EBSCO - Academic Search Ultimate (Kabul Tarihi: 09.01.2022)",
+     "EBSCO - Academic Search Premier (Kabul Tarihi: 09.01.2022)",
+     "MİAR (2024)",
+     "Sherpa Romeo (Kabul Tarihi: 08. 11. 2022)",
+     "The Open Ukrainian Citation Index (OUCI)"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "mevzu": {
@@ -2344,6 +2619,25 @@
     "on_kontrol": 17,
     "degerlendirme": 142,
     "yayim": 93
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "ATLA Religion Database",
+     "ProQuest",
+     "MLA International Bibliography",
+     "BASE (Bielefeld Academic Search Engine)",
+     "SOBİAD",
+     "DRJI (Directory of Research Journals Indexing)",
+     "ESJI (Eurasian Scientific Journal Index)",
+     "Academic Resource Index",
+     "İdealonline"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "mutalaa": {
@@ -2542,6 +2836,18 @@
     "on_kontrol": 14,
     "degerlendirme": 146,
     "yayim": 55
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "TR DİZİN",
+     "DOAJ"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "oi": {
@@ -2554,6 +2860,25 @@
     "on_kontrol": 15,
     "degerlendirme": 135,
     "yayim": 36
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "Ulrich’s Periodicals Directory | Başlangıç: 07/04/2025",
+     "DOAJ: Directory of Open Access Journals | Başlangıç: 12/06/2025",
+     "The Open Ukrainian Citation Index (OUCI) | Başlangıç: 28.03.2025",
+     "Bielefeld Academic Search Engine: Başlangıç 30/09/2024",
+     "İdealonline | Başlangıç: 23/10/2024",
+     "Worldcat OCLC | Başlangıç: 15/01/2025",
+     "ROAD: Directory of Open Access Scholarly Resources | Başlangıç: 15/01/2025",
+     "J-Gate | Başlangıç: 10/06/2025",
+     "İSAM"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "omuifd": {
@@ -2644,14 +2969,6 @@
   "rumeli": {
    "baslik": "Rumeli İslam Araştırmaları Dergisi",
    "okundu": "2026-10-31",
-   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
-   "gonderim": "acik",
-   "gonderim_tarih": "01.10.2023",
-   "sureler": {
-    "on_kontrol": 42,
-    "degerlendirme": 171,
-    "yayim": 102
-   },
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2659,6 +2976,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-10-31"
+   },
+   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
+   "gonderim": "acik",
+   "gonderim_tarih": "01.10.2023",
+   "sureler": {
+    "on_kontrol": 42,
+    "degerlendirme": 171,
+    "yayim": 102
    }
   },
   "rusuhder": {
@@ -2696,6 +3021,29 @@
     "on_kontrol": 17,
     "degerlendirme": 108,
     "yayim": 40
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "TR Dizin",
+     "Emerging Sources Citation Index (ESCI)",
+     "ERIHPLUS",
+     "Academic Search Complete Magazines and Journals (EBSCO)",
+     "Academic Search Premier Magazines and Journals (EBSCO)",
+     "Academic Search Ultimate Magazines and Journals (EBSCO)",
+     "Academic Search Ultimate Full-Text Subject (EBSCO)",
+     "The Belt and Road Initiative Reference Source Database (EBSCO)",
+     "Central & Eastern European Academic Source Database Coverage List (EBSCO)",
+     "Central & Eastern European Online Libary",
+     "MIAR",
+     "ATLA Religion Database (American Theological Library Association)",
+     "MLA - Modern Language Association Database (Modern Language Association of America)"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": true,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "sarkiat": {
@@ -2822,6 +3170,32 @@
     "on_kontrol": 8,
     "degerlendirme": 100,
     "yayim": 72
+   },
+   "dizin": {
+    "liste": [
+     "Emerging Sources Citation Index (ESCI)",
+     "DOAJ",
+     "TR Dizin",
+     "Emerging Sources Citation Index (ESCI) - 20/10/2022",
+     "TR DİZİN - 01/07/2010",
+     "Erih Plus - 20/10/2022",
+     "CNKI: China National Knowledge Infrastructure - 05/11/2022",
+     "DOAJ: Directory of Open Access Journals - 14.11.2023",
+     "İndex İslamicus - 01/08/2024",
+     "Bielefeld Academic Search Engine 01/01/2023",
+     "Gateway Bayern - 01/01/2023",
+     "EBSCO: Academic Search Main Edition - 01/04/2013",
+     "EBSCO: Academic Search Elite - 01/04/2013",
+     "EBSCO: Academic Search Premier - 01/04/2013",
+     "EBSCO: Academic Search Ultimate - 01/04/2013",
+     "EBSCO: Academic Search Complete - 01/04/2013",
+     "EBSCO: Academic Search Alumni Edition - 01/04/2013"
+    ],
+    "trdizin": true,
+    "doaj": true,
+    "esci": true,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "sosekev": {
@@ -2834,6 +3208,16 @@
     "on_kontrol": 26,
     "degerlendirme": 164,
     "yayim": 26
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "suitder": {
@@ -3102,6 +3486,19 @@
     "on_kontrol": 22,
     "degerlendirme": 121,
     "yayim": 37
+   },
+   "dizin": {
+    "liste": [
+     "TR Dizin",
+     "EBSCO Host",
+     "Erih Plus",
+     "Index Islamicus"
+    ],
+    "trdizin": true,
+    "doaj": false,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "tid": {
@@ -3224,6 +3621,21 @@
     "on_kontrol": 7,
     "degerlendirme": 84,
     "yayim": 49
+   },
+   "dizin": {
+    "liste": [
+     "DOAJ",
+     "ERIH PLUS (Accepted: 22/02/2024)",
+     "DOAJ: Directory of Open Access Journals (Accepted: 03/12/2018)",
+     "INDEX ISLAMICUS, Accepted: Volume/ Issue: 1/1 (July 2018)",
+     "EBSCO- Central & Eastern European Academic Source (CEEAS): Başlangıç/Indexing and Abstracting Start - 01.07.2020",
+     "The Philosopher’s Index (Indexing and Abstracting Start: Volume/Issue: 1/1 (July 2018)"
+    ],
+    "trdizin": false,
+    "doaj": true,
+    "esci": false,
+    "scopus": false,
+    "okundu": "2026-10-31"
    }
   },
   "umde": {
@@ -3420,5 +3832,5 @@
    }
   }
  },
- "dizin_tarama": "2026-10-31T12:12+03:00"
+ "dizin_tarama": "2026-10-31T12:30+03:00"
 }
