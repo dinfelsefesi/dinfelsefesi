@@ -155,6 +155,35 @@ def metne_bag(html_: str, kendi=None, kullanilan=None) -> str:
     return "".join(parcalar)
 
 
+def arguman_html(blok: str) -> str:
+    """Fiş metnindeki argüman kutusu. Biçim (arada boş satır olmadan):
+    ::: argüman Başlık
+    1. Öncül            (numaralı satırlar öncül ya da ara sonuçtur)
+    S. Sonuç
+    not: Kısa açıklama  (isteğe bağlı)
+    kaynak: Künye
+    :::"""
+    satirlar = [x.strip() for x in blok.strip().splitlines()]
+    baslik = satirlar[0][len("::: argüman"):].strip()
+    ogeler, kaynak, notlar = [], "", []
+    for x in satirlar[1:]:
+        if not x or x == ":::":
+            continue
+        m = re.match(r"^(\d+)\.\s+(.*)$", x)
+        if m:
+            ogeler.append(f'<li><span class="arg-no">{m.group(1)}</span><span>{satir_ici(m.group(2))}</span></li>')
+        elif x.startswith("S. "):
+            ogeler.append(f'<li class="arg-sonuc"><span class="arg-no">Sonuç</span><span>{satir_ici(x[3:])}</span></li>')
+        elif x.startswith("kaynak:"):
+            kaynak = x[7:].strip()
+        elif x.startswith("not:"):
+            notlar.append(x[4:].strip())
+    return (f'<figure class="arguman"><figcaption><span class="arg-tur">Argüman</span> {satir_ici(baslik)}</figcaption>'
+            f'<ol>{"".join(ogeler)}</ol>'
+            + "".join(f'<p class="arg-not">{satir_ici(n)}</p>' for n in notlar)
+            + (f'<p class="arg-kaynak">{satir_ici(kaynak)}</p>' if kaynak else "") + "</figure>")
+
+
 def govde(text: str, kendi=None) -> str:
     kullanilan = set()
     out = []
@@ -164,6 +193,8 @@ def govde(text: str, kendi=None) -> str:
             continue
         if blok.startswith("## "):
             out.append(f"<h2>{satir_ici(blok[3:])}</h2>")
+        elif blok.startswith("::: argüman"):
+            out.append(arguman_html(blok))
         else:
             out.append(f"<p>{metne_bag(satir_ici(blok), kendi, kullanilan) if kendi else satir_ici(blok)}</p>")
     return "".join(out)
@@ -368,6 +399,19 @@ h2{font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.25;
 .altlar li.dolu{border-color:var(--accent);background:var(--accent-soft)}
 .altlar li.plan .duz{color:var(--ink-soft)}
 .ilgili{font-style:italic;font-size:.88rem;color:var(--ink-soft)}
+/* Argüman kutuları (fiş metinlerinde) */
+.arguman{margin:1.5rem 0 1.7rem;background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--gold-logo);border-radius:10px;padding:.95rem 1.2rem 1rem;max-width:var(--measure)}
+.arguman figcaption{font-family:var(--display);font-size:1.12rem;color:var(--ink);margin-bottom:.55rem;line-height:1.3}
+.arg-tur{display:inline-block;font-family:var(--sans);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-logo);border-radius:999px;padding:.08rem .5rem;margin-right:.45rem;vertical-align:.18em}
+.arguman ol{list-style:none;margin:0;padding:0}
+.arguman li{display:grid;grid-template-columns:3.1rem 1fr;gap:.5rem;padding:.32rem 0;border-top:1px dashed var(--rule);font-size:.97rem;line-height:1.45}
+.arguman li:first-child{border-top:0}
+.arg-no{font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--accent);text-align:right;padding-top:.1rem}
+.arguman li.arg-sonuc{border-top:1px solid var(--accent);margin-top:.15rem;padding-top:.45rem;font-weight:500}
+.arguman li.arg-sonuc .arg-no{color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.arg-not{margin:.6rem 0 0;font-size:.9rem;color:var(--ink-soft)}
+.arg-kaynak{margin:.5rem 0 0;font-size:.84rem;font-style:italic;color:var(--ink-soft)}
+@media (max-width:520px){.arguman{padding:.8rem .85rem}.arguman li{grid-template-columns:2.9rem 1fr;gap:.4rem}.arguman li.arg-sonuc .arg-no{font-size:.7rem}}
 
 /* Listeler */
 .liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
