@@ -9,6 +9,8 @@
 #   yayin_modeli   Taramada okunamazsa bu değer gösterilir.
 #   kabul_donemi   Elle tutulur. Dergiler bunu serbest metinle yazdığı için tarama değiştirmez.
 #   ad_elle        true ise dergi adı DergiPark'tan okunan adla değiştirilmez.
+#   listeye_giris  ilk-liste: DERGİLER.xlsx; tarama: DergiPark din felsefesi taraması;
+#                  ilahiyat-fakulteleri: ilahiyat ve İslami ilimler fakültesi dergilerinin tamamlanması (31.10.2026)
 #   onceki_kodlar  Adı değişen derginin eski DergiPark kodları; eski makaleleri bu dergiye sayılır.
 #   dergipark_disi DergiPark'tan ayrılmış dergi; gece taraması bu dergiye bakmaz.
 # Makale sayıları burada tutulmaz, derlemede data/dergipark/din_felsefesi.jsonl dosyasından hesaplanır.
@@ -173,6 +175,8 @@
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   kabul_donemi: Haziran sayısı için 1-28 Şubat; Aralık sayısı için 1-31 Ağustos
   listeye_giris: tarama
+  onceki_kodlar:
+  - nkuifd
 - kod: ilted
   ad: İlahiyat Tetkikleri Dergisi
   sahip: Atatürk Üniversitesi İlahiyat Fakültesi
@@ -185,6 +189,8 @@
   yayin_modeli: Süreli Yayın (Nisan - Ağustos - Aralık)
   not: sürekli açık
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - atauniilah
 - kod: sirnakifd
   ad: Şırnak Üniversitesi İlahiyat Fakültesi Dergisi
   sahip: Şırnak Üniversitesi İlahiyat Fakültesi
@@ -237,6 +243,8 @@
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   kabul_donemi: Haziran sayısı için 15 Ocak - 15 Nisan; Aralık sayısı için 15 Temmuz - 15 Ekim (erken kapanabilir)
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - amauifd
 - kod: dergiabant
   ad: Dergiabant
   sahip: Bolu Abant İzzet Baysal Üniversitesi İlahiyat Fakültesi
@@ -391,6 +399,8 @@
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   kabul_donemi: Haziran sayısı için 1 Ocak'tan, Aralık sayısı için 1 Temmuz'dan itibaren; yeterli makalede kapanıyor
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - harranilahiyatdergisi
 - kod: mutefekkir
   ad: Mütefekkir
   sahip: Aksaray Üniversitesi İslami İlimler Fakültesi
@@ -560,6 +570,8 @@
   yayin_modeli: Süreli Yayın (Nisan - Ağustos - Aralık)
   not: sürekli açık
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - iuilah
 - kod: esoguifd
   ad: Eskişehir Osmangazi Üniversitesi İlahiyat Fakültesi Dergisi
   sahip: Eskişehir Osmangazi Üniversitesi
@@ -648,6 +660,8 @@
   not: 1 ağustosta açılıyor
   kabul_donemi: Haziran sayısı için 1-28 Şubat; Aralık sayısı için 1-31 Ağustos
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - katuifd
 - kod: cuilah
   ad: Çukurova Üniversitesi İlahiyat Fakültesi Dergisi
   sahip: Çukurova Üniversitesi İlahiyat Fakültesi
@@ -1267,6 +1281,8 @@
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   kabul_donemi: Ocak ve Temmuz başında kısa süre açılıyor
   listeye_giris: tarama
+  onceki_kodlar:
+  - yyuifd
 - kod: asar
   ad: ÂSÂR Akademik Dinî Araştırmalar Dergisi
   sahip: Erzincan Binali Yıldırım Üniversitesi
@@ -1389,6 +1405,8 @@
     scopus: false
   yayin_modeli: Süreli Yayın (Mart - Eylül)
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - comuifd
 - kod: mizan
   ad: 'Mizanü''l-Hak: İslami İlimler Dergisi'
   sahip: İzmir Kâtip Çelebi Üniversitesi İslami İlimler Fakültesi
@@ -1503,6 +1521,8 @@
     scopus: false
   yayin_modeli: Süreli Yayın (Haziran - Aralık)
   listeye_giris: ilk-liste
+  onceki_kodlar:
+  - buiifd
 - kod: isad
   ad: İslam Araştırmaları Dergisi
   sahip: Türkiye Diyanet Vakfı İslam Araştırmaları Merkezi
@@ -1514,3 +1534,192 @@
     scopus: true
   yayin_modeli: Süreli Yayın (Ocak - Temmuz)
   listeye_giris: ilk-liste
+- kod: aduilahiyatdergisi
+  ad: ADÜ İlahiyat Dergisi
+  sahip: Aydın Adnan Menderes Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/aduilahiyatdergisi
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: akdenizilahiyatdergisi
+  ad: Akdeniz İlahiyat Dergisi
+  sahip: Akdeniz Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/akdenizilahiyatdergisi
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: aruiad
+  ad: ARÜ İlahiyat Araştırmaları Dergisi
+  sahip: Ardahan Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/aruiad
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: ahiilahiyat
+  ad: Ahi İlahiyat Dergisi
+  sahip: Kırşehir Ahi Evran Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/ahiilahiyat
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  onceki_kodlar:
+  - ahif
+  listeye_giris: ilahiyat-fakulteleri
+- kod: darulhadisdergisi
+  ad: Darulhadis İslami Araştırmalar Dergisi
+  sahip: Çankırı Karatekin Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/darulhadisdergisi
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: eid
+  ad: Edebali İlahiyat Dergisi
+  sahip: Bilecik Şeyh Edebali Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/eid
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: idrak
+  ad: İdrak Dini Araştırmalar Dergisi
+  sahip: Giresun Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/idrak
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: haid
+  ad: Hakkari İlahiyat Dergisi
+  sahip: Hakkari Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/haid
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: antakiyat
+  ad: Antakiyat
+  sahip: Hatay Mustafa Kemal Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/antakiyat
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: ifder
+  ad: Iğdır Üniversitesi İlahiyat Fakültesi Dergisi
+  sahip: Iğdır Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/ifder
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: buiif
+  ad: Batman Üniversitesi İslami İlimler Hakemli Dergisi
+  sahip: Batman Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/buiif
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: hikem
+  ad: HİKEM
+  sahip: Karamanoğlu Mehmetbey Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/hikem
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: mecelle
+  ad: MECELLE İslâmî Araştırmalar Dergisi
+  sahip: Fatih Sultan Mehmet Vakıf Üniversitesi İslami İlimler Fakültesi
+  link: https://dergipark.org.tr/tr/pub/mecelle
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: balagh
+  ad: BALAGH - Journal of Islamic and Humanities Studies
+  sahip: Karabük Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/balagh
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: kitabiyatilahiyat
+  ad: Kitabiyat İlahiyat Araştırmaları İnceleme-Eleştiri Dergisi
+  sahip: Samsun Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/kitabiyatilahiyat
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: maide
+  ad: Manisa İlahiyat Dergisi (MAİDE)
+  sahip: Manisa Celal Bayar Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/maide
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
+- kod: sinopid
+  ad: Sinop İlahiyat Dergisi
+  sahip: Sinop Üniversitesi İlahiyat Fakültesi
+  link: https://dergipark.org.tr/tr/pub/sinopid
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: null
+  listeye_giris: ilahiyat-fakulteleri
