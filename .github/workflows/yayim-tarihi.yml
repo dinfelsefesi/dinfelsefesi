@@ -1,0 +1,34 @@
+name: Makale yayım tarihleri
+# DergiPark makalelerinin yayımlanma tarihini makale sayfalarından toplar. Her ayın 2'sinde hasattan sonra çalışır.
+on:
+  schedule:
+    - cron: "41 7 2 * *"
+  workflow_dispatch:
+    inputs:
+      dakika:
+        description: "En fazla çalışma süresi (dakika)"
+        default: "50"
+permissions:
+  contents: write
+concurrency:
+  group: yayim-tarihi
+  cancel-in-progress: false
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/yayim_tarihi.py --dakika "${{ github.event.inputs.dakika || '50' }}"
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "yayim-tarihi"
+          git config user.email "dinfelsefesi@gmail.com"
+          git add data/dergipark/yayim_tarihi.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Makale yayım tarihleri ($(date -u +%Y-%m-%d))"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
