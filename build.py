@@ -1800,6 +1800,26 @@ def yazar_adi(y: str) -> str:
     return " ".join(harf_duzelt(p, "tr-TR") if len(p) > 1 and p.isupper() else p for p in y.split())
 
 
+_YAYIM = None
+
+
+def yayim_tarihi(kimlik) -> str:
+    """Makalenin DergiPark sayfasındaki yayımlanma tarihi (scripts/yayim_tarihi.py); bilinmiyorsa boş."""
+    global _YAYIM
+    if _YAYIM is None:
+        d = ROOT / "data" / "dergipark" / "yayim_tarihi.json"
+        _YAYIM = json.loads(d.read_text(encoding="utf-8")) if d.exists() else {}
+    return _YAYIM.get(str(kimlik)) or ""
+
+
+def ay_yil(tarih: str) -> str:
+    """'2026-06-28' -> 'Haziran 2026'."""
+    try:
+        return f"{AYLAR[int(tarih[5:7]) - 1]} {tarih[:4]}"
+    except (ValueError, IndexError):
+        return tarih[:4]
+
+
 def dp_kaydi(r, x, duzeltme, dps) -> dict:
     """DergiPark OAI kaydını sitedeki makale biçimine çevirir."""
     basliklar = r.get("baslik") or {}
@@ -1822,7 +1842,9 @@ def dp_kaydi(r, x, duzeltme, dps) -> dict:
         yazarlar.append(yazar_adi(f"{ad_.strip()} {soy_.strip()}".strip() if ad_ else y.strip()))
     return {
         "id": r["id"], "baslik": baslik, "yazarlar": yazarlar, "dergi": dergi.strip(), "cilt_sayi": cilt_sayi,
-        "yil": ((r.get("tarih") or [""])[0] or "")[:4], "tarih": (r.get("tarih") or [""])[0] or "",
+        # OAI kaydındaki tarih çoğunlukla gönderilme tarihidir; makale sayfasından okunan yayım tarihi önce gelir
+        "yil": (yayim_tarihi(r["id"]) or (r.get("tarih") or [""])[0] or "")[:4],
+        "tarih": yayim_tarihi(r["id"]) or (r.get("tarih") or [""])[0] or "", "yayim": bool(yayim_tarihi(r["id"])),
         "baglanti": doi or (baglanti[0] if baglanti else ""), "doi": bool(doi),
         "konular": [] if x.get("yayin_turu") else list(x.get("basliklar") or []),
         "ilgili": list(x.get("ilgili_basliklar") or []), "tur": x.get("yayin_turu") or "",
@@ -3104,7 +3126,7 @@ def dergi_verisi() -> tuple[list, dict]:
         if not kod:
             continue
         gorulen.add(r["id"])
-        tarih = ((r.get("tarih") or [""])[0] or "")[:10]
+        tarih = yayim_tarihi(r["id"]) or ((r.get("tarih") or [""])[0] or "")[:10]
         bag_ = next((b for b in r.get("baglanti") or [] if "dergipark.org.tr" in b), (r.get("baglanti") or [""])[0])
         makale.setdefault(kod, []).append({
             "id": r["id"], "baslik": (r.get("baslik") or {}).get("tr-TR") or next(iter((r.get("baslik") or {}).values()), ""),
@@ -3527,7 +3549,9 @@ def akademide_bu_ay_html() -> str:
                   '<p class="aciklama-kisa gn-not">Unvanlar AVESİS (ayda bir) ve YÖK Akademik kayıtlarından, doktoralar YÖK kayıtlarından izlenir. '
                   'Doktorasını tamamlayan, doçent ve profesör olan hocalar burada tebrik edilir.</p>')
     # Son yayımlanan çalışmalar: yayım günü bilinen, bir başlığa bağlı çalışmalar
-    yayin = [m for m in dp_veri() if len(str(m.get("tarih") or "")) >= 10 and (m["konular"] or m["ilgili"])]
+    yayim_var = any(m.get("yayim") for m in dp_veri())  # yayım tarihleri henüz toplanmadıysa eski davranış
+    yayin = [m for m in dp_veri() if (m.get("yayim") if yayim_var else len(str(m.get("tarih") or "")) >= 10)
+             and (m["konular"] or m["ilgili"])]
     yayin.sort(key=lambda m: m["tarih"], reverse=True)
     satir = ""
     for m in yayin[:6]:
@@ -3535,7 +3559,7 @@ def akademide_bu_ay_html() -> str:
         konu = ", ".join(FIS[("baslik", b)]["ad"] for b in (m["konular"] or m["ilgili"])
                          if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))[:80]
         satir += (f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi} · '
-                  f'{e(tr_date(m["tarih"][:10]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
+                  f'{e(ay_yil(m["tarih"]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
     yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
                  if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
     return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademi Güncel'
