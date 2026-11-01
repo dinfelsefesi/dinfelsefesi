@@ -253,25 +253,88 @@
   "gun": "2026-11-01"
  },
  {
-  "date": "2026-02-10",
-  "title_tr": "Paul Tillich Felsefesinde Din-Sanat İlişkisi",
-  "title_en": "The Relationship Between Religion and Art in Paul Tillich's Philosophy",
-  "authors": "Fırat Karadağ",
-  "journal": "Trabzon İlahiyat Dergisi",
+  "date": "2026-06-28",
+  "title_tr": "Ahlaki Öznenin İnşasında İbadet Disiplini: Akseki'nin Kant'la Diyaloğu Üzerinden Bir Çözümleme",
+  "title_en": "The Discipline of Worship in the Construction of the Moral Subject: Akseki in Dialogue with Kant",
+  "authors": "Abdullah Akgül",
+  "journal": "Pamukkale Divinity",
   "year": "2026",
-  "doi": "10.33718/tid.1886013",
+  "doi": "10.17859/paudiv.1980761",
   "url": "",
   "open_access": "evet",
-  "lead": "Karadağ, Tillich'in nihai ilgi ve sembol kuramına dayanarak bir sanat eserinin dinselliğinin konusuna değil, üslubuna ve derinliğine bakılarak değerlendirilmesi gerektiğini gösteriyor.",
-  "summary_tr": "Makalenin sorusu, din ile sanat arasındaki ilişkinin ortak konuların ötesinde daha derin bir zemine dayanıp dayanmadığı ve bir sanat eserinin dinselliğinin üslup, içerik ve sembolik işlev bakımından nasıl değerlendirileceğidir. Karadağ bu soruyu Paul Tillich'in Mutlak, nihai ilgi ve sembol kavramları üzerinden ele almaktadır.\n\nTillich'e göre dinin özü nihai ilgidir. Mutlak koşulluluğu aşan bir zemin olduğu için dinî ve estetik ifadeler zorunlu olarak sembolik bir karakter taşır. Sanat da bu açıdan yalnızca güzelleştirme değildir, üslup ve biçim aracılığıyla varlığın derinliğine işaret eder. Yazar, Tillich'in eserlerin dinselliğini değerlendirmek için kullandığı dört düzeyi öne çıkarır. Bunlar sanatın dolaylı dinselliği, natüralist ve dışavurumcu üslup ayrımı, üslup ile içerik arasındaki uygunsuzluk sorunu ve dinsel üslup ile dinsel içeriğin birlikteliğidir. Bu ölçütler bir eserin dinselliğini konusuna indirgemeden incelemeye imkân verir.\n\nSembol kuramı açısından makale, sembolün temsil ettiği şeye katılması, kendini aşma gücü, doğup olgunlaşıp ölmesi ve \"kutsal boşluk\" kavramı üzerinde durur. Bu yaklaşıma göre çağdaş dinî sanatın görevi ölmüş sembolleri tekrarlamak değil, içsel bir zorunlulukla yeni sembolik şeffaflıklar üretmektir. Sonuç olarak Tillich din ile sanatı birbirinin yerine koymaz. İkisini aynı varoluşsal kaynaktan beslenen ve farklı işlevler üstlenen iki kesişen alan olarak görür. Dinselliğin ölçütü ikonografik içerikte değil, sembolik sahicilikte ve üslup ile içeriğin uyumunda aranır.",
-  "why_tr": "Din ve sanat ilişkisi, Türkçe din felsefesinde henüz az çalışılmış bir başlıktır. Tillich'in sanat eserlerini değerlendirmek için önerdiği dört düzeyli ölçüt, bu alanda çalışmak isteyenlere doğrudan kullanılabilecek bir çerçeve sunuyor. Makale, Tillich'in din felsefesindeki sembol kuramını tanımak isteyen okurlar için de uygun bir giriş.",
+  "lead": "Akgül, Ahmet Hamdi Akseki'nin ahlak düşüncesinde ibadetin ahlaki öznenin oluşumundaki rolünü Kant'ın ahlak felsefesiyle karşılaştırarak inceliyor.",
+  "summary_tr": "Çalışmanın hareket noktası, modern ahlak felsefesindeki bir gerilimdir. Ahlak yasası evrensel bir normatif forma sahiptir, ancak bu formun arzular ve tutkular arasında yaşayan insanın gündelik hayatında nasıl sürdürüleceği ayrı bir sorudur. Akgül, Ahmet Hamdi Akseki'yi bu soruyu ahlaki öznenin inşası üzerinden düşünen bir ahlak düşünürü olarak okumaktadır.\n\nMakaleye göre Akseki, Kant'ın menfaatsiz ödev idealini paylaşır. Bununla birlikte salt akli bir temellendirmenin ortalama insanı arzular karşısında ödevine sadık tutmaya yetmediğini düşünür ve normatif ilkeyi yaşantıya yerleştiren pratik bir disiplinin gerekli olduğunu savunur. Yazar, Kant'ın temel metinleriyle Akseki'nin eserlerini birlikte okuyan karşılaştırmalı bir metin çözümlemesi yapar. Akseki ibadeti Kant tartışması içinde doğrudan ele almadığı için ibadet ile ahlak arasındaki bağ, onun Kant eleştirisine atfedilmemiş, kendi külliyatından yeniden kurulmuştur.\n\nİnceleme, iki düşünürün menfaatsiz vazife idealinde ve ritüalizm eleştirisinde birbirine yaklaştığını, ahlaki sürekliliğin dayandığı zeminde ise ayrıldığını gösterir. Bu zemin Kant'ta aklın postulatı, Akseki'de vahyin otoritesidir. Makale, ibadetin vicdanı uyanık tutma, havf ile recâ arasında denge kurma, iradeyi terbiye etme ve niyeti ihlâsla arındırma işlevleriyle normatif yasayı yerleşik bir ahlaki karaktere dönüştürdüğü sonucuna varır.",
+  "why_tr": "İbadet ile ahlak arasındaki ilişki, ibadet felsefesinin temel sorularından biridir. Makale, Cumhuriyet dönemi din düşüncesinin önemli isimlerinden Akseki'yi Kant'la karşılaştırmalı olarak okuyarak bu soruyu Türk düşünce tarihi içinden ele alıyor.",
   "tags": [
-   "Paul Tillich",
-   "din ve sanat",
-   "sembol",
-   "nihai ilgi"
+   "ibadet",
+   "ahlak",
+   "Ahmet Hamdi Akseki",
+   "Kant"
   ],
   "gun": "2026-11-02"
+ },
+ {
+  "date": "2026-10-30",
+  "title_tr": "Felsefi Rasyonalizmin Tahakkümünden İnancı Kurtarmak: François Laruelle ve \"Gizli Teoloji\"",
+  "title_en": "Liberating Faith from the Domination of Philosophical Rationalism: François Laruelle and \"Clandestine Theology\"",
+  "authors": "Mehmet Fatih Kalın",
+  "journal": "Kilikya Felsefe Dergisi",
+  "year": "2026",
+  "doi": "",
+  "url": "https://dergipark.org.tr/tr/pub/kilikya/article/1958072",
+  "open_access": "evet",
+  "lead": "Kalın, François Laruelle'in felsefe-olmayan düşüncesine dayanarak inancın felsefi rasyonalizmin ve kurumsal dogmatizmin egemenliğinden kurtarılabileceğini savunuyor.",
+  "summary_tr": "Makaleye göre modern felsefe tarihinde inanç ya rasyonel sistemlerin bir nesnesine dönüştürülerek evcilleştirilmiş ya da kurumsal yapıların dogmatik otoritesi tarafından sahiplenilmiştir. Kalın bu iki durumun dışında bir imkân aramakta ve bunu Fransız düşünür François Laruelle'in felsefe-olmayan (non-philosophy) adını verdiği yaklaşımda ve radikal içkinlik düşüncesinde bulmaktadır.\n\nYazar önce Laruelle'in \"Yeterli Felsefe İlkesi\" ve \"Yeterli Kilise İlkesi\" kavramlarıyla akıl ile inanç arasında kurulan hiyerarşik ilişkiyi çözümler. Ardından inancın, felsefi kararın sınırlı kavrayışına karşı \"Bir-içinde-Görüş\" (Vision-in-One) ve \"gizli teoloji\" (clandestine theology) olarak nasıl bir özgürleşme alanı açabileceğini temellendirir. Makale, felsefe-olmayan teze yöneltilebilecek akıl dışılık ve rölativizm itirazlarını da önceden cevaplamaya çalışır.\n\nKalın'a göre inanç, göksel bir dogmatizme değil, Laruelle'in \"Sıradan İnsan\" (Ordinary Man) dediği çıplak ve yönlendirilemez gerçekliğe dayanır. Makale inancı felsefeyle uzlaştırmayı ya da çatıştırmayı önermez. Bunun yerine felsefeyi inancın kurucu içkinliğinden tek taraflı olarak dışarıda bırakan bir \"geleceğin teolojisi\" imkânını tartışmaya açar.",
+  "why_tr": "Laruelle, Türkçe din felsefesi literatüründe neredeyse hiç ele alınmamış bir düşünürdür. Makale, akıl ile inanç ilişkisini analitik gelenekten farklı olarak çağdaş Kıta felsefesinin kavramlarıyla tartıştığı için din epistemolojisine farklı bir bakış sunuyor.",
+  "tags": [
+   "inanç",
+   "François Laruelle",
+   "akıl ve inanç",
+   "Kıta felsefesi"
+  ],
+  "gun": "2026-11-03"
+ },
+ {
+  "date": "2026-10-24",
+  "title_tr": "Necati Öner'de Eleştirel Rasyonalizm, İnsan Hürriyeti ve Determinizm",
+  "title_en": "Critical Rationalism, Human Freedom and Determinism in Necati Öner's Thought",
+  "authors": "Sait Kar, Adem Öz",
+  "journal": "MANAS Sosyal Araştırmalar Dergisi",
+  "year": "2026",
+  "doi": "",
+  "url": "https://dergipark.org.tr/tr/pub/mjss/article/1890644",
+  "open_access": "evet",
+  "lead": "Kar ve Öz, Necati Öner'in hürriyet ve determinizm anlayışını Popper'ın eleştirel rasyonalizmiyle karşılaştırarak inceliyor.",
+  "summary_tr": "Makale, Türk din felsefesinin kurucu isimlerinden Necati Öner'in insan hürriyeti ve determinizm problemine yaklaşımını konu edinmektedir. Yazarlar Öner'in eleştirel zihniyet, seçme hürriyeti, eylem hürriyeti, vicdan, hoşgörü ve ilahî irade kavramlarını, Karl Popper'ın eleştirel rasyonalizminde öne çıkan yanılabilirlik, yanlışlanabilirlik, çoğulculuk ve açık toplum vurgularıyla birlikte değerlendirmektedir.\n\nMakalenin temel iddiası, Öner'in hürriyet anlayışı ile Popper'ın eleştirel rasyonalizmi arasında doğrudan bir özdeşlik ya da etkilenme ilişkisi bulunmadığıdır. İki düşünür arasındaki yakınlık yorumlayıcı bir yakınlıktır ve yanılabilir bilgi, eleştirel akıl ve hoşgörü fikirleri üzerinden kurulabilir. Yazarlara göre Öner, insan özgürlüğünü yalnızca epistemolojik ve toplumsal bir mesele olarak görmez. Onu vicdan, manevi hürriyet ve Tanrı'nın sınırsız iradesiyle ilişkilendirerek teolojik ve ahlaki bir zemine oturtur.\n\nMakale, Öner'in determinizm eleştirisinin yalnızca fizikteki indeterminizmden değil, insanın ahlaki ve vicdani tecrübesinden de beslendiğini gösterir. Böylece Öner'in hürriyet tartışmasına katkısı, Popper'la buluştuğu ve ondan ayrıldığı noktalar üzerinden belirginleştirilir.",
+  "why_tr": "Necati Öner, Türkiye'de din felsefesinin akademik bir disiplin olarak kurulmasında önemli bir yere sahiptir. Makale, onun hürriyet anlayışını çağdaş bir bilim felsefesi yaklaşımıyla karşılaştırarak Türk din felsefesi geleneğinin kendi kaynaklarıyla tartışılmasına katkı sunuyor.",
+  "tags": [
+   "Necati Öner",
+   "hürriyet",
+   "determinizm",
+   "eleştirel rasyonalizm"
+  ],
+  "gun": "2026-11-04"
+ },
+ {
+  "date": "2026-07-15",
+  "title_tr": "İlahiyat Metafiziğin Nesi Oluyor? Rasyonel Metafizikten Varoluşçu Teolojiye",
+  "title_en": "What is Theology to Metaphysics? From Rational Metaphysics to Existential Theology",
+  "authors": "Rafız Manafov",
+  "journal": "Felsefe Dünyası",
+  "year": "2026",
+  "doi": "10.58634/felsefedunyasi.1788792",
+  "url": "",
+  "open_access": "evet",
+  "lead": "Manafov, metafizik, teoloji ve ilahiyat arasındaki ilişkinin Aristoteles'ten günümüze nasıl değiştiğini izliyor ve varoluşçu bir ilahiyat anlayışını savunuyor.",
+  "summary_tr": "Makalenin sorusu, ilahiyatın metafizik karşısındaki konumudur. İlahiyat metafiziğin bir parçası mı, uzantısı mı, yoksa ona karşıt bir alan mıdır? Manafov bu soruyu metafizik, teoloji ve ilahiyat kavramlarının tarihsel gelişimi üzerinden ele almaktadır.\n\nYazara göre Aristoteles'te teoloji metafiziğin en üst alanı olarak görülür. Orta Çağ'da iki alan iç içe geçer. Modern dönemde ise özellikle Descartes ve Kant'ın eleştirileriyle teoloji ve metafizik epistemolojik ve ontolojik bakımdan birbirinden ayrılır. İlahiyat da Antik Çağ'dan günümüze uzanan süreçte akademik bir disipline dönüşür.\n\nMakale bu geleneksel ayrımları aşmayı amaçlayan varoluşsal ilahiyat yaklaşımını öne çıkarır ve onun güçlendirilmesi gerektiğini savunur. Manafov'a göre insan, bir yandan maddi ihtiyaçları olan biyolojik bir varlık, öte yandan anlam arayan ve anlam üreten bilinçli bir öznedir. Bu yüzden insanı anlamaya yönelik yaklaşımlar katı rasyonalist tutumlarla sınırlı kalamaz, daha bütüncül ve varoluşsal bir bakışa ihtiyaç duyar.",
+  "why_tr": "İlahiyat, teoloji ve metafizik kavramları Türkçede sık sık birbirinin yerine kullanılır. Makale, bu kavramların tarihsel ilişkisini toplu biçimde ortaya koyduğu için din felsefesinin metafizikle ilişkisini düşünen okurlar için yararlı bir çerçeve sunuyor.",
+  "tags": [
+   "metafizik",
+   "ilahiyat",
+   "rasyonel teoloji",
+   "varoluşçuluk"
+  ],
+  "gun": "2026-11-05"
  },
  {
   "date": "2026-01-06",
@@ -292,6 +355,27 @@
    "Kierkegaard",
    "Tanrı'nın kanıtlanabilirliği"
   ],
-  "gun": "2026-11-03"
+  "gun": "2026-11-06"
+ },
+ {
+  "date": "2026-06-28",
+  "title_tr": "Vahiyden Bağımsız Ahlakın İmkânı: Deistik Ahlakın Ontolojik ve Epistemik Temelleri Üzerine Eleştirel Bir İnceleme",
+  "title_en": "The Possibility of Morality Independent of Revelation: A Critical Inquiry into the Ontological and Epistemic Foundations of Deistic Ethics",
+  "authors": "Zafer Çaylı",
+  "journal": "Marifetname",
+  "year": "2026",
+  "doi": "10.47425/marifetname.vi.1857707",
+  "url": "",
+  "open_access": "evet",
+  "lead": "Çaylı, deizmin ahlakı akıl ve doğa üzerine temellendirme girişimini teistik ahlakla karşılaştırarak eleştiriyor.",
+  "summary_tr": "Vahiyden ve dinden bağımsız rasyonel bir ahlakın mümkün olup olmadığı, din felsefesinin güncel sorularından biridir. Çaylı bu soruyu deizm örneği üzerinden ele almaktadır. Deizmde Tanrı ahlakın kuruluşunda edilgen bir konumdadır. Ahlakı temellendirme işi ise akla ve doğaya bırakılır. Yazara göre bu durum deistik ahlakın etki alanı, nesnelliği, sürdürülebilirliği ve evrenselliği konusunda sorular doğurur.\n\nMakale Tanrı, vahiy, peygamber, ahlak, akıl, vicdan ve doğa kavramlarını çözümleyerek deistik ahlakın imkânını ve teistik ahlakla ortak ve farklı yönlerini inceler. Deistik bir ahlakın mümkün olup olmadığı, bu ahlakın özgün, tutarlı, bağlayıcı ve evrensel olup olmadığı ve insanlığın tecrübe ettiği sorunlara bir çözüm sunup sunamadığı sorularını sorar. Bunun için din felsefesinin temel kaynaklarına ve kimi deist düşünürlerin eserlerine dayanarak deistik ahlakın ontolojik temelini, epistemik değerini ve aksiyolojik durumunu inceler.\n\nÇaylı'ya göre akıl ve doğa üzerine kurulmuş bir ahlakın nesnellik, evrensellik ve uygulama bakımından eksikleri bulunmaktadır. Makale, akıl ve doğanın ötesine uzanan bir ahlak anlayışına ihtiyaç olduğu sonucuna varır.",
+  "why_tr": "Deizm son yıllarda Türkiye'de kamuoyunun da gündemine giren bir tartışmadır. Makale, deizmin ahlak anlayışını din felsefesi açısından sistemli biçimde ele aldığı için Din ve Ahlak başlığıyla ilgilenen okurlar ve bu tartışmayı derslerinde işleyen hocalar için yararlı bir kaynak.",
+  "tags": [
+   "deizm",
+   "ahlak",
+   "vahiy",
+   "akıl"
+  ],
+  "gun": "2026-11-07"
  }
 ]
