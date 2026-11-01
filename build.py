@@ -2995,7 +2995,7 @@ ul.d-liste>li[hidden]{display:none}
 .d-ad:hover{color:var(--accent)}
 .d-ad-satir{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .1rem}
 .d-ad-satir .rozet{margin-left:.3rem}
-.rozet.d-var{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent}
+.rozet.d-var{color:var(--gold);background:color-mix(in srgb,var(--gold-logo) 14%,var(--card));border-color:color-mix(in srgb,var(--gold-logo) 55%,transparent)}
 .rozet.d-bilinmez{border-style:dashed}
 .d-sahip{font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);margin:.1rem 0 0}
 .d-bilgi{display:grid;grid-template-columns:6.2rem minmax(0,1fr);gap:.3rem 1rem;margin:.55rem 0 0;font-family:var(--sans);font-size:.86rem;align-items:baseline}
@@ -3007,7 +3007,7 @@ ul.d-liste>li[hidden]{display:none}
 .d-aylar.surekli span{background:var(--accent-soft);color:var(--accent-ink)}
 .d-durum{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.03em;padding:.02rem .5rem;border-radius:999px;margin-right:.45rem}
 .d-durum.acik{background:#dfeee4;color:#2f6b4a}
-.d-durum.kapali{background:var(--gold-soft);color:var(--gold)}
+.d-durum.kapali{background:#f6e1df;color:#a3352c}
 .d-not{color:var(--ink-soft);font-style:italic}
 .d-sayi{text-align:right;font-family:var(--sans)}
 .d-sayi b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;line-height:1;color:var(--accent-ink);font-variant-numeric:tabular-nums}
