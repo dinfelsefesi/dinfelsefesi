@@ -3553,6 +3553,15 @@ def akademide_bu_ay_html() -> str:
     yayin = [m for m in dp_veri() if (m.get("yayim") if yayim_var else len(str(m.get("tarih") or "")) >= 10)
              and (m["konular"] or m["ilgili"])]
     yayin.sort(key=lambda m: m["tarih"], reverse=True)
+    # Bu ay ya da geçen ay en az üç çalışma yayımlandıysa yalnızca o ayın çalışmaları gösterilir ve başlıkta ay yazar
+    yayin_ayi = ""
+    if yayim_var:
+        gecen = (bugun_.replace(day=1) - timedelta(days=1))
+        for y_, a_ in ((bugun_.year, bugun_.month), (gecen.year, gecen.month)):
+            o_ay = [m for m in yayin if m["tarih"][:7] == f"{y_}-{a_:02d}"]
+            if len(o_ay) >= 3:
+                yayin, yayin_ayi = o_ay, f"{AYLAR[a_ - 1]} {y_}"
+                break
     satir = ""
     for m in yayin[:6]:
         yazar, dergi = dp_kunye(m)
@@ -3566,7 +3575,7 @@ def akademide_bu_ay_html() -> str:
             f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
             f'<div class="gn-izgara">'
             f'<section class="gn-kart gn-tebrik"><h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3>{tebrik}</section>'
-            f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar</h3>{yayinlar_}</section>'
+            f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar{f" <span class=\"gn-ay\">{yayin_ayi}</span>" if yayin_ayi else ""}</h3>{yayinlar_}</section>'
             f'</div></section>')
 
 
