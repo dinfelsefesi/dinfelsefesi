@@ -3571,8 +3571,7 @@ def akademide_bu_ay_html() -> str:
                   f'{e(ay_yil(m["tarih"]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
     yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
                  if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
-    return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademi Güncel'
-            f' <span class="gn-ay">{AYLAR[bugun_.month - 1]} {bugun_.year}</span></h2></div>'
+    return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademi Güncel</h2></div>'
             f'<div class="gn-izgara">'
             f'<section class="gn-kart gn-tebrik"><h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3>{tebrik}</section>'
             f'<section class="gn-kart"><h3>Son yayımlanan çalışmalar{f" <span class=\"gn-ay\">{yayin_ayi}</span>" if yayin_ayi else ""}</h3>{yayinlar_}</section>'
