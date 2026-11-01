@@ -2985,7 +2985,10 @@ DERGI_CSS = """
 .d-arac .tur-secici button{font-family:var(--sans);font-size:.84rem;padding:.25rem .75rem;border-radius:6px}
 .d-arac select{font:inherit;font-family:var(--sans);font-size:.88rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:.3rem .6rem}
 .d-arac label.d-sec{display:flex;align-items:center;gap:.5rem;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
-ul.d-liste{list-style:none;margin:0;padding:0;max-width:60rem}
+ul.d-liste{list-style:none;margin:0;padding:0;max-width:60rem;counter-reset:dergi}
+ul.d-liste>li{counter-increment:dergi}
+.d-ad-satir::before{content:counter(dergi) ".";font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--gold);min-width:1.9rem;margin-right:.15rem}
+.d-sayi-kisa{display:none}
 ul.d-liste>li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem;gap:.35rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--rule)}
 ul.d-liste>li[hidden]{display:none}
 .d-ad{font-family:var(--display);font-size:1.22rem;font-weight:500;line-height:1.25;color:var(--ink);text-decoration:none}
@@ -3024,9 +3027,11 @@ details.d-makaleler li .yazar{display:block;font-size:.82rem;font-style:italic;c
 .d-sirala button{white-space:nowrap}
 @media (max-width:640px){
   ul.d-liste>li{grid-template-columns:minmax(0,1fr)}
-  .d-sayi{text-align:left;display:flex;align-items:baseline;gap:.6rem;order:-1}
-  .d-sayi b{font-size:1.5rem}
-  .d-sayi small{margin:0}
+  .d-sayi{display:none}
+  .d-sayi-kisa{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .5rem;margin:.3rem 0 0;font-family:var(--sans);font-size:.86rem;color:var(--ink-soft)}
+  .d-sayi-kisa b{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1;color:var(--accent-ink)}
+  .d-sayi-kisa.sifir b{color:var(--rule)}
+  .d-sayi-kisa span::before{content:"· ";color:var(--rule)}
   .d-bilgi{grid-template-columns:minmax(0,1fr)}
   .d-bilgi dt{margin-top:.25rem}
   .d-aylar{grid-template-columns:repeat(12,minmax(0,1fr));display:grid;margin:0 0 .2rem}
@@ -3186,6 +3191,8 @@ def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
             f'data-sure="{s.get("degerlendirme") or ""}"')
     return (f'<li {data}><div><div class="d-ad-satir">{ad_html}{rozet_}</div>'
             + (f'<p class="d-sahip">{e(d["sahip"])}</p>' if d.get("sahip") else "")
+            + f'<p class="d-sayi-kisa{" sifir" if not mk else ""}"><b>{len(mk)}</b> din felsefesi makalesi'
+            + (f'<span>son beş yılda {son5}</span>' if mk else "") + '</p>'
             + ('<dl class="d-bilgi">' + "".join(f"<dt>{a}</dt><dd>{v}</dd>" for a, v in bilgi) + "</dl>" if bilgi else "")
             + f'</div><div class="d-sayi{" sifir" if not mk else ""}"><b>{len(mk)}</b><small>din felsefesi makalesi</small>'
             + (f"<small>son beş yılda {son5}</small>" if mk else "")
