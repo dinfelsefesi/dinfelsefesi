@@ -1,5 +1,5 @@
 {
- "tarih": "2026-10-27",
+ "tarih": "2026-11-02",
  "eserler": {
   "0000-0001-6585-9340": [
    {
@@ -4127,6 +4127,14 @@
   "0000-0003-1939-1526": [],
   "0000-0002-7961-2661": [
    {
+    "baslik": "Kendini Tanımanın Diyalektiği: Alkibiades I Diyaloğunda Benlik, Ahlak ve Toplum",
+    "tur": "journal-article",
+    "dergi": "Bilimname",
+    "yil": "2026",
+    "doi": "10.28949/bilimname.1942120",
+    "url": "https://doi.org/10.28949/bilimname.1942120"
+   },
+   {
     "baslik": "FELSEFİ VE MİTOLOJİK İNSAN ANLAYIŞININ KÖKENLERİ ÜZERİNE: HOMEROS VE ARİSTOTELES'İN MEDENİ İNSAN ANLAYIŞININ “KENDİNİ TANI” İLKESİ IŞIĞINDA DEĞERLENDİRİLMESİ",
     "tur": "journal-article",
     "dergi": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
@@ -4490,6 +4498,14 @@
   "0000-0002-5686-0101": [],
   "0000-0001-6014-6018": [],
   "0000-0003-3946-9909": [
+   {
+    "baslik": "Felsefe Tarihi Anabilim Dalı",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "2024",
+    "doi": "10.55709/okuokutyayinlari.253",
+    "url": "https://doi.org/10.55709/okuokutyayinlari.253"
+   },
    {
     "baslik": "LEVİNAS'A KARŞI LEVİNAS",
     "tur": "journal-article",
@@ -5792,6 +5808,14 @@
     "yil": "2024",
     "doi": "10.70981/kure.9786256624054",
     "url": "https://doi.org/10.70981/kure.9786256624054"
+   },
+   {
+    "baslik": "Din Felsefesi Anabilim Dalı",
+    "tur": "book-chapter",
+    "dergi": "",
+    "yil": "2024",
+    "doi": "10.55709/okuokutyayinlari.249",
+    "url": "https://doi.org/10.55709/okuokutyayinlari.249"
    },
    {
     "baslik": "Is God Perfectly Good In Islam",

@@ -3975,6 +3975,29 @@
   },
   "tur": ""
  },
+ "1942120": {
+  "akademisyenler": [
+   "Muhammet Sait Duran"
+  ],
+  "baslik": "Kendini Tanımanın Diyalektiği: Alkibiades I Diyaloğunda Benlik, Ahlak ve Toplum",
+  "basliklar": [
+   "din-ve-ahlak",
+   "olum-ve-otesi"
+  ],
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "erdem → din-ve-ahlak",
+   "ruh → olum-ve-otesi",
+   "virtue → din-ve-ahlak",
+   "soul → olum-ve-otesi"
+  ],
+  "ilgili": [],
+  "kanit": {
+   "Muhammet Sait Duran": "orcid"
+  },
+  "tur": ""
+ },
  "194492": {
   "akademisyenler": [
    "Ergin Ögcem"

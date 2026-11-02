@@ -3000,6 +3000,92 @@
   ],
   "yil": "2023"
  },
+ "10.55709/okuokutyayinlari.249": {
+  "baslik": "Din Felsefesi Anabilim Dalı",
+  "basliklar": [
+   "din-epistemolojisi",
+   "din-ve-ahlak",
+   "dini-cesitlilik",
+   "olum-ve-otesi",
+   "tanri-alem-iliskisi",
+   "tanri-tasavvurlari"
+  ],
+  "dergi": "Oku Okut Yayınları eBooks",
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "concept of god → tanri-tasavvurlari",
+   "theism → tanri-tasavvurlari",
+   "pantheism → tanri-alem-iliskisi",
+   "panentheism → tanri-alem-iliskisi",
+   "revelation → din-epistemolojisi",
+   "afterlife → olum-ve-otesi",
+   "rationality of faith → din-epistemolojisi",
+   "natural law → din-ve-ahlak",
+   "religious pluralism → dini-cesitlilik"
+  ],
+  "ilgili": [],
+  "kaynak": "openalex",
+  "kelimeler": [
+   "philosophy of religion",
+   "nature of religion",
+   "concept of God",
+   "theism",
+   "pantheism",
+   "panentheism",
+   "revelation",
+   "prophecy",
+   "afterlife",
+   "religious traditions",
+   "rationality of faith",
+   "natural law",
+   "nature of mind",
+   "Christian apologetics",
+   "Islamic apologetics",
+   "religious pluralism",
+   "religious tolerance"
+  ],
+  "sahipler": [
+   "Şeyma Yazıcı Elsebahy"
+  ],
+  "tur": "kitap-bolumu",
+  "yazarlar": [
+   "Şeyma Yazıcı"
+  ],
+  "yil": "2024"
+ },
+ "10.55709/okuokutyayinlari.253": {
+  "baslik": "Felsefe Tarihi Anabilim Dalı",
+  "basliklar": [
+   "din-ve-bilim"
+  ],
+  "dergi": "Oku Okut Yayınları eBooks",
+  "durum": "konulu",
+  "elle": false,
+  "eslesen": [
+   "islamic science → din-ve-bilim",
+   "philosophy of science → din-ve-bilim"
+  ],
+  "ilgili": [],
+  "kaynak": "openalex",
+  "kelimeler": [
+   "history of philosophy",
+   "Faculty of Theology",
+   "course program",
+   "Islamic science",
+   "philosophy of religion",
+   "Islamic philosophy",
+   "philosophy of science"
+  ],
+  "sahipler": [
+   "Nur Betül Atakul"
+  ],
+  "tur": "kitap-bolumu",
+  "yazarlar": [
+   "NUR BETÜL ATAKUL"
+  ],
+  "yil": "2024"
+ },
  "10.55709/tsbsbildirilerdergisi.479": {
   "baslik": "Platon’un Phaidon Diyaloğunda Uyum Argümanı ve Elemeci Materyalist Zihin Felsefesi",
   "basliklar": [
