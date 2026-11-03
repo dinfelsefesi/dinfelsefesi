@@ -519,7 +519,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
 .gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:stretch}
-.gn-kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem;display:flex;flex-direction:column}
+.gn-kart{background:var(--card);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 14px 30px -22px rgba(20,30,50,.4);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem;display:flex;flex-direction:column}
 .gn-kart.gn-tebrik{border-top-color:var(--gold-logo)}
 .gn-kart h3{font-family:var(--display);font-weight:500;font-size:1.25rem;margin:0 0 .6rem}
 .gn-liste{list-style:none;margin:0;padding:0}
@@ -534,7 +534,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .gn-not{margin:.8rem 0 0}
 .gn-tebrik-soz{font-family:var(--display);font-style:italic;font-size:1.08rem;line-height:1.4;color:var(--gold);text-align:center;
   margin:.1rem 0 .9rem;padding:.55rem .6rem;border-top:1px solid var(--gold-logo);border-bottom:1px solid var(--gold-logo)}
-.gn-tebrik-soz span{font-style:normal}
+.gn-tebrik-soz span span{font-style:normal}
 .gn-liste li.gn-tb{display:flex;align-items:center;justify-content:space-between;gap:.7rem}
 .kutla{flex:none;display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans);font-size:.78rem;line-height:1;
   padding:.32rem .6rem;border:1px solid var(--gold-logo);border-radius:999px;background:transparent;color:var(--accent-ink);cursor:pointer}
@@ -544,6 +544,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kutla.kutlandi .k-sayi{color:var(--gold-logo)}
 .gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:auto 0 0;padding-top:.6rem}
 .gn-yollar{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:center;font-family:var(--display);font-size:1.15rem;margin:2.2rem 0 1rem}
+@media (min-width:901px){.gn-izgara .gn-tebrik-soz{display:grid;align-items:center;min-height:calc(2.8em + 1.1rem + 2px);box-sizing:border-box}}
 @media (max-width:900px){.gn-izgara{grid-template-columns:1fr}}
 .onceki-gunler{list-style:none;margin:.4rem 0 0;padding:0;max-width:52rem}
 .onceki-gunler li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);column-gap:1rem;padding:.55rem 0;border-top:1px solid var(--rule)}
@@ -3540,8 +3541,8 @@ def akademide_bu_ay_html() -> str:
             (f'<li class="gn-tb"><div><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> {e(UNVAN_ADI[x["unvan"]])}'
              f'<span class="gn-alt">{e(x["p"].get("universite") or "")}</span></div>{kutla_dugmesi(x)}</li>')
             for x in tb[:10])
-        tebrik = (f'<p class="gn-tebrik-soz"><span aria-hidden="true">🎓</span> {bugun_.year} yılında yeni unvan alan ve '
-                  f'doktorasını tamamlayan hocalarımızı tebrik ederiz <span aria-hidden="true">🎉</span></p>'
+        tebrik = (f'<p class="gn-tebrik-soz"><span><span aria-hidden="true">🎓</span> {bugun_.year} yılında yeni unvan alan ve '
+                  f'doktorasını tamamlayan hocalarımızı tebrik ederiz <span aria-hidden="true">🎉</span></span></p>'
                   f'<ul class="gn-liste">{satir}</ul><p class="aciklama-kisa gn-not">Bilgiler YÖK Akademik ve AVESİS '
                   f'kayıtlarındandır; eksik gördüğünüzü bildirebilirsiniz.</p>' + KUTLA_JS)
     else:
@@ -3569,7 +3570,9 @@ def akademide_bu_ay_html() -> str:
                          if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))[:80]
         satir += (f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi} · '
                   f'{e(ay_yil(m["tarih"]))}</span>' + (f'<span class="gn-konu">{e(konu)}</span>' if konu else "") + '</li>')
-    yayinlar_ = (f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
+    soz_ = (f'<p class="gn-tebrik-soz"><span><span aria-hidden="true">📚</span> {yayin_ayi}\'da makalesi yayımlanan '
+            f'hocalarımızı tebrik ederiz <span aria-hidden="true">👏</span></span></p>') if yayin_ayi else ""
+    yayinlar_ = (soz_ + f'<ul class="gn-liste">{satir}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
                  if satir else '<p class="gn-bos">Henüz kayıt yok.</p>')
     return (f'<section class="guncel" aria-labelledby="gn-bas"><div class="bolum-baslik"><h2 id="gn-bas">Akademi Güncel</h2></div>'
             f'<div class="gn-izgara">'
