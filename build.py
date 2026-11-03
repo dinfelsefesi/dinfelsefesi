@@ -2997,7 +2997,7 @@ def render_alt_ag(items, tur_, k) -> str:
 # ---------------------------------------------------------------- dergiler
 
 DERGI_DIZIN = ROOT / "data" / "dergiler"
-DIZIN_ADLARI = [("trdizin", "TR Dizin"), ("doaj", "DOAJ"), ("esci", "ESCI"), ("scopus", "Scopus")]
+DIZIN_ADLARI = [("doaj", "DOAJ"), ("trdizin", "TR Dizin"), ("esci", "ESCI"), ("scopus", "Scopus")]
 AY_KISA = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"]
 
 DERGI_CSS = """
