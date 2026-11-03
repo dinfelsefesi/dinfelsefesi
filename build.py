@@ -518,8 +518,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
-.gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:start}
-.gn-kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem}
+.gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:stretch}
+.gn-kart{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:4px;padding:1rem 1.15rem 1.1rem;display:flex;flex-direction:column}
 .gn-kart.gn-tebrik{border-top-color:var(--gold-logo)}
 .gn-kart h3{font-family:var(--display);font-weight:500;font-size:1.25rem;margin:0 0 .6rem}
 .gn-liste{list-style:none;margin:0;padding:0}
@@ -542,7 +542,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kutla .k-sayi{font-weight:700}
 .kutla.kutlandi{background:var(--accent);border-color:var(--accent);color:#fff;cursor:default}
 .kutla.kutlandi .k-sayi{color:var(--gold-logo)}
-.gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:.6rem 0 0}
+.gn-hepsi{font-family:var(--sans);font-size:.88rem;margin:auto 0 0;padding-top:.6rem}
 .gn-yollar{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:center;font-family:var(--display);font-size:1.15rem;margin:2.2rem 0 1rem}
 @media (max-width:900px){.gn-izgara{grid-template-columns:1fr}}
 .onceki-gunler{list-style:none;margin:.4rem 0 0;padding:0;max-width:52rem}
