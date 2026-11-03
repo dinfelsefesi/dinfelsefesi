@@ -302,7 +302,7 @@
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 3880
+   "profil": 3883
   },
   "https://avesis.bogazici.edu.tr": {
    "parca": [
@@ -314,29 +314,27 @@
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 3710
+   "profil": 3714
   },
   "https://avesis.erciyes.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 2990
+   "profil": 2988
   },
   "https://avesis.ihu.edu.tr": {
    "parca": [],
    "profil": 0
   },
   "https://avesis.ogu.edu.tr": {
-   "parca": [
-    "cvpages.xml"
-   ],
+   "parca": [],
    "profil": 0
   },
   "https://avesis.uludag.edu.tr": {
    "parca": [
     "cvpages.xml"
    ],
-   "profil": 2948
+   "profil": 2946
   }
  }
 }
