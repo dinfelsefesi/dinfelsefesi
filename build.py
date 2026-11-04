@@ -853,7 +853,7 @@ def ld(veri: dict) -> str:
 
 def ld_yayinci() -> dict:
     return {"@type": "Organization", "name": "dinfelsefesi.com.tr", "url": SITE_URL + "/",
-            "logo": SITE_URL + "/static/img/logo-512.png"}
+            "logo": SITE_URL + "/static/img/logo-512.png?v=" + surum("static/img/logo-512.png")}
 
 
 # Bazı dergilerin DOI'leri artık çalışmayan eski adreslere yönleniyor. Beytulhikme DergiPark'tan ayrılıp yayıncı
@@ -907,8 +907,8 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 {og}
 <link rel="icon" href="{SITE_URL}/static/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{SITE_URL}/favicon.ico" sizes="48x48">
-<link rel="icon" href="{SITE_URL}/static/img/icon-192.png" sizes="192x192" type="image/png">
-<link rel="apple-touch-icon" href="{SITE_URL}/static/img/apple-touch-icon.png">
+<link rel="icon" href="{SITE_URL}/static/img/icon-192.png?v={surum('static/img/icon-192.png')}" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="{SITE_URL}/static/img/apple-touch-icon.png?v={surum('static/img/apple-touch-icon.png')}">
 <meta name="theme-color" content="#f3f4f6">
 <link rel="alternate" type="application/rss+xml" title="{e(SITE_NAME)}" href="{SITE_URL}/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
