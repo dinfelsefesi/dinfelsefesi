@@ -1,5 +1,5 @@
 {
- "tarama": "2026-11-04T15:22+03:00",
+ "tarama": "2026-11-04T19:39+03:00",
  "dergiler": {
   "adid": {
    "baslik": "Adıyaman İlahiyat Dergisi",
@@ -97,14 +97,6 @@
   "akademikincelemeler": {
    "baslik": "Journal of Academic Inquiries",
    "okundu": "2026-11-04",
-   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
-   "gonderim": "acik",
-   "gonderim_tarih": "21.10.2026",
-   "sureler": {
-    "on_kontrol": 2,
-    "degerlendirme": 75,
-    "yayim": 31
-   },
    "dizin": {
     "liste": [
      "DOAJ",
@@ -118,6 +110,14 @@
     "esci": false,
     "scopus": false,
     "okundu": "2026-11-04"
+   },
+   "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
+   "gonderim": "acik",
+   "gonderim_tarih": "21.10.2026",
+   "sureler": {
+    "on_kontrol": 2,
+    "degerlendirme": 75,
+    "yayim": 31
    }
   },
   "akademikus": {
