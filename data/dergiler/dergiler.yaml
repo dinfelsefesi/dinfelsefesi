@@ -1727,3 +1727,14 @@
     scopus: null
   yayin_modeli: null
   listeye_giris: ilahiyat-fakulteleri
+- kod: akademikincelemeler
+  ad: Akademik İncelemeler Dergisi
+  sahip: Sakarya Üniversitesi
+  link: https://dergipark.org.tr/tr/pub/akademikincelemeler
+  dizin:
+    trdizin: null
+    doaj: null
+    esci: null
+    scopus: null
+  yayin_modeli: Süreli Yayın (Nisan - Ekim)
+  listeye_giris: elle   # Abdullah Akgül'ün isteğiyle eklendi (4 Kasım 2026); ad, dizin ve gönderim bilgisi gece taramasında DergiPark'tan okunur
