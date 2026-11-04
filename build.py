@@ -1037,7 +1037,7 @@ def render_makale(m: dict) -> str:
   <div class="kutu"><dl>
     <dt>Yazar</dt><dd>{e(m['authors'])}</dd>
     <dt>Dergi</dt><dd>{e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</dd>
-    <dt>Kaynak</dt><dd><a href="{e(link)}" rel="noopener">{e(link)}</a>{(' · ' + oa) if oa else ''}</dd>
+    <dt>Kaynak</dt><dd><a href="{e(link)}" rel="noopener">{"DOI" if m.get("doi") else "DergiPark" if "dergipark.org.tr" in link else "Makalenin sayfası"}</a>{(' · ' + oa) if oa else ''}</dd>
   </dl></div>
   <div class="metin">
     {paragraphs(m['summary_tr'])}
