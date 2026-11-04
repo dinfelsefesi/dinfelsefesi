@@ -60,21 +60,28 @@ def ana_sayfa_oku(sayfa: str) -> dict:
     if not m:
         raise ValueError("dergi başlığı bulunamadı (sayfa düzeni değişmiş ya da dergi DergiPark'tan ayrılmış olabilir)")
     s = {"baslik": temiz(m.group(1))}
-    m = re.search(r"Yayın Modeli:\s*([^<]+?)\s*<", sayfa)
+    # Dili İngilizce olan dergilerin sayfası İngilizce gelir; Türkçe ve İngilizce etiketler birlikte aranır
+    m = re.search(r"(?:Yayın Modeli|Publication Model):\s*([^<]+?)\s*<", sayfa)
     if m:
-        s["yayin_modeli"] = temiz(m.group(1))
-    m = re.search(r"Makale Gönderimine (Açık|Kapalı)\s*</h3>(.{0,600})", sayfa, re.S)
+        s["yayin_modeli"] = temiz(m.group(1)).replace("Periodical Publication", "Süreli Yayın").replace("Continuous Publication", "Sürekli Yayın")
+        for en, tr in zip(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                          ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]):
+            s["yayin_modeli"] = s["yayin_modeli"].replace(en, tr)
+    m = re.search(r"(?:Makale Gönderimine (Açık|Kapalı)|(Open|Closed) for Submissions)\s*</h3>(.{0,600})", sayfa, re.S)
     if m:
-        s["gonderim"] = "acik" if m.group(1) == "Açık" else "kapali"
-        t = re.search(r"(\d\d\.\d\d\.\d{4})(?:\s+\d\d:\d\d)?", m.group(2))
+        s["gonderim"] = "acik" if (m.group(1) or m.group(2)) in ("Açık", "Open") else "kapali"
+        t = re.search(r"(\d\d\.\d\d\.\d{4})(?:\s+\d\d:\d\d)?", m.group(3))
         if t:
             s["gonderim_tarih"] = t.group(1)
     m = re.search(r"Makale Gönderimine Açılacak Tarih</span>\s*<span[^>]*>\s*(\d\d\.\d\d\.\d{4})", sayfa)
     if m:
         s["acilis"] = m.group(1)
     sureler = {}
-    for ad, anahtar in (("Ön Kontrol Süresi", "on_kontrol"), ("Değerlendirme Süresi", "degerlendirme"), ("Yayım Süresi", "yayim")):
-        m = re.search(re.escape(ad) + r".{0,1500}?font-\[var\(--font-head\)\]\">\s*(\d+)\s*gün", sayfa, re.S)
+    for ad, anahtar in (("Ön Kontrol Süresi", "on_kontrol"), ("Değerlendirme Süresi", "degerlendirme"), ("Yayım Süresi", "yayim"),
+                        ("Time to First Decision", "on_kontrol"), ("Time to Final Decision", "degerlendirme"), ("Time to Publication", "yayim")):
+        if anahtar in sureler:
+            continue
+        m = re.search(re.escape(ad) + r".{0,1500}?font-\[var\(--font-head\)\]\">\s*(\d+)\s*(?:gün|days)", sayfa, re.S)
         if m:
             sureler[anahtar] = int(m.group(1))
     if sureler:
