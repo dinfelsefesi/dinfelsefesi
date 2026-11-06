@@ -21,6 +21,7 @@ import json
 import os
 import re
 import shutil
+import sys
 import unicodedata
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
@@ -3637,6 +3638,14 @@ def main() -> None:
     FIS = fisleri_oku()
     iliskileri_kur()
     bag_dizini_kur()
+
+    # Günün makalesi kuralı (6 Kasım 2026): yazarlarından en az biri Türkiye akademisi listesinde olmalı.
+    # Henüz yayımlanmamış (bugünden sonraki) tanıtımlar denetlenir; uymayan varsa derleme uyarı verir.
+    akademi_adlari_ = {tr_kucuk(p["ad"]) for p in (yaml.safe_load((CONTENT / "turkiye_akademisi.yaml").read_text(encoding="utf-8")) or {}).get("kisiler") or []}
+    bugun_k = bugun()
+    for m in items:
+        if (m.get("gun") or "") >= bugun_k and not any(tr_kucuk(y.strip()) in akademi_adlari_ for y in re.split(r",| ve ", m.get("authors", ""))):
+            print(f"UYARI: {m['gun']} günün makalesinin yazarı Türkiye akademisi listesinde değil: {m.get('authors')}", file=sys.stderr)
 
     if OUT.exists():
         shutil.rmtree(OUT)

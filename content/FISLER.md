@@ -57,3 +57,12 @@ AVESİS kullanan üniversitelerdeki hocaların yayın listeleri ayda bir `script
 AVESİS'i olmayan hocaların kişisel sitelerinde yayın listesi varsa bir kez okunup `data/kisisel/yayinlar.json` dosyasına AVESİS ile aynı biçimde yazılır (şu an Recep Kılıç, recepkilic.net). Bu yayınlar aynı yolla ayıklanır, elle başlığa bağlananlar "Kişisel site" işaretiyle gösterilir. Bu liste kendiliğinden güncellenmez.
 
 AVESİS'i ya da kişisel site listesi olmayan kişilerin yayınları YÖK Akademik'ten okunur (`data/yok/yayinlar.json`, 25 Ekim 2026; YÖK yurt dışı bağlantılarına kapalı olduğundan tarama Türkiye'deki bir bilgisayarın tarayıcısından yapılır ve kendiliğinden güncellenmez). AVESİS'i olan kişilerde YÖK kaydı AVESİS'ten aktarıldığı için kullanılmaz. YÖK listesinde kitap bölümlerinin adı yerine kitabın adı yazıldığından bölümler "kitabın içinde" künyesiyle gösterilir ve başlıklara bağlanmaz. Elle başlık kararları AVESİS ile aynı dosyadadır (`data/avesis/elle_tasnif.yaml`, `yok-` ile başlayan kimlikler); bu yayınlar "YÖK" işaretiyle gösterilir.
+
+## Günün makalesi (content/makaleler.json)
+
+Seçim kuralları (Abdullah Akgül'ün kararı, Kasım 2026):
+
+- Makale yakın zamanda yayımlanmış olmalı. Sıra, makalenin DergiPark sayfasındaki yayım tarihine göre yeniden eskiye gider (`data/dergipark/yayim_tarihi.json`).
+- Yazarlarından en az biri Türkiye akademisi listesinde (`content/turkiye_akademisi.yaml`) bulunmalı. Derleme, bugünden sonraki tanıtımlarda bu şartı denetler ve uymayan varsa uyarı verir.
+- Tanıtım yalnızca makalenin kendi özetine dayanır; özeti olmayan makale seçilmez.
+- Alanlar: `date` yayım tarihi, `gun` sitede gösterileceği gün, `doi` ya da `url`, `open_access`, `lead`, `summary_tr`, `why_tr`, `tags`.
