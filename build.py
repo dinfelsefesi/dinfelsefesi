@@ -3592,8 +3592,7 @@ def render_ana(items) -> str:
 <section class="karsilama">
   <div class="karsilama-metin">
   <h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
-  <p>Din felsefesinin temel problemleri, terimleri, düşünürleri ve eserleri birbirine bağlı fişlerle sunulmaktadır. Her ana başlık bir okuma metniyle açılır. Terimler, kişiler ve eserler bu metinlere bağlanır, yeni çalışmalar da düzenli olarak tanıtılır.</p>
-  <p>Sitede ayrıca Türkiye'deki <a href="{SITE_URL}/kisiler/">din felsefesi akademisyenlerinin</a> listesi, din felsefesi makalesi yayımlayan <a href="{SITE_URL}/dergiler/">dergiler</a> ve DergiPark'ta yayımlanmış <a href="{SITE_URL}/eserler/">din felsefesi çalışmaları</a> yer alır. <a href="{SITE_URL}/gunun-makalesi/">Günün makalesi</a> bölümünde her gün bir makale, kendi özetine dayanan kısa bir tanıtımla öne çıkarılır.</p>
+  <p>Din felsefesinin temel problemleri birer okuma metniyle ele alınır, terimler, düşünürler ve eserler de bu metinlere bağlı fişlerle sunulur. Sitede ayrıca Türkiye'deki <a href="{SITE_URL}/kisiler/">din felsefesi akademisyenlerinin</a> listesi, din felsefesi makalesi yayımlayan <a href="{SITE_URL}/dergiler/">dergiler</a> ve DergiPark'ta yayımlanmış <a href="{SITE_URL}/eserler/">çalışmalar</a> yer alır. <a href="{SITE_URL}/gunun-makalesi/">Günün makalesi</a> bölümünde her gün bir makale, kendi özetine dayanan kısa bir tanıtımla öne çıkarılır.</p>
   <p class="durum-satiri">{durum}</p>
   <p class="karsilama-git"><a href="{SITE_URL}/basliklar/">Başlıklara göz atın →</a> <a href="{SITE_URL}/ag/">İlişki ağını açın →</a></p>
   </div>
