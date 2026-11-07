@@ -66,7 +66,7 @@ def ana_sayfa_oku(sayfa: str) -> dict:
         s["yayin_modeli"] = temiz(m.group(1)).replace("Periodical Publication", "Süreli Yayın").replace("Continuous Publication", "Sürekli Yayın")
         for en, tr in zip(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                           ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]):
-            s["yayin_modeli"] = s["yayin_modeli"].replace(en, tr)
+            s["yayin_modeli"] = re.sub(rf"\b{en}\b", tr, s["yayin_modeli"])
     m = re.search(r"(?:Makale Gönderimine (Açık|Kapalı)|(Open|Closed) for Submissions)\s*</h3>(.{0,600})", sayfa, re.S)
     if m:
         s["gonderim"] = "acik" if (m.group(1) or m.group(2)) in ("Açık", "Open") else "kapali"

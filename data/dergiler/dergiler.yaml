@@ -1432,8 +1432,8 @@
   listeye_giris: ilk-liste
 - kod: nazariyat
   ad: Nazariyat İslam Felsefe ve Bilim Tarihi Araştırmaları Dergisi
-  sahip: İstabul Medeniyet Üniversitesi
-  link: https://dergipark.org.tr/tr/pub/nazariyat
+  sahip: İstanbul Medeniyet Üniversitesi
+  link: https://www.nazariyat.org/
   dizin:
     trdizin: true
     doaj: true
@@ -1441,6 +1441,9 @@
     scopus: false
   yayin_modeli: Süreli Yayın (Mayıs - Kasım)
   listeye_giris: ilk-liste
+  not: DergiPark sayfası yalnızca arşiv; makale gönderimi ve yeni sayılar derginin kendi sitesinde (7 Kasım 2026)
+  dergipark_disi: true
+  dis_not: DergiPark sayfası yalnızca arşiv olarak kullanılıyor. Makale gönderimi ve yeni sayılar derginin kendi sitesinden yapılır.
 - kod: nisar
   ad: Nisar
   sahip: Niğde Ömer Halisdemir Üniversitesi İslami İlimler Fakültesi

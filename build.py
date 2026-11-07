@@ -3182,7 +3182,7 @@ def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
     if d.get("ucret"):
         bilgi.append(("Ücret", e(d["ucret"])))
     if d.get("dergipark_disi"):
-        bilgi.append(("Not", '<span class="d-not">Dergi DergiPark\'tan ayrılıp kendi sitesine taşınmıştır.</span>'))
+        bilgi.append(("Not", '<span class="d-not">' + e(d.get("dis_not") or "Dergi DergiPark'tan ayrılıp kendi sitesine taşınmıştır.") + '</span>'))
     if d.get("onceki_adlar"):
         bilgi.append(("Önceki adı", '<span class="d-not">' + e("; ".join(d["onceki_adlar"])) + "</span>"))
     mk = sorted(d["_makaleler"], key=lambda m: (m["tarih"], m["id"]), reverse=True)
