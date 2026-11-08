@@ -1,5 +1,5 @@
 # Türkiye akademisi listesi
-# Kaynak: YÖK Akademik Arama (20-21.10.2026). Üç yoldan gelen kişiler:
+# Kaynak: YÖK Akademik Arama (20-21.10.2026; üç yolun tamamı 9.11.2026'da yeniden tarandı, yeni kişi ve unvan değişikliği çıkmadı). Üç yoldan gelen kişiler:
 #   yok_alan: Din Felsefesi             -> bilim alanı "İlahiyat Temel Alanı / Din Felsefesi"
 #   yok_alan: Felsefe ve Din Bilimleri  -> "İlahiyat Temel Alanı / Felsefe ve Din Bilimleri", ilk anahtar kelime Din Felsefesi
 #   yok_alan: Felsefe                   -> "Sosyal, Beşeri ve İdari Bilimler Temel Alanı / Felsefe", ilk anahtar kelime Din Felsefesi (21.10.2026)
@@ -7,7 +7,7 @@
 # kimlik (isteğe bağlı: kişinin fişi yazıldığında content/kisiler/ içindeki kimliği).
 # Yalnızca kamuya açık bilgiler. E-posta ve fotoğraf konmaz.
 kaynak: YÖK Akademik Arama
-tarih: '2026-10-20'
+tarih: '2026-11-09'
 kisiler:
 - ad: Rahim Acar
   unvan: Prof. Dr.
