@@ -1,9 +1,9 @@
 {
- "tarama": "2026-11-09T19:50+03:00",
+ "tarama": "2026-11-10T19:34+03:00",
  "dergiler": {
   "adid": {
    "baslik": "Adıyaman İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ERIH PLUS"
@@ -18,14 +18,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "30.09.2026",
    "sureler": {
-    "on_kontrol": 10,
+    "on_kontrol": 11,
     "degerlendirme": 115,
     "yayim": 32
    }
   },
   "aduilahiyatdergisi": {
    "baslik": "ADÜ İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -38,14 +38,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "12.02.2026",
    "sureler": {
-    "on_kontrol": 3,
-    "degerlendirme": 65,
+    "on_kontrol": 4,
+    "degerlendirme": 74,
     "yayim": 51
    }
   },
   "agiid": {
    "baslik": "Ağrı İslami İlimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Asos"
@@ -60,14 +60,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.07.2026",
    "sureler": {
-    "on_kontrol": 4,
-    "degerlendirme": 48,
+    "on_kontrol": 5,
+    "degerlendirme": 47,
     "yayim": 18
    }
   },
   "ahiilahiyat": {
    "baslik": "Ahi İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -89,14 +89,14 @@
    "gonderim_tarih": "05.10.2026",
    "acilis": "01.02.2027",
    "sureler": {
-    "on_kontrol": 10,
-    "degerlendirme": 107,
+    "on_kontrol": 11,
+    "degerlendirme": 111,
     "yayim": 23
    }
   },
   "akademikincelemeler": {
    "baslik": "Journal of Academic Inquiries",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -116,13 +116,13 @@
    "gonderim_tarih": "21.10.2026",
    "sureler": {
     "on_kontrol": 2,
-    "degerlendirme": 75,
-    "yayim": 31
+    "degerlendirme": 82,
+    "yayim": 19
    }
   },
   "akademikus": {
    "baslik": "Akademik-Us",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -147,14 +147,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "04.07.2024",
    "sureler": {
-    "on_kontrol": 6,
-    "degerlendirme": 72,
+    "on_kontrol": 7,
+    "degerlendirme": 74,
     "yayim": 48
    }
   },
   "akdenizilahiyatdergisi": {
    "baslik": "Akdeniz İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ROAD"
@@ -170,13 +170,13 @@
    "gonderim_tarih": "01.10.2026",
    "sureler": {
     "on_kontrol": 10,
-    "degerlendirme": 62,
+    "degerlendirme": 60,
     "yayim": 70
    }
   },
   "akif": {
    "baslik": "Akif",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -198,14 +198,14 @@
    "gonderim_tarih": "26.10.2026",
    "acilis": "15.01.2027",
    "sureler": {
-    "on_kontrol": 33,
+    "on_kontrol": 32,
     "degerlendirme": 129,
     "yayim": 74
    }
   },
   "amailad": {
    "baslik": "Amasya İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -227,13 +227,13 @@
    "gonderim_tarih": "17.07.2026",
    "sureler": {
     "on_kontrol": 7,
-    "degerlendirme": 91,
+    "degerlendirme": 90,
     "yayim": 60
    }
   },
   "antakiyat": {
    "baslik": "Antakiyat",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -254,14 +254,14 @@
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 22,
-    "degerlendirme": 82,
+    "on_kontrol": 21,
+    "degerlendirme": 76,
     "yayim": 54
    }
   },
   "artukluakademi": {
    "baslik": "Artuklu Akademi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -285,13 +285,13 @@
    "gonderim_tarih": "22.06.2026",
    "sureler": {
     "on_kontrol": 11,
-    "degerlendirme": 115,
+    "degerlendirme": 119,
     "yayim": 53
    }
   },
   "aruiad": {
    "baslik": "ARÜ İlahiyat Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM",
@@ -309,14 +309,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.01.2026",
    "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 108,
+    "on_kontrol": 7,
+    "degerlendirme": 105,
     "yayim": 16
    }
   },
   "asar": {
    "baslik": "ÂSÂR Akademik Dinî Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ERIH PLUS (▶ 31.03.2025)",
@@ -334,14 +334,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "31.08.2026",
    "sureler": {
-    "on_kontrol": 7,
-    "degerlendirme": 77,
-    "yayim": 26
+    "on_kontrol": 4,
+    "degerlendirme": 78,
+    "yayim": 38
    }
   },
   "atdd": {
    "baslik": "Akademik Tarih ve Düşünce Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Current Index to Journals in Education (CIJE)-WorldCat",
@@ -386,14 +386,14 @@
    "yayin_modeli": "Sürekli Yayın",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 15,
-    "degerlendirme": 154,
+    "on_kontrol": 24,
+    "degerlendirme": 158,
     "yayim": 10
    }
   },
   "atebe": {
    "baslik": "ATEBE",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -417,14 +417,14 @@
    "gonderim_tarih": "31.10.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 11,
-    "degerlendirme": 85,
+    "on_kontrol": 14,
+    "degerlendirme": 106,
     "yayim": 7
    }
   },
   "auifd": {
    "baslik": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Scopus",
@@ -447,13 +447,13 @@
    "acilis": "15.12.2026",
    "sureler": {
     "on_kontrol": 30,
-    "degerlendirme": 265,
+    "degerlendirme": 280,
     "yayim": 50
    }
   },
   "ausbd": {
    "baslik": "Anadolu Üniversitesi Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -479,7 +479,7 @@
   },
   "babertidergisi": {
    "baslik": "Baberti",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -505,14 +505,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "15.06.2026",
    "sureler": {
-    "on_kontrol": 11,
-    "degerlendirme": 72,
+    "on_kontrol": 10,
+    "degerlendirme": 73,
     "yayim": 36
    }
   },
   "baid": {
    "baslik": "Balıkesir İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İndexcopernicus",
@@ -531,14 +531,14 @@
    "gonderim_tarih": "19.09.2026",
    "acilis": "20.01.2027",
    "sureler": {
-    "on_kontrol": 5,
-    "degerlendirme": 85,
+    "on_kontrol": 6,
+    "degerlendirme": 61,
     "yayim": 40
    }
   },
   "balagh": {
    "baslik": "BALAGH - Journal of Islamic and Humanities Studies",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -557,14 +557,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.11.2026",
    "sureler": {
-    "on_kontrol": 5,
-    "degerlendirme": 91,
+    "on_kontrol": 4,
+    "degerlendirme": 94,
     "yayim": 58
    }
   },
   "batmanakademi": {
    "baslik": "Batman Akademi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "EBSCO",
@@ -584,14 +584,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "23.10.2026",
    "sureler": {
-    "on_kontrol": 16,
-    "degerlendirme": 81,
+    "on_kontrol": 17,
+    "degerlendirme": 92,
     "yayim": 54
    }
   },
   "beuifd": {
    "baslik": "BEÜ İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -616,7 +616,7 @@
    "gonderim_tarih": "15.08.2026",
    "sureler": {
     "on_kontrol": 8,
-    "degerlendirme": 79,
+    "degerlendirme": 80,
     "yayim": 60
    }
   },
@@ -635,7 +635,7 @@
   },
   "bilimname": {
    "baslik": "Bilimname",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -661,13 +661,13 @@
    "gonderim_tarih": "02.11.2026",
    "sureler": {
     "on_kontrol": 19,
-    "degerlendirme": 138,
-    "yayim": 74
+    "degerlendirme": 144,
+    "yayim": 53
    }
   },
   "bitlisilahiyatdergisi": {
    "baslik": "Bitlis İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ERIH PLUS (European Reference Index for the Humanities)",
@@ -691,7 +691,7 @@
   },
   "bozifder": {
    "baslik": "Bozok Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -712,13 +712,13 @@
    "gonderim_tarih": "16.08.2026",
    "sureler": {
     "on_kontrol": 17,
-    "degerlendirme": 92,
+    "degerlendirme": 95,
     "yayim": 34
    }
   },
   "buifd": {
    "baslik": "Bingöl Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -734,7 +734,7 @@
    "gonderim_tarih": "22.07.2026",
    "sureler": {
     "on_kontrol": 13,
-    "degerlendirme": 116,
+    "degerlendirme": 118,
     "yayim": 38
    }
   },
@@ -753,7 +753,7 @@
   },
   "burdurilahiyat": {
    "baslik": "Burdur İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -775,14 +775,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "31.10.2026",
    "sureler": {
-    "on_kontrol": 4,
-    "degerlendirme": 85,
+    "on_kontrol": 6,
+    "degerlendirme": 87,
     "yayim": 28
    }
   },
   "cbayarsos": {
    "baslik": "Manisa Celal Bayar Üniversitesi Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -802,14 +802,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "04.10.2026",
    "sureler": {
-    "on_kontrol": 17,
-    "degerlendirme": 134,
+    "on_kontrol": 18,
+    "degerlendirme": 143,
     "yayim": 130
    }
   },
   "cuid": {
    "baslik": "Cumhuriyet İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -830,13 +830,13 @@
    "acilis": "15.01.2027",
    "sureler": {
     "on_kontrol": 11,
-    "degerlendirme": 122,
+    "degerlendirme": 120,
     "yayim": 45
    }
   },
   "cuilah": {
    "baslik": "Çukurova Üniversitesi İlahiyat Fakültesi Dergisi (ÇÜİFD)",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -853,13 +853,13 @@
    "gonderim_tarih": "03.08.2026",
    "sureler": {
     "on_kontrol": 24,
-    "degerlendirme": 132,
+    "degerlendirme": 137,
     "yayim": 15
    }
   },
   "da": {
    "baslik": "Dini Araştırmalar",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -884,13 +884,13 @@
    "gonderim_tarih": "07.09.2026",
    "sureler": {
     "on_kontrol": 9,
-    "degerlendirme": 106,
+    "degerlendirme": 113,
     "yayim": 28
    }
   },
   "daad": {
    "baslik": "Dinbilimleri Akademik Araştırma Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -907,14 +907,14 @@
    "gonderim_tarih": "01.10.2026",
    "acilis": "01.12.2026",
    "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 99,
+    "on_kontrol": 12,
+    "degerlendirme": 100,
     "yayim": 35
    }
   },
   "darulfunun": {
    "baslik": "darulfunun ilahiyat",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Scopus",
@@ -937,14 +937,14 @@
    "yayin_modeli": "Süreli Yayın (Nisan - Ağustos - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 18,
-    "degerlendirme": 84,
-    "yayim": 124
+    "on_kontrol": 15,
+    "degerlendirme": 78,
+    "yayim": 130
    }
   },
   "darulhadisdergisi": {
    "baslik": "Darulhadis İslami Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -966,14 +966,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "10.05.2024",
    "sureler": {
-    "on_kontrol": 16,
-    "degerlendirme": 118,
+    "on_kontrol": 8,
+    "degerlendirme": 111,
     "yayim": 57
    }
   },
   "dergiabant": {
    "baslik": "Dergiabant",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -993,14 +993,14 @@
    "gonderim_tarih": "03.06.2026",
    "acilis": "01.12.2026",
    "sureler": {
-    "on_kontrol": 19,
-    "degerlendirme": 89,
+    "on_kontrol": 20,
+    "degerlendirme": 93,
     "yayim": 84
    }
   },
   "deuifd": {
    "baslik": "Dokuz Eylül Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1021,14 +1021,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "21.07.2026",
    "sureler": {
-    "on_kontrol": 14,
-    "degerlendirme": 103,
+    "on_kontrol": 15,
+    "degerlendirme": 108,
     "yayim": 56
    }
   },
   "deusosbil": {
    "baslik": "Dokuz Eylül Üniversitesi Sosyal Bilimler Enstitüsü Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -1047,13 +1047,13 @@
    "gonderim_tarih": "09.10.2026",
    "sureler": {
     "on_kontrol": 14,
-    "degerlendirme": 121,
+    "degerlendirme": 117,
     "yayim": 155
    }
   },
   "dicd": {
    "baslik": "Dicle İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1074,14 +1074,14 @@
    "gonderim_tarih": "01.10.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 32,
-    "degerlendirme": 115,
+    "on_kontrol": 36,
+    "degerlendirme": 121,
     "yayim": 21
    }
   },
   "did": {
    "baslik": "Diyanet İlmi Dergi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1103,14 +1103,14 @@
    "gonderim_tarih": "18.08.2026",
    "acilis": "15.01.2027",
    "sureler": {
-    "on_kontrol": 36,
-    "degerlendirme": 155,
+    "on_kontrol": 37,
+    "degerlendirme": 159,
     "yayim": 13
    }
   },
   "dinveinsan": {
    "baslik": "Din ve İnsan Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1128,13 +1128,13 @@
    "gonderim_tarih": "01.07.2026",
    "sureler": {
     "on_kontrol": 3,
-    "degerlendirme": 64,
+    "degerlendirme": 60,
     "yayim": 80
    }
   },
   "disar": {
    "baslik": "Din Sosyolojisi Araştırmaları",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Asos",
@@ -1149,14 +1149,14 @@
    "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 27,
-    "degerlendirme": 88,
-    "yayim": 20
+    "on_kontrol": 23,
+    "degerlendirme": 89,
+    "yayim": 7
    }
   },
   "divan": {
    "baslik": "Dîvân Disiplinlerarası Çalışmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1180,14 +1180,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "11.10.2026",
    "sureler": {
-    "on_kontrol": 11,
-    "degerlendirme": 178,
+    "on_kontrol": 9,
+    "degerlendirme": 183,
     "yayim": 107
    }
   },
   "duid": {
    "baslik": "Düzce İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1210,13 +1210,13 @@
    "gonderim_tarih": "21.07.2026",
    "sureler": {
     "on_kontrol": 5,
-    "degerlendirme": 120,
+    "degerlendirme": 121,
     "yayim": 49
    }
   },
   "eid": {
    "baslik": "Edebali İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -1230,13 +1230,13 @@
    "gonderim_tarih": "02.11.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 3,
-    "degerlendirme": 34
+    "on_kontrol": 6,
+    "degerlendirme": 62
    }
   },
   "eren": {
    "baslik": "EREN",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ERIH PLUS",
@@ -1253,13 +1253,13 @@
    "gonderim": "acik",
    "sureler": {
     "on_kontrol": 2,
-    "degerlendirme": 63,
+    "degerlendirme": 56,
     "yayim": 59
    }
   },
   "eskiyeni": {
    "baslik": "Eskiyeni",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -1285,14 +1285,14 @@
    "gonderim_tarih": "12.10.2026",
    "acilis": "12.04.2027",
    "sureler": {
-    "on_kontrol": 4,
+    "on_kontrol": 2,
     "degerlendirme": 180,
     "yayim": 17
    }
   },
   "esoguifd": {
    "baslik": "Eskişehir Osmangazi Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1315,14 +1315,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "05.10.2026",
    "sureler": {
-    "on_kontrol": 10,
+    "on_kontrol": 8,
     "degerlendirme": 112,
     "yayim": 35
    }
   },
   "felsefedunyasi": {
    "baslik": "Felsefe Dünyası",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1346,14 +1346,14 @@
    "gonderim_tarih": "06.08.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 41,
-    "degerlendirme": 133,
+    "on_kontrol": 48,
+    "degerlendirme": 130,
     "yayim": 51
    }
   },
   "firatilahiyat": {
    "baslik": "Fırat Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1379,13 +1379,13 @@
    "gonderim_tarih": "06.07.2026",
    "sureler": {
     "on_kontrol": 11,
-    "degerlendirme": 191,
+    "degerlendirme": 197,
     "yayim": 15
    }
   },
   "flsf": {
    "baslik": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -1408,14 +1408,14 @@
    "gonderim_tarih": "06.09.2026",
    "acilis": "15.11.2026",
    "sureler": {
-    "on_kontrol": 5,
-    "degerlendirme": 150,
+    "on_kontrol": 11,
+    "degerlendirme": 149,
     "yayim": 49
    }
   },
   "gemder": {
    "baslik": "Genç Mütefekkirler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "EBSCO",
@@ -1431,14 +1431,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "26.07.2026",
    "sureler": {
-    "on_kontrol": 13,
-    "degerlendirme": 86,
-    "yayim": 17
+    "on_kontrol": 14,
+    "degerlendirme": 84,
+    "yayim": 33
    }
   },
   "gibtuislamad": {
    "baslik": "GİBTÜ İslami Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1456,14 +1456,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "12.10.2024",
    "sureler": {
-    "on_kontrol": 10,
-    "degerlendirme": 83,
+    "on_kontrol": 12,
+    "degerlendirme": 80,
     "yayim": 52
    }
   },
   "gifad": {
    "baslik": "Gümüşhane Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -1483,13 +1483,13 @@
    "gonderim_tarih": "30.07.2026",
    "sureler": {
     "on_kontrol": 28,
-    "degerlendirme": 125,
+    "degerlendirme": 137,
     "yayim": 47
    }
   },
   "haid": {
    "baslik": "Hakkari İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM",
@@ -1507,14 +1507,14 @@
    "gonderim_tarih": "02.10.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 12,
-    "degerlendirme": 106,
+    "on_kontrol": 13,
+    "degerlendirme": 108,
     "yayim": 51
    }
   },
   "hid": {
    "baslik": "Hitit İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -1542,13 +1542,13 @@
    "acilis": "05.01.2027",
    "sureler": {
     "on_kontrol": 5,
-    "degerlendirme": 115,
+    "degerlendirme": 120,
     "yayim": 47
    }
   },
   "hij": {
    "baslik": "Harran İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -1563,14 +1563,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "06.07.2026",
    "sureler": {
-    "on_kontrol": 48,
-    "degerlendirme": 179,
+    "on_kontrol": 47,
+    "degerlendirme": 187,
     "yayim": 22
    }
   },
   "hikem": {
    "baslik": "HİKEM",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Asian Science Citation Index (ASCI)",
@@ -1593,7 +1593,7 @@
   },
   "idrak": {
    "baslik": "İdrak Dini Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1622,13 +1622,13 @@
    "acilis": "15.01.2027",
    "sureler": {
     "on_kontrol": 9,
-    "degerlendirme": 109,
+    "degerlendirme": 107,
     "yayim": 52
    }
   },
   "ifder": {
    "baslik": "Iğdır Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM",
@@ -1644,14 +1644,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.07.2026",
    "sureler": {
-    "on_kontrol": 136,
+    "on_kontrol": 120,
     "degerlendirme": 68,
     "yayim": 24
    }
   },
   "ihya": {
    "baslik": "İhya Uluslararası İslam Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -1666,14 +1666,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "04.09.2026",
    "sureler": {
-    "on_kontrol": 7,
-    "degerlendirme": 115,
+    "on_kontrol": 5,
+    "degerlendirme": 117,
     "yayim": 51
    }
   },
   "ilahiyatname": {
    "baslik": "ilahiyatname",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "EBSCO-Central & Eastern European Academic Source (CEEAS) (indexing start: 09.01.2023)",
@@ -1692,14 +1692,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "19.09.2025",
    "sureler": {
-    "on_kontrol": 25,
+    "on_kontrol": 26,
     "degerlendirme": 111,
     "yayim": 37
    }
   },
   "ilak": {
    "baslik": "İlahiyat Akademi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1725,14 +1725,14 @@
    "gonderim_tarih": "21.07.2026",
    "acilis": "20.01.2027",
    "sureler": {
-    "on_kontrol": 16,
-    "degerlendirme": 114,
+    "on_kontrol": 13,
+    "degerlendirme": 111,
     "yayim": 61
    }
   },
   "ilmiyat": {
    "baslik": "Tokat İlmiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1758,14 +1758,14 @@
    "gonderim_tarih": "20.07.2026",
    "acilis": "15.01.2027",
    "sureler": {
-    "on_kontrol": 21,
-    "degerlendirme": 129,
+    "on_kontrol": 20,
+    "degerlendirme": 133,
     "yayim": 29
    }
   },
   "ilted": {
    "baslik": "İlahiyat Tetkikleri Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -1794,13 +1794,13 @@
    "acilis": "01.01.2027",
    "sureler": {
     "on_kontrol": 8,
-    "degerlendirme": 155,
+    "degerlendirme": 167,
     "yayim": 46
    }
   },
   "imad": {
    "baslik": "İslam Medeniyeti Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1821,13 +1821,13 @@
    "gonderim_tarih": "12.12.2024",
    "sureler": {
     "on_kontrol": 6,
-    "degerlendirme": 82,
-    "yayim": 30
+    "degerlendirme": 79,
+    "yayim": 31
    }
   },
   "is": {
    "baslik": "Ilahiyat Studies",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -1846,14 +1846,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "16.07.2026",
    "sureler": {
-    "on_kontrol": 15,
-    "degerlendirme": 166,
+    "on_kontrol": 20,
+    "degerlendirme": 198,
     "yayim": 39
    }
   },
   "isad": {
    "baslik": "İslam Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -1868,14 +1868,14 @@
    "yayin_modeli": "Süreli Yayın (Ocak - Temmuz)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 13,
-    "degerlendirme": 141,
+    "on_kontrol": 16,
+    "degerlendirme": 144,
     "yayim": 94
    }
   },
   "islamiilimler": {
    "baslik": "İslami İlimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1902,13 +1902,13 @@
    "acilis": "15.12.2026",
    "sureler": {
     "on_kontrol": 9,
-    "degerlendirme": 131,
+    "degerlendirme": 134,
     "yayim": 44
    }
   },
   "itkan": {
    "baslik": "İtkan Akademik Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Index Copernicus"
@@ -1925,13 +1925,13 @@
    "acilis": "01.01.2027",
    "sureler": {
     "on_kontrol": 9,
-    "degerlendirme": 58,
+    "degerlendirme": 52,
     "yayim": 81
    }
   },
   "itobiad": {
    "baslik": "İnsan ve Toplum Bilimleri Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -1957,14 +1957,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "03.01.2026",
    "sureler": {
-    "on_kontrol": 21,
-    "degerlendirme": 166,
+    "on_kontrol": 22,
+    "degerlendirme": 169,
     "yayim": 32
    }
   },
   "iufad": {
    "baslik": "Felsefe Arkivi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -1985,14 +1985,14 @@
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 38,
-    "degerlendirme": 185,
+    "on_kontrol": 36,
+    "degerlendirme": 187,
     "yayim": 110
    }
   },
   "iuislamtd": {
    "baslik": "İslam Tetkikleri Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2014,14 +2014,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "15.10.2026",
    "sureler": {
-    "on_kontrol": 30,
+    "on_kontrol": 27,
     "degerlendirme": 98,
-    "yayim": 44
+    "yayim": 43
    }
   },
   "jiss": {
    "baslik": "Çankırı Karatekin Üniversitesi Sosyal Bilimler Enstitüsü Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -2037,14 +2037,14 @@
    "gonderim_tarih": "01.11.2026",
    "acilis": "06.12.2026",
    "sureler": {
-    "on_kontrol": 7,
-    "degerlendirme": 84,
+    "on_kontrol": 8,
+    "degerlendirme": 76,
     "yayim": 61
    }
   },
   "jss": {
    "baslik": "Gaziantep Üniversitesi Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2065,12 +2065,12 @@
    "sureler": {
     "on_kontrol": 29,
     "degerlendirme": 186,
-    "yayim": 72
+    "yayim": 77
    }
   },
   "k7auifd": {
    "baslik": "Kilis 7 Aralık Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2090,14 +2090,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "17.07.2026",
    "sureler": {
-    "on_kontrol": 20,
-    "degerlendirme": 153,
+    "on_kontrol": 18,
+    "degerlendirme": 156,
     "yayim": 34
    }
   },
   "kaderdergi": {
    "baslik": "Kader",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2124,14 +2124,14 @@
    "gonderim_tarih": "23.08.2026",
    "acilis": "01.02.2027",
    "sureler": {
-    "on_kontrol": 11,
-    "degerlendirme": 81,
+    "on_kontrol": 13,
+    "degerlendirme": 78,
     "yayim": 56
    }
   },
   "kafkasilahiyat": {
    "baslik": "Kafkas Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "MLA Modern Language Association",
@@ -2155,13 +2155,13 @@
    "gonderim_tarih": "15.10.2026",
    "sureler": {
     "on_kontrol": 3,
-    "degerlendirme": 55,
+    "degerlendirme": 46,
     "yayim": 51
    }
   },
   "kalemname": {
    "baslik": "Kalemname",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Index Copernicus",
@@ -2190,7 +2190,7 @@
   },
   "katre": {
    "baslik": "Katre Uluslararası İnsan Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM - İslam Araştırmaları Merkezi",
@@ -2209,14 +2209,14 @@
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 24,
+    "on_kontrol": 11,
     "degerlendirme": 106,
     "yayim": 48
    }
   },
   "kausbed": {
    "baslik": "Kafkas Üniversitesi Sosyal Bilimler Enstitüsü Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2234,14 +2234,14 @@
    "gonderim_tarih": "05.06.2026",
    "acilis": "03.01.2027",
    "sureler": {
-    "on_kontrol": 16,
-    "degerlendirme": 131,
+    "on_kontrol": 15,
+    "degerlendirme": 132,
     "yayim": 61
    }
   },
   "kider": {
    "baslik": "Kocaeli İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2264,14 +2264,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "06.10.2026",
    "sureler": {
-    "on_kontrol": 7,
-    "degerlendirme": 77,
+    "on_kontrol": 6,
+    "degerlendirme": 81,
     "yayim": 48
    }
   },
   "kiid": {
    "baslik": "Kocatepe İslami İlimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -2294,13 +2294,13 @@
    "acilis": "01.01.2027",
    "sureler": {
     "on_kontrol": 17,
-    "degerlendirme": 145,
+    "degerlendirme": 148,
     "yayim": 19
    }
   },
   "kilikya": {
    "baslik": "Kilikya Felsefe Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2322,13 +2322,13 @@
    "gonderim_tarih": "01.11.2026",
    "sureler": {
     "on_kontrol": 20,
-    "degerlendirme": 90,
-    "yayim": 39
+    "degerlendirme": 98,
+    "yayim": 72
    }
   },
   "kilitbahir": {
    "baslik": "Kilitbahir",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM İlahiyat Makaleleri Veri Tabanı",
@@ -2349,14 +2349,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "25.11.2024",
    "sureler": {
-    "on_kontrol": 18,
+    "on_kontrol": 17,
     "degerlendirme": 97,
     "yayim": 25
    }
   },
   "kitabiyatilahiyat": {
    "baslik": "Kitabiyat İlahiyat Araştırmaları İnceleme-Eleştiri Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2370,13 +2370,13 @@
    "gonderim_tarih": "08.03.2024",
    "sureler": {
     "on_kontrol": 17,
-    "degerlendirme": 72,
+    "degerlendirme": 73,
     "yayim": 40
    }
   },
   "ksuifd": {
    "baslik": "Kahramanmaraş Sütçü İmam Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -2393,13 +2393,13 @@
    "acilis": "01.01.2027",
    "sureler": {
     "on_kontrol": 14,
-    "degerlendirme": 139,
+    "degerlendirme": 146,
     "yayim": 45
    }
   },
   "kuifd": {
    "baslik": "Kastamonu Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "The Erih Plus European Reference Index for Humanities (indexing start: 16.11.2023)",
@@ -2420,14 +2420,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "13.12.2023",
    "sureler": {
-    "on_kontrol": 33,
+    "on_kontrol": 32,
     "degerlendirme": 154,
     "yayim": 54
    }
   },
   "maide": {
    "baslik": "Manisa İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2437,17 +2437,17 @@
     "okundu": "2026-11-09"
    },
    "yayin_modeli": "Süreli Yayın (Nisan - Ekim)",
-   "gonderim": "kapali",
-   "gonderim_tarih": "14.09.2026",
-   "acilis": "10.11.2026",
+   "gonderim": "acik",
+   "gonderim_tarih": "10.11.2026",
    "sureler": {
     "on_kontrol": 2,
-    "degerlendirme": 5
+    "degerlendirme": 48,
+    "yayim": 19
    }
   },
   "marifetname": {
    "baslik": "Marifetname",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2471,13 +2471,13 @@
    "gonderim_tarih": "07.07.2026",
    "sureler": {
     "on_kontrol": 3,
-    "degerlendirme": 68,
+    "degerlendirme": 70,
     "yayim": 93
    }
   },
   "maruifd": {
    "baslik": "Marmara Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2496,13 +2496,13 @@
    "gonderim_tarih": "05.08.2026",
    "sureler": {
     "on_kontrol": 41,
-    "degerlendirme": 80,
+    "degerlendirme": 107,
     "yayim": 60
    }
   },
   "mecelle": {
    "baslik": "MECELLE İslâmî Araştırmalar Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -2515,13 +2515,13 @@
    "gonderim": "acik",
    "gonderim_tarih": "05.08.2026",
    "sureler": {
-    "on_kontrol": 22,
+    "on_kontrol": 20,
     "degerlendirme": 97
    }
   },
   "mecmua": {
    "baslik": "Mecmua",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Erih + (Kabul/Accepted: 22.01.2018)",
@@ -2549,7 +2549,7 @@
   },
   "mesned": {
    "baslik": "Mesned İlahiyat Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2574,18 +2574,18 @@
    "gonderim": "acik",
    "gonderim_tarih": "24.08.2026",
    "sureler": {
-    "on_kontrol": 13,
-    "degerlendirme": 86,
-    "yayim": 33
+    "on_kontrol": 16,
+    "degerlendirme": 82,
+    "yayim": 30
    }
   },
   "mevzu": {
    "baslik": "Mevzu – Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09"
+   "okundu": "2026-11-10"
   },
   "mid": {
    "baslik": "Mersin İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Erih Plus: Onay tarihi : 17.03.2026"
@@ -2601,13 +2601,13 @@
    "gonderim_tarih": "16.04.2025",
    "sureler": {
     "on_kontrol": 7,
-    "degerlendirme": 66,
-    "yayim": 8
+    "degerlendirme": 69,
+    "yayim": 7
    }
   },
   "milel": {
    "baslik": "Milel ve Nihal",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2627,13 +2627,13 @@
    "gonderim": "acik",
    "sureler": {
     "on_kontrol": 10,
-    "degerlendirme": 97,
+    "degerlendirme": 108,
     "yayim": 60
    }
   },
   "mizan": {
    "baslik": "Mizanü'l-Hak: İslami İlimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2658,14 +2658,14 @@
    "gonderim_tarih": "10.08.2026",
    "acilis": "10.02.2027",
    "sureler": {
-    "on_kontrol": 17,
-    "degerlendirme": 142,
+    "on_kontrol": 14,
+    "degerlendirme": 126,
     "yayim": 93
    }
   },
   "mutalaa": {
    "baslik": "MUTALAA",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "İSAM (İslam Araştırmaları Merkezi)"
@@ -2679,8 +2679,8 @@
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 22,
-    "degerlendirme": 74,
+    "on_kontrol": 17,
+    "degerlendirme": 82,
     "yayim": 22
    }
   },
@@ -2713,7 +2713,7 @@
   },
   "nevsosbilen": {
    "baslik": "Nevşehir Hacı Bektaş Veli Üniversitesi SBE Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2742,14 +2742,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "18.10.2026",
    "sureler": {
-    "on_kontrol": 17,
-    "degerlendirme": 117,
+    "on_kontrol": 16,
+    "degerlendirme": 123,
     "yayim": 45
    }
   },
   "nisar": {
    "baslik": "Nisar",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2768,14 +2768,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "10.12.2023",
    "sureler": {
-    "on_kontrol": 30,
-    "degerlendirme": 96,
+    "on_kontrol": 46,
+    "degerlendirme": 106,
     "yayim": 53
    }
   },
   "oad": {
    "baslik": "Ortaçağ Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2809,7 +2809,7 @@
   },
   "odusobiad": {
    "baslik": "Ordu Üniversitesi Sosyal Bilimler Enstitüsü Sosyal Bilimler Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2844,13 +2844,13 @@
    "gonderim_tarih": "30.10.2026",
    "sureler": {
     "on_kontrol": 17,
-    "degerlendirme": 158,
-    "yayim": 99
+    "degerlendirme": 156,
+    "yayim": 93
    }
   },
   "ogusbd": {
    "baslik": "Eskişehir Osmangazi Üniversitesi Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2868,14 +2868,14 @@
    "gonderim_tarih": "08.09.2026",
    "acilis": "23.11.2026",
    "sureler": {
-    "on_kontrol": 14,
-    "degerlendirme": 146,
+    "on_kontrol": 15,
+    "degerlendirme": 165,
     "yayim": 55
    }
   },
   "oi": {
    "baslik": "Ordu İlahiyat",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2899,14 +2899,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.10.2026",
    "sureler": {
-    "on_kontrol": 15,
+    "on_kontrol": 14,
     "degerlendirme": 135,
     "yayim": 36
    }
   },
   "omuifd": {
    "baslik": "Ondokuz Mayıs Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2928,13 +2928,13 @@
    "acilis": "15.01.2027",
    "sureler": {
     "on_kontrol": 22,
-    "degerlendirme": 179,
+    "degerlendirme": 185,
     "yayim": 81
    }
   },
   "paudiv": {
    "baslik": "Pamukkale Divinity",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -2951,12 +2951,12 @@
    "gonderim_tarih": "30.07.2026",
    "sureler": {
     "on_kontrol": 10,
-    "degerlendirme": 59
+    "degerlendirme": 77
    }
   },
   "rid": {
    "baslik": "Rize İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -2984,14 +2984,14 @@
    "gonderim_tarih": "16.05.2026",
    "acilis": "01.12.2026",
    "sureler": {
-    "on_kontrol": 36,
-    "degerlendirme": 121,
-    "yayim": 61
+    "on_kontrol": 33,
+    "degerlendirme": 126,
+    "yayim": 66
    }
   },
   "rumeli": {
    "baslik": "Rumeli İslam Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [],
     "trdizin": false,
@@ -3004,14 +3004,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "01.10.2023",
    "sureler": {
-    "on_kontrol": 42,
-    "degerlendirme": 171,
-    "yayim": 102
+    "on_kontrol": 41,
+    "degerlendirme": 152,
+    "yayim": 99
    }
   },
   "rusuhder": {
    "baslik": "RUSUH Uşak Üniversitesi İslami İlimler Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "ASOS",
@@ -3030,14 +3030,14 @@
    "gonderim_tarih": "05.11.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 3,
+    "on_kontrol": 8,
     "degerlendirme": 90,
     "yayim": 15
    }
   },
   "sakaifd": {
    "baslik": "Sakarya Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3066,13 +3066,13 @@
    "gonderim_tarih": "01.08.2025",
    "sureler": {
     "on_kontrol": 17,
-    "degerlendirme": 108,
-    "yayim": 40
+    "degerlendirme": 119,
+    "yayim": 48
    }
   },
   "sarkiat": {
    "baslik": "Şarkiyat",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -3097,13 +3097,13 @@
    "gonderim_tarih": "05.07.2026",
    "sureler": {
     "on_kontrol": 32,
-    "degerlendirme": 154,
+    "degerlendirme": 145,
     "yayim": 75
    }
   },
   "sduifd": {
    "baslik": "Makale",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "yonlendi": "https://dergipark.org.tr/tr/pub/makale",
    "dizin": {
     "liste": [
@@ -3127,14 +3127,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "14.01.2026",
    "sureler": {
-    "on_kontrol": 7,
+    "on_kontrol": 8,
     "degerlendirme": 73,
     "yayim": 26
    }
   },
   "sefad": {
    "baslik": "Selçuk Üniversitesi Edebiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -3156,13 +3156,13 @@
    "acilis": "20.11.2026",
    "sureler": {
     "on_kontrol": 36,
-    "degerlendirme": 171,
+    "degerlendirme": 173,
     "yayim": 110
    }
   },
   "sinopid": {
    "baslik": "Sinop İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Academindex",
@@ -3180,14 +3180,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "15.09.2026",
    "sureler": {
-    "on_kontrol": 8,
-    "degerlendirme": 91,
+    "on_kontrol": 7,
+    "degerlendirme": 102,
     "yayim": 54
    }
   },
   "sirnakifd": {
    "baslik": "Şırnak Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Emerging Sources Citation Index (ESCI)",
@@ -3219,13 +3219,13 @@
    "gonderim_tarih": "02.07.2026",
    "sureler": {
     "on_kontrol": 8,
-    "degerlendirme": 100,
-    "yayim": 72
+    "degerlendirme": 99,
+    "yayim": 73
    }
   },
   "sosekev": {
    "baslik": "EKEV Akademi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin"
@@ -3240,14 +3240,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "09.10.2026",
    "sureler": {
-    "on_kontrol": 26,
-    "degerlendirme": 164,
+    "on_kontrol": 25,
+    "degerlendirme": 161,
     "yayim": 26
    }
   },
   "suitder": {
    "baslik": "Süleyman Demirel Üniversitesi İnsan ve Toplum Bilimleri Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3265,14 +3265,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "25.08.2026",
    "sureler": {
-    "on_kontrol": 26,
-    "degerlendirme": 115,
+    "on_kontrol": 28,
+    "degerlendirme": 126,
     "yayim": 95
    }
   },
   "tabula": {
    "baslik": "Tabula Rasa: Felsefe ve Teoloji",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "The Philosopher’s Index"
@@ -3286,14 +3286,14 @@
    "yayin_modeli": "Süreli Yayın (Haziran - Aralık)",
    "gonderim": "acik",
    "sureler": {
-    "on_kontrol": 12,
-    "degerlendirme": 99,
+    "on_kontrol": 15,
+    "degerlendirme": 107,
     "yayim": 35
    }
   },
   "takrir": {
    "baslik": "Takrir - Muş Alparslan Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3314,13 +3314,13 @@
    "acilis": "01.01.2027",
    "sureler": {
     "on_kontrol": 7,
-    "degerlendirme": 69,
+    "degerlendirme": 73,
     "yayim": 29
    }
   },
   "talid": {
    "baslik": "Türkiye Araştırmaları Literatür Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "MLA International Bibliography/ EBSCO",
@@ -3340,13 +3340,13 @@
    "gonderim": "acik",
    "sureler": {
     "on_kontrol": 14,
-    "degerlendirme": 23,
-    "yayim": 35
+    "degerlendirme": 21,
+    "yayim": 28
    }
   },
   "tarr": {
    "baslik": "Turkish Academic Research Review",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3370,13 +3370,13 @@
    "gonderim_tarih": "30.10.2024",
    "sureler": {
     "on_kontrol": 4,
-    "degerlendirme": 79,
+    "degerlendirme": 78,
     "yayim": 27
    }
   },
   "tasavvur": {
    "baslik": "Tasavvur / Tekirdağ İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3402,13 +3402,13 @@
    "acilis": "01.02.2027",
    "sureler": {
     "on_kontrol": 10,
-    "degerlendirme": 63,
+    "degerlendirme": 67,
     "yayim": 67
    }
   },
   "temasa": {
    "baslik": "Temaşa Erciyes Üniversitesi Felsefe Bölümü Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -3435,13 +3435,13 @@
    "gonderim": "acik",
    "sureler": {
     "on_kontrol": 3,
-    "degerlendirme": 31,
+    "degerlendirme": 41,
     "yayim": 60
    }
   },
   "tetkik": {
    "baslik": "Tetkik",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3469,14 +3469,14 @@
    "gonderim_tarih": "20.10.2026",
    "acilis": "20.04.2027",
    "sureler": {
-    "on_kontrol": 27,
-    "degerlendirme": 139,
+    "on_kontrol": 26,
+    "degerlendirme": 138,
     "yayim": 31
    }
   },
   "tevilat": {
    "baslik": "Tevilat",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3503,7 +3503,7 @@
   },
   "tiad": {
    "baslik": "Türkiye İlahiyat Araştırmaları Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -3521,14 +3521,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "03.01.2026",
    "sureler": {
-    "on_kontrol": 22,
-    "degerlendirme": 121,
+    "on_kontrol": 21,
+    "degerlendirme": 123,
     "yayim": 37
    }
   },
   "tid": {
    "baslik": "Trabzon İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3553,13 +3553,13 @@
    "acilis": "01.02.2027",
    "sureler": {
     "on_kontrol": 23,
-    "degerlendirme": 79,
+    "degerlendirme": 84,
     "yayim": 48
    }
   },
   "tkhcbva": {
    "baslik": "Türk Kültürü ve Hacı Bektaş Veli Araştırma Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "Scopus",
@@ -3576,14 +3576,14 @@
    "gonderim_tarih": "11.04.2026",
    "acilis": "01.01.2027",
    "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 160,
+    "on_kontrol": 5,
+    "degerlendirme": 167,
     "yayim": 172
    }
   },
   "udfad": {
    "baslik": "Din ve Felsefe Araştırmaları",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "PhilPapers",
@@ -3599,14 +3599,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "26.09.2024",
    "sureler": {
-    "on_kontrol": 35,
-    "degerlendirme": 72,
+    "on_kontrol": 38,
+    "degerlendirme": 85,
     "yayim": 34
    }
   },
   "uluid": {
    "baslik": "Uludağ İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3632,13 +3632,13 @@
    "gonderim_tarih": "18.07.2026",
    "sureler": {
     "on_kontrol": 19,
-    "degerlendirme": 105,
+    "degerlendirme": 104,
     "yayim": 68
    }
   },
   "ulum": {
    "baslik": "ULUM",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3658,14 +3658,14 @@
    "gonderim": "acik",
    "gonderim_tarih": "19.12.2024",
    "sureler": {
-    "on_kontrol": 7,
-    "degerlendirme": 84,
+    "on_kontrol": 6,
+    "degerlendirme": 79,
     "yayim": 49
    }
   },
   "umde": {
    "baslik": "UMDE Dini Tetkikler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3692,14 +3692,14 @@
    "gonderim_tarih": "15.09.2026",
    "acilis": "01.03.2027",
    "sureler": {
-    "on_kontrol": 18,
+    "on_kontrol": 19,
     "degerlendirme": 104,
     "yayim": 38
    }
   },
   "uskudarsbd": {
    "baslik": "Üsküdar Üniversitesi Sosyal Bilimler Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "TR Dizin",
@@ -3719,14 +3719,14 @@
    "gonderim": "kapali",
    "gonderim_tarih": "17.09.2026",
    "sureler": {
-    "on_kontrol": 27,
-    "degerlendirme": 173,
+    "on_kontrol": 30,
+    "degerlendirme": 164,
     "yayim": 107
    }
   },
   "usul": {
    "baslik": "Usul İslam Araştırmaları",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3752,13 +3752,13 @@
    "gonderim_tarih": "13.08.2026",
    "sureler": {
     "on_kontrol": 14,
-    "degerlendirme": 104,
+    "degerlendirme": 102,
     "yayim": 80
    }
   },
   "vanid": {
    "baslik": "Van İlahiyat Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3779,13 +3779,13 @@
    "gonderim_tarih": "08.07.2026",
    "sureler": {
     "on_kontrol": 7,
-    "degerlendirme": 133,
+    "degerlendirme": 145,
     "yayim": 24
    }
   },
   "yaduitmed": {
    "baslik": "Yakın Doğu Üniversitesi İslam Tetkikleri Merkezi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3814,14 +3814,14 @@
    "gonderim_tarih": "22.08.2026",
    "acilis": "11.01.2027",
    "sureler": {
-    "on_kontrol": 9,
-    "degerlendirme": 81,
+    "on_kontrol": 10,
+    "degerlendirme": 82,
     "yayim": 71
    }
   },
   "ydoguilaf": {
    "baslik": "Yakın Doğu Üniversitesi İlahiyat Fakültesi Dergisi",
-   "okundu": "2026-11-09",
+   "okundu": "2026-11-10",
    "dizin": {
     "liste": [
      "DOAJ",
@@ -3852,7 +3852,7 @@
    "acilis": "09.01.2027",
    "sureler": {
     "on_kontrol": 3,
-    "degerlendirme": 90,
+    "degerlendirme": 93,
     "yayim": 68
    }
   }
