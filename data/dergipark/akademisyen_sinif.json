@@ -4875,24 +4875,6 @@
   },
   "tur": ""
  },
- "288057": {
-  "akademisyenler": [
-   "Ahmet Kavlak"
-  ],
-  "baslik": "Şehir ve Entelektüel Üretkenlik",
-  "basliklar": [],
-  "durum": "kapsam-disi",
-  "elle": true,
-  "eslesen": [
-   "akil → din-epistemolojisi",
-   "dil → din-dili"
-  ],
-  "ilgili": [],
-  "kanit": {
-   "Ahmet Kavlak": "profil-listesi"
-  },
-  "tur": ""
- },
  "290571": {
   "akademisyenler": [
    "Mehmet Şükrü Özkan"
@@ -6921,21 +6903,6 @@
   },
   "tur": ""
  },
- "539706": {
-  "akademisyenler": [
-   "Ahmet Kavlak"
-  ],
-  "baslik": "Hıristiyanlıkta İncil Yorumlarının Tarihsel Kaynakları",
-  "basliklar": [],
-  "durum": "konusuz",
-  "elle": false,
-  "eslesen": [],
-  "ilgili": [],
-  "kanit": {
-   "Ahmet Kavlak": "profil-listesi"
-  },
-  "tur": ""
- },
  "540639": {
   "akademisyenler": [
    "Ayşe Sıdıka Oktay"
@@ -7352,27 +7319,6 @@
   },
   "tur": ""
  },
- "612794": {
-  "akademisyenler": [
-   "Ahmet Kavlak"
-  ],
-  "baslik": "“Nedensellik” Üzerine",
-  "basliklar": [
-   "tanri-alem-iliskisi",
-   "tanrinin-sifatlari"
-  ],
-  "durum": "konulu",
-  "elle": false,
-  "eslesen": [
-   "nedensellik → tanri-alem-iliskisi",
-   "zorunlu sifatlar → tanrinin-sifatlari"
-  ],
-  "ilgili": [],
-  "kanit": {
-   "Ahmet Kavlak": "profil-listesi"
-  },
-  "tur": ""
- },
  "616681": {
   "akademisyenler": [
    "Ali Yıldırım"
@@ -7759,25 +7705,6 @@
   "ilgili": [],
   "kanit": {
    "Ayşe Sıdıka Oktay": "profil-listesi"
-  },
-  "tur": ""
- },
- "704626": {
-  "akademisyenler": [
-   "Ahmet Kavlak"
-  ],
-  "baslik": "“İrade” ve “Kelam” Sıfatları Üzerine",
-  "basliklar": [
-   "tanrinin-sifatlari"
-  ],
-  "durum": "konulu",
-  "elle": false,
-  "eslesen": [
-   "sifat → tanrinin-sifatlari"
-  ],
-  "ilgili": [],
-  "kanit": {
-   "Ahmet Kavlak": "orcid"
   },
   "tur": ""
  },
