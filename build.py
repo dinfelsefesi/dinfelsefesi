@@ -933,7 +933,9 @@ def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canon
 </div></footer>
 <script>
 (function(){{var b=document.body,son=window.scrollY,tel=window.matchMedia('(max-width:760px)');
-function bak(){{var y=window.scrollY;b.classList.toggle('ust-ince',y>80);
+function bak(){{var y=window.scrollY;
+  /* iki eşik: şerit incelince sayfa kısalır ve kaydırma konumu geriye itilebilir; tek eşikte şerit titrerdi */
+  if(y>90)b.classList.add('ust-ince');else if(y<20)b.classList.remove('ust-ince');
   if(tel.matches){{if(y>son+4&&y>140)b.classList.add('ust-gizli');else if(y<son-4||y<140)b.classList.remove('ust-gizli')}}
   else b.classList.remove('ust-gizli');son=y}}
 window.addEventListener('scroll',bak,{{passive:true}});bak()}})();
