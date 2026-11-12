@@ -1384,7 +1384,7 @@ def render_dizin(tur) -> str:
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
 
 KAPSAM = [("turkiye", "Türkiye akademisi"), ("uluslararasi", "Uluslararası akademi")]
-YOK_PROFIL = "https://akademik.yok.gov.tr/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&authorId="
+YOK_PROFIL = "https://akademik.yok.gov.tr/academician-details?authorGuidId="
 
 
 UNVAN_SIRA = {"Prof. Dr.": 0, "Doç. Dr.": 1, "Dr. Öğr. Üyesi": 2, "Öğr. Gör. Dr.": 3, "Öğr. Gör.": 4, "Arş. Gör. Dr.": 5, "Arş. Gör.": 6}
@@ -2481,6 +2481,8 @@ def diger_yayin_ogeleri(v) -> list:
             continue
         kayitlar.append((baslik_anahtari(baslik), w["yil"]))
         hedef = f'https://doi.org/{w["doi"]}' if w["doi"] else w["url"]
+        if hedef and "akademik.yok.gov.tr" in hedef:  # eski YÖK adresleri eserin kendisine götürmez; bağlantı verilmez
+            hedef = ""
         bas = (f'<a class="eser-ad dis" href="{e(hedef)}" rel="noopener" target="_blank">{e(baslik)}</a>' if hedef
                else f'<span class="eser-ad">{e(baslik)}</span>')
         bilgi = ", ".join(x for x in [e(baslik_temizle(w["dergi"])), e(w["yil"])] if x)
