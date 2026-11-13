@@ -638,6 +638,14 @@ select.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inh
 input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inherit;font-family:var(--display);font-size:1.02rem;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:.5rem 1rem}
 .eser-ara-kap::after{display:none}
 .eser-ara-etiket{margin-top:.7rem}
+.tez-liste{list-style:none;padding:0;margin:.2rem 0 0}
+.tez-liste li{padding:.75rem 0;border-bottom:1px solid var(--rule)}
+.tez-liste li[hidden]{display:none}
+.tez-ad{margin:0 0 .15rem;font-family:var(--display);font-size:1.08rem;font-weight:500;color:var(--ink)}
+.tez-kunye,.tez-yer{margin:0;font-size:.92rem;color:var(--ink-soft)}
+.tez-yer{font-style:italic;font-size:.86rem}
+.tez-durum.d-devam{color:var(--accent);font-weight:600}
+.tez-durum-etiket{margin-top:.7rem}
 select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--accent);outline-offset:1px}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
 .eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
@@ -829,6 +837,9 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
 
 MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
         ("eserler", "Eserler"), ("dergiler", "Dergiler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
+TEZ_DOSYA = ROOT / "data" / "tez" / "tezler.json"
+if TEZ_DOSYA.exists():
+    MENU.insert([k for k, _ in MENU].index("eserler") + 1, ("tezler", "Tezler"))
 
 
 GORSELLER = []   # (dosya yolu, üst yazı, başlık, alt yazı): derleme sonunda üretilir
@@ -1560,6 +1571,98 @@ def eser_satiri(k) -> str:
         bilgi.append('<span class="ae">Açık erişim</span>')
     return (f'<a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
             f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span>')
+
+
+def tez_tr_baslik(t: str) -> str:
+    """Ulusal Tez Merkezi'nde büyük harfle yazılan kurum adlarını Türkçe başlık biçimine çevirir."""
+    kucuk = {"ve", "ile", "için"}
+    out = []
+    for n, w in enumerate(t.split()):
+        lw = tr_kucuk(w)
+        out.append(lw if n and lw in kucuk else (("İ" if lw[:1] == "i" else "I" if lw[:1] == "ı" else lw[:1].upper()) + lw[1:]))
+    return " ".join(out)
+
+
+def render_tezler() -> str:
+    tezler = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
+    tezler.sort(key=lambda t: (t["yil"], t["ad"]), reverse=True)
+    satirlar = []
+    for t in tezler:
+        durum = "devam" if t["devam"] else "tamam"
+        hocalar = ", ".join(f'<a href="{SITE_URL}/kisiler/#k-{slugify(h)}">{e(h)}</a>' for h in t["danisman"])
+        parcalar = t["yer"].split(" / ")
+        yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
+        ara = tr_kucuk(" ".join([t["ad"], " ".join(t["danisman"]), yer]))
+        satirlar.append(
+            f'<li data-tur="{e(t["tur"])}" data-durum="{durum}" data-yil="{e(t["yil"])}" data-ad="{e(t["ad"])}" '
+            f'data-danisman="{e(t["danisman"][0])}" data-ara="{e(ara)}">'
+            f'<p class="tez-ad">{e(t["ad"])}</p>'
+            f'<p class="tez-kunye">{e(t["tur"])} · {e(t["yil"])} · <span class="tez-durum d-{durum}">{"Devam ediyor" if t["devam"] else "Tamamlandı"}</span>'
+            f' · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
+    def dugme(alan, deger, ad):
+        return f'<button type="button" data-{alan}="{deger}" aria-pressed="{"true" if not deger else "false"}">{ad} <span class="say"></span></button>'
+    turler = "".join([dugme("tur", "", "Tümü"), dugme("tur", "Yüksek Lisans", "Yüksek lisans"), dugme("tur", "Doktora", "Doktora")])
+    durumlar = "".join([dugme("durum", "", "Tümü"), dugme("durum", "devam", "Devam ediyor"), dugme("durum", "tamam", "Tamamlandı")])
+    siralama = ('<div class="eser-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
+                + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="none">{a}<span class="ok" aria-hidden="true"></span></button>'
+                          for k, a in [("yil", "Yıl"), ("danisman", "Danışman"), ("ad", "Tez adı")]) + '</div>')
+    body = (f'<p class="ust-etiket">Tezler</p><h1>Tezler</h1>'
+            f'<p class="aciklama-kisa">Listedeki akademisyenlerin danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri. '
+            f'Kayıtlar YÖK Ulusal Tez Merkezi\'nin danışman aramasından alınmıştır, bu yüzden Tez Merkezi\'nde kaydı bulunmayan tezler yer almaz. '
+            f'Öğrenci adları yazılmaz. Danışman adıyla ya da tez adında geçen bir kelimeyle arama yapılabilir. '
+            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            '<label class="secim-etiket" for="tez-ara">Ara</label>'
+            '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="tez-ara" class="eser-konu-sec" placeholder="Tez adı, danışman ya da üniversite" autocomplete="off"></div>'
+            f'<p class="secim-etiket secim-ayrac">Tür</p><div class="tur-secici tez-sec" data-grup="tur" role="group" aria-label="Tez türü">{turler}</div>'
+            f'<p class="secim-etiket tez-durum-etiket">Durum</p><div class="tur-secici tez-sec" data-grup="durum" role="group" aria-label="Tez durumu">{durumlar}</div>'
+            f'<div class="eser-ust"><p class="eser-sayi"><span id="tez-say"></span></p>{siralama}</div>'
+            f'<ul class="eser-liste tez-liste">{"".join(satirlar)}</ul>'
+            f'<p class="giris eser-bos" hidden>Seçime uyan tez bulunamadı.</p>')
+    return page(f"Tezler · {SITE_NAME}", body + TEZ_JS, "tezler", canonical=f"{SITE_URL}/tezler/")
+
+
+TEZ_JS = """<script>
+(function(){
+  var lis=[].slice.call(document.querySelectorAll('ul.tez-liste > li')), ul=document.querySelector('ul.tez-liste');
+  var g=document.getElementById('tez-ara'), sb=document.querySelectorAll('.eser-sirala button');
+  var f={tur:'',durum:''}, alan='yil', yon=-1;
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
+  function uygula(yaz){
+    var q=kucuk(g.value.trim()), n=0, say={tur:{'':0},durum:{'':0}};
+    lis.forEach(function(li){
+      var ara=!q||li.dataset.ara.indexOf(q)>-1;
+      var tu=!f.tur||li.dataset.tur===f.tur, du=!f.durum||li.dataset.durum===f.durum;
+      if(ara&&du){say.tur['']++; say.tur[li.dataset.tur]=(say.tur[li.dataset.tur]||0)+1;}
+      if(ara&&tu){say.durum['']++; say.durum[li.dataset.durum]=(say.durum[li.dataset.durum]||0)+1;}
+      li.hidden=!(ara&&tu&&du); if(!li.hidden)n++;
+    });
+    ['tur','durum'].forEach(function(k){
+      document.querySelectorAll('[data-grup="'+k+'"] button').forEach(function(b){
+        b.querySelector('.say').textContent=say[k][b.dataset[k]]||0;
+        b.setAttribute('aria-pressed',b.dataset[k]===f[k]?'true':'false');
+      });
+    });
+    document.getElementById('tez-say').textContent=n+' tez';
+    document.querySelector('.eser-bos').hidden=n>0;
+    if(yaz){var p=new URLSearchParams(); if(g.value.trim())p.set('ara',g.value.trim()); if(f.tur)p.set('tur',f.tur); if(f.durum)p.set('durum',f.durum);
+      history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():''));}
+  }
+  function sirala(){
+    var a=lis.slice().sort(function(x,y){
+      var r=alan==='yil'?(+x.dataset.yil)-(+y.dataset.yil):kar(x.dataset[alan],y.dataset[alan]);
+      return (r||kar(x.dataset.ad,y.dataset.ad))*yon; });
+    a.forEach(function(li){ul.appendChild(li);});
+    sb.forEach(function(b){var ok=b.dataset.alan===alan; b.setAttribute('aria-sort',ok?(yon>0?'ascending':'descending'):'none'); b.querySelector('.ok').textContent=ok?(yon>0?'↑':'↓'):'';});
+  }
+  document.querySelectorAll('.tez-sec').forEach(function(grp){grp.addEventListener('click',function(ev){
+    var b=ev.target.closest('button'); if(!b)return; f[grp.dataset.grup]=b.dataset[grp.dataset.grup]; uygula(true);});});
+  sb.forEach(function(b){b.addEventListener('click',function(){ if(alan===b.dataset.alan){yon=-yon;}else{alan=b.dataset.alan;yon=alan==='yil'?-1:1;} sirala();});});
+  g.addEventListener('input',function(){uygula(true);});
+  var p=new URLSearchParams(location.search); g.value=p.get('ara')||''; f.tur=p.get('tur')||''; f.durum=p.get('durum')||'';
+  sirala(); uygula(false);
+})();
+</script>"""
 
 
 def render_eserler() -> str:
@@ -3691,6 +3794,8 @@ def main() -> None:
     for t in ("terim", "kisi"):
         yaz(KLASOR[t], render_dizin(t))
     yaz("eserler", render_eserler())
+    if TEZ_DOSYA.exists():
+        yaz("tezler", render_tezler())
     yaz("dergiler", render_dergiler())
     for s_ in akademi_verisi():
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
