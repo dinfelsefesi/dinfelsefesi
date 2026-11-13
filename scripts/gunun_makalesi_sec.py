@@ -2,7 +2,8 @@
 """Günün makalesini kurala göre seçer ve content/makaleler.json'a ekler.
 
 Kural (content/FISLER.md, "Günün makalesi"):
-- Sıra, DergiPark sayfasındaki yayım tarihine göre yeniden eskiye gider (data/dergipark/yayim_tarihi.json;
+- Her ayın başındaki hasatla gelen yeni liste (en yeni aylık hasat penceresi) öne alınır. Yeni liste bitince
+  sıra, DergiPark sayfasındaki yayım tarihine göre yeniden eskiye, eski makalelerle sürer (data/dergipark/yayim_tarihi.json;
   tarihi bilinmeyenlerde DergiPark kaydındaki tarih kullanılır).
 - Yazarlarından en az biri content/turkiye_akademisi.yaml listesinde olmalı.
 - Konusu din felsefesi başlıklarıyla eşleşmiş (durum "konulu") makaleler seçilir; kitap tanıtımı, çeviri vb. seçilmez.
@@ -150,13 +151,22 @@ def main() -> int:
     yturu = set(str(k) for k in (yaml.safe_load((DP / "yayin_turu.yaml").read_text(encoding="utf-8")) or {}))
 
     # Daha önce kullanılanlar: DergiPark kimliği, DOI ya da başlıkla eşleşir
-    kullanilan = set()
-    for m in items:
+    kullanilan, kimlik_of = set(), {}
+    for n, m in enumerate(items):
         for k, r in satirlar.items():
             baglar = r.get("baglanti") or []
             if (m.get("url") and f"/article/{k}" in m["url"]) or (m.get("doi") and (m["doi"] == r.get("doi") or any(m["doi"] in b for b in baglar))) \
                     or tr_kucuk(m["title_tr"]) == tr_kucuk(r["baslik"].get("tr-TR", "")):
                 kullanilan.add(k)
+                kimlik_of[n] = k
+
+    # Her ayın başındaki hasatla gelen yeni liste: en yeni aylık hasat penceresindeki makaleler öne alınır.
+    # Yeni liste bitince sıra, yayım tarihine göre yeniden eskiye, eski makalelerden sürer.
+    pencereler = [r.get("pencere") for r in satirlar.values() if re.fullmatch(r"\d{4}-\d{2}", str(r.get("pencere") or ""))]
+    yeni_pencere = max(pencereler) if pencereler else ""
+
+    def yeni_mi(k) -> int:
+        return 1 if k in satirlar and yeni_pencere and satirlar[k].get("pencere") == yeni_pencere else 0
 
     adaylar, adaylar_v = [], {}
     for k, r in satirlar.items():
@@ -185,18 +195,20 @@ def main() -> int:
             continue
         adaylar.append((tarih[:10], k))
         adaylar_v[k] = v
-    adaylar.sort(reverse=True)
-    print(f"aday: {len(adaylar)}, kullanılmış: {len(kullanilan)}")
+    adaylar.sort(key=lambda x: (yeni_mi(x[1]), x[0]), reverse=True)
+    print(f"aday: {len(adaylar)}, kullanılmış: {len(kullanilan)}, yeni liste (pencere {yeni_pencere}): {sum(yeni_mi(k) for _, k in adaylar)}")
 
     b = bugun()
     sabit_son = (b + timedelta(days=1)).isoformat()  # bugün ve yarın değişmez (yarının sayfası ve görseli önceden yayımlanır)
     sabit = [m for m in items if (m.get("gun") or "") <= sabit_son]
     kuyruk = [m for m in items if (m.get("gun") or "") > sabit_son]
+    kuyruk_kimlik = {id(m): kimlik_of.get(n) for n, m in enumerate(items)}
     dolu = {m["gun"] for m in sabit}
-    bos = [(b + timedelta(days=i)).isoformat() for i in range(0, a.gun + 1)]
-    bos = [g for g in bos if g not in dolu]
-    yeniler = []
-    for tarih, k in adaylar[:max(0, len(bos) - len(kuyruk))]:
+    gunler = [(b + timedelta(days=i)).isoformat() for i in range(0, 400)]
+    gunler = [g for g in gunler if g not in dolu]
+    bos = [g for g in gunler if g <= (b + timedelta(days=a.gun)).isoformat()]
+    yeniler, kimlikler = [], {}
+    for tarih, k in adaylar[:len(bos)]:
         r, v = satirlar[k], adaylar_v[k]
         dil = (r.get("dil") or ["tr"])[0]
         tr_b = baslik_duzelt(r["baslik"]["tr-TR"], "tr")
@@ -212,25 +224,40 @@ def main() -> int:
                   + (" başlığıyla" if len(adlar) == 1 else " başlıklarıyla") + " ilişkilendirilmiştir."
         else:
             why = ""
-        yeniler.append({
+        m_ = {
             "date": tarih, "title_tr": tr_b, "title_en": en_b, "lang": dil,
             "authors": ", ".join(yazar_adi(y) for y in r["yazarlar"]), "journal": dergi, "year": tarih[:4],
             "doi": r.get("doi") or "", "url": "" if r.get("doi") else url, "open_access": "evet",
             "lead": lead_yap(ozet), "summary_tr": paragraflar(ozet), "why_tr": why,
             "tags": anahtar_kelimeler(r.get("konular") or []), "otomatik": True,
-        })
-    adaylar = adaylar[len(yeniler):]
-    # Kuyruk (yarından sonrası) yayım tarihine göre yeniden eskiye sıralanır; boş günlere sırayla dağıtılır
-    kuyruk = sorted(kuyruk + yeniler, key=lambda m: m["date"], reverse=True)
-    for m, g in zip(kuyruk, bos):
+        }
+        yeniler.append(m_)
+        kimlikler[id(m_)] = k
+    kuyruk_kimlik.update(kimlikler)
+
+    def anahtar(m):
+        return (yeni_mi(kuyruk_kimlik.get(id(m))), m["date"])
+
+    # Kuyruk (yarından sonrası): önce yeni liste, sonra yayım tarihine göre yeniden eskiye. Boş günlere sırayla dağıtılır.
+    # Sığmayan otomatik kayıtlar havuza döner (yeniden üretilir); elle yazılmış tanıtımlar hiçbir zaman atılmaz.
+    secilen, geri = [], []
+    for m in sorted(kuyruk + yeniler, key=anahtar, reverse=True):
+        if len(secilen) < len(bos) or not m.get("otomatik"):
+            secilen.append(m)
+        else:
+            geri.append(m)
+    adaylar = [x for x in adaylar if x[1] not in {kuyruk_kimlik[id(m)] for m in secilen if id(m) in kimlikler}]
+    # yeniler arasından seçilemeyenler zaten adaylar listesinde kalır
+    assert len(secilen) <= len(gunler)
+    for m, g in zip(secilen, gunler):
         if m.get("gun") != g:
-            print(f"{g}  {m['date']}  {m['title_tr'][:70]}" + ("" if "otomatik" in m and m not in yeniler else ""))
+            print(f"{g}  {m['date']}  {'YENİ ' if yeni_mi(kuyruk_kimlik.get(id(m))) else '     '}{m['title_tr'][:68]}")
         m["gun"] = g
-    yeni = kuyruk
+    kuyruk = secilen
     items = sabit + kuyruk
 
     kalan = len(adaylar)
-    print(f"yeni eklenen: {len(yeniler)}, kuyruk: {len(kuyruk)}, kalan aday: {kalan}")
+    print(f"kuyruk: {len(kuyruk)}, kalan aday: {kalan}")
     if not a.deneme:
         MAKALELER.write_text(json.dumps(items, ensure_ascii=False, indent=1) + raw_sonu, encoding="utf-8")
     return 3 if kalan < UYARI_ESIGI else 0
