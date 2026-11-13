@@ -2634,10 +2634,33 @@ def yok_tarihi() -> str:
     return str((yaml.safe_load(d.read_text(encoding="utf-8")) or {}).get("tarih") or "") if d.exists() else ""
 
 
-def yayin_paneli(ogeler, slug: str = "") -> str:
+def kisi_tezleri(slug: str) -> list:
+    """Kişinin danışmanlığındaki tezler (data/tez/tezler.json). Dosya yoksa ya da kişide tez yoksa boş liste."""
+    if not TEZ_DOSYA.exists():
+        return []
+    global _TEZ_ONBELLEK
+    if _TEZ_ONBELLEK is None:
+        _TEZ_ONBELLEK = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
+    return [t for t in _TEZ_ONBELLEK if any(slugify(h) == slug for h in t["danisman"])]
+
+
+_TEZ_ONBELLEK = None
+
+
+def tez_satiri(t: dict, gizli: bool = True) -> str:
+    parcalar = t["yer"].split(" / ")
+    yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
+    durum = "Devam ediyor" if t["devam"] else "Tamamlandı"
+    return (f'<li data-grup="tez" data-yil="{e(t["yil"])}" data-ad="{e(tr_kucuk(t["ad"]))}" data-tur="98" data-kaynak="9"{" hidden" if gizli else ""}>'
+            f'<span class="yt yt-tez">Tez</span><span class="eser-ad">{e(t["ad"])}</span>'
+            f'<span class="eser-bilgi">{e(t["tur"])} · {e(t["yil"])} · {durum} · {e(yer)}</span></li>')
+
+
+def yayin_paneli(ogeler, slug: str = "", tezler=None, kisi_ad: str = "") -> str:
     """Kişi sayfasındaki yayın listesi: sekmeler (din felsefesi / diğer / tümü), sıralama, numara ve tür etiketi.
     Liste kişinin YÖK Akademik kaydına dayanır: YÖK'tekiler önce gelir, YÖK'te olmayanlar geldikleri kaynakla işaretlenir."""
-    if not ogeler:
+    tezler = tezler or []
+    if not ogeler and not tezler:
         return ""
     yok_var = yok_kumesi(slug) is not None if slug else False
     for o in ogeler:
@@ -2649,9 +2672,10 @@ def yayin_paneli(ogeler, slug: str = "") -> str:
             isaret = f' <span class="m-kaynak" title="YÖK Akademik kaydında yok; kaynak: {KAYNAK_AD[k]}">{KAYNAK_AD[k]}</span>'
             o["html"] = o["html"].replace('<span class="eser-bilgi">', isaret + '<span class="eser-bilgi">', 1)
     say = {"df": sum(1 for o in ogeler if o["grup"] == "df"), "diger": sum(1 for o in ogeler if o["grup"] == "diger")}
-    ilk = "df" if say["df"] else "tumu"
+    ilk = "df" if say["df"] else ("tumu" if ogeler else "tez")
     sekmeler = "".join(f'<button type="button" data-grup="{k}" aria-pressed="{"true" if k == ilk else "false"}">{a} <span class="say">{n}</span></button>'
-                       for k, a, n in [("df", "Din felsefesi", say["df"]), ("diger", "Diğer", say["diger"]), ("tumu", "Tümü", len(ogeler))] if n)
+                       for k, a, n in [("df", "Din felsefesi", say["df"]), ("diger", "Diğer", say["diger"]), ("tumu", "Tümü", len(ogeler)),
+                                       ("tez", "Tezler", len(tezler))] if n)
     ilk_alan = "kaynak" if yok_var else "yil"
     alanlar = ([("kaynak", "Kaynak")] if yok_var else []) + [("yil", "Yıl"), ("ad", "Ad"), ("tur", "Tür")]
     siralama = ('<div class="yp-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
@@ -2662,18 +2686,25 @@ def yayin_paneli(ogeler, slug: str = "") -> str:
         ogeler = sorted(ogeler, key=lambda o: o["sira"])
     satirlar = "".join(
         f'<li data-grup="{o["grup"]}" data-yil="{e(o["yil"])}" data-ad="{e(tr_kucuk(o["ad"]))}" data-tur="{YAYIN_TUR_SIRA.get(o["tur"], 99)}" data-kaynak="{o["sira"]}"'
-        f'{" hidden" if ilk != "tumu" and o["grup"] != ilk else ""}>'
+        f'{" hidden" if o["grup"] != ilk and not (ilk == "tumu") else ""}>'
         f'<span class="yt yt-{o["tur"]}">{YAYIN_TUR_AD.get(o["tur"], "Diğer")}</span>{o["html"]}</li>'
         for o in ogeler)
+    satirlar += "".join(tez_satiri(t, ilk != "tez") for t in sorted(tezler, key=lambda t: (t["yil"], t["ad"]), reverse=True))
     notlar = ('<p class="aciklama-kisa yp-not" data-not="df">Konusu anahtar kelimelerine ya da adına göre din felsefesi başlıklarına bağlanan yayınlar.</p>'
               '<p class="aciklama-kisa yp-not" data-not="diger" hidden>DergiPark\'taki öteki makaleler, ORCID kaydındaki ve AVESİS ya da YÖK Akademik sayfasındaki yayınlar. '
               'Bunlar din felsefesi başlıklarına bağlanmamıştır.</p>')
+    if tezler:
+        notlar += (f'<p class="aciklama-kisa yp-not" data-not="tez"{"" if ilk == "tez" else " hidden"}>Hocanın danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri '
+                   f'(YÖK Ulusal Tez Merkezi). Öğrenci adları yazılmaz, bu tezler hocanın kendi yayını sayılmaz. '
+                   f'<a href="{SITE_URL}/tezler/?ara={quote(kisi_ad)}">Tezler sayfasında bu danışmanla ara</a></p>')
     if yok_var:
         disarida = sum(1 for o in ogeler if o["sira"] > 0)
         notlar = (f'<p class="aciklama-kisa yp-kaynak-not">Liste hocanın YÖK Akademik kaydına dayanır (YÖK taraması {tr_date(yok_tarihi())}). '
                   + (f'YÖK\'te bulunmayan {disarida} yayın listenin sonunda, geldiği kaynağın adıyla işaretlenmiştir. ' if disarida else '')
                   + 'Yayının kendisine ya da kendi sayfasına ulaşılabildiğinde adı bağlantılıdır.</p>' + notlar)
-    return (f'<section class="yayin-panel"><div class="yp-bas"><h2>Yayınları <span class="say">{len(ogeler)}</span></h2>{siralama}</div>'
+    baslik = (f'<h2 data-yayin="1"{" hidden" if ilk == "tez" else ""}>Yayınları <span class="say">{len(ogeler)}</span></h2>'
+              + (f'<h2 data-tez="1"{"" if ilk == "tez" else " hidden"}>Danışmanlığındaki tezler <span class="say">{len(tezler)}</span></h2>' if tezler else ""))
+    return (f'<section class="yayin-panel"><div class="yp-bas">{baslik}{siralama}</div>'
             f'<div class="tur-secici yp-sekme" role="group" aria-label="Yayın grubu">{sekmeler}</div>{notlar}'
             f'<ol class="yayin-liste">{satirlar}</ol></section>' + YAYIN_JS)
 
@@ -2683,8 +2714,11 @@ YAYIN_JS = """<script>
 var lis=[].slice.call(ol.children);var ilkb=p.querySelector('.yp-sirala button[aria-pressed="true"]');
 var alan=ilkb?ilkb.dataset.alan:'yil',yon=(alan==='yil')?-1:1;
 function grup(g){p.querySelectorAll('.yp-sekme button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.grup===g)});
-lis.forEach(function(li){li.hidden=!(g==='tumu'||li.dataset.grup===g)});
-p.querySelectorAll('.yp-not').forEach(function(n){n.hidden=(g==='tumu'||n.dataset.not!==g)})}
+lis.forEach(function(li){li.hidden=g==='tumu'?li.dataset.grup==='tez':li.dataset.grup!==g});
+p.querySelectorAll('.yp-not').forEach(function(n){n.hidden=(g==='tumu'||n.dataset.not!==g)});
+var tz=g==='tez';p.querySelectorAll('h2[data-yayin]').forEach(function(h){h.hidden=tz});p.querySelectorAll('h2[data-tez]').forEach(function(h){h.hidden=!tz});
+p.querySelectorAll('.yp-sirala button').forEach(function(b){if(b.dataset.alan==='kaynak'||b.dataset.alan==='tur')b.hidden=tz});
+if(tz&&(alan==='kaynak'||alan==='tur')){alan='';sirala('yil')}}
 function ad(x,y){return x.dataset.ad.localeCompare(y.dataset.ad,'tr')}
 function yil(x,y){return (x.dataset.yil||'0').localeCompare(y.dataset.yil||'0')}
 function sirala(a){
@@ -2765,7 +2799,7 @@ def render_akademisyen(s: str) -> str:
         kid = ag_kisi_kimligi(p)
         yan.append(f'<a class="ag-git" href="{ag_adresi(*kid.split("/", 1))}">Bu kişinin ağı →</a>')
     tarih = dp_tarama_tarihi()
-    metin = yayin_paneli(ogeler, s) or '<p class="giris">DergiPark taramasında, ORCID kaydında, AVESİS\'te ve YÖK Akademik\'te bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
+    metin = yayin_paneli(ogeler, s, kisi_tezleri(s), p.get("ad") or v.get("ad") or "") or '<p class="giris">DergiPark taramasında, ORCID kaydında, AVESİS\'te ve YÖK Akademik\'te bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
     # Listeye elle eklenen kişilerde kısa tanıtım ve hakkında yazılanlar listeden gelir (yalnızca kamuya açık bilgiler)
     tanitim = "".join(f"<p>{satir_ici(x.strip())}</p>" for x in (p.get("tanitim") or "").split("\n\n") if x.strip())
     tanitim = f'<div class="akademi-tanitim">{tanitim}</div>' if tanitim else ""
