@@ -1589,7 +1589,7 @@ def render_tezler() -> str:
     satirlar = []
     for t in tezler:
         durum = "devam" if t["devam"] else "tamam"
-        hocalar = ", ".join(f'<a href="{SITE_URL}/kisiler/#k-{slugify(h)}">{e(h)}</a>' for h in t["danisman"])
+        hocalar = ", ".join(akademisyen_bag(h) for h in t["danisman"])
         parcalar = t["yer"].split(" / ")
         yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
         ara = tr_kucuk(" ".join([t["ad"], " ".join(t["danisman"]), yer]))
