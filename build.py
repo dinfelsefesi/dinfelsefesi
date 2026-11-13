@@ -644,7 +644,15 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .tez-ad{margin:0 0 .15rem;font-family:var(--display);font-size:1.08rem;font-weight:500;color:var(--ink)}
 .tez-kunye,.tez-yer{margin:0;font-size:.92rem;color:var(--ink-soft)}
 .tez-yer{font-style:italic;font-size:.86rem}
-.tez-durum.d-devam{color:var(--accent);font-weight:600}
+.tez-ust{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.25rem 1rem}
+.tez-ust .tez-ad{flex:1 1 20rem;min-width:0}
+.tez-rozetler{display:inline-flex;flex-shrink:0;gap:.35rem;align-items:center;padding-top:.2rem}
+.tz-r{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;line-height:1.3;padding:.08rem .5rem;border:1px solid;border-radius:4px;white-space:nowrap;cursor:default}
+.tz-yl{color:var(--accent-ink);border-color:var(--accent);background:var(--accent-soft)}
+.tz-dr{color:#fff;border-color:var(--accent);background:var(--accent)}
+.tz-tamam{color:#a84a14;border-color:#a84a14;background:#fff}
+.tz-devam{color:#fff;border-color:#a84a14;background:#a84a14}
+.yayin-liste .tez-rozetler{margin-left:.5rem;padding-top:0;vertical-align:.1em}
 .tez-durum-etiket{margin-top:.7rem}
 select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--accent);outline-offset:1px}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
@@ -1583,6 +1591,15 @@ def tez_tr_baslik(t: str) -> str:
     return " ".join(out)
 
 
+def tez_rozetleri(t: dict) -> str:
+    """Tezin türü (YL/DR) ve durumu (Tamamlandı/Devam ediyor) için renkli kutucuklar."""
+    dr = t["tur"] == "Doktora"
+    tur = ('<span class="tz-r tz-dr" title="Doktora">DR</span>' if dr else '<span class="tz-r tz-yl" title="Yüksek lisans">YL</span>')
+    durum = ('<span class="tz-r tz-devam" title="Tez hazırlanmakta ya da işlemi devam etmektedir">Devam ediyor</span>' if t["devam"]
+             else '<span class="tz-r tz-tamam" title="Tez onaylanmış ve Tez Merkezi\'ne kaydedilmiştir">Tamamlandı</span>')
+    return f'<span class="tez-rozetler">{tur}{durum}</span>'
+
+
 def render_tezler() -> str:
     tezler = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
     tezler.sort(key=lambda t: (t["yil"], t["ad"]), reverse=True)
@@ -1596,9 +1613,8 @@ def render_tezler() -> str:
         satirlar.append(
             f'<li data-tur="{e(t["tur"])}" data-durum="{durum}" data-yil="{e(t["yil"])}" data-ad="{e(t["ad"])}" '
             f'data-danisman="{e(t["danisman"][0])}" data-ara="{e(ara)}">'
-            f'<p class="tez-ad">{e(t["ad"])}</p>'
-            f'<p class="tez-kunye">{e(t["tur"])} · {e(t["yil"])} · <span class="tez-durum d-{durum}">{"Devam ediyor" if t["devam"] else "Tamamlandı"}</span>'
-            f' · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
+            f'<div class="tez-ust"><p class="tez-ad">{e(t["ad"])}</p>{tez_rozetleri(t)}</div>'
+            f'<p class="tez-kunye">{e(t["yil"])} · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
     def dugme(alan, deger, ad):
         return f'<button type="button" data-{alan}="{deger}" aria-pressed="{"true" if not deger else "false"}">{ad} <span class="say"></span></button>'
     turler = "".join([dugme("tur", "", "Tümü"), dugme("tur", "Yüksek Lisans", "Yüksek lisans"), dugme("tur", "Doktora", "Doktora")])
@@ -2650,10 +2666,9 @@ _TEZ_ONBELLEK = None
 def tez_satiri(t: dict, gizli: bool = True) -> str:
     parcalar = t["yer"].split(" / ")
     yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
-    durum = "Devam ediyor" if t["devam"] else "Tamamlandı"
     return (f'<li data-grup="tez" data-yil="{e(t["yil"])}" data-ad="{e(tr_kucuk(t["ad"]))}" data-tur="98" data-kaynak="9"{" hidden" if gizli else ""}>'
-            f'<span class="yt yt-tez">Tez</span><span class="eser-ad">{e(t["ad"])}</span>'
-            f'<span class="eser-bilgi">{e(t["tur"])} · {e(t["yil"])} · {durum} · {e(yer)}</span></li>')
+            f'<span class="yt yt-tez">Tez</span><span class="eser-ad">{e(t["ad"])}</span>{tez_rozetleri(t)}'
+            f'<span class="eser-bilgi">{e(t["yil"])} · {e(yer)}</span></li>')
 
 
 def yayin_paneli(ogeler, slug: str = "", tezler=None, kisi_ad: str = "") -> str:
