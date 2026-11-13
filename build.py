@@ -1593,9 +1593,9 @@ def render_eserler() -> str:
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>'
+            '<label class="k-ara eser-baslik-ara"><span>Başlık ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label>'
             f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
-            f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div>'
-            '<label class="k-ara"><span>Ara</span><input type="search" id="eser-ara" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></label></div>'
+            f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
             f'<ul class="eser-liste">{temel}{turkce}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
