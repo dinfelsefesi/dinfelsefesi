@@ -1649,8 +1649,8 @@ TEZ_JS = """<script>
     lis.forEach(function(li){
       var ara=!q||li.dataset.ara.indexOf(q)>-1;
       var tu=!f.tur||li.dataset.tur===f.tur, du=!f.durum||li.dataset.durum===f.durum;
-      if(ara&&du){say.tur['']++; say.tur[li.dataset.tur]=(say.tur[li.dataset.tur]||0)+1;}
-      if(ara&&tu){say.durum['']++; say.durum[li.dataset.durum]=(say.durum[li.dataset.durum]||0)+1;}
+      if(ara){say.tur['']++; say.tur[li.dataset.tur]=(say.tur[li.dataset.tur]||0)+1;
+        say.durum['']++; say.durum[li.dataset.durum]=(say.durum[li.dataset.durum]||0)+1;}
       li.hidden=!(ara&&tu&&du); if(!li.hidden)n++;
     });
     ['tur','durum'].forEach(function(k){
