@@ -1178,33 +1178,33 @@ def render_baslik(k) -> str:
                 canonical=fis_url("baslik", k), gorsel=gorsel, og_tur="article", jsonld=jl)
 
 
-BASLIK_ARA_JS = """<script>
-(function(){var g=document.getElementById('baslik-ara');if(!g)return;
-function n(t){return (t||'').toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9çğıöşü ]+/g,' ')}
-var k=[].slice.call(document.querySelectorAll('.anakart')).map(function(a){return [a,n(a.dataset.ara)]});
-var bos=document.querySelector('.b-bos');
-function suz(){var q=n(g.value).split(' ').filter(Boolean),say=0;
-  k.forEach(function(x){var ok=q.every(function(w){return x[1].indexOf(w)>=0});x[0].hidden=!ok;if(ok)say++});
-  [].slice.call(document.querySelectorAll('h2.kume-ad')).forEach(function(h){var d=h.nextElementSibling;
-    var gor=d&&[].some.call(d.querySelectorAll('.anakart'),function(a){return !a.hidden});h.hidden=d.hidden=!gor});
-  bos.hidden=say>0}
-g.addEventListener('input',suz);
-g.addEventListener('keydown',function(ev){if(ev.key!=='Enter')return;var a=k.filter(function(x){return !x[0].hidden});
-  if(a.length===1){var l=a[0][0].querySelector('h3 a');if(l)location.href=l.href}});
+BASLIK_SEC_JS = """<script>
+(function(){var g=document.getElementById('baslik-sec');if(!g)return;
+g.addEventListener('change',function(){if(g.value)location.href=g.value});
+window.addEventListener('pageshow',function(){g.value=''});
 })();
 </script>"""
+
+
+def baslik_secici() -> str:
+    """Eserler sayfasındaki konu listesiyle aynı düzen: kümelere ayrılmış başlıklar, alt başlıklar girintili. Seçilen başlığın sayfası açılır."""
+    oge = ['<option value="">Bir başlık seçin</option>']
+    for kad, ks in kumeli_basliklar():
+        oge.append(f'<optgroup label="{e(kad)}">')
+        for k in ks:
+            oge.append(f'<option value="{fis_url("baslik", k)}">{e(FIS[("baslik", k)]["ad"])}</option>')
+            for c in sorted(COCUK.get(k, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
+                oge.append(f'<option value="{fis_url("baslik", c)}">\u00a0\u00a0\u00a0{e(FIS[("baslik", c)]["ad"])}</option>')
+        oge.append('</optgroup>')
+    return (f'<label class="secim-etiket" for="baslik-sec">Başlık</label>'
+            f'<div class="eser-konu-kap"><select id="baslik-sec" class="eser-konu-sec">{"".join(oge)}</select></div>')
 
 
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
             '<p class="giris">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir.</p>'
-            '<label class="k-ara"><span>Başlık ara</span><input type="search" id="baslik-ara" '
-            'placeholder="Ör. kötülük, iman, din dili" autocomplete="off"></label>'
-            + harita_html() +
-            '<p class="giris b-bos" hidden>Aramaya uyan başlık bulunamadı. Terim, kişi ve eserler için '
-            f'<a href="{SITE_URL}/terimler/">Terimler</a>, <a href="{SITE_URL}/kisiler/">Kişiler</a> ve '
-            f'<a href="{SITE_URL}/eserler/">Eserler</a> sayfalarına bakabilirsiniz.</p>' + BASLIK_ARA_JS)
+            + baslik_secici() + harita_html() + BASLIK_SEC_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
 
 
