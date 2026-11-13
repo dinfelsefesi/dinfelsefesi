@@ -1,0 +1,48 @@
+name: Günün makalesi kuyruğu
+# Günün makalesini kurala göre seçer (scripts/gunun_makalesi_sec.py). Her akşam 19.20'de (İstanbul) çalışır,
+# 19.47'deki derlemeden hemen önce bitmiş olur. Bugünden 10 gün ilerisine kadar boş günleri doldurur.
+on:
+  schedule:
+    - cron: "20 16 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: gunun-makalesi
+  cancel-in-progress: false
+jobs:
+  sec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Seç
+        id: sec
+        run: |
+          set +e
+          python3 scripts/gunun_makalesi_sec.py
+          echo "kod=$?" >> "$GITHUB_OUTPUT"
+      - name: Kaydet
+        run: |
+          git config user.name "gunun-makalesi"
+          git config user.email "dinfelsefesi@gmail.com"
+          git add content/makaleler.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Günün makalesi kuyruğu ($(date -u +%Y-%m-%d))"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && break; sleep 5; done
+      - name: Aday azaldıysa issue aç
+        if: steps.sec.outputs.kod == '3'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          baslik="Günün makalesi için aday sayısı azaldı"
+          if [ -z "$(gh issue list --state open --search "$baslik in:title" --json number --jq '.[0].number')" ]; then
+            gh issue create --title "$baslik" --body "Kurala uyan aday makale sayısı 14'ün altına indi. Yeni DergiPark taraması ya da kuralın gözden geçirilmesi gerekebilir."
+          fi
+      - name: Betik başka bir hatayla bittiyse işi başarısız say
+        if: steps.sec.outputs.kod != '0' && steps.sec.outputs.kod != '3'
+        run: exit 1

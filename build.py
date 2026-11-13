@@ -1008,7 +1008,7 @@ def makale_satiri(m: dict) -> str:
   <time datetime="{e(m['gun'])}">{tr_date(m['gun'])}<span class="gun-adi">{GUN_ADLARI[datetime.strptime(m['gun'], "%Y-%m-%d").weekday()]}</span></time>
   <div>
     <h3><a href="{entry_url(m)}">{e(m['title_tr'])}</a></h3>
-    <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
+    <p class="orij">{e(m.get('title_en', ''))}{rozetler(m)}</p>
     <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
     <p class="ozet">{e(m['lead'])}</p>
   </div>
@@ -1036,16 +1036,16 @@ def render_makale(m: dict) -> str:
 <article class="dar">
   <p class="yol"><a href="{SITE_URL}/gunun-makalesi/">Günün makaleleri</a> <span aria-hidden="true">›</span> <time datetime="{e(m['gun'])}">{gun_metni(m['gun'])}</time></p>
   <h1>{e(m['title_tr'])}</h1>
-  <p class="giris"><em>{e(m['title_en'])}</em></p>
+  {('<p class="giris"><em>' + e(m['title_en']) + '</em></p>') if m.get('title_en') else ''}
   <div class="kutu"><dl>
     <dt>Yazar</dt><dd>{e(m['authors'])}</dd>
     <dt>Dergi</dt><dd>{e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</dd>
     <dt>Kaynak</dt><dd><a href="{e(link)}" rel="noopener">{"DOI" if m.get("doi") else "DergiPark" if "dergipark.org.tr" in link else "Makalenin sayfası"}</a>{(' · ' + oa) if oa else ''}</dd>
   </dl></div>
   <div class="metin">
+    {'<p class="kunye">Makalenin kendi Türkçe özeti</p>' if m.get('otomatik') else ''}
     {paragraphs(m['summary_tr'])}
-    <h2>Neden önemli</h2>
-    {paragraphs(m.get('why_tr', ''))}
+    {('<h2>Neden önemli</h2>' + paragraphs(m.get('why_tr', ''))) if m.get('why_tr') else ''}
   </div>
   <div class="etiketler">{''.join(f'<span>#{e(t)}</span>' for t in m.get('tags', []))}</div>
   <p class="paylas">{paylas_dugmesi(m)}</p>
@@ -3382,7 +3382,7 @@ def gunun_makalesi_html(items) -> str:
     return f"""<aside class="okuma gunun" aria-label="Günün makalesi">
   <p class="ust-etiket">Günün makalesi · {e(gun_metni(m['gun']))}</p>
   <h2><a href="{entry_url(m)}">{e(m['title_tr'])}</a></h2>
-  <p class="orij">{e(m['title_en'])}{rozetler(m)}</p>
+  <p class="orij">{e(m.get('title_en', ''))}{rozetler(m)}</p>
   <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
   <p class="alinti">{e(m['lead'])}</p>
   <p class="gunun-git"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a> {paylas_dugmesi(m)}</p>

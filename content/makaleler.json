@@ -190,7 +190,7 @@
   "gun": "2026-10-29"
  },
  {
-  "date": "2026-07-21",
+  "date": "2026-09-25",
   "title_tr": "Donald Davidson'ın Dil ve Doğruluk Kuramının Dinî Dil Tartışmaları Açısından İmkânı ve Sınırları",
   "title_en": "Donald Davidson's Theory of Language and Truth: Possibilities and Limits in Religious Language Debates",
   "authors": "Elçin Esin Kaygın",
@@ -208,10 +208,11 @@
    "doğruluk",
    "anlam kuramı"
   ],
-  "gun": "2026-10-30"
+  "gun": "2026-10-30",
+  "lang": "tr"
  },
  {
-  "date": "2026-05-15",
+  "date": "2026-10-20",
   "title_tr": "Mekanik Kesinlikten Kuantum Belirsizliğine: İlahi İlim Karşısında İnsan Özgürlüğünü Yeniden Düşünmek",
   "title_en": "From Mechanical Certainty to Quantum Uncertainty: Reconsidering Human Freedom in Relation to Divine Knowledge",
   "authors": "Sait Kar",
@@ -229,10 +230,11 @@
    "determinizm",
    "kuantum"
   ],
-  "gun": "2026-10-31"
+  "gun": "2026-10-31",
+  "lang": "tr"
  },
  {
-  "date": "2026-03-26",
+  "date": "2026-06-26",
   "title_tr": "Karl Jaspers'te Din, Bilim ve Hakikat Sorunu: Felsefi İnanç Kavramı Üzerine Bir Değerlendirme",
   "title_en": "The Problem of Religion, Science, and Truth in Karl Jaspers: An Assessment of the Concept of Philosophical Belief",
   "authors": "Yasemin Yeşiltaş, Hasan Atsız",
@@ -250,7 +252,8 @@
    "aşkınlık",
    "din ve bilim"
   ],
-  "gun": "2026-11-01"
+  "gun": "2026-11-01",
+  "lang": "tr"
  },
  {
   "date": "2026-06-28",
@@ -271,7 +274,8 @@
    "Ahmet Hamdi Akseki",
    "Kant"
   ],
-  "gun": "2026-11-02"
+  "gun": "2026-11-02",
+  "lang": "tr"
  },
  {
   "date": "2026-10-30",
@@ -292,7 +296,8 @@
    "akıl ve inanç",
    "Kıta felsefesi"
   ],
-  "gun": "2026-11-03"
+  "gun": "2026-11-03",
+  "lang": "tr"
  },
  {
   "date": "2026-10-24",
@@ -313,7 +318,8 @@
    "determinizm",
    "eleştirel rasyonalizm"
   ],
-  "gun": "2026-11-04"
+  "gun": "2026-11-04",
+  "lang": "tr"
  },
  {
   "date": "2026-07-15",
@@ -334,10 +340,11 @@
    "rasyonel teoloji",
    "varoluşçuluk"
   ],
-  "gun": "2026-11-05"
+  "gun": "2026-11-05",
+  "lang": "tr"
  },
  {
-  "date": "2026-01-06",
+  "date": "2026-06-30",
   "title_tr": "Özgürlük, Kaygı ve İman: Varoluşçu Teolojide Tanrı'nın Epistemik Konumu",
   "title_en": "Freedom, Anxiety, and Faith: The Epistemic Position of God in Existential Theology",
   "authors": "Hasan Er",
@@ -355,7 +362,8 @@
    "Kierkegaard",
    "Tanrı'nın kanıtlanabilirliği"
   ],
-  "gun": "2026-11-06"
+  "gun": "2026-11-06",
+  "lang": "tr"
  },
  {
   "date": "2026-06-28",
@@ -376,7 +384,8 @@
    "vahiy",
    "akıl"
   ],
-  "gun": "2026-11-07"
+  "gun": "2026-11-07",
+  "lang": "tr"
  },
  {
   "date": "2026-05-11",
@@ -397,7 +406,8 @@
    "iman",
    "Tanrı'nın varlığı"
   ],
-  "gun": "2026-11-08"
+  "gun": "2026-11-08",
+  "lang": "tr"
  },
  {
   "date": "2026-03-29",
@@ -418,7 +428,8 @@
    "Zorunlu Varlık",
    "İşrâk felsefesi"
   ],
-  "gun": "2026-11-09"
+  "gun": "2026-11-09",
+  "lang": "tr"
  },
  {
   "date": "2026-03-28",
@@ -439,7 +450,8 @@
    "doğal din",
    "akıl ve vahiy"
   ],
-  "gun": "2026-11-10"
+  "gun": "2026-11-10",
+  "lang": "tr"
  },
  {
   "date": "2026-02-16",
@@ -460,7 +472,8 @@
    "din çoğulculuğu",
    "kurtuluş"
   ],
-  "gun": "2026-11-11"
+  "gun": "2026-11-11",
+  "lang": "en"
  },
  {
   "date": "2026-01-15",
@@ -481,10 +494,11 @@
    "varoluş",
    "Türk düşüncesi"
   ],
-  "gun": "2026-11-12"
+  "gun": "2026-11-12",
+  "lang": "tr"
  },
  {
-  "date": "2025-04-18",
+  "date": "2025-08-26",
   "title_tr": "Doğanın Metafizik Bütünlüğü Hakkında İçkin Zorunluluk Savunusu",
   "title_en": "A Defence of Intrinsic Necessity on the Metaphysical Unity of Nature",
   "authors": "Yasin Ramazan Başaran",
@@ -502,73 +516,11 @@
    "doğa yasaları",
    "doğa felsefesi"
   ],
-  "gun": "2026-11-13"
+  "gun": "2026-11-13",
+  "lang": "tr"
  },
  {
-  "date": "2024-04-14",
-  "title_tr": "Mâtürîdî'de Ahlaki Mükellefiyet ve Tabiî Hukuk",
-  "title_en": "Moral Obligation and Natural Law in al-Māturīdī",
-  "authors": "Kayhan Özaykal",
-  "journal": "Kader",
-  "year": "2024",
-  "doi": "10.18317/kaderdergi.1468241",
-  "url": "",
-  "open_access": "evet",
-  "lead": "Özaykal, Mâtürîdî'nin düşüncesinde ahlaki mükellefiyetin kaynağını vahiy ve akıl ekseninde araştırıyor.",
-  "summary_tr": "Makale, Mâtürîdî'nin ahlak düşüncesinde ahlaki mükellefiyetin kaynağını belirlemeyi amaçlar. Özaykal önce Mâtürîdî'nin yazılarındaki ahlaka ilişkin kavramları sınıflandırır ve fayda, erdem ve hak olmak üzere üç temel kavrama ulaşır. Bunlardan hakkı, ahlakın nesnel olması için gerekli olan kategorik emir fikrini tek başına sunduğu için ahlaki mükellefiyetin nihai temsilcisi sayar.\n\nMükellefiyetin iki ana kaynağı vahiy ve akıldır. Vahiy, emir ve yasaklarla birlikte ilahi rubûbiyet ve hâkimiyet fikrini sunar. Akıl ise ahlak anlayışını nesnel ilkelerle belirler ve vahyin öğretilerini destekler. Makaleye göre aklın ahlak alanındaki bulguları genellikle vahiyle uyumludur ve ikisinin ayrıldığı yerlerde çoğunlukla insanın gerekli bilgiye ulaşamaması belirleyicidir. Mâtürîdî bu yüzden vahyin, özellikle karanlık ve tartışmalı ahlak alanlarında gerekli olduğunu belirtir.\n\nÖzaykal, aklın bir mükellefiyet kaynağı olması bakımından Mâtürîdî düşüncesinin tabiî hukuk kuramı çerçevesinde sınıflandırılabileceğini söyler. Doğal dünya akla rehberlik eder ve insanın temel ihtiyaç ve arzularından ahlaki sonuçlar çıkarılabilir. Tanrı dünyanın yaratıcısı ve tasarımcısı olduğundan, ahlakın biçimini nihai olarak belirleyen ilke ilahi hikmettir. Makalenin üçüncü bölümü ahlaki motivasyonu ele alır ve Mâtürîdî'ye göre eylemleri yalnızca sonuçlarına bakarak değil, kategorik ilke ve emirlere dayanan ölçütlerle de yargılayabileceğimiz sonucuna varır. Son kısımda Mâtürîdî'nin aklı, Hume'un olan ile olması gereken arasına koyduğu uçurumu aşmaya imkân veren bağımsız bir mükellefiyet kaynağı olarak gördüğü ileri sürülür.",
-  "why_tr": "Ahlaki mükellefiyetin vahiyden mi akıldan mı geldiği, Din ve Ahlak başlığının temel sorularından biridir. Makale, Mâtürîdî'nin bu soruya verdiği cevabı tabiî hukuk ve Hume'un olan ile olması gereken ayrımı çerçevesinde ele aldığı için bu başlıkla ilgilenen okurlar için bir başlangıç noktası olabilir.",
-  "tags": [
-   "Mâtürîdî",
-   "ahlaki mükellefiyet",
-   "tabiî hukuk",
-   "vahiy ve akıl"
-  ],
-  "gun": "2026-11-14"
- },
- {
-  "date": "2025-04-29",
-  "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
-  "title_en": "From Epistemic Uncertainty to Moral Obligation: The Precautionary Principle and the Will to Believe Argument",
-  "authors": "Gülşen Yaylı",
-  "journal": "Muhafazakar Düşünce Dergisi",
-  "year": "2025",
-  "doi": "",
-  "url": "https://dergipark.org.tr/en/pub/muhafazakar/article/1723945",
-  "open_access": "evet",
-  "lead": "Yaylı, bilimsel belirsizlik altındaki çevre kararlarını James'in inanma iradesi argümanı ve ihtiyat ilkesi bağlamında değerlendiriyor.",
-  "summary_tr": "Makale, çevresel krizlerin bilimsel belirsizlik durumunda nasıl ele alınması gerektiğini üç çerçeve içinde tartışır. Bu çerçeveler William James'in inanma iradesi argümanı, çevre hukukunun temel ilkelerinden biri olan ihtiyat ilkesi ve farklı teolojik yaklaşımlardır.\n\nYaylı'ya göre James, bilgi kesinliğinin sağlanamadığı ama karar vermenin zorunlu olduğu durumlarda bireyin inanç önermelerine dayanarak eylemde bulunmasını meşru ve ahlaki bir tutum sayar. Bu yaklaşım, bilimsel öngörü eksikliğinin eylemsizliğe dönüşmesini eleştirir ve etik sorumluluğa işaret eder. 1970'lerde Almanya'da Vorsorgeprinzip adıyla ortaya çıkan ve sonra Rio Bildirgesi ile uluslararası çevre hukukuna giren ihtiyat ilkesi ise çevresel risklere karşı önleyici tedbir almayı esas alır.\n\nMakale ayrıca Yahudilik, Hristiyanlık ve İslam gibi teist teolojilerde doğaya karşı sorumluluğun, insanın Tanrı ile ilişkisi bağlamında ele alındığını belirtir. Tanrı'nın yaratma gücünün ve sıfatlarının somut yansıması olduğu için doğa ve insanın içine doğduğu çevre, kutsal bir emanet olarak değerlendirilir. Çalışma, bu farklı paradigmalar arasındaki felsefi ilişkiyi temellendirmeyi hedefler.",
-  "why_tr": "James'in inanma iradesi, din epistemolojisi tartışmalarında sık anılan bir argümandır. Makale bu argümanı çevre etiği alanına taşıdığı için, inançla eylem arasındaki ilişkiyi farklı bir uygulama alanında görmek isteyen okurlar için bir başlangıç noktası olabilir.",
-  "tags": [
-   "William James",
-   "inanma iradesi",
-   "ihtiyat ilkesi",
-   "çevre etiği"
-  ],
-  "gun": "2026-11-15"
- },
- {
-  "date": "2025-04-27",
-  "title_tr": "Mevlânâ'da Ahlâkî Özne Olarak İdeal İnsanın İnşası",
-  "title_en": "The Construction of the Ideal Human as a Moral Subject in the Tenet of Mawlana",
-  "authors": "Muzaffer Ayvaz",
-  "journal": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
-  "year": "2025",
-  "doi": "10.53844/flsf.1685266",
-  "url": "",
-  "open_access": "evet",
-  "lead": "Ayvaz, Mevlânâ'nın ahlak öğretisinde ideal insanın nasıl inşa edildiğini ahlâkî özne kavramı üzerinden inceliyor.",
-  "summary_tr": "Makalenin konusu, din ve ahlâk için önemli bir problem olan ideal insanın inşasıdır. Ayvaz bu konuyu tasavvufî ahlâka örnek olarak Mevlânâ'nın öğretisi açısından ele alır ve Mevlânâ'da ahlâkî idealizmin sonucu olarak ortaya çıkan ideal insan anlayışının ahlâkî portresini çizmeyi amaçlar. Nitel yöntemle Mevlânâ'nın kendi eserlerinden hareket eder, önce insanın varlıklar içindeki yerini, ontolojik konumunu ve metafizik kökenini belirler, sonra etik yöne geçer.\n\nMevlânâ insanı varlık piramidinde hayvan ile melek arasına yerleştirir, ancak bu yer sabit kalmaz. Ayvaz'a göre insan, iradesi ve çabasıyla ontolojik konumunu ve etik değerini kendisi belirler. Ruhî hazların peşinde koşan ve yücelen insan melekten üstün bir eşref-i mahlûkâta dönüşür, bedensel hazların peşinde koşan ve alçalan insan ise hayvandan aşağı bir esfel-i sâfilîne düşer. Bu yüzden Mevlânâ'nın öğretisinde insan, hem yetkinleşmeye hem yozlaşmaya açık, dinamik bir ahlâkî öznedir.\n\nBu öznenin olumlu güçleri ruh, akıl, irade, aşk ve gönül; olumsuz güçleri ise beden, nefs, şehvet, tamah ve hırs olarak özetlenir. İnsanı ideal insana, yani Tanrı Merdi'ne ya da Allah Eri'ne dönüştüren temel ilke ve erdemler ise tevhit, aşk, edep, sabır, tevazu, adalet, cömertlik, mertlik ve şükür şeklinde sıralanır.",
-  "why_tr": "Makale, ahlâkî özneyi tasavvufî bir kaynaktan ve insanın ontolojik konumunu belirleyen iradesi üzerinden kuruyor. Bu nedenle Din ve Ahlak ile İnsan Tasavvurları başlıklarını birlikte düşünmek isteyen okurlar için bir başlangıç noktası olabilir.",
-  "tags": [
-   "Mevlânâ",
-   "ideal insan",
-   "ahlâkî özne",
-   "tasavvufî ahlâk"
-  ],
-  "gun": "2026-11-16"
- },
- {
-  "date": "2026-05-02",
+  "date": "2026-10-30",
   "title_tr": "Kendini Tanımanın Diyalektiği: Alkibiades I Diyaloğunda Benlik, Ahlak ve Toplum",
   "title_en": "The Dialectic of Self-Knowledge: Selfhood, Morality and Society in the Alcibiades I",
   "authors": "Muhammet Sait Duran",
@@ -586,6 +538,209 @@
    "kendini tanıma",
    "erdem"
   ],
+  "gun": "2026-11-14",
+  "lang": "tr"
+ },
+ {
+  "date": "2026-06-15",
+  "title_tr": "Kur’ân-ı Kerîm’deki Metaforların Kavramsal Çözümlemesinde Kognitif Metafor Teorisinin Uygulanabilirliği: İman/Küfür Metaforları Örneği",
+  "title_en": "The Applicability of Cognitive Metaphor Theory to the Conceptual Analysis of Qur'anic Metaphors: The Case of the Metaphors of Faith and Disbelief (Īmān/Kufr)",
+  "lang": "tr",
+  "authors": "Zeynep Sayın Çağıran, İsmail Çetin",
+  "journal": "Harran İlahiyat Dergisi",
+  "year": "2026",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/hij/article/1854851",
+  "open_access": "evet",
+  "lead": "Klasik belâgat ve retorik geleneğinde metafor, dilin estetik bir unsuru olarak değerlendirilmiştir.",
+  "summary_tr": "Klasik belâgat ve retorik geleneğinde metafor, dilin estetik bir unsuru olarak değerlendirilmiştir. Bu yaklaşıma göre metafor, hakikatin kendisi değil, süslü bir ifadesidir. Bununla birlikte, İslam düşünce geleneğinde ve Kur'ân tefsîrlerinde mecaz, lafzın ötesindeki manayı keşfetmek adına kelâm ve beyan ilimleri çerçevesinde asırlarca derinlemesine tartışılmıştır. 20. yüzyılın ikinci yarısında bilişsel dilbilim alanında yaşanan gelişmeler, özellikle George Lakoff ve Mark Johnson’ın çalışmaları, metaforun sadece dilde değil, insan zihninin kavramlaştırma süreçlerinde de temel bir mekanizma olduğunu ortaya koymuştur.\n\nBilişsel bilimlerin verileriyle temellendirildiği için çalışmada Kognitif Metafor Teorisi başlığı altında ele aldığımız, Kavramsal Metafor Teorisi olarak da adlandırılan yaklaşıma göre insan zihni, soyut-kavranması güç olan olguları, fiziksel dünyada tecrübe ettiği somut nesneler üzerinden kodlayarak anlamlandırır.Metaforların geleneksel edebi bir sanat olmaktan ziyade, insanın düşünce sisteminin temelinde bulunan aslî bir unsur olduğu kabulünden hareket eden bu çalışma, Kur’ân’ın hitabını insanların bizzat içinde yaşadığı dil vasıtasıyla günlük hayatın muhatabı olarak görebilmeyi hedefler. Zira ilahî hitap, gönderildiği dönemde ve sonrasında inananlara bizzat gündelik yaşamı düzenleme yönünde bir rehberdir.\n\nBu bağlamda çalışmanın temel amacı, Kur'ân-ı Kerîm'in en merkezi kavramları olan ‘iman’ ve ‘küfür’ olgularını, George Lakoff ve Mark Johnson’ın geliştirdiği Kavramsal Metafor Teorisi çerçevesinde analiz etmek ve bu teorinin tefsir çalışmalarındaki uygulanabilirliğini test etmektir.\n\nKur'ân-ı Ker’îm, muhataplarına hitâp ederken inanç gibi gaybî ve soyut hakîkatleri, muhatap toplumunun zihin dünyasındaki somut tecrübelerle eşleştirerek sunmuştur.Çalışmada nitel araştırma yöntemlerinden doküman incelemesi tekniği kullanılmış, Kur’ân’da ilgili ayetler taranarak inanç kavramlarının somutlaştırılmasında kullanılan dört temel bilişsel metaforik yapı üzerinden inşa edildiği görülmüştür:1-İman ve Küfür Bağlamında Işık ve Karanlık Metaforları: İmanın nur (ışık), küfrün ise zulmet (karanlık) olarak kurgulandığı bu metaforik yapıda, ‘bilmek görmektir’ ilkesi işlenmekte, hidayet bir göz ve idrak açıklığı, dalalet bir körlük hali olarak sunulmaktadır.\n\n2-Ticaret metaforu çerçevesinde İman ve Küfürde Değer Aktarımı: İnanmak ve inkâr etmek, kâr-zarar dengesi üzerine kurulu ticari bir işlem olarak kodlanmıştır. İman edenler ‘Allah ile alışveriş yapanlar’ olarak nitelenirken, münâfıklar ‘hidayeti verip sapkınlığı satın alan’ basîretsiz tüccarlar olarak tasvîr edilmiştir. 3-Kalp Kavramının Mekânsal İnşâsı: İmanın Kalpte Varlığı: İnsanın kalbi/göğsü, içine imanın veya küfrün dolduğu fiziksel bir oda olarak düşünülmüştür. İman bu odayı genişletirken (inşirâh), küfür ve nifak kalbin mühürlenmesine veya odanın daralmasına neden olmaktadır. 4-Biyolojik Varlık Alanı Olarak İman ve Küfür: Dirilik ve Ölülük Metaforları.\n\nİman biyolojik bir canlılık ve tepki verme yeteneği (işitme/konuşma) ile eşleştirilirken, kâfirler, biyolojik olarak yaşıyor olsalar bile, hakikate tepkisiz kalmaları nedeniyle ölüler (emvât) olarak kategorize edilmiştir.Sonuç olarak çalışma, Kur'ân metaforlarının edebî süslemenin ötesinde, teolojik hakikatleri inşâ eden bilişsel araçlar olduğunu göstermiştir. Kognitif Metafor Teorisi, ayetlerdeki soyut-somut ilişkisini sistematik şekilde çözümleyerek, klasik tefsîr usulünü destekleyen işlevsel bir analiz imkânı sunmaktadır. Ayrıca teorinin Kur’ân araştırmalarında güçlü bir analitik araç olduğunu, fakat elbette ilahî hitâbın tüm boyutlarını kapsayacak bir çözümleme yöntemi olmadığını tespit etmiştir.\n\nÇalışmamız bu sınırlılıklar ışığında teorinin İslamî ilimlerin kendi epistemolojik çerçeveleriyle, geleneksel Mecâzu’l Kur’ân, Tefsîr ve Belâgat ilmiyle sentezlenerek, ilahî dilin kendine özgü mecâzlarını derinlemesine inceleyebilen yeni araştırma olanaklarını önermekte ve bu yönde ileri araştırmaların modern toplumlarda daha etkili anlaşılabilirlik oluşturması açısından faydalı olduğunu savunmaktadır.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Din Dili ve Din Epistemolojisi başlıklarıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Tefsir",
+   "Bilişsel Dilbilim",
+   "Kognitif Metafor Teorisi",
+   "Kur'an-ı Kerim"
+  ],
+  "otomatik": true,
+  "gun": "2026-11-15"
+ },
+ {
+  "date": "2025-12-31",
+  "title_tr": "Whitehead’in Tanrı Anlayışı: Metafizik İlke mi Dinin Tanrı’sı mı?",
+  "title_en": "Whitehead’s Idea of God: A Metaphysical Principle or the God of Religion?",
+  "lang": "tr",
+  "authors": "Münteha Beki",
+  "journal": "Türkiye İlahiyat Araştırmaları Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/tiad/article/1782084",
+  "open_access": "evet",
+  "lead": "Bu çalışma, Alfred North Whitehead’in Tanrı anlayışını süreç metafiziği bağlamında ele almakta ve onun Tanrı’yı “metafizik ilke mi yoksa dinin Tanrı’sı mı?” olarak konumlandırdığı sorusunu tartışmaktadır.",
+  "summary_tr": "Bu çalışma, Alfred North Whitehead’in Tanrı anlayışını süreç metafiziği bağlamında ele almakta ve onun Tanrı’yı “metafizik ilke mi yoksa dinin Tanrı’sı mı?” olarak konumlandırdığı sorusunu tartışmaktadır. Whitehead, varlık kavramı yerine oluş ve süreç kavramı üzerine inşa ettiği sistemde Tanrı’yı dipolar bir varlık olarak tasvir eder: bir yandan ezelî formların düzenleyicisi, kozmik sürecin sınırlayıcı ilkesi ve düzen kaynağıdır; diğer yandan ise değişen, hisseden ve âlemle bağ kuran bir aktüel varlıktır. Dipolar karakterli bir Tanrı anlayışı, geleneksel teizmin mutlak ve değişmez Tanrı anlayışından ayrışır.\n\nAncak, Tanrı’nın yaratıcı kudretinin sınırlılığı, fail neden olmaması, aşkınlık ve kişilik boyutunun tartışmalı oluşu, Whitehead’in modelinin dinin Tanrı’sı olmaktan çok kozmik bir bilinç veya işlevsel bir ilke olduğu yorumunu güçlendirmektedir. Bu çalışma, Tanrı’nın ontolojik statüsünün -metafiziksel ilke mi yoksa dini beklentilerle uyumlu bir varlık mı olduğunun- süreç metafiziği perspektifinden değerlendirilmesini amaçlamaktadır. Bu doğrultuda, Tanrı’nın süreç ontolojisindeki konumu, aşkınlık-içkinlik diyalektiği, kişilik problemi ve dini açıdan önemi irdelenmektedir.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Tanrı Tasavvurları başlığıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Tanrı",
+   "Aktüellik",
+   "Aşkınlık",
+   "Kişilik"
+  ],
+  "otomatik": true,
+  "gun": "2026-11-16"
+ },
+ {
+  "date": "2025-12-31",
+  "title_tr": "Din Dili ile Kur'an Kıssalarının Anlamı Üzerine Felsefi Bir Analiz",
+  "title_en": "A Philosophical Analysis on the Meaning of Religious Language and Narratives",
+  "lang": "tr",
+  "authors": "Sait Polat",
+  "journal": "Yakın Doğu Üniversitesi İslam Tetkikleri Merkezi Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/yaduitmed/article/1772337",
+  "open_access": "evet",
+  "lead": "Bu makale din dilinin kendine özgü yapısını ve kıssaların bu dil içindeki anlam katmanlarını felsefi bir bakış açısıyla incelemektedir.",
+  "summary_tr": "Bu makale din dilinin kendine özgü yapısını ve kıssaların bu dil içindeki anlam katmanlarını felsefi bir bakış açısıyla incelemektedir. Makale şu temel sorulara odaklanmaktadır: Din dilinin kendine özgü yapısı kıssaların anlamını nasıl etkiler? Kıssaların sembolik ve alegorik yorumları, onların evrensel mesajlarını doğru şekilde ortaya çıkarır mı? Farklı felsefi yaklaşımlar, kıssaların ahlaki ve ontolojik anlamlarını nasıl aydınlatmaktadır? Bu bağlamda kıssaların dinî öğretiyi anlaşılır kılma işleviyle felsefenin hakikatleri ortaya çıkarma potansiyeli arasındaki ilişki sorgulanmaktadır.\n\nÖzellikle modern dünyada dinin etkisinin azaldığı, sekülerleşmenin yaygınlaştığı bir dönemde kıssaların yeniden yorumlanması din ve felsefe arasındaki diyaloğun canlanmasına katkıda bulunabilir. Kıssalar; din dili, sembolizm, metaforlar ve alegoriler üzerinden analiz edildiğinde, onların yalnızca tarihsel ya da edebî anlatılar olarak değil, aynı zamanda derin metafiziksel ve etik anlamlar taşıyan metinler olarak değerlendirilmesi gerektiği anlaşılmaktadır. Bu nedenle bu anlatıların önemi sadece dinî bir bağlama indirgenemez; bu kıssalar felsefi bir perspektiften de ele alındığında evrensel ahlaki, metafizik ve epistemolojik mesajları derinlemesine incelenmiş olur.\n\nBöylece, kıssalar dini öğretinin önemli bir aracı olarak insanların Tanrı’yla ve kendi varoluşlarıyla olan ilişkilerini anlamlandırmalarına yardımcı olur. Bu çalışma, din diline yönelik modern felsefi yaklaşımlardan yararlanarak kıssaların doğruluk iddiası ile sembolik anlam arasındaki ilişkiyi sorgulamayı hedeflemektedir. Çalışmada verilerin karşılaştırılması, yorumlanması ve analiz edilmesi gibi yöntemler kullanılmıştır. Bu yöntemlerle kıssalar, kullanılan dil, sembolizm ve metaforlar açısından incelenmiştir. Ayrıca anlambilimsel analiz çerçevesinde kıssaların içerdiği kavramlar ve anlam katmanları detaylı bir şekilde çözümlenmiştir.\n\nBu çalışma, Kur'an kıssalarının anlamını, Paul Ricoeur, Ludwig Wittgenstein ve Hans-Georg Gadamer'ın hermenötik ve dil felsefesi kuramları ışığında analiz etmeyi amaçlamaktadır. Bahsi geçen filozoflar doğrudan Kur'an metinlerini yorumlamamış olsalar da onların geliştirdiği yöntemler, anlamın sabit olmayıp okuyucu ve bağlamla diyalog içinde şekillendiği tezinden hareketle, Kur'an kıssalarını çözümlemek için verimli bir zemin sunmaktadır. Kıssaların anlamı, yorumlayanların deneyimlerine ve değerlerine göre değişebilir. Bu nedenle kıssaların tek ve değişmez bir anlamı olduğunu söylemek güçtür.\n\nBurada, kıssaların dinî ve ahlaki öğretileri aktarmadaki rolleri incelenirken bu anlatıların bireyler ve topluluklar üzerindeki eğitici, dönüştürücü etkileri değerlendirilmektedir. Kıssaların sadece ahlaki dersler değil, aynı zamanda insanın özgürlüğü, sorumluluğu ve Tanrı’yla olan ilişkisini çözümlemeye yönelik derin mesajlar içerdiği anlaşılmaktadır. Kur'an kıssaları, geleneksel yorumlarda sıklıkla tek bir anlama indirgenmekte ve bu da onların zengin anlam dünyasının yeterince keşfedilmesinin önünde bir engel teşkil etmektedir. Bu makale, kıssaların tekilleştirilmiş yorumlara indirgenemeyecek kadar çok katmanlı bir anlam yapısına sahip olduğunu iddia etmektedir.\n\nFelsefi hermenötik analiz, bu çok katmanlı yapıyı sistematik bir şekilde ortaya çıkararak, kıssaların güncel meselelerimize rehberlik etme potansiyelini yeniden canlandırmaktadır. Bu bağlamda kıssaların farklı yorumlarının, din dilinin zenginliğini ve derinliğini ortaya koyduğu sonucuna varılmaktadır.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Din Dili başlığıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Din dili",
+   "Kıssalar",
+   "Sembol",
+   "Felsefi analiz"
+  ],
+  "otomatik": true,
   "gun": "2026-11-17"
+ },
+ {
+  "date": "2025-12-31",
+  "title_tr": "Ontolojik Delilin İkna Ediciliği Üzerine Felsefi Bir Tahlil",
+  "title_en": "A Philosophical Investigation on the Persuasiveness of Ontological Evidence",
+  "lang": "tr",
+  "authors": "Erol Çetin, Bedia Yalman",
+  "journal": "Kahramanmaraş Sütçü İmam Üniversitesi İlahiyat Fakültesi Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/ksuifd/article/1735297",
+  "open_access": "evet",
+  "lead": "Tanrı’nın varlığının ispatı meselesi düşünce tarihinin en temel sorunlarından biri olarak karşımıza çıkar.",
+  "summary_tr": "Tanrı’nın varlığının ispatı meselesi düşünce tarihinin en temel sorunlarından biri olarak karşımıza çıkar. Bu bağlamda ilk çağlardan günümüze Tanrı’nın varlığını kanıtlamaya yönelik çabaların canlılığını korumaya devam ettiğini söylemek mümkündür. Bu çabalardan biri olan ontolojik delil de Tanrı kavramından hareketle Tanrı’nın varlığını delillendirmeyi hedefler. Bu delil, temel olarak “Tanrı vardır” önermesini, duyusal veriye başvurmaksızın, salt akli düzeyde tartışmaya açar. Diğer bir ifadeyle bu delil vasıtasıyla yalnızca aklını kullanan bir insanın, Tanrı’nın varlığını kabul edeceği iddiası temellendirilmeye çalışılır. Bu minvalde ontolojik delilde Tanrı’nın varlığının, Tanrı kavramının analizi yapılarak ispatlanması amaçlanmaktadır.\n\nBu delili, düşünce tarihinde ilk defa formüle eden kişinin Aziz Anselm olduğu kabul edilir. Anselm, ontolojik delilinde zihinde var olan Tanrı kavramının Tanrı’nın varlığının gerçekliğine bir delil teşkil ettiğini öne sürer. Anselm’in delilinde öne çıkan diğer bir husus ise mükemmellik ve varlık arasında inşa ettiği zorunlu ilişkidir. Anselm geliştirdiği yaklaşımında, mükemmellik tanımından hareketle Tanrı’nın varlığını ispat etmeye çalışır. Kendisinden daha mükemmeli tasavvur edilemeyen varlık kavramını çıkış noktası alarak söz konusu varlığın varoluşunu, mükemmel olmasının doğal bir sonucu olarak değerlendirir.\n\nBenzer şekilde Rene Descartes ta Tanrı kavramının mahiyeti ile Tanrı’nın varlığının gerçekliği arasında zorunlu bir ilişkinin olduğunu iddia eder. Tanrı kavramının tahlili üzerine dayanan ontolojik delil, Aziz Anselm’den günümüze kadar birçok düşünür tarafından ele alınır. Bununla birlikte delile yönelik ciddi eleştirilerin de olduğu görülür. Bunlar içerisinde en etkili ve en dikkat çekici olanı ise Kant’ın eleştirisidir. Kant eleştirilerini iki temel noktada yoğunlaştırır. Kant, öncelikle varlık ifade eden önermelerin ontolojik delili savunan düşünürler tarafından analitik önerme olarak kabul edilmesine karşı çıkar. Devamında ise Kant, varlık bildiren ifadelerin gerçek bir yüklem niteliği taşımadığını iddia eder.\n\nBuradan hareketle Kant, kendisinden daha mükemmeli tasavvur edilemeyen şey ile zorunlu bir bağ kurulamayacağını ve apriori olarak Tanrı’nın varlığının ispat edilmesinin mümkün olmadığını öne sürer. Bu çalışmada, ontolojik delilin tarihi süreçteki gelişimi göz önünde bulundurularak delilin ikna ediciliği felsefi bir bakış açısıyla incelenecektir. Bu çerçevede özellikle Gaunilo, Pierre Gassendi ve Immanuel Kant tarafından delile yöneltilen eleştirilerin ontolojik delilin ikna ediciliği üzerindeki etkisi değerlendirilecektir.\n\nSonuç olarak bu çalışmada yalnızca akli temellere dayanarak Tanrı’nın varlığına ulaşmayı gaye edinen ontolojik delilin günümüzde de din felsefesi açısından önemini koruduğu ve hala birçok kişiyi ikna etme gücüne sahip olduğu iddiaları temellendirilmeye çalışılacaktır.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Tanrı Tasavvurları ve Tanrı'nın Varlığının Delilleri başlıklarıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Ontolojik Delil",
+   "Anselm",
+   "Mükemmel Varlık",
+   "Zorunlu Varlık"
+  ],
+  "otomatik": true,
+  "gun": "2026-11-18"
+ },
+ {
+  "date": "2025-12-31",
+  "title_tr": "Mevlânâ’nın Mesnevi’sinde Kötülük Problemine Karşı Ruhsal Olgunlaşma Teodisesi",
+  "title_en": "Soul-Making Theodicy Against the Problem of Evil in Mawlânâ’s Masnavi",
+  "lang": "tr",
+  "authors": "Fatma Yüce",
+  "journal": "darulfunun ilahiyat",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/darulfunun/article/1711538",
+  "open_access": "evet",
+  "lead": "Mevlânâ’nın din felsefesinin en önemli konularından biri olan kötülük problemi ve teodise hakkındaki görüşleri oldukça önemlidir.",
+  "summary_tr": "Mevlânâ’nın din felsefesinin en önemli konularından biri olan kötülük problemi ve teodise hakkındaki görüşleri oldukça önemlidir. Son yıllarda Türkiye’de araştırmacılar Mevlânâ’da kötülük problemine odaklanan birçok çalışma yapmıştır. Bunlardan bir kısmı Mevlânâ’nın kötülük problemini ele alan genel nitelikli çalışmalar, bir kısmı ise Mevlânâ’daki teodiselere odaklanan ya da teodise öneren daha özelleşmiş çalışmalardır. Literatür taraması yöntemini kullanan bu çalışma diğer çalışmalardan farklı olarak Mevlânâ’da ruhsal olgunlaşma teodisesine Mesnevi üzerinden odaklanmaktadır. Bu çalışmada Mevlânâ’da ruhsal olgunlaşma teodisesi yedi temel öncül oluşturularak sistematize edilmiştir: 1) Allah’ın kötülükleri yaratmak için iyi bir nedeni vardır.\n\n2) Bu iyi neden ruhsal olgunlaşmadır. 3) İnsanın kötülük yapmasının sebebi Allah’la arasındaki epistemik mesafedir. 4) Mevlânâ’ya göre kötülüklerin nedeni ruhsal yönden olgunlaşmamış insandır. 5) İnsanı kötülüğe sevk eden unsurlar başta olgunlaşmamış nefis olmak üzere, heva, heves ve şeytandır. 6) Kötülüklerin engellenmesi için insanın ruhsal yönden olgunlaşması, insanın ruhsal yönden olgunlaşması için kötülüklerden arınması gerekmektedir. 7) Ruhsal Olgunlaşmanın nihai hedefi kötülükleri aşkla ortadan kaldırmak, bunun yolu da Allah’la birliktir (fenâfillah). Bu öncüllerden elde edilen sonuç ise -her ne kadar kendisinin böyle bir çabası olmasa da- Mevlânâ’nın görüşlerinden ruhsal olgunlaşma teodisesi çıkarsamanın mümkün olduğudur.\n\nMevlânâ’daki ruhsal olgunlaşma teodisesi içerik olarak özgün bir hüviyete sahip olmasa da metaforik üslup bakımından özgündür.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Kötülük Problemi ve Ölüm ve Ötesi başlıklarıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Mevlânâ",
+   "Kötülük Problemi",
+   "Teodise",
+   "Ruhsal Olgunlaşma"
+  ],
+  "otomatik": true,
+  "gun": "2026-11-19"
+ },
+ {
+  "date": "2025-12-30",
+  "title_tr": "Aldo Leopold’un Toprak Etiği’nin din felsefesi bağlamında değerlendirilmesi",
+  "title_en": "Evaluation of Aldo Leopold's Land Ethics in the context of philosophy of religion",
+  "lang": "tr",
+  "authors": "Gülşen Yaylı",
+  "journal": "Nevşehir Hacı Bektaş Veli Üniversitesi SBE Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/nevsosbilen/article/1827130",
+  "open_access": "evet",
+  "lead": "Bu makalede, Aldo Leopold’un Toprak Etiği anlayışı din felsefesi perspektifinden ele alınmaktadır.",
+  "summary_tr": "Bu makalede, Aldo Leopold’un Toprak Etiği anlayışı din felsefesi perspektifinden ele alınmaktadır. Toprak Etiği, Batı düşüncesinde hâkim olan antroposentrik doğa anlayışını reddeder. İnsan ve doğa arasındaki ilişkide ontolojik üstünlük yerine, ontolojik eşitlik olmalıdır. Bu bağlamda, Leopold’a göre etiğin kapsamı, sadece insanlar arası ilişkilerle sınırlı kalmamalıdır; varlığın hepsini kapsayacak şekilde genişlemelidir. Leopold’a göre insan, doğa ile ahlak ilkelerine dayalı bir ilişki kurmalıdır; doğa ve içinde barındırdığı her varlığa karşı ahlaken sorumludur. Toprak Etiği, seküler temellere sahip olsa da özünde dinî geleneklerle örtüşebilecek ilkelere sahiptir. Toprak Etiği’ne göre doğa, “biyotik topluluk”tur.\n\nBu kavramsallaştırma ise dinî geleneklerdeki doğa anlayışı ile benzerlikler gösterir; zira teizmde doğa, Tanrı’nın yaratma eyleminin tecellisi ve Tanrı’nın varlığının ispatı olan “ayet”tir. Toprak Etiği’nin doğanın içkin değere sahip olduğu vurgusu ise Budizm ve Şamanizm gibi geleneklerin doğaya atfettiği kutsallık anlayışı ile benzerlikler gösterir. Leopold’un etiğin sınırlarını doğayı da kapsayacak şekilde genişletme çabası, asli olarak bir tür kozmik ahlak önerisidir. Bu ekosentrik etik, “ekolojik vicdan ve günah” gibi kavramlar aracılığıyla temellenirken, aynı zamanda din felsefesi açısından kutsal varlık, insan ve doğa ilişkisini epistemolojik ve ontolojik açıdan yeniden sorgulamaya imkân sağlayacak güçlü argümanlara sahiptir.",
+  "why_tr": "Makale, anahtar kelimeleri bakımından sitedeki Din ve Ahlak başlığıyla ilişkilendirilmiştir.",
+  "tags": [
+   "Toprak Etiği",
+   "İnsan Doğa İlişkisi"
+  ],
+  "otomatik": true,
+  "gun": "2026-11-20"
+ },
+ {
+  "date": "2025-12-20",
+  "title_tr": "Mevlânâ'da Ahlâkî Özne Olarak İdeal İnsanın İnşası",
+  "title_en": "The Construction of the Ideal Human as a Moral Subject in the Tenet of Mawlana",
+  "authors": "Muzaffer Ayvaz",
+  "journal": "FLSF Felsefe ve Sosyal Bilimler Dergisi",
+  "year": "2025",
+  "doi": "10.53844/flsf.1685266",
+  "url": "",
+  "open_access": "evet",
+  "lead": "Ayvaz, Mevlânâ'nın ahlak öğretisinde ideal insanın nasıl inşa edildiğini ahlâkî özne kavramı üzerinden inceliyor.",
+  "summary_tr": "Makalenin konusu, din ve ahlâk için önemli bir problem olan ideal insanın inşasıdır. Ayvaz bu konuyu tasavvufî ahlâka örnek olarak Mevlânâ'nın öğretisi açısından ele alır ve Mevlânâ'da ahlâkî idealizmin sonucu olarak ortaya çıkan ideal insan anlayışının ahlâkî portresini çizmeyi amaçlar. Nitel yöntemle Mevlânâ'nın kendi eserlerinden hareket eder, önce insanın varlıklar içindeki yerini, ontolojik konumunu ve metafizik kökenini belirler, sonra etik yöne geçer.\n\nMevlânâ insanı varlık piramidinde hayvan ile melek arasına yerleştirir, ancak bu yer sabit kalmaz. Ayvaz'a göre insan, iradesi ve çabasıyla ontolojik konumunu ve etik değerini kendisi belirler. Ruhî hazların peşinde koşan ve yücelen insan melekten üstün bir eşref-i mahlûkâta dönüşür, bedensel hazların peşinde koşan ve alçalan insan ise hayvandan aşağı bir esfel-i sâfilîne düşer. Bu yüzden Mevlânâ'nın öğretisinde insan, hem yetkinleşmeye hem yozlaşmaya açık, dinamik bir ahlâkî öznedir.\n\nBu öznenin olumlu güçleri ruh, akıl, irade, aşk ve gönül; olumsuz güçleri ise beden, nefs, şehvet, tamah ve hırs olarak özetlenir. İnsanı ideal insana, yani Tanrı Merdi'ne ya da Allah Eri'ne dönüştüren temel ilke ve erdemler ise tevhit, aşk, edep, sabır, tevazu, adalet, cömertlik, mertlik ve şükür şeklinde sıralanır.",
+  "why_tr": "Makale, ahlâkî özneyi tasavvufî bir kaynaktan ve insanın ontolojik konumunu belirleyen iradesi üzerinden kuruyor. Bu nedenle Din ve Ahlak ile İnsan Tasavvurları başlıklarını birlikte düşünmek isteyen okurlar için bir başlangıç noktası olabilir.",
+  "tags": [
+   "Mevlânâ",
+   "ideal insan",
+   "ahlâkî özne",
+   "tasavvufî ahlâk"
+  ],
+  "gun": "2026-11-21",
+  "lang": "tr"
+ },
+ {
+  "date": "2025-06-25",
+  "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
+  "title_en": "",
+  "authors": "Gülşen Yaylı",
+  "journal": "Muhafazakar Düşünce Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/muhafazakar/article/1723945",
+  "open_access": "evet",
+  "lead": "Yaylı, bilimsel belirsizlik altındaki çevre kararlarını James'in inanma iradesi argümanı ve ihtiyat ilkesi bağlamında değerlendiriyor.",
+  "summary_tr": "Makale, çevresel krizlerin bilimsel belirsizlik durumunda nasıl ele alınması gerektiğini üç çerçeve içinde tartışır. Bu çerçeveler William James'in inanma iradesi argümanı, çevre hukukunun temel ilkelerinden biri olan ihtiyat ilkesi ve farklı teolojik yaklaşımlardır.\n\nYaylı'ya göre James, bilgi kesinliğinin sağlanamadığı ama karar vermenin zorunlu olduğu durumlarda bireyin inanç önermelerine dayanarak eylemde bulunmasını meşru ve ahlaki bir tutum sayar. Bu yaklaşım, bilimsel öngörü eksikliğinin eylemsizliğe dönüşmesini eleştirir ve etik sorumluluğa işaret eder. 1970'lerde Almanya'da Vorsorgeprinzip adıyla ortaya çıkan ve sonra Rio Bildirgesi ile uluslararası çevre hukukuna giren ihtiyat ilkesi ise çevresel risklere karşı önleyici tedbir almayı esas alır.\n\nMakale ayrıca Yahudilik, Hristiyanlık ve İslam gibi teist teolojilerde doğaya karşı sorumluluğun, insanın Tanrı ile ilişkisi bağlamında ele alındığını belirtir. Tanrı'nın yaratma gücünün ve sıfatlarının somut yansıması olduğu için doğa ve insanın içine doğduğu çevre, kutsal bir emanet olarak değerlendirilir. Çalışma, bu farklı paradigmalar arasındaki felsefi ilişkiyi temellendirmeyi hedefler.",
+  "why_tr": "James'in inanma iradesi, din epistemolojisi tartışmalarında sık anılan bir argümandır. Makale bu argümanı çevre etiği alanına taşıdığı için, inançla eylem arasındaki ilişkiyi farklı bir uygulama alanında görmek isteyen okurlar için bir başlangıç noktası olabilir.",
+  "tags": [
+   "William James",
+   "inanma iradesi",
+   "ihtiyat ilkesi",
+   "çevre etiği"
+  ],
+  "gun": "2026-11-22",
+  "lang": "tr"
+ },
+ {
+  "date": "2024-06-30",
+  "title_tr": "Mâtürîdî'de Ahlaki Mükellefiyet ve Tabiî Hukuk",
+  "title_en": "Moral Obligation and Natural Law in al-Māturīdī",
+  "authors": "Kayhan Özaykal",
+  "journal": "Kader",
+  "year": "2024",
+  "doi": "10.18317/kaderdergi.1468241",
+  "url": "",
+  "open_access": "evet",
+  "lead": "Özaykal, Mâtürîdî'nin düşüncesinde ahlaki mükellefiyetin kaynağını vahiy ve akıl ekseninde araştırıyor.",
+  "summary_tr": "Makale, Mâtürîdî'nin ahlak düşüncesinde ahlaki mükellefiyetin kaynağını belirlemeyi amaçlar. Özaykal önce Mâtürîdî'nin yazılarındaki ahlaka ilişkin kavramları sınıflandırır ve fayda, erdem ve hak olmak üzere üç temel kavrama ulaşır. Bunlardan hakkı, ahlakın nesnel olması için gerekli olan kategorik emir fikrini tek başına sunduğu için ahlaki mükellefiyetin nihai temsilcisi sayar.\n\nMükellefiyetin iki ana kaynağı vahiy ve akıldır. Vahiy, emir ve yasaklarla birlikte ilahi rubûbiyet ve hâkimiyet fikrini sunar. Akıl ise ahlak anlayışını nesnel ilkelerle belirler ve vahyin öğretilerini destekler. Makaleye göre aklın ahlak alanındaki bulguları genellikle vahiyle uyumludur ve ikisinin ayrıldığı yerlerde çoğunlukla insanın gerekli bilgiye ulaşamaması belirleyicidir. Mâtürîdî bu yüzden vahyin, özellikle karanlık ve tartışmalı ahlak alanlarında gerekli olduğunu belirtir.\n\nÖzaykal, aklın bir mükellefiyet kaynağı olması bakımından Mâtürîdî düşüncesinin tabiî hukuk kuramı çerçevesinde sınıflandırılabileceğini söyler. Doğal dünya akla rehberlik eder ve insanın temel ihtiyaç ve arzularından ahlaki sonuçlar çıkarılabilir. Tanrı dünyanın yaratıcısı ve tasarımcısı olduğundan, ahlakın biçimini nihai olarak belirleyen ilke ilahi hikmettir. Makalenin üçüncü bölümü ahlaki motivasyonu ele alır ve Mâtürîdî'ye göre eylemleri yalnızca sonuçlarına bakarak değil, kategorik ilke ve emirlere dayanan ölçütlerle de yargılayabileceğimiz sonucuna varır. Son kısımda Mâtürîdî'nin aklı, Hume'un olan ile olması gereken arasına koyduğu uçurumu aşmaya imkân veren bağımsız bir mükellefiyet kaynağı olarak gördüğü ileri sürülür.",
+  "why_tr": "Ahlaki mükellefiyetin vahiyden mi akıldan mı geldiği, Din ve Ahlak başlığının temel sorularından biridir. Makale, Mâtürîdî'nin bu soruya verdiği cevabı tabiî hukuk ve Hume'un olan ile olması gereken ayrımı çerçevesinde ele aldığı için bu başlıkla ilgilenen okurlar için bir başlangıç noktası olabilir.",
+  "tags": [
+   "Mâtürîdî",
+   "ahlaki mükellefiyet",
+   "tabiî hukuk",
+   "vahiy ve akıl"
+  ],
+  "gun": "2026-11-23",
+  "lang": "tr"
  }
 ]
