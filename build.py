@@ -85,6 +85,15 @@ def tr_kucuk(s: str) -> str:
     return (s or "").replace("İ", "i").replace("I", "ı").lower()
 
 
+_ARA_KATLA = str.maketrans({**{c: "a" for c in "âäāàá"}, **{c: "e" for c in "êēëè"}, **{c: "i" for c in "îïīì"},
+                            **{c: "o" for c in "ôōò"}, **{c: "u" for c in "ûūù"}, **{c: None for c in "'`´‘’ʻʼʽʾʿ"}})
+
+
+def ara_norm(s: str) -> str:
+    """Arama için: küçük harf, şapkalı/uzatmalı ünlüler düz harfe, kesme ve ayn/hemze işaretleri atılır."""
+    return tr_kucuk(s).translate(_ARA_KATLA)
+
+
 def tr_date(iso: str) -> str:
     d = datetime.strptime(iso, "%Y-%m-%d")
     return f"{d.day} {AYLAR[d.month - 1]} {d.year}"
@@ -1426,7 +1435,7 @@ def turkiye_listesi() -> tuple[str, int]:
         ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else f'<a href="{akademi_url(slugify(p["ad"]))}">{e(p["ad"])}</a>'
         durum = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
         yok = f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK</a>' if p.get("yok") else ""
-        ara = tr_kucuk(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
+        ara = ara_norm(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
         satirlar.append(f'<tr id="k-{slugify(p["ad"])}" data-ara="{e(ara)}" data-unvan="{UNVAN_SIRA.get(p.get("unvan"), 9)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
                         f'<td data-etiket="Unvan">{e(p.get("unvan"))}{durum}</td>'
                         f'<td data-etiket="Üniversite">{e(p.get("universite"))}</td>'
@@ -1493,7 +1502,7 @@ KISI_JS = """<script>
   }
   var g=document.getElementById('kisi-ara');
   if(g){
-    var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+    var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
     g.addEventListener('input',function(){
       var q=kucuk(g.value.trim()), n=0;
       document.querySelectorAll('table.kisiler tbody tr').forEach(function(r){var v=!q||r.dataset.ara.indexOf(q)>-1; r.hidden=!v; if(v)n++;});
@@ -1544,7 +1553,7 @@ def eser_ogeleri() -> list:
         yazar_ad = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
         ogeler.append({"html": eser_satiri(k), "tur": h.get("eser_turu", ""), "konu": konu, "grup": "temel",
                        "yil": str(h.get("yil") or ""), "yazar": yazar_ad[0] if yazar_ad else "", "ad": h["baslik"],
-                       "ara": tr_kucuk(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
+                       "ara": ara_norm(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
     for m in dp_veri():
         yazar, dergi = dp_kunye(m)
         tur = DP_TUR_ESER[m["tur"]]
@@ -1558,7 +1567,7 @@ def eser_ogeleri() -> list:
                  + (f'<span class="eser-konu"> · {e(konu_ad)}</span>' if konu_ad else "") + '</span>')
         ogeler.append({"html": html_, "tur": tur, "konu": konu, "grup": "tr",
                        "yil": m["yil"], "yazar": m["yazarlar"][0] if m["yazarlar"] else "", "ad": m["baslik"],
-                       "ara": tr_kucuk(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
+                       "ara": ara_norm(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
     return ogeler
 
 
@@ -1609,7 +1618,7 @@ def render_tezler() -> str:
         hocalar = ", ".join(akademisyen_bag(h) for h in t["danisman"])
         parcalar = t["yer"].split(" / ")
         yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
-        ara = tr_kucuk(" ".join([t["ad"], " ".join(t["danisman"]), yer]))
+        ara = ara_norm(" ".join([t["ad"], " ".join(t["danisman"]), yer]))
         satirlar.append(
             f'<li data-tur="{e(t["tur"])}" data-durum="{durum}" data-yil="{e(t["yil"])}" data-ad="{e(t["ad"])}" '
             f'data-danisman="{e(t["danisman"][0])}" data-ara="{e(ara)}">'
@@ -1642,7 +1651,7 @@ TEZ_JS = """<script>
   var lis=[].slice.call(document.querySelectorAll('ul.tez-liste > li')), ul=document.querySelector('ul.tez-liste');
   var g=document.getElementById('tez-ara'), sb=document.querySelectorAll('.eser-sirala button');
   var f={tur:'',durum:''}, alan='yil', yon=-1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()), n=0, say={tur:{'':0},durum:{'':0}};
@@ -1732,7 +1741,7 @@ ESER_JS = """<script>
   var sb=document.querySelectorAll('.eser-sirala button');
   var g=document.getElementById('eser-ara');
   var konu='', tur='', alan='', yon=1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()), n=0, ts={'':0};
@@ -3367,7 +3376,7 @@ def dergi_satiri(d: dict, ana_ad: dict, esik: int) -> str:
     elif konular:
         makaleler = ('<p class="d-konular" style="grid-column:1/-1;font-family:var(--sans);font-size:.86rem">En çok: ' + ", ".join(
             f'<a href="{SITE_URL}/basliklar/{k}/">{e(ana_ad[k])}</a> ({n})' for k, n in konular) + "</p>") + makaleler
-    ara = tr_kucuk(" ".join([d["ad"], d.get("sahip") or "", d["kod"], " ".join(d.get("onceki_adlar") or [])]))
+    ara = ara_norm(" ".join([d["ad"], d.get("sahip") or "", d["kod"], " ".join(d.get("onceki_adlar") or [])]))
     ad_html = (f'<a class="d-ad" href="{e(d["link"])}" rel="noopener">{e(d["ad"])}</a>' if d.get("link") else f'<span class="d-ad">{e(d["ad"])}</span>')
     data = (f'data-ara="{e(ara)}" data-ad="{e(d["ad"])}" data-df="{len(mk)}" data-son5="{son5}" '
             f'data-dizin=" {" ".join(k for k, _ in DIZIN_ADLARI if dizin.get(k))} " data-gonderim="{gd or ""}" '
@@ -3433,7 +3442,7 @@ DERGI_JS = """<script>
   var db=document.querySelectorAll('.d-dizin-sec button'), gb=document.querySelectorAll('.d-gonderim-sec button');
   var sb=document.querySelectorAll('.eser-sirala button');
   var dizin=[], gonderim='', alan='df', yon=-1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase();};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()).split(/\\s+/).filter(Boolean), a=ay.value, n=0;

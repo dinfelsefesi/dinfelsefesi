@@ -234,7 +234,7 @@
 
   // Arama
   var ara = document.getElementById("ag-ara");
-  var kucuk = function (s) { return s.replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase(); };
+  var kucuk = function (s) { return s.replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase().replace(/[âäāàá]/g, "a").replace(/[êēëè]/g, "e").replace(/[îïīì]/g, "i").replace(/[ôōò]/g, "o").replace(/[ûūù]/g, "u").replace(/['`´‘’ʻʼʽʾʿ]/g, ""); };
   if (ara) {
     ara.addEventListener("input", function () {
       var q = kucuk(ara.value.trim());
