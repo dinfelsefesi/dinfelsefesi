@@ -698,6 +698,8 @@ select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:none;border-color:v
 .kt-dus-etiket{margin-top:1.4rem}
 .kt-not{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);margin:.2rem 0 .6rem}
 .kt-tablo-kap{overflow-x:auto}
+.kt-yontem p{font-family:var(--sans);font-size:.86rem;line-height:1.6;color:var(--ink-soft);max-width:var(--measure)}
+.kt-yontem strong{color:var(--ink)}
 .kt-donemler{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.6rem;margin:.6rem 0 1rem}
 .kt-donem h3{font-size:1.05rem;margin:0 0 .3rem}
 .kt-tablo{border-collapse:collapse;font-family:var(--sans);font-size:.88rem;width:100%;max-width:44rem}
@@ -1847,7 +1849,7 @@ def render_kavram_tarihi() -> str:
         'payı en çok artan ve azalan kavramlar. Yükselen ve gerileyen kavramlar, iki dönemdeki oranın farkına göre sıralanmıştır; '
         'en az sekiz çalışmaya dayanmayan değişimler listeye alınmaz. Kavram adına basıldığında eğrisi yukarıda çizilir.</p>'
         f'<div class="kt-donemler">{t_cok}{t_yuk}{t_ger}</div>'
-        '<div class="susleme" aria-hidden="true"><span>❦</span></div><h2 id="yontem">Yöntem</h2>'
+        '<div class="susleme" aria-hidden="true"><span>❦</span></div><h2 id="yontem">Yöntem</h2><div class="kt-yontem">'
         f'<p><strong>Kaynak.</strong> Sayım, sitede listelenen {v["toplam"]} çalışmaya dayanır: eserler sayfasındaki kitap, kitap bölümü, makale, bildiri ve tercümeler '
         'ile tezler sayfasındaki tamamlanmış yüksek lisans ve doktora tezleri. Her çalışma ortaya çıktığı yılla sayılır: yayınlar yayım yılıyla, tezler bitiş yılıyla. '
         'Devam eden tezler sayıma girmez, çünkü YÖK bu tezlerde bitiş değil başlangıç yılını vermektedir. '
@@ -1871,6 +1873,7 @@ def render_kavram_tarihi() -> str:
         '<p><strong>Sınırlılıklar.</strong> Sayım tam metinlere değil başlık ve anahtar kelimelere dayanır, yani yazarların öne çıkardığı kavramı ölçer. '
         'Liste Türkiye\'deki din felsefesi literatürünün tamamı değil, sitenin derlediği kısmıdır; tezler, hocaları sitedeki listede yer alan danışmanların '
         'yönettiği tezlerle sınırlıdır. İçinde bulunulan yılın verisi eksiktir.</p>'
+        '</div>'
         f'<script>var KT={veri};</script>' + KAVRAM_JS)
     return page(f"Kavram tarihi · {SITE_NAME}", body, "kavram-tarihi", canonical=f"{SITE_URL}/kavram-tarihi/",
                 desc="Türkiye'deki din felsefesi çalışmalarında kavramların ve düşünürlerin yıllar içindeki yeri.")
