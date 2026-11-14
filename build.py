@@ -634,7 +634,6 @@ button.sirala[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-si
 table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold-logo)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
-table.kisiler td.k-yok{font-style:italic;font-size:.9rem;white-space:nowrap}
 table.kisiler tbody tr:hover{background:var(--panel)}
 .emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -1459,12 +1458,11 @@ def turkiye_listesi() -> tuple[str, int]:
         kim = p.get("kimlik") or fis_ad.get(p["ad"])
         ad_html = bag("kisi", kim) if kim and ("kisi", kim) in FIS else f'<a href="{akademi_url(slugify(p["ad"]))}">{e(p["ad"])}</a>'
         durum = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
-        yok = f'<a class="dis" href="{YOK_PROFIL}{e(p["yok"])}" rel="noopener" target="_blank">YÖK</a>' if p.get("yok") else ""
         ara = ara_norm(" ".join([p["ad"], p.get("universite", ""), p.get("fakulte", "")]))
         satirlar.append(f'<tr id="k-{slugify(p["ad"])}" data-ara="{e(ara)}" data-unvan="{UNVAN_SIRA.get(p.get("unvan"), 9)}"><td class="k-ad" data-etiket="Ad Soyad">{ad_html}</td>'
                         f'<td data-etiket="Unvan">{e(p.get("unvan"))}{durum}</td>'
                         f'<td data-etiket="Üniversite">{e(p.get("universite"))}</td>'
-                        f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td><td class="k-yok">{yok}</td></tr>')
+                        f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td></tr>')
     tarih = tr_date(str(veri.get("tarih"))) if veri.get("tarih") else ""
     ust = (f'<p class="aciklama-kisa">Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
            f'Liste, YÖK Akademik\'te bilim alanı olarak İlahiyat Temel Alanı\'nda Din Felsefesi\'ni işaretlemiş akademisyenler ile '
@@ -1476,7 +1474,7 @@ def turkiye_listesi() -> tuple[str, int]:
     tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr>'
              + "".join(f'<th aria-sort="{"ascending" if i == 0 else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}<span class="ok" aria-hidden="true"></span></button></th>'
                        for i, b in enumerate(["Ad Soyad", "Unvan", "Üniversite", "Fakülte"])) +
-             f'<th><span class="gizli">YÖK profili</span></th></tr></thead><tbody>{"".join(satirlar)}</tbody></table></div>'
+             f'</tr></thead><tbody>{"".join(satirlar)}</tbody></table></div>'
              '<p class="giris k-bos" hidden>Aramaya uyan kişi bulunamadı.</p>')
     return ust + tablo, len(kisiler)
 
