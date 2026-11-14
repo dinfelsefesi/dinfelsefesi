@@ -2135,8 +2135,8 @@ def render_sayilar() -> str:
     tur_ad = dict(ESER_TURLERI)
     yl = sum(1 for t in tezler if t["tur"] == "Yüksek Lisans")
     dr = len(tezler) - yl
-    ozet = (f'<div class="sy-ozet"><div><b>{len(ogeler)}</b><span>eser</span></div><div><b>{len(tezler)}</b><span>tamamlanmış tez</span></div>'
-            f'<div><b>{dr}</b><span>doktora tezi</span></div><div><b>{yl}</b><span>yüksek lisans tezi</span></div></div>')
+    ozet = (f'<div class="sy-ozet"><div><b>{len(ogeler)}</b><span>eser</span></div>'
+            f'<div><b>{dr}</b><span>tamamlanmış doktora tezi</span></div><div><b>{yl}</b><span>tamamlanmış yüksek lisans tezi</span></div></div>')
     body = (harita_ust("sayilar", "Sayılarla alan")
             + '<p class="aciklama-kisa">Sitede listelenen eserlerin ve tamamlanmış tezlerin sayısal görünümü; devam eden tezler sayılmaz. Eserler yayım yılına, tezler bitiş yılına göre sayılmıştır; '
             'kitap tanıtımları yıllık sayıya katılmaz. İçinde bulunulan yılın verisi eksiktir.</p>'
