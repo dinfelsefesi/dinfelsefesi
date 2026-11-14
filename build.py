@@ -366,7 +366,7 @@ nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-
 nav.ana a:hover{color:var(--ink)}
 nav.ana a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
 /* telefonda menü tek satır: "Ana sayfa" gizlenir (logo ve site adı zaten ana sayfaya götürür) */
-@media (max-width:760px){nav.ana{flex-wrap:nowrap;gap:.3rem min(1.05rem,1.7vw);font-size:min(1.04rem,3.55vw);overflow-x:auto;scrollbar-width:none;width:100%;justify-content:safe center}nav.ana::-webkit-scrollbar{display:none}
+@media (max-width:760px){nav.ana{flex-wrap:nowrap;gap:.3rem min(1.05rem,2.2vw);font-size:min(1.04rem,4vw);overflow-x:auto;scrollbar-width:none;width:100%;justify-content:safe center}nav.ana::-webkit-scrollbar{display:none}
   nav.ana a.m-ana{display:none}nav.ana a{white-space:nowrap}}
 nav.ana a:hover{border-bottom-color:color-mix(in srgb,var(--gold-logo) 45%,transparent)}
 .deneme{background:var(--gold-soft);font-style:italic;font-size:.88rem;color:var(--ink-soft)}
@@ -892,7 +892,8 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
 }
 """
 
-MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("terimler", "Terimler"), ("kisiler", "Kişiler"),
+# Terimler menüden çıkarıldı (14 Kasım 2026): terim fişleri ve /terimler/ dizini duruyor, Başlıklar sayfasından bağlanıyor.
+MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("kisiler", "Kişiler"),
         ("eserler", "Eserler"), ("dergiler", "Dergiler"), ("ag", "Ağ"), ("hakkinda", "Hakkında")]
 TEZ_DOSYA = ROOT / "data" / "tez" / "tezler.json"
 if TEZ_DOSYA.exists():
@@ -943,6 +944,7 @@ def doi_baglanti_duzelt(h: str) -> str:
 
 def page(title: str, body: str, aktif: str = "", desc: str = SITE_TAGLINE, canonical: str = "",
          gorsel: str = "", og_tur: str = "website", jsonld: dict | None = None, dizinleme: bool = True) -> str:
+    aktif = {"terimler": "basliklar"}.get(aktif, aktif)  # terim sayfaları menüde Başlıklar altında
     body = doi_baglanti_duzelt(body)
     canon = f'<link rel="canonical" href="{e(canonical)}">' if canonical else ""
     if jsonld:
@@ -1274,7 +1276,8 @@ def baslik_secici() -> str:
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
             '<p class="giris">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
-            'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir.</p>'
+            'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir. '
+            f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p>'
             + baslik_secici() + harita_html() + BASLIK_SEC_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
 
