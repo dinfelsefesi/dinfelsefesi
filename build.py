@@ -668,10 +668,6 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .yayin-liste .tez-rozetler{margin-left:.5rem;padding-top:0;vertical-align:.1em}
 .tez-durum-etiket{margin-top:.7rem}
 select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--accent);outline-offset:1px}
-.konu-bulut{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .9rem;margin:.9rem 0 0;line-height:1.35}
-.konu-bulut-oge{font-family:var(--serif);background:none;border:0;border-bottom:1px solid transparent;padding:.05rem 0;color:var(--ink-soft);cursor:pointer}
-.konu-bulut-oge:hover{color:var(--ink);border-bottom-color:var(--gold-logo)}
-.konu-bulut-oge[aria-pressed="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
 .eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
 /* tür seçicisi konu düğmelerinden ayrışsın: düz yazı, köşeli, küçük */
@@ -1716,22 +1712,6 @@ def render_eserler() -> str:
             for c in sorted(COCUK.get(k, []), key=lambda x: FIS[("baslik", x)].get("sira", 99)):
                 konular.append(f'<option value="{c}">\u00a0\u00a0\u00a0{e(FIS[("baslik", c)]["ad"])}</option>')
         konular.append('</optgroup>')
-    import math
-    _kc = {}
-    for o in ogeler:
-        for k in o["konu"]:
-            _kc[k] = _kc.get(k, 0) + 1
-    _en = sorted(((n, k) for k, n in _kc.items() if ("baslik", k) in FIS), reverse=True)[:28]
-    if _en:
-        _mx, _mn = _en[0][0], _en[-1][0]
-        def _boy(n):
-            return .82 + 0.78 * ((math.log(n) - math.log(_mn)) / ((math.log(_mx) - math.log(_mn)) or 1))
-        _bulut = "".join(f'<button type="button" class="konu-bulut-oge" data-konu="{k}" style="font-size:{_boy(n):.2f}rem" '
-                         f'title="{n} eser">{e(FIS[("baslik", k)]["ad"])}</button>'
-                         for n, k in sorted(_en, key=lambda x: tr_kucuk(FIS[("baslik", x[1])]["ad"])))
-        bulut_html = f'<div class="konu-bulut" role="group" aria-label="En çok eser bulunan konular">{_bulut}</div>'
-    else:
-        bulut_html = ""
     turler = ['<button type="button" data-tur="" aria-pressed="true">Tümü <span class="say"></span></button>']
     turler += [f'<button type="button" data-tur="{t}" aria-pressed="false">{a} <span class="say"></span></button>'
                for t, a in ESER_TURLERI]
@@ -1747,7 +1727,7 @@ def render_eserler() -> str:
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
-            f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>{bulut_html}'
+            f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>'
             '<label class="secim-etiket eser-ara-etiket" for="eser-ara">Başlık ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="eser-ara" class="eser-konu-sec" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></div>'
             f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
@@ -1805,10 +1785,6 @@ ESER_JS = """<script>
     sb.forEach(function(b){b.setAttribute('aria-sort', b.dataset.alan===alan ? (yon>0?'ascending':'descending') : 'none');});
   }
   ks.addEventListener('change',function(){konu=ks.value; tur=''; uygula(true);});
-  var bg=document.querySelectorAll('.konu-bulut-oge');
-  bg.forEach(function(b){b.addEventListener('click',function(){ks.value=(ks.value===b.dataset.konu)?'':b.dataset.konu; konu=ks.value; tur=''; uygula(true);});});
-  function bulutIsaret(){bg.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.konu===konu?'true':'false');});}
-  ks.addEventListener('change',bulutIsaret); bg.forEach(function(b){b.addEventListener('click',bulutIsaret);});
   tb.forEach(function(b){b.addEventListener('click',function(){tur=b.dataset.tur; uygula(true);});});
   sb.forEach(function(b){b.addEventListener('click',function(){
     if(alan===b.dataset.alan){yon=-yon;} else {alan=b.dataset.alan; yon = alan==='yil' ? -1 : 1;}
