@@ -490,6 +490,7 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
   font-size:.92em;text-align:center;vertical-align:.08em}
 .sekmeler{margin-top:.4rem}
 .sekmeler button{font-size:1rem;padding:.45rem 1.1rem}
+@media(max-width:640px){.sekmeler{flex-wrap:nowrap;gap:.3rem}.sekmeler button{font-size:.82rem;padding:.35rem .5rem;white-space:nowrap}.sekmeler .say{font-size:.78rem}}
 .sekme-bolum{margin-top:1rem}
 .eser-sekme{border-top:0;margin-top:.6rem;padding-top:0}
 .eser-sekme h2.sekme-ad{display:none}
