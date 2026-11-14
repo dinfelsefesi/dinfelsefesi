@@ -704,6 +704,19 @@ select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--acc
 .kt-tablo th,.kt-tablo td{text-align:left;padding:.35rem .6rem;border-bottom:1px solid var(--rule);white-space:nowrap}
 .kt-tablo th{font-weight:600;color:var(--ink-soft);font-size:.8rem}
 .kt-sec{font:inherit;background:none;border:0;padding:0;color:var(--accent);cursor:pointer;border-bottom:1px solid var(--gold-logo)}
+/* seçim kutuları (14 Kasım 2026): çerçevesiz, başında kare işaret; seçilen kare dolar */
+div.tur-secici.secim-kutu{gap:.25rem 1.4rem}
+div.tur-secici.secim-kutu button{display:inline-flex;align-items:center;gap:.45rem;background:none;border:0;border-radius:0;padding:.28rem 0;font-family:var(--sans);font-size:.88rem;color:var(--ink)}
+div.tur-secici.secim-kutu button::before{content:"";flex:0 0 .62rem;width:.62rem;height:.62rem;border:1px solid var(--ink-soft);border-radius:2px;background:transparent}
+div.tur-secici.secim-kutu button:hover{color:var(--accent)}
+div.tur-secici.secim-kutu button[aria-pressed="true"]{background:none;color:var(--ink);font-weight:600}
+div.tur-secici.secim-kutu button[aria-pressed="true"]::before{background:var(--accent);border-color:var(--accent)}
+div.tur-secici.secim-kutu button .say,div.tur-secici.secim-kutu button[aria-pressed="true"] .say{color:var(--ink-soft);opacity:1;font-weight:400}
+div.tur-secici.secim-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:0 1.4rem;width:100%}
+div.tur-secici.secim-izgara button{display:flex;width:100%;text-align:left;border-bottom:1px solid var(--rule)}
+div.tur-secici.secim-izgara button .say{margin-left:auto}
+div.tur-secici.secim-izgara button[hidden]{display:none}
+@media(max-width:640px){div.tur-secici.secim-kutu.tez-sec{gap:.2rem .9rem}div.tur-secici.secim-kutu.tez-sec button{font-size:.8rem;gap:.35rem}}
 .harita-alt{display:flex;flex-wrap:wrap;gap:.2rem 1.2rem;font-family:var(--sans);font-size:.86rem;margin:0 0 .9rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
 .harita-alt a{color:var(--ink-soft);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:.15rem}
 .harita-alt a:hover{color:var(--ink)}
@@ -2183,8 +2196,8 @@ def render_tezler() -> str:
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             '<label class="secim-etiket" for="tez-ara">Ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="tez-ara" class="eser-konu-sec" placeholder="Tez adı, danışman ya da üniversite" autocomplete="off"></div>'
-            f'<p class="secim-etiket secim-ayrac">Tür</p><div class="tur-secici tez-sec" data-grup="tur" role="group" aria-label="Tez türü">{turler}</div>'
-            f'<p class="secim-etiket tez-durum-etiket">Durum</p><div class="tur-secici tez-sec" data-grup="durum" role="group" aria-label="Tez durumu">{durumlar}</div>'
+            f'<p class="secim-etiket secim-ayrac">Tür</p><div class="tur-secici tez-sec secim-kutu" data-grup="tur" role="group" aria-label="Tez türü">{turler}</div>'
+            f'<p class="secim-etiket tez-durum-etiket">Durum</p><div class="tur-secici tez-sec secim-kutu" data-grup="durum" role="group" aria-label="Tez durumu">{durumlar}</div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="tez-say"></span></p>{siralama}</div>'
             f'<ul class="eser-liste tez-liste">{"".join(satirlar)}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan tez bulunamadı.</p>')
@@ -2273,7 +2286,7 @@ def render_eserler() -> str:
             '<label class="secim-etiket eser-ara-etiket" for="eser-ara">Başlık ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="eser-ara" class="eser-konu-sec" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></div>'
             f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
-            f'<div class="eser-arac"><div class="tur-secici eser-tur-sec" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
+            f'<div class="eser-arac"><div class="tur-secici eser-tur-sec secim-kutu secim-izgara" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
             f'<ul class="eser-liste">{temel}{turkce}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
@@ -4071,8 +4084,8 @@ def render_dergiler() -> str:
             f'Düzeltme ve dergi önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             f'<p class="secim-etiket">Ara ve süz</p>'
             f'<div class="d-arac"><label class="k-ara"><span>Ara</span><input type="search" id="dergi-ara" placeholder="Dergi, kurum ya da eski ad" autocomplete="off"></label>'
-            f'<div class="tur-secici d-dizin-sec" role="group" aria-label="Dizin">{dizinler}</div></div>'
-            f'<div class="d-arac"><div class="tur-secici d-gonderim-sec" role="group" aria-label="Gönderim">'
+            f'<div class="tur-secici d-dizin-sec secim-kutu" role="group" aria-label="Dizin">{dizinler}</div></div>'
+            f'<div class="d-arac"><div class="tur-secici d-gonderim-sec secim-kutu" role="group" aria-label="Gönderim">'
             f'<button type="button" data-gonderim="" aria-pressed="true">Bütün dergiler</button>'
             f'<button type="button" data-gonderim="acik" aria-pressed="false">Gönderime açık</button>'
             f'<button type="button" data-gonderim="kapali" aria-pressed="false">Gönderime kapalı</button></div>'
