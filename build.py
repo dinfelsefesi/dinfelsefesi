@@ -785,6 +785,7 @@ ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--r
 .rozet.ae-rozet{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent;letter-spacing:0}
 .ae{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:.02rem .4rem;border-radius:2px}
 .eser-bilgi{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
+.eser-diger-ad{font-size:.82rem;font-style:italic}
 footer.site{border-top:1px solid var(--gold-logo);box-shadow:inset 0 -4px 0 var(--accent);background:var(--paper);color:var(--ink-soft);font-style:italic;font-size:.82rem}
 footer.site .wrap{padding-block:1rem 1.3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.3rem 2rem}
 footer.site p{margin:0}
@@ -3361,12 +3362,51 @@ def tez_satiri(t: dict, gizli: bool = True) -> str:
             f'<span class="eser-bilgi">{e(tez_yil_etiketi(t))} · {e(yer)}</span></li>')
 
 
+def baglanti_anahtari(h: str) -> str:
+    """Bir eserin bağlantısını karşılaştırılabilir biçime getirir (DOI küçük harf, https, sonda eğik çizgi yok)."""
+    h = html.unescape(h or "").strip().lower()
+    h = re.sub(r"^https?://(www\.|dx\.)?", "", h)
+    return h.rstrip("/")
+
+
+def baglanti_esle(ogeler: list) -> list:
+    """Aynı bağlantıya (DOI ya da adres) giden kayıtlar tek eserdir: Türkçe ve İngilizce adları ayrı kayıt görünse de
+    birleştirilir. Din felsefesi grubundaki, sonra YÖK'ten gelen, sonra ilk gelen kayıt kalır; öbür adı eserin altında gösterilir."""
+    gruplar, sonuc = {}, []
+    for o in ogeler:
+        m = re.search(r'<a class="eser-ad[^"]*" href="([^"]+)"', o["html"])
+        k = baglanti_anahtari(m.group(1)) if m else ""
+        if not k or "akademik.yok.gov.tr" in k:
+            sonuc.append(o)
+            continue
+        if k not in gruplar:
+            gruplar[k] = o
+            sonuc.append(o)
+            continue
+        kalan = gruplar[k]
+        # kalacak kaydı seç: din felsefesi grubu önce, sonra kaynak sırası
+        oncelik = lambda x: (x["grup"] != "df", KAYNAK_SIRA.get(x.get("kaynak", "fis"), 5))
+        if oncelik(o) < oncelik(kalan):
+            o["diger_ad"] = kalan.get("diger_ad", []) + [kalan["ad"]]
+            sonuc[sonuc.index(kalan)] = o
+            gruplar[k] = o
+        else:
+            kalan.setdefault("diger_ad", []).append(o["ad"])
+    for o in sonuc:
+        ekler = [a for a in dict.fromkeys(o.get("diger_ad", [])) if baslik_anahtari(a) != baslik_anahtari(o["ad"])]
+        if ekler:
+            o["html"] += "".join(f'<span class="eser-bilgi eser-diger-ad">Öteki adı: {e(a)}</span>' for a in ekler)
+            o["ad_ek"] = " ".join(ekler)
+    return sonuc
+
+
 def yayin_paneli(ogeler, slug: str = "", tezler=None, kisi_ad: str = "") -> str:
     """Kişi sayfasındaki yayın listesi: sekmeler (din felsefesi / diğer / tümü), sıralama, numara ve tür etiketi.
     Liste kişinin YÖK Akademik kaydına dayanır: YÖK'tekiler önce gelir, YÖK'te olmayanlar geldikleri kaynakla işaretlenir."""
     tezler = tezler or []
     if not ogeler and not tezler:
         return ""
+    ogeler = baglanti_esle(ogeler)
     yok_var = yok_kumesi(slug) is not None if slug else False
     for o in ogeler:
         if yok_var and yokta_mi(slug, o["ad"], o["yil"], o["tur"], o.get("kunye", "")):
