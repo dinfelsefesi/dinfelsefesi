@@ -90,9 +90,18 @@ _ARA_KATLA = str.maketrans({**{c: "a" for c in "âäāàá"}, **{c: "e" for c in
                             **{c: "o" for c in "ôōò"}, **{c: "u" for c in "ûūù"}, **{c: None for c in "'`´‘’ʻʼʽʾʿ"}})
 
 
+_ARA_TR = str.maketrans({"ı": "i", "ö": "o", "ü": "u", "ş": "s", "ğ": "g", "ç": "c"})
+
+
 def ara_norm(s: str) -> str:
-    """Arama için: küçük harf, şapkalı/uzatmalı ünlüler düz harfe, kesme ve ayn/hemze işaretleri atılır."""
-    return tr_kucuk(s).translate(_ARA_KATLA)
+    """Arama için: küçük harf, şapkalı/uzatmalı ünlüler düz harfe, kesme ve ayn/hemze işaretleri atılır; Türkçe harfler
+    düz Latin harfine indirilir ve çift harfler teklenir, böylece Gazzâlî/Gazali, Teymiyye/Teymiye, İbn/İbni aynı aranır.
+    Sayfalardaki JS 'kucuk' işlevi aynı dönüşümü yapar."""
+    s = tr_kucuk(s).translate(_ARA_KATLA).translate(_ARA_TR)
+    s = re.sub(r"[-‐–]", " ", s)
+    s = re.sub(r"([a-z])\1+", r"\1", s)
+    s = re.sub(r"\bibn[iu]l?\b", "ibn", s)
+    return re.sub(r"\bibnul", "ibn ", s)
 
 
 def tr_date(iso: str) -> str:
@@ -1532,7 +1541,7 @@ KISI_JS = """<script>
   }
   var g=document.getElementById('kisi-ara');
   if(g){
-    var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
+    var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīìı]/g,'i').replace(/[ôōòö]/g,'o').replace(/[ûūùü]/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'').replace(/[-‐–]/g,' ').replace(/([a-z])\1+/g,'$1').replace(/\bibn[iu]l?\b/g,'ibn').replace(/\bibnul/g,'ibn ');};
     g.addEventListener('input',function(){
       var q=kucuk(g.value.trim()), n=0;
       document.querySelectorAll('table.kisiler tbody tr').forEach(function(r){var v=!q||r.dataset.ara.indexOf(q)>-1; r.hidden=!v; if(v)n++;});
@@ -1893,7 +1902,7 @@ TEZ_JS = """<script>
   var lis=[].slice.call(document.querySelectorAll('ul.tez-liste > li')), ul=document.querySelector('ul.tez-liste');
   var g=document.getElementById('tez-ara'), sb=document.querySelectorAll('.eser-sirala button');
   var f={tur:'',durum:''}, alan='yil', yon=-1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīìı]/g,'i').replace(/[ôōòö]/g,'o').replace(/[ûūùü]/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'').replace(/[-‐–]/g,' ').replace(/([a-z])\1+/g,'$1').replace(/\bibn[iu]l?\b/g,'ibn').replace(/\bibnul/g,'ibn ');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()), n=0, say={tur:{'':0},durum:{'':0}};
@@ -1984,7 +1993,7 @@ ESER_JS = """<script>
   var sb=document.querySelectorAll('.eser-sirala button');
   var g=document.getElementById('eser-ara');
   var konu='', tur='', alan='', yon=1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīìı]/g,'i').replace(/[ôōòö]/g,'o').replace(/[ûūùü]/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'').replace(/[-‐–]/g,' ').replace(/([a-z])\1+/g,'$1').replace(/\bibn[iu]l?\b/g,'ibn').replace(/\bibnul/g,'ibn ');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()), n=0, ts={'':0};
@@ -3685,7 +3694,7 @@ DERGI_JS = """<script>
   var db=document.querySelectorAll('.d-dizin-sec button'), gb=document.querySelectorAll('.d-gonderim-sec button');
   var sb=document.querySelectorAll('.eser-sirala button');
   var dizin=[], gonderim='', alan='df', yon=-1;
-  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīì]/g,'i').replace(/[ôōò]/g,'o').replace(/[ûūù]/g,'u').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'');};
+  var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīìı]/g,'i').replace(/[ôōòö]/g,'o').replace(/[ûūùü]/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'').replace(/[-‐–]/g,' ').replace(/([a-z])\1+/g,'$1').replace(/\bibn[iu]l?\b/g,'ibn').replace(/\bibnul/g,'ibn ');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
   function uygula(yaz){
     var q=kucuk(g.value.trim()).split(/\\s+/).filter(Boolean), a=ay.value, n=0;

@@ -234,7 +234,7 @@
 
   // Arama
   var ara = document.getElementById("ag-ara");
-  var kucuk = function (s) { return s.replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase().replace(/[âäāàá]/g, "a").replace(/[êēëè]/g, "e").replace(/[îïīì]/g, "i").replace(/[ôōò]/g, "o").replace(/[ûūù]/g, "u").replace(/['`´‘’ʻʼʽʾʿ]/g, ""); };
+  var kucuk = function (s) { return s.replace(/I/g, "ı").replace(/İ/g, "i").toLowerCase().replace(/[âäāàá]/g, "a").replace(/[êēëè]/g, "e").replace(/[îïīìı]/g, "i").replace(/[ôōòö]/g, "o").replace(/[ûūùü]/g, "u").replace(/ş/g, "s").replace(/ğ/g, "g").replace(/ç/g, "c").replace(/['`´‘’ʻʼʽʾʿ]/g, "").replace(/[-‐–]/g, " ").replace(/([a-z])\1+/g, "$1").replace(/\bibn[iu]l?\b/g, "ibn").replace(/\bibnul/g, "ibn "); };
   if (ara) {
     ara.addEventListener("input", function () {
       var q = kucuk(ara.value.trim());
