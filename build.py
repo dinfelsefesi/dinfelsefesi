@@ -698,7 +698,7 @@ select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:none;border-color:v
 .kt-dus-etiket{margin-top:1.4rem}
 .kt-not{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);margin:.2rem 0 .6rem}
 .kt-tablo-kap{overflow-x:auto}
-.kt-yontem p{font-family:var(--sans);font-size:.86rem;line-height:1.6;color:var(--ink-soft);max-width:var(--measure)}
+.kt-yontem p{font-family:var(--sans);font-size:.86rem;line-height:1.6;color:var(--ink-soft);max-width:none}
 .kt-yontem strong{color:var(--ink)}
 .kt-donemler{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.6rem;margin:.6rem 0 1rem}
 .kt-donem h3{font-size:1.05rem;margin:0 0 .3rem}
