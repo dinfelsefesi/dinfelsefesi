@@ -1873,7 +1873,7 @@ def render_tezler() -> str:
             f'<li data-tur="{e(t["tur"])}" data-durum="{durum}" data-yil="{e(t["yil"])}" data-ad="{e(t["ad"])}" '
             f'data-danisman="{e(t["danisman"][0])}" data-ara="{e(ara)}">'
             f'<div class="tez-ust"><p class="tez-ad">{e(t["ad"])}</p>{tez_rozetleri(t)}</div>'
-            f'<p class="tez-kunye">{e(t["yil"])} · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
+            f'<p class="tez-kunye">{e(tez_yil_etiketi(t))} · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
     def dugme(alan, deger, ad):
         return f'<button type="button" data-{alan}="{deger}" aria-pressed="{"true" if not deger else "false"}">{ad} <span class="say"></span></button>'
     turler = "".join([dugme("tur", "", "Tümü"), dugme("tur", "Yüksek Lisans", "Yüksek lisans"), dugme("tur", "Doktora", "Doktora")])
@@ -2924,12 +2924,18 @@ def kisi_tezleri(slug: str) -> list:
 _TEZ_ONBELLEK = None
 
 
+def tez_yil_etiketi(t: dict) -> str:
+    """YÖK, tamamlanan tezlerde bitiş yılını, devam eden tezlerde tezin alındığı (kaydedildiği) yılı verir; başlangıç yılı
+    tamamlanan tezler için yayımlanmaz. Etiket bu farkı açıkça yazar."""
+    return f'{"Başlangıç" if t["devam"] else "Bitiş"} {t["yil"]}'
+
+
 def tez_satiri(t: dict, gizli: bool = True) -> str:
     parcalar = t["yer"].split(" / ")
     yer = tez_tr_baslik(parcalar[0]) + (", " + tez_tr_baslik(parcalar[2]) if len(parcalar) > 2 else "")
     return (f'<li data-grup="tez" data-yil="{e(t["yil"])}" data-ad="{e(tr_kucuk(t["ad"]))}" data-tur="98" data-kaynak="9"{" hidden" if gizli else ""}>'
             f'<span class="yt yt-tez">Tez</span><span class="eser-ad">{e(t["ad"])}</span>{tez_rozetleri(t)}'
-            f'<span class="eser-bilgi">{e(t["yil"])} · {e(yer)}</span></li>')
+            f'<span class="eser-bilgi">{e(tez_yil_etiketi(t))} · {e(yer)}</span></li>')
 
 
 def yayin_paneli(ogeler, slug: str = "", tezler=None, kisi_ad: str = "") -> str:
