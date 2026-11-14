@@ -2095,7 +2095,8 @@ KB_JS = """<script>
 
 def render_sayilar() -> str:
     ogeler = eser_ogeleri()
-    tezler = json.loads(TEZ_DOSYA.read_text(encoding="utf-8")) if TEZ_DOSYA.exists() else []
+    # Yalnız tamamlanmış tezler sayılır (yıllık çizimdeki gibi); devam eden tezler hiçbir sayıya girmez
+    tezler = [t for t in (json.loads(TEZ_DOSYA.read_text(encoding="utf-8")) if TEZ_DOSYA.exists() else []) if not t["devam"]]
     son = int(bugun()[:4])
     yillar = list(range(2000, son + 1))
     yayin = Counter(int(o["yil"]) for o in ogeler if str(o.get("yil", "")).isdigit() and o.get("tur") != "kitap-tanitimi")
@@ -2134,19 +2135,17 @@ def render_sayilar() -> str:
     tur_ad = dict(ESER_TURLERI)
     yl = sum(1 for t in tezler if t["tur"] == "Yüksek Lisans")
     dr = len(tezler) - yl
-    devam = sum(1 for t in tezler if t["devam"])
-    ozet = (f'<div class="sy-ozet"><div><b>{len(ogeler)}</b><span>eser</span></div><div><b>{len(tezler)}</b><span>tez</span></div>'
-            f'<div><b>{dr}</b><span>doktora tezi</span></div><div><b>{yl}</b><span>yüksek lisans tezi</span></div>'
-            f'<div><b>{devam}</b><span>devam eden tez</span></div></div>')
+    ozet = (f'<div class="sy-ozet"><div><b>{len(ogeler)}</b><span>eser</span></div><div><b>{len(tezler)}</b><span>tamamlanmış tez</span></div>'
+            f'<div><b>{dr}</b><span>doktora tezi</span></div><div><b>{yl}</b><span>yüksek lisans tezi</span></div></div>')
     body = (harita_ust("sayilar", "Sayılarla alan")
-            + '<p class="aciklama-kisa">Sitede listelenen eserlerin ve tezlerin sayısal görünümü. Eserler yayım yılına, tamamlanan tezler bitiş yılına göre sayılmıştır; '
+            + '<p class="aciklama-kisa">Sitede listelenen eserlerin ve tamamlanmış tezlerin sayısal görünümü; devam eden tezler sayılmaz. Eserler yayım yılına, tezler bitiş yılına göre sayılmıştır; '
             'kitap tanıtımları yıllık sayıya katılmaz. İçinde bulunulan yılın verisi eksiktir.</p>'
             + ozet
             + '<h2>Yıllara göre çalışma sayısı</h2><p class="sy-lejant"><span class="sy-k sy-yayin"></span>Yayın <span class="sy-k sy-tez"></span>Tamamlanan tez</p>'
             + cizim
             + '<div class="sy-ikili"><div><h2>En çok yayın yapılan dergiler</h2><p class="kt-not">DergiPark\'taki din felsefesi makaleleri.</p>'
             + cubuklar(dergi.most_common(12))
-            + '</div><div><h2>En çok tez verilen üniversiteler</h2><p class="kt-not">Listedeki hocaların danışmanlığındaki tezler.</p>'
+            + '</div><div><h2>En çok tez verilen üniversiteler</h2><p class="kt-not">Listedeki hocaların danışmanlığında tamamlanmış tezler.</p>'
             + cubuklar(univ.most_common(12))
             + '</div></div><h2>Eser türleri</h2>'
             + cubuklar([(tur_ad.get(k, k), n) for k, n in tur_say.most_common() if k]))
