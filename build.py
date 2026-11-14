@@ -469,6 +469,7 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .tur-secici button{font-family:var(--serif);font-size:.95rem;padding:.3rem .9rem;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer;border-radius:999px}
 .tur-secici button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .tur-secici button[aria-pressed="true"] .say{color:inherit;opacity:.75}
+@media(max-width:640px){.tez-sec{flex-wrap:nowrap;gap:.25rem}.tez-sec button{font-size:.82rem;padding:.28rem .55rem;white-space:nowrap;flex:0 1 auto}}
 .baslik-gezinti ul{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
 .baslik-gezinti li{font-size:.92rem;padding:.12rem .65rem;border:1px solid var(--rule);background:var(--card);border-radius:999px}
 .baslik-gezinti li.dolu{border-color:var(--accent);background:var(--accent-soft)}
