@@ -1868,7 +1868,7 @@ KAVRAM_JS = """<script>
 
 
 def render_tezler() -> str:
-    tezler = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
+    tezler = [{**t, "ad": baslik_standart(t["ad"])} for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))]
     tezler.sort(key=lambda t: (t["yil"], t["ad"]), reverse=True)
     satirlar = []
     for t in tezler:
@@ -2067,6 +2067,101 @@ KUCUK_KELIME = {"ve", "ile", "veya", "ya", "da", "de", "ki", "mi", "mı", "mu", 
                 "in", "on", "at", "to", "for", "from", "by", "with", "as", "der", "die", "das"}
 
 
+_SOZLUK = None
+
+
+def baslik_sozlugu() -> set:
+    """Karışık harfli (büyük-küçük harfi düzgün) kaynak başlıklardaki kelimeler; büyük harfli kayıtları çözerken
+    yabancı bir kelimenin noktalı mı noktasız mı yazılacağına bakmak için."""
+    global _SOZLUK
+    if _SOZLUK is None:
+        _SOZLUK = set()
+        metinler = []
+        if TEZ_DOSYA.exists():
+            metinler += [t["ad"] for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))]
+        for jl in (DP_DIZIN / "din_felsefesi.jsonl", DP_DIZIN / "akademisyen_makaleleri.jsonl"):
+            if jl.exists():
+                for l in jl.read_text(encoding="utf-8").splitlines():
+                    try:
+                        metinler += list((json.loads(l).get("baslik") or {}).values())
+                    except Exception:
+                        pass
+        for m in metinler:
+            if isinstance(m, str) and not m.isupper():
+                _SOZLUK.update(tr_kucuk(w) for w in re.findall(r"\w+", m) if not w.isupper())
+    return _SOZLUK
+
+
+def yabanci_mi(k: str) -> bool:
+    """Noktalı i ile yazılmış biçimi verilen kelime yabancı mı: w/q/x içerir, i bir ünlüye bitişiktir (William, Pianiste)
+    ya da 'ic' ile biter (Eric). Türkçe kelimelerde bu durumlar neredeyse görülmez."""
+    return bool(re.search(r"[wqx]|i[aeiouöü]|[aeouöü]i|ic$", k))
+
+
+ARAP_TAKI = {"el", "er", "es", "en", "et", "ed", "ez", "eş", "ed", "al", "an", "ar", "as", "at", "ad", "az", "aş", "ul", "ül", "il", "li", "ibn"}
+_BASLIK_ONBELLEK: dict = {}
+
+
+def baslik_standart(t: str) -> str:
+    """Sitenin başlık standardı (14 Kasım 2026): bütün eser ve tez adları başlık düzeninde yazılır, yani her kelimenin ilk
+    harfi büyüktür; bağlaçlar ve İngilizce kısa edatlar (KUCUK_KELIME) baştaki ya da iki noktadan sonraki kelime değilse
+    küçük kalır. Tamamı büyük harfle gelen adlar önce harf_duzelt ile küçültülür. Kelimenin içindeki büyük harflere
+    (kısaltmalar, McTaggart gibi adlar) dokunulmaz; kesmeden sonraki ek küçük kalır (Gazâlî'nin)."""
+    if not t:
+        return t
+    if t in _BASLIK_ONBELLEK:
+        return _BASLIK_ONBELLEK[t]
+    t0 = unicodedata.normalize("NFC", t).strip()
+    t0 = re.sub(r"\s+", " ", t0)
+    t0 = re.sub(r"(?<=\w)[`´](?=\w)", "'", t0)  # Gazali`de -> Gazali'de
+    turkce = bool(re.search(r"[çğıöşüÇĞİÖŞÜâîûÂÎÛ]", t0))
+    harfler = [c for c in t0 if c.isalpha()]
+    if harfler and sum(c.isupper() for c in harfler) / len(harfler) >= 0.85:
+        t0 = harf_duzelt(t0.replace("i", "İ").upper() if turkce else t0.upper(), "tr-TR" if turkce else "en-US")
+        if turkce:  # Türkçe büyük harfli kayıtta yabancı adlar (ERIC, WILLIAM) noktasız ı'ya dönmesin
+            sozluk = baslik_sozlugu()
+            def _i(m_):
+                w_ = m_.group(0)
+                k_ = w_.replace("ı", "i").replace("I", "İ")
+                kl, wl = tr_kucuk(k_), tr_kucuk(w_)
+                if yabanci_mi(kl) or (kl in sozluk and wl not in sozluk):
+                    return k_
+                return w_
+            t0 = re.sub(r"\w*[ıI]\w*", _i, t0)
+    t0 = re.sub(r"\w*ı\w*", lambda m_: m_.group(0).replace("ı", "i") if re.search(r"[wqx]", m_.group(0).lower()) else m_.group(0), t0)
+    buyuk1 = (lambda s: ("İ" if s[0] == "i" else s[0].upper()) + s[1:]) if turkce else (lambda s: s[0].upper() + s[1:])
+    kucuk1 = (lambda s: s.replace("I", "ı").replace("İ", "i").lower()) if turkce else (lambda s: s.lower())
+    out, ilk = [], True
+    for w in t0.split(" "):
+        m = re.match(r"^([^\w]*)(.*?)([^\w]*)$", w)
+        on, govde, son = m.groups()
+        if not govde:
+            out.append(w)
+            ilk = ilk or w.endswith((":", "?", ".", "!", "–", "-"))
+            continue
+        kok = re.split(r"(['’])", govde, maxsplit=1)[0]
+        if not ilk and kucuk1(kok) in KUCUK_KELIME and govde == kok:
+            govde = kucuk1(govde)
+        else:
+            parcalar = re.split(r"([-/])", govde)
+            for j in range(0, len(parcalar), 2):
+                p_ = parcalar[j]
+                if not p_ or not p_[0].isalpha():
+                    continue
+                if j and parcalar[j - 1] == "-" and len(p_) == 1:  # izafet: Vahdet-i, İhvân-ı
+                    continue
+                if j + 2 < len(parcalar) and parcalar[j + 1] == "-" and kucuk1(p_) in ARAP_TAKI and not (ilk and j == 0):
+                    parcalar[j] = kucuk1(p_)  # el-, er-, es- takıları
+                    continue
+                parcalar[j] = buyuk1(p_)
+            govde = "".join(parcalar)
+        out.append(on + govde + son)
+        ilk = son.endswith((":", "?", ".", "!")) or w in ("–", "-", ":")
+    sonuc = " ".join(out)
+    _BASLIK_ONBELLEK[t] = sonuc
+    return sonuc
+
+
 def harf_duzelt(t: str, dil: str) -> str:
     """Tamamı büyük harfle kaydedilmiş başlıkları başlık düzenine çevirir. Diğer başlıklara dokunmaz."""
     t = unicodedata.normalize("NFC", (t or "").replace("İ", "İ")).strip()
@@ -2237,7 +2332,7 @@ def dp_kaydi(r, x, duzeltme, dps) -> dict:
         soy_, _, ad_ = y.partition(",")
         yazarlar.append(yazar_adi(f"{ad_.strip()} {soy_.strip()}".strip() if ad_ else y.strip()))
     return {
-        "id": r["id"], "baslik": baslik, "yazarlar": yazarlar, "dergi": dergi.strip(), "cilt_sayi": cilt_sayi,
+        "id": r["id"], "baslik": baslik_standart(baslik), "yazarlar": yazarlar, "dergi": dergi.strip(), "cilt_sayi": cilt_sayi,
         # OAI kaydındaki tarih çoğunlukla gönderilme tarihidir; makale sayfasından okunan yayım tarihi önce gelir
         "yil": (yayim_tarihi(r["id"]) or (r.get("tarih") or [""])[0] or "")[:4],
         "tarih": yayim_tarihi(r["id"]) or (r.get("tarih") or [""])[0] or "", "yayim": bool(yayim_tarihi(r["id"])),
@@ -2282,7 +2377,7 @@ def orcid_eserleri() -> list:
             baslik = harf_duzelt(baslik, "tr-TR" if re.search(r"[ÇĞİÖŞÜÂÎÛ]", baslik) else "en-US")
         tanitim = x["tur"] in ("kitap-tanitimi", "ceviri")
         out.append({
-            "id": "orcid-" + slugify(doi), "baslik": baslik, "yazarlar": yazarlar, "dergi": x["dergi"], "cilt_sayi": "",
+            "id": "orcid-" + slugify(doi), "baslik": baslik_standart(baslik), "yazarlar": yazarlar, "dergi": x["dergi"], "cilt_sayi": "",
             "yil": x["yil"], "tarih": x["yil"], "baglanti": "https://doi.org/" + doi, "doi": True,
             "konular": [] if tanitim else list(x["basliklar"]), "ilgili": list(x["ilgili"]), "tur": x["tur"],
             "kelimeler": x["kelimeler"], "kaynak": "orcid",
@@ -2428,7 +2523,7 @@ def avesis_veri() -> dict:
                 bul, _ = kelime_basliklari(kelimeler, kurallar, genel)
                 if bul:
                     konular = sorted(bul)
-            baslik = e_.get("baslik") or buyuk_duzelt(baslik_temizle(y["baslik"], ad_))
+            baslik = e_.get("baslik") or baslik_standart(baslik_temizle(y["baslik"], ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
                            yok_kunye(y["kaynak"], y["yil"], y["bolum"]) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
@@ -2866,7 +2961,7 @@ def diger_yayin_ogeleri(v) -> list:
                                f'<span class="eser-bilgi">{dergi}, {e(m["yil"])}</span>'})
     # ORCID kayıtlarında künyesi eksiksiz olanlar önce gelsin (aynı eserin bozuk yazılmış kopyaları sonra ayıklanır)
     for w in sorted(v["orcid_eser"], key=lambda w: (bool(w["doi"]), bool(w["yil"]), w["yil"] or "0"), reverse=True):
-        baslik = buyuk_duzelt(baslik_temizle(w["baslik"], sahip))
+        baslik = baslik_standart(baslik_temizle(w["baslik"], sahip))
         if haric_mi(sahip, baslik):
             continue
         if (w["doi"] and w["doi"].lower() in doiler) or baslik_esit(baslik, w["yil"], kayitlar):
@@ -2925,7 +3020,7 @@ def kisi_tezleri(slug: str) -> list:
         return []
     global _TEZ_ONBELLEK
     if _TEZ_ONBELLEK is None:
-        _TEZ_ONBELLEK = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
+        _TEZ_ONBELLEK = [{**t, "ad": baslik_standart(t["ad"])} for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))]
     return [t for t in _TEZ_ONBELLEK if any(slugify(h) == slug for h in t["danisman"])]
 
 
