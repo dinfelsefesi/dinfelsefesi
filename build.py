@@ -669,13 +669,13 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .yayin-liste .tez-rozetler{margin-left:.5rem;padding-top:0;vertical-align:.1em}
 .tez-durum-etiket{margin-top:.7rem}
 select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--accent);outline-offset:1px}
-.kt-cizim-kap{border:1px solid var(--rule);background:var(--card);border-radius:8px;padding:.8rem .9rem .6rem;margin:1.2rem 0 1.4rem}
+.kt-cizim-kap{max-width:52rem;border:1px solid var(--rule);background:var(--card);border-radius:8px;padding:.8rem .9rem .6rem;margin:1.2rem 0 1.4rem}
 .kt-secili{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .7rem;min-height:1.9rem;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft)}
 .kt-cip{font-family:var(--sans);font-size:.84rem;background:none;border:1px solid;border-radius:6px;padding:.15rem .55rem;cursor:pointer}
 .kt-bag{font-size:.78rem;color:var(--ink-soft)}
 .kt-cizim{width:100%;height:auto;display:block;margin:.4rem 0 .2rem;font-family:var(--sans)}
 .kt-izgara{stroke:var(--rule);stroke-width:1}
-.kt-eksen{fill:var(--ink-soft);font-size:12px}
+.kt-eksen{fill:var(--ink-soft)}
 .kt-silik{fill:var(--ink);opacity:.04}
 .kt-imlec{stroke:var(--ink-soft);stroke-width:1;stroke-dasharray:3 3}
 .kt-ipucu{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);min-height:2.4em;margin:.2rem 0 .5rem}
@@ -1800,6 +1800,7 @@ KAVRAM_JS = """<script>
   function ns(t,a){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);return e;}
   function ciz(){
     while(svg.firstChild)svg.removeChild(svg.firstChild);
+    var olc=W/Math.max(280,svg.getBoundingClientRect().width||W); svg.style.fontSize=Math.min(20,Math.max(10,12.5*olc))+'px';
     var ss=sec.map(function(a){return seri(by[a]);}), mx=0;
     ss.forEach(function(s){s.forEach(function(p){if(p.v>mx)mx=p.v;});});
     var ust=mx<=2?2:mx<=5?5:mx<=10?10:mx<=15?15:mx<=20?20:Math.ceil(mx/10)*10, adim=ust<=5?1:ust<=10?2:ust<=20?5:10;
@@ -1839,6 +1840,7 @@ KAVRAM_JS = """<script>
   sec=(p.get('k')||'Kötülük problemi|Dinî tecrübe|Yapay zekâ ve teknoloji').split('|').filter(function(a){return by[a];}).slice(0,4);
   if(p.get('kaynak')==='baslik'){kay='b';kb.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.k==='b'?'true':'false');});}
   ciz();
+  var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(ciz,150);});
 })();
 </script>"""
 
