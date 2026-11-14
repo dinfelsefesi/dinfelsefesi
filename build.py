@@ -678,7 +678,15 @@ select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--acc
 .kt-imlec{stroke:var(--ink-soft);stroke-width:1;stroke-dasharray:3 3}
 .kt-ipucu{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);min-height:2.4em;margin:.2rem 0 .5rem}
 .kt-ipucu span{white-space:nowrap}
-.kt-liste button{font-family:var(--sans);font-size:.82rem;padding:.25rem .7rem;border-radius:6px}
+.kt-liste{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:0 1.4rem;margin:0 0 1.2rem}
+.kt-liste button{display:flex;align-items:baseline;gap:.5rem;width:100%;text-align:left;font-family:var(--sans);font-size:.88rem;padding:.28rem 0;border:0;border-bottom:1px solid var(--rule);border-radius:0;background:none;color:var(--ink)}
+.kt-liste button::before{content:"";flex:0 0 .6rem;height:.6rem;border-radius:2px;border:1px solid var(--rule);background:var(--renk,transparent);align-self:center}
+.kt-liste button .say{margin-left:auto;font-size:.8rem}
+.kt-liste button:hover{color:var(--accent)}
+.kt-liste button[aria-pressed="true"]{background:none;color:var(--ink);font-weight:600}
+.kt-liste button[aria-pressed="true"]::before{border-color:var(--renk)}
+.kt-liste button[aria-pressed="true"] .say{opacity:1;color:var(--ink-soft)}
+.kt-dus-etiket{margin-top:1.4rem}
 .kt-not{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);margin:.2rem 0 .6rem}
 .kt-tablo-kap{overflow-x:auto}
 .kt-donemler{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.6rem;margin:.6rem 0 1rem}
@@ -1634,6 +1642,7 @@ def tez_rozetleri(t: dict) -> str:
 
 # ---------------------------------------------------------------- Kavram tarihi (14 Kasım 2026)
 KAVRAM_DOSYA = CONTENT / "kavramlar.yaml"
+DUSUNUR_ALT_SINIR = 5  # bir düşünür, adı 2000 sonrasında en az bu kadar çalışmada geçiyorsa listelenir
 _KV_KATLA = str.maketrans({"ı": "i", "â": "a", "î": "i", "û": "u", "Â": "a", "Î": "i", "Û": "u", "'": "", "’": "", "‘": "", "`": "", "´": "",
                            "ʻ": "", "ʼ": "", "ʾ": "", "ʿ": ""})
 
@@ -1697,6 +1706,8 @@ def kavram_verisi() -> dict:
                     b[i] += 1
                 if d.search(tam):  # başlık ya da anahtar kelime: çalışma başına en çok bir
                     t[i] += 1
+            if grup == "dusunur" and sum(t) < DUSUNUR_ALT_SINIR:
+                continue
             kavramlar.append({"ad": k["ad"], "grup": grup, "ara": k.get("ara") or k["ad"], "b": b, "t": t})
     return {"yillar": yillar, "n": n, "n_once": n_once, "toplam": len(kayit), "kavramlar": kavramlar,
             "anahtarli": sum(1 for _, bas, tam in kayit if bas != tam)}
@@ -1754,9 +1765,9 @@ def render_kavram_tarihi() -> str:
         '<div class="kt-cizim-kap"><div class="kt-secili" aria-live="polite"></div>'
         '<svg class="kt-cizim" viewBox="0 0 720 320" role="img" aria-label="Seçili kavramların yıllara göre oranı"></svg>'
         '<p class="kt-ipucu"></p></div>'
-        '<p class="secim-etiket secim-ayrac">Kavramlar</p><p class="kt-not">En çok dört kavram birlikte çizilir. Sayılar, 2000 sonrası toplam çalışma sayısıdır.</p>'
+        '<p class="secim-etiket secim-ayrac">Kavramlar</p><p class="kt-not">Seçilen her kavram çizime eklenir; yeniden basınca çıkar. Sayılar, 2000 sonrası toplam çalışma sayısıdır.</p>'
         f'<div class="tur-secici kt-liste" role="group" aria-label="Kavramlar">{dugmeler("kavram")}</div>'
-        f'<p class="secim-etiket">Düşünürler</p><div class="tur-secici kt-liste" role="group" aria-label="Düşünürler">{dugmeler("dusunur")}</div>'
+        f'<p class="secim-etiket kt-dus-etiket">Düşünürler</p><p class="kt-not">Adı en az {DUSUNUR_ALT_SINIR} çalışmanın başlığında ya da anahtar kelimelerinde geçen düşünürler.</p><div class="tur-secici kt-liste" role="group" aria-label="Düşünürler">{dugmeler("dusunur")}</div>'
         '<h2 id="genel-gorunum">Genel görünüm</h2>'
         f'<p>Son beş yılda ({dt["son"]}, {dt["ns"]} çalışma) en çok çalışılan kavramlar ile bir önceki beş yıla ({dt["once"]}, {dt["no"]} çalışma) göre '
         'payı en çok artan ve azalan kavramlar. Yükselen ve gerileyen kavramlar, iki dönemdeki oranın farkına göre sıralanmıştır; '
@@ -1789,7 +1800,7 @@ def render_kavram_tarihi() -> str:
 
 KAVRAM_JS = """<script>
 (function(){
-  var R=['#1f3f6e','#a84a14','#2f6b4f','#7a3f86'], sec=[], kay='t', svg=document.querySelector('.kt-cizim'), ip=document.querySelector('.kt-ipucu');
+  var R=['#1f3f6e','#a84a14','#2f6b4f','#7a3f86','#b07d12','#2b7c8c','#9b2c4a','#5a6b2a','#6b5242','#4d5bb0'], sec=[], kay='t', svg=document.querySelector('.kt-cizim'), ip=document.querySelector('.kt-ipucu');
   var W=720,H=320,L=44,Rr=12,T=14,B=34, Y=KT.y, N=KT.n, by={};
   KT.k.forEach(function(k){by[k.a]=k;});
   function seri(k){return Y.map(function(_,i){var c=0,n=0;for(var j=i-1;j<=i+1;j++){if(j<0||j>=Y.length)continue;c+=k[kay][j];n+=N[j];}return {v:n?100*c/n:0,c:k[kay][i],n:N[i]};});}
@@ -1807,32 +1818,32 @@ KAVRAM_JS = """<script>
     Y.forEach(function(yl,i){if(N[i]<60)svg.appendChild(ns('rect',{x:x(i)-(W-L-Rr)/(Y.length-1)/2,y:T,width:(W-L-Rr)/(Y.length-1),height:H-T-B,'class':'kt-silik'}));
       if(yl%5===0||i===Y.length-1){var t=ns('text',{x:x(i),y:H-B+18,'text-anchor':'middle','class':'kt-eksen'});t.textContent=yl;svg.appendChild(t);}});
     ss.forEach(function(s,si){var d='';s.forEach(function(p,i){d+=(i?'L':'M')+x(i).toFixed(1)+' '+y(p.v).toFixed(1);});
-      svg.appendChild(ns('path',{d:d,fill:'none',stroke:R[si],'stroke-width':2.2,'stroke-linejoin':'round'}));});
+      svg.appendChild(ns('path',{d:d,fill:'none',stroke:R[si%R.length],'stroke-width':2.2,'stroke-linejoin':'round'}));});
     var cizgi=ns('line',{y1:T,y2:H-B,'class':'kt-imlec',visibility:'hidden'});svg.appendChild(cizgi);
     var alan=ns('rect',{x:L,y:T,width:W-L-Rr,height:H-T-B,fill:'transparent'});svg.appendChild(alan);
     function goster(ev){var r=svg.getBoundingClientRect(),px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left,sx=px*W/r.width;
       var i=Math.max(0,Math.min(Y.length-1,Math.round((sx-L)/(W-L-Rr)*(Y.length-1))));
       cizgi.setAttribute('x1',x(i));cizgi.setAttribute('x2',x(i));cizgi.setAttribute('visibility','visible');
       ip.innerHTML='<b>'+Y[i]+'</b> · '+N[i]+' çalışma'+(sec.length?' · ':'')+sec.map(function(a,si){var p=ss[si][i];
-        return '<span style="color:'+R[si]+'">'+a+': '+p.c+' çalışma, %'+p.v.toFixed(1).replace('.',',')+'</span>';}).join(' · ');}
+        return '<span style="color:'+R[si%R.length]+'">'+a+': '+p.c+' çalışma, %'+p.v.toFixed(1).replace('.',',')+'</span>';}).join(' · ');}
     alan.addEventListener('mousemove',goster);alan.addEventListener('touchstart',goster,{passive:true});alan.addEventListener('touchmove',goster,{passive:true});
     alan.addEventListener('mouseleave',function(){cizgi.setAttribute('visibility','hidden');ipsifir();});
     var sl=document.querySelector('.kt-secili');sl.innerHTML='';
-    sec.forEach(function(a,si){var b=document.createElement('button');b.type='button';b.className='kt-cip';b.style.borderColor=R[si];b.style.color=R[si];
+    sec.forEach(function(a,si){var b=document.createElement('button');b.type='button';b.className='kt-cip';b.style.borderColor=R[si%R.length];b.style.color=R[si%R.length];
       b.innerHTML='<span>'+a+'</span> <span aria-hidden="true">×</span>';b.title='Çizimden çıkar';b.onclick=function(){degis(a);};sl.appendChild(b);
       });
     if(!sec.length)sl.textContent='Aşağıdan bir kavram seçin.';
-    document.querySelectorAll('.kt-liste button').forEach(function(b){b.setAttribute('aria-pressed',sec.indexOf(b.dataset.ad)>-1?'true':'false');});
+    document.querySelectorAll('.kt-liste button').forEach(function(b){var i=sec.indexOf(b.dataset.ad);b.setAttribute('aria-pressed',i>-1?'true':'false');b.style.setProperty('--renk',i>-1?R[i%R.length]:'transparent');});
     ipsifir(); yazUrl();
   }
   function ipsifir(){ip.textContent='Değerleri görmek için çizimin üzerinde gezinin.';}
-  function degis(a){var i=sec.indexOf(a);if(i>-1)sec.splice(i,1);else{if(sec.length>=4)sec.shift();sec.push(a);}ciz();}
+  function degis(a){var i=sec.indexOf(a);if(i>-1)sec.splice(i,1);else sec.push(a);ciz();}
   function yazUrl(){var p=new URLSearchParams();if(sec.length)p.set('k',sec.join('|'));
     try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}}
   document.querySelectorAll('.kt-liste button').forEach(function(b){b.addEventListener('click',function(){degis(b.dataset.ad);});});
   document.querySelectorAll('.kt-sec').forEach(function(b){b.addEventListener('click',function(){sec=[b.dataset.ad];ciz();window.scrollTo({top:svg.getBoundingClientRect().top+scrollY-120,behavior:'smooth'});});});
   var p=new URLSearchParams(location.search);
-  sec=(p.get('k')||'Kötülük problemi|Dinî tecrübe|Yapay zekâ ve teknoloji').split('|').filter(function(a){return by[a];}).slice(0,4);
+  sec=(p.get('k')||'Kötülük problemi|Dinî tecrübe|Yapay zekâ ve teknoloji').split('|').filter(function(a){return by[a];});
   ciz();
   var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(ciz,150);});
 })();

@@ -96,9 +96,9 @@ kavramlar:
   - ad: Özgür irade
     ara: özgürlük
     kaliplar: [özgür irade, irade özgürlüğü, free will, özgürlük, hürriyet, freedom, determinizm, determinism, kader, cebir$, cebr, kaza ve kader]
-  - ad: Adalet
+  - ad: İlahi adalet
     ara: adalet
-    kaliplar: [adalet, justice, ilahi adalet]
+    kaliplar: [ilahi adalet, divine justice, tanrının adalet, allahın adalet, adalet sıfat, adalet ve sevgi sıfat, adl i ilahi]
   - ad: Ölüm ve ölümsüzlük
     ara: ölüm
     kaliplar: [ölüm, ölümsüz, immortal, afterlife, ahiret, ahret, death$, eskatoloji, eschatolog, diriliş, resurrection, öte dünya]
@@ -146,68 +146,251 @@ kavramlar:
     kaliplar: [analitik, analytic]
 
 dusunurler:
-  - ad: Gazâlî
-    kaliplar: [gazali, gazzali, ghazal, ghazzal]
-  - ad: İbn Sînâ
-    ara: İbn Sina
+  # Aday düşünürler. Sayfada yalnızca adı 2000 sonrasında en az beş çalışmada geçenler gösterilir (DUSUNUR_ALT_SINIR);
+  # böylece liste elle seçilmiş değil, literatürdeki ağırlığa göre belirlenmiş olur. Yeni aday eklemek için buraya yazmak yeter.
+  - ad: "Kindî"
+    kaliplar: ["kindi$", kindinin, kindide, kindiye, kindiyi]
+  - ad: "Fârâbî"
+    kaliplar: [farabi]
+  - ad: "İbn Sînâ"
     kaliplar: [ibn sina, ibni sina, avicenna]
-  - ad: İbn Rüşd
+  - ad: "Gazâlî"
+    kaliplar: [gazali, gazzali, ghazal, ghazzal]
+  - ad: "İbn Rüşd"
     kaliplar: [ibn rüşd, ibni rüşd, averroes]
-  - ad: Fârâbî
-    kaliplar: [farabi, alfarabi]
-  - ad: Kindî
-    kaliplar: [kindi$]
-  - ad: Fahreddin er-Râzî
-    ara: Râzî
-    kaliplar: [fahreddin razi, fahreddin er razi, fahr al din, razi$]
-  - ad: İbnü'l-Arabî
-    ara: Arabi
-    kaliplar: [ibn arabi, ibnül arabi, ibnu l arabi, ibn al arabi, ibn el arabi]
-  - ad: Mevlânâ
-    kaliplar: [mevlana, rumi$]
-  - ad: Muhammed İkbal
-    ara: İkbal
+  - ad: "İbn Tufeyl"
+    kaliplar: [ibn tufeyl]
+  - ad: "İbn Bâcce"
+    kaliplar: [ibn bacce]
+  - ad: "Sühreverdî"
+    kaliplar: [sühreverdi, suhrawardi]
+  - ad: "Fahreddin er-Râzî"
+    kaliplar: [fahreddin razi, fahreddin er razi, fahr al din, fahruddin, "razi$", razinin, razide]
+  - ad: "İbnü'l-Arabî"
+    kaliplar: [ibn arabi, ibnül arabi, ibnu l arabi, ibn al arabi, ibn el arabi, ibni arabi]
+  - ad: "Sadreddin Konevî"
+    kaliplar: [konevi]
+  - ad: "Mevlânâ"
+    kaliplar: [mevlana, "rumi$", ruminin]
+  - ad: "Yunus Emre"
+    kaliplar: [yunus emre]
+  - ad: "Mollâ Sadrâ"
+    kaliplar: [molla sadra, mulla sadra]
+  - ad: "Molla Câmî"
+    kaliplar: [molla cami, cami nin, abdurrahman cami]
+  - ad: "Nasîrüddin Tûsî"
+    kaliplar: ["tusi$", tusinin, nasirüddin]
+  - ad: "İbn Teymiyye"
+    kaliplar: [ibn teymiyye, ibni teymiyye, ibn taymiyya]
+  - ad: "İbn Haldun"
+    kaliplar: [ibn haldun, ibn khaldun]
+  - ad: "Mâtürîdî"
+    kaliplar: [maturidi]
+  - ad: "Eş'arî"
+    kaliplar: [eşari, eşarilik, ashari]
+  - ad: "Kadı Abdülcebbâr"
+    kaliplar: [abdülcebbar]
+  - ad: "Ebü'l-Berekât el-Bağdâdî"
+    kaliplar: [ebül berekat, ebu l berekat]
+  - ad: "Şah Veliyyullah"
+    kaliplar: [veliyyullah]
+  - ad: "Muhammed İkbal"
     kaliplar: [ikbal, iqbal]
-  - ad: Said Nursî
-    ara: Nursi
-    kaliplar: [said nursi, nursi$, risale i nur]
-  - ad: Augustinus
+  - ad: "Said Nursî"
+    kaliplar: [said nursi, "nursi$", nursinin, risale i nur]
+  - ad: "Fazlur Rahman"
+    kaliplar: [fazlur rahman, fazlurrahman]
+  - ad: "Seyyid Hüseyin Nasr"
+    kaliplar: [hüseyin nasr, hossein nasr, seyyid hüseyin nasr]
+  - ad: "Muhammed Abduh"
+    kaliplar: [abduh]
+  - ad: "Musa Carullah Bigiyef"
+    kaliplar: [carullah, bigiyef]
+  - ad: "İsmail Fennî Ertuğrul"
+    kaliplar: [ismail fenni, fenni ertuğrul]
+  - ad: "İzmirli İsmail Hakkı"
+    kaliplar: [izmirli]
+  - ad: "Ahmet Hamdi Akseki"
+    kaliplar: [akseki]
+  - ad: "Filibeli Ahmed Hilmi"
+    kaliplar: [filibeli, ahmed hilmi, ahmet hilmi]
+  - ad: "Elmalılı Hamdi Yazır"
+    kaliplar: [elmalılı]
+  - ad: "Mustafa Sabri Efendi"
+    kaliplar: [mustafa sabri]
+  - ad: "Nurettin Topçu"
+    kaliplar: [topçu]
+  - ad: "Hilmi Ziya Ülken"
+    kaliplar: [ülken]
+  - ad: "Necip Fazıl Kısakürek"
+    kaliplar: [necip fazıl, kısakürek]
+  - ad: "Sezai Karakoç"
+    kaliplar: [sezai karakoç]
+  - ad: "Ali Şeriati"
+    kaliplar: [şeriati, shariati]
+  - ad: "Aliya İzzetbegoviç"
+    kaliplar: [izzetbegoviç, izetbegoviç]
+  - ad: "Murtaza Mutahharî"
+    kaliplar: [mutahhari]
+  - ad: "Taha Abdurrahman"
+    kaliplar: [taha abdurrahman]
+  - ad: "Platon"
+    kaliplar: [platon, "plato$"]
+  - ad: "Aristoteles"
+    kaliplar: [aristoteles, aristotle]
+  - ad: "Plotinus"
+    kaliplar: [plotinus, plotinos]
+  - ad: "Augustinus"
     kaliplar: [augustinus, augustine, agustinus]
-  - ad: Thomas Aquinas
-    ara: Aquinas
+  - ad: "Anselmus"
+    kaliplar: [anselmus, anselm]
+  - ad: "Thomas Aquinas"
     kaliplar: [aquinas, akinas, akinalı]
-  - ad: Descartes
+  - ad: "Ockham"
+    kaliplar: [ockham]
+  - ad: "Descartes"
     kaliplar: [descartes, dekart]
-  - ad: Spinoza
+  - ad: "Pascal"
+    kaliplar: [blaise pascal, "pascal$", pascalın, pascalda, pascalcı]
+  - ad: "Spinoza"
     kaliplar: [spinoza]
-  - ad: Leibniz
+  - ad: "Leibniz"
     kaliplar: [leibniz]
-  - ad: Hume
-    kaliplar: [hume$, humeun, humeda, humeçu]
-  - ad: Kant
-    kaliplar: [kant$, kantın, kantta, kantçı, kantian]
-  - ad: Hegel
+  - ad: "Malebranche"
+    kaliplar: [malebranche]
+  - ad: "Locke"
+    kaliplar: [john locke, "locke$", lockeun, lockecu]
+  - ad: "Berkeley"
+    kaliplar: [berkeley]
+  - ad: "Hume"
+    kaliplar: ["hume$", humeun, humeda, humeçu, david hume]
+  - ad: "Rousseau"
+    kaliplar: [rousseau]
+  - ad: "Kant"
+    kaliplar: ["kant$", kantın, kantta, kantçı, kantian]
+  - ad: "Hegel"
     kaliplar: [hegel]
-  - ad: Kierkegaard
+  - ad: "Schleiermacher"
+    kaliplar: [schleiermacher]
+  - ad: "Schopenhauer"
+    kaliplar: [schopenhauer]
+  - ad: "Feuerbach"
+    kaliplar: [feuerbach]
+  - ad: "Kierkegaard"
     kaliplar: [kierkegaard]
-  - ad: Nietzsche
+  - ad: "Marx"
+    kaliplar: [karl marx, "marx$", marxın, marxta]
+  - ad: "Nietzsche"
     kaliplar: [nietzsche]
-  - ad: William James
-    ara: James
-    kaliplar: [william james, james$, jamesin, jameste]
-  - ad: Wittgenstein
-    kaliplar: [wittgenstein]
-  - ad: Whitehead
+  - ad: "Dostoyevski"
+    kaliplar: [dostoyevski, dostoevsky]
+  - ad: "Tolstoy"
+    kaliplar: [tolstoy]
+  - ad: "Freud"
+    kaliplar: [freud]
+  - ad: "William James"
+    kaliplar: [william james, "james$", jamesin, jameste]
+  - ad: "Bergson"
+    kaliplar: [bergson]
+  - ad: "Rudolf Otto"
+    kaliplar: [rudolf otto]
+  - ad: "Whitehead"
     kaliplar: [whitehead]
-  - ad: John Hick
-    ara: Hick
-    kaliplar: [hick$, hickin, hickte, john hick]
-  - ad: Alvin Plantinga
-    ara: Plantinga
+  - ad: "Charles Hartshorne"
+    kaliplar: [hartshorne]
+  - ad: "Bertrand Russell"
+    kaliplar: [russell]
+  - ad: "Wittgenstein"
+    kaliplar: [wittgenstein]
+  - ad: "Heidegger"
+    kaliplar: [heidegger]
+  - ad: "Martin Buber"
+    kaliplar: [buber]
+  - ad: "Karl Jaspers"
+    kaliplar: [jaspers]
+  - ad: "Jean-Paul Sartre"
+    kaliplar: [sartre]
+  - ad: "Albert Camus"
+    kaliplar: [camus]
+  - ad: "Gabriel Marcel"
+    kaliplar: [gabriel marcel]
+  - ad: "Paul Tillich"
+    kaliplar: [tillich]
+  - ad: "Karl Barth"
+    kaliplar: [karl barth, "barth$", barthın]
+  - ad: "Rudolf Bultmann"
+    kaliplar: [bultmann]
+  - ad: "Karl Rahner"
+    kaliplar: [rahner]
+  - ad: "Teilhard de Chardin"
+    kaliplar: [teilhard]
+  - ad: "Mircea Eliade"
+    kaliplar: [eliade]
+  - ad: "Emmanuel Levinas"
+    kaliplar: [levinas]
+  - ad: "Paul Ricoeur"
+    kaliplar: [ricoeur]
+  - ad: "A. J. Ayer"
+    kaliplar: ["ayer$", ayerin, a j ayer]
+  - ad: "Antony Flew"
+    kaliplar: ["flew$", flewin, antony flew, anthony flew]
+  - ad: "J. L. Mackie"
+    kaliplar: [mackie]
+  - ad: "William Rowe"
+    kaliplar: [william rowe, william l rowe]
+  - ad: "John Hick"
+    kaliplar: ["hick$", hickin, hickte, john hick]
+  - ad: "Alvin Plantinga"
     kaliplar: [plantinga]
-  - ad: Richard Swinburne
-    ara: Swinburne
+  - ad: "Richard Swinburne"
     kaliplar: [swinburne]
-  - ad: William Alston
-    ara: Alston
+  - ad: "William Alston"
     kaliplar: [alston]
+  - ad: "Nicholas Wolterstorff"
+    kaliplar: [wolterstorff]
+  - ad: "William Lane Craig"
+    kaliplar: [william lane craig, w l craig]
+  - ad: "Ninian Smart"
+    kaliplar: [ninian smart]
+  - ad: "D. Z. Phillips"
+    kaliplar: [d z phillips]
+  - ad: "Anthony Kenny"
+    kaliplar: [anthony kenny]
+  - ad: "Richard Dawkins"
+    kaliplar: [dawkins]
+  - ad: "Daniel Dennett"
+    kaliplar: [dennett]
+  - ad: "Sam Harris"
+    kaliplar: [sam harris]
+  - ad: "John Polkinghorne"
+    kaliplar: [polkinghorne]
+  - ad: "Ian Barbour"
+    kaliplar: [ian barbour]
+  - ad: "Linda Zagzebski"
+    kaliplar: [zagzebski]
+  - ad: "Graham Oppy"
+    kaliplar: [oppy]
+  - ad: "Paul Draper"
+    kaliplar: [paul draper]
+  - ad: "Yujin Nagasawa"
+    kaliplar: [nagasawa]
+  - ad: "Eleonore Stump"
+    kaliplar: [stump]
+  - ad: "Evelyn Underhill"
+    kaliplar: [underhill]
+  - ad: "W. T. Stace"
+    kaliplar: [stace]
+  - ad: "Peter van Inwagen"
+    kaliplar: [inwagen]
+  - ad: "John Schellenberg"
+    kaliplar: [schellenberg]
+  - ad: "Matthew Tindal"
+    kaliplar: [tindal]
+  - ad: "Voltaire"
+    kaliplar: [voltaire]
+  - ad: "Thomas Reid"
+    kaliplar: [thomas reid]
+  - ad: "Jürgen Habermas"
+    kaliplar: [habermas]
+  - ad: "Charles Taylor"
+    kaliplar: [charles taylor]
