@@ -18,6 +18,7 @@ Ortam değişkenleri:
 """
 import html
 import json
+import math
 import os
 import re
 import shutil
@@ -668,6 +669,26 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .yayin-liste .tez-rozetler{margin-left:.5rem;padding-top:0;vertical-align:.1em}
 .tez-durum-etiket{margin-top:.7rem}
 select.eser-konu-sec:focus,input.eser-konu-sec:focus{outline:2px solid var(--accent);outline-offset:1px}
+.kt-cizim-kap{border:1px solid var(--rule);background:var(--card);border-radius:8px;padding:.8rem .9rem .6rem;margin:1.2rem 0 1.4rem}
+.kt-secili{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .7rem;min-height:1.9rem;font-family:var(--sans);font-size:.85rem;color:var(--ink-soft)}
+.kt-cip{font-family:var(--sans);font-size:.84rem;background:none;border:1px solid;border-radius:6px;padding:.15rem .55rem;cursor:pointer}
+.kt-bag{font-size:.78rem;color:var(--ink-soft)}
+.kt-cizim{width:100%;height:auto;display:block;margin:.4rem 0 .2rem;font-family:var(--sans)}
+.kt-izgara{stroke:var(--rule);stroke-width:1}
+.kt-eksen{fill:var(--ink-soft);font-size:12px}
+.kt-silik{fill:var(--ink);opacity:.04}
+.kt-imlec{stroke:var(--ink-soft);stroke-width:1;stroke-dasharray:3 3}
+.kt-ipucu{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);min-height:2.4em;margin:.2rem 0 .5rem}
+.kt-ipucu span{white-space:nowrap}
+.kt-ayar{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}.kt-ayar .secim-etiket{margin:0}.kt-ayar .tur-secici{margin:0}
+.kt-kaynak button,.kt-liste button{font-family:var(--sans);font-size:.82rem;padding:.25rem .7rem;border-radius:6px}
+.kt-not{font-family:var(--sans);font-size:.82rem;color:var(--ink-soft);margin:.2rem 0 .6rem}
+.kt-tablo-kap{overflow-x:auto}
+.kt-suruyor{color:var(--ink-soft);font-size:.78rem}
+.kt-tablo{border-collapse:collapse;font-family:var(--sans);font-size:.88rem;width:100%;max-width:44rem}
+.kt-tablo th,.kt-tablo td{text-align:left;padding:.35rem .6rem;border-bottom:1px solid var(--rule);white-space:nowrap}
+.kt-tablo th{font-weight:600;color:var(--ink-soft);font-size:.8rem}
+.kt-sec{font:inherit;background:none;border:0;padding:0;color:var(--accent);cursor:pointer;border-bottom:1px solid var(--gold-logo)}
 .eser-arac{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin:0 0 .4rem}
 .eser-arac .tur-secici,.eser-arac .k-ara{margin:0}
 /* tür seçicisi konu düğmelerinden ayrışsın: düz yazı, köşeli, küçük */
@@ -1613,6 +1634,215 @@ def tez_rozetleri(t: dict) -> str:
     return f'<span class="tez-rozetler">{tur}{durum}</span>'
 
 
+
+# ---------------------------------------------------------------- Kavram tarihi (14 Kasım 2026)
+KAVRAM_DOSYA = CONTENT / "kavramlar.yaml"
+_KV_KATLA = str.maketrans({"ı": "i", "â": "a", "î": "i", "û": "u", "Â": "a", "Î": "i", "Û": "u", "'": "", "’": "", "‘": "", "`": "", "´": "",
+                           "ʻ": "", "ʼ": "", "ʾ": "", "ʿ": ""})
+
+
+def kv_norm(s: str) -> str:
+    """Kavram aramasında başlık ve anahtar kelimelerin ortak biçimi: Türkçe küçük harf, düzeltme ve kesme işaretsiz,
+    harf ve rakam dışındaki her şey boşluk."""
+    s = tr_kucuk(str(s or "")).translate(_KV_KATLA)
+    return " " + re.sub(r"[^0-9a-zçğıöşü]+", " ", s).strip() + " "
+
+
+def kv_desen(kaliplar) -> re.Pattern:
+    parcalar = []
+    for k in kaliplar:
+        tam = k.endswith("$")
+        k = kv_norm(k[:-1] if tam else k).strip()
+        parcalar.append(" " + re.escape(k) + (" " if tam else ""))
+    return re.compile("|".join(parcalar))
+
+
+def kavram_kayitlari() -> list:
+    """Kavram sayımına giren çalışmalar: (yıl, başlık metni, başlık+anahtar kelime metni).
+    Kitap tanıtımları dışarıda kalır, çünkü başlıkları tanıtılan kitabın adıdır."""
+    kayit = []
+    for o in eser_ogeleri():
+        if o.get("grup") != "temel" or not str(o.get("yil", "")).isdigit():
+            continue
+        kayit.append((int(o["yil"]), kv_norm(o["ad"]), kv_norm(o["ad"])))
+    for m in dp_veri():
+        if DP_TUR_ESER.get(m["tur"]) == "kitap-tanitimi" or not str(m.get("yil", "")).isdigit():
+            continue
+        b = kv_norm(m["baslik"])
+        kayit.append((int(m["yil"]), b, b + kv_norm(" | ".join(m.get("kelimeler") or []))))
+    if TEZ_DOSYA.exists():
+        for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8")):
+            if str(t.get("yil", "")).isdigit():
+                b = kv_norm(t["ad"])
+                kayit.append((int(t["yil"]), b, b))
+    return kayit
+
+
+def kavram_verisi() -> dict:
+    tanim = yaml.safe_load(KAVRAM_DOSYA.read_text(encoding="utf-8")) or {}
+    kayit = kavram_kayitlari()
+    son = max(y for y, _, _ in kayit)
+    ilk = 2000
+    yillar = list(range(ilk, son + 1))
+    n = [sum(1 for y, _, _ in kayit if y == yil) for yil in yillar]
+    n_once = sum(1 for y, _, _ in kayit if y < ilk)
+    kavramlar = []
+    for grup, anahtar in (("kavram", "kavramlar"), ("dusunur", "dusunurler")):
+        for k in tanim.get(anahtar) or []:
+            d = kv_desen(k["kaliplar"])
+            b = [0] * len(yillar)
+            t = [0] * len(yillar)
+            for y, bas, tam in kayit:
+                if y < ilk:
+                    continue
+                i = y - ilk
+                if d.search(bas):
+                    b[i] += 1
+                if d.search(tam):  # başlık ya da anahtar kelime: çalışma başına en çok bir
+                    t[i] += 1
+            kavramlar.append({"ad": k["ad"], "grup": grup, "ara": k.get("ara") or k["ad"], "b": b, "t": t})
+    return {"yillar": yillar, "n": n, "n_once": n_once, "toplam": len(kayit), "kavramlar": kavramlar,
+            "anahtarli": sum(1 for _, bas, tam in kayit if bas != tam)}
+
+
+def yilin_kavramlari(v: dict, pencere: int = 3, en_az: int = 5, en_az_n: int = 60) -> list:
+    """Her yıl için, önceki üç yılın oranına göre beklenenden en çok yükselen kavram.
+    Ölçüt: (gözlenen − beklenen) / √(beklenen + 1). Bu, yalnızca sık geçen genel kavramları değil
+    o yıl öne çıkan kavramı seçer; çok az çalışmaya dayanan sıçramalar alt sınırlarla elenir."""
+    sonuc = []
+    for i, yil in enumerate(v["yillar"]):
+        if i < pencere or v["n"][i] < en_az_n:
+            continue
+        on = sum(v["n"][i - pencere:i])
+        en = None
+        for k in v["kavramlar"]:
+            if k["grup"] != "kavram":
+                continue
+            c = k["t"][i]
+            if c < en_az:
+                continue
+            p = sum(k["t"][i - pencere:i]) / on if on else 0
+            bek = v["n"][i] * p
+            skor = (c - bek) / math.sqrt(bek + 1)
+            if en is None or skor > en[0]:
+                en = (skor, k["ad"], c, round(100 * c / v["n"][i], 1), round(100 * p, 1), k["ara"])
+        if en:
+            sonuc.append({"yil": yil, "ad": en[1], "c": en[2], "oran": en[3], "once": en[4], "n": v["n"][i], "ara": en[5]})
+    return sonuc
+
+
+def render_kavram_tarihi() -> str:
+    v = kavram_verisi()
+    yk = yilin_kavramlari(v)
+    def dugmeler(grup):
+        ks = sorted([k for k in v["kavramlar"] if k["grup"] == grup], key=lambda k: tr_anahtar(k["ad"]))
+        return "".join(f'<button type="button" data-ad="{e(k["ad"])}" aria-pressed="false">{e(k["ad"])} '
+                       f'<span class="say">{sum(k["t"])}</span></button>' for k in ks)
+    tablo = "".join(
+        f'<tr><td>{r["yil"]}{" <span class=\"kt-suruyor\">(yıl sürüyor)</span>" if str(r["yil"]) == bugun()[:4] else ""}</td><td><button type="button" class="kt-sec" data-ad="{e(r["ad"])}">{e(r["ad"])}</button></td>'
+        f'<td>{r["c"]} / {r["n"]}</td><td>%{str(r["oran"]).replace(".", ",")}</td><td>%{str(r["once"]).replace(".", ",")}</td></tr>'
+        for r in reversed(yk))
+    veri = json.dumps({"y": v["yillar"], "n": v["n"],
+                       "k": [{"a": k["ad"], "r": k["ara"], "b": k["b"], "t": k["t"]} for k in v["kavramlar"]]},
+                      ensure_ascii=False, separators=(",", ":"))
+    body = (
+        '<p class="ust-etiket">Kavram tarihi</p><h1>Kavram tarihi</h1>'
+        '<p class="aciklama-kisa">Türkiye\'de yayımlanan din felsefesi çalışmalarında kavramların ve düşünürlerin yıllar içindeki yeri. '
+        f'Sayım, sitedeki <a href="{SITE_URL}/eserler/">eserlerin</a> ve <a href="{SITE_URL}/tezler/">tezlerin</a> başlıklarına ve, '
+        'bulunduğu yerde, yazarların verdiği anahtar kelimelere dayanır. Değerler, o yılki çalışmaların yüzde kaçında kavramın geçtiğini gösterir. '
+        'Yöntem ve sınırlılıklar sayfanın sonunda açıklanmıştır. Düzeltme önerileri için: '
+        f'<a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+        '<div class="kt-cizim-kap"><div class="kt-secili" aria-live="polite"></div>'
+        '<svg class="kt-cizim" viewBox="0 0 720 320" role="img" aria-label="Seçili kavramların yıllara göre oranı"></svg>'
+        '<p class="kt-ipucu"></p>'
+        '<div class="kt-ayar"><span class="secim-etiket">Kaynak</span><div class="tur-secici kt-kaynak" role="group" aria-label="Sayım kaynağı">'
+        '<button type="button" data-k="t" aria-pressed="true">Başlık ve anahtar kelime</button>'
+        '<button type="button" data-k="b" aria-pressed="false">Yalnız başlık</button></div></div></div>'
+        '<p class="secim-etiket secim-ayrac">Kavramlar</p><p class="kt-not">En çok dört kavram birlikte çizilir. Sayılar, 2000 sonrası toplam çalışma sayısıdır.</p>'
+        f'<div class="tur-secici kt-liste" role="group" aria-label="Kavramlar">{dugmeler("kavram")}</div>'
+        f'<p class="secim-etiket">Düşünürler</p><div class="tur-secici kt-liste" role="group" aria-label="Düşünürler">{dugmeler("dusunur")}</div>'
+        '<h2 id="yilin-kavrami">Yılın kavramı</h2>'
+        '<p>Her yıl için, önceki üç yıla göre başlıklarda en belirgin yükseliş gösteren kavram. Bu, o yıl en sık geçen kavram değildir; '
+        '“Din ve ahlak” gibi her yıl sık geçen kavramlar yükseliş göstermedikçe öne çıkmaz. Kavram adına basıldığında eğrisi yukarıda çizilir.</p>'
+        '<div class="kt-tablo-kap"><table class="kt-tablo"><thead><tr><th>Yıl</th><th>Kavram</th><th>Çalışma</th><th>Oran</th><th>Önceki üç yıl</th></tr></thead>'
+        f'<tbody>{tablo}</tbody></table></div>'
+        '<h2 id="yontem">Yöntem</h2>'
+        f'<p><strong>Kaynak.</strong> Sayım, sitede listelenen {v["toplam"]} çalışmaya dayanır: eserler sayfasındaki kitap, kitap bölümü, makale, bildiri ve tercümeler '
+        'ile tezler sayfasındaki yüksek lisans ve doktora tezleri. Kitap tanıtımları, başlıkları tanıtılan kitabın adı olduğu için sayıma girmez. '
+        f'Çizim 2000 yılından başlar; daha önceki {v["n_once"]} çalışma, yıllık değer veremeyecek kadar az olduğundan dışarıda bırakılmıştır.</p>'
+        '<p><strong>Kavram listesi.</strong> Aranabilen kavramlar serbest kelimeler değil, din felsefesinin yerleşik problem ve kavramlarından '
+        'derlenmiş kapalı bir listedir. Her kavram, Türkçe ve İngilizce karşılıklarını ve ek almış biçimlerini kapsayan kalıplarla tanımlanır '
+        '(örneğin “kötülük problemi” kavramı teodise ve theodicy kelimelerini de içerir). Liste ve kalıplar sitenin kaynak dosyalarında açıktır.</p>'
+        '<p><strong>Sayım birimi.</strong> Birim çalışmadır. Bir kavram, başlıkta ya da anahtar kelimelerde kaç kez ve kaç farklı biçimde geçerse geçsin, '
+        'bir çalışma için en çok bir kez sayılır.</p>'
+        f'<p><strong>Anahtar kelimeler.</strong> Anahtar kelime yalnızca DergiPark ve ORCID gibi kaynaklardan alınan {v["anahtarli"]} çalışmada bulunur; kitaplarda, '
+        'bildirilerin çoğunda ve tezlerde yoktur. Anahtar kelimesi olan çalışmalar bu yüzden kavramlara biraz daha kolay girer. '
+        '“Yalnız başlık” seçeneği bu farkı ortadan kaldırır; iki eğri arasındaki fark büyükse sonucu ihtiyatla okumak gerekir.</p>'
+        '<p><strong>Oran ve düzeltme.</strong> Yıllık çalışma sayısı 2000\'lerin başında birkaç düzine iken son yıllarda birkaç yüze çıkmıştır. '
+        'Bu nedenle ham sayı yerine oran kullanılır: bir kavramın o yıl geçtiği çalışma sayısı, o yılki bütün çalışmaların sayısına bölünür. '
+        'Küçük yıllardaki dalgalanmayı azaltmak için her nokta, o yıl ile önceki ve sonraki yılın toplamından hesaplanır (üç yıllık kayan pencere). '
+        'Çalışma sayısı 60\'ın altındaki yıllar çizimde silik gösterilir.</p>'
+        '<p><strong>Sınırlılıklar.</strong> Sayım tam metinlere değil başlık ve anahtar kelimelere dayanır, yani yazarların öne çıkardığı kavramı ölçer. '
+        'Liste Türkiye\'deki din felsefesi literatürünün tamamı değil, sitenin derlediği kısmıdır; tezler, hocaları sitedeki listede yer alan danışmanların '
+        'yönettiği tezlerle sınırlıdır. İçinde bulunulan yılın verisi eksiktir.</p>'
+        f'<script>var KT={veri};</script>' + KAVRAM_JS)
+    return page(f"Kavram tarihi · {SITE_NAME}", body, "eserler", canonical=f"{SITE_URL}/kavram-tarihi/",
+                desc="Türkiye'deki din felsefesi çalışmalarında kavramların ve düşünürlerin yıllar içindeki yeri.")
+
+
+KAVRAM_JS = """<script>
+(function(){
+  var R=['#1f3f6e','#a84a14','#2f6b4f','#7a3f86'], sec=[], kay='t', svg=document.querySelector('.kt-cizim'), ip=document.querySelector('.kt-ipucu');
+  var W=720,H=320,L=44,Rr=12,T=14,B=34, Y=KT.y, N=KT.n, by={};
+  KT.k.forEach(function(k){by[k.a]=k;});
+  function seri(k){return Y.map(function(_,i){var c=0,n=0;for(var j=i-1;j<=i+1;j++){if(j<0||j>=Y.length)continue;c+=k[kay][j];n+=N[j];}return {v:n?100*c/n:0,c:k[kay][i],n:N[i]};});}
+  function x(i){return L+(W-L-Rr)*i/(Y.length-1);}
+  function ns(t,a){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function ciz(){
+    while(svg.firstChild)svg.removeChild(svg.firstChild);
+    var ss=sec.map(function(a){return seri(by[a]);}), mx=0;
+    ss.forEach(function(s){s.forEach(function(p){if(p.v>mx)mx=p.v;});});
+    var ust=mx<=2?2:mx<=5?5:mx<=10?10:mx<=15?15:mx<=20?20:Math.ceil(mx/10)*10, adim=ust<=5?1:ust<=10?2:ust<=20?5:10;
+    function y(v){return T+(H-T-B)*(1-v/ust);}
+    for(var v=0;v<=ust+1e-9;v+=adim){svg.appendChild(ns('line',{x1:L,x2:W-Rr,y1:y(v),y2:y(v),'class':'kt-izgara'}));
+      var t=ns('text',{x:L-6,y:y(v)+4,'text-anchor':'end','class':'kt-eksen'});t.textContent='%'+v;svg.appendChild(t);}
+    Y.forEach(function(yl,i){if(N[i]<60)svg.appendChild(ns('rect',{x:x(i)-(W-L-Rr)/(Y.length-1)/2,y:T,width:(W-L-Rr)/(Y.length-1),height:H-T-B,'class':'kt-silik'}));
+      if(yl%5===0||i===Y.length-1){var t=ns('text',{x:x(i),y:H-B+18,'text-anchor':'middle','class':'kt-eksen'});t.textContent=yl;svg.appendChild(t);}});
+    ss.forEach(function(s,si){var d='';s.forEach(function(p,i){d+=(i?'L':'M')+x(i).toFixed(1)+' '+y(p.v).toFixed(1);});
+      svg.appendChild(ns('path',{d:d,fill:'none',stroke:R[si],'stroke-width':2.2,'stroke-linejoin':'round'}));});
+    var cizgi=ns('line',{y1:T,y2:H-B,'class':'kt-imlec',visibility:'hidden'});svg.appendChild(cizgi);
+    var alan=ns('rect',{x:L,y:T,width:W-L-Rr,height:H-T-B,fill:'transparent'});svg.appendChild(alan);
+    function goster(ev){var r=svg.getBoundingClientRect(),px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left,sx=px*W/r.width;
+      var i=Math.max(0,Math.min(Y.length-1,Math.round((sx-L)/(W-L-Rr)*(Y.length-1))));
+      cizgi.setAttribute('x1',x(i));cizgi.setAttribute('x2',x(i));cizgi.setAttribute('visibility','visible');
+      ip.innerHTML='<b>'+Y[i]+'</b> · '+N[i]+' çalışma'+(sec.length?' · ':'')+sec.map(function(a,si){var p=ss[si][i];
+        return '<span style="color:'+R[si]+'">'+a+': '+p.c+' çalışma, %'+p.v.toFixed(1).replace('.',',')+'</span>';}).join(' · ');}
+    alan.addEventListener('mousemove',goster);alan.addEventListener('touchstart',goster,{passive:true});alan.addEventListener('touchmove',goster,{passive:true});
+    alan.addEventListener('mouseleave',function(){cizgi.setAttribute('visibility','hidden');ipsifir();});
+    var sl=document.querySelector('.kt-secili');sl.innerHTML='';
+    sec.forEach(function(a,si){var b=document.createElement('button');b.type='button';b.className='kt-cip';b.style.borderColor=R[si];b.style.color=R[si];
+      b.innerHTML='<span>'+a+'</span> <span aria-hidden="true">×</span>';b.title='Çizimden çıkar';b.onclick=function(){degis(a);};sl.appendChild(b);
+      var k=by[a];['eserler','tezler'].forEach(function(s){var l=document.createElement('a');l.className='kt-bag';l.href='/'+s+'/?ara='+encodeURIComponent(k.r);l.textContent=s==='eserler'?'Eserlerde ara':'Tezlerde ara';sl.appendChild(l);});});
+    if(!sec.length)sl.textContent='Aşağıdan bir kavram seçin.';
+    document.querySelectorAll('.kt-liste button').forEach(function(b){b.setAttribute('aria-pressed',sec.indexOf(b.dataset.ad)>-1?'true':'false');});
+    ipsifir(); yazUrl();
+  }
+  function ipsifir(){ip.textContent='Değerleri görmek için çizimin üzerinde gezinin.';}
+  function degis(a){var i=sec.indexOf(a);if(i>-1)sec.splice(i,1);else{if(sec.length>=4)sec.shift();sec.push(a);}ciz();}
+  function yazUrl(){var p=new URLSearchParams();if(sec.length)p.set('k',sec.join('|'));if(kay==='b')p.set('kaynak','baslik');
+    try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}}
+  document.querySelectorAll('.kt-liste button').forEach(function(b){b.addEventListener('click',function(){degis(b.dataset.ad);});});
+  document.querySelectorAll('.kt-sec').forEach(function(b){b.addEventListener('click',function(){sec=[b.dataset.ad];ciz();window.scrollTo({top:svg.getBoundingClientRect().top+scrollY-120,behavior:'smooth'});});});
+  var kb=document.querySelectorAll('.kt-kaynak button');
+  kb.forEach(function(b){b.addEventListener('click',function(){kay=b.dataset.k;kb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});ciz();});});
+  var p=new URLSearchParams(location.search);
+  sec=(p.get('k')||'Kötülük problemi|Dinî tecrübe|Yapay zekâ ve teknoloji').split('|').filter(function(a){return by[a];}).slice(0,4);
+  if(p.get('kaynak')==='baslik'){kay='b';kb.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.k==='b'?'true':'false');});}
+  ciz();
+})();
+</script>"""
+
+
 def render_tezler() -> str:
     tezler = json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))
     tezler.sort(key=lambda t: (t["yil"], t["ad"]), reverse=True)
@@ -1637,8 +1867,9 @@ def render_tezler() -> str:
                           for k, a in [("yil", "Yıl"), ("danisman", "Danışman"), ("ad", "Tez adı")]) + '</div>')
     body = (f'<p class="ust-etiket">Tezler</p><h1>Tezler</h1>'
             f'<p class="aciklama-kisa">Listedeki akademisyenlerin danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri. '
-            f'Kayıtlar YÖK Ulusal Tez Merkezi\'nin danışman aramasından alınmıştır, bu yüzden Tez Merkezi\'nde kaydı bulunmayan tezler yer almaz. '
+            f'Kayıtlar, akademisyenlerin YÖK Akademik profillerinde yer alan yönetilen tezler listesinden alınmış ve YÖK Ulusal Tez Merkezi kayıtlarıyla karşılaştırılmıştır. '
             f'Öğrenci adları yazılmaz. Danışman adıyla ya da tez adında geçen bir kelimeyle arama yapılabilir. '
+            f'Tez konularının yıllar içindeki seyri <a href="{SITE_URL}/kavram-tarihi/">Kavram tarihi</a> sayfasında izlenebilir. '
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             '<label class="secim-etiket" for="tez-ara">Ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="tez-ara" class="eser-konu-sec" placeholder="Tez adı, danışman ya da üniversite" autocomplete="off"></div>'
@@ -1726,6 +1957,7 @@ def render_eserler() -> str:
             f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
+            f'Kavramların yıllar içindeki seyri <a href="{SITE_URL}/kavram-tarihi/">Kavram tarihi</a> sayfasında izlenebilir. '
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>'
             '<label class="secim-etiket eser-ara-etiket" for="eser-ara">Başlık ara</label>'
@@ -3858,6 +4090,8 @@ def main() -> None:
     yaz("eserler", render_eserler())
     if TEZ_DOSYA.exists():
         yaz("tezler", render_tezler())
+    if KAVRAM_DOSYA.exists():
+        yaz("kavram-tarihi", render_kavram_tarihi())
     yaz("dergiler", render_dergiler())
     for s_ in akademi_verisi():
         yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))

@@ -1,0 +1,213 @@
+# Kavram tarihi sayfasının kavram listesi.
+# Her kavram, eserlerin ve tezlerin başlıklarında ve (varsa) anahtar kelimelerinde aranan kalıplarla tanımlanır.
+# Kalıplar küçük harfle yazılır; düzeltme işaretleri (â, î, û) ve kesme işaretleri yok sayılır, tire boşluk sayılır.
+# Kalıp kelime başından eşleşir: "kötülük" kalıbı "kötülüğün" kelimesini yakalamaz, bu yüzden ek alan biçimler ayrıca yazılır.
+# Kalıbın sonuna "$" konursa yalnızca tam kelime aranır ("dua$" kalıbı "dualizm" kelimesini yakalamaz).
+# Bir çalışma bir kavrama, kalıplardan kaç tanesi tutarsa tutsun ve başlıkta mı anahtar kelimede mi geçerse geçsin, en çok bir kez sayılır.
+# "ara" alanı, Eserler ve Tezler sayfalarına verilecek arama kelimesidir.
+
+kavramlar:
+  - ad: Kötülük problemi
+    ara: kötülük
+    kaliplar: [kötülük, kötülüğ, kötülüklerin, teodise, theodicy, "evil$", problem of evil]
+  - ad: Tanrı'nın varlığının delilleri
+    ara: delil
+    kaliplar: [kozmolojik, cosmological, ontolojik delil, ontolojik kanıt, ontolojik argüman, ontological argument, teleolojik,
+               teleological, tasarım delili, tasarım kanıtı, akıllı tasarım, intelligent design, design argument, gaye delili,
+               nizam delili, hudûs delili, hudus delili, imkân delili, imkan delili, ince ayar, fine tuning, tanrının varlığı,
+               tanrının varlığına, existence of god, kelam kozmolojik]
+  - ad: Teizm
+    ara: teizm
+    kaliplar: [teizm, teist, theism, theist]
+  - ad: Ateizm
+    ara: ateizm
+    kaliplar: [ateizm, ateist, atheism, atheist, yeni ateizm, new atheism]
+  - ad: Deizm
+    ara: deizm
+    kaliplar: [deizm, deist, deism]
+  - ad: Agnostisizm
+    ara: agnostisizm
+    kaliplar: [agnostisizm, agnostik, agnostic]
+  - ad: Tanrı tasavvuru
+    ara: Tanrı
+    kaliplar: [tanrı tasavvur, tanrı anlayış, tanrı kavram, tanrı inancı, tanrı inancının, concept of god, uluhiyet, ulûhiyet]
+  - ad: Tanrı'nın sıfatları
+    ara: sıfat
+    kaliplar: [sıfat, attribute, her şeye kadir, omnipoten, omnisci, omnibenevol, ilahi bilgi, ilahî bilgi, kudret, iradesi$, ilahi irade]
+  - ad: İlahi önbilgi
+    ara: önbilgi
+    kaliplar: [önbilgi, ön bilgi, foreknowledge, ilm-i ezel]
+  - ad: Tanrı-âlem ilişkisi
+    ara: âlem
+    kaliplar: [tanrı alem, tanrı ve alem, allah alem, allah ve alem, tanrı dünya, panteizm, pantheis, panenteizm, panenthe,
+               vahdet i vücud, vahdeti vücud, vahdet i vücut, yaratılış, yaratma, creation$, ilahi müdahale, divine action]
+  - ad: Süreç teolojisi
+    ara: süreç
+    kaliplar: [süreç teoloji, süreç felsef, süreç düşünce, process theolog, process philosoph, process thought]
+  - ad: İlahi gizlilik
+    ara: gizlilik
+    kaliplar: [ilahi gizlilik, tanrının gizliliği, gizlilik argüman, divine hiddenness, hiddenness]
+  - ad: Dinî tecrübe
+    ara: tecrübe
+    kaliplar: [tecrübe, religious experience, dini deneyim, dinsel deneyim, mistik deneyim]
+  - ad: Mistisizm ve tasavvuf
+    ara: tasavvuf
+    kaliplar: [mistisizm, mistik, mystic, tasavvuf, sufi, sufizm, irfan, marifet]
+  - ad: Vahiy
+    ara: vahiy
+    kaliplar: [vahiy, vahy, revelation]
+  - ad: Nübüvvet
+    ara: nübüvvet
+    kaliplar: [nübüvvet, peygamber, prophe, nebi$, risalet]
+  - ad: Mucize
+    ara: mucize
+    kaliplar: [mucize, miracle, harikulade]
+  - ad: Din dili
+    ara: din dili
+    kaliplar: [din dili, dini dil, dinsel dil, religious language, analoji, analogy, metafor, metaphor, sembol, symbol, temsil$]
+  - ad: Dinî çoğulculuk
+    ara: çoğulculuk
+    kaliplar: [çoğulcu, pluralis, dini çeşitlilik, religious diversity, dışlayıcı, kapsayıcı, exclusivis, inclusivis]
+  - ad: Din epistemolojisi
+    ara: epistemoloji
+    kaliplar: [epistemoloji, epistemolog, epistemic, reformcu epistemoloji, reformed epistemology, delilcilik, evidentialis,
+               temellendirme, gerekçelendirme, justification, rasyonalite, rationality, akılsallık, inancın rasyonel]
+  - ad: İman ve inanç
+    ara: iman
+    kaliplar: [iman$, imanın, imanı$, imana, faith, inanç, inancın, inancı$, belief]
+  - ad: Fideizm
+    ara: fideizm
+    kaliplar: [fideizm, fideist, fideism]
+  - ad: Şüphecilik
+    ara: şüphe
+    kaliplar: [şüphecilik, skeptisizm, septisizm, skeptic, scepticism, şüphe$]
+  - ad: Akıl ve vahiy
+    ara: akıl
+    kaliplar: [akıl ve vahiy, akıl vahiy, akıl ve iman, akıl iman, din felsefe ilişki, din ve felsefe, reason and faith, faith and reason, aklın sınır]
+  - ad: Din ve ahlak
+    ara: ahlak
+    kaliplar: [ahlak, etik, ethic, moral, ahlaki]
+  - ad: İlahi buyruk teorisi
+    ara: buyruk
+    kaliplar: [ilahi buyruk, ilahî buyruk, divine command, ilahi emir]
+  - ad: Erdem
+    ara: erdem
+    kaliplar: [erdem, virtue, fazilet]
+  - ad: Özgür irade
+    ara: özgürlük
+    kaliplar: [özgür irade, irade özgürlüğü, free will, özgürlük, hürriyet, freedom, determinizm, determinism, kader, cebir$, cebr, kaza ve kader]
+  - ad: Adalet
+    ara: adalet
+    kaliplar: [adalet, justice, ilahi adalet]
+  - ad: Ölüm ve ölümsüzlük
+    ara: ölüm
+    kaliplar: [ölüm, ölümsüz, immortal, afterlife, ahiret, ahret, death$, eskatoloji, eschatolog, diriliş, resurrection, öte dünya]
+  - ad: Ruh-beden ve zihin
+    ara: zihin
+    kaliplar: [ruh beden, ruh ve beden, zihin, mind$, philosophy of mind, bilinç, consciousness, nefs, kişisel kimlik, personal identity, düalizm, dualism]
+  - ad: İnsan tasavvuru
+    ara: insan
+    kaliplar: [insan tasavvur, insan anlayış, insan doğası, human nature, insan kavram, felsefi antropoloji]
+  - ad: Hayatın anlamı
+    ara: anlam
+    kaliplar: [hayatın anlam, yaşamın anlam, meaning of life, varoluşçu, varoluşsal, existential, nihilizm, nihilism, absürd, absurd]
+  - ad: Din ve bilim
+    ara: bilim
+    kaliplar: [bilim, science, scientific, evrim, evolution, darwin, kozmoloji, cosmology, kuantum, quantum, fizik$, nörobilim, neuroscience]
+  - ad: Natüralizm ve materyalizm
+    ara: natüralizm
+    kaliplar: [natüralizm, naturalis, doğalcılık, materyalizm, materialis, maddecilik, fizikalizm, physicalis]
+  - ad: Yapay zekâ ve teknoloji
+    ara: yapay zekâ
+    kaliplar: [yapay zeka, artificial intelligence, teknoloji, technolog, transhüman, transhuman, posthüman, posthuman, dijital, digital]
+  - ad: İbadet ve dua
+    ara: ibadet
+    kaliplar: [ibadet, worship, "dua$", duanın, duası, dualar, prayer, namaz, ritüel, ritual, kulluk, ubudiyet, liturji, liturg, kült$]
+  - ad: Din ve sanat
+    ara: sanat
+    kaliplar: [sanat, "art$", estetik, aesthetic, güzellik, beauty, müzik, music, edebiyat, şiir]
+  - ad: Sekülerleşme ve modernlik
+    ara: modern
+    kaliplar: [sekülar, seküler, secular, modernite, modernlik, modernizm, modernity, modernism, postmodern]
+  - ad: Hermenötik
+    ara: hermenötik
+    kaliplar: [hermenötik, hermeneut, yorumbilim]
+  - ad: Feminist din felsefesi
+    ara: feminist
+    kaliplar: [feminis, toplumsal cinsiyet, gender]
+  - ad: Zaman ve ebediyet
+    ara: zaman
+    kaliplar: [zaman, ebedi, ebediyet, ezeli, ezeliyet, eternity, eternal, "time$", timeless]
+  - ad: Kelâm
+    ara: kelâm
+    kaliplar: [kelam, kalam, mütekellim, eşari, eşarî, maturidi, mutezile, mutezili]
+  - ad: Analitik din felsefesi
+    ara: analitik
+    kaliplar: [analitik, analytic]
+
+dusunurler:
+  - ad: Gazâlî
+    kaliplar: [gazali, gazzali, ghazal, ghazzal]
+  - ad: İbn Sînâ
+    ara: İbn Sina
+    kaliplar: [ibn sina, ibni sina, avicenna]
+  - ad: İbn Rüşd
+    kaliplar: [ibn rüşd, ibni rüşd, averroes]
+  - ad: Fârâbî
+    kaliplar: [farabi, alfarabi]
+  - ad: Kindî
+    kaliplar: [kindi$]
+  - ad: Fahreddin er-Râzî
+    ara: Râzî
+    kaliplar: [fahreddin razi, fahreddin er razi, fahr al din, razi$]
+  - ad: İbnü'l-Arabî
+    ara: Arabi
+    kaliplar: [ibn arabi, ibnül arabi, ibnu l arabi, ibn al arabi, ibn el arabi]
+  - ad: Mevlânâ
+    kaliplar: [mevlana, rumi$]
+  - ad: Muhammed İkbal
+    ara: İkbal
+    kaliplar: [ikbal, iqbal]
+  - ad: Said Nursî
+    ara: Nursi
+    kaliplar: [said nursi, nursi$, risale i nur]
+  - ad: Augustinus
+    kaliplar: [augustinus, augustine, agustinus]
+  - ad: Thomas Aquinas
+    ara: Aquinas
+    kaliplar: [aquinas, akinas, akinalı]
+  - ad: Descartes
+    kaliplar: [descartes, dekart]
+  - ad: Spinoza
+    kaliplar: [spinoza]
+  - ad: Leibniz
+    kaliplar: [leibniz]
+  - ad: Hume
+    kaliplar: [hume$, humeun, humeda, humeçu]
+  - ad: Kant
+    kaliplar: [kant$, kantın, kantta, kantçı, kantian]
+  - ad: Hegel
+    kaliplar: [hegel]
+  - ad: Kierkegaard
+    kaliplar: [kierkegaard]
+  - ad: Nietzsche
+    kaliplar: [nietzsche]
+  - ad: William James
+    ara: James
+    kaliplar: [william james, james$, jamesin, jameste]
+  - ad: Wittgenstein
+    kaliplar: [wittgenstein]
+  - ad: Whitehead
+    kaliplar: [whitehead]
+  - ad: John Hick
+    ara: Hick
+    kaliplar: [hick$, hickin, hickte, john hick]
+  - ad: Alvin Plantinga
+    ara: Plantinga
+    kaliplar: [plantinga]
+  - ad: Richard Swinburne
+    ara: Swinburne
+    kaliplar: [swinburne]
+  - ad: William Alston
+    ara: Alston
+    kaliplar: [alston]
