@@ -1689,9 +1689,11 @@ def kavram_kayitlari() -> list:
         for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8")):
             # Devam eden tezler sayılmaz: YÖK onlarda başlangıç yılını verir, tamamlananlarda bitiş yılını.
             # Böylece her çalışma ortaya çıktığı yılla (makalede yayım, tezde bitiş) sayılmış olur.
-            if not t.get("devam") and str(t.get("yil", "")).isdigit():
+            # Tamamlanan tezin başlangıç yılı biliniyorsa (devam ederken kaydedildiyse) o yıl esas alınır.
+            yil_ = str(t.get("baslangic") or t.get("yil") or "")
+            if not t.get("devam") and yil_.isdigit():
                 b = kv_norm(t["ad"])
-                kayit.append((int(t["yil"]), b, b))
+                kayit.append((int(yil_), b, b))
     return kayit
 
 
@@ -1788,6 +1790,8 @@ def render_kavram_tarihi() -> str:
         f'<p><strong>Kaynak.</strong> Sayım, sitede listelenen {v["toplam"]} çalışmaya dayanır: eserler sayfasındaki kitap, kitap bölümü, makale, bildiri ve tercümeler '
         'ile tezler sayfasındaki tamamlanmış yüksek lisans ve doktora tezleri. Her çalışma ortaya çıktığı yılla sayılır: yayınlar yayım yılıyla, tezler bitiş yılıyla. '
         'Devam eden tezler sayıma girmez, çünkü YÖK bu tezlerde bitiş değil başlangıç yılını vermektedir. '
+        'YÖK tamamlanan tezlerin başlangıç yılını yayımlamadığından site, devam eden tezlerin başlangıç yılını Kasım 2026\'dan itibaren kaydetmektedir; '
+        'bu tezler tamamlandığında başlangıç yılıyla sayılacaktır. '
         'Kitap tanıtımları da, başlıkları tanıtılan kitabın adı olduğu için sayıma girmez. '
         f'Çizim 2000 yılından başlar; daha önceki {v["n_once"]} çalışma, yıllık değer veremeyecek kadar az olduğundan dışarıda bırakılmıştır.</p>'
         '<p><strong>Kavram listesi.</strong> Aranabilen kavramlar serbest kelimeler değil, din felsefesinin yerleşik problem ve kavramlarından '
@@ -2931,7 +2935,11 @@ _TEZ_ONBELLEK = None
 def tez_yil_etiketi(t: dict) -> str:
     """YÖK, tamamlanan tezlerde bitiş yılını, devam eden tezlerde tezin alındığı (kaydedildiği) yılı verir; başlangıç yılı
     tamamlanan tezler için yayımlanmaz. Etiket bu farkı açıkça yazar."""
-    return f'{"Başlangıç" if t["devam"] else "Bitiş"} {t["yil"]}'
+    if t["devam"]:
+        return f'Başlangıç {t.get("baslangic") or t["yil"]}'
+    if t.get("baslangic") and str(t["baslangic"]) != str(t["yil"]):
+        return f'{t["baslangic"]}-{t["yil"]}'
+    return f'Bitiş {t["yil"]}'
 
 
 def tez_satiri(t: dict, gizli: bool = True) -> str:
