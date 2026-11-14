@@ -1687,7 +1687,9 @@ def kavram_kayitlari() -> list:
         kayit.append((int(m["yil"]), b, b + kv_norm(" | ".join(m.get("kelimeler") or []))))
     if TEZ_DOSYA.exists():
         for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8")):
-            if str(t.get("yil", "")).isdigit():
+            # Devam eden tezler sayılmaz: YÖK onlarda başlangıç yılını verir, tamamlananlarda bitiş yılını.
+            # Böylece her çalışma ortaya çıktığı yılla (makalede yayım, tezde bitiş) sayılmış olur.
+            if not t.get("devam") and str(t.get("yil", "")).isdigit():
                 b = kv_norm(t["ad"])
                 kayit.append((int(t["yil"]), b, b))
     return kayit
@@ -1784,7 +1786,9 @@ def render_kavram_tarihi() -> str:
         f'<div class="kt-donemler">{t_cok}{t_yuk}{t_ger}</div>'
         '<h2 id="yontem">Yöntem</h2>'
         f'<p><strong>Kaynak.</strong> Sayım, sitede listelenen {v["toplam"]} çalışmaya dayanır: eserler sayfasındaki kitap, kitap bölümü, makale, bildiri ve tercümeler '
-        'ile tezler sayfasındaki yüksek lisans ve doktora tezleri. Kitap tanıtımları, başlıkları tanıtılan kitabın adı olduğu için sayıma girmez. '
+        'ile tezler sayfasındaki tamamlanmış yüksek lisans ve doktora tezleri. Her çalışma ortaya çıktığı yılla sayılır: yayınlar yayım yılıyla, tezler bitiş yılıyla. '
+        'Devam eden tezler sayıma girmez, çünkü YÖK bu tezlerde bitiş değil başlangıç yılını vermektedir. '
+        'Kitap tanıtımları da, başlıkları tanıtılan kitabın adı olduğu için sayıma girmez. '
         f'Çizim 2000 yılından başlar; daha önceki {v["n_once"]} çalışma, yıllık değer veremeyecek kadar az olduğundan dışarıda bırakılmıştır.</p>'
         '<p><strong>Kavram listesi.</strong> Aranabilen kavramlar serbest kelimeler değil, din felsefesinin yerleşik problem ve kavramlarından '
         'derlenmiş kapalı bir listedir. Her kavram, Türkçe ve İngilizce karşılıklarını ve ek almış biçimlerini kapsayan kalıplarla tanımlanır '
