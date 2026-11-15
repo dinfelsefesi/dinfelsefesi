@@ -751,6 +751,10 @@ aside.yan ul.calisan-liste li .say{font-size:.8rem;color:var(--ink-soft);font-va
 .harita-kart:hover{border-color:var(--gold-logo);border-top-color:var(--accent)}
 .hk-ad{display:block;font-family:var(--display);font-size:1.3rem;margin-bottom:.35rem}
 .hk-acik{display:block;font-size:.95rem;color:var(--ink-soft);line-height:1.45}
+.harita-gorsel{padding:0;overflow:hidden}
+.hk-resim{display:block;background:#eef1f5;border-bottom:1px solid var(--rule)}
+.hk-resim svg{display:block;width:100%;height:auto}
+.harita-gorsel .hk-ad{margin:0;padding:.7rem 1.1rem .8rem}
 .kb-yillar{margin:.6rem 0 .8rem}.kb-yillar button{font-family:var(--sans);font-size:.82rem;padding:.22rem .6rem;border-radius:6px}
 .kb-kap{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.6rem;max-width:60rem}
 .kb-bulut{width:100%;height:auto;display:block;font-family:var(--display)}
@@ -2072,6 +2076,57 @@ def harita_ust(aktif: str, baslik: str) -> str:
     return (f'<p class="ust-etiket"><a href="{SITE_URL}/harita/">Harita</a></p>' + harita_alt_menu(aktif) + f"<h1>{e(baslik)}</h1>")
 
 
+HARITA_RESIM = {
+    "ag": (
+        '<svg viewBox="0 0 320 160" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">'
+        '<g stroke="var(--ink-soft)" stroke-opacity=".38" stroke-width="1.2" fill="none">'
+        '<path d="M160 78 L96 44 M160 78 L232 40 M160 78 L84 108 M160 78 L238 112 M160 78 L160 134 M160 78 L160 26 '
+        'M96 44 L44 62 M96 44 L110 18 M232 40 L282 58 M232 40 L212 14 M84 108 L40 124 M84 108 L110 142 '
+        'M238 112 L286 104 M238 112 L262 142 M160 134 L110 142 M160 134 L212 142 M44 62 L40 124 M282 58 L286 104"/></g>'
+        '<g fill="var(--accent)"><circle cx="160" cy="78" r="13"/><circle cx="96" cy="44" r="8"/><circle cx="232" cy="40" r="8"/>'
+        '<circle cx="84" cy="108" r="7"/><circle cx="238" cy="112" r="9"/></g>'
+        '<g fill="var(--gold)"><circle cx="160" cy="26" r="6"/><circle cx="160" cy="134" r="7"/><circle cx="44" cy="62" r="5"/>'
+        '<circle cx="282" cy="58" r="5"/><circle cx="40" cy="124" r="4.5"/></g>'
+        '<g fill="var(--ink-soft)" fill-opacity=".55"><circle cx="110" cy="18" r="3.5"/><circle cx="212" cy="14" r="3.5"/>'
+        '<circle cx="110" cy="142" r="3.5"/><circle cx="212" cy="142" r="3.5"/><circle cx="286" cy="104" r="3.5"/><circle cx="262" cy="142" r="3.5"/></g></svg>'),
+    "kavram-tarihi": (
+        '<svg viewBox="0 0 320 160" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">'
+        '<g stroke="var(--ink-soft)" stroke-opacity=".25" stroke-width="1"><path d="M24 132 H300 M24 98 H300 M24 64 H300 M24 30 H300"/></g>'
+        '<g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
+        '<path d="M24 118 C70 112 100 100 140 84 C180 66 220 52 300 26" stroke="var(--accent)"/>'
+        '<path d="M24 88 C60 96 96 70 132 78 C176 88 214 110 300 100" stroke="var(--gold)"/>'
+        '<path d="M24 126 C70 122 110 124 150 112 C200 98 250 74 300 70" stroke="var(--ink-soft)" stroke-opacity=".6"/>'
+        '<path d="M24 52 C70 46 108 60 150 54 C200 48 250 66 300 58" stroke="var(--accent)" stroke-opacity=".4"/></g>'
+        '<g><circle cx="300" cy="26" r="4.5" fill="var(--accent)"/><circle cx="300" cy="100" r="4.5" fill="var(--gold)"/></g></svg>'),
+    "kelime-bulutu": (
+        '<svg viewBox="0 0 320 160" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" font-family="var(--display)">'
+        '<g text-anchor="middle">'
+        '<text x="160" y="84" font-size="40" fill="var(--accent)">Tanrı</text>'
+        '<text x="70" y="52" font-size="22" fill="var(--gold)">din</text>'
+        '<text x="258" y="50" font-size="24" fill="var(--accent)" fill-opacity=".75">ahlak</text>'
+        '<text x="80" y="112" font-size="24" fill="var(--accent)" fill-opacity=".6">kötülük</text>'
+        '<text x="252" y="112" font-size="20" fill="var(--gold)">tecrübe</text>'
+        '<text x="160" y="32" font-size="16" fill="var(--ink-soft)">özgürlük</text>'
+        '<text x="160" y="136" font-size="19" fill="var(--accent)" fill-opacity=".8">ibadet</text>'
+        '<text x="36" y="80" font-size="13" fill="var(--ink-soft)">iman</text>'
+        '<text x="288" y="80" font-size="13" fill="var(--ink-soft)">akıl</text>'
+        '<text x="48" y="142" font-size="13" fill="var(--ink-soft)">bilgi</text>'
+        '<text x="278" y="142" font-size="13" fill="var(--ink-soft)">varlık</text></g></svg>'),
+    "sayilar": (
+        '<svg viewBox="0 0 320 160" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">'
+        '<g stroke="var(--ink-soft)" stroke-opacity=".25"><path d="M20 138 H304"/></g>'
+        '<g fill="var(--accent)">'
+        '<rect x="30" y="118" width="16" height="20"/><rect x="54" y="108" width="16" height="30"/><rect x="78" y="96" width="16" height="42"/>'
+        '<rect x="102" y="86" width="16" height="52"/><rect x="126" y="70" width="16" height="68"/><rect x="150" y="64" width="16" height="74"/>'
+        '<rect x="174" y="52" width="16" height="86"/><rect x="198" y="46" width="16" height="92"/><rect x="222" y="38" width="16" height="100"/>'
+        '<rect x="246" y="30" width="16" height="108"/><rect x="270" y="22" width="16" height="116"/></g>'
+        '<g fill="var(--gold)">'
+        '<rect x="30" y="112" width="16" height="6"/><rect x="54" y="100" width="16" height="8"/><rect x="78" y="86" width="16" height="10"/>'
+        '<rect x="102" y="74" width="16" height="12"/><rect x="126" y="56" width="16" height="14"/><rect x="150" y="48" width="16" height="16"/>'
+        '<rect x="174" y="34" width="16" height="18"/><rect x="198" y="26" width="16" height="20"/><rect x="222" y="16" width="16" height="22"/>'
+        '<rect x="246" y="6" width="16" height="24"/></g></svg>'),
+}
+
 def render_harita() -> str:
     kartlar = [
         ("ag", "İlişki ağı", "Başlıklar, kişiler, eserler ve terimler arasındaki bağlantılar. Bir düğüme basıldığında komşuları ve ayrıntıları açılır."),
@@ -2084,7 +2139,7 @@ def render_harita() -> str:
             '<p class="giris">Türkiye\'deki din felsefesi literatürüne dört açıdan bakış: ilişkiler, zaman içindeki seyir, sık kullanılan kelimeler ve sayılar. '
             'Hepsi sitede listelenen eserlere ve tezlere dayanır.</p>'
             '<div class="harita-kartlar">'
-            + "".join(f'<a class="harita-kart" href="{SITE_URL}{url[k]}"><span class="hk-ad">{e(a)}</span><span class="hk-acik">{e(t)}</span></a>'
+            + "".join(f'<a class="harita-kart harita-gorsel" href="{SITE_URL}{url[k]}" title="{e(t)}"><span class="hk-resim">{HARITA_RESIM[k]}</span><span class="hk-ad">{e(a)}</span></a>'
                       for k, a, t in kartlar) + '</div>')
     return page(f"Harita · {SITE_NAME}", body, "harita", canonical=f"{SITE_URL}/harita/",
                 desc="Türkiye'deki din felsefesi literatürünün haritası: ilişki ağı, kavram tarihi, kelime bulutu ve sayılar.")
