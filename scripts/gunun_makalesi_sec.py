@@ -228,7 +228,7 @@ def main() -> int:
             "date": tarih, "title_tr": tr_b, "title_en": en_b, "lang": dil,
             "authors": ", ".join(yazar_adi(y) for y in r["yazarlar"]), "journal": dergi, "year": tarih[:4],
             "doi": r.get("doi") or "", "url": "" if r.get("doi") else url, "open_access": "evet",
-            "lead": lead_yap(ozet), "summary_tr": paragraflar(ozet), "why_tr": why,
+            "lead": lead_yap(ozet), "summary_tr": paragraflar(ozet), "why_tr": "",
             "tags": anahtar_kelimeler(r.get("konular") or []), "otomatik": True,
         }
         yeniler.append(m_)
