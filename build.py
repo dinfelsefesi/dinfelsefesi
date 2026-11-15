@@ -504,6 +504,16 @@ details.acik-not summary::after{content:"";width:.4rem;height:.4rem;margin-left:
 details.acik-not[open] summary::after{transform:translateY(.1rem) rotate(-135deg)}
 details.acik-not .aciklama-kisa{margin:.6rem 0 0}
 details.yp-acik{margin:.7rem 0 .4rem}
+.yp-suz{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.2rem 0 .5rem;padding:.4rem .7rem;background:color-mix(in srgb,var(--gold-logo) 16%,var(--card));border-radius:6px;font-family:var(--sans);font-size:.84rem}
+.yp-suz[hidden]{display:none}
+.yp-suz button{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;text-decoration:underline;padding:0}
+.kisi-kb [data-i]{cursor:pointer}
+.kisi-kb [data-i]:hover,.kisi-kb [data-i]:focus-visible{opacity:.72;outline:none}
+.kisi-kb text[data-i]{text-decoration:underline;text-decoration-color:#c9ced6;text-underline-offset:2px}
+.kisi-ag [data-b]{transition:opacity .15s}
+.kisi-ag.sol [data-b]{opacity:.14}
+.kisi-ag.sol [data-b].ac{opacity:1}
+.kisi-kb .kb-alt{margin:.1rem .5rem .4rem}
 details.acik-not .aciklama-kisa::before{content:none}
 .aciklama-kisa::before{content:"!";display:inline-block;width:1.25em;height:1.25em;line-height:1.25em;margin-right:.45em;
   border-radius:50%;background:var(--accent);color:var(--gold-logo);font-family:var(--display);font-weight:700;font-style:normal;
@@ -2060,93 +2070,144 @@ def _kisalt(x: str, n: int = 14) -> str:
     return x if len(x) <= n else x[: n - 1].rstrip() + "…"
 
 
+def _kisi_idx(v, ogeler):
+    """Kişi sayfası çizimleri için: başlık -> yayın sırası eşlemeleri (ogeler dizinine göre)."""
+    idx = {}
+    for i, o in enumerate(ogeler):
+        idx.setdefault(o["ad"], i)
+    bs = {}
+    for m in v["makaleler"]:
+        i = idx.get(m["baslik"])
+        if i is not None:
+            bs[i] = [b for b in (m["konular"] or m["ilgili"]) if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik")]
+    for k in v["kitaplar"]:
+        h = FIS[("eser", k)]
+        i = idx.get(h["baslik"])
+        if i is not None:
+            bs[i] = [b for b in liste(h.get("basliklar")) if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik")]
+    return idx, bs
+
+
 def kisi_haritalari(v, s: str, ogeler) -> str:
-    """Kişi sayfası yan sütunu için üç küçük çizim: ilişki ağı, kavram tarihi, yıllara göre yayın sayısı (sabit SVG)."""
+    """Kişi sayfası yan sütunu: yıllara göre yayın, kavram tarihi, ilişki ağı. Üçü de etkileşimli: bir öğeye basınca
+    soldaki yayın listesi o öğeye göre süzülür (KISI_ETKI_JS)."""
+    idx, bs = _kisi_idx(v, ogeler)
     ciktilar = []
-    # --- yıllara göre sayı
-    yil = Counter(int(o["yil"]) for o in ogeler if str(o.get("yil", "")).isdigit() and o.get("grup") != "tez")
-    if len(yil) >= 2:
-        y0, y1 = min(yil), max(yil)
-        W, H, B, T = 300, 130, 20, 8
+    W = 240
+    kutu = ('<h2>%s</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut%s" viewBox="0 0 %d %d" role="group" aria-label="%s">%s</svg>'
+            '<p class="kb-alt">%s</p></div>')
+    # --- yıllara göre yayın
+    yil_i = {}
+    for i, o in enumerate(ogeler):
+        if str(o.get("yil", "")).isdigit():
+            yil_i.setdefault(int(o["yil"]), []).append(i)
+    if len(yil_i) >= 2:
+        y0, y1 = min(yil_i), max(yil_i)
+        H, B, T = 130, 20, 14
         n = y1 - y0 + 1
-        gw = (W - 10) / n
-        mx = max(yil.values())
-        p = []
-        for i in range(n):
-            y = y0 + i
-            h = (H - B - T) * yil.get(y, 0) / mx
-            x = 5 + i * gw + gw * 0.12
-            if yil.get(y):
-                p.append(f'<rect x="{x:.1f}" y="{H - B - h:.1f}" width="{gw * 0.76:.1f}" height="{h:.1f}" fill="#23446e"><title>{y}: {yil[y]} yayın</title></rect>'
-                         f'<text x="{x + gw * 0.38:.1f}" y="{H - B - h - 3:.1f}" text-anchor="middle" font-size="9" fill="#5c6370">{yil[y]}</text>')
-        for i in range(n):
-            y = y0 + i
-            if n <= 8 or i % 2 == 0 or y == y1:
-                p.append(f'<text x="{5 + i * gw + gw / 2:.1f}" y="{H - 6}" text-anchor="middle" font-size="9" fill="#5c6370">{y}</text>')
-        p.append(f'<line x1="5" x2="{W - 5}" y1="{H - B}" y2="{H - B}" stroke="#c9ced6"/>')
-        ciktilar.append('<h2>Yıllara göre yayın</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
-                        'aria-label="Yıllara göre yayın sayısı">%s</svg></div>' % (W, H, "".join(p)))
-    # --- kavram tarihi: başlık x yıl noktaları
-    ana = [(b, c) for b, c in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
+        gw = (W - 8) / n
+        mx = max(len(x) for x in yil_i.values())
+        p = [f'<line x1="4" x2="{W - 4}" y1="{H - B}" y2="{H - B}" stroke="#c9ced6"/>']
+        for j in range(n):
+            y = y0 + j
+            x = 4 + j * gw
+            if y in yil_i:
+                h = (H - B - T) * len(yil_i[y]) / mx
+                p.append(f'<g data-i="{",".join(map(str, yil_i[y]))}" data-e="{y} yılı yayınları" tabindex="0" role="button" aria-label="{y}: {len(yil_i[y])} yayın">'
+                         f'<rect x="{x:.1f}" y="{T}" width="{gw:.1f}" height="{H - B - T}" fill="transparent"/>'
+                         f'<rect x="{x + gw * 0.12:.1f}" y="{H - B - h:.1f}" width="{gw * 0.76:.1f}" height="{h:.1f}" fill="#23446e"><title>{y}: {len(yil_i[y])} yayın</title></rect>'
+                         f'<text x="{x + gw / 2:.1f}" y="{H - B - h - 3:.1f}" text-anchor="middle" font-size="10.5" fill="#1d2330">{len(yil_i[y])}</text></g>')
+            if n <= 7 or (y - y0) % 2 == 0 or y == y1:
+                p.append(f'<text x="{x + gw / 2:.1f}" y="{H - 6}" text-anchor="middle" font-size="10.5" fill="#5c6370">{y}</text>')
+        ciktilar.append(kutu % ("Yıllara göre yayın", "", W, H, "Yıllara göre yayın sayısı", "".join(p), "Bir yıla basınca o yılın yayınları listelenir."))
+    # --- kavram tarihi
+    ana = [(b, c) for b, c in v["baslik"].items() if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik")]
     ana = sorted(ana, key=lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99)))[:6]
     nokta = {}
-    for m in v["makaleler"]:
-        if str(m.get("yil", "")).isdigit():
-            for b in (m["konular"] or m["ilgili"]):
+    for i, bl in bs.items():
+        yy = ogeler[i].get("yil", "")
+        if str(yy).isdigit():
+            for b in bl:
                 if any(b == a for a, _ in ana):
-                    nokta[(b, int(m["yil"]))] = nokta.get((b, int(m["yil"])), 0) + 1
+                    nokta.setdefault((b, int(yy)), []).append(i)
     ana = [(b, c) for b, c in ana if any(bb == b for bb, _ in nokta)]
     yl = sorted({y for _, y in nokta})
     if len(ana) >= 2 and len(yl) >= 2:
-        L, W = 96, 300
+        L = 92
         a0, a1 = yl[0], yl[-1]
-        gw = (W - L - 10) / max(a1 - a0, 1)
-        satir_h = 22
-        H = 12 + satir_h * len(ana) + 20
+        gw = (W - L - 12) / max(a1 - a0, 1)
+        rh = 26
+        H = 14 + rh * len(ana) + 22
+        renk = ["#23446e", "#86641e", "#2f6b4f", "#a84a14", "#7a3f86", "#1f6b78"]
         p = []
         for r, (b, _) in enumerate(ana):
-            cy = 16 + r * satir_h
+            cy = 18 + r * rh
+            tum = sorted({i for (bb, _y), ii in nokta.items() if bb == b for i in ii})
+            ad_ = FIS[("baslik", b)]["ad"]
             p.append(f'<line x1="{L - 4}" x2="{W - 6}" y1="{cy}" y2="{cy}" stroke="#e3e6eb"/>'
-                     f'<text x="{L - 8}" y="{cy + 3.5}" text-anchor="end" font-size="9.5" fill="#1d2330"><a href="{fis_url("baslik", b)}">{e(_kisalt(FIS[("baslik", b)]["ad"], 18))}</a></text>')
+                     f'<text data-i="{",".join(map(str, tum))}" data-e="{e(ad_)} yayınları" tabindex="0" role="button" x="{L - 8}" y="{cy + 3.5}" '
+                     f'text-anchor="end" font-size="10.5" fill="#1d2330">{e(_kisalt(ad_, 14))}<title>{e(ad_)}</title></text>')
             for y in yl:
-                c = nokta.get((b, y))
-                if c:
-                    p.append(f'<circle cx="{L + (y - a0) * gw:.1f}" cy="{cy}" r="{3.2 + 2.2 * (c - 1):.1f}" fill="{["#23446e", "#86641e", "#2f6b4f", "#a84a14", "#7a3f86", "#1f6b78"][r % 6]}">'
-                             f'<title>{e(FIS[("baslik", b)]["ad"])}, {y}: {c} yayın</title></circle>')
+                ii = nokta.get((b, y))
+                if ii:
+                    p.append(f'<circle data-i="{",".join(map(str, ii))}" data-e="{e(ad_)}, {y}" tabindex="0" role="button" cx="{L + (y - a0) * gw:.1f}" cy="{cy}" '
+                             f'r="{4.2 + 2.2 * (len(ii) - 1):.1f}" fill="{renk[r % 6]}"><title>{e(ad_)}, {y}: {len(ii)} yayın</title></circle>')
         for y in yl:
-            if len(yl) <= 6 or y in (a0, a1) or (y - a0) % 2 == 0:
-                p.append(f'<text x="{L + (y - a0) * gw:.1f}" y="{H - 5}" text-anchor="middle" font-size="9" fill="#5c6370">{y}</text>')
-        ciktilar.append('<h2>Kavram tarihi</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
-                        'aria-label="Başlıkların yıllara göre dağılımı">%s</svg></div>' % (W, H, "".join(p)))
-    # --- ilişki ağı: kişi, başlıklar, ortak yazarlar, düşünürler (tek halka, adlar kenarda)
-    ortak = []
-    dus = sorted(v["dusunur"].items(), key=lambda x: -x[1])[:3]
-    dugum = ([("bas", b, c) for b, c in ana[:5]] + [("ortak", o, c) for o, c in ortak] + [("dus", k, c) for k, c in dus])
-    if len(dugum) >= 3:
-        cx, cy, R, W, H = 150, 104, 70, 300, 224
+            if len(yl) <= 5 or y in (a0, a1) or (y - a0) % 2 == 0:
+                p.append(f'<text x="{L + (y - a0) * gw:.1f}" y="{H - 6}" text-anchor="middle" font-size="10.5" fill="#5c6370">{y}</text>')
+        ciktilar.append(kutu % ("Kavram tarihi", "", W, H, "Başlıkların yıllara göre dağılımı", "".join(p),
+                                "Bir başlığa ya da noktaya basınca ilgili yayınlar listelenir."))
+    # --- ilişki ağı: kişi, başlıklar, yayınlar
+    ana2 = [(b, c) for b, c in ana if any(b in bl for bl in bs.values())][:6]
+    if len(ana2) >= 2:
+        cx, cy, R1, R2, H = W / 2, 120, 58, 104, 240
+        n = len(ana2)
+        atan = {}
+        for i, bl in sorted(bs.items()):
+            for j, (b, _) in enumerate(ana2):
+                if b in bl:
+                    atan.setdefault(j, []).append(i)
+                    break
         p, d_ = [], []
-        for i, (tur, k, c) in enumerate(dugum):
-            a_ = -math.pi / 2 + 2 * math.pi * i / len(dugum)
-            x, y, co = cx + R * math.cos(a_), cy + R * math.sin(a_), math.cos(a_)
-            if tur == "bas":
-                ad_, href, renk = FIS[("baslik", k)]["ad"], fis_url("baslik", k), "#86641e"
-            elif tur == "ortak":
-                ad_, href, renk = akademi_verisi()[k]["p"]["ad"], akademi_url(k), "#2f6b4f"
-            else:
-                ad_, href, renk = ad("kisi", FIS[("kisi", k)]), fis_url("kisi", k), "#7a3f86"
-            p.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="#c9ced6"/>')
-            r_ = 4.5 + min(c, 4) * 1.1
-            if abs(co) < 0.2:
-                tx, an, ty = x, "middle", (y - r_ - 4 if math.sin(a_) < 0 else y + r_ + 10)
-            else:
-                tx, an, ty = (x - r_ - 4 if co < 0 else x + r_ + 4), ("end" if co < 0 else "start"), y + 3
-            d_.append(f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="{r_:.1f}" fill="{renk}"><title>{e(ad_)}</title></circle>'
-                      f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{an}" font-size="9" fill="#1d2330">{e(_kisalt(ad_, 14))}</text></a>')
-        d_.append(f'<circle cx="{cx}" cy="{cy}" r="13" fill="#23446e"><title>{e(v["p"]["ad"])}</title></circle>')
-        lej = '<text x="8" y="218" font-size="8.5" fill="#5c6370"><tspan fill="#86641e">●</tspan> başlık  <tspan fill="#7a3f86">●</tspan> düşünür</text>'
-        ciktilar.append('<h2>İlişki ağı</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
-                        'aria-label="Kişinin başlıklarla, ortak yazarlarla ve düşünürlerle ilişkisi">%s</svg></div>' % (W, H, "".join(p) + "".join(d_) + lej))
+        for j, (b, c) in enumerate(ana2):
+            a_ = -math.pi / 2 + 2 * math.pi * j / n
+            bx, by = cx + R1 * math.cos(a_), cy + R1 * math.sin(a_)
+            ws = atan.get(j, [])
+            m_ = len(ws)
+            dl = min(0.30, 2 * math.pi / n * 0.8 / max(m_, 1))
+            tum = ",".join(map(str, ws))
+            ad_ = FIS[("baslik", b)]["ad"]
+            p.append(f'<line data-b="{j}" x1="{cx}" y1="{cy}" x2="{bx:.1f}" y2="{by:.1f}" stroke="#b9c0ca"/>')
+            for t, i in enumerate(ws):
+                aw = a_ + (t - (m_ - 1) / 2) * dl
+                rr = R2 + (8 if t % 2 else 0)
+                wx, wy = cx + rr * math.cos(aw), cy + rr * math.sin(aw)
+                p.append(f'<line data-b="{j}" x1="{bx:.1f}" y1="{by:.1f}" x2="{wx:.1f}" y2="{wy:.1f}" stroke="#d4d9e0"/>')
+                d_.append(f'<circle data-b="{j}" data-i="{i}" data-e="{e(_kisalt(ogeler[i]["ad"], 60))}" tabindex="0" role="button" cx="{wx:.1f}" cy="{wy:.1f}" r="4.2" fill="#9aa3af">'
+                          f'<title>{e(ogeler[i]["ad"])}</title></circle>')
+            d_.append(f'<g data-b="{j}" data-i="{tum}" data-e="{e(ad_)} yayınları" tabindex="0" role="button">'
+                      f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="{7 + min(c, 4) * 1.2:.1f}" fill="#86641e"><title>{e(ad_)}: {c} yayın</title></circle>'
+                      f'<text x="{bx:.1f}" y="{by + 7 + min(c, 4) * 1.2 + 10:.1f}" text-anchor="middle" font-size="10.5" fill="#1d2330" '
+                      f'stroke="#fff" stroke-width="3" paint-order="stroke">{e(_kisalt(ad_, 12))}</text></g>')
+        kid = ag_kisi_kimligi(v["p"])
+        d_.append(f'<a href="{ag_adresi(*kid.split("/", 1))}"><circle cx="{cx}" cy="{cy}" r="12" fill="#23446e"><title>{e(v["p"]["ad"])}: kişinin ilişki ağı sayfası</title></circle></a>')
+        ciktilar.append(kutu % ("İlişki ağı", " kisi-ag", W, H, "Kişinin başlıkları ve yayınları", "".join(p) + "".join(d_),
+                                "Başlığa ya da gri noktaya (yayın) basınca liste süzülür; ortadaki noktaya basınca kişinin ağ sayfası açılır."))
+    if not ciktilar:
+        return ""
     return "".join(ciktilar)
+
+
+KISI_ETKI_JS = """(function(){
+document.addEventListener('click',function(ev){var el=ev.target.closest&&ev.target.closest('.kisi-kb [data-i]');if(!el)return;
+ var ids=el.getAttribute('data-i').split(',').filter(Boolean).map(Number);
+ if(window.kisiFiltre)window.kisiFiltre(el.getAttribute('data-e')||'',ids.map(function(i){return KISI_T[i]}));});
+document.addEventListener('keydown',function(ev){if((ev.key==='Enter'||ev.key===' ')&&ev.target.matches&&ev.target.matches('.kisi-kb [data-i]')){ev.preventDefault();ev.target.dispatchEvent(new MouseEvent('click',{bubbles:true}))}});
+document.querySelectorAll('svg.kisi-ag').forEach(function(sv){
+ sv.addEventListener('mouseover',function(ev){var b=ev.target.closest('[data-b]');if(!b)return;var k=b.getAttribute('data-b');sv.classList.add('sol');
+  sv.querySelectorAll('[data-b="'+k+'"]').forEach(function(x){x.classList.add('ac')})});
+ sv.addEventListener('mouseout',function(){sv.classList.remove('sol');sv.querySelectorAll('.ac').forEach(function(x){x.classList.remove('ac')})})});
+})();"""
 
 
 KB_ING_DUR = set("""the of and in on a an to for from by with as is are its his her their through between into at or towards toward new
@@ -2181,19 +2242,20 @@ def kisi_bulutu(ogeler, makaleler) -> str:
     if _KB_SAYAC is None:
         kelime_verisi()
     kel = {m["baslik"]: m.get("kelimeler") for m in makaleler}
-    sayac, bicim = Counter(), {}
-    for o in ogeler:
+    sayac, bicim, kimde = Counter(), {}, {}
+    for oi, o in enumerate(ogeler):
         kk = kb_kokler_ing(o["ad"], kel.get(o["ad"])) if _ingilizce_mi(o["ad"]) else kb_kokler(o["ad"], kel.get(o["ad"]))
         for k, b in kk.items():
             sayac[k] += 1
             bicim.setdefault(k, Counter())[b] += 1
+            kimde.setdefault(k, []).append(oi)
     sayac = Counter({k: n for k, n in sayac.items() if n >= 2})
     if len(sayac) < 5:
         return ""
     top = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:22]
-    veri = json.dumps([[bicim[k].most_common(1)[0][0], n] for k, n in top], ensure_ascii=False, separators=(",", ":"))
-    return ('<h2>Kelime bulutu</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 300 250" role="img" '
-            'aria-label="Çalışma başlıklarında sık geçen kelimeler"></svg></div>'
+    veri = json.dumps([[bicim[k].most_common(1)[0][0], n, kimde[k]] for k, n in top], ensure_ascii=False, separators=(",", ":"))
+    return ('<h2>Kelime bulutu</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 300 250" role="group" '
+            'aria-label="Çalışma başlıklarında sık geçen kelimeler"></svg><p class="kb-alt">Bir kelimeye basınca o kelimeyi içeren yayınlar listelenir.</p></div>'
             f'<script>(function(){{var D={veri};{KISI_KB_JS}}})();</script>')
 
 
@@ -2208,8 +2270,8 @@ cv.font='600 '+s+'px '+FONT;var w=cv.measureText(ust(k[0])).width+3,h=s*0.82,dik
 for(var t=0;t<2600&&!ok;t++){var a=t*0.18,r=1.1*a,x=W/2+r*Math.cos(a)*1.35-bw/2,y=H/2+r*Math.sin(a)-bh/2;
 if(x<2||y<2||x+bw>W-2||y+bh>H-2)continue;var b={x:x,y:y,w:bw,h:bh},c=false;
 for(var j=0;j<kut.length;j++){if(kes(b,kut[j])){c=true;break;}}
-if(!c){kut.push(b);ok=true;var cx=x+bw/2,cy=y+bh/2,A=document.createElementNS('http://www.w3.org/2000/svg','a');
-A.setAttribute('href','/eserler/?ara='+encodeURIComponent(k[0]));
+if(!c){kut.push(b);ok=true;var cx=x+bw/2,cy=y+bh/2,A=document.createElementNS('http://www.w3.org/2000/svg','g');
+A.setAttribute('data-i',k[2].join(','));A.setAttribute('data-e',k[0]+' içeren yayınlar');A.setAttribute('tabindex','0');A.setAttribute('role','button');
 var T=document.createElementNS('http://www.w3.org/2000/svg','text');T.setAttribute('x',cx);T.setAttribute('y',cy);
 T.setAttribute('text-anchor','middle');T.setAttribute('dominant-baseline','central');T.setAttribute('font-size',s);
 T.setAttribute('fill',R[(i*5+3)%R.length]);T.setAttribute('class','kb-k');
@@ -3819,7 +3881,8 @@ def yayin_paneli(ogeler, slug: str = "", tezler=None, kisi_ad: str = "") -> str:
                         f'(YÖK Ulusal Tez Merkezi). Öğrenci adları yazılmaz, bu tezler hocanın kendi yayını sayılmaz. '
                         f'<a href="{SITE_URL}/tezler/?ara={quote(kisi_ad)}">Tezler sayfasında bu danışmanla ara</a></p>')
     parcalar.append('<!--ALTNOT-->')
-    notlar = '<details class="acik-not yp-acik"><summary>Açıklamayı oku</summary>' + "".join(parcalar) + '</details>'
+    notlar = ('<details class="acik-not yp-acik"><summary>Açıklamayı oku</summary>' + "".join(parcalar) + '</details>'
+              '<div class="yp-suz" hidden><span class="yp-suz-et"></span><button type="button">Süzgeci kaldır ✕</button></div>')
     baslik = (f'<h2 data-yayin="1"{" hidden" if ilk == "tez" else ""}>Yayınları <span class="say">{len(ogeler)}</span></h2>'
               + (f'<h2 data-tez="1"{"" if ilk == "tez" else " hidden"}>Danışmanlığındaki tezler <span class="say">{len(tezler)}</span></h2>' if tezler else ""))
     return (f'<section class="yayin-panel"><div class="yp-bas">{baslik}{siralama}</div>'
@@ -3831,8 +3894,9 @@ YAYIN_JS = """<script>
 (function(){var p=document.querySelector('.yayin-panel');if(!p)return;var ol=p.querySelector('.yayin-liste');
 var lis=[].slice.call(ol.children);var ilkb=p.querySelector('.yp-sirala button[aria-pressed="true"]');
 var alan=ilkb?ilkb.dataset.alan:'yil',yon=(alan==='yil')?-1:1;
+var suz=null,suzBar=p.querySelector('.yp-suz'),suzG='df';
 function grup(g){p.querySelectorAll('.yp-sekme button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.grup===g)});
-lis.forEach(function(li){li.hidden=g==='tumu'?li.dataset.grup==='tez':li.dataset.grup!==g});
+lis.forEach(function(li){li.hidden=g==='tumu'?li.dataset.grup==='tez':li.dataset.grup!==g;if(suz&&!li.hidden&&!suz[li.dataset.ad])li.hidden=true});
 var tz=g==='tez';p.querySelectorAll('h2[data-yayin]').forEach(function(h){h.hidden=tz});p.querySelectorAll('h2[data-tez]').forEach(function(h){h.hidden=!tz});
 p.querySelectorAll('.yp-sirala button').forEach(function(b){if(b.dataset.alan==='kaynak'||b.dataset.alan==='tur')b.hidden=tz});
 if(tz&&(alan==='kaynak'||alan==='tur')){alan='';sirala('yil')}}
@@ -3850,11 +3914,17 @@ function sirala(a){
     else r=yon*ad(x,y);
     return r});
   lis.forEach(function(li){ol.appendChild(li)})}
-p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){grup(b.dataset.grup)})});
+p.querySelectorAll('.yp-sekme button').forEach(function(b){b.addEventListener('click',function(){suzG=b.dataset.grup;grup(b.dataset.grup)})});
+window.kisiFiltre=function(et,basliklar){suz={};basliklar.forEach(function(t){suz[t]=1});
+  if(suzBar){suzBar.hidden=false;suzBar.querySelector('.yp-suz-et').textContent=et+' ('+basliklar.length+')'}
+  grup('tumu');ol.scrollTop=0;if(window.innerWidth<=760)p.scrollIntoView({behavior:'smooth',block:'start'})};
+if(suzBar)suzBar.querySelector('button').addEventListener('click',function(){suz=null;suzBar.hidden=true;grup(suzG)});
 function boy(){if(window.innerWidth<=760){p.classList.remove('boylu');p.style.height='';return}
-  p.classList.add('boylu');var ust=p.getBoundingClientRect().top+window.scrollY;
-  p.style.height=Math.max(320,window.innerHeight-ust-16)+'px';ol.scrollTop=0}
-boy();window.addEventListener('resize',boy);
+  p.classList.add('boylu');var r=p.getBoundingClientRect(),ust=r.top+window.scrollY,yan=document.querySelector('.fis-duzen .yan'),
+  yanH=yan?yan.getBoundingClientRect().bottom-r.top:0;
+  p.style.height=Math.max(320,window.innerHeight-ust-16,yanH)+'px'}
+boy();window.addEventListener('resize',boy);window.addEventListener('load',boy);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setTimeout(boy,60)});
 p.querySelectorAll('.yp-sirala button').forEach(function(b){b.addEventListener('click',function(){sirala(b.dataset.alan)})});
 })();
 </script>"""
@@ -3907,11 +3977,11 @@ def render_akademisyen(s: str) -> str:
     if bulut:
         yan.append(bulut)
     yan.append(kisi_haritalari(v, s, ogeler))
+    if bulut or yan[-1]:
+        yan.insert(0, '<script>var KISI_T=' + json.dumps([tr_kucuk(o["ad"]) for o in ogeler], ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ';</script>')
+        yan.append('<script>' + KISI_ETKI_JS + '</script>')
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
-    if v["makaleler"] or v["kitaplar"]:
-        kid = ag_kisi_kimligi(p)
-        yan.append(f'<a class="ag-git" href="{ag_adresi(*kid.split("/", 1))}">Bu kişinin ağı →</a>')
     tarih = dp_tarama_tarihi()
     metin = yayin_paneli(ogeler, s, kisi_tezleri(s), p.get("ad") or v.get("ad") or "") or '<p class="giris">DergiPark taramasında, ORCID kaydında, AVESİS\'te ve YÖK Akademik\'te bu kişiye bağlanabilen bir yayın bulunamadı.</p>'
     # Listeye elle eklenen kişilerde kısa tanıtım ve hakkında yazılanlar listeden gelir (yalnızca kamuya açık bilgiler)
