@@ -648,7 +648,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;color:#fff;font:700 .66rem var(--sans);font-style:normal;letter-spacing:0}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
-.kv2-logo{position:absolute;top:.9rem;right:1rem;z-index:2;border-radius:7px;opacity:.95}
+.kv2-madalya{overflow:hidden}
+.kv2-madalya img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 @media (max-width:640px){
   .kv2{gap:.7rem;padding:1rem 1rem 1rem 1.1rem;border-radius:14px;align-items:flex-start;margin:.3rem 0 1rem}
   .kv2::before{right:-9.6rem;top:1.9rem;transform:none;width:20rem;height:20rem;-webkit-mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem);mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem)}
@@ -659,8 +660,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
   .kv2-bag{margin-top:.7rem;padding-top:.65rem;padding-right:1.6rem}
   .kv2-ik{padding:0 .6rem;font-size:.7rem}.kv2-ik b{width:1.45rem;height:1.45rem;font-size:.58rem}
-  .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}
-  .kv2-logo{top:auto;bottom:.7rem;right:.8rem;width:22px;height:22px}}
+  .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
 .gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:stretch}
@@ -4267,8 +4267,7 @@ def render_akademisyen(s: str, items=None) -> str:
     <p class="kv2-kurum">{"".join(f"<span>{e(x)}</span>" for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
     {f'<p class="kv2-bag">{"".join(baglar)}</p>' if baglar else ''}
   </div>
-  <div class="kv2-madalya" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
-  <img class="kv2-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="28" height="28">
+  <div class="kv2-madalya"><img src="{SITE_URL}/static/img/logo.svg" alt="Din Felsefesi" width="108" height="108"></div>
 </section>
 {tanitim}{metin}{hakkinda}
   </div>
