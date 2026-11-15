@@ -929,7 +929,10 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:.98rem}
-.pn-ozet{font-size:.92rem;line-height:1.5;color:var(--ink-soft);margin:.6rem 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pano-notlar .gn-kart:first-child{display:flex;flex-direction:column}
+.pn-ozet-kap{flex:1 1 auto;position:relative;min-height:6rem;margin:.6rem 0 .3rem}
+.pn-ozet{position:absolute;inset:0;margin:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;font-size:.92rem;line-height:1.5;color:var(--ink-soft)}
+.pn-alt-linkler{margin-top:auto!important}
 .pano-notlar .gn-tebrik .gn-liste,.pano-notlar .gn-kart:last-child .gn-liste{max-height:34rem;overflow-y:auto;padding-right:.4rem}
 .pn-alt-baslik{font-family:var(--display);font-weight:500;font-size:1rem;margin:1.1rem 0 .4rem;color:var(--gold)}
 .pn-baslik{margin:0 0 .3rem;font-family:var(--display);font-size:1.02rem;line-height:1.3}
@@ -5010,12 +5013,9 @@ def ana_notlar_html(items) -> str:
         gunun = (f'<h3>Günün makalesi <span class="gn-ay">{e(gun_metni(m["gun"]))}</span></h3>'
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
-                 f'<p class="pn-ozet">{e(m["lead"])}</p>'
-                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Devamını okuyun →</a></p>'
-                 + ('<h4 class="pn-alt-baslik">Önceki günler</h4><ul class="gn-liste">'
-                    + "".join(f'<li><a href="{entry_url(x)}">{e(x["title_tr"])}</a><span class="gn-alt">{e(tr_date(x["gun"]))}</span></li>'
-                              for x in items[1:6])
-                    + f'</ul><p class="gn-hepsi"><a href="{SITE_URL}/gunun-makalesi/">Bütün günler →</a></p>' if len(items) > 1 else ""))
+                 f'<div class="pn-ozet-kap"><p class="pn-ozet">{e(m["lead"])}</p></div>'
+                 f'<p class="gn-hepsi pn-alt-linkler"><a href="{entry_url(m)}">Devamını okuyun →</a> '
+                 f'<a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a></p>')
     else:
         gunun = '<h3>Günün makalesi</h3><p class="gn-bos">Henüz kayıt yok.</p>'
     tb = tebrikler()
@@ -5044,8 +5044,11 @@ def ana_notlar_html(items) -> str:
         sat2 += f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi}</span></li>'
     yayinlar_ = (f'<h3>Son yayımlananlar{ay_etiket}</h3><ul class="gn-liste">{sat2}</ul>'
                  if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
+    pn_js = ("<script>(function(){function f(){document.querySelectorAll('.pn-ozet').forEach(function(p){p.style.webkitLineClamp='unset';"
+             "var lh=parseFloat(getComputedStyle(p).lineHeight)||20;p.style.webkitLineClamp=Math.max(2,Math.floor(p.parentNode.clientHeight/lh));});}"
+             "f();addEventListener('resize',f);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();</script>")
     return (f'<div class="pano-notlar"><section class="gn-kart">{gunun}</section><section class="gn-kart gn-tebrik">{tebrik}</section>'
-            f'<section class="gn-kart">{yayinlar_}</section></div>')
+            f'<section class="gn-kart">{yayinlar_}</section></div>' + pn_js)
 
 
 def render_ana(items) -> str:
