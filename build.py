@@ -928,9 +928,10 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-kart{padding:1rem 1.1rem}
 .pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
-.pano-notlar .gn-liste a{font-size:.98rem}
-.pn-ozet-kap{flex:1 1 auto;position:relative;min-height:6rem;margin:.6rem 0 .3rem}
-.pn-ozet{position:absolute;inset:0;margin:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;font-size:.92rem;line-height:1.5;color:var(--ink-soft)}
+.pano-notlar .gn-liste a{font-size:1.02rem}
+.pano-notlar .gn-liste .gn-alt a{font-size:inherit;font-family:inherit}
+.pn-ozet-kap{margin:.6rem 0 .3rem}
+.pn-ozet{margin:0;font-size:.92rem;line-height:1.5;color:var(--ink-soft)}
 .pn-alt-linkler{margin-top:auto!important}
 .pano-notlar{grid-template-rows:minmax(0,1fr)}
 .pano-notlar .gn-kart{display:flex;flex-direction:column;min-height:0;overflow:hidden}
@@ -5006,6 +5007,18 @@ def ana_kapilar_html() -> str:
         f'<span class="hk-ad">{a}</span></a>' for k, a, u, t in ANA_KAPILAR) + '</div>')
 
 
+def ozet_kisalt(metin: str, en_cok: int = 85) -> str:
+    """Özetin ilk en_cok kelimesi; mümkünse son cümlenin sonunda keser, olmazsa üç nokta koyar."""
+    kel = (metin or "").split()
+    if len(kel) <= en_cok:
+        return " ".join(kel)
+    kes = " ".join(kel[:en_cok])
+    i = max(kes.rfind(". "), kes.rfind("? "), kes.rfind("! "))
+    if i > len(kes) * 0.6:
+        return kes[:i + 1]
+    return kes.rstrip(",;:") + "…"
+
+
 def ana_notlar_html(items) -> str:
     """Ana sayfada üç kısa not kutusu: günün makalesi, tebrikler, son yayımlananlar."""
     from datetime import date
@@ -5015,7 +5028,7 @@ def ana_notlar_html(items) -> str:
         gunun = (f'<h3>Günün makalesi <span class="gn-ay">{e(gun_metni(m["gun"]))}</span></h3>'
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
-                 f'<div class="pn-ozet-kap"><p class="pn-ozet">{e(m.get("summary_tr") or m["lead"])}</p></div>'
+                 f'<div class="pn-ozet-kap"><p class="pn-ozet">{e(ozet_kisalt(m.get("summary_tr") or m["lead"]))}</p></div>'
                  f'<p class="gn-hepsi pn-alt-linkler"><a href="{entry_url(m)}">Devamını okuyun →</a> '
                  f'<a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a></p>')
     else:
@@ -5047,7 +5060,7 @@ def ana_notlar_html(items) -> str:
     yayinlar_ = (f'<h3>Son yayımlananlar{ay_etiket}</h3><ul class="gn-liste">{sat2}</ul>'
                  if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
     pn_js = ("<script>(function(){function f(){var n=document.querySelector('.pano-notlar');"
-             "if(n){if(innerWidth>900){n.style.height=Math.max(380,innerHeight-(n.getBoundingClientRect().top+pageYOffset)-24)+'px'}else{n.style.height=''}}"
+             "if(n){if(innerWidth>900){var ft=document.querySelector('footer');n.style.height=Math.max(380,innerHeight-(n.getBoundingClientRect().top+pageYOffset)-(ft?ft.offsetHeight:0)-28)+'px'}else{n.style.height=''}}"
              "document.querySelectorAll('.pn-ozet').forEach(function(p){p.style.webkitLineClamp='unset';"
              "var lh=parseFloat(getComputedStyle(p).lineHeight)||20;p.style.webkitLineClamp=Math.max(2,Math.floor(p.parentNode.clientHeight/lh));});}"
              "f();addEventListener('resize',f);document.addEventListener('toggle',f,true);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();</script>")
