@@ -345,7 +345,7 @@ a:hover{color:var(--accent)}
    doldurur; yalnız düzyazı (.giris, .aciklama-kisa, .metin) okuma ölçüsünde (--measure, 52rem) kalır. Bileşenlere ayrıca max-width verilmez. */
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
-header.site{background:#ebe1c6;border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo);
+header.site{background:#f4eedd;border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo);
   position:sticky;top:0;z-index:60;transition:transform .25s ease,box-shadow .2s ease}
 html{scroll-padding-top:4.5rem}
 /* aşağı inildiğinde şerit incelir: küçük logo, alt yazı gizli */
