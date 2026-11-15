@@ -515,7 +515,7 @@ details.yp-acik{margin:.7rem 0 .4rem}
 .kisi-ag [data-b]{transition:opacity .15s}
 .kisi-ag.sol [data-b]{opacity:.14}
 .kisi-ag.sol [data-b].ac{opacity:1}
-.kisi-kb .kb-alt{margin:.1rem .5rem .4rem}
+.kisi-kb .kb-alt{display:none}
 details.acik-not .aciklama-kisa::before{content:none}
 .aciklama-kisa::before{content:"!";display:inline-block;width:1.25em;height:1.25em;line-height:1.25em;margin-right:.45em;
   border-radius:50%;background:var(--accent);color:var(--gold-logo);font-family:var(--display);font-weight:700;font-style:normal;

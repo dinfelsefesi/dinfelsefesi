@@ -89,7 +89,7 @@
   var yakinlik = d3.zoom().scaleExtent([0.25, 6]).on("zoom", function (e) {
     g.attr("transform", e.transform); olcek = e.transform.k; etiketleriAyarla();
   });
-  if (sade) yakinlik.filter(function (e) { return e.type !== "wheel" && e.type !== "dblclick"; });
+  if (sade) yakinlik.filter(function (e) { return e.type !== "dblclick"; });
   svg.call(yakinlik).on("dblclick.zoom", null);
 
   dugum.call(d3.drag()
