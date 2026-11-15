@@ -556,6 +556,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-govde{min-width:0}
 .kv-resim{width:7.4rem;height:4.2rem;border-radius:10px;background:var(--accent-soft);border:1px solid var(--rule);overflow:hidden;padding:.2rem}
 .kv-resim svg{width:100%;height:100%;display:block}
+.kv-baslik{width:40rem}
 .kv-baslik h1{font-size:1.9rem}
 .kv-unvan{margin:0;font-style:italic;font-size:.92rem;color:var(--gold)}
 .kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15;padding-right:2.6rem}  /* uzun adlar logonun altına girmesin */
@@ -1434,7 +1435,7 @@ def render_baslik(k) -> str:
   </div>
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
 </section>
-<p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
+<p class="giris">{satir_ici(h.get('ozet'))}</p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
   <aside class="yan">{yan or '<h2>Fişler</h2><p>Henüz fiş yok.</p>'}<a class="ag-git" href="{ag_adresi('baslik', k)}">Bu başlığın ağı →</a></aside>
