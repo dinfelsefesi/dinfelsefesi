@@ -2013,7 +2013,8 @@ _KB_SAYAC = None
 
 
 _KB_ADLAR = None
-KB_EK_ADLAR = ["Yunus Emre", "Hacı Bektaş Veli", "Mevlânâ Celâleddîn Rûmî", "Niyâzî-i Mısrî", "Eşrefoğlu Rûmî"]
+KB_EK_ADLAR = ["İsmail Hakkı İzmirli", "İzmirli İsmail Hakkı", "Fahreddin er-Râzî", "Hannah Arendt", "Fahreddin Râzî", "Fakhr al-Dīn al-Rāzī", "Fakhr-al-Dīn al-Rāzī", "Fahrüddîn er-Râzî",
+                "Yunus Emre", "Hacı Bektaş Veli", "Mevlânâ Celâleddîn Rûmî", "Niyâzî-i Mısrî", "Eşrefoğlu Rûmî"]
 
 
 def kb_ad_ifadeleri() -> list:
@@ -2148,6 +2149,33 @@ def kisi_haritalari(v, s: str, ogeler) -> str:
     return "".join(ciktilar)
 
 
+KB_ING_DUR = set("""the of and in on a an to for from by with as is are its his her their through between into at or towards toward new
+about that this what how does beyond under over against after before not be been was were it we our one two than then them they
+religion religious philosophy philosophical study studies analysis approach review case perspective perspectives view views
+thought concept concepts problem problems role question questions case introduction part edition volume""".split())
+
+
+def kb_kokler_ing(bas: str, kel) -> dict:
+    """İngilizce başlık ve anahtar kelimelerden {kök: görünen biçim}; yalnızca kişi sayfalarındaki bulut için."""
+    metin = " | ".join([bas] + [k for k in (kel or []) if _ingilizce_mi(k)]).replace("İ", "i").lower()
+    for d_, r_ in KB_IFADE + kb_ad_ifadeleri():
+        metin = re.sub(d_, r_, metin)
+    kokler = {}
+    for w in re.findall(r"[a-zA-Z\u00c0-\u024f_]+(?:['’\-][a-zA-Z\u00c0-\u024f]+)*", metin):
+        w = w.strip("_'’-")
+        if len(w) < 4 or w in KB_ING_DUR:
+            continue
+        k = w
+        if k.endswith("ies") and len(k) > 5:
+            k = k[:-3] + "y"
+        elif k.endswith("s") and len(k) > 4 and not k.endswith(("ss", "us", "is")):
+            k = k[:-1]
+        if k in KB_ING_DUR:
+            continue
+        kokler.setdefault(k, KB_GORUNUM.get(w, w))
+    return kokler
+
+
 def kisi_bulutu(ogeler, makaleler) -> str:
     """Kişi sayfası için yayın başlıklarından ve anahtar kelimelerinden küçük bir kelime bulutu (HTML)."""
     if _KB_SAYAC is None:
@@ -2155,7 +2183,8 @@ def kisi_bulutu(ogeler, makaleler) -> str:
     kel = {m["baslik"]: m.get("kelimeler") for m in makaleler}
     sayac, bicim = Counter(), {}
     for o in ogeler:
-        for k, b in kb_kokler(o["ad"], kel.get(o["ad"])).items():
+        kk = kb_kokler_ing(o["ad"], kel.get(o["ad"])) if _ingilizce_mi(o["ad"]) else kb_kokler(o["ad"], kel.get(o["ad"]))
+        for k, b in kk.items():
             sayac[k] += 1
             bicim.setdefault(k, Counter())[b] += 1
     sayac = Counter({k: n for k, n in sayac.items() if n >= 2})
