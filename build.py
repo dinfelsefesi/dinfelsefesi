@@ -607,6 +607,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
    Yayını az olanla çok olanın paneli böylece aynı boyda olur. Dar ekranda sayfa olağan biçimde akar. */
 @media (min-width:761px){
   .yayin-panel.boylu{display:flex;flex-direction:column}
+  .yayin-panel.boylu>*:not(.yayin-liste){flex:none}
+  .yayin-panel.boylu details.yp-acik[open]{max-height:38vh;overflow-y:auto}
   .yayin-panel.boylu .yayin-liste{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;
     scrollbar-color:color-mix(in srgb,var(--gold-logo) 60%,transparent) transparent;padding-right:.4rem;border-top:1px solid var(--rule)}
 }
