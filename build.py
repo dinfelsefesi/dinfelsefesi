@@ -974,8 +974,9 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:1.02rem}
 .pano-notlar .gn-liste .gn-alt a{font-size:inherit;font-family:inherit}
-.pn-ozet-kap{margin:.6rem 0 .3rem}
-.pn-ozet{margin:0;font-size:.92rem;line-height:1.5;color:var(--ink-soft)}
+.pn-ozet-kap{margin:.6rem 0 .3rem;flex:1 1 0;min-height:2.8rem;overflow:hidden}
+.pn-ozet{margin:0;font-size:.92rem;line-height:1.5;color:var(--ink-soft);display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:900px){.pn-ozet-kap{flex:none}.pn-ozet{display:block}}
 .pn-alt-linkler{margin-top:auto!important}
 .pano-notlar{grid-template-rows:minmax(0,1fr)}
 .pano-notlar .gn-kart{display:flex;flex-direction:column;min-height:0;overflow:hidden}
