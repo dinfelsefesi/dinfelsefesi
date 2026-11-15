@@ -777,8 +777,8 @@ ul.eser-liste{list-style:none;margin:0;padding:0;max-width:52rem}
 ul.eser-liste li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
 ul.eser-liste li[hidden]{display:none}
 ul.eser-numarali{counter-reset:es}
-ul.eser-numarali li{counter-increment:es;position:relative;padding-left:2.1rem}
-ul.eser-numarali li::before{content:counter(es) ".";position:absolute;left:0;top:.72rem;width:2rem;text-align:left;font-family:var(--sans);font-size:.74rem;color:var(--gold)}
+ul.eser-numarali li{counter-increment:es;position:relative;padding-left:var(--nog,2.15rem)}
+ul.eser-numarali li::before{content:counter(es) ".";position:absolute;left:0;top:.72rem;text-align:left;font-family:var(--sans);font-size:.74rem;color:var(--gold)}
 ul.eser-numarali .eser-bilgi{font-size:.8rem;line-height:1.5}
 a.konu-bag{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold)}
 a.konu-bag:hover{color:var(--accent)}
@@ -2233,7 +2233,7 @@ def render_tezler() -> str:
             f'<p class="secim-etiket secim-ayrac">Tür</p><div class="tur-secici tez-sec secim-kutu" data-grup="tur" role="group" aria-label="Tez türü">{turler}</div>'
             f'<p class="secim-etiket tez-durum-etiket">Durum</p><div class="tur-secici tez-sec secim-kutu" data-grup="durum" role="group" aria-label="Tez durumu">{durumlar}</div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="tez-say"></span></p>{siralama}</div>'
-            f'<ul class="eser-liste tez-liste">{"".join(satirlar)}</ul>'
+            f'<ul class="eser-liste tez-liste eser-numarali">{"".join(satirlar)}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan tez bulunamadı.</p>')
     return page(f"Tezler · {SITE_NAME}", body + TEZ_JS, "tezler", canonical=f"{SITE_URL}/tezler/")
 
@@ -2261,6 +2261,7 @@ TEZ_JS = """<script>
       });
     });
     document.getElementById('tez-say').textContent=n+' tez';
+    ul.style.setProperty('--nog',(String(n).length*0.4+0.55).toFixed(2)+'rem');
     document.querySelector('.eser-bos').hidden=n>0;
     if(yaz){var p=new URLSearchParams(); if(g.value.trim())p.set('ara',g.value.trim()); if(f.tur)p.set('tur',f.tur); if(f.durum)p.set('durum',f.durum);
       history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():''));}
@@ -2352,6 +2353,7 @@ ESER_JS = """<script>
       b.setAttribute('aria-pressed', b.dataset.tur===tur?'true':'false');
     });
     document.getElementById('eser-say').textContent=n+' eser';
+    document.querySelector('ul.eser-numarali').style.setProperty('--nog',(String(n).length*0.4+0.55).toFixed(2)+'rem');
     uls.forEach(function(u){var c=[].filter.call(u.children,function(li){return !li.hidden;}).length, h=u.previousElementSibling, nt=null;
       if(h&&h.classList.contains('eser-grup-not')){nt=h; h=h.previousElementSibling;}
       u.hidden=!c; if(nt)nt.hidden=!c; if(h&&h.classList.contains('eser-grup')){h.hidden=!c; h.querySelector('.eser-grup-say').textContent=c;}});
@@ -3972,7 +3974,7 @@ DERGI_CSS = """
 .d-arac label.d-sec{display:flex;align-items:center;gap:.5rem;font-style:italic;font-size:.92rem;color:var(--ink-soft)}
 ul.d-liste{list-style:none;margin:0;padding:0;max-width:60rem;counter-reset:dergi}
 ul.d-liste>li{counter-increment:dergi}
-.d-ad-satir::before{content:counter(dergi) ".";font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--gold);min-width:1.9rem;margin-right:.15rem}
+.d-ad-satir::before{content:counter(dergi) ".";font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--gold);min-width:1.5rem;margin-right:.1rem}
 .d-sayi-kisa{display:none}
 ul.d-liste>li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem;gap:.35rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--rule)}
 ul.d-liste>li[hidden]{display:none}
