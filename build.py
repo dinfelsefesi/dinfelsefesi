@@ -880,6 +880,7 @@ aside.yan ul.calisan-liste li .say{font-size:.8rem;color:var(--ink-soft);font-va
 .harita-kartlar.sabit{grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.8rem}
 .harita-kartlar.sabit .hk-ad{padding:.5rem .7rem .6rem;font-size:1.02rem;line-height:1.25}
 @media (max-width:520px){.harita-kartlar.sabit{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.harita-kartlar.sabit .hk-ad{font-size:.95rem;padding:.45rem .6rem .55rem}}
+@media (max-width:520px){.harita-kartlar{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin:1rem 0}.harita-kartlar .harita-gorsel .hk-ad{font-size:.95rem;line-height:1.25;padding:.45rem .6rem .55rem}}
 .harita-kart{display:block;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--ink)}
 .harita-kart:hover{border-color:var(--gold-logo);border-top-color:var(--accent)}
 .hk-ad{display:block;font-family:var(--display);font-size:1.3rem;margin-bottom:.35rem}
