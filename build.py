@@ -4271,7 +4271,6 @@ def render_akademisyen(s: str, items=None) -> str:
         yan.insert(0, '<script>var KISI_T=' + json.dumps([tr_kucuk(o["ad"]) for o in ogeler], ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ';</script>')
         yan.insert(len(yan) - (1 if konular else 0), '<script>' + KISI_ETKI_JS + '</script>')
     body = f"""
-<p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <div class="fis-duzen">
   <div class="metin akademi-metin">
 <section class="kv2" aria-label="Künye">
