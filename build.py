@@ -2118,7 +2118,7 @@ def kisi_haritalari(v, s: str, ogeler) -> str:
         ciktilar.append('<h2>Kavram tarihi</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
                         'aria-label="Başlıkların yıllara göre dağılımı">%s</svg></div>' % (W, H, "".join(p)))
     # --- ilişki ağı: kişi, başlıklar, ortak yazarlar, düşünürler (tek halka, adlar kenarda)
-    ortak = sorted(v["ortak"].items(), key=lambda x: -x[1])[:3]
+    ortak = []
     dus = sorted(v["dusunur"].items(), key=lambda x: -x[1])[:3]
     dugum = ([("bas", b, c) for b, c in ana[:5]] + [("ortak", o, c) for o, c in ortak] + [("dus", k, c) for k, c in dus])
     if len(dugum) >= 3:
@@ -2142,7 +2142,7 @@ def kisi_haritalari(v, s: str, ogeler) -> str:
             d_.append(f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="{r_:.1f}" fill="{renk}"><title>{e(ad_)}</title></circle>'
                       f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{an}" font-size="9" fill="#1d2330">{e(_kisalt(ad_, 14))}</text></a>')
         d_.append(f'<circle cx="{cx}" cy="{cy}" r="13" fill="#23446e"><title>{e(v["p"]["ad"])}</title></circle>')
-        lej = '<text x="8" y="218" font-size="8.5" fill="#5c6370"><tspan fill="#86641e">●</tspan> başlık  <tspan fill="#2f6b4f">●</tspan> ortak yazar  <tspan fill="#7a3f86">●</tspan> düşünür</text>'
+        lej = '<text x="8" y="218" font-size="8.5" fill="#5c6370"><tspan fill="#86641e">●</tspan> başlık  <tspan fill="#7a3f86">●</tspan> düşünür</text>'
         ciktilar.append('<h2>İlişki ağı</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
                         'aria-label="Kişinin başlıklarla, ortak yazarlarla ve düşünürlerle ilişkisi">%s</svg></div>' % (W, H, "".join(p) + "".join(d_) + lej))
     return "".join(ciktilar)
@@ -3880,10 +3880,6 @@ def render_akademisyen(s: str) -> str:
     yan.append(kisi_haritalari(v, s, ogeler))
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
-    if v["ortak"]:
-        yan.append('<h2>Ortak yazarları</h2><ul>' +
-                   "".join(f'<li><a href="{akademi_url(o)}">{e(akademi_verisi()[o]["p"]["ad"])}</a></li>'
-                           for o in sorted(v["ortak"], key=lambda o: tr_anahtar(akademi_verisi()[o]["p"]["ad"]))) + '</ul>')
     if v["makaleler"] or v["kitaplar"]:
         kid = ag_kisi_kimligi(p)
         yan.append(f'<a class="ag-git" href="{ag_adresi(*kid.split("/", 1))}">Bu kişinin ağı →</a>')
