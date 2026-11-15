@@ -626,6 +626,41 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kartvizit .kv-unvan{margin:0 0 .25rem;padding-right:0}
   .kv-ikonlar{margin:.8rem 0 0;padding-top:.7rem;gap:.45rem}
   .kv-ikonlar a.kv-ikon{width:1.9rem;height:1.9rem;font-size:.66rem}.kv-ikon svg{width:.95rem;height:.95rem}}
+/* Kişi künyesi (kv2): beyaz kart, ince altın çerçeve, solda ad ve kurum, sağda lacivert madalya, madalyanın çevresinde yarım halkalar */
+.kv2{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin:.4rem 0 1.3rem;padding:1.5rem 2rem 1.4rem 2.2rem;
+  background:#fff;border:1px solid #c9a24b;border-radius:18px;box-shadow:0 18px 34px -26px rgba(20,30,50,.5);overflow:hidden}
+.kv2::before{content:"";position:absolute;right:-7.6rem;top:50%;width:26rem;height:26rem;transform:translateY(-50%);border-radius:50%;pointer-events:none;
+  background:repeating-radial-gradient(circle,transparent 0 .62rem,rgba(201,162,75,.45) .62rem calc(.62rem + 1px));
+  -webkit-mask-image:radial-gradient(circle,transparent 0 4.2rem,#000 4.8rem,transparent 12.8rem);mask-image:radial-gradient(circle,transparent 0 4.2rem,#000 4.8rem,transparent 12.8rem)}
+.kv2-metin{position:relative;z-index:1;min-width:0;flex:1}
+.kv2-etiket{display:flex;align-items:center;gap:.6rem;margin:0 0 .45rem;font:600 .72rem var(--sans);letter-spacing:.3em;color:#a47c2a}
+.kv2-etiket::after{content:"";flex:0 1 12rem;height:1px;background:linear-gradient(90deg,#c9a24b,transparent)}
+.kv2-ay svg{width:1.3rem;height:1.1rem;display:block}
+.kv2-ay svg circle:nth-child(2){fill:#fff!important}
+.kv2 h1{margin:0;padding:0;font-size:2.6rem;line-height:1.08;font-weight:500;letter-spacing:-.01em}
+.kv2-unvan{margin:.25rem 0 .95rem;font-style:italic;font-size:1.3rem;color:var(--ink-soft)}
+.kv2-kurum{margin:0;padding-left:.9rem;border-left:3px solid #c9a24b;font-size:1.05rem;line-height:1.55;color:var(--ink)}
+.kv2-kurum span{display:block}
+.kv2-bag{display:flex;flex-wrap:wrap;gap:.6rem 0;margin:1.1rem 0 0;padding-top:.95rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
+.kv2-ik{display:inline-flex;align-items:center;gap:.5rem;padding:0 1.1rem;border:0;border-left:1px solid #dccd9f;text-decoration:none;color:var(--ink);font:600 .8rem var(--sans);letter-spacing:.06em}
+.kv2-ik:first-child{padding-left:0;border-left:0}
+.kv2-ik:hover span{text-decoration:underline}
+.kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;color:#fff;font:700 .66rem var(--sans);font-style:normal;letter-spacing:0}
+.kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
+  background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
+.kv2-logo{position:absolute;top:.9rem;right:1rem;z-index:2;border-radius:7px;opacity:.95}
+@media (max-width:640px){
+  .kv2{gap:.7rem;padding:1rem 1rem 1rem 1.1rem;border-radius:14px;align-items:flex-start;margin:.3rem 0 1rem}
+  .kv2::before{right:-9.6rem;top:1.9rem;transform:none;width:20rem;height:20rem;-webkit-mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem);mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem)}
+  .kv2-etiket{font-size:.62rem;letter-spacing:.24em;margin-bottom:.3rem}.kv2-ay svg{width:1.1rem;height:.95rem}
+  .kv2 h1{font-size:1.6rem}
+  .kv2-unvan{font-size:1rem;margin:.15rem 0 .55rem}
+  .kv2-kurum{font-size:.8rem;line-height:1.4;padding-left:.6rem;border-left-width:2px}
+  .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
+  .kv2-bag{margin-top:.7rem;padding-top:.65rem;padding-right:1.6rem}
+  .kv2-ik{padding:0 .6rem;font-size:.7rem}.kv2-ik b{width:1.45rem;height:1.45rem;font-size:.58rem}
+  .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}
+  .kv2-logo{top:auto;bottom:.7rem;right:.8rem;width:22px;height:22px}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
 .gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:stretch}
@@ -4089,9 +4124,9 @@ def bas_harfler(ad_: str) -> str:
 _SVG = lambda yol, ek="": f'<svg viewBox="0 0 24 24" aria-hidden="true" {ek}>{yol}</svg>'
 KV_IKONLAR = {
     # tür: (etiket, simge). Simge ya kısa bir yazı ya da basit bir çizimdir (marka armaları kullanılmaz).
-    "yok": ("YÖK Akademik profili", "YÖK"),
+    "yok": ("YÖK Akademik", "YÖK"),
     "orcid": ("ORCID", "iD"),
-    "avesis": ("AVESİS profili", "AV"),
+    "avesis": ("AVESİS", "AV"),
     "trdizin": ("TR Dizin", "TR"),
     "publons": ("Web of Science (Publons)", "P"),
     "web": ("Kişisel site", _SVG('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/>',
@@ -4112,6 +4147,15 @@ def kv_ikon(tur: str, url: str, etiket: str = "") -> str:
     ad_, simge = KV_IKONLAR[tur]
     ad_ = etiket or ad_
     return (f'<a class="kv-ikon kv-i-{tur}" href="{e(url)}" rel="noopener" target="_blank" title="{e(ad_)}" aria-label="{e(ad_)}">{simge}</a>')
+
+
+def kv_ikon2(tur: str, url: str, etiket: str = "") -> str:
+    """Kişi kartında marka renkli yuvarlak simge ve yanında kısa ad."""
+    tur = tur if tur in KV_IKONLAR else "web"
+    ad_, simge = KV_IKONLAR[tur]
+    ipucu = etiket or ad_
+    return (f'<a class="kv2-ik" href="{e(url)}" rel="noopener" target="_blank" title="{e(ipucu)}" aria-label="{e(ipucu)}">'
+            f'<b class="kv-i-{tur}">{simge}</b><span>{e(ad_)}</span></a>')
 
 
 _AVESIS_PROFIL = None
@@ -4146,14 +4190,14 @@ def render_akademisyen(s: str, items=None) -> str:
     kurum = " · ".join(e(x) for x in [p.get("unvan"), p.get("universite"), p.get("fakulte")] if x)
     baglar = []
     if p.get("yok"):
-        baglar.append(kv_ikon("yok", YOK_PROFIL + str(p["yok"])))
+        baglar.append(kv_ikon2("yok", YOK_PROFIL + str(p["yok"])))
     if v["orcid"]:
-        baglar.append(kv_ikon("orcid", "https://orcid.org/" + str(v["orcid"]), "ORCID " + str(v["orcid"])))
+        baglar.append(kv_ikon2("orcid", "https://orcid.org/" + str(v["orcid"]), "ORCID " + str(v["orcid"])))
     av_ = avesis_profil_adresi(p["ad"])
     if av_:
-        baglar.append(kv_ikon("avesis", av_))
+        baglar.append(kv_ikon2("avesis", av_))
     for b_ in p.get("baglantilar") or []:
-        baglar.append(kv_ikon(b_.get("tur", "web"), b_["url"], b_.get("etiket", "")))
+        baglar.append(kv_ikon2(b_.get("tur", "web"), b_["url"], b_.get("etiket", "")))
     ana = [(b, n) for b, n in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
     alt = [(b, n) for b, n in v["baslik"].items() if FIS[("baslik", b)].get("ust_baslik")]
     sira = lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99))
@@ -4210,18 +4254,16 @@ def render_akademisyen(s: str, items=None) -> str:
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <div class="fis-duzen">
   <div class="metin akademi-metin">
-<section class="kartvizit kv-kisi" aria-label="Künye">
-  <div class="kv-bant">
-    <span class="kv-bayrak" title="Türkiye" role="img" aria-label="Türkiye">{KV_BAYRAK}</span>
-    <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
-  </div>
-  <div class="kv-govde">
+<section class="kv2" aria-label="Künye">
+  <div class="kv2-metin">
+    <p class="kv2-etiket"><span class="kv2-ay" role="img" aria-label="Türkiye">{KV_BAYRAK}</span>AKADEMİSYEN</p>
     <h1>{e(p["ad"])}</h1>
-    <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
-    <p class="kv-kurum">{"<br class='kv-br'><span class='kv-nokta'> · </span>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
-    {f'<p class="kv-ikonlar">{"".join(baglar)}</p>' if baglar else ''}
+    <p class="kv2-unvan">{e(p.get("unvan") or "")}{emekli}</p>
+    <p class="kv2-kurum">{"".join(f"<span>{e(x)}</span>" for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
+    {f'<p class="kv2-bag">{"".join(baglar)}</p>' if baglar else ''}
   </div>
-  <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
+  <div class="kv2-madalya" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
+  <img class="kv2-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="28" height="28">
 </section>
 {tanitim}{metin}{hakkinda}
   </div>
