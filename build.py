@@ -1561,12 +1561,13 @@ def turkiye_listesi() -> tuple[str, int]:
                         f'<td data-etiket="Üniversite">{e(p.get("universite"))}</td>'
                         f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td></tr>')
     tarih = tr_date(str(veri.get("tarih"))) if veri.get("tarih") else ""
-    ust = (f'<p class="aciklama-kisa">Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
+    ust = (f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
            f'Liste, YÖK Akademik\'te bilim alanı olarak İlahiyat Temel Alanı\'nda Din Felsefesi\'ni işaretlemiş akademisyenler ile '
            f'İlahiyat Temel Alanı\'nda Felsefe ve Din Bilimleri ya da Sosyal, Beşeri ve İdari Bilimler Temel Alanı\'nda Felsefe alanında '
            f'ilk anahtar kelimesi Din Felsefesi olan akademisyenlerden oluşmaktadır'
            f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.'
            f'{" Bu ölçütlere uymayan ama alanın öncülerinden olan " + str(sum(1 for p in kisiler if p.get("elle"))) + " isim listeye elle eklenmiştir." if any(p.get("elle") for p in kisiler) else ""}</p>'
+           '</p></details>'
            '<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
     tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr>'
              + "".join(f'<th aria-sort="{"ascending" if i == 0 else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}<span class="ok" aria-hidden="true"></span></button></th>'
