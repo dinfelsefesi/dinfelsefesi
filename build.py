@@ -1358,9 +1358,9 @@ def baslik_secici() -> str:
 
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
-            '<p class="giris">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
+            '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir. '
-            f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p>'
+            f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p></details>'
             + baslik_secici() + harita_html() + BASLIK_SEC_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
 
