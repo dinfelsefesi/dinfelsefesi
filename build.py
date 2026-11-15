@@ -1271,12 +1271,79 @@ def alt_dolu(a) -> bool:
     return ("baslik", a) in FIS and bool(bagli_fisler(a) or FIS[("baslik", a)].get("_govde"))
 
 
+BASLIK_RENK = ["#23446e", "#86641e", "#a84a14", "#2f6b4f", "#5c6370", "#7a3f86", "#1f6b78", "#9b2c4a"]
+
+
+def baslik_sozcukleri(k: str, en_cok: int = 11) -> list:
+    """Başlığa bağlı çalışmaların başlıklarında ve anahtar kelimelerinde sık geçen kelimeler (başlığın kendi adındaki kelimeler hariç).
+    Çalışma azsa başlığın terimleri ve özet cümlesi de kullanılır."""
+    if _KB_SAYAC is None:
+        kelime_verisi()
+    h = FIS[("baslik", k)]
+    kume = {k} | set(COCUK.get(k, []))
+    ad_kokleri = set(kb_kokler(h["ad"], []))
+    sayac, bicim = Counter(), {}
+    def say(bas, kel=(), agirlik=1):
+        for kok, b_ in kb_kokler(bas, kel).items():
+            if kok in ad_kokleri:
+                continue
+            sayac[kok] += agirlik
+            bicim.setdefault(kok, Counter())[b_] += 1
+    for m in dp_veri():
+        if kume & set((m.get("konular") or []) + (m.get("ilgili") or [])):
+            say(m["baslik"], m.get("kelimeler") or [])
+    for t_, x in bagli_fisler(k):
+        if t_ == "eser":
+            say(FIS[("eser", x)]["baslik"])
+    if len(sayac) < 8:
+        for t_, x in bagli_fisler(k):
+            if t_ == "terim":
+                say(FIS[("terim", x)]["ad"], (), 2)
+        say(re.sub(r"<[^>]+>", "", satir_ici(h.get("ozet") or "")), (), 1)
+        for a_ in liste(h.get("alt_basliklar")):
+            if ("baslik", a_) in FIS:
+                say(FIS[("baslik", a_)]["ad"], (), 1)
+    ust = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:en_cok]
+    return [(bicim[kk].most_common(1)[0][0], n) for kk, n in ust]
+
+
+def baslik_bulut_svg(sozcukler, tohum: int = 0) -> str:
+    """Kart görseli: kelimelerden küçük, sabit (JS gerektirmeyen) bir bulut; Harita kartlarıyla aynı çerçevede."""
+    if not sozcukler:
+        return ""
+    W, H = 320, 160
+    en, az = sozcukler[0][1], sozcukler[-1][1]
+    kutular, ogeler_ = [], []
+    for i, (w, n) in enumerate(sozcukler):
+        oran = 1.0 if en == az else math.sqrt((n - az) / (en - az))
+        pt = round(14 + oran * (30 if i == 0 else 22))
+        gen = max(len(w), 2) * pt * 0.52 + 4
+        yuk = pt * 0.86
+        for t in range(0, 4000):
+            a_ = t * 0.2 + tohum
+            r_ = 1.5 * t * 0.2
+            x = W / 2 + r_ * math.cos(a_) * 1.7 - gen / 2
+            y = H / 2 + r_ * math.sin(a_) - yuk / 2
+            if x < 4 or y < 4 or x + gen > W - 4 or y + yuk > H - 4:
+                continue
+            if all(x + gen < bx or bx + bw < x or y + yuk < by or by + bh < y for bx, by, bw, bh in kutular):
+                kutular.append((x, y, gen, yuk))
+                ogeler_.append(f'<text x="{x + gen / 2:.1f}" y="{y + yuk / 2:.1f}" text-anchor="middle" dominant-baseline="central" font-size="{pt}" '
+                               f'fill="{BASLIK_RENK[(i * 5 + 3) % len(BASLIK_RENK)]}">{e(w)}</text>')
+                break
+    return (f'<svg viewBox="0 0 {W} {H}" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" font-family="var(--display)" '
+            f'font-weight="600">{"".join(ogeler_)}</svg>')
+
+
 def harita_html() -> str:
     anas = ana_basliklar()
-    en_cok = max([len(bagli_fisler(k)) for k in anas] + [1])
     bolumler = []
     for kad, ks in kumeli_basliklar():
-        bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2>' + harita_kartlari(ks, en_cok))
+        kartlar = "".join(
+            f'<a class="harita-kart harita-gorsel" href="{fis_url("baslik", k)}">'
+            f'<span class="hk-resim">{baslik_bulut_svg(baslik_sozcukleri(k), i)}</span>'
+            f'<span class="hk-ad">{e(FIS[("baslik", k)]["ad"])}</span></a>' for i, k in enumerate(ks))
+        bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2><div class="harita-kartlar">{kartlar}</div>')
     return "".join(bolumler)
 
 
@@ -1375,7 +1442,7 @@ def baslik_secici() -> str:
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
             '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
-            'Çubuklar her başlığa bağlı fiş sayısını, çerçeveli alt başlıklar içeriği hazır olanları gösterir. '
+            'Kartlardaki kelimeler, başlığa bağlı çalışmaların başlıklarında ve anahtar kelimelerinde sık geçenlerdir; başlığın kendi adındaki kelimeler yazılmaz. '
             f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p></details>'
             + baslik_secici() + harita_html() + BASLIK_SEC_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
