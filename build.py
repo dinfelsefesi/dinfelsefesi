@@ -2012,12 +2012,34 @@ def _ingilizce_mi(t: str) -> bool:
 _KB_SAYAC = None
 
 
+_KB_ADLAR = None
+KB_EK_ADLAR = ["Yunus Emre", "Hacı Bektaş Veli", "Mevlânâ Celâleddîn Rûmî", "Niyâzî-i Mısrî", "Eşrefoğlu Rûmî"]
+
+
+def kb_ad_ifadeleri() -> list:
+    """Kişi adları (sitedeki kişi fişleri ve birkaç ek ad) kelime bulutunda bölünmesin diye 'ad_soyad' tek kelimeye çevrilir."""
+    global _KB_ADLAR
+    if _KB_ADLAR is None:
+        adlar = {ad(t, h) for (t, k), h in FIS.items() if t == "kisi"} | set(KB_EK_ADLAR)
+        sonuc = []
+        for a_ in sorted((x for x in adlar if len(x.split()) >= 2), key=len, reverse=True):
+            kucuk = tr_kucuk(a_)
+            ham = r"\s+".join(re.escape(x) for x in kucuk.split())
+            es = "_".join(kucuk.split())
+            sade = ham.translate(str.maketrans("âîû", "aiu"))
+            desen = f"(?<![\\w])(?:{ham}|{sade})(?![\\w])" if sade != ham else f"(?<![\\w]){ham}(?![\\w])"
+            sonuc.append((desen, es))
+            KB_GORUNUM.setdefault(es, a_)
+        _KB_ADLAR = sonuc
+    return _KB_ADLAR
+
+
 def kb_kokler(bas: str, kel) -> dict:
     """Bir çalışmanın başlığından ve Türkçe anahtar kelimelerinden {kök: görünen biçim} üretir (kelime bulutu kuralları)."""
     ing, tr_ = _KB_SAYAC
     parcalar = ([] if _ingilizce_mi(bas) else [bas]) + [k for k in (kel or []) if not _ingilizce_mi(k)]
     metin = tr_kucuk(" | ".join(parcalar))
-    for d_, r_ in KB_IFADE:
+    for d_, r_ in KB_IFADE + kb_ad_ifadeleri():
         metin = re.sub(d_, r_, metin)
     kokler = {}
     for w in re.findall(r"[\wâîû'’]+", metin):
