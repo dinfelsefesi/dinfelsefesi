@@ -672,6 +672,10 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .tez-liste{list-style:none;padding:0;margin:.2rem 0 0}
 .tez-liste li{padding:.75rem 0;border-bottom:1px solid var(--rule)}
 .tez-liste li[hidden]{display:none}
+.kisi-bulut{display:flex;flex-wrap:wrap;gap:.1rem .65rem;align-items:baseline;line-height:1.25;margin:.4rem 0 1.4rem;font-family:var(--display)}
+.kisi-bulut .kb-a{color:var(--accent)}
+.kisi-bulut .kb-b{color:var(--gold)}
+.kisi-bulut .kb-c{color:var(--ink-soft)}
 .tez-ad{margin:0 0 .15rem;font-family:var(--display);font-size:1.08rem;font-weight:500;color:var(--ink)}
 .tez-kunye,.tez-yer{margin:0;font-size:.92rem;color:var(--ink-soft)}
 .tez-yer{font-style:italic;font-size:.86rem}
@@ -1964,7 +1968,7 @@ KAVRAM_JS = """<script>
 
 
 # ---------------------------------------------------------------- Harita: kelime bulutu ve sayılar (14 Kasım 2026)
-KB_DUR = set("""ve ile veya ya da de ki mi mı mu mü bir bu şu o için üzerine üzerinde bağlamında açısından göre olarak
+KB_DUR = set("""mıdır midir mudur müdür nedir nelerdir olabilir giriş konular ve ile veya ya da de ki mi mı mu mü bir bu şu o için üzerine üzerinde bağlamında açısından göre olarak
 gibi kadar arasında arası arasındaki ait dair karşı yönelik ilişkin hakkında itibaren sonra önce olan olmak olması
 din dini dinin dinler dinlerin dinde dine dinsel felsefe felsefesi felsefesinde felsefesinin felsefi felsefeye
 felsefenin bakış değerlendirme değerlendirilmesi inceleme incelenmesi analiz analizi çalışma örneği örnek örneğinde
@@ -2005,6 +2009,54 @@ def _ingilizce_mi(t: str) -> bool:
     return len(re.findall(r"\b(the|of|and|in|on|to|for|a|an|is|with|from)\b", t.lower())) >= 1 and not re.search(r"[çğıöşüÇĞİÖŞÜ]", t)
 
 
+_KB_SAYAC = None
+
+
+def kb_kokler(bas: str, kel) -> dict:
+    """Bir çalışmanın başlığından ve Türkçe anahtar kelimelerinden {kök: görünen biçim} üretir (kelime bulutu kuralları)."""
+    ing, tr_ = _KB_SAYAC
+    parcalar = ([] if _ingilizce_mi(bas) else [bas]) + [k for k in (kel or []) if not _ingilizce_mi(k)]
+    metin = tr_kucuk(" | ".join(parcalar))
+    for d_, r_ in KB_IFADE:
+        metin = re.sub(d_, r_, metin)
+    kokler = {}
+    for w in re.findall(r"[\wâîû'’]+", metin):
+        wl = w.strip("'’_")
+        yalin = re.split(r"['’]", wl)[0]
+        if len(yalin) < 3 or yalin.isdigit() or yalin in KB_DUR or ing[yalin] > tr_[yalin] or \
+                ("_" not in yalin and not re.search(r"[çğıöşüâîû]", yalin) and not tr_[yalin]):
+            continue
+        k = kb_kok(wl)
+        if k in KB_DUR or kb_kok(yalin) in KB_DUR:
+            continue
+        kokler.setdefault(k, KB_GORUNUM.get(yalin, yalin))
+    return kokler
+
+
+def kisi_bulutu(ogeler, makaleler) -> str:
+    """Kişi sayfası için yayın başlıklarından ve anahtar kelimelerinden küçük bir kelime bulutu (HTML)."""
+    if _KB_SAYAC is None:
+        kelime_verisi()
+    kel = {m["baslik"]: m.get("kelimeler") for m in makaleler}
+    sayac, bicim = Counter(), {}
+    for o in ogeler:
+        for k, b in kb_kokler(o["ad"], kel.get(o["ad"])).items():
+            sayac[k] += 1
+            bicim.setdefault(k, Counter())[b] += 1
+    sayac = Counter({k: n for k, n in sayac.items() if n >= 2})
+    if len(sayac) < 5:
+        return ""
+    top = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:28]
+    en = top[0][1]
+    ogeler_ = []
+    for i, (k, n) in enumerate(sorted(top, key=lambda kv: tr_anahtar(bicim[kv[0]].most_common(1)[0][0]))):
+        w = bicim[k].most_common(1)[0][0]
+        boy = 0.82 + (n - 1) / max(en - 1, 1) * 1.1 if en > 1 else 1.0
+        sinif = "kb-a" if n >= max(3, en * 0.6) else "kb-b"
+        ogeler_.append(f'<span class="{sinif}" style="font-size:{boy:.2f}rem" title="{n} çalışmada">{e(w)}</span>')
+    return '<h2>Kelime bulutu</h2><p class="kisi-bulut" aria-label="Çalışma başlıklarında sık geçen kelimeler">' + " ".join(ogeler_) + "</p>"
+
+
 def kelime_verisi(en_cok: int = 60) -> dict:
     """Yıllara göre kelime sıklıkları: eser ve tamamlanmış tez başlıkları ile (varsa) Türkçe anahtar kelimeler.
     İngilizce başlık ve anahtar kelimeler alınmaz (aynı kavram iki dilde iki ayrı kelime olmasın diye).
@@ -2025,23 +2077,11 @@ def kelime_verisi(en_cok: int = 60) -> dict:
     ing, tr_ = Counter(), Counter()
     for _, bas, _k in kayit:
         (ing if _ingilizce_mi(bas) else tr_).update(tr_kucuk(w) for w in re.findall(r"\w+", bas))
+    global _KB_SAYAC
+    _KB_SAYAC = (ing, tr_)
     yillar = {}
     for y, bas, kel in kayit:
-        parcalar = ([] if _ingilizce_mi(bas) else [bas]) + [k for k in kel if not _ingilizce_mi(k)]
-        metin = tr_kucuk(" | ".join(parcalar))
-        for d_, r_ in KB_IFADE:
-            metin = re.sub(d_, r_, metin)
-        kokler = {}
-        for w in re.findall(r"[\wâîû'’]+", metin):
-            wl = w.strip("'’_")
-            yalin = re.split(r"['’]", wl)[0]
-            if len(yalin) < 3 or yalin.isdigit() or yalin in KB_DUR or ing[yalin] > tr_[yalin] or \
-                    ("_" not in yalin and not re.search(r"[çğıöşüâîû]", yalin) and not tr_[yalin]):
-                continue
-            k = kb_kok(wl)
-            if k in KB_DUR or kb_kok(yalin) in KB_DUR:
-                continue
-            kokler.setdefault(k, KB_GORUNUM.get(yalin, yalin))
+        kokler = kb_kokler(bas, kel)
         d = yillar.setdefault(y, {})
         for k, bicim in kokler.items():
             e_ = d.setdefault(k, [0, Counter()])
@@ -3697,6 +3737,9 @@ def render_akademisyen(s: str) -> str:
                                + (f'<span class="eser-konu"> · {konu}</span>' if konu else "") + '</span>'})
     ogeler += diger_yayin_ogeleri(v)
     yan = []
+    bulut = kisi_bulutu(ogeler, v["makaleler"])
+    if bulut:
+        yan.append(bulut)
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
     if v["dusunur"]:
