@@ -579,7 +579,28 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:700;font-style:normal;font-size:.72rem;
   letter-spacing:-.01em;text-decoration:none;box-shadow:0 1px 2px rgba(20,30,50,.12);transition:background .15s,color .15s,transform .15s}
 .kv-ikonlar a.kv-ikon:hover{background:var(--accent);color:var(--gold-logo);transform:translateY(-1px)}
+/* marka renkli yuvarlak bağlantı simgeleri */
+.kv-ikonlar a.kv-ikon{border:0;color:#fff;box-shadow:0 1px 2px rgba(20,30,50,.25)}
+.kv-ikonlar a.kv-ikon:hover{color:#fff;filter:brightness(1.1);transform:translateY(-1px)}
+.kv-i-orcid{background:#a6ce39!important}.kv-i-yok{background:#c8102e!important;font-size:.62rem!important}
+.kv-i-avesis{background:#1f5f99!important}.kv-i-trdizin{background:#222!important}
+.kv-i-publons{background:#336699!important}.kv-i-scholar{background:#4285f4!important;font-family:Georgia,serif!important;font-size:.95rem!important}
+.kv-i-researchgate{background:#00ccbb!important}.kv-i-academia{background:#2b2b2b!important;font-family:Georgia,serif!important;font-size:.95rem!important}
+.kv-i-dergipark{background:#1a5c8a!important}.kv-i-linkedin{background:#0a66c2!important}
+.kv-i-youtube{background:#ff0000!important}.kv-i-x{background:#000!important}.kv-i-web{background:var(--accent)!important}
 .kv-ikon svg{width:1.1rem;height:1.1rem;fill:currentColor}
+/* kişi kartı: solda lacivert bant (altın ay-yıldız, monogram), ortalı metin, sağ üstte logo */
+.kartvizit.kv-kisi{padding:0;gap:0;align-items:stretch;overflow:hidden;background:#fff}
+.kv-kisi::after{display:none}
+.kv-bant{flex:none;width:7.6rem;background:var(--accent);display:flex;align-items:center;justify-content:center;position:relative;padding:1rem 0}
+.kv-kisi .kv-monogram{width:4.4rem;height:4.4rem;background:transparent;border:2px solid #d9b25c;color:#d9b25c;box-shadow:none;align-self:center}
+.kv-kisi .kv-bayrak{position:absolute;left:.7rem;top:.65rem;width:2rem;height:1.7rem;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible}
+.kv-kisi .kv-govde{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.4rem 3.6rem 1.3rem}
+.kv-kisi h1{padding-right:0;margin:0 0 .2rem}
+.kv-kisi .kv-unvan{font-style:normal;color:#8a6a2c;letter-spacing:.02em;font-size:.98rem;margin:0 0 .35rem}
+.kv-kisi .kv-ikonlar{justify-content:center;border-top:0;padding-top:.85rem;margin-top:.8rem;
+  background:linear-gradient(#d9b25c,#d9b25c) top center/55% 1px no-repeat}
+.kv-kisi .kv-logo{top:.8rem;right:.9rem}
 .kv-ikon svg[fill="none"]{fill:none}
 .kartvizit .kv-monogram{align-self:center}
 .kartvizit h1{margin:0 0 .15rem}
@@ -592,7 +613,14 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv-unvan{font-size:.8rem;padding-right:2rem}.kv-logo{top:.6rem;right:.7rem;width:26px;height:26px}
   .kv-kurum{font-size:.76rem;line-height:1.4}.kv-br{display:none}.kv-nokta{display:inline}
   .kv-bag{margin:.45rem 0 0;padding-top:.4rem;gap:.15rem 1rem;font-size:.78rem}
-  .kv-bayrak{width:1.6rem;height:1.6rem;left:-.4rem;top:-.4rem}
+  .kartvizit.kv-kisi{padding:0}
+  .kv-bant{width:4.2rem;padding:.6rem 0}
+  .kv-kisi .kv-monogram{width:2.7rem;height:2.7rem;font-size:1rem;border-width:1.5px}
+  .kv-kisi .kv-bayrak{left:.4rem;top:.4rem;width:1.3rem;height:1.1rem}
+  .kv-kisi .kv-govde{padding:.8rem 2.2rem .8rem 2.2rem}
+  .kv-kisi h1{font-size:1.25rem;padding-right:0}.kv-kisi .kv-unvan{font-size:.82rem;padding-right:0;margin-bottom:.2rem}
+  .kv-kisi .kv-logo{top:.5rem;right:.55rem;width:24px;height:24px}
+  .kv-kisi .kv-ikonlar{margin-top:.5rem;padding-top:.55rem}
   .kartvizit{padding:.9rem 1rem .9rem 1.1rem}
   .kartvizit h1,.kv-baslik h1{margin:0 0 .1rem}
   .kartvizit .kv-unvan{margin:0 0 .25rem;padding-right:0}
@@ -4061,12 +4089,14 @@ def bas_harfler(ad_: str) -> str:
 _SVG = lambda yol, ek="": f'<svg viewBox="0 0 24 24" aria-hidden="true" {ek}>{yol}</svg>'
 KV_IKONLAR = {
     # tür: (etiket, simge). Simge ya kısa bir yazı ya da basit bir çizimdir (marka armaları kullanılmaz).
-    "yok": ("YÖK Akademik profili", _SVG('<path d="M12 3 2 8v2h20V8L12 3zM4 12v7H3v2h18v-2h-1v-7h-2v7h-3v-7h-2v7h-2v-7H9v7H6v-7H4z"/>')),
+    "yok": ("YÖK Akademik profili", "YÖK"),
     "orcid": ("ORCID", "iD"),
     "avesis": ("AVESİS profili", "AV"),
+    "trdizin": ("TR Dizin", "TR"),
+    "publons": ("Web of Science (Publons)", "P"),
     "web": ("Kişisel site", _SVG('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/>',
                                   'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"')),
-    "scholar": ("Google Akademik", _SVG('<path d="M12 4 1 9l11 5 9-4.1V15h2V9L12 4zm-6 8.2V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.8l-6 2.7-6-2.7z"/>')),
+    "scholar": ("Google Akademik", "G"),
     "academia": ("Academia.edu", "A"),
     "researchgate": ("ResearchGate", "RG"),
     "dergipark": ("DergiPark", "DP"),
@@ -4078,9 +4108,10 @@ KV_IKONLAR = {
 
 def kv_ikon(tur: str, url: str, etiket: str = "") -> str:
     """Kartvizitte yuvarlak bağlantı simgesi."""
-    ad_, simge = KV_IKONLAR.get(tur, KV_IKONLAR["web"])
+    tur = tur if tur in KV_IKONLAR else "web"
+    ad_, simge = KV_IKONLAR[tur]
     ad_ = etiket or ad_
-    return (f'<a class="kv-ikon" href="{e(url)}" rel="noopener" target="_blank" title="{e(ad_)}" aria-label="{e(ad_)}">{simge}</a>')
+    return (f'<a class="kv-ikon kv-i-{tur}" href="{e(url)}" rel="noopener" target="_blank" title="{e(ad_)}" aria-label="{e(ad_)}">{simge}</a>')
 
 
 _AVESIS_PROFIL = None
@@ -4102,9 +4133,10 @@ def avesis_profil_adresi(ad_: str) -> str:
     return _AVESIS_PROFIL.get(ad_, "")
 
 
-KV_BAYRAK = ('<svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#e30a17"/>'
-             '<circle cx="25" cy="30" r="13" fill="#fff"/><circle cx="29.5" cy="30" r="10.4" fill="#e30a17"/>'
-             '<polygon fill="#fff" points="38,23.8 39.5,28 43.9,28.1 40.4,30.8 41.6,35 38,32.5 34.4,35 35.6,30.8 32.1,28.1 36.5,28"/></svg>')
+# Altın sarısı ay ve yıldız (bant zemini lacivert olduğundan hilal, iç daireyi zemin rengiyle çizerek elde edilir)
+KV_BAYRAK = ('<svg viewBox="10 15 36 30" aria-hidden="true"><circle cx="25" cy="30" r="13" fill="#d9b25c"/>'
+             '<circle cx="29.5" cy="30" r="10.4" style="fill:var(--accent)"/>'
+             '<polygon fill="#d9b25c" points="38,23.8 39.5,28 43.9,28.1 40.4,30.8 41.6,35 38,32.5 34.4,35 35.6,30.8 32.1,28.1 36.5,28"/></svg>')
 
 
 def render_akademisyen(s: str, items=None) -> str:
@@ -4178,15 +4210,17 @@ def render_akademisyen(s: str, items=None) -> str:
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <div class="fis-duzen">
   <div class="metin akademi-metin">
-<section class="kartvizit" aria-label="Künye">
-  <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
+<section class="kartvizit kv-kisi" aria-label="Künye">
+  <div class="kv-bant">
+    <span class="kv-bayrak" title="Türkiye" role="img" aria-label="Türkiye">{KV_BAYRAK}</span>
+    <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
+  </div>
   <div class="kv-govde">
     <h1>{e(p["ad"])}</h1>
     <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
     <p class="kv-kurum">{"<br class='kv-br'><span class='kv-nokta'> · </span>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
     {f'<p class="kv-ikonlar">{"".join(baglar)}</p>' if baglar else ''}
   </div>
-  <span class="kv-bayrak" title="Türkiye" role="img" aria-label="Türkiye">{KV_BAYRAK}</span>
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
 </section>
 {tanitim}{metin}{hakkinda}
