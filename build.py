@@ -5060,7 +5060,7 @@ def ana_notlar_html(items) -> str:
     yayinlar_ = (f'<h3>Son yayımlananlar{ay_etiket}</h3><ul class="gn-liste">{sat2}</ul>'
                  if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
     pn_js = ("<script>(function(){function f(){var n=document.querySelector('.pano-notlar');"
-             "if(n){if(innerWidth>900){var ft=document.querySelector('footer');n.style.height=Math.max(380,innerHeight-(n.getBoundingClientRect().top+pageYOffset)-(ft?ft.offsetHeight:0)-28)+'px'}else{n.style.height=''}}"
+             "if(n){if(innerWidth>900){var ft=document.querySelector('footer');n.style.height=Math.max(380,innerHeight-(n.getBoundingClientRect().top+pageYOffset)-(ft?ft.offsetHeight:0)-112)+'px'}else{n.style.height=''}}"
              "document.querySelectorAll('.pn-ozet').forEach(function(p){p.style.webkitLineClamp='unset';"
              "var lh=parseFloat(getComputedStyle(p).lineHeight)||20;p.style.webkitLineClamp=Math.max(2,Math.floor(p.parentNode.clientHeight/lh));});}"
              "f();addEventListener('resize',f);document.addEventListener('toggle',f,true);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();</script>")
