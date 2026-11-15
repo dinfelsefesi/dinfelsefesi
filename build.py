@@ -3880,9 +3880,6 @@ def render_akademisyen(s: str) -> str:
     yan.append(kisi_haritalari(v, s, ogeler))
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
-    if v["dusunur"]:
-        yan.append('<h2>Makalelerinde adı geçen düşünürler</h2><ul>' +
-                   "".join(f'<li>{bag("kisi", k)}</li>' for k in sorted(v["dusunur"], key=lambda k: tr_anahtar(ad("kisi", FIS[("kisi", k)])))) + '</ul>')
     if v["ortak"]:
         yan.append('<h2>Ortak yazarları</h2><ul>' +
                    "".join(f'<li><a href="{akademi_url(o)}">{e(akademi_verisi()[o]["p"]["ad"])}</a></li>'
