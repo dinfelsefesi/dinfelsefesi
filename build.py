@@ -641,11 +641,12 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-unvan{margin:.25rem 0 .95rem;font-style:italic;font-size:1.3rem;color:var(--ink-soft)}
 .kv2-kurum{margin:0;padding-left:.9rem;border-left:3px solid #c9a24b;font-size:1.05rem;line-height:1.55;color:var(--ink)}
 .kv2-kurum span{display:block}
-.kv2-bag{display:flex;flex-wrap:wrap;gap:.6rem 0;margin:1.1rem 0 0;padding-top:.95rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
-.kv2-ik{display:inline-flex;align-items:center;gap:.5rem;padding:0 1.1rem;border:0;border-left:1px solid #dccd9f;text-decoration:none;color:var(--ink);font:600 .8rem var(--sans);letter-spacing:.06em}
-.kv2-ik:first-child{padding-left:0;border-left:0}
-.kv2-ik:hover span{text-decoration:underline}
-.kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;color:#fff;font:700 .66rem var(--sans);font-style:normal;letter-spacing:0}
+.kv2-bag{display:flex;flex-wrap:wrap;gap:.6rem .75rem;margin:1.1rem 0 0;padding-top:.95rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
+.kv2-ik{display:inline-flex;align-items:center;padding:0;border:0;text-decoration:none;color:var(--ink)}
+.kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border-radius:50%;color:#fff;font:700 .68rem var(--sans);font-style:normal;letter-spacing:0;transition:transform .15s,box-shadow .15s}
+.kv2-ik:hover b,.kv2-ik:focus-visible b{transform:translateY(-2px);box-shadow:0 4px 10px -4px rgba(20,30,50,.5)}
+.kv2-ik b svg{width:1.15rem;height:1.15rem}
+.kv2-ik b img{display:block;width:68%;height:68%;object-fit:contain}
 .kv2-ik b.kv-i-yok,.kv2-ik b.kv-i-orcid,.kv2-ik b.kv-i-avesis{background:#fff!important;color:#a47c2a;box-shadow:none;border:1px solid #c9a24b}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
@@ -660,7 +661,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv2-kurum{font-size:.8rem;line-height:1.4;padding-left:.6rem;border-left-width:2px}
   .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
   .kv2-bag{margin-top:.7rem;padding-top:.65rem;padding-right:1.6rem}
-  .kv2-ik{padding:0 .6rem;font-size:.7rem}.kv2-ik b{width:1.45rem;height:1.45rem;font-size:.58rem}
+  .kv2-bag{gap:.5rem .55rem}.kv2-ik b{width:1.9rem;height:1.9rem;font-size:.6rem}.kv2-ik b svg{width:1rem;height:1rem}
   .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
@@ -4150,13 +4151,20 @@ def kv_ikon(tur: str, url: str, etiket: str = "") -> str:
     return (f'<a class="kv-ikon kv-i-{tur}" href="{e(url)}" rel="noopener" target="_blank" title="{e(ad_)}" aria-label="{e(ad_)}">{simge}</a>')
 
 
+def kv_logo_img(tur: str) -> str:
+    """YÖK ve AVESİS için kurumların kendi logosu (static/img/kv-<tür>.png)."""
+    if tur not in ("yok", "avesis"):
+        return ""
+    return f'<img src="{SITE_URL}/static/img/kv-{tur}.png" alt="" loading="lazy" decoding="async">'
+
+
 def kv_ikon2(tur: str, url: str, etiket: str = "") -> str:
     """Kişi kartında marka renkli yuvarlak simge ve yanında kısa ad."""
     tur = tur if tur in KV_IKONLAR else "web"
     ad_, simge = KV_IKONLAR[tur]
     ipucu = etiket or ad_
     return (f'<a class="kv2-ik" href="{e(url)}" rel="noopener" target="_blank" title="{e(ipucu)}" aria-label="{e(ipucu)}">'
-            f'<b class="kv-i-{tur}">{simge}</b><span>{e(ad_)}</span></a>')
+            f'<b class="kv-i-{tur}">{kv_logo_img(tur) or simge}</b></a>')
 
 
 _AVESIS_PROFIL = None
