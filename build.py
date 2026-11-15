@@ -4761,7 +4761,7 @@ def gunun_makalesi_html(items) -> str:
   <p class="orij">{e(m.get('title_en', ''))}{rozetler(m)}</p>
   <p class="kunye">{e(m['authors'])} · {e(m['journal'])}{', ' + e(m['year']) if m.get('year') else ''}</p>
   <p class="alinti">{e(m['lead'])}</p>
-  <p class="gunun-git"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a> {paylas_dugmesi(m)}</p>
+  <p class="gunun-git"><a href="{entry_url(m)}">Devamını okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a> {paylas_dugmesi(m)}</p>
 </aside>"""
 
 
@@ -5011,7 +5011,7 @@ def ana_notlar_html(items) -> str:
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
                  f'<p class="pn-ozet">{e(m["lead"])}</p>'
-                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Devamı için tanıtımı okuyun →</a></p>'
+                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Devamını okuyun →</a></p>'
                  + ('<h4 class="pn-alt-baslik">Önceki günler</h4><ul class="gn-liste">'
                     + "".join(f'<li><a href="{entry_url(x)}">{e(x["title_tr"])}</a><span class="gn-alt">{e(tr_date(x["gun"]))}</span></li>'
                               for x in items[1:6])
