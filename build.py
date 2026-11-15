@@ -4228,10 +4228,10 @@ def render_akademisyen(s: str, items=None) -> str:
     bulut = kisi_bulutu(ogeler, v["makaleler"])
     if bulut:
         yan.append(bulut)
-    yan.append(kisi_haritalari(v, s, ogeler))
-    if bulut or yan[-1]:
-        yan.insert(0, '<script>var KISI_T=' + json.dumps([tr_kucuk(o["ad"]) for o in ogeler], ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ';</script>')
-        yan.append('<script>' + KISI_ETKI_JS + '</script>')
+    harita_ = kisi_haritalari(v, s, ogeler)
+    yil_, _, kav_ = harita_.partition("<h2>Kavram tarihi</h2>")  # yan sütun sırası: bulut, yıllar, ilişki ağı, kavram tarihi
+    kav_ = "<h2>Kavram tarihi</h2>" + kav_ if kav_ else ""
+    yan.append(yil_)
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
     tarih = dp_tarama_tarihi()
@@ -4250,6 +4250,11 @@ def render_akademisyen(s: str, items=None) -> str:
                    f'<script id="ag-veri" type="application/json">{veri_}</script>'
                    f'<script src="{SITE_URL}/static/js/d3-7.9.0.min.js"></script>'
                    f'<script src="{SITE_URL}/static/js/ag.js?v={surum("static/js/ag.js")}"></script>')
+    if kav_:
+        yan.insert(len(yan) - (1 if konular else 0), kav_)
+    if bulut or harita_:  # etkileşim betiği, haritaların hepsinden sonra gelir
+        yan.insert(0, '<script>var KISI_T=' + json.dumps([tr_kucuk(o["ad"]) for o in ogeler], ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ';</script>')
+        yan.insert(len(yan) - (1 if konular else 0), '<script>' + KISI_ETKI_JS + '</script>')
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <div class="fis-duzen">
