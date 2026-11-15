@@ -1423,7 +1423,7 @@ def render_baslik(k) -> str:
     kv_resim = (f'<div class="kv-monogram kv-resim" aria-hidden="true">{BASLIK_RESIM[k]}</div>' if k in BASLIK_RESIM
                 else f'<div class="kv-monogram" aria-hidden="true">{e(bas_harfler(h["ad"]))}</div>')
     body = f"""
-<p class="yol">{yol(k)}</p>
+{f'<p class="yol">{yol(k)}</p>' if ust_k else ''}
 <section class="kartvizit kv-baslik" aria-label="Künye">
   {kv_resim}
   <div class="kv-govde">
