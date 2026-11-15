@@ -567,11 +567,11 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-logo{position:absolute;top:1rem;right:1.7rem;width:34px;height:34px;border-radius:8px;opacity:.9}  /* sağ kenarı içerikle (ORCID satırı) aynı hizada */
 .kv-nokta{display:none}
 @media (max-width:560px){
-  .kartvizit{flex-direction:row;align-items:center;gap:.8rem;padding:.8rem .9rem;margin:.3rem 0 1rem;box-shadow:3px 3px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
+  .kartvizit{flex-direction:row;align-items:flex-start;gap:.8rem;padding:.8rem .9rem;margin:.3rem 0 1rem;box-shadow:3px 3px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:2.8rem;height:2.8rem;font-size:1.05rem}
   .kv-resim{width:4.6rem;height:2.8rem;padding:.15rem}
-  .kartvizit h1,.kv-baslik h1{font-size:1.3rem;padding-right:0;margin:.05rem 0 .2rem}
-  .kv-unvan{font-size:.8rem}.kv-logo{display:none}
+  .kartvizit h1,.kv-baslik h1{font-size:1.3rem;padding-right:2rem;margin:.05rem 0 .2rem}
+  .kv-unvan{font-size:.8rem;padding-right:2rem}.kv-logo{top:.6rem;right:.7rem;width:26px;height:26px}
   .kv-kurum{font-size:.76rem;line-height:1.4}.kv-br{display:none}.kv-nokta{display:inline}
   .kv-bag{margin:.45rem 0 0;padding-top:.4rem;gap:.15rem 1rem;font-size:.78rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
