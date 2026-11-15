@@ -929,7 +929,8 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:.98rem}
-.pn-ozet{font-size:.92rem;line-height:1.5;color:var(--ink-soft);margin:.6rem 0 0}
+.pn-ozet{font-size:.92rem;line-height:1.5;color:var(--ink-soft);margin:.6rem 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pano-notlar .gn-tebrik .gn-liste,.pano-notlar .gn-kart:last-child .gn-liste{max-height:34rem;overflow-y:auto;padding-right:.4rem}
 .pn-alt-baslik{font-family:var(--display);font-weight:500;font-size:1rem;margin:1.1rem 0 .4rem;color:var(--gold)}
 .pn-baslik{margin:0 0 .3rem;font-family:var(--display);font-size:1.02rem;line-height:1.3}
 .pano-notlar .gn-hepsi{display:flex;flex-wrap:wrap;gap:.2rem 1rem;margin:.5rem 0 0;padding-top:0}
@@ -5010,7 +5011,7 @@ def ana_notlar_html(items) -> str:
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
                  f'<p class="pn-ozet">{e(m["lead"])}</p>'
-                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Tanıtımı okuyun →</a></p>'
+                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Devamı için tanıtımı okuyun →</a></p>'
                  + ('<h4 class="pn-alt-baslik">Önceki günler</h4><ul class="gn-liste">'
                     + "".join(f'<li><a href="{entry_url(x)}">{e(x["title_tr"])}</a><span class="gn-alt">{e(tr_date(x["gun"]))}</span></li>'
                               for x in items[1:6])
@@ -5021,18 +5022,27 @@ def ana_notlar_html(items) -> str:
     satir = "".join(
         f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> '
         + ("doktorasını tamamladı" if x["unvan"] == "doktora" else e(UNVAN_ADI[x["unvan"]]))
-        + f'<span class="gn-alt">{e(x["tez_univ"] if x["unvan"] == "doktora" else (x["p"].get("universite") or ""))}</span></li>' for x in tb[:6])
+        + f'<span class="gn-alt">{e(x["tez_univ"] if x["unvan"] == "doktora" else (x["p"].get("universite") or ""))}</span></li>' for x in tb[:30])
     tebrik = (f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><ul class="gn-liste">{satir}</ul>'
-              f'<p class="aciklama-kisa gn-not">Bilgiler YÖK Akademik ve AVESİS kayıtlarındandır.</p>' if satir
+              if satir
               else f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><p class="gn-bos">Bu dönemde kayıt yok.</p>')
     yayim_var = any(m.get("yayim") for m in dp_veri())
     yayin = [m for m in dp_veri() if (m.get("yayim") if yayim_var else len(str(m.get("tarih") or "")) >= 10) and (m["konular"] or m["ilgili"])]
     yayin.sort(key=lambda m: m["tarih"], reverse=True)
+    yayin_ayi = ""
+    if yayim_var:  # bu ay ya da geçen ay en az üç çalışma yayımlandıysa yalnızca o ayın çalışmaları gösterilir
+        gecen = (bugun_.replace(day=1) - timedelta(days=1))
+        for y_, a_ in ((bugun_.year, bugun_.month), (gecen.year, gecen.month)):
+            o_ay = [m for m in yayin if m["tarih"][:7] == f"{y_}-{a_:02d}"]
+            if len(o_ay) >= 3:
+                yayin, yayin_ayi = o_ay, f"{AYLAR[a_ - 1]} {y_}"
+                break
+    ay_etiket = f' <span class="gn-ay">{yayin_ayi}</span>' if yayin_ayi else ""
     sat2 = ""
-    for m in yayin[:6]:
+    for m in yayin[:30]:
         yazar, dergi = dp_kunye(m)
         sat2 += f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi}</span></li>'
-    yayinlar_ = (f'<h3>Son yayımlananlar</h3><ul class="gn-liste">{sat2}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
+    yayinlar_ = (f'<h3>Son yayımlananlar{ay_etiket}</h3><ul class="gn-liste">{sat2}</ul>'
                  if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
     return (f'<div class="pano-notlar"><section class="gn-kart">{gunun}</section><section class="gn-kart gn-tebrik">{tebrik}</section>'
             f'<section class="gn-kart">{yayinlar_}</section></div>')
