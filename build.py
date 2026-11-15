@@ -580,6 +580,10 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   letter-spacing:-.01em;text-decoration:none;box-shadow:0 1px 2px rgba(20,30,50,.12);transition:background .15s,color .15s,transform .15s}
 .kv-ikonlar a.kv-ikon:hover{background:var(--accent);color:var(--gold-logo);transform:translateY(-1px)}
 .kv-ikon svg{width:1.1rem;height:1.1rem;fill:currentColor}
+.kv-ikon svg[fill="none"]{fill:none}
+.kartvizit .kv-monogram{align-self:center}
+.kartvizit h1{margin:0 0 .15rem}
+.kartvizit .kv-unvan{margin:0 0 .35rem}
 @media (max-width:560px){
   .kartvizit{flex-direction:row;align-items:flex-start;gap:.8rem;padding:.8rem .9rem;margin:.3rem 0 1rem;box-shadow:3px 3px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:2.8rem;height:2.8rem;font-size:1.05rem}
@@ -589,7 +593,10 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv-kurum{font-size:.76rem;line-height:1.4}.kv-br{display:none}.kv-nokta{display:inline}
   .kv-bag{margin:.45rem 0 0;padding-top:.4rem;gap:.15rem 1rem;font-size:.78rem}
   .kv-bayrak{width:1.6rem;height:1.6rem;left:-.4rem;top:-.4rem}
-  .kv-ikonlar{margin:.5rem 0 0;padding-top:.45rem;gap:.35rem}
+  .kartvizit{padding:.9rem 1rem .9rem 1.1rem}
+  .kartvizit h1,.kv-baslik h1{margin:0 0 .1rem}
+  .kartvizit .kv-unvan{margin:0 0 .25rem;padding-right:0}
+  .kv-ikonlar{margin:.8rem 0 0;padding-top:.7rem;gap:.45rem}
   .kv-ikonlar a.kv-ikon{width:1.9rem;height:1.9rem;font-size:.66rem}.kv-ikon svg{width:.95rem;height:.95rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
@@ -4173,8 +4180,8 @@ def render_akademisyen(s: str, items=None) -> str:
 <section class="kartvizit" aria-label="Künye">
   <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
   <div class="kv-govde">
-    <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
     <h1>{e(p["ad"])}</h1>
+    <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
     <p class="kv-kurum">{"<br class='kv-br'><span class='kv-nokta'> · </span>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
     {f'<p class="kv-ikonlar">{"".join(baglar)}</p>' if baglar else ''}
   </div>
