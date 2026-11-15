@@ -5015,7 +5015,7 @@ def ana_notlar_html(items) -> str:
         gunun = (f'<h3>Günün makalesi <span class="gn-ay">{e(gun_metni(m["gun"]))}</span></h3>'
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
-                 f'<div class="pn-ozet-kap"><p class="pn-ozet">{e(m["lead"])}</p></div>'
+                 f'<div class="pn-ozet-kap"><p class="pn-ozet">{e(m.get("summary_tr") or m["lead"])}</p></div>'
                  f'<p class="gn-hepsi pn-alt-linkler"><a href="{entry_url(m)}">Devamını okuyun →</a> '
                  f'<a href="{SITE_URL}/gunun-makalesi/">Önceki günlerin makaleleri →</a></p>')
     else:
