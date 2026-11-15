@@ -867,7 +867,7 @@ table.kisiler tbody tr:hover td:last-child{border-radius:0 8px 8px 0}
 /* Hakkında */
 .hakkinda h1{margin-bottom:.5rem}
 .hk-giris{margin:0 0 1.4rem;font-size:.95rem;line-height:1.5;max-width:none;color:var(--ink)}
-.hk-izgara{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem 1.8rem;border-top:1px solid var(--rule);padding-top:.9rem}
+.hk-izgara{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem 1.8rem;border-top:1px solid var(--rule);padding-top:.9rem}
 .hk-izgara h2{font-size:1.08rem;margin:0 0 .2rem}
 .hk-izgara p{margin:0;font-size:.88rem;line-height:1.45;color:var(--ink-soft)}
 @media (max-width:980px){.hk-izgara{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -1027,7 +1027,7 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
   table.kisiler td.k-ad{font-size:1.02rem;padding-left:0}
   table.kisiler th:first-child{padding-left:0}
   table.kisiler td.k-ad{display:block;margin-bottom:.1rem}
-  table.kisiler td:not(.k-ad){display:inline;width:auto;font-size:.88rem;color:var(--ink-soft);line-height:1.5}
+  table.kisiler td:not(.k-ad){display:inline;width:auto;font-size:.76rem;letter-spacing:-.01em;color:var(--ink-soft);line-height:1.5}
   table.kisiler td:not(.k-ad)+td::before{content:" · ";color:var(--gold)}
   table.kisiler td.k-ad::before{position:static;display:inline-block;width:auto;margin-right:.45rem}
   table.kisiler th,table.kisiler td{padding-right:0}
@@ -1795,7 +1795,17 @@ def eser_ogeleri() -> list:
         for b in liste(h.get("basliklar")):
             konu |= atalar(b)
         yazar_ad = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
-        ogeler.append({"html": eser_satiri(k), "tur": h.get("eser_turu", ""), "konu": konu, "grup": "temel",
+        yazar_html = ", ".join(bag("kisi", y) for y in liste(h.get("yazar")))
+        tur_ad_ = {"kitap": "Kitap", "kitap-bolumu": "Kitap bölümü", "makale": "Makale", "bildiri": "Bildiri", "tez": "Tez"}.get(h.get("eser_turu"), "")
+        konu_bag_ = ", ".join(f'<a class="konu-bag" href="{SITE_URL}/eserler/?konu={b_}" data-konu="{b_}">{e(FIS[("baslik", b_)]["ad"])}</a>'
+                              for b_ in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
+                              if ("baslik", b_) in FIS and not FIS[("baslik", b_)].get("ust_baslik"))
+        kunye_f = ", ".join(x for x in (e(h.get("yayin") or ""), e(h.get("yil"))) if x)
+        html_f = (eser_adi(eser_baglantisi(h) or fis_url("eser", k), h["baslik"])
+                  + (f' <span class="m-tur">{tur_ad_}</span>' if tur_ad_ else "")
+                  + f'<span class="eser-bilgi">{yazar_html + " · " if yazar_html else ""}{kunye_f}'
+                  + (f'<span class="eser-konu"> · {konu_bag_}</span>' if konu_bag_ else "") + '</span>')
+        ogeler.append({"html": html_f, "tur": h.get("eser_turu", ""), "konu": konu, "grup": "temel",
                        "yil": str(h.get("yil") or ""), "yazar": yazar_ad[0] if yazar_ad else "", "ad": h["baslik"],
                        "ara": ara_norm(h["baslik"])})
     for m in dp_veri():
@@ -5132,12 +5142,13 @@ def render_ana(items) -> str:
 ABOUT = f"""
 <article class="hakkinda">
   <h1>Hakkında</h1>
-  <p class="hk-giris">{SITE_NAME}, din felsefesine dair Türkçe bir başvuru kaynağı olarak hazırlanmaktadır. Sitede din felsefesi literatürünün ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde yer almaktadır. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makale Türkçe tanıtımıyla öne çıkarılmaktadır. Tanıtımlar makalenin iddiasını, yöntemini ve literatürdeki yerini aktarır, makalenin yerine geçmez. Her kayıtta özgün metne bağlantı bulunur.</p>
+  <p class="hk-giris">{SITE_NAME}, Türkiye'de din felsefesi alanında çalışanlar için hazırlanmış bir başvuru kaynağıdır. Sitede alanın ana başlıkları, bu başlıklara bağlı terimler, düşünürler ve eserler birbirine bağlantılı fişler hâlinde sunulmaktadır. Türkiye akademisindeki din felsefecileri ve eserleri, danışmanlığını yaptıkları tezler ve din felsefesi makalesi yayımlayan dergiler ayrı sayfalarda listelenmekte, Harita sayfasında ise alan, ilişki ağı, kavram tarihi, kelime bulutu ve sayılarla bir bütün olarak gösterilmektedir. Ayrıca her gün din felsefesi dergilerinde yayımlanmış bir makalenin Türkçe özeti Günün makalesi olarak öne çıkarılır. Özetler makalenin yerine geçmez, her kayıtta özgün metne bağlantı bulunur.</p>
   <div class="hk-izgara">
-    <section><h2>Editörlük</h2><p><a href="https://abdullahakgul.com" rel="noopener">{EDITOR}</a>, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
-    <section><h2>Atıf</h2><p>Eser fişlerinde ve makale tanıtımlarında eserin kendi künyesine atıf yapılması önerilir. Sitedeki bir fişe atıf için önerilen biçim: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
+    <section><h2>Editör</h2><p><a href="https://abdullahakgul.com" rel="noopener">{EDITOR}</a>, Erciyes Üniversitesi İlahiyat Fakültesi, Din Felsefesi Anabilim Dalı.</p></section>
+    <section><h2>Kaynaklar</h2><p>Kişi, unvan ve kurum bilgileri YÖK Akademik ve AVESİS kayıtlarından, makale bilgileri DergiPark ve ORCID'den, tez bilgileri Ulusal Tez Merkezi'nden alınmaktadır. Dergi bilgileri DergiPark sayfalarından her gün yenilenir.</p></section>
+    <section><h2>Atıf</h2><p>Eser fişlerinde ve makale özetlerinde eserin kendi künyesine atıf yapılması önerilir. Sitedeki bir fişe atıf için önerilen biçim: "Fişin adı". <i>dinfelsefesi.com.tr</i>, ed. {EDITOR}. Son güncelleme. Erişim tarihi. Adres.</p></section>
     <section><h2>Düzeltme ve öneriler</h2><p>Fişlerdeki bir yanlış ya da eksik, Türkiye akademisi listesine dair bir düzeltme veya yeni bir öneri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></section>
-    <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">makale tanıtımları</a>.</p></section>
+    <section><h2>Veriler</h2><p>Kayıtlar yazılımların okuyabileceği biçimde de sunulmaktadır: <a href="{SITE_URL}/api/fisler.json">fişler</a>, <a href="{SITE_URL}/api/makaleler.json">günün makaleleri</a>.</p></section>
   </div>
 </article>"""
 
