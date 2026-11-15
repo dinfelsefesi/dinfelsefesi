@@ -916,6 +916,21 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-basliklar{margin:1.2rem 0 0;font-family:var(--sans);font-size:.84rem;line-height:1.9;color:var(--ink-soft)}
 .ag-basliklar span{font-weight:600;margin-right:.3rem}
 /* Ana sayfa: karşılama, okumaya başlangıç, içindekiler */
+.pano-ust{padding:.6rem 0 .2rem}
+.pano-ust h1{font-size:2.1rem;margin:0 0 .4rem}
+.pano-ust p{margin:0 0 .3rem;color:var(--ink-soft);font-size:1.02rem;line-height:1.45}
+.pano-ust .durum-satiri{font-family:var(--sans);font-size:.86rem;font-style:normal;letter-spacing:.02em}
+.pano-kapilar{grid-template-columns:repeat(6,minmax(0,1fr));gap:.8rem;margin:1rem 0}
+.pano-kapilar .hk-ad{padding:.5rem .7rem .6rem;font-size:1.05rem}
+.pano-notlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0 0 1.4rem}
+.pano-notlar .gn-kart{padding:1rem 1.1rem}
+.pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
+.pano-notlar .gn-liste li{padding:.35rem 0}
+.pano-notlar .gn-liste a{font-size:.98rem}
+.pn-baslik{margin:0 0 .3rem;font-family:var(--display);font-size:1.02rem;line-height:1.3}
+.pano-notlar .gn-hepsi{display:flex;flex-wrap:wrap;gap:.2rem 1rem;margin:.5rem 0 0;padding-top:0}
+@media (max-width:900px){.pano-kapilar{grid-template-columns:repeat(3,minmax(0,1fr))}.pano-notlar{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.pano-kapilar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .karsilama{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem 4rem;align-items:center;padding-block:1rem 1rem}
 .karsilama h1{font-size:2.55rem;margin-bottom:.8rem}
 .karsilama p{font-size:1.04rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem}
@@ -4942,6 +4957,73 @@ def akademide_bu_ay_html() -> str:
             f'</div></section>')
 
 
+def _kapi_svg(ic: str) -> str:
+    return f'<svg viewBox="0 0 320 160" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">{ic}</svg>'
+
+
+_A, _G, _I = "var(--accent)", "var(--gold)", "var(--ink-soft)"
+ANA_KAPI_RESIM = {
+    "basliklar": _kapi_svg(
+        "".join(f'<circle cx="86" cy="{y}" r="9" fill="{c}"/><rect x="108" y="{y - 7}" width="{w}" height="14" rx="3" fill="{c}" fill-opacity=".55"/>'
+                for y, w, c in [(40, 120, _A), (80, 96, _G), (120, 136, _A)])),
+    "kisiler": _kapi_svg(
+        "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{c}"/><path d="M{x - 2.2 * r} 128 A{2.2 * r} {2.2 * r} 0 0 1 {x + 2.2 * r} 128 Z" fill="{c}" fill-opacity=".85"/>'
+                for x, y, r, c in [(160, 60, 17, _A), (92, 74, 12, _G), (228, 74, 12, _I)])),
+    "eserler": _kapi_svg(
+        "".join(f'<rect x="{x}" y="{130 - h}" width="{w}" height="{h}" rx="3" fill="{c}" fill-opacity="{o}"/>'
+                for x, w, h, c, o in [(72, 28, 84, _A, 1), (104, 24, 100, _G, .9), (132, 30, 76, _A, .6), (166, 26, 96, _I, .6), (196, 30, 82, _G, 1), (230, 24, 90, _A, .8)])
+        + f'<path d="M60 134 H260" stroke="{_I}" stroke-opacity=".5" stroke-width="1.6"/>'),
+    "tezler": _kapi_svg(
+        f'<path d="M160 36 L252 74 L160 112 L68 74 Z" fill="{_A}"/><path d="M104 96 V124 Q160 146 216 124 V96 L160 118 Z" fill="{_A}" fill-opacity=".7"/>'
+        f'<path d="M252 74 V120" stroke="{_G}" stroke-width="3"/><circle cx="252" cy="124" r="6" fill="{_G}"/>'),
+    "dergiler": _kapi_svg(
+        f'<rect x="126" y="28" width="104" height="104" rx="5" fill="{_G}" fill-opacity=".55"/><rect x="108" y="36" width="104" height="104" rx="5" fill="{_A}"/>'
+        f'<rect x="108" y="36" width="14" height="104" rx="3" fill="{_G}"/>'
+        + "".join(f'<rect x="134" y="{y}" width="{w}" height="6" rx="3" fill="#fff" fill-opacity=".85"/>' for y, w in [(58, 60), (74, 44), (90, 56), (106, 36)])),
+    "harita": HARITA_RESIM["ag"],
+}
+ANA_KAPILAR = [("basliklar", "Başlıklar", "/basliklar/"), ("kisiler", "Kişiler", "/kisiler/"), ("eserler", "Eserler", "/eserler/"),
+               ("tezler", "Tezler", "/tezler/"), ("dergiler", "Dergiler", "/dergiler/"), ("harita", "Harita", "/harita/")]
+
+
+def ana_kapilar_html() -> str:
+    return ('<div class="harita-kartlar pano-kapilar">' + "".join(
+        f'<a class="harita-kart harita-gorsel" href="{SITE_URL}{u}"><span class="hk-resim">{ANA_KAPI_RESIM[k]}</span>'
+        f'<span class="hk-ad">{a}</span></a>' for k, a, u in ANA_KAPILAR) + '</div>')
+
+
+def ana_notlar_html(items) -> str:
+    """Ana sayfada üç kısa not kutusu: günün makalesi, tebrikler, son yayımlananlar."""
+    from datetime import date
+    bugun_ = date.fromisoformat(bugun())
+    if items:
+        m = items[0]
+        gunun = (f'<h3>Günün makalesi <span class="gn-ay">{e(gun_metni(m["gun"]))}</span></h3>'
+                 f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
+                 f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
+                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Öncekiler →</a></p>')
+    else:
+        gunun = '<h3>Günün makalesi</h3><p class="gn-bos">Henüz kayıt yok.</p>'
+    tb = tebrikler()
+    satir = "".join(
+        f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> '
+        + ("doktorasını tamamladı" if x["unvan"] == "doktora" else e(UNVAN_ADI[x["unvan"]]))
+        + f'<span class="gn-alt">{e(x["tez_univ"] if x["unvan"] == "doktora" else (x["p"].get("universite") or ""))}</span></li>' for x in tb[:3])
+    tebrik = (f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><ul class="gn-liste">{satir}</ul>' if satir
+              else f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><p class="gn-bos">Bu dönemde kayıt yok.</p>')
+    yayim_var = any(m.get("yayim") for m in dp_veri())
+    yayin = [m for m in dp_veri() if (m.get("yayim") if yayim_var else len(str(m.get("tarih") or "")) >= 10) and (m["konular"] or m["ilgili"])]
+    yayin.sort(key=lambda m: m["tarih"], reverse=True)
+    sat2 = ""
+    for m in yayin[:3]:
+        yazar, dergi = dp_kunye(m)
+        sat2 += f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi}</span></li>'
+    yayinlar_ = (f'<h3>Son yayımlananlar</h3><ul class="gn-liste">{sat2}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
+                 if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
+    return (f'<div class="pano-notlar"><section class="gn-kart">{gunun}</section><section class="gn-kart gn-tebrik">{tebrik}</section>'
+            f'<section class="gn-kart">{yayinlar_}</section></div>')
+
+
 def render_ana(items) -> str:
     say = {t: sum(1 for (x, _) in FIS if x == t) for t in KLASOR}
     tr_dosya = CONTENT / "turkiye_akademisi.yaml"
@@ -4949,18 +5031,13 @@ def render_ana(items) -> str:
     durum = (f'Şimdilik {len(ana_basliklar())} ana başlık, {say["terim"]} terim, {say["kisi"]} düşünür ve {say["eser"]} eser fişi yer almaktadır'
              + (f'. Türkiye akademisi listesinde {tr_say} akademisyen bulunmaktadır.' if tr_say else '.'))
     body = f"""
-<section class="karsilama">
-  <div class="karsilama-metin">
+<section class="pano-ust">
   <h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
-  <p>Din felsefesinin temel problemleri birer okuma metniyle ele alınır, terimler, düşünürler ve eserler de bu metinlere bağlı fişlerle sunulur. Sitede ayrıca Türkiye'deki <a href="{SITE_URL}/kisiler/">din felsefesi akademisyenlerinin</a> listesi, din felsefesi makalesi yayımlayan <a href="{SITE_URL}/dergiler/">dergiler</a> ve DergiPark'ta yayımlanmış <a href="{SITE_URL}/eserler/">çalışmalar</a> yer alır. <a href="{SITE_URL}/gunun-makalesi/">Günün makalesi</a> bölümünde her gün bir makale, kendi özetine dayanan kısa bir tanıtımla öne çıkarılır.</p>
-  <p class="durum-satiri">{durum}</p>
-  <p class="karsilama-git"><a href="{SITE_URL}/basliklar/">Başlıklara göz atın →</a> <a href="{SITE_URL}/ag/">İlişki ağını açın →</a></p>
-  </div>
-  {gunun_makalesi_html(items)}
+  <p>Din felsefesinin temel problemleri okuma metinleriyle, terimler, düşünürler ve eserler de bu metinlere bağlı fişlerle sunulur.</p>
+  <p class="durum-satiri">{len(ana_basliklar())} başlık · {say["terim"]} terim · {say["kisi"]} düşünür · {say["eser"]} eser · {tr_say} akademisyen</p>
 </section>
-<div class="susleme" aria-hidden="true"><span>❦</span></div>
-{akademide_bu_ay_html()}
-
+{ana_kapilar_html()}
+{ana_notlar_html(items)}
 """
     # Ana sayfanın paylaşım görseli sitenin genel kartıdır (bağlantı paylaşıldığında sitenin kendisi tanıtılır).
     gorsel = f"{SITE_URL}/paylas/site.png"
