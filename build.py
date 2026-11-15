@@ -776,6 +776,10 @@ aside.yan ul.calisan-liste li .say{font-size:.8rem;color:var(--ink-soft);font-va
 ul.eser-liste{list-style:none;margin:0;padding:0;max-width:52rem}
 ul.eser-liste li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
 ul.eser-liste li[hidden]{display:none}
+ul.eser-numarali{counter-reset:es}
+ul.eser-numarali li{counter-increment:es;position:relative;padding-left:2.6rem}
+ul.eser-numarali li::before{content:counter(es) ".";position:absolute;left:0;top:.7rem;width:2.2rem;text-align:right;font-family:var(--sans);font-size:.8rem;color:var(--gold)}
+mark.ara-vurgu{background:rgba(196,138,36,.3);color:inherit;border-radius:2px;padding:0 .08em}
 .eser-konu{font-style:italic}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
 .eser-ad{font-weight:600;color:var(--ink);text-decoration:none;font-size:.98rem;line-height:1.4}
@@ -1661,7 +1665,7 @@ def eser_ogeleri() -> list:
         yazar, dergi = dp_kunye(m)
         tur = DP_TUR_ESER[m["tur"]]
         konu = set(m["konular"] or m["ilgili"])
-        etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]])}</span>' if m["tur"] else ""
+        etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]] if m["tur"] else "Makale")}</span>'
         etiket += kaynak_isareti(m)
         konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
@@ -2306,7 +2310,7 @@ def render_eserler() -> str:
             f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec secim-kutu secim-izgara" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
-            f'<ul class="eser-liste">{temel}{turkce}</ul>'
+            f'<ul class="eser-liste eser-numarali">{temel}{turkce}</ul>'
             f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
     return page(f"Eserler · {SITE_NAME}", body + ESER_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
@@ -2339,11 +2343,42 @@ ESER_JS = """<script>
       if(h&&h.classList.contains('eser-grup-not')){nt=h; h=h.previousElementSibling;}
       u.hidden=!c; if(nt)nt.hidden=!c; if(h&&h.classList.contains('eser-grup')){h.hidden=!c; h.querySelector('.eser-grup-say').textContent=c;}});
     document.querySelector('.eser-bos').hidden=n>0;
+    vurgula(q);
     if(yaz){
       var p=new URLSearchParams(); if(konu)p.set('konu',konu); if(tur)p.set('tur',tur); if(g.value.trim())p.set('ara',g.value.trim());
       if(alan){p.set('sirala',alan); if(yon<0)p.set('yon','azalan');}
       try{history.replaceState(null,'',location.pathname+(p.toString()?'?'+p:''));}catch(_){}
     }
+  }
+  var isaretli=[];
+  function norm(t){var r='';for(var i=0;i<t.length;i++){var c=kucuk(t.charAt(i));r+=c.length===1?c:t.charAt(i).toLowerCase().charAt(0);}return r;}
+  function vurguTemizle(){
+    isaretli.forEach(function(li){li.querySelectorAll('mark.ara-vurgu').forEach(function(m){var p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});});
+    isaretli=[];
+  }
+  function vurgula(q){
+    vurguTemizle();
+    if(q.length<2) return;
+    lis.forEach(function(li){
+      if(li.hidden) return;
+      var bulundu=false;
+      li.querySelectorAll('.eser-ad,.eser-bilgi').forEach(function(kap){
+        var w=document.createTreeWalker(kap,NodeFilter.SHOW_TEXT,null), dugumler=[], d;
+        while((d=w.nextNode())) dugumler.push(d);
+        dugumler.forEach(function(d){
+          var t=d.nodeValue, n=norm(t); if(n.length!==t.length||n.indexOf(q)<0) return;
+          var f=document.createDocumentFragment(), son=0, k;
+          while((k=n.indexOf(q,son))>-1){
+            if(k>son) f.appendChild(document.createTextNode(t.slice(son,k)));
+            var m=document.createElement('mark'); m.className='ara-vurgu'; m.textContent=t.slice(k,k+q.length); f.appendChild(m);
+            son=k+q.length;
+          }
+          if(son<t.length) f.appendChild(document.createTextNode(t.slice(son)));
+          d.parentNode.replaceChild(f,d); bulundu=true;
+        });
+      });
+      if(bulundu) isaretli.push(li);
+    });
   }
   function sirala(){
     var r=lis.slice();
@@ -2743,6 +2778,7 @@ def avesis_kunye(kaynak: str, yil: str) -> str:
 def yok_kunye(kaynak: str, yil: str, bolum: str) -> str:
     """YÖK Akademik liste satırı: dizin etiketleri ve baskı/sayfa sayısı çıkarılır. Kitap bölümlerinde YÖK yalnızca kitabın
     adını verdiği için künye 'kitabın içinde, ss. ...' diye başlar."""
+    kaynak = html.unescape(kaynak or "")  # YÖK kaynak metninde &amp; gibi HTML işaretleri gelir
     k = re.sub(r"\s*\((Uluslararası|Ulusal)\b.*$", "", kaynak or "")  # YÖK etiketleri (iç içe parantez içerebilir)
     k = re.sub(r"\s*\([^()]*\)\s*$", "", k)
     sayfa = (re.findall(r"Bölüm sayfa:\s*([\d\s\-–]+)", k) or [""])[0].strip(" -–")
@@ -2813,6 +2849,9 @@ def avesis_veri() -> dict:
         # Aynı DOI kişinin birden çok yayınına verilmişse DOI yalnızca adı DOI kaydının adıyla örtüşen yayında kalır
         doi_say = Counter((y.get("doi") or "").lower() for y in x["yayinlar"] if y.get("doi"))
         for y in x["yayinlar"]:
+            # kaynaklardaki HTML işaretleri (&amp;, &nbsp;) düz metne çevrilir; yoksa sayfada &Amp; gibi görünür
+            y = dict(y, **{a_: re.sub(r"\s+", " ", html.unescape(html.unescape(y[a_])).replace("\xa0", " ")).strip()
+                           for a_ in ("baslik", "kaynak") if isinstance(y.get(a_), str)})
             d_ = (y.get("doi") or "").lower()
             if d_ and ("xxx" in d_ or any(baslik_anahtari(h) in baslik_anahtari(y["baslik"]) for h in hatali.get(ad_, [])) or
                        doi_say[d_] > 1 and baslik_anahtari((kunye.get(d_) or {}).get("baslik") or "") != baslik_anahtari(y["baslik"])):
@@ -2850,7 +2889,7 @@ def avesis_veri() -> dict:
                 bul, _ = kelime_basliklari(kelimeler, kurallar, genel)
                 if bul:
                     konular = sorted(bul)
-            baslik = e_.get("baslik") or baslik_standart(baslik_temizle(y["baslik"], ad_))
+            baslik = e_.get("baslik") or baslik_standart(baslik_temizle(html.unescape(y["baslik"]), ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
                            yok_kunye_ek(y, yok_kunye(y["kaynak"], y["yil"], y["bolum"])) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
