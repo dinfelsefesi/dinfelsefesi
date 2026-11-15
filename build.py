@@ -764,7 +764,9 @@ aside.yan ul.calisan-liste li .say{font-size:.8rem;color:var(--ink-soft);font-va
 .harita-alt a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
 .ust-etiket a{color:inherit;text-decoration:none}
 .harita-kartlar{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;margin:1.4rem 0}
-.harita-kartlar.sabit{grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.harita-kartlar.sabit{grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.8rem}
+.harita-kartlar.sabit .hk-ad{padding:.5rem .7rem .6rem;font-size:1.02rem;line-height:1.25}
+@media (max-width:520px){.harita-kartlar.sabit{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.harita-kartlar.sabit .hk-ad{font-size:.95rem;padding:.45rem .6rem .55rem}}
 .harita-kart{display:block;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--ink)}
 .harita-kart:hover{border-color:var(--gold-logo);border-top-color:var(--accent)}
 .hk-ad{display:block;font-family:var(--display);font-size:1.3rem;margin-bottom:.35rem}
