@@ -764,6 +764,7 @@ aside.yan ul.calisan-liste li .say{font-size:.8rem;color:var(--ink-soft);font-va
 .harita-alt a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
 .ust-etiket a{color:inherit;text-decoration:none}
 .harita-kartlar{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;margin:1.4rem 0}
+.harita-kartlar.sabit{grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
 .harita-kart{display:block;background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:8px;padding:1rem 1.1rem;text-decoration:none;color:var(--ink)}
 .harita-kart:hover{border-color:var(--gold-logo);border-top-color:var(--accent)}
 .hk-ad{display:block;font-family:var(--display);font-size:1.3rem;margin-bottom:.35rem}
@@ -1316,7 +1317,7 @@ def harita_html() -> str:
             f'<a class="harita-kart harita-gorsel" href="{fis_url("baslik", k)}">'
             f'<span class="hk-resim">{BASLIK_RESIM.get(k, "")}</span>'
             f'<span class="hk-ad">{e(FIS[("baslik", k)]["ad"])}</span></a>' for k in ks)
-        bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2><div class="harita-kartlar">{kartlar}</div>')
+        bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2><div class="harita-kartlar sabit">{kartlar}</div>')
     return "".join(bolumler)
 
 
