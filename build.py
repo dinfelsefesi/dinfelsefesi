@@ -2309,6 +2309,33 @@ TEZ_JS = """<script>
   var f={tur:'',durum:''}, alan='yil', yon=-1;
   var kucuk=function(s){return s.replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase().replace(/[âäāàá]/g,'a').replace(/[êēëè]/g,'e').replace(/[îïīìı]/g,'i').replace(/[ôōòö]/g,'o').replace(/[ûūùü]/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c').replace(/[\'`´‘’ʻʼʽʾʿ]/g,'').replace(/[-‐–]/g,' ').replace(/([a-z])\1+/g,'$1').replace(/\bibn[iu]l?\b/g,'ibn').replace(/\bibnul/g,'ibn ');};
   var kar=function(a,b){return a.localeCompare(b,'tr',{sensitivity:'base'});};
+  var isaretli=[];
+  function norm(t){var r='';for(var i=0;i<t.length;i++){var c=kucuk(t.charAt(i));r+=c.length===1?c:t.charAt(i).toLowerCase().charAt(0);}return r;}
+  function vurgula(q){
+    isaretli.forEach(function(li){li.querySelectorAll('mark.ara-vurgu').forEach(function(m){var p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});});
+    isaretli=[];
+    if(q.length<2) return;
+    lis.forEach(function(li){
+      if(li.hidden) return;
+      var bulundu=false;
+      li.querySelectorAll('.tez-ad,.tez-kunye,.tez-yer').forEach(function(kap){
+        var w=document.createTreeWalker(kap,NodeFilter.SHOW_TEXT,null), dugumler=[], d;
+        while((d=w.nextNode())) dugumler.push(d);
+        dugumler.forEach(function(d){
+          var t=d.nodeValue, n=norm(t); if(n.length!==t.length||n.indexOf(q)<0) return;
+          var f=document.createDocumentFragment(), son=0, k;
+          while((k=n.indexOf(q,son))>-1){
+            if(k>son) f.appendChild(document.createTextNode(t.slice(son,k)));
+            var m=document.createElement('mark'); m.className='ara-vurgu'; m.textContent=t.slice(k,k+q.length); f.appendChild(m);
+            son=k+q.length;
+          }
+          if(son<t.length) f.appendChild(document.createTextNode(t.slice(son)));
+          d.parentNode.replaceChild(f,d); bulundu=true;
+        });
+      });
+      if(bulundu) isaretli.push(li);
+    });
+  }
   function uygula(yaz){
     var q=kucuk(g.value.trim()), n=0, say={tur:{'':0},durum:{'':0}};
     lis.forEach(function(li){
@@ -2327,6 +2354,7 @@ TEZ_JS = """<script>
     document.getElementById('tez-say').textContent=n+' tez';
     ul.style.setProperty('--nog',(String(n).length*0.4+0.55).toFixed(2)+'rem');
     document.querySelector('.eser-bos').hidden=n>0;
+    vurgula(q);
     if(yaz){var p=new URLSearchParams(); if(g.value.trim())p.set('ara',g.value.trim()); if(f.tur)p.set('tur',f.tur); if(f.durum)p.set('durum',f.durum);
       history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():''));}
   }
