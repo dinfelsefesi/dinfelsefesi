@@ -881,8 +881,7 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-sifirla{font:inherit;font-style:italic;font-size:.95rem;color:var(--accent-ink);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
 .ag-kap{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--card);overflow:hidden}
 .ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
-.akademi-ag{margin:2.2rem 0 1.4rem}
-.akademi-ag>h2{margin:0 0 .5rem}
+.ag-sade-kap .ag-tuval{height:260px;min-height:0}
 .ag-tuval:active{cursor:grabbing}
 .ag-tuval svg{display:block;width:100%;height:100%}
 .ag-tuval.ag-yukleniyor{background:repeating-linear-gradient(90deg,transparent 0 40%,rgba(0,0,0,.03) 50%,transparent 60% 100%);background-size:200% 100%;animation:ag-yuk 1.2s linear infinite}
@@ -4009,11 +4008,14 @@ def render_akademisyen(s: str, items=None) -> str:
     hakkinda = "".join(f'<li>{satir_ici(x["kunye"])}' + (f' <a class="dis" href="{e(x["baglanti"])}" rel="noopener" target="_blank">↗</a>'
                                                            if x.get("baglanti") else "") + "</li>" for x in p.get("hakkinda") or [])
     hakkinda = f'<section class="akademi-hakkinda"><h2>Hakkında yazılanlar</h2><ul>{hakkinda}</ul></section>' if hakkinda else ""
-    ag_bolumu = ""
     if items is not None and f"kisi-tr/{s}" in {d["id"] for d in ag_tam(items)["dugumler"]}:
-        ag_bolumu = ('<section class="akademi-ag" id="iliski-agi"><h2>İlişki ağı</h2>'
-                     '<p class="aciklama-kisa">Kişinin eserleri ve makaleleri, bunların bağlı olduğu başlık ve terimler, başlıklarında adı geçen düşünürler '
-                     've ortak yazarlar.</p>' + ag_araci(ag_alt_veri(ag_tam(items), f"{s}", "kisi-tr")) + '</section>')
+        # yan sütunda en sade haliyle: süzgeç, arama ve açıklama yok; adlar üzerine gelince görünür, düğüme basınca sayfası açılır
+        veri_ = json.dumps(ag_alt_veri(ag_tam(items), s, "kisi-tr"), ensure_ascii=False).replace("</", "<\\/")
+        yan.insert(len(yan) - (1 if konular else 0),
+                   '<h2>İlişki ağı</h2><div class="ag-kap ag-sade-kap"><div id="ag" class="ag-tuval" data-sade></div></div>'
+                   f'<script id="ag-veri" type="application/json">{veri_}</script>'
+                   f'<script src="{SITE_URL}/static/js/d3-7.9.0.min.js"></script>'
+                   f'<script src="{SITE_URL}/static/js/ag.js?v={surum("static/js/ag.js")}"></script>')
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <section class="kartvizit" aria-label="Künye">
@@ -4031,7 +4033,6 @@ def render_akademisyen(s: str, items=None) -> str:
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>
-{ag_bolumu}
 <p class="aciklama-kisa akademi-not">{"Listeye elle eklenmiştir. " + ("Tanıtım, unvan" if p.get("tanitim") else "Unvan") + " ve kurum bilgisi " + e(p.get("kurum_kaynagi") or "kamuya açık kaynaklara") + " göre, makaleler ve başlıklar" if p.get("elle") else "Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar"} DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""}, ORCID kaydındaki DOI'li yayınlara ve AVESİS ya da YÖK Akademik sayfasına göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır; AVESİS ve YÖK'ten gelen yayınlardan anahtar kelimesine ulaşılamayanlarınki adlarına bakılarak elle verilmiştir.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] and not p.get("elle") else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>"""
     desc = f'{p["ad"]}, {p.get("unvan", "")}, {p.get("universite", "")}. Din felsefesi alanındaki makaleleri ve çalıştığı konular.'
     kisi = {"@type": "Person", "name": p["ad"], "url": akademi_url(s)}

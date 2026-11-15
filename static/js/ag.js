@@ -6,6 +6,8 @@
   var veriEl = document.getElementById("ag-veri");
   if (!kap || !veriEl || !window.d3) return;
   var V0 = JSON.parse(veriEl.textContent);
+  // sade görünüm (kişi sayfası yan sütunu): panel, süzgeç ve arama yok; adlar üzerine gelince görünür, düğüme basınca sayfası açılır
+  var sade = kap.hasAttribute("data-sade");
   var prm = new URLSearchParams(location.search);
   // Genel ağda makaleler (küçük noktalar) ayrı dosyadadır; yalnızca istenince yüklenir. Sayfa böylece hızlı açılır.
   var ekIste = V0.ek && (prm.get("eserler") === "1" || (prm.get("odak") || "").indexOf("dp/") === 0);
@@ -87,6 +89,7 @@
   var yakinlik = d3.zoom().scaleExtent([0.25, 6]).on("zoom", function (e) {
     g.attr("transform", e.transform); olcek = e.transform.k; etiketleriAyarla();
   });
+  if (sade) yakinlik.filter(function (e) { return e.type !== "wheel" && e.type !== "dblclick"; });
   svg.call(yakinlik).on("dblclick.zoom", null);
 
   dugum.call(d3.drag()
@@ -131,6 +134,7 @@
   function etiketleriAyarla() {
     var k = odakKumesi();
     etiket.classed("goster", function (d) {
+      if (sade) return !!(uzerinde && d.id === uzerinde.id) || (!uzerinde && !!d.merkez);
       if (k) return k.has(d.id);
       if (aramaEslesen) return aramaEslesen.has(d.id);
       // başlık ağlarında (V.alt) kişilerin ve fişi olan eserlerin adları daha erken görünür
@@ -140,9 +144,13 @@
   }
   dugum.on("mouseenter", function (e, d) { uzerinde = d; boya(); })
     .on("mouseleave", function () { uzerinde = null; boya(); })
-    .on("click", function (e, d) { e.stopPropagation(); sec(d); })
-    .on("keydown", function (e, d) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sec(d); } });
-  svg.on("click", function () { sec(null); });
+    .on("click", function (e, d) {
+      e.stopPropagation();
+      if (sade) { if (d.url) { if (d.dis) window.open(d.url, "_blank", "noopener"); else location.href = d.url; } return; }
+      sec(d);
+    })
+    .on("keydown", function (e, d) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); if (sade) { if (d.url) location.href = d.url; } else sec(d); } });
+  if (!sade) svg.on("click", function () { sec(null); });
 
   // Bilgi paneli
   var panel = document.getElementById("ag-panel");
@@ -264,7 +272,7 @@
   });
 
   // Adres çubuğunda ?odak=tur/kimlik varsa o düğümle başla
-  var odak = new URLSearchParams(location.search).get("odak");
+  var odak = sade ? null : new URLSearchParams(location.search).get("odak");
   var ilkKez = true;
   function hazir() {
     if (!ilkKez) return; ilkKez = false;
