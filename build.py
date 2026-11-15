@@ -1271,78 +1271,51 @@ def alt_dolu(a) -> bool:
     return ("baslik", a) in FIS and bool(bagli_fisler(a) or FIS[("baslik", a)].get("_govde"))
 
 
-BASLIK_RENK = ["#23446e", "#86641e", "#a84a14", "#2f6b4f", "#5c6370", "#7a3f86", "#1f6b78", "#9b2c4a"]
-
-
-def baslik_sozcukleri(k: str, en_cok: int = 11) -> list:
-    """Başlığa bağlı çalışmaların başlıklarında ve anahtar kelimelerinde sık geçen kelimeler (başlığın kendi adındaki kelimeler hariç).
-    Çalışma azsa başlığın terimleri ve özet cümlesi de kullanılır."""
-    if _KB_SAYAC is None:
-        kelime_verisi()
-    h = FIS[("baslik", k)]
-    kume = {k} | set(COCUK.get(k, []))
-    ad_kokleri = set(kb_kokler(h["ad"], []))
-    sayac, bicim = Counter(), {}
-    def say(bas, kel=(), agirlik=1):
-        for kok, b_ in kb_kokler(bas, kel).items():
-            if kok in ad_kokleri:
-                continue
-            sayac[kok] += agirlik
-            bicim.setdefault(kok, Counter())[b_] += 1
-    for m in dp_veri():
-        if kume & set((m.get("konular") or []) + (m.get("ilgili") or [])):
-            say(m["baslik"], m.get("kelimeler") or [])
-    for t_, x in bagli_fisler(k):
-        if t_ == "eser":
-            say(FIS[("eser", x)]["baslik"])
-    if len(sayac) < 8:
-        for t_, x in bagli_fisler(k):
-            if t_ == "terim":
-                say(FIS[("terim", x)]["ad"], (), 2)
-        say(re.sub(r"<[^>]+>", "", satir_ici(h.get("ozet") or "")), (), 1)
-        for a_ in liste(h.get("alt_basliklar")):
-            if ("baslik", a_) in FIS:
-                say(FIS[("baslik", a_)]["ad"], (), 1)
-    ust = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:en_cok]
-    return [(bicim[kk].most_common(1)[0][0], n) for kk, n in ust]
-
-
-def baslik_bulut_svg(sozcukler, tohum: int = 0) -> str:
-    """Kart görseli: kelimelerden küçük, sabit (JS gerektirmeyen) bir bulut; Harita kartlarıyla aynı çerçevede."""
-    if not sozcukler:
-        return ""
-    W, H = 320, 160
-    en, az = sozcukler[0][1], sozcukler[-1][1]
-    kutular, ogeler_ = [], []
-    for i, (w, n) in enumerate(sozcukler):
-        oran = 1.0 if en == az else math.sqrt((n - az) / (en - az))
-        pt = round(14 + oran * (30 if i == 0 else 22))
-        gen = max(len(w), 2) * pt * 0.52 + 4
-        yuk = pt * 0.86
-        for t in range(0, 4000):
-            a_ = t * 0.2 + tohum
-            r_ = 1.5 * t * 0.2
-            x = W / 2 + r_ * math.cos(a_) * 1.7 - gen / 2
-            y = H / 2 + r_ * math.sin(a_) - yuk / 2
-            if x < 4 or y < 4 or x + gen > W - 4 or y + yuk > H - 4:
-                continue
-            if all(x + gen < bx or bx + bw < x or y + yuk < by or by + bh < y for bx, by, bw, bh in kutular):
-                kutular.append((x, y, gen, yuk))
-                ogeler_.append(f'<text x="{x + gen / 2:.1f}" y="{y + yuk / 2:.1f}" text-anchor="middle" dominant-baseline="central" font-size="{pt}" '
-                               f'fill="{BASLIK_RENK[(i * 5 + 3) % len(BASLIK_RENK)]}">{e(w)}</text>')
-                break
-    return (f'<svg viewBox="0 0 {W} {H}" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" font-family="var(--display)" '
-            f'font-weight="600">{"".join(ogeler_)}</svg>')
+BASLIK_RESIM = {
+    "din-felsefesi-tanim-yontem-tarih": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 120 H290\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.5\" stroke-width=\"1.4\" fill=\"none\" /><circle cx=\"52\" cy=\"120\" r=\"5\" fill=\"var(--ink-soft)\" fill-opacity=\"1\"/><circle cx=\"100\" cy=\"120\" r=\"7\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"150\" cy=\"120\" r=\"9\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"205\" cy=\"120\" r=\"11\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"262\" cy=\"120\" r=\"13\" fill=\"var(--accent)\" fill-opacity=\"1\"/><rect x=\"110\" y=\"36\" width=\"48\" height=\"46\" rx=\"3\" fill=\"var(--accent)\" fill-opacity=\"1\"/><rect x=\"162\" y=\"36\" width=\"48\" height=\"46\" rx=\"3\" fill=\"var(--gold)\" fill-opacity=\"1\"/><path d=\"M158 36 V82\" stroke=\"#fff\" stroke-opacity=\"0.9\" stroke-width=\"2\" fill=\"none\" /></svg>"),
+    "tanri-tasavvurlari": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"15\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"80\" r=\"34\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.4\" stroke-opacity=\"0.5\"/><circle cx=\"160\" cy=\"80\" r=\"56\" fill=\"none\" stroke=\"var(--ink-soft)\" stroke-width=\"1.2\" stroke-opacity=\"0.35\"/><circle cx=\"160\" cy=\"24\" r=\"7\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"216\" cy=\"80\" r=\"7\" fill=\"var(--accent)\" fill-opacity=\"1\"/><path d=\"M104 70 L116 90 H92 Z\" fill=\"var(--gold)\"/><rect x=\"150\" y=\"128\" width=\"20\" height=\"20\" rx=\"2\" fill=\"var(--ink-soft)\" fill-opacity=\"0.55\"/><circle cx=\"113\" cy=\"118\" r=\"5\" fill=\"var(--ink-soft)\" fill-opacity=\"0.5\"/><circle cx=\"207\" cy=\"40\" r=\"5\" fill=\"var(--ink-soft)\" fill-opacity=\"0.5\"/></svg>"),
+    "tanrinin-sifatlari": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"18\" fill=\"var(--accent)\" fill-opacity=\"1\"/><path d=\"M160 80 L160 26 M160 80 L212 50 M160 80 L212 110 M160 80 L160 134 M160 80 L108 110 M160 80 L108 50\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.45\" stroke-width=\"1.4\" fill=\"none\" /><circle cx=\"160\" cy=\"24\" r=\"8\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"214\" cy=\"49\" r=\"7\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"214\" cy=\"111\" r=\"8\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"136\" r=\"7\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"106\" cy=\"111\" r=\"7\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"106\" cy=\"49\" r=\"8\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"80\" r=\"30\" fill=\"none\" stroke=\"var(--gold)\" stroke-width=\"1.2\" stroke-opacity=\"0.5\"/></svg>"),
+    "tanri-alem-iliskisi": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"34\" r=\"17\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"34\" r=\"28\" fill=\"none\" stroke=\"var(--gold)\" stroke-width=\"1.3\" stroke-opacity=\"0.6\"/><path d=\"M160 62 V104\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.6\" stroke-width=\"1.6\" fill=\"none\" stroke-dasharray=\"4 4\"/><path d=\"M154 98 L160 108 L166 98 Z\" fill=\"var(--ink-soft)\" fill-opacity=\".6\"/><circle cx=\"160\" cy=\"128\" r=\"10\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"2\" stroke-opacity=\"1\"/><circle cx=\"160\" cy=\"128\" r=\"22\" fill=\"none\" stroke=\"var(--gold)\" stroke-width=\"1.4\" stroke-opacity=\"0.7\"/><circle cx=\"160\" cy=\"128\" r=\"28\" fill=\"none\" stroke=\"var(--ink-soft)\" stroke-width=\"1.2\" stroke-opacity=\"0.35\"/></svg>"),
+    "tanrinin-varliginin-delilleri": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"66\" y=\"112\" width=\"188\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"98\" y=\"86\" width=\"156\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.7\"/><rect x=\"130\" y=\"60\" width=\"124\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.5\"/><rect x=\"162\" y=\"34\" width=\"92\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.3\"/><circle cx=\"100\" cy=\"52\" r=\"11\" fill=\"var(--gold)\" fill-opacity=\"1\"/><path d=\"M100 66 V80 M100 80 L94 74 M100 80 L106 74\" stroke=\"var(--gold)\" stroke-opacity=\"1\" stroke-width=\"2\" fill=\"none\" /></svg>"),
+    "teizme-yonelik-itirazlar": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"38\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><path d=\"M118 118 L202 42\" stroke=\"var(--gold)\" stroke-width=\"9\" stroke-linecap=\"round\"/><circle cx=\"160\" cy=\"80\" r=\"56\" fill=\"none\" stroke=\"var(--ink-soft)\" stroke-width=\"1.3\" stroke-opacity=\"0.4\"/><circle cx=\"62\" cy=\"80\" r=\"6\" fill=\"var(--ink-soft)\" fill-opacity=\"0.5\"/><circle cx=\"258\" cy=\"80\" r=\"6\" fill=\"var(--ink-soft)\" fill-opacity=\"0.5\"/></svg>"),
+    "kotuluk-problemi": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M160 30 V132 M120 132 H200\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.7\" stroke-width=\"2.4\" fill=\"none\" /><path d=\"M84 52 L236 38\" stroke=\"var(--accent)\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"160\" cy=\"45\" r=\"5\" fill=\"var(--gold)\" fill-opacity=\"1\"/><path d=\"M84 52 L66 96 M84 52 L102 96 M236 38 L218 82 M236 38 L254 82\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.2\" fill=\"none\" /><path d=\"M62 96 H106 A22 14 0 0 1 62 96Z\" fill=\"var(--accent)\"/><path d=\"M214 82 H258 A22 14 0 0 1 214 82Z\" fill=\"var(--gold)\"/><circle cx=\"84\" cy=\"88\" r=\"6\" fill=\"var(--gold)\" fill-opacity=\"1\"/></svg>"),
+    "din-epistemolojisi": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"60\" y=\"122\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"102\" y=\"122\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"144\" y=\"122\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"186\" y=\"122\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"228\" y=\"122\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.9\"/><rect x=\"81\" y=\"100\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.7\"/><rect x=\"123\" y=\"100\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.7\"/><rect x=\"165\" y=\"100\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.7\"/><rect x=\"207\" y=\"100\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.7\"/><rect x=\"102\" y=\"78\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.5\"/><rect x=\"144\" y=\"78\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.5\"/><rect x=\"186\" y=\"78\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--accent)\" fill-opacity=\"0.5\"/><rect x=\"123\" y=\"56\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--gold)\" fill-opacity=\"0.85\"/><rect x=\"165\" y=\"56\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--gold)\" fill-opacity=\"0.85\"/><rect x=\"144\" y=\"34\" width=\"38\" height=\"18\" rx=\"2\" fill=\"var(--gold)\" fill-opacity=\"0.55\"/></svg>"),
+    "dini-tecrube": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"11\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"80\" r=\"26\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.6\" stroke-opacity=\"0.8\"/><circle cx=\"160\" cy=\"80\" r=\"44\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.6\" stroke-opacity=\"0.55\"/><circle cx=\"160\" cy=\"80\" r=\"62\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.6\" stroke-opacity=\"0.35\"/><circle cx=\"160\" cy=\"80\" r=\"80\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.6\" stroke-opacity=\"0.2\"/><path d=\"M30 80 Q50 60 70 80 T110 80\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.4\" stroke-width=\"1.3\" fill=\"none\" /><path d=\"M210 80 Q230 100 250 80 T290 80\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.4\" stroke-width=\"1.3\" fill=\"none\" /></svg>"),
+    "din-dili": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 36 H170 A12 12 0 0 1 182 48 V88 A12 12 0 0 1 170 100 H100 L74 124 V100 H62 A12 12 0 0 1 50 88 V48 A12 12 0 0 1 62 36Z\" fill=\"var(--accent)\"/><path d=\"M150 62 H258 A12 12 0 0 1 270 74 V112 A12 12 0 0 1 258 124 H246 V146 L222 124 H150 A12 12 0 0 1 138 112 V74 A12 12 0 0 1 150 62Z\" fill=\"var(--gold)\" fill-opacity=\".9\"/><path d=\"M66 56 H156\" stroke=\"#fff\" stroke-opacity=\"0.85\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M66 72 H130\" stroke=\"#fff\" stroke-opacity=\"0.85\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M160 86 H250\" stroke=\"#fff\" stroke-opacity=\"0.85\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M160 102 H220\" stroke=\"#fff\" stroke-opacity=\"0.85\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/></svg>"),
+    "insan-tasavvurlari": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"100\" cy=\"52\" r=\"18\" fill=\"var(--accent)\" fill-opacity=\"1\"/><path d=\"M64 120 A36 36 0 0 1 136 120 Z\" fill=\"var(--accent)\"/><path d=\"M160 96 H190 M190 96 L240 60 M190 96 L240 132\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.8\" fill=\"none\" /><circle cx=\"246\" cy=\"56\" r=\"8\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"246\" cy=\"136\" r=\"8\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"196\" cy=\"96\" r=\"5\" fill=\"var(--ink-soft)\" fill-opacity=\"0.6\"/></svg>"),
+    "din-ve-ahlak": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"52\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"2.5\" stroke-opacity=\"1\"/><circle cx=\"160\" cy=\"80\" r=\"44\" fill=\"none\" stroke=\"var(--ink-soft)\" stroke-width=\"0.8\" stroke-opacity=\"0.3\"/><path d=\"M160 36 L172 80 L160 124 L148 80 Z\" fill=\"var(--gold)\"/><path d=\"M160 36 L172 80 L148 80 Z\" fill=\"var(--accent)\"/><circle cx=\"160\" cy=\"80\" r=\"5\" fill=\"#fff\" fill-opacity=\"1\"/><path d=\"M160 22 L160 30\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M160 130 L160 138\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M102 80 L110 80\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.5\" fill=\"none\" /><path d=\"M210 80 L218 80\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.55\" stroke-width=\"1.5\" fill=\"none\" /></svg>"),
+    "olum-ve-otesi": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104 134 V82 A56 56 0 0 1 216 82 V134 Z\" fill=\"var(--accent)\" fill-opacity=\".92\"/><path d=\"M132 134 V90 A28 28 0 0 1 188 90 V134 Z\" fill=\"#eef1f5\"/><circle cx=\"160\" cy=\"76\" r=\"9\" fill=\"var(--gold)\" fill-opacity=\"1\"/><path d=\"M40 134 H280\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.5\" stroke-width=\"1.4\" fill=\"none\" /><circle cx=\"60\" cy=\"48\" r=\"4\" fill=\"var(--ink-soft)\" fill-opacity=\"0.45\"/><circle cx=\"262\" cy=\"40\" r=\"3.5\" fill=\"var(--ink-soft)\" fill-opacity=\"0.45\"/><circle cx=\"240\" cy=\"64\" r=\"3\" fill=\"var(--gold)\" fill-opacity=\"0.7\"/></svg>"),
+    "din-ve-bilim": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"80\" r=\"10\" fill=\"var(--gold)\" fill-opacity=\"1\"/><ellipse cx=\"160\" cy=\"80\" rx=\"82\" ry=\"26\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"2\" stroke-opacity=\".75\" transform=\"rotate(0 160 80)\"/><ellipse cx=\"160\" cy=\"80\" rx=\"82\" ry=\"26\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"2\" stroke-opacity=\".75\" transform=\"rotate(60 160 80)\"/><ellipse cx=\"160\" cy=\"80\" rx=\"82\" ry=\"26\" fill=\"none\" stroke=\"var(--ink-soft)\" stroke-width=\"2\" stroke-opacity=\".75\" transform=\"rotate(120 160 80)\"/><circle cx=\"242\" cy=\"80\" r=\"6\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"98\" cy=\"38\" r=\"6\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"98\" cy=\"122\" r=\"6\" fill=\"var(--accent)\" fill-opacity=\"1\"/></svg>"),
+    "din-ve-sanat": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"128\" cy=\"72\" r=\"38\" fill=\"var(--accent)\" fill-opacity=\"0.55\"/><circle cx=\"192\" cy=\"72\" r=\"38\" fill=\"var(--gold)\" fill-opacity=\"0.6\"/><circle cx=\"160\" cy=\"106\" r=\"38\" fill=\"var(--ink-soft)\" fill-opacity=\"0.45\"/><circle cx=\"160\" cy=\"80\" r=\"70\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.2\" stroke-opacity=\"0.3\"/></svg>"),
+    "dini-cesitlilik": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M40 140 C40 100 160 110 160 56\" stroke=\"var(--accent)\" stroke-opacity=\"0.8\" stroke-width=\"2.4\" fill=\"none\" /><path d=\"M100 140 C100 100 160 110 160 56\" stroke=\"var(--gold)\" stroke-opacity=\"0.9\" stroke-width=\"2.4\" fill=\"none\" /><path d=\"M160 140 C160 100 160 110 160 56\" stroke=\"var(--accent)\" stroke-opacity=\"0.55\" stroke-width=\"2.4\" fill=\"none\" /><path d=\"M220 140 C220 100 160 110 160 56\" stroke=\"var(--gold)\" stroke-opacity=\"0.7\" stroke-width=\"2.4\" fill=\"none\" /><path d=\"M280 140 C280 100 160 110 160 56\" stroke=\"var(--accent)\" stroke-opacity=\"0.8\" stroke-width=\"2.4\" fill=\"none\" /><circle cx=\"160\" cy=\"44\" r=\"14\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"44\" r=\"26\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"1.4\" stroke-opacity=\"0.5\"/><circle cx=\"40\" cy=\"140\" r=\"5\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"100\" cy=\"140\" r=\"5\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"160\" cy=\"140\" r=\"5\" fill=\"var(--gold)\" fill-opacity=\"1\"/><circle cx=\"220\" cy=\"140\" r=\"5\" fill=\"var(--accent)\" fill-opacity=\"1\"/><circle cx=\"280\" cy=\"140\" r=\"5\" fill=\"var(--gold)\" fill-opacity=\"1\"/></svg>"),
+    "dini-pratik": (
+        "<svg viewBox=\"0 0 320 160\" role=\"img\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M96 140 V84 A64 64 0 0 1 224 84 V140 Z\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"3\"/><path d=\"M120 140 V88 A40 40 0 0 1 200 88 V140 Z\" fill=\"var(--accent)\" fill-opacity=\".85\"/><circle cx=\"160\" cy=\"52\" r=\"7\" fill=\"var(--gold)\" fill-opacity=\"1\"/><path d=\"M60 140 H260\" stroke=\"var(--ink-soft)\" stroke-opacity=\"0.6\" stroke-width=\"1.6\" fill=\"none\" /><circle cx=\"160\" cy=\"52\" r=\"14\" fill=\"none\" stroke=\"var(--gold)\" stroke-width=\"1.3\" stroke-opacity=\"0.6\"/></svg>"),
+}
 
 
 def harita_html() -> str:
-    anas = ana_basliklar()
     bolumler = []
     for kad, ks in kumeli_basliklar():
         kartlar = "".join(
             f'<a class="harita-kart harita-gorsel" href="{fis_url("baslik", k)}">'
-            f'<span class="hk-resim">{baslik_bulut_svg(baslik_sozcukleri(k), i)}</span>'
-            f'<span class="hk-ad">{e(FIS[("baslik", k)]["ad"])}</span></a>' for i, k in enumerate(ks))
+            f'<span class="hk-resim">{BASLIK_RESIM.get(k, "")}</span>'
+            f'<span class="hk-ad">{e(FIS[("baslik", k)]["ad"])}</span></a>' for k in ks)
         bolumler.append(f'<h2 class="kume-ad">{e(kad)}</h2><div class="harita-kartlar">{kartlar}</div>')
     return "".join(bolumler)
 
@@ -1442,7 +1415,7 @@ def baslik_secici() -> str:
 def render_basliklar() -> str:
     body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
             '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
-            'Kartlardaki kelimeler, başlığa bağlı çalışmaların başlıklarında ve anahtar kelimelerinde sık geçenlerdir; başlığın kendi adındaki kelimeler yazılmaz. '
+            'Kartlardaki çizimler başlıkların konusunu simgeler. '
             f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p></details>'
             + baslik_secici() + harita_html() + BASLIK_SEC_JS)
     return page(f"Başlıklar · {SITE_NAME}", body, "basliklar", canonical=f"{SITE_URL}/basliklar/")
