@@ -1441,7 +1441,7 @@ def baslik_secici() -> str:
 
 
 def render_basliklar() -> str:
-    body = ('<p class="ust-etiket">Başlıklar</p><h1>Din felsefesinin başlıkları</h1>'
+    body = ('<h1>Din felsefesinin başlıkları</h1>'
             '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Kartlardaki çizimler başlıkların konusunu simgeler. '
             f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p></details>'
@@ -1621,7 +1621,7 @@ def render_dizin(tur) -> str:
     elif not kimlikler:
         icerik = '<p class="giris">Henüz fiş eklenmedi.</p>'
     say = "" if tur == "kisi" else f' <span class="say">{len(kimlikler)} fiş</span>'
-    body = f'<p class="ust-etiket">{basliklar[0]}</p><h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]}{say}</p>{icerik}'
+    body = f'<h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]}{say}</p>{icerik}'
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
 
 KAPSAM = [("turkiye", "Türkiye akademisi"), ("uluslararasi", "Uluslararası akademi")]
@@ -2438,7 +2438,7 @@ def render_harita() -> str:
         ("sayilar", "Sayılarla alan", "Yıllara göre yayın ve tez sayıları, en çok yayın yapılan dergiler ve en çok tez verilen üniversiteler."),
     ]
     url = {k: u for k, _, u in HARITA_BOLUMLER}
-    body = ('<p class="ust-etiket">Harita</p><h1>Alanın haritası</h1>'
+    body = ('<h1>Alanın haritası</h1>'
             '<p class="giris">Türkiye\'deki din felsefesi literatürüne dört açıdan bakış: ilişkiler, zaman içindeki seyir, sık kullanılan kelimeler ve sayılar. '
             'Hepsi sitede listelenen eserlere ve tezlere dayanır.</p>'
             '<div class="harita-kartlar">'
@@ -2589,7 +2589,7 @@ def render_tezler() -> str:
     siralama = ('<div class="eser-sirala" role="group" aria-label="Sıralama"><span>Sırala</span>'
                 + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="none">{a}<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("yil", "Yıl"), ("danisman", "Danışman"), ("ad", "Tez adı")]) + '</div>')
-    body = (f'<p class="ust-etiket">Tezler</p><h1>Tezler</h1>'
+    body = (f'<h1>Tezler</h1>'
             f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Listedeki akademisyenlerin danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri. '
             f'Kayıtlar, akademisyenlerin YÖK Akademik profillerinde yer alan yönetilen tezler listesinden alınmış ve YÖK Ulusal Tez Merkezi kayıtlarıyla karşılaştırılmıştır. '
             f'Öğrenci adları yazılmaz. Danışman adıyla ya da tez adında geçen bir kelimeyle arama yapılabilir. '
@@ -2703,7 +2703,7 @@ def render_eserler() -> str:
                 + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="none">{a}<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("yil", "Yıl"), ("yazar", "Yazar"), ("ad", "Eser adı")]) + '</div>')
     tarih = dp_tarama_tarihi()
-    body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
+    body = (f'<h1>Eserler</h1>'
             f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye akademisindeki din felsefecilerinin eserleri ile Türkiye\'de yayımlanan din felsefesi çalışmaları. '
             f'Liste, sitede fişi bulunan eserlerden, DergiPark\'ta anahtar kelimelerinde din felsefesi geçen makalelerden, hocaların ORCID kayıtlarındaki DOI\'li çalışmalardan '
             f've AVESİS ya da YÖK Akademik sayfalarında yer alıp konusu açıkça bir başlığa giren yayınlardan oluşur. '
@@ -4625,7 +4625,7 @@ def render_dergiler() -> str:
                           f'<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
                 + "</div>")
-    body = (f'<p class="ust-etiket">Dergiler</p><h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
+    body = (f'<h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
             f'<p class="giris">Her derginin dizinleri, yayın ayları, '
             f'makale gönderim durumu ve yayımladığı din felsefesi makaleleri bir arada gösterilir.</p>'
             f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
