@@ -1452,7 +1452,7 @@ def baslik_secici() -> str:
 
 
 def render_basliklar() -> str:
-    body = ('<h1>Din felsefesinin başlıkları</h1>'
+    body = ('<h1>Başlıklar</h1>'
             '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Ana başlıklar din felsefesi literatürünün problem alanlarını gösterir ve beş tematik küme altında sıralanır. '
             'Kartlardaki çizimler başlıkların konusunu simgeler. '
             f'Başlıklarda geçen kavramların tanımları <a href="{SITE_URL}/terimler/">terimler</a> dizinindedir.</p></details>'
@@ -1632,9 +1632,10 @@ def render_dizin(tur) -> str:
     elif not kimlikler:
         icerik = '<p class="giris">Henüz fiş eklenmedi.</p>'
     say = "" if tur == "kisi" else f' <span class="say">{len(kimlikler)} fiş</span>'
-    body = f'<h1>{basliklar[0]}</h1><p class="giris">{basliklar[1]}{say}</p>{icerik}'
+    body = f'<h1>{basliklar[0]}</h1><details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">{basliklar[1]}{say}{" " + KISI_ACIKLAMA if tur == "kisi" else ""}</p></details>{icerik}'
     return page(f"{basliklar[0]} · {SITE_NAME}", body, KLASOR[tur], canonical=f"{SITE_URL}/{KLASOR[tur]}/")
 
+KISI_ACIKLAMA = ""
 KAPSAM = [("turkiye", "Türkiye akademisi"), ("uluslararasi", "Uluslararası akademi")]
 YOK_PROFIL = "https://akademik.yok.gov.tr/academician-details?authorGuidId="
 
@@ -1661,14 +1662,15 @@ def turkiye_listesi() -> tuple[str, int]:
                         f'<td data-etiket="Üniversite">{e(p.get("universite"))}</td>'
                         f'<td data-etiket="Fakülte">{e(p.get("fakulte"))}</td></tr>')
     tarih = tr_date(str(veri.get("tarih"))) if veri.get("tarih") else ""
-    ust = (f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
+    global KISI_ACIKLAMA
+    KISI_ACIKLAMA = (f'Türkiye\'deki üniversitelerde din felsefesi alanında çalışan öğretim elemanları. '
            f'Liste, YÖK Akademik\'te bilim alanı olarak İlahiyat Temel Alanı\'nda Din Felsefesi\'ni işaretlemiş akademisyenler ile '
            f'İlahiyat Temel Alanı\'nda Felsefe ve Din Bilimleri ya da Sosyal, Beşeri ve İdari Bilimler Temel Alanı\'nda Felsefe alanında '
            f'ilk anahtar kelimesi Din Felsefesi olan akademisyenlerden oluşmaktadır'
            f'{" (" + tarih + ")" if tarih else ""}. Unvan ve kurum bilgileri YÖK\'teki kayda göredir.'
            f'{" Bu ölçütlere uymayan ama alanın öncülerinden olan " + str(sum(1 for p in kisiler if p.get("elle"))) + " isim listeye elle eklenmiştir." if any(p.get("elle") for p in kisiler) else ""}</p>'
-           '</p></details>'
-           '<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
+           '')
+    ust = ('<label class="k-ara"><span>Ara</span><input type="search" id="kisi-ara" placeholder="Ad, üniversite ya da fakülte" autocomplete="off"></label>')
     tablo = ('<div class="tablo-kap"><table class="kisiler"><thead><tr>'
              + "".join(f'<th aria-sort="{"ascending" if i == 0 else "none"}"><button type="button" class="sirala" data-sutun="{i}">{b}<span class="ok" aria-hidden="true"></span></button></th>'
                        for i, b in enumerate(["Ad Soyad", "Unvan", "Üniversite", "Fakülte"])) +
@@ -2449,9 +2451,9 @@ def render_harita() -> str:
         ("sayilar", "Sayılarla alan", "Yıllara göre yayın ve tez sayıları, en çok yayın yapılan dergiler ve en çok tez verilen üniversiteler."),
     ]
     url = {k: u for k, _, u in HARITA_BOLUMLER}
-    body = ('<h1>Alanın haritası</h1>'
-            '<p class="giris">Türkiye\'deki din felsefesi literatürüne dört açıdan bakış: ilişkiler, zaman içindeki seyir, sık kullanılan kelimeler ve sayılar. '
-            'Hepsi sitede listelenen eserlere ve tezlere dayanır.</p>'
+    body = ('<h1>Harita</h1>'
+            '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye\'deki din felsefesi literatürüne dört açıdan bakış: ilişkiler, zaman içindeki seyir, sık kullanılan kelimeler ve sayılar. '
+            'Hepsi sitede listelenen eserlere ve tezlere dayanır.</p></details>'
             '<div class="harita-kartlar">'
             + "".join(f'<a class="harita-kart harita-gorsel" href="{SITE_URL}{url[k]}" title="{e(t)}"><span class="hk-resim">{HARITA_RESIM[k]}</span><span class="hk-ad">{e(a)}</span></a>'
                       for k, a, t in kartlar) + '</div>')
@@ -4636,10 +4638,9 @@ def render_dergiler() -> str:
                           f'<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("df", "Makale sayısı"), ("son5", "Son beş yıl"), ("sure", "Değerlendirme süresi"), ("ad", "Ad")])
                 + "</div>")
-    body = (f'<h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
-            f'<p class="giris">Her derginin dizinleri, yayın ayları, '
-            f'makale gönderim durumu ve yayımladığı din felsefesi makaleleri bir arada gösterilir.</p>'
-            f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
+    body = (f'<h1>Dergiler</h1>'
+            f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye\'de din felsefesi makalesi yayımlayan dergiler. Her derginin dizinleri, yayın ayları, '
+            f'makale gönderim durumu ve yayımladığı din felsefesi makaleleri bir arada gösterilir. Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
             f'{" (son okuma " + tr_date(tarama) + ")" if tarama else ""}. Dizin bilgisi derginin kendi beyanıdır. '
             f'Kabul dönemleri dergilerin duyurularından elle derlenmiştir; başvurudan önce derginin sayfasına bakınız. '
             f'Büyük rakam, derginin DergiPark\'ta yayımladığı din felsefesi makalelerini gösterir ({len(dergiler)} dergide toplam {toplam}). '
