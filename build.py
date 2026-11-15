@@ -1665,7 +1665,7 @@ def eser_ogeleri() -> list:
         yazar_ad = [ad("kisi", FIS[("kisi", y)]) if ("kisi", y) in FIS else str(y) for y in liste(h.get("yazar"))]
         ogeler.append({"html": eser_satiri(k), "tur": h.get("eser_turu", ""), "konu": konu, "grup": "temel",
                        "yil": str(h.get("yil") or ""), "yazar": yazar_ad[0] if yazar_ad else "", "ad": h["baslik"],
-                       "ara": ara_norm(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
+                       "ara": ara_norm(h["baslik"])})
     for m in dp_veri():
         yazar, dergi = dp_kunye(m)
         # çok yazarlı eserde sayfası olan akademisyenler ve ilk üç yazar görünür, gerisi "ve diğerleri" olur
@@ -1686,7 +1686,7 @@ def eser_ogeleri() -> list:
                  + (f'<span class="eser-konu"> · {konu_bag}</span>' if konu_bag else "") + '</span>')
         ogeler.append({"html": html_, "tur": tur, "konu": konu, "grup": "tr",
                        "yil": m["yil"], "yazar": m["yazarlar"][0] if m["yazarlar"] else "", "ad": m["baslik"],
-                       "ara": ara_norm(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
+                       "ara": ara_norm(m["baslik"])})
     return ogeler
 
 
@@ -2318,7 +2318,7 @@ def render_eserler() -> str:
             f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
             f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>'
             '<label class="secim-etiket eser-ara-etiket" for="eser-ara">Başlık ara</label>'
-            '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="eser-ara" class="eser-konu-sec" placeholder="Başlık, yazar ya da dergi" autocomplete="off"></div>'
+            '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="eser-ara" class="eser-konu-sec" placeholder="Eser adı" autocomplete="off"></div>'
             f'<p class="secim-etiket secim-ayrac">Eser türü</p>'
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec secim-kutu secim-izgara" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
@@ -2375,7 +2375,7 @@ ESER_JS = """<script>
     lis.forEach(function(li){
       if(li.hidden) return;
       var bulundu=false;
-      li.querySelectorAll('.eser-ad,.eser-bilgi').forEach(function(kap){
+      li.querySelectorAll('.eser-ad').forEach(function(kap){
         var w=document.createTreeWalker(kap,NodeFilter.SHOW_TEXT,null), dugumler=[], d;
         while((d=w.nextNode())) dugumler.push(d);
         dugumler.forEach(function(d){
