@@ -557,6 +557,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-resim{width:7.4rem;height:4.2rem;border-radius:10px;background:var(--accent-soft);border:1px solid var(--rule);overflow:hidden;padding:.2rem}
 .kv-resim svg{width:100%;height:100%;display:block}
 .kv-baslik{width:40rem}
+.akademi-metin .kartvizit{width:100%;margin-top:0}
 .kv-baslik h1{font-size:1.9rem}
 .kv-unvan{margin:0;font-style:italic;font-size:.92rem;color:var(--gold)}
 .kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15;padding-right:2.6rem}  /* uzun adlar logonun altına girmesin */
@@ -4089,6 +4090,8 @@ def render_akademisyen(s: str, items=None) -> str:
                    f'<script src="{SITE_URL}/static/js/ag.js?v={surum("static/js/ag.js")}"></script>')
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
+<div class="fis-duzen">
+  <div class="metin akademi-metin">
 <section class="kartvizit" aria-label="Künye">
   <div class="kv-monogram" aria-hidden="true">{e(bas_harfler(p["ad"]))}</div>
   <div class="kv-govde">
@@ -4099,8 +4102,7 @@ def render_akademisyen(s: str, items=None) -> str:
   </div>
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
 </section>
-<div class="fis-duzen">
-  <div class="metin akademi-metin">{tanitim}{metin}{hakkinda}
+{tanitim}{metin}{hakkinda}
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>
