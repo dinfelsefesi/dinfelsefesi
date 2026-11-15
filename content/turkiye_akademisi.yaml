@@ -53,6 +53,8 @@ kisiler:
   fakulte: İlahiyat Fakültesi
   yok: B2F2C5EEBBD3C901
   yok_alan: Din Felsefesi
+  baglantilar:
+    - {tur: web, url: "https://abdullahakgul.com"}
 - ad: Tuncay Akgün
   unvan: Prof. Dr.
   universite: Ankara Hacı Bayram Veli Üniversitesi
