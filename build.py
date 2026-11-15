@@ -1864,11 +1864,11 @@ def render_kavram_tarihi() -> str:
                       ensure_ascii=False, separators=(",", ":"))
     body = (
         harita_ust("kavram-tarihi", "Kavram tarihi") +
-        '<p class="aciklama-kisa">Türkiye\'de yayımlanan din felsefesi çalışmalarında kavramların ve düşünürlerin yıllar içindeki yeri. '
+        '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye\'de yayımlanan din felsefesi çalışmalarında kavramların ve düşünürlerin yıllar içindeki yeri. '
         f'Sayım, sitedeki <a href="{SITE_URL}/eserler/">eserlerin</a> ve <a href="{SITE_URL}/tezler/">tezlerin</a> başlıklarına ve, '
         'bulunduğu yerde, yazarların verdiği anahtar kelimelere dayanır. Değerler, çalışmaların yüzde kaçında kavramın geçtiğini gösterir. '
         'Yöntem ve sınırlılıklar sayfanın sonunda açıklanmıştır. Düzeltme önerileri için: '
-        f'<a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+        f'<a href="mailto:{ILETISIM}">{ILETISIM}</a></p></details>'
         '<div class="kt-cizim-kap"><div class="kt-secili" aria-live="polite"></div>'
         '<svg class="kt-cizim" viewBox="0 0 720 320" role="img" aria-label="Seçili kavramların yıllara göre oranı"></svg>'
         '<p class="kt-ipucu"></p></div>'
@@ -2154,9 +2154,9 @@ def render_kelime_bulutu() -> str:
     veri = json.dumps({"v": v["veri"], "tum": v["tum"], "n": v["n"], "bas": str(yillar[0]), "ilk": v["yillar"][0]},
                       ensure_ascii=False, separators=(",", ":"))
     body = (harita_ust("kelime-bulutu", "Kelime bulutu")
-            + '<p class="aciklama-kisa">Seçilen yılda yayımlanan çalışmaların ve tamamlanan tezlerin başlıklarında ve Türkçe anahtar kelimelerinde en sık geçen 60 kelime. '
+            + '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Seçilen yılda yayımlanan çalışmaların ve tamamlanan tezlerin başlıklarında ve Türkçe anahtar kelimelerinde en sık geçen 60 kelime. '
             'Kelimenin büyüklüğü, geçtiği çalışma sayısını gösterir; bir kelime bir çalışmada bir kez sayılır. “Din”, “felsefe”, bağlaçlar ve “problem”, “inceleme” gibi '
-            'her konuda geçen kelimeler sayılmaz; aynı kelimenin ekli biçimleri birleştirilir. Bir kelimeye basıldığında o kelimenin geçtiği eserler açılır.</p>'
+            'her konuda geçen kelimeler sayılmaz; aynı kelimenin ekli biçimleri birleştirilir. Bir kelimeye basıldığında o kelimenin geçtiği eserler açılır.</p></details>'
             f'<div class="tur-secici kb-yillar" role="group" aria-label="Yıl">{"".join(secenek)}</div>'
             '<div class="kb-kap"><svg class="kb-bulut" viewBox="0 0 960 540" role="img" aria-label="Kelime bulutu"></svg>'
             '<p class="kb-alt"></p></div>'
@@ -2250,8 +2250,8 @@ def render_sayilar() -> str:
     ozet = (f'<div class="sy-ozet"><div><b>{len(ogeler)}</b><span>eser</span></div>'
             f'<div><b>{dr}</b><span>tamamlanmış doktora tezi</span></div><div><b>{yl}</b><span>tamamlanmış yüksek lisans tezi</span></div></div>')
     body = (harita_ust("sayilar", "Sayılarla alan")
-            + '<p class="aciklama-kisa">Sitede listelenen eserlerin ve tamamlanmış tezlerin sayısal görünümü; devam eden tezler sayılmaz. Eserler yayım yılına, tezler bitiş yılına göre sayılmıştır; '
-            'kitap tanıtımları yıllık sayıya katılmaz. İçinde bulunulan yılın verisi eksiktir.</p>'
+            + '<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Sitede listelenen eserlerin ve tamamlanmış tezlerin sayısal görünümü; devam eden tezler sayılmaz. Eserler yayım yılına, tezler bitiş yılına göre sayılmıştır; '
+            'kitap tanıtımları yıllık sayıya katılmaz. İçinde bulunulan yılın verisi eksiktir.</p></details>'
             + ozet
             + '<h2>Yıllara göre çalışma sayısı</h2><p class="sy-lejant"><span class="sy-k sy-yayin"></span>Yayın <span class="sy-k sy-tez"></span>Tamamlanan tez</p>'
             + cizim
@@ -4001,7 +4001,7 @@ def render_ag(items) -> str:
     (OUT / "ag").mkdir(parents=True, exist_ok=True)
     (OUT / "ag" / "eserler.json").write_text(json.dumps(ek, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     body = f"""{harita_ust("ag", "İlişki ağı")}
-<p class="aciklama-kisa">Başlıklar, terimler, kişiler ve eserler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir; üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. Eserler (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Sayfa hızlı açılsın diye eserler ve terimler kapalı gelir; düğmelerine basılarak açılırlar.</p>
+<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Başlıklar, terimler, kişiler ve eserler arasındaki bağlantılar. Noktanın büyüklüğü bağlantı sayısını gösterir; üzerine gelindiğinde komşuları belirginleşir, tıklandığında ayrıntıları açılır. Eserler (küçük noktalar) konu başlıklarına, terimlere, yazarlarına ve başlığında adı geçen düşünürlere bağlanır. Sayfa hızlı açılsın diye eserler ve terimler kapalı gelir; düğmelerine basılarak açılırlar.</p></details>
 {ag_araci(hafif, {"eser": len(agir)})}
 {baslik_ag_listesi()}
 {terim_ag_listesi()}"""
