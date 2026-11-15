@@ -2033,6 +2033,99 @@ def kb_kokler(bas: str, kel) -> dict:
     return kokler
 
 
+def _kisalt(x: str, n: int = 14) -> str:
+    return x if len(x) <= n else x[: n - 1].rstrip() + "…"
+
+
+def kisi_haritalari(v, s: str, ogeler) -> str:
+    """Kişi sayfası yan sütunu için üç küçük çizim: ilişki ağı, kavram tarihi, yıllara göre yayın sayısı (sabit SVG)."""
+    ciktilar = []
+    # --- yıllara göre sayı
+    yil = Counter(int(o["yil"]) for o in ogeler if str(o.get("yil", "")).isdigit() and o.get("grup") != "tez")
+    if len(yil) >= 2:
+        y0, y1 = min(yil), max(yil)
+        W, H, B, T = 300, 130, 20, 8
+        n = y1 - y0 + 1
+        gw = (W - 10) / n
+        mx = max(yil.values())
+        p = []
+        for i in range(n):
+            y = y0 + i
+            h = (H - B - T) * yil.get(y, 0) / mx
+            x = 5 + i * gw + gw * 0.12
+            if yil.get(y):
+                p.append(f'<rect x="{x:.1f}" y="{H - B - h:.1f}" width="{gw * 0.76:.1f}" height="{h:.1f}" fill="#23446e"><title>{y}: {yil[y]} yayın</title></rect>'
+                         f'<text x="{x + gw * 0.38:.1f}" y="{H - B - h - 3:.1f}" text-anchor="middle" font-size="9" fill="#5c6370">{yil[y]}</text>')
+        for i in range(n):
+            y = y0 + i
+            if n <= 8 or i % 2 == 0 or y == y1:
+                p.append(f'<text x="{5 + i * gw + gw / 2:.1f}" y="{H - 6}" text-anchor="middle" font-size="9" fill="#5c6370">{y}</text>')
+        p.append(f'<line x1="5" x2="{W - 5}" y1="{H - B}" y2="{H - B}" stroke="#c9ced6"/>')
+        ciktilar.append('<h2>Yıllara göre yayın</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
+                        'aria-label="Yıllara göre yayın sayısı">%s</svg></div>' % (W, H, "".join(p)))
+    # --- kavram tarihi: başlık x yıl noktaları
+    ana = [(b, c) for b, c in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
+    ana = sorted(ana, key=lambda x: (-x[1], FIS[("baslik", x[0])].get("sira", 99)))[:6]
+    nokta = {}
+    for m in v["makaleler"]:
+        if str(m.get("yil", "")).isdigit():
+            for b in (m["konular"] or m["ilgili"]):
+                if any(b == a for a, _ in ana):
+                    nokta[(b, int(m["yil"]))] = nokta.get((b, int(m["yil"])), 0) + 1
+    ana = [(b, c) for b, c in ana if any(bb == b for bb, _ in nokta)]
+    yl = sorted({y for _, y in nokta})
+    if len(ana) >= 2 and len(yl) >= 2:
+        L, W = 96, 300
+        a0, a1 = yl[0], yl[-1]
+        gw = (W - L - 10) / max(a1 - a0, 1)
+        satir_h = 22
+        H = 12 + satir_h * len(ana) + 20
+        p = []
+        for r, (b, _) in enumerate(ana):
+            cy = 16 + r * satir_h
+            p.append(f'<line x1="{L - 4}" x2="{W - 6}" y1="{cy}" y2="{cy}" stroke="#e3e6eb"/>'
+                     f'<text x="{L - 8}" y="{cy + 3.5}" text-anchor="end" font-size="9.5" fill="#1d2330"><a href="{fis_url("baslik", b)}">{e(_kisalt(FIS[("baslik", b)]["ad"], 18))}</a></text>')
+            for y in yl:
+                c = nokta.get((b, y))
+                if c:
+                    p.append(f'<circle cx="{L + (y - a0) * gw:.1f}" cy="{cy}" r="{3.2 + 2.2 * (c - 1):.1f}" fill="{["#23446e", "#86641e", "#2f6b4f", "#a84a14", "#7a3f86", "#1f6b78"][r % 6]}">'
+                             f'<title>{e(FIS[("baslik", b)]["ad"])}, {y}: {c} yayın</title></circle>')
+        for y in yl:
+            if len(yl) <= 6 or y in (a0, a1) or (y - a0) % 2 == 0:
+                p.append(f'<text x="{L + (y - a0) * gw:.1f}" y="{H - 5}" text-anchor="middle" font-size="9" fill="#5c6370">{y}</text>')
+        ciktilar.append('<h2>Kavram tarihi</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
+                        'aria-label="Başlıkların yıllara göre dağılımı">%s</svg></div>' % (W, H, "".join(p)))
+    # --- ilişki ağı: kişi, başlıklar, ortak yazarlar, düşünürler (tek halka, adlar kenarda)
+    ortak = sorted(v["ortak"].items(), key=lambda x: -x[1])[:3]
+    dus = sorted(v["dusunur"].items(), key=lambda x: -x[1])[:3]
+    dugum = ([("bas", b, c) for b, c in ana[:5]] + [("ortak", o, c) for o, c in ortak] + [("dus", k, c) for k, c in dus])
+    if len(dugum) >= 3:
+        cx, cy, R, W, H = 150, 104, 70, 300, 224
+        p, d_ = [], []
+        for i, (tur, k, c) in enumerate(dugum):
+            a_ = -math.pi / 2 + 2 * math.pi * i / len(dugum)
+            x, y, co = cx + R * math.cos(a_), cy + R * math.sin(a_), math.cos(a_)
+            if tur == "bas":
+                ad_, href, renk = FIS[("baslik", k)]["ad"], fis_url("baslik", k), "#86641e"
+            elif tur == "ortak":
+                ad_, href, renk = akademi_verisi()[k]["p"]["ad"], akademi_url(k), "#2f6b4f"
+            else:
+                ad_, href, renk = ad("kisi", FIS[("kisi", k)]), fis_url("kisi", k), "#7a3f86"
+            p.append(f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="#c9ced6"/>')
+            r_ = 4.5 + min(c, 4) * 1.1
+            if abs(co) < 0.2:
+                tx, an, ty = x, "middle", (y - r_ - 4 if math.sin(a_) < 0 else y + r_ + 10)
+            else:
+                tx, an, ty = (x - r_ - 4 if co < 0 else x + r_ + 4), ("end" if co < 0 else "start"), y + 3
+            d_.append(f'<a href="{href}"><circle cx="{x:.1f}" cy="{y:.1f}" r="{r_:.1f}" fill="{renk}"><title>{e(ad_)}</title></circle>'
+                      f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{an}" font-size="9" fill="#1d2330">{e(_kisalt(ad_, 14))}</text></a>')
+        d_.append(f'<circle cx="{cx}" cy="{cy}" r="13" fill="#23446e"><title>{e(v["p"]["ad"])}</title></circle>')
+        lej = '<text x="8" y="218" font-size="8.5" fill="#5c6370"><tspan fill="#86641e">●</tspan> başlık  <tspan fill="#2f6b4f">●</tspan> ortak yazar  <tspan fill="#7a3f86">●</tspan> düşünür</text>'
+        ciktilar.append('<h2>İlişki ağı</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 %d %d" role="img" '
+                        'aria-label="Kişinin başlıklarla, ortak yazarlarla ve düşünürlerle ilişkisi">%s</svg></div>' % (W, H, "".join(p) + "".join(d_) + lej))
+    return "".join(ciktilar)
+
+
 def kisi_bulutu(ogeler, makaleler) -> str:
     """Kişi sayfası için yayın başlıklarından ve anahtar kelimelerinden küçük bir kelime bulutu (HTML)."""
     if _KB_SAYAC is None:
@@ -3762,6 +3855,7 @@ def render_akademisyen(s: str) -> str:
     bulut = kisi_bulutu(ogeler, v["makaleler"])
     if bulut:
         yan.append(bulut)
+    yan.append(kisi_haritalari(v, s, ogeler))
     if konular:
         yan.append(f'<h2>Çalıştığı başlıklar</h2><ul class="calisan-liste">{konular}</ul>')
     if v["dusunur"]:
