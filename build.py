@@ -5035,6 +5035,8 @@ def render_ana(items) -> str:
   <h1>Din felsefesi için Türkçe başvuru kaynağı</h1>
   <p>Din felsefesinin temel problemleri okuma metinleriyle, terimler, düşünürler ve eserler de bu metinlere bağlı fişlerle sunulur.</p>
   <p class="durum-satiri">{len(ana_basliklar())} başlık · {say["terim"]} terim · {say["kisi"]} düşünür · {say["eser"]} eser · {tr_say} akademisyen</p>
+  <details class="acik-not"><summary>Açıklamayı oku</summary>
+  <p class="aciklama-kisa">Din felsefesinin temel problemleri birer okuma metniyle ele alınır, terimler, düşünürler ve eserler de bu metinlere bağlı fişlerle sunulur. Sitede ayrıca Türkiye'deki <a href="{SITE_URL}/kisiler/">din felsefesi akademisyenlerinin</a> listesi, din felsefesi makalesi yayımlayan <a href="{SITE_URL}/dergiler/">dergiler</a> ve DergiPark'ta yayımlanmış <a href="{SITE_URL}/eserler/">çalışmalar</a> yer alır. <a href="{SITE_URL}/gunun-makalesi/">Günün makalesi</a> bölümünde her gün bir makale, kendi özetine dayanan kısa bir tanıtımla öne çıkarılır. {durum}</p></details>
 </section>
 {ana_kapilar_html()}
 {ana_notlar_html(items)}
