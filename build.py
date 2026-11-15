@@ -21,6 +21,7 @@ import json
 import math
 import os
 import re
+import urllib.parse
 import shutil
 import sys
 import unicodedata
@@ -671,6 +672,8 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .tez-liste{list-style:none;padding:0;margin:.2rem 0 0}
 .tez-liste li{padding:.75rem 0;border-bottom:1px solid var(--rule)}
 .tez-liste li[hidden]{display:none}
+.tez-ad a.tez-bag{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+.tez-ad a.tez-bag:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .tez-ad{margin:0 0 .15rem;font-family:var(--display);font-size:1.08rem;font-weight:500;color:var(--ink)}
 .tez-kunye,.tez-yer{margin:0;font-size:.92rem;color:var(--ink-soft)}
 .tez-yer{font-style:italic;font-size:.86rem}
@@ -2264,6 +2267,15 @@ def render_sayilar() -> str:
                 desc="Türkiye'deki din felsefesi yayınlarının ve tezlerinin sayısal görünümü.")
 
 
+def tez_ad_bag(t) -> str:
+    """Tamamlanmış tezin adı, Ulusal Tez Merkezi'ne sınırlı bir aramaya bağlanır (doğrudan tez adresi üretilemez)."""
+    if t["devam"]:
+        return e(t["ad"])
+    q = urllib.parse.quote_plus('site:tez.yok.gov.tr "' + t["ad"].replace('"', "") + '"')
+    return (f'<a class="tez-bag" href="https://www.google.com/search?q={q}" target="_blank" rel="noopener" '
+            f'title="Ulusal Tez Merkezi kaydını ara">{e(t["ad"])}</a>')
+
+
 def render_tezler() -> str:
     tezler = [{**t, "ad": baslik_standart(t["ad"])} for t in json.loads(TEZ_DOSYA.read_text(encoding="utf-8"))]
     tezler.sort(key=lambda t: (t["yil"], t["ad"]), reverse=True)
@@ -2277,7 +2289,7 @@ def render_tezler() -> str:
         satirlar.append(
             f'<li data-tur="{e(t["tur"])}" data-durum="{durum}" data-yil="{e(t["yil"])}" data-ad="{e(t["ad"])}" '
             f'data-danisman="{e(t["danisman"][0])}" data-ara="{e(ara)}">'
-            f'<div class="tez-ust"><p class="tez-ad">{e(t["ad"])}</p>{tez_rozetleri(t)}</div>'
+            f'<div class="tez-ust"><p class="tez-ad">{tez_ad_bag(t)}</p>{tez_rozetleri(t)}</div>'
             f'<p class="tez-kunye">{e(tez_yil_etiketi(t))} · Danışman: {hocalar}</p><p class="tez-yer">{e(yer)}</p></li>')
     def dugme(alan, deger, ad):
         return f'<button type="button" data-{alan}="{deger}" aria-pressed="{"true" if not deger else "false"}">{ad} <span class="say"></span></button>'
