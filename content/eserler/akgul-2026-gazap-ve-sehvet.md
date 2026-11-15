@@ -7,7 +7,7 @@ eser_turu: bildiri
 yil: 2026
 yayin: '9th International Bursa Scientific Research Congress, 2026'
 doi: ""
-baglanti: https://avesis.erciyes.edu.tr/publication/showdocument/64d23288-b206-4ae4-b35b-d5df65951b3c
+baglanti: https://avesis.erciyes.edu.tr/yayin/64d23288-b206-4ae4-b35b-d5df65951b3c/gazap-ve-sehvetin-teolojik-tercumesi-ozgurluk-ve-kotuluk-problemlerinin-varolussal-kurulusu-uzerine
 acik_erisim: evet
 turkce_cevirisi: ""
 ilgili_terimler: []

@@ -7,7 +7,7 @@ eser_turu: bildiri
 yil: 2026
 yayin: '4. BİLSEL International Ani Scientific Research Congress, 2026'
 doi: ""
-baglanti: https://avesis.erciyes.edu.tr/publication/showdocument/a537bf06-a28c-4ad4-9d95-762e5aa7c128
+baglanti: https://avesis.erciyes.edu.tr/yayin/a537bf06-a28c-4ad4-9d95-762e5aa7c128/mabud-bir-olmazsa-bin-olur-tevhidin-nefs-psikolojisi-uzerinden-varolussal-bir-okumasi
 acik_erisim: evet
 turkce_cevirisi: ""
 ilgili_terimler: []
