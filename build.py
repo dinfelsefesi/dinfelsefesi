@@ -777,8 +777,13 @@ ul.eser-liste{list-style:none;margin:0;padding:0;max-width:52rem}
 ul.eser-liste li{padding:.55rem 0;border-bottom:1px solid var(--rule)}
 ul.eser-liste li[hidden]{display:none}
 ul.eser-numarali{counter-reset:es}
-ul.eser-numarali li{counter-increment:es;position:relative;padding-left:2.6rem}
-ul.eser-numarali li::before{content:counter(es) ".";position:absolute;left:0;top:.7rem;width:2.2rem;text-align:right;font-family:var(--sans);font-size:.8rem;color:var(--gold)}
+ul.eser-numarali li{counter-increment:es;position:relative;padding-left:2.1rem}
+ul.eser-numarali li::before{content:counter(es) ".";position:absolute;left:0;top:.72rem;width:2rem;text-align:left;font-family:var(--sans);font-size:.74rem;color:var(--gold)}
+ul.eser-numarali .eser-bilgi{font-size:.8rem;line-height:1.5}
+a.konu-bag{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold)}
+a.konu-bag:hover{color:var(--accent)}
+button.yukari-cik{position:fixed;right:.9rem;bottom:1rem;width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid var(--rule);background:#fff;color:var(--accent);font-family:var(--sans);font-size:1.15rem;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer;z-index:20}
+button.yukari-cik[hidden]{display:none}
 mark.ara-vurgu{background:rgba(196,138,36,.3);color:inherit;border-radius:2px;padding:0 .08em}
 .eser-konu{font-style:italic}
 ul.eserler li{break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--rule)}
@@ -1663,15 +1668,22 @@ def eser_ogeleri() -> list:
                        "ara": ara_norm(" ".join([h["baslik"], " ".join(yazar_ad), str(h.get("yayin") or "")]))})
     for m in dp_veri():
         yazar, dergi = dp_kunye(m)
+        # çok yazarlı eserde sayfası olan akademisyenler ve ilk üç yazar görünür, gerisi "ve diğerleri" olur
+        if len(m["yazarlar"]) > 3:
+            parcalar = [akademisyen_bag(y_) for y_ in m["yazarlar"]]
+            gorunen = [p_ for i_, p_ in enumerate(parcalar) if i_ < 3 or p_.startswith("<a ")]
+            yazar = ", ".join(gorunen) + (" ve diğerleri" if len(gorunen) < len(parcalar) else "")
         tur = DP_TUR_ESER[m["tur"]]
         konu = set(m["konular"] or m["ilgili"])
         etiket = f' <span class="m-tur">{e(DP_TUR_AD[m["tur"]] if m["tur"] else "Makale")}</span>'
         etiket += kaynak_isareti(m)
-        konu_ad = ", ".join(FIS[("baslik", b)]["ad"] for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
-                            if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
+        konu_bag = ", ".join(f'<a class="konu-bag" href="{SITE_URL}/eserler/?konu={b}" data-konu="{b}">{e(FIS[("baslik", b)]["ad"])}</a>'
+                             for b in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
+                             if ("baslik", b) in FIS and not FIS[("baslik", b)].get("ust_baslik"))
+        kunye_ = ", ".join(x for x in (dergi, e(m["yil"])) if x)
         html_ = (eser_adi(m["baglanti"], m["baslik"]) + f'{etiket}'
-                 f'<span class="eser-bilgi">{yazar + " · " if yazar else ""}{dergi}, {e(m["yil"])}'
-                 + (f'<span class="eser-konu"> · {e(konu_ad)}</span>' if konu_ad else "") + '</span>')
+                 f'<span class="eser-bilgi">{yazar + " · " if yazar else ""}{kunye_}'
+                 + (f'<span class="eser-konu"> · {konu_bag}</span>' if konu_bag else "") + '</span>')
         ogeler.append({"html": html_, "tur": tur, "konu": konu, "grup": "tr",
                        "yil": m["yil"], "yazar": m["yazarlar"][0] if m["yazarlar"] else "", "ad": m["baslik"],
                        "ara": ara_norm(" ".join([m["baslik"], " ".join(m["yazarlar"]), m["dergi"]]))})
@@ -2311,7 +2323,8 @@ def render_eserler() -> str:
             f'<div class="eser-arac"><div class="tur-secici eser-tur-sec secim-kutu secim-izgara" role="group" aria-label="Eser türü">{"".join(turler)}</div></div>'
             f'<div class="eser-ust"><p class="eser-sayi"><span id="eser-say"></span></p>{siralama}</div>'
             f'<ul class="eser-liste eser-numarali">{temel}{turkce}</ul>'
-            f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>')
+            f'<p class="giris eser-bos" hidden>Seçime uyan eser bulunamadı.</p>'
+            '<button type="button" class="yukari-cik" hidden aria-label="Başa dön">\u2191</button>')
     return page(f"Eserler · {SITE_NAME}", body + ESER_JS, "eserler", canonical=f"{SITE_URL}/eserler/")
 
 
@@ -2404,6 +2417,14 @@ ESER_JS = """<script>
   alan=p.get('sirala')||''; yon = p.get('yon')==='azalan' ? -1 : 1;
   if(alan) sirala();
   uygula(false);
+  document.querySelector('ul.eser-numarali').addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a.konu-bag'); if(!a) return;
+    ev.preventDefault(); konu=a.dataset.konu; tur=''; uygula(true);
+    var u=document.querySelector('.eser-ust'); if(u) u.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  var yk=document.querySelector('button.yukari-cik');
+  window.addEventListener('scroll',function(){yk.hidden=window.scrollY<900;},{passive:true});
+  yk.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 })();
 </script>"""
 
