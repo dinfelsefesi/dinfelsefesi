@@ -2758,6 +2758,16 @@ def yok_kunye(kaynak: str, yil: str, bolum: str) -> str:
     return k
 
 
+def yok_kunye_ek(y: dict, k: str) -> str:
+    """Bölümün bulunduğu kitabın adını ('Kitap içinde, ss. ...') ve kitabın basım yıllarını künyeye ekler."""
+    if y.get("kitap"):
+        k = re.sub(r"^kitabın içinde", f"{baslik_standart(y['kitap'])} içinde", k)
+    b = [x for x in (y.get("basimlar") or []) if x != y.get("yil")]
+    if b:
+        k = ", ".join(x for x in [k, "diğer basımlar: " + ", ".join(b)] if x)
+    return k
+
+
 def kisisel_kunye(kaynak: str, yil: str) -> str:
     """Kişisel sitedeki künye: yıl (ayrıca yazılır), baskı notları ve sondaki nokta çıkarılır."""
     k = re.sub(r"\s*\(\s*\d+\.\s*bask[ıi]\s*\)", "", kaynak or "", flags=re.I)
@@ -2843,7 +2853,7 @@ def avesis_veri() -> dict:
             baslik = e_.get("baslik") or baslik_standart(baslik_temizle(y["baslik"], ad_))
             ogeler.append({"kimlik": kimlik, "sahip": ad_, "baslik": baslik, "yazarlar": yazarlar, "yil": y["yil"],
                            "tur": e_.get("tur") or avesis_tur(y["bolum"], y["baslik"], y["kaynak"]), "kunye": avesis_kunye(y["kaynak"], y["yil"]) if kaynak == "avesis" else
-                           yok_kunye(y["kaynak"], y["yil"], y["bolum"]) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
+                           yok_kunye_ek(y, yok_kunye(y["kaynak"], y["yil"], y["bolum"])) if kaynak == "yok" else kisisel_kunye(y["kaynak"], y["yil"]),
                            "baglanti": f'https://doi.org/{y["doi"]}' if y.get("doi") else
                            (bulunan or {}).get("sayfa") or (y["url"] if kaynak == "avesis" else ""), "doi": bool(y.get("doi")),
                            "konular": konular, "kaynak": kaynak, "kelimeler": kelimeler})
@@ -3376,7 +3386,8 @@ def baglanti_esle(ogeler: list) -> list:
     for o in ogeler:
         m = re.search(r'<a class="eser-ad[^"]*" href="([^"]+)"', o["html"])
         k = baglanti_anahtari(m.group(1)) if m else ""
-        if not k or "akademik.yok.gov.tr" in k:
+        # kitap bölümleri kitabın bağlantısını paylaşır ama ayrı eserlerdir
+        if not k or "akademik.yok.gov.tr" in k or o.get("tur") == "kitap-bolumu":
             sonuc.append(o)
             continue
         if k not in gruplar:
