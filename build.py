@@ -630,8 +630,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin:.4rem 0 1.3rem;padding:1.5rem 2rem 1.4rem 2.2rem;
   background:#fff;border:1px solid #c9a24b;border-radius:18px;box-shadow:0 18px 34px -26px rgba(20,30,50,.5);overflow:hidden}
 .kv2::before{content:"";position:absolute;right:-7.6rem;top:50%;width:26rem;height:26rem;transform:translateY(-50%);border-radius:50%;pointer-events:none;
-  background:repeating-radial-gradient(circle,transparent 0 .62rem,rgba(201,162,75,.45) .62rem calc(.62rem + 1px));
-  -webkit-mask-image:radial-gradient(circle,transparent 0 4.2rem,#000 4.8rem,transparent 12.8rem);mask-image:radial-gradient(circle,transparent 0 4.2rem,#000 4.8rem,transparent 12.8rem)}
+  background:repeating-radial-gradient(circle,transparent 0 1rem,rgba(201,162,75,.32) 1rem calc(1rem + 1px));
+  -webkit-mask-image:radial-gradient(circle,transparent 0 4.4rem,#000 4.8rem,transparent 10.5rem);mask-image:radial-gradient(circle,transparent 0 4.4rem,#000 4.8rem,transparent 10.5rem)}
 .kv2-metin{position:relative;z-index:1;min-width:0;flex:1}
 .kv2-etiket{display:flex;align-items:center;gap:.6rem;margin:0 0 .45rem;font:600 .72rem var(--sans);letter-spacing:.3em;color:#a47c2a}
 .kv2-etiket::after{content:"";flex:0 1 12rem;height:1px;background:linear-gradient(90deg,#c9a24b,transparent)}
@@ -646,13 +646,14 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-ik:first-child{padding-left:0;border-left:0}
 .kv2-ik:hover span{text-decoration:underline}
 .kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:50%;color:#fff;font:700 .66rem var(--sans);font-style:normal;letter-spacing:0}
+.kv2-ik b.kv-i-yok,.kv2-ik b.kv-i-orcid,.kv2-ik b.kv-i-avesis{background:#fff!important;color:#a47c2a;box-shadow:none;border:1px solid #c9a24b}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
 .kv2-madalya{overflow:hidden}
 .kv2-madalya img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 @media (max-width:640px){
   .kv2{gap:.7rem;padding:1rem 1rem 1rem 1.1rem;border-radius:14px;align-items:flex-start;margin:.3rem 0 1rem}
-  .kv2::before{right:-9.6rem;top:1.9rem;transform:none;width:20rem;height:20rem;-webkit-mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem);mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 9.5rem)}
+  .kv2::before{right:-7.1rem;top:-7.1rem;transform:none;width:20rem;height:20rem;-webkit-mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 7.5rem);mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 7.5rem)}
   .kv2-etiket{font-size:.62rem;letter-spacing:.24em;margin-bottom:.3rem}.kv2-ay svg{width:1.1rem;height:.95rem}
   .kv2 h1{font-size:1.6rem}
   .kv2-unvan{font-size:1rem;margin:.15rem 0 .55rem}
