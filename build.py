@@ -495,6 +495,14 @@ aside.yan .tur-k{font-style:italic;font-size:.82rem;color:var(--ink-soft);margin
 .aciklama-kisa{font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--ink-soft);margin:0 0 .8rem;max-width:52rem}
 /* açıklama notları gövde metninden ayrılsın: farklı yazı ailesi, küçük punto ve başta bilgi işareti */
 /* not işareti: logonun renklerinde (lâcivert zemin, altın ünlem) küçük bir yuvarlak */
+details.acik-not{margin:0 0 .8rem;max-width:52rem}
+details.acik-not summary{cursor:pointer;list-style:none;font-family:var(--sans);font-size:.84rem;color:var(--accent);display:inline-flex;align-items:center}
+details.acik-not summary::-webkit-details-marker{display:none}
+details.acik-not summary::before{content:"!";display:inline-block;width:1.25em;height:1.25em;line-height:1.25em;margin-right:.5em;border-radius:50%;background:var(--accent);color:var(--gold-logo);font-family:var(--display);font-weight:700;text-align:center;font-size:.92em}
+details.acik-not summary::after{content:"";width:.4rem;height:.4rem;margin-left:.55rem;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-.1rem) rotate(45deg)}
+details.acik-not[open] summary::after{transform:translateY(.1rem) rotate(-135deg)}
+details.acik-not .aciklama-kisa{margin:.6rem 0 0}
+details.acik-not .aciklama-kisa::before{content:none}
 .aciklama-kisa::before{content:"!";display:inline-block;width:1.25em;height:1.25em;line-height:1.25em;margin-right:.45em;
   border-radius:50%;background:var(--accent);color:var(--gold-logo);font-family:var(--display);font-weight:700;font-style:normal;
   font-size:.92em;text-align:center;vertical-align:.08em}
@@ -2223,11 +2231,11 @@ def render_tezler() -> str:
                 + "".join(f'<button type="button" class="sirala" data-alan="{k}" aria-sort="none">{a}<span class="ok" aria-hidden="true"></span></button>'
                           for k, a in [("yil", "Yıl"), ("danisman", "Danışman"), ("ad", "Tez adı")]) + '</div>')
     body = (f'<p class="ust-etiket">Tezler</p><h1>Tezler</h1>'
-            f'<p class="aciklama-kisa">Listedeki akademisyenlerin danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri. '
+            f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Listedeki akademisyenlerin danışmanlığını yaptığı ya da yürüttüğü yüksek lisans ve doktora tezleri. '
             f'Kayıtlar, akademisyenlerin YÖK Akademik profillerinde yer alan yönetilen tezler listesinden alınmış ve YÖK Ulusal Tez Merkezi kayıtlarıyla karşılaştırılmıştır. '
             f'Öğrenci adları yazılmaz. Danışman adıyla ya da tez adında geçen bir kelimeyle arama yapılabilir. '
             f'Tez konularının yıllar içindeki seyri <a href="{SITE_URL}/kavram-tarihi/">Kavram tarihi</a> sayfasında izlenebilir. '
-            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></details>'
             '<label class="secim-etiket" for="tez-ara">Ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="tez-ara" class="eser-konu-sec" placeholder="Tez adı, danışman ya da üniversite" autocomplete="off"></div>'
             f'<p class="secim-etiket secim-ayrac">Tür</p><div class="tur-secici tez-sec secim-kutu" data-grup="tur" role="group" aria-label="Tez türü">{turler}</div>'
@@ -2309,14 +2317,14 @@ def render_eserler() -> str:
                           for k, a in [("yil", "Yıl"), ("yazar", "Yazar"), ("ad", "Eser adı")]) + '</div>')
     tarih = dp_tarama_tarihi()
     body = (f'<p class="ust-etiket">Eserler</p><h1>Eserler</h1>'
-            f'<p class="aciklama-kisa">Türkiye akademisindeki din felsefecilerinin eserleri ile Türkiye\'de yayımlanan din felsefesi çalışmaları. '
+            f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Türkiye akademisindeki din felsefecilerinin eserleri ile Türkiye\'de yayımlanan din felsefesi çalışmaları. '
             f'Liste, sitede fişi bulunan eserlerden, DergiPark\'ta anahtar kelimelerinde din felsefesi geçen makalelerden, hocaların ORCID kayıtlarındaki DOI\'li çalışmalardan '
             f've AVESİS ya da YÖK Akademik sayfalarında yer alıp konusu açıkça bir başlığa giren yayınlardan oluşur. '
             f'Bir konu seçildiğinde o konudaki bütün eserler listelenir. Sitede fişi bulunan eserler başta yer alır, '
             f'makaleler yeniden eskiye sıralanır. Makalelerin konuları anahtar kelimelerine göre atanmıştır'
             f'{" (son tarama " + tr_date(tarih) + ")" if tarih else ""}. '
             f'Kavramların yıllar içindeki seyri <a href="{SITE_URL}/kavram-tarihi/">Kavram tarihi</a> sayfasında izlenebilir. '
-            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            f'Düzeltme önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></details>'
             f'<label class="secim-etiket" for="eser-konu">Konu</label><div class="eser-konu-kap"><select id="eser-konu" class="eser-konu-sec">{"".join(konular)}</select></div>'
             '<label class="secim-etiket eser-ara-etiket" for="eser-ara">Başlık ara</label>'
             '<div class="eser-konu-kap eser-ara-kap"><input type="search" id="eser-ara" class="eser-konu-sec" placeholder="Eser adı" autocomplete="off"></div>'
@@ -4205,13 +4213,13 @@ def render_dergiler() -> str:
     body = (f'<p class="ust-etiket">Dergiler</p><h1>Türkiye\'de din felsefesi makalesi yayımlayan dergiler</h1>'
             f'<p class="giris">Her derginin dizinleri, yayın ayları, '
             f'makale gönderim durumu ve yayımladığı din felsefesi makaleleri bir arada gösterilir.</p>'
-            f'<p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
+            f'<details class="acik-not"><summary>Açıklamayı oku</summary><p class="aciklama-kisa">Gönderim durumu, yayın modeli, ortalama süreler ve dizinler her akşam derginin DergiPark sayfasından okunur'
             f'{" (son okuma " + tr_date(tarama) + ")" if tarama else ""}. Dizin bilgisi derginin kendi beyanıdır. '
             f'Kabul dönemleri dergilerin duyurularından elle derlenmiştir; başvurudan önce derginin sayfasına bakınız. '
             f'Büyük rakam, derginin DergiPark\'ta yayımladığı din felsefesi makalelerini gösterir ({len(dergiler)} dergide toplam {toplam}). '
             f'Anahtar kelimelerinde din felsefesi geçen araştırma makaleleri ile Türkiye\'deki din felsefesi öğretim elemanlarının makaleleri birlikte sayılır. '
             f'Kitap tanıtımı ve çeviriler sayılmaz. '
-            f'Düzeltme ve dergi önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>'
+            f'Düzeltme ve dergi önerileri için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p></details>'
             f'<p class="secim-etiket">Ara ve süz</p>'
             f'<div class="d-arac"><label class="k-ara"><span>Ara</span><input type="search" id="dergi-ara" placeholder="Dergi, kurum ya da eski ad" autocomplete="off"></label>'
             f'<div class="tur-secici d-dizin-sec secim-kutu" role="group" aria-label="Dizin">{dizinler}</div></div>'
