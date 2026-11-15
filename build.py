@@ -3094,6 +3094,14 @@ KISISEL_ISARET = ' <span class="m-kaynak" title="Yazarın kişisel sitesinden">K
 YOK_ISARET = ' <span class="m-kaynak" title="YÖK Akademik kaydından">YÖK</span>'
 
 
+# DOI'si çalışmayan yayınlar: DOI yerine derginin kendi sayfasına bağlanır
+DOI_YERINE = {
+    "10.26449/sssj.795": "https://sssjournal.com/articles/5acbc035-bb54-4d13-a405-04a1ce440256",
+    "10.26449/sssj.778": "https://sssjournal.com/articles/8a444d93-fec8-45f2-898e-956a4b5223ad",
+    "10.26449/sssj.781": "https://sssjournal.com/articles/21b76b92-693a-40cd-a1b6-8d01142ccb5c",
+}
+
+
 def orcid_eserleri() -> list:
     """ORCID kayıtlarındaki DOI'li eserlerden, anahtar kelimeleri bir başlığa uyanlar (scripts/orcid_siniflandir.py).
     DergiPark listesinde zaten bulunanlar orada ayıklanmıştır. Yazar listesinde akademisyenin adı listedeki yazılışıyla yer alır."""
@@ -3123,7 +3131,7 @@ def orcid_eserleri() -> list:
         tanitim = x["tur"] in ("kitap-tanitimi", "ceviri")
         out.append({
             "id": "orcid-" + slugify(doi), "baslik": baslik_standart(baslik), "yazarlar": yazarlar, "dergi": x["dergi"], "cilt_sayi": "",
-            "yil": x["yil"], "tarih": x["yil"], "baglanti": "https://doi.org/" + doi, "doi": True,
+            "yil": x["yil"], "tarih": x["yil"], "baglanti": DOI_YERINE.get(doi) or "https://doi.org/" + doi, "doi": doi not in DOI_YERINE,
             "konular": [] if tanitim else list(x["basliklar"]), "ilgili": list(x["ilgili"]), "tur": x["tur"],
             "kelimeler": x["kelimeler"], "kaynak": "orcid",
         })
