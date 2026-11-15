@@ -364,7 +364,7 @@ header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content
 .marka-logo{width:44px;height:44px;flex:none}
 .marka b{font-family:var(--display);font-weight:500;font-size:1.75rem;line-height:1.05}
 .marka small{order:2;font-style:italic;font-size:.86rem;color:var(--ink-soft)}
-nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-family:var(--display);font-size:1.04rem}
+nav.ana{display:flex;flex-wrap:wrap;gap:.3rem 2rem;font-family:var(--display);font-size:1.25rem}
 nav.ana a{color:var(--ink-soft);text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
 nav.ana a:hover{color:var(--ink)}
 nav.ana a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--gold-logo)}
@@ -1019,7 +1019,7 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
 """
 
 # Terimler menüden çıkarıldı (14 Kasım 2026): terim fişleri ve /terimler/ dizini duruyor, Başlıklar sayfasından bağlanıyor.
-MENU = [("", "Ana sayfa"), ("basliklar", "Başlıklar"), ("kisiler", "Kişiler"),
+MENU = [("basliklar", "Başlıklar"), ("kisiler", "Kişiler"),
         ("eserler", "Eserler"), ("dergiler", "Dergiler"), ("harita", "Harita"), ("hakkinda", "Hakkında")]
 TEZ_DOSYA = ROOT / "data" / "tez" / "tezler.json"
 if TEZ_DOSYA.exists():
