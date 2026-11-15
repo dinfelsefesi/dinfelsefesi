@@ -643,15 +643,15 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-kurum span{display:block}
 .kv2-bag{display:flex;flex-wrap:wrap;gap:.6rem .75rem;margin:1.1rem 0 0;padding-top:.95rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
 .kv2-ik{display:inline-flex;align-items:center;padding:0;border:0;text-decoration:none;color:var(--ink)}
-.kv2-ik b{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border-radius:50%;color:#fff;font:700 .68rem var(--sans);font-style:normal;letter-spacing:0;transition:transform .15s,box-shadow .15s}
-.kv2-ik:hover b,.kv2-ik:focus-visible b{transform:translateY(-2px);box-shadow:0 4px 10px -4px rgba(20,30,50,.5)}
-.kv2-ik b svg{width:1.15rem;height:1.15rem}
-.kv2-ik b img{display:block;width:68%;height:68%;object-fit:contain}
-.kv2-ik b.kv-i-yok,.kv2-ik b.kv-i-avesis{width:auto;height:2.2rem;border:0;border-radius:0;background:transparent!important;box-shadow:none!important}
-.kv2-ik b.kv-i-yok img{width:auto;height:1.5rem}
-.kv2-ik b.kv-i-avesis img{width:auto;height:2.1rem}
-.kv2-ik:hover b.kv-i-yok,.kv2-ik:hover b.kv-i-avesis{box-shadow:none!important;filter:brightness(1.08)}
-.kv2-ik b.kv-i-yok,.kv2-ik b.kv-i-orcid,.kv2-ik b.kv-i-avesis{background:#fff!important;color:#a47c2a;box-shadow:none;border:1px solid #c9a24b}
+/* bağlantı simgeleri: çerçevesiz, tek renk (sitenin altını) */
+.kv2-ik b{display:inline-flex;align-items:center;justify-content:center;min-width:2.2rem;height:2.2rem;color:#c9a24b;font:700 .85rem var(--sans);font-style:normal;letter-spacing:0;
+  background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;transition:transform .15s,filter .15s}
+.kv2-ik:hover b,.kv2-ik:focus-visible b{transform:translateY(-2px);filter:brightness(.88)}
+.kv2-ik b svg{width:1.5rem;height:1.5rem}
+.kv2-ik b img{display:block;width:auto;height:1.7rem}
+.kv2-ik b.kv-i-yok img{height:1.4rem}
+.kv2-ik b.kv-i-avesis img{height:2rem}
+.kv2-ik b.kv-i-orcid img{height:1.9rem}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
 .kv2-madalya{overflow:hidden}
@@ -665,8 +665,8 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv2-kurum{font-size:.8rem;line-height:1.4;padding-left:.6rem;border-left-width:2px}
   .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
   .kv2-bag{margin-top:.7rem;padding-top:.65rem;padding-right:1.6rem}
-  .kv2-bag{gap:.5rem .55rem}.kv2-ik b{width:1.9rem;height:1.9rem;font-size:.6rem}.kv2-ik b svg{width:1rem;height:1rem}
-  .kv2-ik b.kv-i-yok,.kv2-ik b.kv-i-avesis{width:auto;height:1.9rem}.kv2-ik b.kv-i-yok img{height:1.3rem}.kv2-ik b.kv-i-avesis img{height:1.8rem}
+  .kv2-bag{gap:.5rem .9rem}.kv2-ik b{min-width:1.9rem;height:1.9rem;font-size:.75rem}.kv2-ik b svg{width:1.3rem;height:1.3rem}
+  .kv2-ik b img{height:1.4rem}.kv2-ik b.kv-i-yok img{height:1.2rem}.kv2-ik b.kv-i-avesis img{height:1.7rem}.kv2-ik b.kv-i-orcid img{height:1.6rem}
   .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
@@ -4158,7 +4158,7 @@ def kv_ikon(tur: str, url: str, etiket: str = "") -> str:
 
 def kv_logo_img(tur: str) -> str:
     """YÖK ve AVESİS için kurumların kendi logosu (static/img/kv-<tür>.png)."""
-    if tur not in ("yok", "avesis"):
+    if tur not in ("yok", "avesis", "orcid"):
         return ""
     return f'<img src="{SITE_URL}/static/img/kv-{tur}.png" alt="" loading="lazy" decoding="async">'
 
