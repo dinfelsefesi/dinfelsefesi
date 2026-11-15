@@ -565,8 +565,15 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-bag{margin:.9rem 0 0;padding-top:.7rem;border-top:1px solid var(--gold-logo);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-style:italic;font-size:.92rem}
 .kv-bag a{white-space:nowrap}
 .kv-logo{position:absolute;top:1rem;right:1.7rem;width:34px;height:34px;border-radius:8px;opacity:.9}  /* sağ kenarı içerikle (ORCID satırı) aynı hizada */
-@media (max-width:560px){.kv-resim{width:6.2rem;height:3.6rem}.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
-  .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
+.kv-nokta{display:none}
+@media (max-width:560px){
+  .kartvizit{flex-direction:row;align-items:center;gap:.8rem;padding:.8rem .9rem;margin:.3rem 0 1rem;box-shadow:3px 3px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
+  .kv-monogram{width:2.8rem;height:2.8rem;font-size:1.05rem}
+  .kv-resim{width:4.6rem;height:2.8rem;padding:.15rem}
+  .kartvizit h1,.kv-baslik h1{font-size:1.3rem;padding-right:0;margin:.05rem 0 .2rem}
+  .kv-unvan{font-size:.8rem}.kv-logo{display:none}
+  .kv-kurum{font-size:.76rem;line-height:1.4}.kv-br{display:none}.kv-nokta{display:inline}
+  .kv-bag{margin:.45rem 0 0;padding-top:.4rem;gap:.15rem 1rem;font-size:.78rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
 .gn-izgara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.4rem;align-items:stretch}
@@ -4097,7 +4104,7 @@ def render_akademisyen(s: str, items=None) -> str:
   <div class="kv-govde">
     <p class="kv-unvan">{e(p.get("unvan") or "")}{emekli}</p>
     <h1>{e(p["ad"])}</h1>
-    <p class="kv-kurum">{"<br>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
+    <p class="kv-kurum">{"<br class='kv-br'><span class='kv-nokta'> · </span>".join(e(x) for x in [p.get("universite"), p.get("fakulte")] if x)}</p>
     {f'<p class="kv-bag">{"".join(f"<span>{b}</span>" for b in baglar)}</p>' if baglar else ''}
   </div>
   <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
