@@ -672,10 +672,7 @@ input.eser-konu-sec{appearance:none;-webkit-appearance:none;width:100%;font:inhe
 .tez-liste{list-style:none;padding:0;margin:.2rem 0 0}
 .tez-liste li{padding:.75rem 0;border-bottom:1px solid var(--rule)}
 .tez-liste li[hidden]{display:none}
-.kisi-bulut{display:flex;flex-wrap:wrap;gap:.1rem .65rem;align-items:baseline;line-height:1.25;margin:.4rem 0 1.4rem;font-family:var(--display)}
-.kisi-bulut .kb-a{color:var(--accent)}
-.kisi-bulut .kb-b{color:var(--gold)}
-.kisi-bulut .kb-c{color:var(--ink-soft)}
+.kisi-kb{padding:.3rem;margin:.4rem 0 1.4rem}
 .tez-ad{margin:0 0 .15rem;font-family:var(--display);font-size:1.08rem;font-weight:500;color:var(--ink)}
 .tez-kunye,.tez-yer{margin:0;font-size:.92rem;color:var(--ink-soft)}
 .tez-yer{font-style:italic;font-size:.86rem}
@@ -2046,15 +2043,33 @@ def kisi_bulutu(ogeler, makaleler) -> str:
     sayac = Counter({k: n for k, n in sayac.items() if n >= 2})
     if len(sayac) < 5:
         return ""
-    top = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:28]
-    en = top[0][1]
-    ogeler_ = []
-    for i, (k, n) in enumerate(sorted(top, key=lambda kv: tr_anahtar(bicim[kv[0]].most_common(1)[0][0]))):
-        w = bicim[k].most_common(1)[0][0]
-        boy = 0.82 + (n - 1) / max(en - 1, 1) * 1.1 if en > 1 else 1.0
-        sinif = "kb-a" if n >= max(3, en * 0.6) else "kb-b"
-        ogeler_.append(f'<span class="{sinif}" style="font-size:{boy:.2f}rem" title="{n} çalışmada">{e(w)}</span>')
-    return '<h2>Kelime bulutu</h2><p class="kisi-bulut" aria-label="Çalışma başlıklarında sık geçen kelimeler">' + " ".join(ogeler_) + "</p>"
+    top = sorted(sayac.items(), key=lambda kv: (-kv[1], kv[0]))[:22]
+    veri = json.dumps([[bicim[k].most_common(1)[0][0], n] for k, n in top], ensure_ascii=False, separators=(",", ":"))
+    return ('<h2>Kelime bulutu</h2><div class="kb-kap kisi-kb"><svg class="kb-bulut" viewBox="0 0 300 250" role="img" '
+            'aria-label="Çalışma başlıklarında sık geçen kelimeler"></svg></div>'
+            f'<script>(function(){{var D={veri};{KISI_KB_JS}}})();</script>')
+
+
+KISI_KB_JS = """var svg=document.currentScript.previousElementSibling.querySelector('svg'),W=300,H=250,
+R=['#23446e','#86641e','#a84a14','#2f6b4f','#5c6370','#7a3f86','#1f6b78','#9b2c4a'],cv=document.createElement('canvas').getContext('2d'),
+FONT=getComputedStyle(document.body).getPropertyValue('--display')||'Georgia,serif';
+function ust(s){return s.toLocaleUpperCase('tr');}
+function kes(a,b){return !(a.x+a.w<b.x||b.x+b.w<a.x||a.y+a.h<b.y||b.y+b.h<a.y);}
+function ciz(){var mx=D[0][1],mn=D[D.length-1][1],kut=[];
+D.forEach(function(k,i){var oran=mx===mn?1:Math.sqrt((k[1]-mn)/(mx-mn)),s=Math.round(10+oran*(i===0?24:20));
+cv.font='600 '+s+'px '+FONT;var w=cv.measureText(ust(k[0])).width+3,h=s*0.82,dik=i>2&&(i*7)%10<3,bw=dik?h:w,bh=dik?w:h,ok=false;
+for(var t=0;t<2600&&!ok;t++){var a=t*0.18,r=1.1*a,x=W/2+r*Math.cos(a)*1.35-bw/2,y=H/2+r*Math.sin(a)-bh/2;
+if(x<2||y<2||x+bw>W-2||y+bh>H-2)continue;var b={x:x,y:y,w:bw,h:bh},c=false;
+for(var j=0;j<kut.length;j++){if(kes(b,kut[j])){c=true;break;}}
+if(!c){kut.push(b);ok=true;var cx=x+bw/2,cy=y+bh/2,A=document.createElementNS('http://www.w3.org/2000/svg','a');
+A.setAttribute('href','/eserler/?ara='+encodeURIComponent(k[0]));
+var T=document.createElementNS('http://www.w3.org/2000/svg','text');T.setAttribute('x',cx);T.setAttribute('y',cy);
+T.setAttribute('text-anchor','middle');T.setAttribute('dominant-baseline','central');T.setAttribute('font-size',s);
+T.setAttribute('fill',R[(i*5+3)%R.length]);T.setAttribute('class','kb-k');
+if(dik)T.setAttribute('transform','rotate(-90 '+cx+' '+cy+')');
+T.textContent=ust(k[0]);var tt=document.createElementNS('http://www.w3.org/2000/svg','title');tt.textContent=k[0]+': '+k[1]+' çalışma';
+T.appendChild(tt);A.appendChild(T);svg.appendChild(A);}}});}
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(ciz);"""
 
 
 def kelime_verisi(en_cok: int = 60) -> dict:
