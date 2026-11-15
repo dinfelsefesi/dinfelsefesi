@@ -974,9 +974,9 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:1.02rem}
 .pano-notlar .gn-liste .gn-alt a{font-size:inherit;font-family:inherit}
-.pn-ozet-kap{margin:.6rem 0 .3rem;flex:1 1 0;min-height:2.8rem;overflow:hidden}
-.pn-ozet{margin:0;font-size:.92rem;line-height:1.5;color:var(--ink-soft);display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
-@media (max-width:900px){.pn-ozet-kap{flex:none}.pn-ozet{display:block}}
+.pn-ozet-kap{margin:.6rem 0 .3rem;flex:1 1 0;min-height:3rem;overflow-y:auto;padding-right:.4rem}
+.pn-ozet{margin:0;font-size:.86rem;line-height:1.5;color:var(--ink-soft);display:block;-webkit-line-clamp:none!important}
+@media (max-width:900px){.pn-ozet-kap{flex:none;max-height:16rem}}
 .pn-alt-linkler{margin-top:auto!important}
 .pano-notlar{grid-template-rows:minmax(0,1fr)}
 .pano-notlar .gn-kart{display:flex;flex-direction:column;min-height:0;overflow:hidden}
@@ -5140,7 +5140,7 @@ def ana_kapilar_html() -> str:
         f'<span class="hk-ad">{a}</span></a>' for k, a, u, t in ANA_KAPILAR) + '</div>')
 
 
-def ozet_kisalt(metin: str, en_cok: int = 85) -> str:
+def ozet_kisalt(metin: str, en_cok: int = 250) -> str:
     """Özetin ilk en_cok kelimesi; mümkünse son cümlenin sonunda keser, olmazsa üç nokta koyar."""
     kel = (metin or "").split()
     if len(kel) <= en_cok:
