@@ -929,6 +929,8 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:.98rem}
+.pn-ozet{font-size:.92rem;line-height:1.5;color:var(--ink-soft);margin:.6rem 0 0}
+.pn-alt-baslik{font-family:var(--display);font-weight:500;font-size:1rem;margin:1.1rem 0 .4rem;color:var(--gold)}
 .pn-baslik{margin:0 0 .3rem;font-family:var(--display);font-size:1.02rem;line-height:1.3}
 .pano-notlar .gn-hepsi{display:flex;flex-wrap:wrap;gap:.2rem 1rem;margin:.5rem 0 0;padding-top:0}
 @media (max-width:900px){.pano-kapilar{grid-template-columns:repeat(3,minmax(0,1fr))}.pano-notlar{grid-template-columns:minmax(0,1fr)}}
@@ -4984,14 +4986,18 @@ ANA_KAPI_RESIM = {
         + "".join(f'<rect x="134" y="{y}" width="{w}" height="6" rx="3" fill="#fff" fill-opacity=".85"/>' for y, w in [(58, 60), (74, 44), (90, 56), (106, 36)])),
     "harita": HARITA_RESIM["ag"],
 }
-ANA_KAPILAR = [("basliklar", "Başlıklar", "/basliklar/"), ("kisiler", "Kişiler", "/kisiler/"), ("eserler", "Eserler", "/eserler/"),
-               ("tezler", "Tezler", "/tezler/"), ("dergiler", "Dergiler", "/dergiler/"), ("harita", "Harita", "/harita/")]
+ANA_KAPILAR = [("basliklar", "Başlıklar", "/basliklar/", "Din felsefesinin temel problemleri, her biri bir okuma metniyle."),
+               ("kisiler", "Kişiler", "/kisiler/", "Türkiye'deki din felsefesi akademisyenleri ve düşünürler."),
+               ("eserler", "Eserler", "/eserler/", "Din felsefesi alanında yayımlanmış makaleler ve eser fişleri."),
+               ("tezler", "Tezler", "/tezler/", "Din felsefesi alanındaki yüksek lisans ve doktora tezleri."),
+               ("dergiler", "Dergiler", "/dergiler/", "Din felsefesi makalesi yayımlayan dergiler ve dizin bilgileri."),
+               ("harita", "Harita", "/harita/", "Alana dört açıdan bakış: ilişki ağı, kavram tarihi, kelime bulutu ve sayılar.")]
 
 
 def ana_kapilar_html() -> str:
     return ('<div class="harita-kartlar pano-kapilar">' + "".join(
-        f'<a class="harita-kart harita-gorsel" href="{SITE_URL}{u}"><span class="hk-resim">{ANA_KAPI_RESIM[k]}</span>'
-        f'<span class="hk-ad">{a}</span></a>' for k, a, u in ANA_KAPILAR) + '</div>')
+        f'<a class="harita-kart harita-gorsel" href="{SITE_URL}{u}" title="{e(t)}"><span class="hk-resim">{ANA_KAPI_RESIM[k]}</span>'
+        f'<span class="hk-ad">{a}</span></a>' for k, a, u, t in ANA_KAPILAR) + '</div>')
 
 
 def ana_notlar_html(items) -> str:
@@ -5003,21 +5009,27 @@ def ana_notlar_html(items) -> str:
         gunun = (f'<h3>Günün makalesi <span class="gn-ay">{e(gun_metni(m["gun"]))}</span></h3>'
                  f'<p class="pn-baslik"><a href="{entry_url(m)}">{e(m["title_tr"])}</a></p>'
                  f'<span class="gn-alt">{e(m["authors"])} · {e(m["journal"])}{", " + e(m["year"]) if m.get("year") else ""}</span>'
-                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Tanıtımı okuyun →</a> <a href="{SITE_URL}/gunun-makalesi/">Öncekiler →</a></p>')
+                 f'<p class="pn-ozet">{e(m["lead"])}</p>'
+                 f'<p class="gn-hepsi"><a href="{entry_url(m)}">Tanıtımı okuyun →</a></p>'
+                 + ('<h4 class="pn-alt-baslik">Önceki günler</h4><ul class="gn-liste">'
+                    + "".join(f'<li><a href="{entry_url(x)}">{e(x["title_tr"])}</a><span class="gn-alt">{e(tr_date(x["gun"]))}</span></li>'
+                              for x in items[1:6])
+                    + f'</ul><p class="gn-hepsi"><a href="{SITE_URL}/gunun-makalesi/">Bütün günler →</a></p>' if len(items) > 1 else ""))
     else:
         gunun = '<h3>Günün makalesi</h3><p class="gn-bos">Henüz kayıt yok.</p>'
     tb = tebrikler()
     satir = "".join(
         f'<li><a href="{akademi_url(slugify(x["ad"]))}">{e(x["ad"])}</a> '
         + ("doktorasını tamamladı" if x["unvan"] == "doktora" else e(UNVAN_ADI[x["unvan"]]))
-        + f'<span class="gn-alt">{e(x["tez_univ"] if x["unvan"] == "doktora" else (x["p"].get("universite") or ""))}</span></li>' for x in tb[:3])
-    tebrik = (f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><ul class="gn-liste">{satir}</ul>' if satir
+        + f'<span class="gn-alt">{e(x["tez_univ"] if x["unvan"] == "doktora" else (x["p"].get("universite") or ""))}</span></li>' for x in tb[:6])
+    tebrik = (f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><ul class="gn-liste">{satir}</ul>'
+              f'<p class="aciklama-kisa gn-not">Bilgiler YÖK Akademik ve AVESİS kayıtlarındandır.</p>' if satir
               else f'<h3>Tebrikler <span class="gn-ay">{bugun_.year}</span></h3><p class="gn-bos">Bu dönemde kayıt yok.</p>')
     yayim_var = any(m.get("yayim") for m in dp_veri())
     yayin = [m for m in dp_veri() if (m.get("yayim") if yayim_var else len(str(m.get("tarih") or "")) >= 10) and (m["konular"] or m["ilgili"])]
     yayin.sort(key=lambda m: m["tarih"], reverse=True)
     sat2 = ""
-    for m in yayin[:3]:
+    for m in yayin[:6]:
         yazar, dergi = dp_kunye(m)
         sat2 += f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi}</span></li>'
     yayinlar_ = (f'<h3>Son yayımlananlar</h3><ul class="gn-liste">{sat2}</ul><p class="gn-hepsi"><a href="{SITE_URL}/eserler/">Bütün çalışmalar →</a></p>'
