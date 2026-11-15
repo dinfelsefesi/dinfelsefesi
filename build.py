@@ -929,11 +929,13 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:.98rem}
-.pano-notlar .gn-kart:first-child{display:flex;flex-direction:column}
 .pn-ozet-kap{flex:1 1 auto;position:relative;min-height:6rem;margin:.6rem 0 .3rem}
 .pn-ozet{position:absolute;inset:0;margin:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;font-size:.92rem;line-height:1.5;color:var(--ink-soft)}
 .pn-alt-linkler{margin-top:auto!important}
-.pano-notlar .gn-tebrik .gn-liste,.pano-notlar .gn-kart:last-child .gn-liste{max-height:34rem;overflow-y:auto;padding-right:.4rem}
+.pano-notlar{grid-template-rows:minmax(0,1fr)}
+.pano-notlar .gn-kart{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.pano-notlar .gn-liste{flex:1 1 auto;min-height:0;overflow-y:auto;padding-right:.4rem}
+@media (max-width:900px){.pano-notlar{grid-template-rows:none}.pano-notlar .gn-liste{max-height:26rem;flex:none}}
 .pn-alt-baslik{font-family:var(--display);font-weight:500;font-size:1rem;margin:1.1rem 0 .4rem;color:var(--gold)}
 .pn-baslik{margin:0 0 .3rem;font-family:var(--display);font-size:1.02rem;line-height:1.3}
 .pano-notlar .gn-hepsi{display:flex;flex-wrap:wrap;gap:.2rem 1rem;margin:.5rem 0 0;padding-top:0}
@@ -5044,9 +5046,11 @@ def ana_notlar_html(items) -> str:
         sat2 += f'<li>{eser_adi(m["baglanti"], m["baslik"], "")}<span class="gn-alt">{yazar} · {dergi}</span></li>'
     yayinlar_ = (f'<h3>Son yayımlananlar{ay_etiket}</h3><ul class="gn-liste">{sat2}</ul>'
                  if sat2 else '<h3>Son yayımlananlar</h3><p class="gn-bos">Henüz kayıt yok.</p>')
-    pn_js = ("<script>(function(){function f(){document.querySelectorAll('.pn-ozet').forEach(function(p){p.style.webkitLineClamp='unset';"
+    pn_js = ("<script>(function(){function f(){var n=document.querySelector('.pano-notlar');"
+             "if(n){if(innerWidth>900){n.style.height=Math.max(380,innerHeight-(n.getBoundingClientRect().top+pageYOffset)-24)+'px'}else{n.style.height=''}}"
+             "document.querySelectorAll('.pn-ozet').forEach(function(p){p.style.webkitLineClamp='unset';"
              "var lh=parseFloat(getComputedStyle(p).lineHeight)||20;p.style.webkitLineClamp=Math.max(2,Math.floor(p.parentNode.clientHeight/lh));});}"
-             "f();addEventListener('resize',f);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();</script>")
+             "f();addEventListener('resize',f);document.addEventListener('toggle',f,true);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(f);})();</script>")
     return (f'<div class="pano-notlar"><section class="gn-kart">{gunun}</section><section class="gn-kart gn-tebrik">{tebrik}</section>'
             f'<section class="gn-kart">{yayinlar_}</section></div>' + pn_js)
 
