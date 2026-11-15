@@ -881,6 +881,8 @@ a.ic-bag{text-decoration-style:dotted}
 .ag-sifirla{font:inherit;font-style:italic;font-size:.95rem;color:var(--accent-ink);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
 .ag-kap{position:relative;border:1px solid var(--rule);border-radius:14px;background:var(--card);overflow:hidden}
 .ag-tuval{height:min(72vh,700px);min-height:420px;cursor:grab}
+.akademi-ag{margin:2.2rem 0 1.4rem}
+.akademi-ag>h2{margin:0 0 .5rem}
 .ag-tuval:active{cursor:grabbing}
 .ag-tuval svg{display:block;width:100%;height:100%}
 .ag-tuval.ag-yukleniyor{background:repeating-linear-gradient(90deg,transparent 0 40%,rgba(0,0,0,.03) 50%,transparent 60% 100%);background-size:200% 100%;animation:ag-yuk 1.2s linear infinite}
@@ -2202,40 +2204,6 @@ def kisi_haritalari(v, s: str, ogeler) -> str:
                                 "Bir başlığa ya da noktaya basınca ilgili yayınlar listelenir."))
     # --- ilişki ağı: kişi, başlıklar, yayınlar
     ana2 = [(b, c) for b, c in ana if any(b in bl for bl in bs.values())][:6]
-    if len(ana2) >= 2:
-        cx, cy, R1, R2, H = W / 2, 120, 58, 104, 240
-        n = len(ana2)
-        atan = {}
-        for i, bl in sorted(bs.items()):
-            for j, (b, _) in enumerate(ana2):
-                if b in bl:
-                    atan.setdefault(j, []).append(i)
-                    break
-        p, d_ = [], []
-        for j, (b, c) in enumerate(ana2):
-            a_ = -math.pi / 2 + 2 * math.pi * j / n
-            bx, by = cx + R1 * math.cos(a_), cy + R1 * math.sin(a_)
-            ws = atan.get(j, [])
-            m_ = len(ws)
-            dl = min(0.30, 2 * math.pi / n * 0.8 / max(m_, 1))
-            tum = ",".join(map(str, ws))
-            ad_ = FIS[("baslik", b)]["ad"]
-            p.append(f'<line data-b="{j}" x1="{cx}" y1="{cy}" x2="{bx:.1f}" y2="{by:.1f}" stroke="#b9c0ca"/>')
-            for t, i in enumerate(ws):
-                aw = a_ + (t - (m_ - 1) / 2) * dl
-                rr = R2 + (8 if t % 2 else 0)
-                wx, wy = cx + rr * math.cos(aw), cy + rr * math.sin(aw)
-                p.append(f'<line data-b="{j}" x1="{bx:.1f}" y1="{by:.1f}" x2="{wx:.1f}" y2="{wy:.1f}" stroke="#d4d9e0"/>')
-                d_.append(f'<circle data-b="{j}" data-i="{i}" data-e="{e(_kisalt(ogeler[i]["ad"], 60))}" tabindex="0" role="button" cx="{wx:.1f}" cy="{wy:.1f}" r="4.2" fill="#9aa3af">'
-                          f'<title>{e(ogeler[i]["ad"])}</title></circle>')
-            d_.append(f'<g data-b="{j}" data-i="{tum}" data-e="{e(ad_)} yayınları" tabindex="0" role="button">'
-                      f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="{7 + min(c, 4) * 1.2:.1f}" fill="#86641e"><title>{e(ad_)}: {c} yayın</title></circle>'
-                      f'<text x="{bx:.1f}" y="{by + 7 + min(c, 4) * 1.2 + 10:.1f}" text-anchor="middle" font-size="10.5" fill="#1d2330" '
-                      f'stroke="#fff" stroke-width="3" paint-order="stroke">{e(_kisalt(ad_, 12))}</text></g>')
-        kid = ag_kisi_kimligi(v["p"])
-        d_.append(f'<a href="{ag_adresi(*kid.split("/", 1))}"><circle cx="{cx}" cy="{cy}" r="12" fill="#23446e"><title>{e(v["p"]["ad"])}: kişinin ilişki ağı sayfası</title></circle></a>')
-        ciktilar.append(kutu % ("İlişki ağı", " kisi-ag", W, H, "Kişinin başlıkları ve yayınları", "".join(p) + "".join(d_),
-                                "Başlığa ya da gri noktaya (yayın) basınca liste süzülür; ortadaki noktaya basınca kişinin ağ sayfası açılır."))
     if not ciktilar:
         return ""
     return "".join(ciktilar)
@@ -3979,7 +3947,7 @@ def bas_harfler(ad_: str) -> str:
     return (harf(parca[0]) + (harf(parca[-1]) if len(parca) > 1 else "")) if parca else ""
 
 
-def render_akademisyen(s: str) -> str:
+def render_akademisyen(s: str, items=None) -> str:
     v = akademi_verisi()[s]
     p = v["p"]
     emekli = ' <span class="emekli">Emekli</span>' if p.get("durum") == "emekli" else ""
@@ -4033,6 +4001,11 @@ def render_akademisyen(s: str) -> str:
     hakkinda = "".join(f'<li>{satir_ici(x["kunye"])}' + (f' <a class="dis" href="{e(x["baglanti"])}" rel="noopener" target="_blank">↗</a>'
                                                            if x.get("baglanti") else "") + "</li>" for x in p.get("hakkinda") or [])
     hakkinda = f'<section class="akademi-hakkinda"><h2>Hakkında yazılanlar</h2><ul>{hakkinda}</ul></section>' if hakkinda else ""
+    ag_bolumu = ""
+    if items is not None and f"kisi-tr/{s}" in {d["id"] for d in ag_tam(items)["dugumler"]}:
+        ag_bolumu = ('<section class="akademi-ag" id="iliski-agi"><h2>İlişki ağı</h2>'
+                     '<p class="aciklama-kisa">Kişinin eserleri ve makaleleri, bunların bağlı olduğu başlık ve terimler, başlıklarında adı geçen düşünürler '
+                     've ortak yazarlar.</p>' + ag_araci(ag_alt_veri(ag_tam(items), f"{s}", "kisi-tr")) + '</section>')
     body = f"""
 <p class="yol"><a href="{SITE_URL}/kisiler/">Kişiler</a> <span aria-hidden="true">›</span> Türkiye akademisi</p>
 <section class="kartvizit" aria-label="Künye">
@@ -4050,6 +4023,7 @@ def render_akademisyen(s: str) -> str:
   </div>
   <aside class="yan">{"".join(yan)}</aside>
 </div>
+{ag_bolumu}
 <p class="aciklama-kisa akademi-not">{"Listeye elle eklenmiştir. " + ("Tanıtım, unvan" if p.get("tanitim") else "Unvan") + " ve kurum bilgisi " + e(p.get("kurum_kaynagi") or "kamuya açık kaynaklara") + " göre, makaleler ve başlıklar" if p.get("elle") else "Unvan ve kurum bilgisi YÖK Akademik kaydına, makaleler ve başlıklar"} DergiPark taramasına{" (" + tr_date(tarih) + ")" if tarih else ""}, ORCID kaydındaki DOI'li yayınlara ve AVESİS ya da YÖK Akademik sayfasına göredir. Çalışmaların konuları anahtar kelimelerine göre atanmıştır; AVESİS ve YÖK'ten gelen yayınlardan anahtar kelimesine ulaşılamayanlarınki adlarına bakılarak elle verilmiştir.{" ORCID numarası " + v["orcid_kaynak"] + " alınmıştır." if v["orcid"] and not p.get("elle") else ""} Düzeltme için: <a href="mailto:{ILETISIM}">{ILETISIM}</a></p>"""
     desc = f'{p["ad"]}, {p.get("unvan", "")}, {p.get("universite", "")}. Din felsefesi alanındaki makaleleri ve çalıştığı konular.'
     kisi = {"@type": "Person", "name": p["ad"], "url": akademi_url(s)}
@@ -5069,15 +5043,18 @@ def main() -> None:
     yaz("harita/sayilar", render_sayilar())
     yaz("dergiler", render_dergiler())
     for s_ in akademi_verisi():
-        yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_))
+        yaz(f"kisiler/akademi/{s_}", render_akademisyen(s_, items))
     yaz("ag", render_ag(items))
     ag_kimlikleri = {d["id"] for d in ag_tam(items)["dugumler"]}
     for (t, k) in list(FIS):
         if t in ("baslik", "terim", "kisi") and f"{t}/{k}" in ag_kimlikleri:
             yaz(ag_adresi(t, k).removeprefix(SITE_URL + "/").strip("/"), render_alt_ag(items, t, k))
     for s_ in akademi_verisi():
-        if f"kisi-tr/{s_}" in ag_kimlikleri:
-            yaz(ag_adresi("kisi-tr", s_).removeprefix(SITE_URL + "/").strip("/"), render_alt_ag(items, "kisi-tr", s_))
+        if f"kisi-tr/{s_}" in ag_kimlikleri:  # ayrı ağ sayfası kalktı; eski adres kişi sayfasındaki ağa yönlendirilir
+            hedef_ = akademi_url(s_) + "#iliski-agi"
+            yaz(ag_adresi("kisi-tr", s_).removeprefix(SITE_URL + "/").strip("/"),
+                f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="{hedef_}">'
+                f'<meta http-equiv="refresh" content="0;url={hedef_}"><a href="{hedef_}">İlişki ağı kişinin sayfasındadır</a>')
     yaz("hakkinda", page(f"Hakkında · {SITE_NAME}", ABOUT, "hakkinda", canonical=f"{SITE_URL}/hakkinda/"))
 
     (OUT / "api").mkdir()
