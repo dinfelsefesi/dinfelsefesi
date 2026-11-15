@@ -667,6 +667,13 @@ button.sirala[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-si
 table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold-logo)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
+table.kisiler{table-layout:fixed}
+table.kisiler th,table.kisiler td{padding-right:1.6rem}
+table.kisiler th:nth-child(1){width:30%}table.kisiler th:nth-child(2){width:15%}table.kisiler th:nth-child(3){width:29%}table.kisiler th:nth-child(4){width:26%}
+table.kisiler tbody{counter-reset:ks}
+table.kisiler tbody tr{counter-increment:ks}
+table.kisiler th:first-child,table.kisiler td.k-ad{padding-left:2.5rem;position:relative}
+table.kisiler td.k-ad::before{content:counter(ks) ".";position:absolute;left:0;top:.72rem;width:1.9rem;text-align:right;font-family:var(--sans);font-size:.74rem;font-weight:400;color:var(--gold)}
 table.kisiler tbody tr:hover{background:var(--panel)}
 .emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -1013,7 +1020,11 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
   table.kisiler,table.kisiler tbody,table.kisiler tr,table.kisiler td{display:block;width:100%}
   table.kisiler tr{padding:.6rem 0;border-bottom:1px solid var(--rule)}
   table.kisiler td{border:0;padding:.05rem 0}
-  table.kisiler td.k-ad{font-size:1.02rem}
+  table.kisiler td.k-ad{font-size:1.02rem;padding-left:0}
+  table.kisiler th:first-child{padding-left:0}
+  table.kisiler td.k-ad::before{position:static;display:inline-block;width:auto;margin-right:.45rem}
+  table.kisiler th,table.kisiler td{padding-right:0}
+  table.kisiler thead th{width:auto!important}
   table.kisiler tr[hidden]{display:none}
 }
 """
