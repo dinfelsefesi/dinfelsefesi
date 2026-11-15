@@ -345,7 +345,7 @@ a:hover{color:var(--accent)}
    doldurur; yalnız düzyazı (.giris, .aciklama-kisa, .metin) okuma ölçüsünde (--measure, 52rem) kalır. Bileşenlere ayrıca max-width verilmez. */
 .wrap{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .dar{max-width:46rem}
-header.site{background:var(--paper);border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo);
+header.site{background:#e4eaf2;border-top:4px solid var(--accent);border-bottom:1px solid var(--gold-logo);
   position:sticky;top:0;z-index:60;transition:transform .25s ease,box-shadow .2s ease}
 html{scroll-padding-top:4.5rem}
 /* aşağı inildiğinde şerit incelir: küçük logo, alt yazı gizli */
@@ -554,13 +554,16 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv-monogram{flex:none;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--gold-logo);
   display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.6rem;letter-spacing:.04em}
 .kv-govde{min-width:0}
+.kv-resim{width:7.4rem;height:4.2rem;border-radius:10px;background:var(--accent-soft);border:1px solid var(--rule);overflow:hidden;padding:.2rem}
+.kv-resim svg{width:100%;height:100%;display:block}
+.kv-baslik h1{font-size:1.9rem}
 .kv-unvan{margin:0;font-style:italic;font-size:.92rem;color:var(--gold)}
 .kartvizit h1{margin:.1rem 0 .45rem;font-size:2rem;line-height:1.15;padding-right:2.6rem}  /* uzun adlar logonun altına girmesin */
 .kv-kurum{margin:0;font-size:.98rem;color:var(--ink-soft);line-height:1.5}
 .kv-bag{margin:.9rem 0 0;padding-top:.7rem;border-top:1px solid var(--gold-logo);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-style:italic;font-size:.92rem}
 .kv-bag a{white-space:nowrap}
 .kv-logo{position:absolute;top:1rem;right:1.7rem;width:34px;height:34px;border-radius:8px;opacity:.9}  /* sağ kenarı içerikle (ORCID satırı) aynı hizada */
-@media (max-width:560px){.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
+@media (max-width:560px){.kv-resim{width:6.2rem;height:3.6rem}.kartvizit{flex-direction:column;gap:.9rem;padding:1.2rem 1.2rem 1.1rem;box-shadow:4px 4px 0 color-mix(in srgb,var(--gold-logo) 55%,transparent)}
   .kv-monogram{width:3.4rem;height:3.4rem;font-size:1.3rem}.kartvizit h1{font-size:1.65rem}}
 .akademi-not{margin-top:1.6rem;font-size:.8rem}
 .guncel .gn-ay{font-family:var(--sans);font-size:.95rem;color:var(--gold);font-weight:400;margin-left:.5rem}
@@ -933,7 +936,8 @@ a.ic-bag{text-decoration-style:dotted}
 .pano-kapilar .hk-ad{padding:.5rem .7rem .6rem;font-size:1.05rem}
 .pano-notlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0 0 1.4rem}
 .pano-notlar .gn-kart{padding:1rem 1.1rem}
-.pano-notlar .gn-kart h3{font-size:1.1rem;margin:0 0 .5rem}
+.pano-notlar .gn-kart h3{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 .75rem;padding-bottom:.55rem;border-bottom:1px solid var(--gold-logo)}
+.pano-notlar .gn-kart h3 .gn-ay{font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--ink-soft);margin-left:.4rem}
 .pano-notlar .gn-liste li{padding:.35rem 0}
 .pano-notlar .gn-liste a{font-size:1.02rem}
 .pano-notlar .gn-liste .gn-alt a{font-size:inherit;font-family:inherit}
@@ -1022,6 +1026,9 @@ h2.kume-ad:first-of-type{margin-top:1.2rem}
   table.kisiler td{border:0;padding:.05rem 0}
   table.kisiler td.k-ad{font-size:1.02rem;padding-left:0}
   table.kisiler th:first-child{padding-left:0}
+  table.kisiler td.k-ad{display:block;margin-bottom:.1rem}
+  table.kisiler td:not(.k-ad){display:inline;width:auto;font-size:.88rem;color:var(--ink-soft);line-height:1.5}
+  table.kisiler td:not(.k-ad)+td::before{content:" · ";color:var(--gold)}
   table.kisiler td.k-ad::before{position:static;display:inline-block;width:auto;margin-right:.45rem}
   table.kisiler th,table.kisiler td{padding-right:0}
   table.kisiler thead th{width:auto!important}
@@ -1409,10 +1416,24 @@ def render_baslik(k) -> str:
         metin = ('<p class="giris">Başlığın tanıtım metni henüz yazılmadı. '
                  'Başlığa bağlı fişler yandaki listede yer almaktadır.</p>' if b else
                  '<p class="giris">Bu başlık için henüz fiş eklenmedi.</p>')
+    ust_k = h.get("ust_baslik")
+    kv_tur = ("Alt başlık · " + e(FIS[("baslik", ust_k)]["ad"])) if ust_k and ("baslik", ust_k) in FIS else "Ana başlık"
+    kv_kars = "<br>".join(x for x in [("İng. " + e(h["ingilizce"])) if h.get("ingilizce") else "",
+                                      ("Diğer adı: " + ", ".join(e(str(a)) for a in liste(h.get("diger_adlari")))) if liste(h.get("diger_adlari")) else ""] if x)
+    kv_resim = (f'<div class="kv-monogram kv-resim" aria-hidden="true">{BASLIK_RESIM[k]}</div>' if k in BASLIK_RESIM
+                else f'<div class="kv-monogram" aria-hidden="true">{e(bas_harfler(h["ad"]))}</div>')
     body = f"""
 <p class="yol">{yol(k)}</p>
-<h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
-{f'<p class="baslik-karsilik">{" · ".join(x for x in [("İng. " + e(h["ingilizce"])) if h.get("ingilizce") else "", ("Diğer adı: " + ", ".join(e(str(a)) for a in liste(h.get("diger_adlari")))) if liste(h.get("diger_adlari")) else ""] if x)}</p>' if h.get("ingilizce") or h.get("diger_adlari") else ""}
+<section class="kartvizit kv-baslik" aria-label="Künye">
+  {kv_resim}
+  <div class="kv-govde">
+    <p class="kv-unvan">{kv_tur}</p>
+    <h1>{e(h['ad'])}{taslak_etiketi(h)}</h1>
+    {f'<p class="kv-kurum">{kv_kars}</p>' if kv_kars else ''}
+    <p class="kv-bag"><span>{sayim_metni(b)}</span></p>
+  </div>
+  <img class="kv-logo" src="{SITE_URL}/static/img/logo.svg" alt="" width="34" height="34">
+</section>
 <p class="giris">{satir_ici(h.get('ozet'))}<span class="say ayri">{sayim_metni(b)}</span></p>
 <div class="fis-duzen">
   <div class="metin">{metin}{f'<h2>Tartışma soruları</h2><ol class="sorular">{sorular}</ol>' if sorular else ''}{baslik_makaleleri(k)}{baslik_calisanlari(k)}</div>
