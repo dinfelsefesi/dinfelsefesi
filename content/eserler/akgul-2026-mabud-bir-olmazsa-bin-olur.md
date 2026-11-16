@@ -11,7 +11,7 @@ baglanti: https://avesis.erciyes.edu.tr/yayin/a537bf06-a28c-4ad4-9d95-762e5aa7c1
 acik_erisim: evet
 turkce_cevirisi: ""
 ilgili_terimler: []
-basliklar: [ibadet]
+basliklar: [ibadet, insan-tasavvurlari]
 imza: dinfelsefesi.com.tr
 durum: taslak
 guncelleme: 2026-10-23
