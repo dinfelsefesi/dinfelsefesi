@@ -42,28 +42,31 @@ def kart(hedef: Path, ust: str, baslik: str, alt: str = ""):
     x = 90
     c.rectangle([40, 40, G - 40, Y - 40], outline=CIZGI, width=2)
     c.text((x, 92), ust, font=_font(EGIK, 34, "Regular"), fill=ALTIN)
-    boy = 66 if len(baslik) < 70 else 56
+    boy = 66 if len(baslik) < 70 else 56 if len(baslik) < 110 else 48
     fb = _font(YAZI, boy)
     y = 150
     for s in _sar(c, baslik, fb, G - 2 * x, 3):
         c.text((x, y), s, font=fb, fill=MUREKKEP)
         y += int(boy * 1.18)
-    if alt:
+    if alt and y + 52 <= Y - 150 - 90:  # alt satıra yer yoksa (üç satırlık uzun başlık) atlanır
         fa = _font(EGIK, 30, "Regular")
-        for s in _sar(c, alt, fa, G - 2 * x, 2):
+        for s in _sar(c, alt, fa, G - 2 * x, 1):
             c.text((x, y + 14), s, font=fa, fill=SOLUK)
             y += 38
-    c.line([x, Y - 128, G - x, Y - 128], fill=CIZGI, width=2)
-    c.line([x, Y - 122, G - x, Y - 122], fill=CIZGI, width=1)
+    # X, büyük bağlantı kartlarında sayfa başlığını görselin sol altına koyu bir etiketle bindirir (en çok alttaki ~120 px).
+    # Bu yüzden alt şerit (çizgi, logo, alan adı) bu bölgenin üstünde durur.
+    ab = Y - 150  # alt şeridin alt kenarı
+    c.line([x, ab - 80, G - x, ab - 80], fill=CIZGI, width=2)
+    c.line([x, ab - 74, G - x, ab - 74], fill=CIZGI, width=1)
     logo_yolu = KOK / "static" / "img" / "logo-512.png"
     yx = x
     if logo_yolu.exists():
         logo = Image.open(logo_yolu).convert("RGBA").resize((54, 54), Image.LANCZOS)
-        im.paste(logo, (x, Y - 104), logo)
+        im.paste(logo, (x, ab - 56), logo)
         yx = x + 70
-    c.text((yx, Y - 104), "Din Felsefesi", font=_font(YAZI, 38), fill=MUREKKEP)
+    c.text((yx, ab - 56), "Din Felsefesi", font=_font(YAZI, 38), fill=MUREKKEP)
     f2 = _font(EGIK, 28, "Regular")
     sag = "dinfelsefesi.com.tr"
-    c.text((G - x - c.textlength(sag, font=f2), Y - 100), sag, font=f2, fill=SOLUK)
+    c.text((G - x - c.textlength(sag, font=f2), ab - 52), sag, font=f2, fill=SOLUK)
     hedef.parent.mkdir(parents=True, exist_ok=True)
     im.save(hedef, optimize=True)
