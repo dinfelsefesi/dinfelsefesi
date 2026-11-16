@@ -657,16 +657,19 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-madalya{overflow:hidden}
 .kv2-madalya img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 /* Kartın üst boşluğu (AKADEMİSYEN yazısına) ile alt boşluğu (simgelere) eşitlenir; kazanılan yer iç aralıklara dağıtılır */
-.kv2 .kv2-etiket{margin-bottom:1rem}
-.kv2 .kv2-unvan{margin-bottom:1.05rem}
-.kv2 .kv2-kurum{margin-bottom:1.25rem}
-.kv2 .kv2-bag{margin-bottom:0}
+.kv2 .kv2-metin{display:flex;flex-direction:column;min-height:15.6rem}
+.kv2 .kv2-etiket{margin-bottom:.6rem}
+.kv2 .kv2-metin h1{margin-top:auto}
+.kv2 .kv2-unvan{margin-top:0;margin-bottom:auto}
+.kv2 .kv2-kurum{margin-bottom:.75rem}
+.kv2 .kv2-bag{margin-top:0;margin-bottom:0;padding-top:.6rem}
 @media (min-width:641px){.kv2{padding-bottom:1.3rem}}
 @media (max-width:640px){
   .kv2{gap:.7rem;padding:1rem 1rem .9rem 1.1rem;border-radius:14px;align-items:flex-start;margin:.3rem 0 1rem}
   .kv2::before{right:-7.1rem;top:-7.1rem;transform:none;width:20rem;height:20rem;-webkit-mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 7.5rem);mask-image:radial-gradient(circle,transparent 0 2rem,#000 2.5rem,transparent 7.5rem)}
   .kv2-etiket{font-size:.62rem;letter-spacing:.24em;margin-bottom:.3rem}.kv2-ay svg{width:1.1rem;height:.95rem}
   .kv2 h1{font-size:1.6rem}
+  .kv2 .kv2-metin{min-height:10.9rem}
   .kv2-unvan{font-size:1rem;margin:.15rem 0 .55rem}
   .kv2-kurum{font-size:.8rem;line-height:1.4;padding-left:.6rem;border-left-width:2px}
   .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
