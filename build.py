@@ -667,6 +667,7 @@ button.sirala[aria-sort="descending"] .ok::after{content:"▼";opacity:1;font-si
 table.kisiler th{text-align:left;font-style:italic;font-size:.95rem;color:var(--ink-soft);font-weight:400;padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--gold-logo)}
 table.kisiler td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 table.kisiler td.k-ad{font-weight:600}
+@media (min-width:761px){table.kisiler td:nth-child(2),table.kisiler td:nth-child(3),table.kisiler td:nth-child(4){white-space:nowrap}}
 table.kisiler tbody tr:hover{background:var(--panel)}
 .emekli{display:inline-block;font-style:italic;font-size:.8rem;font-weight:400;color:var(--gold);border:1px solid currentColor;padding:0 .35rem;border-radius:2px;margin-left:.3rem}
 .gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
