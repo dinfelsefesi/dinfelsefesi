@@ -2252,7 +2252,11 @@ _KB_SAYAC = None
 
 _KB_ADLAR = None
 KB_EK_ADLAR = ["İsmail Hakkı İzmirli", "İzmirli İsmail Hakkı", "Fahreddin er-Râzî", "Hannah Arendt", "Fahreddin Râzî", "Fakhr al-Dīn al-Rāzī", "Fakhr-al-Dīn al-Rāzī", "Fahrüddîn er-Râzî",
-                "Yunus Emre", "Hacı Bektaş Veli", "Mevlânâ Celâleddîn Rûmî", "Niyâzî-i Mısrî", "Eşrefoğlu Rûmî"]
+                "Yunus Emre", "Hacı Bektaş Veli", "Mevlânâ Celâleddîn Rûmî", "Niyâzî-i Mısrî", "Eşrefoğlu Rûmî",
+                "Alvin Plantinga", "Richard Swinburne", "John Hick", "William Alston", "Nicholas Wolterstorff", "Ninian Smart",
+                "William James", "Evelyn Underhill", "Mark Wynn", "Rudolf Otto", "Paul Tillich", "Immanuel Kant", "David Hume",
+                "Ludwig Wittgenstein", "Martin Heidegger", "Søren Kierkegaard", "Soren Kierkegaard", "Friedrich Schleiermacher",
+                "Mulla Sadra", "Molla Sadra"]
 
 
 def kb_ad_ifadeleri() -> list:
@@ -2277,7 +2281,14 @@ def kb_kokler(bas: str, kel) -> dict:
     """Bir çalışmanın başlığından ve Türkçe anahtar kelimelerinden {kök: görünen biçim} üretir (kelime bulutu kuralları)."""
     ing, tr_ = _KB_SAYAC
     parcalar = ([] if _ingilizce_mi(bas) else [bas]) + [k for k in (kel or []) if not _ingilizce_mi(k)]
-    metin = tr_kucuk(" | ".join(parcalar))
+    birlesik = " | ".join(parcalar)
+
+    def _ad_birle(m):  # "Peter Van Inwagen" gibi ad ortalı (van, von, der) kişi adları tek kelime olur, fişi olmasa da
+        es = "_".join(tr_kucuk(m.group(0)).split())
+        KB_GORUNUM.setdefault(es, m.group(0))
+        return es
+    birlesik = re.sub(r"(?<![\w])[A-ZÇĞİÖŞÜ]\w+\s+(?:Van|Von|Der|van|von|der)\s+[A-ZÇĞİÖŞÜ]\w+", _ad_birle, birlesik)
+    metin = tr_kucuk(birlesik)
     for d_, r_ in KB_IFADE + kb_ad_ifadeleri():
         metin = re.sub(d_, r_, metin)
     kokler = {}
