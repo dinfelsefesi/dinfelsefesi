@@ -144,8 +144,6 @@ def bag_dizini_kur():
             soy_ = adi.split()[-1]
             if len(soyadlar[soy_]) == 1:
                 adaylar.append((soy_, t, k, False))
-        elif t == "eser":
-            adaylar.append((adi, t, k, False))
     adaylar.sort(key=lambda x: -len(x[0]))
     BAG_DIZINI.clear()
     for metin, t, k, kucuk_harf in adaylar:
@@ -260,6 +258,8 @@ def fis_url(tur, k) -> str:
 
 
 def bag(tur, d) -> str:
+    if tur == "eser" and (tur, d) in FIS:  # eserlerin ayrı sayfası yok: varsa kendi adresine bağlanır, yoksa yalnızca ad görünür
+        return eser_adi(eser_baglantisi(FIS[(tur, d)]), FIS[(tur, d)]["baslik"])
     if (tur, d) in FIS:
         return f'<a href="{fis_url(tur, d)}">{e(ad(tur, FIS[(tur, d)]))}</a>'
     if tur == "kisi" and slugify(str(d)) in akademi_verisi():  # fişi olmayan Türkiye akademisi üyesi: akademisyen sayfası
@@ -1506,7 +1506,7 @@ def fis_grubu(fisler, tur, baslik) -> str:
     secili = sorted([k for t, k in fisler if t == tur], key=lambda k: tr_anahtar(ad(tur, FIS[(tur, k)])))
     if not secili:
         return ""
-    return f"<h2>{baslik}</h2><ul>" + "".join(f"<li>{bag(tur, k)}</li>" for k in secili) + "</ul>"
+    return f"<h2>{baslik}</h2><ul>" + "".join(f"<li>{eser_satiri(k) if tur == 'eser' else bag(tur, k)}</li>" for k in secili) + "</ul>"
 
 
 def render_baslik(k) -> str:
@@ -1517,8 +1517,8 @@ def render_baslik(k) -> str:
         f"<h2>Alt başlıklar</h2><ul>{''.join(f'<li>{bag("baslik", a)}</li>' for a in liste(h.get('alt_basliklar')))}</ul>" if liste(h.get("alt_basliklar")) else "",
         fis_grubu(b, "terim", "Terimler"),
         fis_grubu(b, "kisi", "Kişiler"),
-        (f"<h2>Okuma listesi · giriş</h2><ul>{''.join(f'<li>{bag("eser", x)}</li>' for x in liste(ok.get('giris')))}</ul>" if liste(ok.get("giris")) else ""),
-        (f"<h2>Okuma listesi · ileri</h2><ul>{''.join(f'<li>{bag("eser", x)}</li>' for x in liste(ok.get('ileri')))}</ul>" if liste(ok.get("ileri")) else ""),
+        (f"<h2>Okuma listesi · giriş</h2><ul>{''.join(f'<li>{eser_satiri(x) if ("eser", x) in FIS else bag("eser", x)}</li>' for x in liste(ok.get('giris')))}</ul>" if liste(ok.get("giris")) else ""),
+        (f"<h2>Okuma listesi · ileri</h2><ul>{''.join(f'<li>{eser_satiri(x) if ("eser", x) in FIS else bag("eser", x)}</li>' for x in liste(ok.get('ileri')))}</ul>" if liste(ok.get("ileri")) else ""),
         fis_grubu(b, "eser", "Eserler") if not ok else
         fis_grubu({(x, y) for x, y in b if not (x == "eser" and y in set(liste(ok.get("giris"))) | set(liste(ok.get("ileri"))))},
                   "eser", "Başlığa bağlı diğer eserler"),
@@ -1915,7 +1915,7 @@ def eser_ogeleri() -> list:
                               for b_ in sorted(konu, key=lambda x: FIS[("baslik", x)].get("sira", 99))
                               if ("baslik", b_) in FIS and not FIS[("baslik", b_)].get("ust_baslik"))
         kunye_f = ", ".join(x for x in (e(h.get("yayin") or ""), e(h.get("yil"))) if x)
-        html_f = (eser_adi(eser_baglantisi(h) or fis_url("eser", k), h["baslik"])
+        html_f = (eser_adi(eser_baglantisi(h), h["baslik"])
                   + (f' <span class="m-tur">{tur_ad_}</span>' if tur_ad_ else "")
                   + f'<span class="eser-bilgi">{yazar_html + " · " if yazar_html else ""}{kunye_f}'
                   + (f'<span class="eser-konu"> · {konu_bag_}</span>' if konu_bag_ else "") + '</span>')
@@ -1961,8 +1961,8 @@ def eser_satiri(k) -> str:
         bilgi.append(f'<a class="dis" href="{e(hedef)}" rel="noopener">{etiket}</a>')
     if h.get("acik_erisim") == "evet":
         bilgi.append('<span class="ae">Açık erişim</span>')
-    return (f'<a class="eser-ad" href="{fis_url("eser", k)}">{e(h["baslik"])}</a>'
-            f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span>')
+    return (eser_adi("", h["baslik"])
+            + f'<span class="eser-bilgi">{" · ".join(x for x in bilgi if x)}</span>')
 
 
 def tez_tr_baslik(t: str) -> str:
@@ -4349,8 +4349,12 @@ def ag_verisi(items) -> dict:
     dugumler, baglar = [], set()
     tur_ad = {k: a for k, a, _ in AG_TURLER}
     for (t, k), h in FIS.items():
-        dugumler.append({"id": f"{t}/{k}", "ad": ad(t, h), "tur": t, "turAd": tur_ad[t],
-                         "url": fis_url(t, k), "aciklama": kisa_aciklama(t, h)})
+        dugum_ = {"id": f"{t}/{k}", "ad": ad(t, h), "tur": t, "turAd": tur_ad[t],
+                  "url": fis_url(t, k), "aciklama": kisa_aciklama(t, h)}
+        if t == "eser":  # eserin ayrı sayfası yok: düğüm eserin kendi adresine gider, adresi yoksa bağlantısız kalır
+            dugum_["url"] = eser_baglantisi(h)
+            dugum_["dis"] = bool(dugum_["url"])
+        dugumler.append(dugum_)
         for alan, hedef in ALAN_TUR.items():
             for d in liste(h.get(alan)):
                 if (hedef, d) in FIS and (hedef, d) != (t, k):
@@ -4473,7 +4477,7 @@ def onizleme_verisi(items) -> dict:
     v = {}
     for (t, k), h in FIS.items():
         if t == "eser":
-            alt, metin = kisa_aciklama(t, h), ilk_paragraf(h.get("_govde"))
+            continue  # eserlerin ayrı sayfası yok, önizleme kartı gerekmez
         elif t == "terim":
             alt, metin = h.get("ingilizce", ""), h.get("kisa_tanim", "")
         elif t == "kisi":
@@ -5409,6 +5413,11 @@ def main() -> None:
     for (t, k) in FIS:
         if t == "baslik":
             yaz(f"basliklar/{k}", render_baslik(k))
+        elif t == "eser":  # eser sayfaları kaldırıldı: eski adresler Eserler listesine yönlendirilir
+            hedef_ = f"{SITE_URL}/eserler/"
+            yaz(f"eserler/{k}", f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="{hedef_}">'
+                                f'<meta http-equiv="refresh" content="0;url={hedef_}"><a href="{hedef_}">Eserler listesine gidin</a>')
+            SAYFALAR.remove(f"eserler/{k}") if f"eserler/{k}" in SAYFALAR else None
         else:
             yaz(f"{KLASOR[t]}/{k}", render_fis(t, k))
     for t in ("terim", "kisi"):
@@ -5443,7 +5452,7 @@ def main() -> None:
         json.dumps([{**m, "url": entry_url(m)} for m in items], ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "api" / "onizleme.json").write_text(json.dumps(onizleme_verisi(items), ensure_ascii=False), encoding="utf-8")
     (OUT / "api" / "fisler.json").write_text(json.dumps(
-        [{k: v for k, v in h.items() if not k.startswith("_")} | {"tur": t, "url": fis_url(t, kk), "metin": h["_govde"]}
+        [{k: v for k, v in h.items() if not k.startswith("_")} | {"tur": t, "url": "" if t == "eser" else fis_url(t, kk), "metin": h["_govde"]}
          for (t, kk), h in FIS.items()], ensure_ascii=False, indent=1, default=str), encoding="utf-8")
 
     # Site haritası ve robots.txt. Deneme yayınında (NOINDEX) sayfalar yine taranabilir ama "noindex" etiketi
