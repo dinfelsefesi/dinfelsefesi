@@ -652,7 +652,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-ik b.kv-i-yok img{height:1.05rem}
 .kv2-ik b.kv-i-avesis img{height:1.45rem}
 .kv2-ik b.kv-i-orcid img{height:1.4rem}
-.kv2-ik b.kv-i-dergipark{font:600 1.1rem var(--display);letter-spacing:.02em}
+.kv2-ik b.kv-i-dergipark{font:700 1.15rem "Times New Roman",Times,serif;letter-spacing:.01em}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
 .kv2-madalya{overflow:hidden}
