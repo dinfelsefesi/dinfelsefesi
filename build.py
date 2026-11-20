@@ -4157,9 +4157,8 @@ KV_IKONLAR = {
     "avesis": ("AVESİS", "AV"),
     "trdizin": ("TR Dizin", "TR"),
     "publons": ("Web of Science (Publons)", "P"),
-    "web": ("Kişisel site", '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/>'
-                            '<g fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"><circle cx="12" cy="12" r="7"/>'
-                            '<path d="M5 12h14M12 5c2.5 2.3 2.5 11.7 0 14M12 5c-2.5 2.3-2.5 11.7 0 14"/></g></svg>'),  # ORCID gibi dolu daire, içinde beyaz küre çizgileri
+    "web": ("Kişisel site", '<svg viewBox="1.9 1.9 20.2 20.2" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+                            '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/></svg>'),  # kenar boşluğu kırpıldı: küre ORCID simgesiyle aynı boyda
     "scholar": ("Google Akademik", "G"),
     "academia": ("Academia.edu", "A"),
     "researchgate": ("ResearchGate", "RG"),
