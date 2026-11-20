@@ -652,6 +652,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-ik b.kv-i-yok img{height:1.05rem}
 .kv2-ik b.kv-i-avesis img{height:1.45rem}
 .kv2-ik b.kv-i-orcid img{height:1.4rem}
+.kv2-ik b.kv-i-dergipark{font:600 1.1rem var(--display);letter-spacing:.02em}
 .kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
 .kv2-madalya{overflow:hidden}
@@ -4193,6 +4194,24 @@ def kv_ikon2(tur: str, url: str, etiket: str = "") -> str:
             f'<b class="kv-i-{tur}">{kv_logo_img(tur) or simge}</b></a>')
 
 
+_DP_PROFIL = None
+
+
+def dergipark_profil_adresi(ad_: str) -> str:
+    """data/dergipark/profiller.yaml'daki doğrulanmış DergiPark profilinin adresi (yoksa boş)."""
+    global _DP_PROFIL
+    if _DP_PROFIL is None:
+        _DP_PROFIL = {}
+        dosya = DP_DIZIN / "profiller.yaml"
+        if dosya.exists():
+            for k_, hs_ in (yaml.safe_load(dosya.read_text(encoding="utf-8")) or {}).items():
+                for h_ in hs_ or []:
+                    if str(h_).startswith("@"):
+                        _DP_PROFIL[tr_kucuk(str(k_))] = "https://dergipark.org.tr/tr/pub/" + str(h_)
+                        break
+    return _DP_PROFIL.get(tr_kucuk(ad_), "")
+
+
 _AVESIS_PROFIL = None
 
 
@@ -4231,6 +4250,9 @@ def render_akademisyen(s: str, items=None) -> str:
     av_ = avesis_profil_adresi(p["ad"])
     if av_:
         baglar.append(kv_ikon2("avesis", av_))
+    dp_ = dergipark_profil_adresi(p["ad"])
+    if dp_:
+        baglar.append(kv_ikon2("dergipark", dp_))
     for b_ in p.get("baglantilar") or []:
         baglar.append(kv_ikon2(b_.get("tur", "web"), b_["url"], b_.get("etiket", "")))
     ana = [(b, n) for b, n in v["baslik"].items() if not FIS[("baslik", b)].get("ust_baslik")]
