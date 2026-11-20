@@ -674,7 +674,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
   .kv2-unvan{font-size:1rem;margin:.15rem 0 .55rem}
   .kv2-kurum{font-size:.8rem;line-height:1.4;padding-left:.6rem;border-left-width:2px}
   .kv2-kurum span{display:inline}.kv2-kurum span+span::before{content:" · "}
-  .kv2-bag{margin-top:.7rem;padding:.65rem 1.6rem 0 .8rem}
+  .kv2-bag{margin-top:.7rem;padding:.65rem 1.6rem 0 .52rem}
   .kv2-bag{gap:.5rem .7rem}.kv2-ik b{min-width:0;height:1.6rem;font-size:.75rem}.kv2-ik b svg{width:1.2rem;height:1.2rem}
   .kv2-ik b img{height:1.2rem}.kv2-ik b.kv-i-yok img{height:.9rem}.kv2-ik b.kv-i-avesis img{height:1.25rem}.kv2-ik b.kv-i-orcid img{height:1.2rem}
   .kv2-madalya{width:3.4rem;height:3.4rem;font-size:1.2rem;margin:.2rem .2rem 0 0;box-shadow:0 0 0 2px #fff,0 0 0 3px #c9a24b}}
