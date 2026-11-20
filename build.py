@@ -641,7 +641,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-unvan{margin:.25rem 0 .95rem;font-style:italic;font-size:1.3rem;color:var(--ink-soft)}
 .kv2-kurum{margin:0;padding-left:.9rem;border-left:3px solid #c9a24b;font-size:1.05rem;line-height:1.55;color:var(--ink)}
 .kv2-kurum span{display:block}
-.kv2-bag{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem;margin:1.1rem 0 0;padding:.95rem 0 0 1.1rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
+.kv2-bag{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem;margin:1.1rem 0 0;padding:.95rem 0 0 .9rem;background:linear-gradient(90deg,#c9a24b,rgba(201,162,75,.12)) top/100% 1px no-repeat}
 .kv2-ik{display:inline-flex;align-items:center;padding:0 .2rem;border:0;text-decoration:none;color:var(--ink)}
 /* bağlantı simgeleri: çerçevesiz, tek renk (sitenin altını) */
 .kv2-ik b{display:inline-flex;align-items:center;justify-content:center;min-width:0;height:2.2rem;color:#c9a24b;font:700 .85rem var(--sans);font-style:normal;letter-spacing:0;
