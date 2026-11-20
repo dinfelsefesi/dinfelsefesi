@@ -4158,7 +4158,7 @@ KV_IKONLAR = {
     "trdizin": ("TR Dizin", "TR"),
     "publons": ("Web of Science (Publons)", "P"),
     "web": ("Kişisel site", '<svg viewBox="1.9 1.9 20.2 20.2" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
-                            '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/></svg>'),  # kenar boşluğu kırpıldı: küre ORCID simgesiyle aynı boyda
+                            '<circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c3 2.8 3 14 0 16.8M12 3.6c-3 2.8-3 14 0 16.8"/></svg>'),  # dış çizgi kenara değmez (küsuratlı piksellerde kırpılmasın), küre ORCID ile aynı boyda
     "scholar": ("Google Akademik", "G"),
     "academia": ("Academia.edu", "A"),
     "researchgate": ("ResearchGate", "RG"),
