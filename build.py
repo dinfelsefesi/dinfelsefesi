@@ -4181,7 +4181,7 @@ def kv_logo_img(tur: str) -> str:
     """YÖK ve AVESİS için kurumların kendi logosu (static/img/kv-<tür>.png)."""
     if tur not in ("yok", "avesis", "orcid"):
         return ""
-    return f'<img src="{SITE_URL}/static/img/kv-{tur}.png" alt="" loading="lazy" decoding="async">'
+    return f'<img src="{SITE_URL}/static/img/kv-{tur}.png?v=2" alt="" loading="lazy" decoding="async">'
 
 
 def kv_ikon2(tur: str, url: str, etiket: str = "") -> str:
