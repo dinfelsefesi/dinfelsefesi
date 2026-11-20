@@ -652,9 +652,7 @@ table.kisiler tbody tr:target{background:var(--accent-soft)}
 .kv2-ik b.kv-i-yok img{height:1.05rem}
 .kv2-ik b.kv-i-avesis img{height:1.45rem}
 .kv2-ik b.kv-i-orcid img{height:1.4rem}
-.kv2-ik b.kv-i-dergipark{font:700 1.15rem "Times New Roman",Times,serif;letter-spacing:.01em}
-.kv2-ik b.kv-i-web svg{margin:0 -.12rem 0 -.18rem}  /* küre simgesinin iç boşluğu, görünen aralık eşit kalsın */
-.kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
+.kv2-ik b.kv-i-dergipark{font:700 1.15rem "Times New Roman",Times,serif;letter-spacing:.01em}.kv2-madalya{position:relative;z-index:1;flex:none;display:flex;align-items:center;justify-content:center;width:6.8rem;height:6.8rem;margin-right:.4rem;border-radius:50%;
   background:var(--accent);color:#d9b25c;font-family:var(--display);font-size:2.4rem;letter-spacing:.02em;box-shadow:0 0 0 4px #fff,0 0 0 6px #c9a24b,0 12px 22px -12px rgba(20,30,50,.6)}
 .kv2-madalya{overflow:hidden}
 .kv2-madalya img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
@@ -4159,8 +4157,9 @@ KV_IKONLAR = {
     "avesis": ("AVESİS", "AV"),
     "trdizin": ("TR Dizin", "TR"),
     "publons": ("Web of Science (Publons)", "P"),
-    "web": ("Kişisel site", _SVG('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/>',
-                                  'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"')),
+    "web": ("Kişisel site", '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/>'
+                            '<g fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"><circle cx="12" cy="12" r="7"/>'
+                            '<path d="M5 12h14M12 5c2.5 2.3 2.5 11.7 0 14M12 5c-2.5 2.3-2.5 11.7 0 14"/></g></svg>'),  # ORCID gibi dolu daire, içinde beyaz küre çizgileri
     "scholar": ("Google Akademik", "G"),
     "academia": ("Academia.edu", "A"),
     "researchgate": ("ResearchGate", "RG"),
