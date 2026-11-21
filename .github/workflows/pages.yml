@@ -8,8 +8,12 @@ on:
       - "content/adaylar.json"
   workflow_dispatch:
   schedule:
-    # Her akşam 19.47'de (İstanbul) yeniden derlenir; ertesi günün makalesi 20.00 civarında yayına girer
-    - cron: "47 16 * * *"
+    # GitHub zamanlayıcısı yoğun saatlerde geciktirir ya da atlar. Bu yüzden akşam dört kez derlenir
+    # (İstanbul 18.07, 18.47, 19.37, 20.37). Yeni günün makalesi 18.00'den sonraki ilk derlemede yayına girer.
+    - cron: "7 15 * * *"
+    - cron: "47 15 * * *"
+    - cron: "37 16 * * *"
+    - cron: "37 17 * * *"
 
 permissions:
   contents: read

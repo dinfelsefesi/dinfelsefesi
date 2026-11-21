@@ -1,9 +1,9 @@
 name: Günün makalesi kuyruğu
-# Günün makalesini kurala göre seçer (scripts/gunun_makalesi_sec.py). Her akşam 19.20'de (İstanbul) çalışır,
-# 19.47'deki derlemeden hemen önce bitmiş olur. Bugünden 10 gün ilerisine kadar boş günleri doldurur.
+# Günün makalesini kurala göre seçer (scripts/gunun_makalesi_sec.py). Her akşam 17.20'de (İstanbul) çalışır,
+# 18.07'deki ilk derlemeden önce bitmiş olur. Bugünden 10 gün ilerisine kadar boş günleri doldurur.
 on:
   schedule:
-    - cron: "20 16 * * *"
+    - cron: "20 14 * * *"
   workflow_dispatch:
 permissions:
   contents: write

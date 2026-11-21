@@ -2,7 +2,7 @@ name: Dergi durumu
 
 # Dergiler sayfası için her akşam 18.57'de (İstanbul) dergilerin DergiPark ana sayfalarını okur:
 # gönderim durumu, açılacak tarih, yayın modeli, ortalama süreler. Pazartesileri dizin sayfaları da okunur.
-# Sonuç data/dergiler/durum.json dosyasına yazılır; site 19.47'deki derlemede bunu kullanır.
+# Sonuç data/dergiler/durum.json dosyasına yazılır; site akşam derlemelerinde bunu kullanır.
 on:
   schedule:
     - cron: "57 15 * * *"
