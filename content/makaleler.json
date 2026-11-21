@@ -930,6 +930,29 @@
   "gun": "2026-12-01"
  },
  {
+  "date": "2025-12-05",
+  "title_tr": "Marion, Tanrı ve Negatif Kesinlik",
+  "title_en": "Marion, God and Negative Certainty",
+  "lang": "tr",
+  "authors": "Şeyma Demirtaş",
+  "journal": "Kalemname",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/kalemname/article/1823253",
+  "open_access": "evet",
+  "lead": "Bu makalede, Marion’un negatif kesinlik kavramı merkeze alınarak Tanrı’yı bilmenin fenomenolojik imkânı incelenecektir.",
+  "summary_tr": "Bu makalede, Marion’un negatif kesinlik kavramı merkeze alınarak Tanrı’yı bilmenin fenomenolojik imkânı incelenecektir. Bu amaç doğrultusunda, öncelikle Marion’un fenomen anlayışı ve verililik düşüncesi ele alınacak, ardından negatif kesinliğin epistemolojik statüsü tartışılacaktır. Bu doğrultuda Marion’un benliğin fenomenal yapısındaki verilme biçimini çözümlemesi ortaya konulacak ve son olarak negatif kesinlik kavramının Tanrı fenomeni için ne tür bir bilme imkânı açtığı değerlendirilecektir.",
+  "why_tr": "",
+  "tags": [
+   "Fenomenoloji",
+   "Tanrı’yı Bilmek",
+   "Negatif Kesinlik",
+   "Jean-Luc Marion"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-02"
+ },
+ {
   "date": "2025-06-25",
   "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
   "title_en": "",
@@ -948,7 +971,7 @@
    "ihtiyat ilkesi",
    "çevre etiği"
   ],
-  "gun": "2026-12-02",
+  "gun": "2026-12-03",
   "lang": "tr"
  },
  {
@@ -970,7 +993,7 @@
    "tabiî hukuk",
    "vahiy ve akıl"
   ],
-  "gun": "2026-12-03",
+  "gun": "2026-12-04",
   "lang": "tr"
  }
 ]
