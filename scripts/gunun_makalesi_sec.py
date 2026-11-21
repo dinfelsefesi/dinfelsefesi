@@ -50,8 +50,8 @@ def tr_buyuk_ilk(w: str) -> str:
 
 
 def bugun() -> date:
-    """build.py ile aynı gün hesabı: İstanbul saatiyle 19.30'dan sonra yeni gün başlar."""
-    return (datetime.now(ZoneInfo("Europe/Istanbul")) + timedelta(hours=4, minutes=30)).date()
+    """build.py ile aynı gün hesabı: İstanbul saatiyle 18.00'den sonra yeni gün başlar."""
+    return (datetime.now(ZoneInfo("Europe/Istanbul")) + timedelta(hours=6)).date()
 
 
 def baslik_duzelt(t: str, dil: str) -> str:
