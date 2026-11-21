@@ -3614,6 +3614,9 @@ def baslik_esit(a: str, yil: str, kayitlar: list, yazarlar=None) -> bool:
     a = kelimeler_(a)
     soy = soyadlar(yazarlar) if yazarlar else set()
     for b, y, *ek in kayitlar:
+        # kısa ve genel bir ad, yazarları ortak olmayan kayıtla (başka kişinin benzer adlı yayınıyla) aynı eser sayılmaz
+        if k != b and len(k) < 25 and soy and ek and ek[0] and not soy & ek[0]:
+            continue
         if k == b:
             # "Din Felsefesi" gibi kısa ve genel adlar farklı yıllarda ya da farklı yazarlarca yazılmış farklı eserlerdir
             if len(k) < 25 and ((yil and y and str(yil) != str(y)) or (soy and ek and ek[0] and not soy & ek[0])):
