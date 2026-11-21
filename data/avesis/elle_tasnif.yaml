@@ -1209,7 +1209,8 @@
   karar:
   - ozgurluk
   - kotuluk-problemi
-  not: 'Abdullah Akgül: Gazap ve Şehvetin Teolojik Tercümesi (özgürlük ve kötülük problemleri)'
+  - insan-tasavvurlari
+  not: 'Abdullah Akgül: Gazap ve Şehvetin Teolojik Tercümesi (özgürlük ve kötülük problemleri, nefsin gazap ve şehvet güçleri)'
 65ec8f61-5840-4b80-a238-0cd03b729cf7:
   karar:
   - teizme-yonelik-itirazlar
