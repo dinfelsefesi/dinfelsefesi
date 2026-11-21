@@ -3953,7 +3953,9 @@ def diger_yayin_ogeleri(v) -> list:
                        "kaynak": y["kaynak"], "kunye": y["kunye"],
                        "html": eser_adi(y["baglanti"], y["baslik"]) +
                                f'<span class="eser-bilgi">{bilgi}</span>'})
-    return ogeler
+    # Karar (21 Kasım 2026): kişinin kendi yüksek lisans ve doktora tezleri yayın listesine girmez;
+    # yalnız yönettiği tezler "Tezler" sekmesinde gösterilir.
+    return [o for o in ogeler if o["tur"] != "tez"]
 
 
 # Kişi sayfasındaki yayın listesinde tür etiketleri
