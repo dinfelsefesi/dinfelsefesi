@@ -953,6 +953,52 @@
   "gun": "2026-12-02"
  },
  {
+  "date": "2025-11-30",
+  "title_tr": "Transhümanizmin Ontolojik Açmazları: Zihin-Beden, Bilinç ve Benlik Problemleri Üzerine Bir İnceleme",
+  "title_en": "Ontological Dilemmas of Transhumanism: An Inquiry into the Mind-Body, Consciousness, and Self Problems",
+  "lang": "tr",
+  "authors": "Fatımanur Güçlüer, Ruhattin Yazoğlu",
+  "journal": "Dergiabant",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/dergiabant/article/1739633",
+  "open_access": "evet",
+  "lead": "Bu makale, insanın biyolojik ve bilişsel sınırlarını aşma arayışında olan transhümanist düşüncenin, karşı karşıya kaldığı temel felsefî sorunları din felsefesi perspektifinden değerlendirmeyi amaçlamaktadır.",
+  "summary_tr": "Bu makale, insanın biyolojik ve bilişsel sınırlarını aşma arayışında olan transhümanist düşüncenin, karşı karşıya kaldığı temel felsefî sorunları din felsefesi perspektifinden değerlendirmeyi amaçlamaktadır. Transhümanizm, zihin-beden ilişkisini yeniden tanımlamayı, bilinci yapay ortamlara aktarmayı ve kişisel kimliği dijital olarak sürdürebilmeyi hedefleyen bir gelecek vizyonu sunar. Ancak bu hedefler, klasik felsefede ruh-beden dualizmi, bilinç fenomeni ve benlik sorunu gibi metafizik tartışmalarla doğrudan çelişen veya onları yeniden yorumlamayı gerektiren bir yapıdadır. Bu bağlamda, insanın kendini dönüştürme arzusu, sadece teknolojik değil, aynı zamanda ontolojik bir mesele olarak ele alınmalıdır.\n\nMakalede, özellikle çağdaş filozofların yaklaşımları ışığında bu meseleler yeniden ele alınmakta, insanın tanrısal taklit yoluyla kendi sınırlarını aşmasının, ontolojik ve teolojik sonuçları sorgulanmaktadır. Çalışma, ruhun ölümsüzlüğü, bilincin kaynağı ve insanın aşkın boyutu gibi din felsefesinin temel konularıyla transhümanist projeler arasında bir gerilim olduğunu ortaya koymaktadır. Bu çerçevede, literatürde uzun süredir tartışılmakla beraber, transhümanizmin yalnızca teknik değil, aynı zamanda felsefî ve teolojik yönleriyle de ele alınması gereği, çalışmamızın da merkezî bir vurgusunu oluşturmaktadır.",
+  "why_tr": "",
+  "tags": [
+   "Transhümanizm",
+   "Bilim",
+   "Din",
+   "Kuantum"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-03"
+ },
+ {
+  "date": "2025-11-28",
+  "title_tr": "Bilimsel Monizmden Çoğulcu Gerçeklik Tasavvuruna: John Polkinghorne’un Din-Bilim İlişkisi Modeli",
+  "title_en": "From Scientific Monism to a Pluralistic Conception of Reality: John Polkinghorne's Model of the Relation between Religion and Science",
+  "lang": "tr",
+  "authors": "Serdar Atalay",
+  "journal": "Eskişehir Osmangazi Üniversitesi Sosyal Bilimler Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/ogusbd/article/1764449",
+  "open_access": "evet",
+  "lead": "Bu makale, John Polkinghorne’un din-bilim ilişkisine dair yaklaşımını inceleyerek iki disiplinin metodolojik farklılıklarına rağmen ortak amaçlarının gerçekliği anlama olduğunu vurgular.",
+  "summary_tr": "Bu makale, John Polkinghorne’un din-bilim ilişkisine dair yaklaşımını inceleyerek iki disiplinin metodolojik farklılıklarına rağmen ortak amaçlarının gerçekliği anlama olduğunu vurgular. Bilim, olgusal verilerle gerçeğe giderek yaklaşan bir süreç olarak görülürken; din, Tanrı’ya ilişkin mutlak hakikatleri ve Tanrı-evren ilişkisini esas alan bir dünya tasavvuru sunar. Eleştirel Gerçekçilik diye bilinen bu yaklaşıma göre, din ve bilim birbirinin kuzeni gibidir ve her ikisi de nesnel ve öznel boyutlar taşır.\n\nBu makalede, Polkinghorne’un önerdiği uyum modeli sağduyuya uygun bir yaklaşım olarak değerlendirilirken; onun, bilimin mutlak bilgi iddiasını sorgularken dinin hakikat iddiasını da önemli ölçüde sınırlandırmayı öngören yaklaşımının rasyonel biçimde gerekçelendirilmediği savunulacaktır.",
+  "why_tr": "",
+  "tags": [
+   "Din",
+   "Bilim",
+   "John C. Polkinghorne",
+   "Eleştirel Gerçekçilik"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-04"
+ },
+ {
   "date": "2025-06-25",
   "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
   "title_en": "",
@@ -971,7 +1017,7 @@
    "ihtiyat ilkesi",
    "çevre etiği"
   ],
-  "gun": "2026-12-03",
+  "gun": "2026-12-05",
   "lang": "tr"
  },
  {
@@ -993,7 +1039,7 @@
    "tabiî hukuk",
    "vahiy ve akıl"
   ],
-  "gun": "2026-12-04",
+  "gun": "2026-12-06",
   "lang": "tr"
  }
 ]
