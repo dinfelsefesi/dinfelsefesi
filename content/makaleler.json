@@ -1022,6 +1022,29 @@
   "gun": "2026-12-05"
  },
  {
+  "date": "2025-10-30",
+  "title_tr": "Algoritma ile Aşkınlık Arasında: Yapay Zekânın Dinî Tecrübe Potansiyeli",
+  "title_en": "Between Algorithm and Transcendence: The Religious Experience Potential of Artificial Intelligence",
+  "lang": "tr",
+  "authors": "Gülsüm Turhan",
+  "journal": "İnsan ve Toplum Bilimleri Araştırmaları Dergisi",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/itobiad/article/1726257",
+  "open_access": "evet",
+  "lead": "Bu çalışmanın amacı, dinî ve mistik tecrübelerin mahiyetini felsefî bir çerçevede ele alarak, yapay zekâ sistemlerinin bu tür tecrübeleri yaşama kapasitesine sahip olup olamayacaklarını tartışmaktır.",
+  "summary_tr": "Bu çalışmanın amacı, dinî ve mistik tecrübelerin mahiyetini felsefî bir çerçevede ele alarak, yapay zekâ sistemlerinin bu tür tecrübeleri yaşama kapasitesine sahip olup olamayacaklarını tartışmaktır. Çalışmada dinî tecrübenin yalnızca bilişsel ya da davranışsal süreçlerle açıklanamayacağı; öznel bilinç, sezgi, duygulanım ve aşkınlık boyutlarını içeren çok katmanlı bir fenomen olduğu ileri sürülmektedir. Bu çalışmada ele alınan temel problem, söz konusu fenomenolojik unsurların insan bilincine özgü olup olmadığı veya gelişmiş yapay sistemlerde benzer biçimlerde ortaya çıkıp çıkamayacağıdır.\n\nMevcut literatürde dinî tecrübe üzerine kapsamlı incelemeler bulunmaktadır ama dinî tecrübenin yapay zekâ bağlamında, özellikle bilinç ve öznel yaşantı perspektifinden ele alınışı sınırlı sınırlı olduğu tespit edilmiştir. Bu çalışma, bu kuramsal boşluğu felsefî bir analiz yaparak derinleştirmeyi hedeflemektedir. Çalışma, felsefî karşılaştırmalı yöntem kullanılarak yapılandırılmıştır. Dinî tecrübe üzerine eserleri olan düşünürlerden William James, Rudolf Otto ve Ninian Smart’ın dinî tecrübeye dair fenomenolojik ve sezgisel yaklaşımları, bu yaşantıların bilişsel süreçlerle sınırlı olmadığını göstermektedir. Bu düşünürler dinî tecrübenin bilinç, bedensel katılım, sezgi ve aşkınlık gibi boyutlarla şekillendiğini göstermektedirler.\n\nJohn Searle, Hubert Dreyfus ve Robert Sokolowski gibi düşünüre göre yapay zekâlar öznel bilinci, anlam üretimini ve varoluşsal derinliği gerçek anlamda deneyimleyemezler. Bu noktada Searle’ün semantik yetersizlik eleştirisi, Dreyfus’un bedenlenmiş zihin anlayışı ve Otto’nun numinöz tecrübe vurgusu, yapay sistemlerin bu tür yaşantılara yalnızca yüzeysel düzeyde yaklaşabileceği fikrini ortaya çıkarmaktadır. Buna karşılık, Ray Kurzweil bilinçli yaşantının biyolojik temellere indirgenemeyeceğini, yeterince gelişmiş yapay sistemlerin bilinç geliştirebileceğini öne sürmektedir. Ayrıca Alan Turing imitasyon oyunu aracılığıyla zekâyı gözlemlenebilir davranışlar üzerinden değerlendirmiştir.\n\nSonuç olarak bu çalışmada, yapay zekânın dinî tecrübeyi ancak bilinç, duygu, beden ve anlam üretimiyle birleştiği ölçüde yaşayabileceğini söylenebilir; bu unsurlar olma ise yalnızca taklit düzeyinde bir benzeşim gerçekleştirebileceği sonucuna ulaşılmıştır.",
+  "why_tr": "",
+  "tags": [
+   "dinî tecrübe",
+   "Yapay Zekâ",
+   "bilinç",
+   "mistik tecrübe"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-06"
+ },
+ {
   "date": "2025-06-25",
   "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
   "title_en": "",
@@ -1040,7 +1063,7 @@
    "ihtiyat ilkesi",
    "çevre etiği"
   ],
-  "gun": "2026-12-06",
+  "gun": "2026-12-07",
   "lang": "tr"
  },
  {
@@ -1062,7 +1085,7 @@
    "tabiî hukuk",
    "vahiy ve akıl"
   ],
-  "gun": "2026-12-07",
+  "gun": "2026-12-08",
   "lang": "tr"
  }
 ]
