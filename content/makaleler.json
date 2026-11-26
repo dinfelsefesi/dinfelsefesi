@@ -1045,6 +1045,29 @@
   "gun": "2026-12-06"
  },
  {
+  "date": "2025-09-30",
+  "title_tr": "Tanrı’nın Varlığına Dair Kanıt Yükünün Mahiyeti",
+  "title_en": "The Nature of the Burden of Evidence Concerning the Existence of God",
+  "lang": "tr",
+  "authors": "Süleyman Altın",
+  "journal": "Eskiyeni",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/eskiyeni/article/1674573",
+  "open_access": "evet",
+  "lead": "İspat yükü, herhangi bir iddiayı desteklemek için gerekçe sunma sorumluluğudur.",
+  "summary_tr": "İspat yükü, herhangi bir iddiayı desteklemek için gerekçe sunma sorumluluğudur. Hukuki bağlamına aşina olduğumuz bu konu aslında sosyal yaşamdan matematiğe, dini inançtan bilimsel bir hipoteze veya teoriye kadar pek çok farklı bağlama sahiptir. Din felsefesinde ise Tanrı’nın varlığı veya yokluğu konusundaki tartışmalarda kanıt yükü şeklinde gündeme gelmektedir. Dini inanca dair doğruluk iddiasında bulunmanın getirdiği bu yük, gerekçelendirildiği ölçüde bir inancın rasyonel sayılabileceği düşüncesini temel almaktadır. Bu bakış açısına göre, bir inancın rasyonel ve ahlaki olabilmesinin zorunlu koşulu, yeterli kanıta veya gerekçeye sahip olmaktır.\n\nKanıt yükünü konu edinen birçok çalışma mevcut olmasına rağmen yükün kaynağına ve mahiyetine ilişkin derinlemesine analizler oldukça sınırlıdır. Mevcut çalışmalar kanıt yükünün varlığına veya yokluğuna dair bir ön kabul içermekte ve genellikle yükün kimin omuzlarında olduğuna odaklanmaktadır. Ayrıca ne türden kanıtlara gerek olduğu ve hangi şartları taşıdığında kanıtların yeterli görülebileceği sorularına yanıtlar aramaktadır. Fakat kanıt yükünün temeline dair analizlerin eksikliği, bu konuda ortak bir zemin sağlamayı ve ikna edici sonuçlara ulaşmayı engellemektedir.\n\nBu çalışma, literatürdeki yaygın kanaatin aksine kanıt yükü konusunda herhangi bir ön kabul içermemekte, bilakis bu ön kabulü sorgulayarak yükün kaynağını, mahiyetini, sınırlarını, taraflarını ve yöntemini felsefi analize tâbi tutmaktadır. Bu sayede kanıt yüküne dair özgün, rasyonel, objektif ve güçlü bir bakış açısı geliştirmek hedeflenmektedir. Bu hedefe ulaşmak için bu çalışmada kanıtın sınırlarını, iddianın mahiyetini ve müddeilerin pozisyonlarını tespit etmeye yönelik tartışmalar ortaya konmaktadır. Kanıtın sınırlarını belirlemek üzere kanıt, ispat, delil, argüman ve gerekçelendirme kavramları arasındaki farklılıklara dikkat çekilmekte ve böylece yükün sınırları belirlenmektedir.\n\nİddianın mahiyeti üzerine soruşturmayla yükün kaynağı ve neden bir yük olarak ifade edildiğine ilişkin gerekçeler incelenmektedir. Müddeinin kim olduğu sorgulanarak, kanıt yükünü gündemine alan pozisyonlar irdelenmektedir. Böylece gerçek anlamda bir yükten bahsetmenin imkânı karşılaştırmalı olarak tartışılabilmektedir. Elde edilen sonuçlar, müddeiler, iddialar ve yük konusunda fikir birliği sağlandığı takdirde kanıt yükü konusunda rasyonel tartışmalar sürdürülebileceğini göstermektedir.",
+  "why_tr": "",
+  "tags": [
+   "Kanıt",
+   "İspat",
+   "Gerekçelendirme",
+   "Yük"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-07"
+ },
+ {
   "date": "2025-06-25",
   "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
   "title_en": "",
@@ -1063,7 +1086,7 @@
    "ihtiyat ilkesi",
    "çevre etiği"
   ],
-  "gun": "2026-12-07",
+  "gun": "2026-12-08",
   "lang": "tr"
  },
  {
@@ -1085,7 +1108,7 @@
    "tabiî hukuk",
    "vahiy ve akıl"
   ],
-  "gun": "2026-12-08",
+  "gun": "2026-12-09",
   "lang": "tr"
  }
 ]
