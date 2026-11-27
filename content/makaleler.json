@@ -1068,6 +1068,29 @@
   "gun": "2026-12-07"
  },
  {
+  "date": "2025-09-30",
+  "title_tr": "Dilin Sınırları, Anlamın Ufku: İbn Rüşd ve Wittgenstein’da Dilin Anlam Kazanma Mekanizmaları",
+  "title_en": "The Limits of Language, the Horizon of Meaning: Mechanism of Meaning-Making in Ibn Rushd and Wittgenstein",
+  "lang": "tr",
+  "authors": "Hande Nur Bozbuğa",
+  "journal": "Eskiyeni",
+  "year": "2025",
+  "doi": "",
+  "url": "https://dergipark.org.tr/en/pub/eskiyeni/article/1674601",
+  "open_access": "evet",
+  "lead": "Anlam ile dil arasındaki ilişki, modern felsefenin temel tartışmalarından biri olup dinî metinlerin anlaşılmasında da bu ilişki önemli bir rol oynar.",
+  "summary_tr": "Anlam ile dil arasındaki ilişki, modern felsefenin temel tartışmalarından biri olup dinî metinlerin anlaşılmasında da bu ilişki önemli bir rol oynar. Bu çalışmada, İbn Rüşd’ün Nahl Sûresi 125. ayet üzerinden geliştirdiği dinî mesajı muhataba iletme yöntemleri, 20. yüzyıl dil felsefecilerinden Ludwig Wittgenstein’ın dil oyunları anlayışı etrafında değerlendirilmektedir. İbn Rüşd, Kur’an diline ilişkin klasik mantığın beş sanatını kullanarak halkı hatâbî, kelâmcıları cedelî ve filozofları burhanî dille muhatap kılar. Muhatabın epistemik seviyesi bağlamında dildeki değişiklik, ilâhî mesajın anlaşılması gayesini taşımaktadır.\n\nBununla birlikte İbn Rüşd’ün öğretisindeki dilsel değişiklikler, dinin özündeki hakikatin içeriğini etkilemeyerek hakikatin farklı seviyelerde ve yöntemlerde aktarılabileceğini göstermektedir. Wittgenstein ise dil oyunlarında anlamın sabit bir içerikte olmadığı düşüncesini ve her bir dilsel ifadenin birbirinden farklılığını, kullanım ve kural kavramlarıyla ortaya koyar. İbn Rüşd’ün burhânî seviyede felsefî tahlillere, cedelî seviyede tartışmacı ifadelere ve hatâbî seviyede ise örneklere başvurması, anlamın mantıkla değil, muhatabın epistemik niteliğiyle ilişkili olarak belirlendiğini ifade eder. Onun bu yaklaşımı, dilin sabit bir anlamı yansıtmadığına dair Wittgenstein’ın görüşüne benzer bir yapı benimsediğini gösterir.\n\nAncak iki düşünürün nihai amaçları farklıdır. İbn Rüşd dili kullanarak insanları mutlak hakikate ulaştırmayı hedeflerken Wittgenstein, dil oyunları anlayışıyla hakikatin sabitliğini değil, anlamın çokluğunu göstermeyi amaçlar. Bu çalışmada iki düşünürün dil ve anlam ilişkisine dair görüşleri arasındaki benzerlikler ortaya konacak, farklılıkların ise İbn Rüşd’ün burhan ehlinin bir yöntemi olarak geliştirdiği te’vil yöntemiyle kavramsal düzeyde aşılabileceği fikri öne sürülecektir. Te’vil’in, bir ifadenin farklı şekillerde yorumlanabileceği anlamı, iki düşünürde de yoruma açık bir anlam çoğulculuğuna imkan sağlayan bir ilke olarak karşımıza çıkar.\n\nBu çerçevede te’vilin çoğul anlam yapısı, Wittgenstein’ın kullanım temelli anlam fikriyle örtüşmektedir. Böylelikle her iki düşünürün dil ile anlamla ilgili fikirleri, eserlerinin analizi yoluyla incelenerek İslâm düşüncesi yorum geleneği ile modern dil felsefesi arasında teorik bir nokta oluşturulması hedeflenmektedir. Bu tür bir karşılaştırma, İbn Rüşd’ün dil anlayışını, günümüz dil felsefesi çerçevesinde yeniden düşünmeyi mümkün kılmaktadır.",
+  "why_tr": "",
+  "tags": [
+   "İbn Rüşd",
+   "Wittgenstein",
+   "Dil Oyunları",
+   "Te'vil"
+  ],
+  "otomatik": true,
+  "gun": "2026-12-08"
+ },
+ {
   "date": "2025-06-25",
   "title_tr": "Epistemik Belirsizlikten Ahlaki Yükümlülüğe: İhtiyat İlkesi ve İnanma İradesi Argümanı",
   "title_en": "",
@@ -1086,7 +1109,7 @@
    "ihtiyat ilkesi",
    "çevre etiği"
   ],
-  "gun": "2026-12-08",
+  "gun": "2026-12-09",
   "lang": "tr"
  },
  {
@@ -1108,7 +1131,7 @@
    "tabiî hukuk",
    "vahiy ve akıl"
   ],
-  "gun": "2026-12-09",
+  "gun": "2026-12-10",
   "lang": "tr"
  }
 ]
